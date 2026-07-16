@@ -22,6 +22,11 @@ which had been used informally by physicists for decades, and
 established a unified setting for the study of differential equations,
 Fourier analysis, and functional analysis.
 
+\begin{prereqs} Measure theory (Lebesgue integral), basic functional analysis (Banach spaces, linear functionals), ordinary differential equations. \end{prereqs}
+
+\begin{objectives} Define distributions as continuous linear functionals on test functions; explain why the Dirac delta function is a distribution; state the main theorem of distribution theory relevant to PDEs. \end{objectives}
+
+
 Schwartz's contributions include:
 
 \begin{itemize}
@@ -1052,6 +1057,26 @@ Publications}\label{ch1950laurentschwartz:selected-major-publications}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise} Verify that the Dirac delta $\delta$ defined by $\langle \delta, \varphi \rangle = \varphi(0)$ is a distribution of order 0. \end{exercise}
+
+\begin{exercise} Compute the distributional derivative of the Heaviside step function $H(x)$ and show it equals $\delta$. \end{exercise}
+
+\begin{exercise} Show that every locally integrable function defines a distribution via $T_f(\varphi) = \int f(x)\varphi(x)\,dx$. \end{exercise}
+
+\begin{exercise} Prove that the Fourier transform of a tempered distribution is well-defined and extends the classical Fourier transform. \end{exercise}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+Schwartz created the theory of distributions, providing a rigorous framework for the Dirac delta and other ``generalized functions'' that physicists had been using informally. This theory resolved foundational issues in PDE theory and became indispensable in modern analysis, physics, and signal processing.
+
 \section{28. References and Further
 Reading}\label{ch1950laurentschwartz:references-and-further-reading}
 
@@ -1117,5 +1142,17 @@ Reading}\label{ch1950laurentschwartz:references-and-further-reading}
 \end{itemize}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{See Also}
+\addcontentsline{toc}{section}{See Also}
+
+This chapter relates to the following work by other Fields Medalists:
+\begin{itemize}
+  \item \textbf{\hyperref[ch1962larshormander:lars-huxf6rmander-fields-medal-1962-a-comprehensive-report]{See Chapter on related work}} --- Hormander extended Schwartz's distribution theory.
+  \item \textbf{\hyperref[ch1982shingtungyau:shing-tung-yau-fields-medal-1982-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Yau's work on PDEs uses Schwartz's theory.
+\end{itemize}
 
 \emph{(End of report)}

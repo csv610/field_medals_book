@@ -25,6 +25,23 @@
 \pgfplotsset{compat=1.18}
 \usepackage{tikz-cd}
 
+% Theorem environments
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}{Exercise}[chapter]
+
+% Pedagogical environments
+\newenvironment{prereqs}{\noindent\textbf{Prerequisites.}\ }{\par}
+\newenvironment{objectives}{\noindent\textbf{Learning Objectives.}\ }{\par}
+\newenvironment{takeaways}{\noindent\textbf{Key Takeaways.}\ }{\par}
+
 \geometry{margin=1in}
 \onehalfspacing
 
@@ -365,6 +382,111 @@ Each chapter is dedicated to a single medalist, organized chronologically by awa
 \begin{flushright}
 \textit{Compiled from publicly available sources, 2026}
 \end{flushright}
+
+\chapter*{Notation and Symbol Reference}
+\addcontentsline{toc}{chapter}{Notation and Symbol Reference}
+
+This chapter provides a quick reference to the mathematical notation used throughout the book. Entries are organized by subject area.
+
+\section*{General Notation}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$] The natural numbers, integers, rationals, reals, and complex numbers, respectively.
+\item[$\mathbb{F}_q$] A finite field with $q$ elements.
+\item[$K^{\times}$] The multiplicative group of a field $K$ (i.e., $K \setminus \{0\}$).
+\item[$G \cong H$] Groups $G$ and $H$ are isomorphic.
+\item[$A \hookrightarrow B$] An injective homomorphism (inclusion) from $A$ to $B$.
+\item[$X \twoheadrightarrow Y$] A surjective map (epimorphism).
+\item[$f^{\ast}, f_{\ast}$] Direct image and inverse image functors (pushforward and pullback).
+\end{description}
+
+\section*{Topology and Geometry}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$\pi_n(X, x_0)$] The $n$-th homotopy group of $X$ with basepoint $x_0$.
+\item[$H_n(X; \mathbb{Z})$] The $n$-th singular homology group of $X$.
+\item[$H^n(X; \mathbb{Z})$] The $n$-th singular cohomology group of $X$.
+\item[$\chi(X)$] The Euler characteristic of a topological space $X$.
+\item[$TX$] The tangent bundle of a manifold $X$.
+\item[$T^{\ast}X$] The cotangent bundle of a manifold $X$.
+\item[$\Omega^k(X)$] The space of smooth $k$-forms on a manifold $X$.
+\item[$d$] The exterior derivative on differential forms.
+\item[$\partial, \bar{\partial}$] The Dolbeault operators (``$d$-bar'') on complex manifolds.
+\item[$\text{vol}(M)$] The volume of a Riemannian manifold $M$.
+\item[$g$] A Riemannian metric tensor.
+\end{description}
+
+\section*{Algebra}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$R[x]$] The polynomial ring in one variable over $R$.
+\item[$R[[x]]$] The power series ring over $R$.
+\item[$\mathfrak{p}, \mathfrak{q}$] Prime ideals in a commutative ring.
+\item[$\dim(R)$] Krull dimension of a commutative ring $R$.
+\item[$\text{Spec}(R)$] The prime spectrum of a commutative ring $R$.
+\item[$\mathcal{O}_X$] The structure sheaf of a scheme or variety $X$.
+\item[$K_0(R)$] The Grothendieck group of finitely generated projective $R$-modules.
+\item[$K_1(R)$] The Whitehead group of $R$ (related to $GL(R)$ and elementary matrices).
+\item[$K_n(R)$] Higher algebraic $K$-theory groups (Quillen's formulation).
+\item[$\text{Ext}^n_R(M, N)$] The $n$-th extension functor between $R$-modules $M$ and $N$.
+\item[$\text{Tor}_n^R(M, N)$] The $n$-th torsion functor (left derived functor of $\otimes$).
+\item[$M \otimes_R N$] The tensor product of $R$-modules $M$ and $N$.
+\item[$M^{\vee}$] The dual of a module $M$ (i.e., $\text{Hom}_R(M, R)$).
+\end{description}
+
+\section*{Number Theory}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$\zeta(s)$] The Riemann zeta function, $\sum_{n=1}^{\infty} n^{-s}$.
+\item[$L(s, \chi)$] Dirichlet $L$-function attached to a character $\chi$.
+\item[$\mathbb{A}$] The ring of adeles of a number field.
+\item[$\text{Gal}(\bar{K}/K)$] The absolute Galois group of a field $K$.
+\item[$\text{Cl}(K)$] The ideal class group of a number field $K$.
+\item[$\mathcal{O}_K$] The ring of integers of a number field $K$.
+\item[$D(s)$] A Dirichlet series, $\sum a_n n^{-s}$.
+\item[$\Sh$] The Tate--Shafarevich group (Sha).
+\end{description}
+
+\section*{Analysis and PDEs}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$L^p(\Omega)$] The space of $p$-th power integrable functions on $\Omega$.
+\item[$W^{k,p}(\Omega)$] The Sobolev space of functions with $k$ weak derivatives in $L^p$.
+\item[$\Delta$] The Laplace operator (Laplacian).
+\item[$\partial_t - \Delta$] The heat operator (for parabolic equations).
+\item[$i\partial_t - \Delta$] The Schr\"{o}dinger operator (for dispersive equations).
+\item[$\nabla \cdot, \nabla \times$] The divergence and curl operators.
+\item[$\|f\|_{L^p}$] The $L^p$-norm of a function $f$.
+\item[$\langle u, v \rangle$] The inner product of $u$ and $v$.
+\end{description}
+
+\section*{Probability and Random Processes}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$\mathbb{E}[X]$] The expectation (mean) of a random variable $X$.
+\item[$\text{Var}(X)$] The variance of a random variable $X$.
+\item[$\mathbb{P}(A)$] The probability of an event $A$.
+\item[$SLE_{\kappa}$] Schramm--Loewner evolution with parameter $\kappa$.
+\item[$\text{BM}_t$] Brownian motion at time $t$.
+\end{description}
+
+\section*{Logic and Set Theory}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$V = L$] The axiom of constructibility (every set is constructible).
+\item[$\omega_1$] The first uncountable ordinal.
+\item[$\beth_{\alpha}$] The Beth numbers: $\beth_0 = \aleph_0$, $\beth_{\alpha+1} = 2^{\beth_{\alpha}}$.
+\end{description}
+
+\section*{Categories and Higher Structures}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$\text{Hom}_{\mathcal{C}}(X, Y)$] The set of morphisms from $X$ to $Y$ in a category $\mathcal{C}$.
+\item[$\mathcal{C}^{\text{op}}$] The opposite (dual) category of $\mathcal{C}$.
+\item[$[X, Y]$] The set of homotopy classes of maps from $X$ to $Y$.
+\item[$\text{Ho}(\mathcal{C})$] The homotopy category of a model category $\mathcal{C}$.
+\item[$\infty\text{-cat}$] The $(\infty, 1)$-category of spaces (spaces up to homotopy).
+\end{description}
+
+\section*{Measurements and Units}
+\begin{description}[style=nextline, leftmargin=2cm]
+\item[$\sim$] Asymptotic equivalence: $f(n) \sim g(n)$ means $f(n)/g(n) \to 1$.
+\item[$O(\cdot)$] Big-O notation: $f(n) = O(g(n))$ means $|f(n)| \leq C|g(n)|$ for some constant $C$.
+\item[$o(\cdot)$] Little-o notation: $f(n) = o(g(n))$ means $f(n)/g(n) \to 0$.
+\item[$\ll, \gg$] Vinogradov notation: $f \ll g$ means $f = O(g)$.
+\end{description}
 
 \mainmatter
 
