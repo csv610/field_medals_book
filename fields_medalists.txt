@@ -1,0 +1,64 @@
+2022 Hugo Duminil-Copin
+2022 June Huh
+2022 James Maynard
+2022 Maryna Viazovska
+2018 Caucher Birkar
+2018 Alessio Figalli
+2018 Peter Scholze
+2018 Akshay Venkatesh
+2014 Artur Avila
+2014 Manjul Bhargava
+2014 Martin Hairer
+2014 Maryam Mirzakhani
+2010 Elon Lindenstrauss
+2010 Ngô Bào Châu
+2010 Stanislav Smirnov
+2010 Cédric Villani
+2006 Andrei Okounkov
+2006 Grigori Perelman (declined)
+2006 Terence Tao
+2006 Wendelin Werner
+2002 Laurent Lafforgue
+2002 Vladimir Voevodsky
+1998 Richard E. Borcherds
+1998 W. Timothy Gowers
+1998 Maxim Kontsevich
+1998 Curtis T. McMullen
+1994 Jean Bourgain
+1994 Pierre-Louis Lions
+1994 Jean-Christophe Yoccoz
+1994 Efim Zelmanov
+1990 Vladimir Drinfeld
+1990 Vaughan F.R. Jones
+1990 Shigefumi Mori
+1990 Edward Witten
+1986 Simon K. Donaldson
+1986 Gerd Faltings
+1986 Michael H. Freedman
+1982 Alain Connes
+1982 William P. Thurston
+1982 Shing-Tung Yau
+1978 Pierre René Deligne
+1978 Charles Louis Fefferman
+1978 Gregori Alexandrovitch Margulis
+1978 Daniel G. Quillen
+1974 Enrico Bombieri
+1974 David Bryant Mumford
+1970 Alan Baker
+1970 Heisuke Hironaka
+1970 Serge Novikov
+1970 John Griggs Thompson
+1966 Michael Francis Atiyah
+1966 Paul Joseph Cohen
+1966 Alexander Grothendieck
+1966 Stephen Smale
+1962 Lars Hörmander
+1962 John Willard Milnor
+1958 Klaus Friedrich Roth
+1958 René Thom
+1954 Kunihiko Kodaira
+1954 Jean-Pierre Serre
+1950 Laurent Schwartz
+1950 Atle Selberg
+1936 Lars Valerian Ahlfors
+1936 Jesse Douglas

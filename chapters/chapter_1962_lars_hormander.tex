@@ -1,0 +1,701 @@
+\chapter{Lars Hörmander --- Fields Medal 1962}\label{ch1962larshormander:lars-huxf6rmander-fields-medal-1962-a-comprehensive-report}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Lars Valter Hörmander (b.
+January 24, 1931, Mjällby, Sweden) \textbf{Position:} Professor, Lund
+University; University of Stockholm \textbf{Doctoral Advisor:} Lars
+Gårding (Lund University) \textbf{Fields Medal Citation:} \emph{``Worked
+in partial differential equations. Specifically, contributed to the
+general theory of linear differential operators. The questions go back
+to one of Hilbert's problems at the 1900 congress.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch1962larshormander:introduction}
+
+Lars Hörmander was awarded the Fields Medal in 1962 at age 31 for his
+significant contributions to the theory of linear partial
+differential equations (PDEs). His work substantially reshaped the
+field, unifying it through the interplay of functional analysis,
+differential geometry, and Fourier analysis. He developed the modern
+framework of microlocal analysis, including pseudodifferential
+operators, Fourier integral operators, and the theory of wave front
+sets.
+
+Hörmander's early work completely classified constant-coefficient
+hypoelliptic operators, solving a problem that had been open since
+Petrowsky in the 1930s. His geometric explanation of the Hans Lewy
+nonsolvability phenomenon provided the first clear insight into why some
+linear PDEs have no solutions. His \(L^2\) estimates for the
+\(\bar\partial\) operator revolutionized several complex variables by
+replacing intricate geometric constructions with transparent analytic
+arguments. His proof that sums of squares of vector fields are
+hypoelliptic under a Lie bracket spanning condition became a cornerstone
+of sub-Riemannian geometry and control theory.
+
+Hörmander's major contributions include: the complete classification of
+constant-coefficient linear PDEs; \(L^2\) estimates for the
+\(\bar\partial\)-Neumann problem; the theory of pseudodifferential
+operators; Fourier integral operators and propagation of singularities;
+the Hörmander condition for sums of squares; the sharp Weyl law for
+spectral asymptotics; and the geometric theory of the Cauchy problem.
+His four-volume treatise \emph{The Analysis of Linear Partial
+Differential Operators} (Springer, 1983--1985) remains the definitive
+reference in the field and won the 2006 Leroy P. Steele Prize for
+Mathematical Exposition.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background}\label{ch1962larshormander:biographical-background}
+
+\subsection{2.1 Early Life and
+Education}\label{ch1962larshormander:early-life-and-education}
+
+Lars Valter Hörmander was born on January 24, 1931, in Mjällby, a small
+village in Blekinge, southern Sweden. His father was a schoolteacher who
+encouraged his intellectual development. Hörmander showed exceptional
+mathematical talent early on: he skipped two years of elementary school
+and moved to Lund in 1946 at age 15 to attend secondary school. He
+entered Lund University in 1948, where he met Lars Gårding, who would
+become his doctoral advisor. Hörmander absorbed the Bourbakian style of
+rigorous, systematic exposition that would characterize his own writing.
+
+\subsection{2.2 Academic Career}\label{ch1962larshormander:academic-career}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{1948--1955:} Studies at Lund University (B.Sc., Licentiate,
+ Ph.D.).
+\item
+ \textbf{1955:} Ph.D.~under Lars Gårding. Thesis: ``On the Theory of
+ General Partial Differential Operators.''
+\item
+ \textbf{1955--1956:} Postdoctoral visits to the University of Chicago,
+ Courant Institute, and Stanford University.
+\item
+ \textbf{1957--1964:} Professor, University of Stockholm.
+\item
+ \textbf{1962:} Fields Medal at the ICM in Stockholm.
+\item
+ \textbf{1964--1967:} Professor, Stanford University.
+\item
+ \textbf{1967--1997:} Professor, Lund University.
+\item
+ \textbf{1988:} Wolf Prize in Mathematics.
+\item
+ \textbf{2006:} Leroy P. Steele Prize for Mathematical Exposition.
+\item
+ \textbf{2012:} Died at age 81 in Lund, Sweden.
+\end{itemize}
+
+\subsection{2.3 Doctoral Work}\label{ch1962larshormander:doctoral-work}
+
+Hörmander's Ph.D.~thesis already contained significant results. He studied
+linear PDEs with constant coefficients and gave a complete
+characterization of when such operators are hypoelliptic --- that is,
+when every distributional solution is smooth. A constant-coefficient
+operator \(P(D) = \sum_{|\alpha| \leq m} a_\alpha D^\alpha\) is
+hypoelliptic if \(P(D)u \in C^\infty\) implies \(u \in C^\infty\). This
+thesis solved a problem that had been open since Petrowsky's work in the
+1930s, and it immediately established Hörmander as a leading figure in
+analysis. The work was published in \emph{Acta Mathematica} in 1955 and
+remains a classic in the field.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. Classification of Constant-Coefficient Linear
+PDEs}\label{ch1962larshormander:classification-of-constant-coefficient-linear-pdes}
+
+\subsection{3.1 Background}\label{ch1962larshormander:background}
+
+A linear partial differential operator with constant coefficients is an
+expression \(P(D) = \sum_{|\alpha| \leq m} a_\alpha D^\alpha\), where
+\(\alpha = (\alpha_1,\ldots,\alpha_n)\) is a multi-index,
+\(D^\alpha = (-i\partial)^{\alpha_1} \cdots (-i\partial)^{\alpha_n}\),
+and \(a_\alpha \in \mathbb{C}\). The symbol of \(P(D)\) is the
+polynomial \(P(\xi) = \sum_{|\alpha| \leq m} a_\alpha \xi^\alpha\) for
+\(\xi \in \mathbb{R}^n\).
+
+A fundamental problem in PDE theory is to determine when \(P(D)u = f\)
+is solvable and when its solutions are smooth. An operator is
+\textbf{hypoelliptic} if \(P(D)u \in C^\infty\) implies
+\(u \in C^\infty\). The Laplace operator \(\Delta\) is hypoelliptic
+because elliptic regularity implies \(u \in C^\infty\) whenever
+\(\Delta u \in C^\infty\). The wave operator \(\partial_t^2 - \Delta\),
+by contrast, is not hypoelliptic, as weak solutions can have
+singularities propagating along light cones.
+
+\subsection{3.2 Hörmander's
+Characterization}\label{ch1962larshormander:huxf6rmanders-characterization}
+
+In his thesis, Hörmander gave a complete characterization of
+hypoellipticity for constant-coefficient operators. He proved \(P(D)\)
+is hypoelliptic if and only if:
+
+\[\lim_{|\xi| \to \infty} \frac{|\partial^\alpha P(\xi)|}{|P(\xi)|^{1/|\alpha|}} = 0 \quad \text{for all } \alpha \neq 0\]
+
+Equivalently, for every multi-index \(\alpha \neq 0\), there exist
+constants \(C_\alpha, R_\alpha\) such that
+\(|\partial^\alpha P(\xi)| \leq C_\alpha |P(\xi)|^{1/|\alpha|}\) for
+\(|\xi| \geq R_\alpha\). This condition means the polynomial \(P\) does
+not oscillate too rapidly relative to its magnitude, which guarantees
+the fundamental solution (the inverse Fourier transform of \(1/P(\xi)\))
+is smooth away from the origin.
+
+\subsection{3.3 Examples and
+Consequences}\label{ch1962larshormander:examples-and-consequences}
+
+Elliptic operators satisfy \(|P(\xi)| \sim |\xi|^m\) for large
+\(|\xi|\), so the condition holds and they are hypoelliptic. Parabolic
+operators like the heat operator \(\partial_t - \Delta\) satisfy
+\(|P(\xi)| \sim |\xi|^2\) in appropriate regions and are also
+hypoelliptic. The wave operator \(\partial_t^2 - \Delta\) fails the
+condition because \(\xi_1^2 - \xi_2^2 - \cdots - \xi_n^2\) can be small
+relative to its derivatives along the light cone. Hörmander also proved
+every constant-coefficient operator is locally solvable, using the
+Malgrange--Ehrenpreis theorem. For variable-coefficient operators, this
+fails dramatically --- the Hans Lewy example shows some operators are
+not locally solvable anywhere.
+
+\subsection{3.4 Impact}\label{ch1962larshormander:impact}
+
+This work closed a chapter that began with Hilbert's 1900 Paris lecture,
+where Hilbert listed the problem of developing a general theory of
+linear PDEs as one of his 23 problems. Hörmander's results were the
+first major step toward answering Hilbert's question. The work
+established Hörmander's reputation and set the stage for his subsequent
+research on variable-coefficient operators.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{\texorpdfstring{4. \(L^2\) Estimates for the \(\bar\partial\)
+Operator}{4. L\^{}2 Estimates for the \textbackslash bar\textbackslash partial Operator}}\label{ch1962larshormander:l2-estimates-for-the-barpartial-operator}
+
+\subsection{4.1 Background}\label{ch1962larshormander:background-1}
+
+On a complex manifold \(M\), the \(\bar\partial\) operator maps
+\((0,q)\)-forms to \((0,q+1)\)-forms and satisfies
+\(\bar\partial^2 = 0\). The Dolbeault cohomology groups
+\(H^{p,q}(M) = \ker\bar\partial/\text{im}\,\bar\partial\) measure the
+extent to which \(\bar\partial\)-closed forms are exact. The
+Grothendieck--Dolbeault lemma states that on a Stein manifold,
+\(H^{p,q}(M) = 0\) for \(q \geq 1\). The core problem in several complex
+variables is: given a \(\bar\partial\)-closed \((0,q)\)-form \(f\),
+solve \(\bar\partial u = f\) with optimal estimates. This is essential
+for constructing holomorphic functions and sections of holomorphic
+bundles.
+
+\subsection{4.2 Hörmander's Theorem}\label{ch1962larshormander:huxf6rmanders-theorem}
+
+Hörmander proved a landmark result. Let \(\Omega \subset \mathbb{C}^n\)
+be pseudoconvex and \(\phi\) a plurisubharmonic function on \(\Omega\).
+For any \(\bar\partial\)-closed \((0,q)\)-form \(f\) with
+\(\int_\Omega |f|^2 e^{-\phi} \, dV < \infty\), there exists \(u\) with
+\(\bar\partial u = f\) and:
+
+\[\int_\Omega |u|^2 e^{-\phi} (1+|z|^2)^{-2} dV \leq \int_\Omega |f|^2 e^{-\phi} dV\]
+
+The estimate depends only on the plurisubharmonicity of \(\phi\), not on
+the detailed geometry of \(\Omega\). The proof uses the
+\textbf{Bochner--Kodaira--Nakano identity}:
+
+\[\Box = \nabla^*\nabla + [i\Theta(E), \Lambda]\]
+
+where \(\Theta(E)\) is the curvature of the holomorphic vector bundle
+and \(\Lambda\) is adjoint to multiplication by the Kähler form. By
+choosing a weight \(\phi\) with positive curvature
+\(i\partial\bar\partial\phi\), Hörmander obtained a lower bound for
+\(\Box\) that allowed him to solve \(\bar\partial u = f\) with optimal
+regularity.
+
+\subsection{\texorpdfstring{4.3 The \(\bar\partial\)-Neumann
+Problem}{4.3 The \textbackslash bar\textbackslash partial-Neumann Problem}}\label{ch1962larshormander:the-barpartial-neumann-problem}
+
+The \(\bar\partial\)-Neumann problem on bounded pseudoconvex domains
+with smooth boundary was also solved by Hörmander's \(L^2\) estimates.
+The operator
+\(\Box_q = \bar\partial\bar\partial^*_q + \bar\partial^*_{q+1}\bar\partial\)
+has a bounded inverse \(N_q\) on \(L^2_{(0,q)}(\Omega)\), and the
+Bergman projection satisfies
+\(P = I - \bar\partial^* N_1 \bar\partial\).
+
+\subsection{4.4 Applications}\label{ch1962larshormander:applications}
+
+Hörmander's \(L^2\) estimates have numerous applications: solving the
+Levi problem (every pseudoconvex domain is a domain of holomorphy); the
+excision of compact sets in Stein manifolds; construction of holomorphic
+functions with prescribed zeros; and estimates for the Bergman kernel.
+Bombieri and Skoda extended the method to prove effective results in
+algebraic geometry.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. The Hörmander Condition for Sums of
+Squares}\label{ch1962larshormander:the-huxf6rmander-condition-for-sums-of-squares}
+
+\subsection{5.1 Statement}\label{ch1962larshormander:statement}
+
+Consider smooth real vector fields \(X_1,\ldots,X_k\) on \(M\) and the
+operator \(L = X_1^2 + \cdots + X_k^2\). This is a degenerate elliptic
+operator --- its principal symbol vanishes in directions orthogonal to
+the span of the vector fields. The prototype is the
+\textbf{sub-Laplacian} on the Heisenberg group \(\mathbb{H}^1\):
+
+\[L = X^2 + Y^2, \quad X = \partial_x - \frac{y}{2}\partial_t, \quad Y = \partial_y + \frac{x}{2}\partial_t\]
+
+This operator is not elliptic (it is degenerate in the \(t\)-direction),
+yet \(Lu \in C^\infty\) implies \(u \in C^\infty\) --- it is
+hypoelliptic.
+
+\subsection{5.2 Hörmander's Theorem}\label{ch1962larshormander:huxf6rmanders-theorem-1}
+
+In his seminal 1967 paper, Hörmander proved a general theorem: if the
+Lie algebra generated by \(X_1,\ldots,X_k\) spans \(T_xM\) at every
+point (the \textbf{Hörmander condition}), then \(L\) is hypoelliptic.
+Let \(\mathcal{L}\) be the Lie algebra generated by \(X_1,\ldots,X_k\)
+(closed under commutators). If for every \(x \in M\),
+\(\mathcal{L}(x) = T_xM\), then \(L\) is hypoelliptic. For the
+Heisenberg group, \([X,Y] = \partial_t\), so \(X,Y,[X,Y]\) span
+\(T\mathbb{R}^3\), and the condition holds.
+
+\subsection{5.3 Geometry and Regularity}\label{ch1962larshormander:geometry-and-regularity}
+
+The Hörmander condition defines \textbf{sub-Riemannian geometry}
+(Carnot--Carathéodory geometry). A sub-Riemannian manifold consists of a
+distribution \(D \subset TM\) together with a metric on \(D\), such that
+Lie brackets of sections of \(D\) generate \(TM\). The associated
+sub-Laplacian is the sum of squares of orthonormal vector fields framing
+\(D\). The condition implies the control distance is well-defined and
+the sub-Laplacian satisfies scale-invariant parabolic Harnack
+inequalities.
+
+Hörmander's proof combined Fourier analysis on nilpotent Lie groups, the
+Rothschild--Stein lifting theorem, and the construction of
+pseudodifferential parametrices. The heat kernel for \(L\) has
+small-time asymptotics involving the sub-Riemannian geodesic distance.
+
+\subsection{5.4 Impact}\label{ch1962larshormander:impact-1}
+
+The Hörmander condition is now essential in control theory (the Lie
+bracket condition for controllability), hypoelliptic operators on Lie
+groups (the Rockland conjecture, proved by Helffer and Nourrigat),
+sub-Riemannian geometry, and hypoelliptic diffusion.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. Pseudodifferential
+Operators}\label{ch1962larshormander:pseudodifferential-operators}
+
+\subsection{6.1 Symbols and Classes}\label{ch1962larshormander:symbols-and-classes}
+
+A pseudodifferential operator (\(\Psi\)DO) is:
+
+\[(Au)(x) = \frac{1}{(2\pi)^n} \int e^{i x\cdot\xi} a(x,\xi) \hat u(\xi) \, d\xi\]
+
+For a differential operator
+\(P(x,D) = \sum_{|\alpha| \leq m} a_\alpha(x) D^\alpha\), the symbol is
+\(p(x,\xi) = \sum_{|\alpha| \leq m} a_\alpha(x) \xi^\alpha\).
+
+Hörmander introduced symbol classes \(S^m_{\rho,\delta}\):
+
+\[|\partial_\xi^\alpha \partial_x^\beta a(x,\xi)| \leq C_{\alpha\beta} (1+|\xi|)^{m-\rho|\alpha|+\delta|\beta|}\]
+
+with \(0 \leq \delta < \rho \leq 1\). The standard case
+\(\rho=1,\delta=0\) gives classical symbols.
+
+\subsection{6.2 The Calculus}\label{ch1962larshormander:the-calculus}
+
+\begin{itemize}
+\item
+ \textbf{Composition}: \(A \circ B \in \Psi^{m_1+m_2}\) with symbol:
+
+ \[a \circ b \sim \sum_{\alpha} \frac{(-i)^{|\alpha|}}{\alpha!} \partial_\xi^\alpha a \cdot \partial_x^\alpha b\]
+\item
+ \textbf{Adjoints}: \(A^* \in \Psi^m\) with symbol given by an
+ asymptotic series.
+\item
+ \textbf{Ellipticity}: If the symbol is invertible for large \(|\xi|\),
+ the operator has a parametrix.
+\item
+ \textbf{Sharp Gårding inequality}:
+ \((Au,u) \geq -C\|u\|^2_{H^{(m-1)/2}}\) for \(a \geq 0\).
+\end{itemize}
+
+\subsection{6.3 Impact}\label{ch1962larshormander:impact-2}
+
+The \(\Psi\)DO calculus is essential for spectral geometry, the
+Atiyah--Singer index theorem, and geometric analysis. Hörmander's Volume
+III is the definitive reference.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. Fourier Integral
+Operators}\label{ch1962larshormander:fourier-integral-operators}
+
+\subsection{7.1 Definition}\label{ch1962larshormander:definition}
+
+An FIO generalizes \(\Psi\)DOs for hyperbolic equations:
+
+\[(Ku)(x) = \frac{1}{(2\pi)^n} \int e^{i\phi(x,\xi)} a(x,\xi) \hat u(\xi) \, d\xi\]
+
+where \(\phi\) is a non-degenerate phase homogeneous of degree 1 in
+\(\xi\).
+
+\subsection{7.2 Hörmander's Theory}\label{ch1962larshormander:huxf6rmanders-theory}
+
+Hörmander (1968--1971) established: - FIOs correspond to canonical
+relations \(\Lambda \subset T^*X \times T^*Y\) (Lagrangian
+submanifolds). - The principal symbol transforms as a half-density on
+\(\Lambda\). - Composition corresponds to composition of canonical
+relations.
+
+\subsection{7.3 Propagation of
+Singularities}\label{ch1962larshormander:propagation-of-singularities}
+
+With Duistermaat, Hörmander proved that for \(P\) of real principal
+type, \(\text{WF}(u)\) propagates along bicharacteristics:
+
+\[\dot x = \partial_\xi p, \quad \dot \xi = -\partial_x p, \quad p(x,\xi)=0\]
+
+This is the foundation of microlocal analysis, with applications in
+seismic imaging and tomography.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. The Cauchy Problem and
+Pseudoconvexity}\label{ch1962larshormander:the-cauchy-problem-and-pseudoconvexity}
+
+\subsection{8.1 The Hans Lewy Example}\label{ch1962larshormander:the-hans-lewy-example}
+
+In 1957, Hans Lewy discovered a shocking phenomenon: there exists a
+smooth linear PDE with no local solutions anywhere. The operator
+\(L u = \frac{\partial u}{\partial \bar z} - i\bar z \frac{\partial u}{\partial t}\)
+has the property that for most \(f \in C^\infty\), \(L u = f\) has no
+distributional solution in any open set.
+
+Hörmander explained this geometrically. For \(L = X + iY\), local
+solvability requires \([X,Y]\) to be in the span of \(X\) and \(Y\) (the
+Levi condition). For the Lewy operator, \([X,Y] = \partial_t\) is
+transverse.
+
+\subsection{8.2 Pseudoconvexity and Carleman
+Estimates}\label{ch1962larshormander:pseudoconvexity-and-carleman-estimates}
+
+Hörmander proved that Carleman estimates
+\(\|u e^{\tau\phi}\| \leq C\|Pu e^{\tau\phi}\|\) exist iff:
+
+\[\{p,\phi\}=0,\; p=0 \implies \{\overline{p},\{p,\phi\}\} > 0\]
+
+This ensures uniqueness in the Cauchy problem.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. Spectral Asymptotics and the Weyl
+Law}\label{ch1962larshormander:spectral-asymptotics-and-the-weyl-law}
+
+\subsection{9.1 The Sharp Weyl Law}\label{ch1962larshormander:the-sharp-weyl-law}
+
+Using FIOs, Hörmander proved:
+
+\[N(\lambda) = \frac{\omega_n}{(2\pi)^n} \text{Vol}(M) \lambda^{n/2} + O(\lambda^{(n-1)/2})\]
+
+The proof uses the wave kernel \(\cos(t\sqrt{-\Delta})\) (an FIO for
+small \(t\)) and stationary phase. The remainder is optimal, as shown by
+\(S^n\).
+
+\subsection{9.2 The Poisson Relation}\label{ch1962larshormander:the-poisson-relation}
+
+The singularities of \(\text{Tr}\cos(t\sqrt{-\Delta})\) are contained in
+the length spectrum of closed geodesics, fundamental in quantum chaos
+and inverse spectral theory.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. The Weyl Calculus and Hörmander
+Metrics}\label{ch1962larshormander:the-weyl-calculus-and-huxf6rmander-metrics}
+
+\subsection{10.1 Weyl Quantization}\label{ch1962larshormander:weyl-quantization}
+
+\[(A^w u)(x) = \frac{1}{(2\pi)^n} \iint e^{i\langle x-y,\xi\rangle}
+a\left(\frac{x+y}{2},\xi\right) u(y) \, dy\, d\xi\]
+
+transforms naturally under symplectic maps, ideal for operators with
+double characteristics.
+
+\subsection{10.2 Hörmander Metrics}\label{ch1962larshormander:huxf6rmander-metrics}
+
+Metrics \(g_{x,\xi}\) on \(T^*X\) satisfying the uncertainty principle,
+slow variation, and temperateness define symbol classes \(S(m,g)\). They
+support the sharp Gårding and Hörmander--Melin inequalities.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. The Four-Volume Treatise}\label{ch1962larshormander:the-four-volume-treatise}
+
+\emph{The Analysis of Linear Partial Differential Operators} (Springer,
+1983--1985) won the 2006 Steele Prize: - \textbf{Vol. I}: Distribution
+theory, Fourier analysis, Sobolev spaces. - \textbf{Vol. II}:
+Constant-coefficient operators --- classification, hypoellipticity,
+fundamental solutions. - \textbf{Vol. III}: Pseudodifferential operators
+--- calculus, elliptic regularity, spectral theory. - \textbf{Vol. IV}:
+Fourier integral operators --- propagation, Cauchy problem, spectral
+asymptotics.
+
+It is the definitive reference, self-contained and rigorous.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{12. Hyperfunctions and the Edge of the
+Wedge}\label{ch1962larshormander:hyperfunctions-and-the-edge-of-the-wedge}
+
+\textbf{Hyperfunctions} (Sato) generalize distributions via boundary
+values of holomorphic functions. Hörmander gave a Fourier-analytic
+treatment: every compactly supported hyperfunction is the Fourier
+transform of an entire function of exponential type.
+
+The \textbf{edge of the wedge theorem}: let
+\(\Gamma_1,\Gamma_2 \subset \mathbb{R}^n\) be open convex cones, \(f_j\)
+holomorphic on \(\Omega+i\Gamma_j\) with equal boundary values.
+Hörmander proved they extend to a holomorphic function on the convex
+hull, using Fourier analysis.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. The Radon Transform and Integral
+Geometry}\label{ch1962larshormander:the-radon-transform-and-integral-geometry}
+
+The Radon transform
+\(Rf(\omega,p) = \int_{x\cdot\omega=p} f(x)\, dS(x)\) is an FIO with
+canonical relation:
+
+\[\Lambda = \{((\omega,p), (x,\xi)): x\cdot\omega = p, \xi = |\xi|\omega\}\]
+
+\(R^*R\) is an elliptic \(\Psi\)DO. For the X-ray transform,
+\(R^*R = c_n(-\Delta)^{-1/2}\). This provides the foundation for CT
+scanning.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{\texorpdfstring{14. CR Geometry and the \(\bar\partial_b\)
+Complex}{14. CR Geometry and the \textbackslash bar\textbackslash partial\_b Complex}}\label{ch1962larshormander:cr-geometry-and-the-barpartial_b-complex}
+
+A CR structure on \(M^{2n+1}\) is
+\(T^{1,0}M \subset TM\otimes\mathbb{C}\) of rank \(n\) with
+\(T^{1,0}M \cap \overline{T^{1,0}M} = \{0\}\) and
+\([T^{1,0}M, T^{1,0}M] \subset T^{1,0}M\). Hörmander studied
+\(\Box_b = \bar\partial_b\bar\partial_b^* + \bar\partial_b^*\bar\partial_b\),
+proving subelliptic estimates when the Levi form has sufficient
+positivity.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. Operators with Double
+Characteristics}\label{ch1962larshormander:operators-with-double-characteristics}
+
+\(P\) has double characteristics if \(p_m\) vanishes to order 2 on a
+symplectic submanifold \(\Sigma\). Examples: magnetic Schrödinger and
+Klein--Gordon operators. Hörmander reduced such operators to a model on
+a symplectic vector space. The subprincipal symbol determines
+hypoellipticity: if the Hamilton map satisfies the
+Ivrii--Petkov--Hörmander condition, \(P\) is hypoelliptic with loss of
+\(1/2\) derivative.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. Gevrey Classes}\label{ch1962larshormander:gevrey-classes}
+
+\(f \in G^s(\Omega)\) if
+\(|\partial^\alpha f(x)| \leq C^{|\alpha|+1}(|\alpha|!)^s\) on compact
+sets, interpolating \(C^\infty\) (\(s=1\)) and real-analytic
+(\(s=\infty\)). Hörmander proved the Cauchy problem for weakly
+hyperbolic equations is well-posed in \(G^s\) for \(s\) sufficiently
+small.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{17. Hyperbolic Equations and Energy
+Estimates}\label{ch1962larshormander:hyperbolic-equations-and-energy-estimates}
+
+\(P\) is strictly hyperbolic wrt \(t\) if \(p_m(x,\xi)\) has \(m\)
+distinct real roots. Hörmander proved:
+
+\[\sum_{j=0}^{m-1} \|u\|_{C^j([0,T]; H^{s-j})} \leq C_T \left(
+\sum_{j=0}^{m-1} \|u_j\|_{H^{s-j}} + \int_0^T \|f\|_{H^s} dt\right)\]
+
+The \textbf{Mizohata condition}: the Cauchy problem is \(C^\infty\)
+well-posed iff \(p_m(x,\xi+i\tau d\phi) \neq 0\) for
+\(\tau \geq \tau_0\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{18. Theory of Parametrices}\label{ch1962larshormander:theory-of-parametrices}
+
+A parametrix for \(P\) is \(Q\) with \(PQ = I+R\), \(QP = I+S\) (\(R,S\)
+smoothing). Hörmander constructed parametrices: - For elliptic
+operators: as \(\Psi\)DOs. - For operators of real principal type: as
+FIOs. - For the wave equation: \(\cos(t\sqrt{-\Delta}) = \frac{1}{2\pi}
+\int e^{i(x-y)\xi} \cos(t|\xi|) d\xi + \text{lower terms}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{19. The Wave Front Set}\label{ch1962larshormander:the-wave-front-set}
+
+\((x_0,\xi_0) \notin \text{WF}(u)\) if there exists \(A \in \Psi^0\)
+with symbol 1 near \((x_0,\xi_0)\) such that \(Au \in C^\infty\).
+Hörmander proved: - \(\text{WF}(Au) = \text{WF}(u)\) for elliptic \(A\).
+- For \(Pu = f\) of real principal type, \(\text{WF}(u)\) propagates
+along bicharacteristics. - The analytic wave front set uses the FBI
+transform.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{20. The Hörmander--Melin
+Inequality}\label{ch1962larshormander:the-huxf6rmandermelin-inequality}
+
+When \(a \geq 0\) vanishes on a symplectic submanifold:
+
+\[(A^w u, u) \geq -C_1 \|u\|^2_{H^{(m-1)/2}} -
+C_2 \|u\|^2_{H^{(m-1)/2}} \log\left(2 + \frac{\|u\|^2_{H^{m/2}}}
+{\|u\|^2_{H^{(m-1)/2}}}\right)\]
+
+Essential for subelliptic operators and \(\Box_b\) on CR manifolds.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{21. Awards and Recognition}\label{ch1962larshormander:awards-and-recognition}
+
+\textbf{1962:} - Fields Medal (IMU) --- at the ICM in Stockholm.
+
+\textbf{1988:} - Wolf Prize in Mathematics.
+
+\textbf{2006:} - Leroy P. Steele Prize for Mathematical Exposition
+(AMS).
+
+\textbf{Elected to:} - Royal Swedish Academy of Sciences (1968). -
+National Academy of Sciences (USA) (1976). - Royal Society, Foreign
+Member (1980). - French Academy of Sciences, Foreign Associate (1984). -
+Finnish Society of Sciences, Royal Danish Academy, Norwegian Academy.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{22. Selected Major
+Publications}\label{ch1962larshormander:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``On the theory of general partial differential operators.''}
+ \emph{Acta Mathematica} 94, 161--248, 1955. --- \emph{Thesis:
+ classification of constant-coefficient hypoelliptic operators.}
+\item
+ \textbf{``\(L^2\) estimates and existence theorems for the
+ \(\bar\partial\) operator.''} \emph{Acta Mathematica} 113, 89--152,
+ 1965. --- \emph{Weighted \(L^2\) estimates for \(\bar\partial\).}
+\item
+ \textbf{``Hypoelliptic second order differential equations.''}
+ \emph{Acta Mathematica} 119, 147--171, 1967. --- \emph{The Hörmander
+ condition for sums of squares.}
+\item
+ \textbf{``Fourier integral operators I.''} \emph{Acta Mathematica}
+ 127, 79--183, 1971. --- \emph{Foundational paper on FIOs.}
+\item
+ \textbf{``On the singularities of solutions of partial differential
+ equations.''} (with J. J. Duistermaat) \emph{Comm. Pure Appl. Math.}
+ 25, 207--236, 1972. --- \emph{Propagation of singularities.}
+\item
+ \textbf{``The spectral function of an elliptic operator.''} \emph{Acta
+ Mathematica} 121, 173--218, 1968. --- \emph{Sharp Weyl law.}
+\item
+ \textbf{``Uniqueness theorems and wave front sets.''} \emph{Arkiv för
+ Matematik} 6, 1--31, 1965. --- \emph{Wave front set theory.}
+\item
+ \textbf{``The analysis of linear partial differential operators
+ I--IV.''} \emph{Grundlehren} 256, 257, 274, 275, Springer, 1983--1985.
+ --- \emph{The definitive treatise.}
+\item
+ \textbf{``Linear partial differential operators.''} \emph{Grundlehren}
+ 116, Springer, 1963. --- \emph{First comprehensive book on linear
+ PDEs.}
+\item
+ \textbf{``An introduction to complex analysis in several variables.''}
+ \emph{North-Holland}, 1966. --- \emph{Classic text using \(L^2\)
+ methods.}
+\item
+ \textbf{``Notions of convexity.''} \emph{Birkhäuser}, 1994. ---
+ \emph{Convexity in PDEs.}
+\item
+ \textbf{``The Weyl calculus of pseudodifferential operators.''}
+ \emph{Comm. Pure Appl. Math.} 32, 359--443, 1979. --- \emph{Weyl
+ calculus and Hörmander metrics.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{23. References and Further
+Reading}\label{ch1962larshormander:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch1962larshormander:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 1962:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1962
+\item
+ Wolf Prize: https://wolffund.org.il/lars-hormander/
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch1962larshormander:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Hörmander, L. \emph{The Analysis of Linear Partial Differential
+ Operators I--IV}. Springer, 1983--1985.
+\item
+ Hörmander, L. \emph{Linear Partial Differential Operators}. Springer,
+ 1963.
+\item
+ Hörmander, L. \emph{An Introduction to Complex Analysis in Several
+ Variables}. North-Holland, 1966.
+\item
+ Hörmander, L. \emph{Notions of Convexity}. Birkhäuser, 1994.
+\end{itemize}
+
+\subsection{Textbooks and Surveys}\label{ch1962larshormander:textbooks-and-surveys}
+
+\begin{itemize}
+\tightlist
+\item
+ Treves, F. \emph{Introduction to Pseudodifferential and Fourier
+ Integral Operators I--II}. Plenum, 1980.
+\item
+ Taylor, M. E. \emph{Pseudodifferential Operators}. Princeton
+ University Press, 1981.
+\item
+ Duistermaat, J. J. \emph{Fourier Integral Operators}. Birkhäuser,
+ 1996.
+\item
+ Grigis, A. and Sjöstrand, J. \emph{Microlocal Analysis for
+ Differential Operators}. Cambridge, 1994.
+\end{itemize}
+
+\subsection{Biography and Exposition}\label{ch1962larshormander:biography-and-exposition}
+
+\begin{itemize}
+\tightlist
+\item
+ Gårding, L. ``The Work of Lars Hörmander.'' ICM 1962 Laudatio.
+\item
+ Boman, J. et al.~``Lars Hörmander (1931--2012).'' \emph{Notices AMS}
+ 62(4), 2015.
+\item
+ Atiyah, M. ``Lars Hörmander.'' \emph{Biographical Memoirs of the Royal
+ Society} 59, 2013.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(End of report)}

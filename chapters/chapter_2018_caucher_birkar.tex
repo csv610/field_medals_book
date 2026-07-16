@@ -1,0 +1,1135 @@
+\chapter{Caucher Birkar --- Fields Medal 2018}\label{ch2018caucherbirkar:caucher-birkar-fields-medal-2018-a-comprehensive-report-on-his-work-and-impact}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Caucher Birkar (b. July
+1978, Marivan, Kurdistan Province, Iran) \textbf{Position:} Professor,
+Yau Mathematical Sciences Center (YMSC) and BIMSA, Tsinghua University;
+Professor, University of Cambridge \textbf{Doctoral Advisor:} Ivan
+Fesenko (University of Nottingham) \textbf{Fields Medal Citation:}
+\emph{``For the proof of the boundedness of Fano varieties and for
+contributions to the minimal model program.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Table of Contents}\label{ch2018caucherbirkar:table-of-contents}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ Introduction
+\item
+ Biographical Background
+\item
+ Algebraic Geometry and Birational Geometry: An Overview
+\item
+ The Minimal Model Program
+\item
+ Existence of Minimal Models for Varieties of Log General Type
+\item
+ Fano Varieties and the Borisov--Alexeev--Borisov Conjecture
+\item
+ Singularities of Linear Systems
+\item
+ Boundedness of Complements
+\item
+ Anti-Pluricanonical Systems on Fano Varieties
+\item
+ The Proof of the BAB Conjecture
+\item
+ Generalized Pairs and Log Calabi--Yau Fibrations
+\item
+ Positive Characteristic Geometry
+\item
+ Iitaka's Conjecture and Effectivity Results
+\item
+ The Stolen Medal Incident
+\item
+ Impact on Algebraic Geometry
+\item
+ K-Stability and Moduli of Fano Varieties
+\item
+ Awards and Recognition
+\item
+ Selected Major Publications
+\item
+ Ongoing Work and Future Directions
+\item
+ Conclusion
+\item
+ References and Further Reading
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch2018caucherbirkar:introduction}
+
+Caucher Birkar was awarded the Fields Medal in 2018 for his proof of the
+boundedness of Fano varieties --- a landmark result in birational
+geometry that resolved the Borisov--Alexeev--Borisov (BAB) conjecture, a
+problem that had resisted solution for over two decades. His work
+substantially advanced the Minimal Model Program (MMP), one of the most
+ambitious and important research programs in algebraic geometry.
+
+Birkar's journey to the Fields Medal is as notable as his
+mathematics. Born to a Kurdish farming family in rural Iran near the
+Iraq border, he taught himself mathematics from borrowed books before
+fleeing to the United Kingdom as a refugee. Within eighteen years of
+arriving in Britain without knowing English, he had won the highest
+honor in mathematics.
+
+His contributions span the core of birational geometry: the existence of
+minimal models, the boundedness of Fano varieties, the theory of
+singularities, and the development of generalized pairs. His work has
+enabled major advances in related fields, including the construction of
+moduli spaces of Fano varieties via K-stability, and has deep
+connections to differential geometry, arithmetic geometry, and
+mathematical physics.
+
+This report provides a detailed account of Birkar's important
+contributions, the mathematical context in which they arose, the
+techniques he developed, and their lasting impact.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background}\label{ch2018caucherbirkar:biographical-background}
+
+\subsection{2.1 Early Life in Iran}\label{ch2018caucherbirkar:early-life-in-iran}
+
+Caucher Birkar was born Fereydoun Derakhshani in July 1978 in Marivan
+County, Kurdistan Province, Iran, near the border with Iraq. He was the
+third of six children in a Kurdish farming family that relied on
+subsistence agriculture. His parents cultivated rice, wheat, and
+vegetables, and the family lived a modest existence in a rural village.
+
+Growing up during the Iran--Iraq War (1980--1988), Birkar's region was
+closely affected by the conflict. Education opportunities were limited.
+His older brother, an engineering student at the University of Tehran,
+played a crucial role by bringing mathematics books when he visited.
+Birkar became fascinated with mathematics, working through textbooks on
+his own. He later said, ``My parents are farmers; my success in math is
+very unlikely.''
+
+\subsection{2.2 University Education and Escape from
+Iran}\label{ch2018caucherbirkar:university-education-and-escape-from-iran}
+
+Birkar attended the University of Tehran, where he studied mathematics.
+As a Kurd and a convert to Christianity, he faced persecution. The
+situation became increasingly dangerous, and in 2000 he fled Iran. He
+traveled to Turkey and then to the United Kingdom, where he applied for
+political asylum.
+
+Upon arriving in the UK, Birkar could not speak English. He adopted the
+name ``Caucher Birkar'' --- which means ``migrant mathematician'' in
+Kurdish --- to symbolize his new beginning and as a protective measure.
+He enrolled at the University of Nottingham, completing a bachelor's
+degree and then a PhD under the supervision of Ivan Fesenko in 2004.
+
+\subsection{2.3 Academic Career}\label{ch2018caucherbirkar:academic-career}
+
+After his PhD, Birkar held a postdoctoral research fellowship at the
+University of Warwick from 2004 to 2006. In 2006, he joined the
+Department of Pure Mathematics and Mathematical Statistics at the
+University of Cambridge, where he became a Professor of Mathematics. He
+was appointed a Fellow of Trinity Hall.
+
+In 2021, Birkar joined the Yau Mathematical Sciences Center (YMSC) at
+Tsinghua University in Beijing as a tenured professor, while also
+maintaining his position at Cambridge. In 2022, he also joined the
+Beijing Institute of Mathematical Sciences and Applications (BIMSA). In
+2025, he was elected as a foreign academician of the Chinese Academy of
+Sciences.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. Algebraic Geometry and Birational Geometry: An
+Overview}\label{ch2018caucherbirkar:algebraic-geometry-and-birational-geometry-an-overview}
+
+\subsection{3.1 Algebraic Varieties}\label{ch2018caucherbirkar:algebraic-varieties}
+
+Algebraic geometry studies the solution sets of polynomial equations ---
+objects called algebraic varieties. For example, the equation
+\(x^2 + y^2 = 1\) defines a circle in the plane, while
+\(x^2 + y^2 + z^2 = 1\) defines a sphere in 3D space. When the variables
+are allowed to be complex numbers, these objects become complex
+manifolds with rich geometric structure.
+
+A central goal of algebraic geometry is to classify algebraic varieties
+up to \textbf{birational equivalence}. Two varieties are birationally
+equivalent if they are isomorphic on dense open subsets --- essentially,
+if they agree after ignoring lower-dimensional subsets. This notion
+captures the idea that varieties can be ``almost the same'' even if they
+differ in small ways.
+
+\subsection{3.2 The Classification
+Problem}\label{ch2018caucherbirkar:the-classification-problem}
+
+The birational classification of algebraic varieties proceeds by
+dimension: - \textbf{Dimension 1 (curves):} Classified by Riemann in the
+19th century. Every curve is birational to a unique smooth projective
+curve, classified by its genus. - \textbf{Dimension 2 (surfaces):}
+Classified by the Italian school in the early 20th century (Enriques,
+Castelnuovo, etc.). - \textbf{Dimension 3 and higher:} The Minimal Model
+Program, initiated by Mori in the 1980s, provides a framework for
+classification in all dimensions.
+
+\subsection{3.3 The Kodaira Dimension}\label{ch2018caucherbirkar:the-kodaira-dimension}
+
+A fundamental invariant is the \textbf{Kodaira dimension} \(\kappa(X)\),
+which measures the growth rate of the pluricanonical sections. Varieties
+are divided into three broad classes: - \textbf{General type}
+(\(\kappa = \dim X\)): The ``most complex'' varieties, analogous to
+curves of genus \(\ge 2\). - \textbf{Calabi--Yau} (\(\kappa = 0\)):
+Varieties with trivial canonical bundle, analogous to elliptic curves. -
+\textbf{Fano} (\(\kappa = -\infty\)): Varieties with ample
+anti-canonical bundle, analogous to the projective line.
+
+The Minimal Model Program seeks to find a ``minimal'' representative in
+each birational equivalence class, which is either a minimal model (with
+nef canonical divisor) or a Mori fiber space (a Fano fibration).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. The Minimal Model Program}\label{ch2018caucherbirkar:the-minimal-model-program}
+
+\subsection{4.1 Overview}\label{ch2018caucherbirkar:overview}
+
+The Minimal Model Program (MMP), initiated by Shigefumi Mori in the
+1980s, proposes to find within each birational class a variety that is
+as simple as possible. The program proceeds through a series of
+elementary operations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ \textbf{Contractions:} Contract a curve along which the canonical
+ divisor \(K_X\) is negative.
+\item
+ \textbf{Flips:} Replace a ``bad'' contraction with a ``good'' one that
+ improves the positivity of \(K_X\).
+\item
+ \textbf{Repetition:} Repeat until either \(K_X\) becomes nef
+ (non-negative on all curves) --- giving a minimal model --- or a Mori
+ fiber space is obtained.
+\end{enumerate}
+
+The MMP is known to work in dimension 2 (classical surface
+classification) and dimension 3 (Mori, 1988; Shokurov, 1990s). For
+higher dimensions, the program is not fully established, but major
+progress has been made.
+
+\subsection{4.2 The Role of
+Singularities}\label{ch2018caucherbirkar:the-role-of-singularities}
+
+A key insight of the MMP is that one must allow mild singularities ---
+specifically, \textbf{terminal} and \textbf{canonical} singularities ---
+to make progress. Even when starting with a smooth variety, the MMP
+operations may produce singular varieties, and the theory must
+accommodate them.
+
+The classification of singularities according to their severity
+(terminal, canonical, log terminal, log canonical) is central to the
+MMP. The most useful class is that of \textbf{klt (Kawamata log
+terminal) singularities}, which are mild enough to behave well under the
+MMP but general enough to include many cases.
+
+\subsection{4.3 The Finite Generation
+Conjecture}\label{ch2018caucherbirkar:the-finite-generation-conjecture}
+
+A fundamental question is whether the \textbf{canonical ring}:
+
+\[
+R(X, K_X) = \bigoplus_{m \ge 0} H^0(X, \mathcal{O}_X(mK_X))
+\]
+
+is finitely generated. Finite generation is essential for the MMP
+because it guarantees the existence of the canonical model and the
+termination of certain MMP sequences. The finite generation of the
+canonical ring for smooth projective varieties was a long-standing
+conjecture, finally proved by Birkar, Cascini, Hacon, and McKernan in
+2010.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. Existence of Minimal Models for Varieties of Log General
+Type}\label{ch2018caucherbirkar:existence-of-minimal-models-for-varieties-of-log-general-type}
+
+\subsection{5.1 The BCHM Breakthrough}\label{ch2018caucherbirkar:the-bchm-breakthrough}
+
+In 2010, Birkar, together with Paolo Cascini, Christopher Hacon, and
+James McKernan, published a landmark paper titled ``Existence of minimal
+models for varieties of log general type'' in the \emph{Journal of the
+American Mathematical Society}.
+
+The paper proved that the Minimal Model Program works for varieties of
+log general type --- that is, varieties whose canonical divisor is big.
+This case covers a vast range of important varieties, including all
+varieties of general type and many others.
+
+\subsection{5.2 Main Results}\label{ch2018caucherbirkar:main-results}
+
+The BCHM paper established several fundamental results:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{Existence of minimal models:} For any smooth projective
+ variety \(X\) of log general type (or more generally, for any klt pair
+ \((X, \Delta)\) such that \(K_X + \Delta\) is big), a minimal model
+ exists.
+\item
+ \textbf{Finite generation of canonical rings:} The canonical ring
+ \(R(X, K_X)\) is finitely generated for any smooth projective variety
+ \(X\). This was one of the important open problems in algebraic
+ geometry.
+\item
+ \textbf{Existence of flips:} Flips exist for klt pairs in all
+ dimensions. Prior to BCHM, flips were known to exist only up to
+ dimension 3.
+\item
+ \textbf{Log minimal models:} The results hold for log pairs
+ \((X, \Delta)\), which are essential for induction on dimension.
+\end{enumerate}
+
+\subsection{5.3 Significance}\label{ch2018caucherbirkar:significance}
+
+The BCHM theorem was a substantial result. It proved the existence of
+minimal models in complete generality for the first time (for varieties
+of log general type), and it established the finite generation of
+canonical rings --- a problem that had been open for over 50 years. The
+paper introduced several new techniques, including:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Special termination:} A refined analysis of how MMP sequences
+ terminate.
+\item
+ \textbf{Adjunction for flips:} A method for constructing flips using
+ the theory of log pairs.
+\item
+ \textbf{Inductive arguments:} Using the log version of the MMP to
+ prove results in higher dimensions by induction.
+\end{itemize}
+
+The finite generation of the canonical ring had been conjectured by
+Zariski (1940s) and was known in dimension 2 (Zariski, Mumford) and
+dimension 3 (Kawamata, 1980s; Mori, 1988). The BCHM result extended this
+to all dimensions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. Fano Varieties and the Borisov--Alexeev--Borisov
+Conjecture}\label{ch2018caucherbirkar:fano-varieties-and-the-borisovalexeevborisov-conjecture}
+
+\subsection{6.1 What is a Fano Variety?}\label{ch2018caucherbirkar:what-is-a-fano-variety}
+
+A \textbf{Fano variety} is a projective algebraic variety whose
+anti-canonical divisor \(-K_X\) is ample. Fano varieties are the
+building blocks of the MMP: they are the ``atomic'' varieties that
+cannot be further simplified. They are also of central importance in
+differential geometry (they are exactly the varieties that can
+potentially admit Kähler--Einstein metrics with positive Ricci
+curvature) and in mathematical physics (they appear as the target spaces
+of certain sigma models).
+
+\subsection{6.2 The Conjecture}\label{ch2018caucherbirkar:the-conjecture}
+
+The Borisov--Alexeev--Borisov (BAB) conjecture states:
+
+\begin{quote}
+\textbf{For any fixed dimension \(n\) and any fixed set
+\(D \subset [0,1]\) satisfying the descending chain condition (DCC), the
+set of all \(n\)-dimensional Fano varieties with \(\epsilon\)-log
+terminal singularities and coefficients in \(D\) is bounded.}
+\end{quote}
+
+Here, ``bounded'' means that there exists a projective morphism
+\(Z \to T\) of finite type over \(\mathbb{C}\) such that every such Fano
+variety appears as a fiber. In practical terms, boundedness means that
+these varieties can be parametrized by a finite number of algebraic
+families.
+
+A special case --- the important one --- is the boundedness of
+\(n\)-dimensional terminal Fano varieties. This was the case that Birkar
+solved.
+
+\subsection{6.3 Why Boundedness Matters}\label{ch2018caucherbirkar:why-boundedness-matters}
+
+Boundedness of Fano varieties is fundamental for several reasons:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{The MMP:} Fano varieties are the end products of the MMP.
+ Knowing they are bounded means that the outputs of the MMP are
+ ``finite'' in a precise sense.
+\item
+ \textbf{Moduli theory:} Boundedness is the first step towards
+ constructing moduli spaces of Fano varieties.
+\item
+ \textbf{K-stability:} The construction of moduli spaces of K-stable
+ Fano varieties depends on boundedness.
+\item
+ \textbf{Birational automorphism groups:} Boundedness implies the
+ Jordan property for Cremona groups.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. Singularities of Linear
+Systems}\label{ch2018caucherbirkar:singularities-of-linear-systems}
+
+\subsection{7.1 The Problem}\label{ch2018caucherbirkar:the-problem}
+
+Before proving the BAB conjecture, Birkar needed to develop powerful new
+tools for understanding the singularities of linear systems. In
+algebraic geometry, a \textbf{linear system} is a family of divisors
+parametrized by a projective space. The singularities of the members of
+a linear system --- how they intersect, where they are most singular ---
+are crucial for understanding the global geometry of a variety.
+
+\subsection{7.2 Birkar's Contribution}\label{ch2018caucherbirkar:birkars-contribution}
+
+In his 2016 preprint ``Singularities of linear systems and boundedness
+of Fano varieties'' (published in the \emph{Annals of Mathematics} in
+2021), Birkar proved a series of deep results about the singularities of
+linear systems on Fano varieties. The key theorem states:
+
+\begin{quote}
+\textbf{For any \(n\)-dimensional Fano variety \(X\) with terminal
+singularities and any integer \(m\), the linear system \(|-mK_X|\) has
+at most bounded singularities in a precise sense.}
+\end{quote}
+
+More precisely, Birkar introduced the notion of \textbf{``boundedness of
+complements''} --- the existence of a divisor \(D \sim -mK_X\) such that
+\((X, D)\) has log canonical singularities. This is a powerful technical
+tool that limits the possible singularities that can appear.
+
+\subsection{7.3 The Connectedness
+Theorem}\label{ch2018caucherbirkar:the-connectedness-theorem}
+
+A key ingredient is Birkar's connectedness theorem for non-klt loci,
+which generalizes a classical theorem of Shokurov and Kollár. This
+theorem controls how the singular locus of a pair \((X, \Delta)\) is
+connected, and it is essential for reducing the boundedness problem to
+lower-dimensional cases.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. Boundedness of
+Complements}\label{ch2018caucherbirkar:boundedness-of-complements}
+
+\subsection{8.1 Shokurov's Conjecture}\label{ch2018caucherbirkar:shokurovs-conjecture}
+
+A \textbf{complement} of a divisor \(D\) on a variety \(X\) is a divisor
+\(D'\) such that \(D' \ge D\) and \((X, D')\) is log canonical. The
+boundedness of complements conjecture, due to Shokurov, asks whether for
+a given Fano variety \(X\) and a fixed integer \(n\), there exists a
+bounded set of possible complements.
+
+Birkar solved this conjecture completely in his 2016 work. The theorem
+states:
+
+\begin{quote}
+\textbf{For fixed dimension \(n\) and a fixed DCC set
+\(D \subset [0,1]\), the set of all possible complements on
+\(n\)-dimensional Fano varieties with coefficients in \(D\) is bounded.}
+\end{quote}
+
+\subsection{8.2 Why Complements Are
+Important}\label{ch2018caucherbirkar:why-complements-are-important}
+
+Complements provide a way to ``approximate'' the singularities of a Fano
+variety by log canonical pairs. The boundedness of complements means
+that:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ The singularities of Fano varieties are not arbitrarily bad --- they
+ are constrained.
+\item
+ One can find ``good'' divisors that make the pair log canonical, and
+ these divisors come from a bounded family.
+\item
+ This reduces the BAB conjecture to checking a finite number of cases.
+\end{enumerate}
+
+The boundedness of complements is now a fundamental tool in birational
+geometry, used extensively by other researchers.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. Anti-Pluricanonical Systems on Fano
+Varieties}\label{ch2018caucherbirkar:anti-pluricanonical-systems-on-fano-varieties}
+
+\subsection{9.1 Pluricanonical and Anti-Pluricanonical
+Systems}\label{ch2018caucherbirkar:pluricanonical-and-anti-pluricanonical-systems}
+
+For a Fano variety \(X\) with ample \(-K_X\), the linear systems
+\(|-mK_X|\) for \(m \ge 1\) are called \textbf{anti-pluricanonical
+systems}. These systems give embeddings of \(X\) into projective space
+(for large enough \(m\)) and are central to the study of Fano varieties.
+
+A fundamental problem is:
+
+\begin{quote}
+\textbf{Given a fixed dimension \(n\), does there exist an integer \(m\)
+(depending only on \(n\)) such that for every \(n\)-dimensional Fano
+variety \(X\) with terminal singularities, the linear system \(|-mK_X|\)
+is non-empty and gives a birational map?}
+\end{quote}
+
+\subsection{9.2 Birkar's Theorem}\label{ch2018caucherbirkar:birkars-theorem}
+
+In his 2016 paper ``Anti-pluricanonical systems on Fano varieties''
+(published in the \emph{Annals of Mathematics} in 2019), Birkar proved:
+
+\begin{quote}
+\textbf{For any fixed dimension \(n\), there exists an integer
+\(m = m(n)\) such that for every \(n\)-dimensional Fano variety \(X\)
+with terminal singularities, the anti-pluricanonical system \(|-mK_X|\)
+is non-empty and defines a birational map onto its image.}
+\end{quote}
+
+This was a dramatic improvement over previous results. For surfaces, it
+was known that \(m = 3\) works (classical result). For 3-folds,
+\(m = 4\) was known. Birkar's result gave a uniform bound in all
+dimensions, though the explicit \(m(n)\) is large.
+
+\subsection{9.3 Key Techniques}\label{ch2018caucherbirkar:key-techniques}
+
+The proof introduced several new ideas:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Volume bounds:} Using the inequality
+ \(\text{vol}(-K_X) \le C(n)\) for terminal Fano varieties.
+\item
+ \textbf{Multiplicity bounds:} Controlling the multiplicities of
+ divisors in anti-pluricanonical systems.
+\item
+ \textbf{Inductive arguments:} Reducing the problem to lower dimensions
+ using the MMP and the theory of log pairs.
+\end{itemize}
+
+This result was a crucial step toward the proof of the BAB conjecture,
+as it provided effective bounds on the embeddings of Fano varieties.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. The Proof of the BAB
+Conjecture}\label{ch2018caucherbirkar:the-proof-of-the-bab-conjecture}
+
+\subsection{10.1 The Main Theorem}\label{ch2018caucherbirkar:the-main-theorem}
+
+Birkar's proof of the BAB conjecture was published in the \emph{Annals
+of Mathematics} in 2021. The main theorem states:
+
+\begin{quote}
+\textbf{The set of all \(n\)-dimensional Fano varieties with
+\(\epsilon\)-log terminal singularities is bounded. In particular, the
+set of all \(n\)-dimensional terminal Fano varieties is bounded.}
+\end{quote}
+
+\subsection{10.2 Structure of the Proof}\label{ch2018caucherbirkar:structure-of-the-proof}
+
+The proof is long and technically demanding, running over 100 pages. It
+proceeds through several steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{Reduction to Q-Fano varieties:} By taking a finite cover, one
+ can reduce to the case of Q-Fano varieties (where \(-K_X\) is ample
+ Q-Cartier).
+\item
+ \textbf{Boundedness of volumes:} First, one shows that the volume
+ \((-K_X)^n\) is bounded above and below for Fano varieties of fixed
+ dimension. The upper bound is a classical result
+ (Kollár--Miyaoka--Mori); the lower bound is the hard part.
+\item
+ \textbf{Boundedness of complements:} Using Shokurov's conjecture
+ (proved by Birkar), one shows that for any Fano variety, there exists
+ a bounded set of possible complements.
+\item
+ \textbf{Birational boundedness:} Using the anti-pluricanonical systems
+ result, one shows that Fano varieties are birationally bounded ---
+ i.e., they are birational to varieties in a bounded family.
+\item
+ \textbf{Removing indeterminacy:} Using the MMP and the theory of log
+ pairs, one shows that the birational maps can be resolved, giving
+ actual boundedness.
+\item
+ \textbf{Generalized pairs:} A key technical innovation is the use of
+ \textbf{generalized pairs}, which allow one to work with ``virtual''
+ boundary divisors that have better properties than ordinary ones.
+\end{enumerate}
+
+\subsection{10.3 Generalized Pairs}\label{ch2018caucherbirkar:generalized-pairs}
+
+One of Birkar's important technical innovations is the theory of
+\textbf{generalized pairs}. A generalized pair \((X, B + M)\) consists
+of a variety \(X\), an ordinary boundary divisor \(B\), and a
+\textbf{nef divisor} \(M\) that comes from a higher-dimensional space
+via a morphism.
+
+Generalized pairs have better properties than ordinary pairs:
+
+\begin{itemize}
+\tightlist
+\item
+ They behave better under the MMP (flips, contractions).
+\item
+ They allow for stronger inductive arguments.
+\item
+ They unify several previous constructions in birational geometry.
+\end{itemize}
+
+The theory of generalized pairs, developed extensively by Birkar, is now
+a standard tool in birational geometry.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. Generalized Pairs and Log Calabi--Yau
+Fibrations}\label{ch2018caucherbirkar:generalized-pairs-and-log-calabiyau-fibrations}
+
+\subsection{11.1 Log Calabi--Yau
+Varieties}\label{ch2018caucherbirkar:log-calabiyau-varieties}
+
+A \textbf{log Calabi--Yau pair} \((X, \Delta)\) is a projective pair
+such that \(K_X + \Delta \equiv 0\) (numerically trivial). These appear
+naturally in the MMP as the outcome of certain minimal model programs,
+and they are intimately connected with Fano varieties via fibrations.
+
+\subsection{11.2 Birkar's Results on Log Calabi--Yau
+Fibrations}\label{ch2018caucherbirkar:birkars-results-on-log-calabiyau-fibrations}
+
+In a series of papers beginning with ``Log Calabi--Yau fibrations''
+(2018), Birkar studied the geometry of fibrations
+\(f: (X, \Delta) \to Z\) where the general fiber is a log Calabi--Yau
+pair. He proved:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Boundedness results:} The fibers of such fibrations belong to
+ bounded families, given appropriate conditions on the coefficients.
+\item
+ \textbf{Singularity control:} The singularities of the total space and
+ the base are controlled by the singularities of the fibers.
+\item
+ \textbf{DCC for volumes:} The set of possible volumes of log
+ Calabi--Yau pairs satisfies the descending chain condition.
+\end{itemize}
+
+These results have important applications to the classification of
+algebraic varieties and to the theory of moduli spaces.
+
+\subsection{11.3 Applications to Fano
+Fibrations}\label{ch2018caucherbirkar:applications-to-fano-fibrations}
+
+A \textbf{Fano fibration} is a morphism \(X \to Z\) whose fibers are
+Fano varieties. These are the other possible output of the MMP (along
+with minimal models). Birkar's results on log Calabi--Yau fibrations
+imply boundedness results for Fano fibrations: the set of all Fano
+fibrations of fixed dimension with certain singularity conditions is
+bounded.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{12. Positive Characteristic
+Geometry}\label{ch2018caucherbirkar:positive-characteristic-geometry}
+
+\subsection{12.1 The MMP in Positive
+Characteristic}\label{ch2018caucherbirkar:the-mmp-in-positive-characteristic}
+
+The Minimal Model Program was originally developed over the complex
+numbers (characteristic 0). In positive characteristic, the program is
+much harder because many of the standard tools (resolution of
+singularities, vanishing theorems) fail or are not known.
+
+Birkar has made important contributions to the MMP in positive
+characteristic, particularly for 3-folds in characteristic \(p > 0\).
+
+\subsection{12.2 Existence of Flips and Minimal
+Models}\label{ch2018caucherbirkar:existence-of-flips-and-minimal-models}
+
+In his 2016 paper ``Existence of flips and minimal models for 3-folds in
+char p'' (published in \emph{Annales Scientifiques de l'ENS}), Birkar
+proved:
+
+\begin{itemize}
+\tightlist
+\item
+ The existence of flips for 3-folds in characteristic \(p \ge 7\).
+\item
+ The existence of minimal models for 3-folds of log general type in
+ characteristic \(p \ge 5\).
+\end{itemize}
+
+These results, together with work of Hacon and Xu, nearly complete the
+Minimal Model Program for 3-folds in positive characteristic.
+
+\subsection{12.3 Mori Fiber Spaces}\label{ch2018caucherbirkar:mori-fiber-spaces}
+
+In joint work with Joe Waldron (``Existence of Mori fibre spaces for
+3-folds in char p'', \emph{Advances in Mathematics}, 2017), Birkar
+proved the existence of Mori fiber spaces for 3-folds in positive
+characteristic, completing the MMP for 3-folds in large enough
+characteristic.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. Iitaka's Conjecture and Effectivity
+Results}\label{ch2018caucherbirkar:iitakas-conjecture-and-effectivity-results}
+
+\subsection{13.1 Iitaka's Conjecture}\label{ch2018caucherbirkar:iitakas-conjecture}
+
+Iitaka's \(C_{n,m}\) conjecture is a fundamental problem in birational
+geometry. It predicts that for a fibration \(f: X \to Y\) with general
+fiber \(F\), the Kodaira dimensions satisfy:
+
+\[
+\kappa(X) \ge \kappa(F) + \kappa(Y)
+\]
+
+This conjecture is known in many cases but remains open in general.
+
+\subsection{13.2 Birkar and Zhang's
+Contribution}\label{ch2018caucherbirkar:birkar-and-zhangs-contribution}
+
+In their 2016 IHES paper ``Effectivity of Iitaka fibrations and
+pluricanonical systems of polarized pairs,'' Birkar and De-Qi Zhang
+proved:
+
+\begin{itemize}
+\tightlist
+\item
+ The Iitaka fibration is \textbf{effective}: there exists an integer
+ \(m\) (depending only on the dimension) such that the pluricanonical
+ system \(|mK_X|\) gives the Iitaka fibration.
+\item
+ This effectively solved half of Iitaka's conjecture, reducing it to
+ the special case of Kodaira dimension zero.
+\end{itemize}
+
+This result was a major advance. The Iitaka fibration had been known to
+exist theoretically (by the work of Hacon--McKernan, Takayama, Tsuji),
+but the effectivity --- finding an explicit \(m\) that works uniformly
+--- was a new and powerful result.
+
+\subsection{\texorpdfstring{13.3 The \(C_{n,m}\) Conjecture for 3-folds
+over Finite
+Fields}{13.3 The C\_\{n,m\} Conjecture for 3-folds over Finite Fields}}\label{ch2018caucherbirkar:the-c_nm-conjecture-for-3-folds-over-finite-fields}
+
+With Y. Chen and L. Zhang, Birkar proved Iitaka's \(C_{n,m}\) conjecture
+for 3-folds over finite fields, extending the reach of the MMP to
+arithmetic settings.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{14. The Stolen Medal Incident}\label{ch2018caucherbirkar:the-stolen-medal-incident}
+
+\subsection{14.1 The Theft}\label{ch2018caucherbirkar:the-theft}
+
+On August 1, 2018, immediately after the Fields Medal ceremony at the
+International Congress of Mathematicians in Rio de Janeiro, Birkar's
+medal was stolen from a briefcase in a room at the convention center.
+The thief also took his wallet and other personal items.
+
+The theft made international headlines. Birkar later said, ``Now I'm
+much more famous than I would have been.''
+
+\subsection{14.2 The Replacement}\label{ch2018caucherbirkar:the-replacement}
+
+The International Mathematical Union (IMU) had a spare display medal in
+Rio. In a special ceremony at the ICM, Birkar was presented with this
+replacement medal. This led to quips that he was the first person to
+receive the Fields Medal twice.
+
+The original medal was never recovered.
+
+\subsection{14.3 Impact}\label{ch2018caucherbirkar:impact}
+
+Despite the unfortunate incident, Birkar handled the situation with
+grace and humor. He said that the medal was ``just a symbol'' and that
+the real honor was the recognition of his work. The incident
+inadvertently increased media coverage of the Fields Medal and of
+Birkar's notable life story.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. Impact on Algebraic
+Geometry}\label{ch2018caucherbirkar:impact-on-algebraic-geometry}
+
+\subsection{15.1 Impact on the Minimal Model
+Program}\label{ch2018caucherbirkar:impact-on-the-minimal-model-program}
+
+Birkar's work, particularly the BCHM theorem, transformed the MMP from a
+partially completed program into an effective tool that can be applied in
+many contexts. The finite generation of canonical rings and the
+existence of minimal models for varieties of log general type are now
+taken as foundational results.
+
+\subsection{15.2 Impact on the Study of Fano
+Varieties}\label{ch2018caucherbirkar:impact-on-the-study-of-fano-varieties}
+
+The boundedness of Fano varieties was a watershed result. Before Birkar,
+it was not even clear that the number of deformation types of terminal
+Fano varieties was finite. Now, mathematicians know that:
+
+\begin{itemize}
+\tightlist
+\item
+ The set of all terminal Fano varieties of fixed dimension is bounded.
+\item
+ There are explicit (though large) bounds on their volumes, degrees,
+ and other invariants.
+\item
+ The singularities of Fano varieties are constrained in precise ways.
+\end{itemize}
+
+\subsection{15.3 Impact on K-Stability and Moduli
+Theory}\label{ch2018caucherbirkar:impact-on-k-stability-and-moduli-theory}
+
+Birkar's boundedness results are essential for the construction of
+moduli spaces of Fano varieties via K-stability. The existence of a
+projective moduli space of K-polystable Fano varieties, proved by
+Chenyang Xu and others, relies crucially on Birkar's boundedness
+theorem.
+
+The moduli space of K-stable Fano varieties is now a major research
+area, with connections to differential geometry (Kähler--Einstein
+metrics), mirror symmetry, and algebraic geometry.
+
+\subsection{15.4 Impact on the Study of Birational Automorphism
+Groups}\label{ch2018caucherbirkar:impact-on-the-study-of-birational-automorphism-groups}
+
+The boundedness of Fano varieties implies the \textbf{Jordan property}
+for Cremona groups: for any fixed dimension \(n\), there exists a
+constant \(J(n)\) such that every finite subgroup of the Cremona group
+\(\text{Bir}(\mathbb{P}^n)\) contains an abelian normal subgroup of
+index at most \(J(n)\). This was previously known only for
+\(\mathbb{P}^2\) (by work of Serre and others).
+
+\subsection{15.5 Impact on Arithmetic
+Geometry}\label{ch2018caucherbirkar:impact-on-arithmetic-geometry}
+
+Birkar's results in positive characteristic and his work on Iitaka's
+conjecture have applications to arithmetic geometry, particularly to the
+study of algebraic varieties over finite fields and to the geometry of
+numbers.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. K-Stability and Moduli of Fano
+Varieties}\label{ch2018caucherbirkar:k-stability-and-moduli-of-fano-varieties}
+
+\subsection{16.1 The Connection}\label{ch2018caucherbirkar:the-connection}
+
+K-stability is an algebro-geometric stability condition for Fano
+varieties that characterizes the existence of Kähler--Einstein metrics.
+The construction of moduli spaces of K-stable Fano varieties depends
+critically on boundedness results.
+
+\subsection{16.2 Birkar's Contribution}\label{ch2018caucherbirkar:birkars-contribution-1}
+
+Birkar's proof of the BAB conjecture is the key boundedness input for
+the construction of K-moduli spaces. The theorem that K-semistable Fano
+varieties of fixed dimension with bounded anti-canonical volume form a
+bounded family (proved by Jiang, building on Birkar's work) is the first
+step in the construction.
+
+The K-moduli space of Fano varieties is now known to exist as a
+projective scheme, and it has applications to:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Kähler geometry:} The moduli space parametrizes Fano manifolds
+ admitting Kähler--Einstein metrics.
+\item
+ \textbf{Mirror symmetry:} The moduli space of Fano varieties is
+ expected to be related to the moduli space of Landau--Ginzburg models.
+\item
+ \textbf{Rational points:} Boundedness results are used in the study of
+ rational points on Fano varieties.
+\end{itemize}
+
+\subsection{16.3 The Fujita--Li Criterion}\label{ch2018caucherbirkar:the-fujitali-criterion}
+
+The reformulation of K-stability by Fujita and Li, in terms of the
+``normalized volume'' of valuations, has made K-stability computable for
+many examples. This criterion, combined with Birkar's boundedness, has
+led to a detailed understanding of which Fano varieties are K-stable in
+dimensions 2 and 3.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{17. Awards and Recognition}\label{ch2018caucherbirkar:awards-and-recognition}
+
+\textbf{2025:} - Foreign Academician, Chinese Academy of Sciences
+
+\textbf{2019:} - Fellow of the Royal Society - Honorary Doctorate,
+Salahaddin University, Erbil
+
+\textbf{2018:} - Fields Medal (International Mathematical Union)
+
+\textbf{2016:} - AMS Moore Prize (for the BCHM paper)
+
+\textbf{2010:} - Philip Leverhulme Prize in Mathematics and Statistics -
+Prize of the Fondation Sciences Mathematiques de Paris
+
+\textbf{Other:} - Honorary Professor, University of Nottingham - Cecil
+King Travel Scholarship, London Mathematical Society
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{18. Selected Major
+Publications}\label{ch2018caucherbirkar:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``Existence of minimal models for varieties of log general
+ type''} (with P. Cascini, C. Hacon, and J. McKernan). \emph{Journal of
+ the American Mathematical Society} 23(2), 405--468, 2010. ---
+ \emph{The BCHM breakthrough proving finite generation of canonical
+ rings and existence of minimal models.}
+\item
+ \textbf{``Anti-pluricanonical systems on Fano varieties.''}
+ \emph{Annals of Mathematics} 190(2), 345--463, 2019. --- \emph{Proof
+ of uniform boundedness of anti-pluricanonical systems on Fano
+ varieties.}
+\item
+ \textbf{``Singularities of linear systems and boundedness of Fano
+ varieties.''} \emph{Annals of Mathematics} 193(2), 347--405, 2021. ---
+ \emph{Proof of the BAB conjecture (boundedness of Fano varieties) and
+ Shokurov's boundedness of complements conjecture.}
+\item
+ \textbf{``Existence of flips and minimal models for 3-folds in char
+ p.''} \emph{Annales Scientifiques de l'ENS} 49(1), 169--212, 2016. ---
+ \emph{Positive characteristic MMP for 3-folds.}
+\item
+ \textbf{``Existence of Mori fibre spaces for 3-folds in char p''}
+ (with J. Waldron). \emph{Advances in Mathematics} 313, 62--101, 2017.
+ --- \emph{Completion of the MMP for 3-folds in large characteristic.}
+\item
+ \textbf{``Effectivity of Iitaka fibrations and pluricanonical systems
+ of polarized pairs''} (with D.-Q. Zhang). \emph{Publications
+ Mathematiques de l'IHES} 123, 283--331, 2016. --- \emph{Effective
+ Iitaka fibrations, reducing Iitaka's conjecture to the Kodaira
+ dimension zero case.}
+\item
+ \textbf{``Log Calabi-Yau fibrations.''} arXiv:1811.10709, 2018. ---
+ \emph{Foundational results on the geometry of log Calabi-Yau
+ fibrations.}
+\item
+ \textbf{``Generalised pairs in birational geometry.''}
+ arXiv:2008.01008, 2020. --- \emph{Systematic development of the theory
+ of generalized pairs.}
+\item
+ \textbf{``Boundedness and volume of generalised pairs.''}
+ arXiv:2103.14935, 2021. --- \emph{Further developments on generalized
+ pairs and their volumes.}
+\item
+ \textbf{``Geometry and moduli of polarised varieties.''}
+ arXiv:2006.11238, 2020. --- \emph{Connections between boundedness,
+ moduli, and generalized pairs.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{19. Ongoing Work and Future
+Directions}\label{ch2018caucherbirkar:ongoing-work-and-future-directions}
+
+\subsection{19.1 Generalized Pairs}\label{ch2018caucherbirkar:generalized-pairs-1}
+
+Birkar continues to develop the theory of generalized pairs, which has
+become a central tool in birational geometry. Recent work focuses on:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Boundedness results:} Extending the theory to prove
+ boundedness for wider classes of varieties.
+\item
+ \textbf{Volume bounds:} Obtaining explicit bounds on the volumes of
+ log Calabi--Yau pairs.
+\item
+ \textbf{DCC properties:} Proving that certain sets of invariants
+ satisfy the descending chain condition.
+\end{itemize}
+
+\subsection{19.2 Positive Characteristic}\label{ch2018caucherbirkar:positive-characteristic}
+
+Birkar is actively working on extending the MMP to positive
+characteristic. The main challenges are:
+
+\begin{itemize}
+\tightlist
+\item
+ Resolution of singularities in positive characteristic (not known in
+ general).
+\item
+ Vanishing theorems in positive characteristic.
+\item
+ The minimal model program for 4-folds in positive characteristic.
+\end{itemize}
+
+\subsection{19.3 Connections to Physics}\label{ch2018caucherbirkar:connections-to-physics}
+
+Recent work with Seung-Joo Lee (2025) applies birational geometry to
+supergravity theories, using boundedness results to derive explicit
+bounds on the particle spectrum of 6-dimensional supergravity theories.
+This represents a new direction connecting Birkar's pure mathematics to
+theoretical physics.
+
+\subsection{19.4 Effective Birational
+Geometry}\label{ch2018caucherbirkar:effective-birational-geometry}
+
+In his 2025 survey ``Some open problems in effective birational
+geometry'' (EMS Surveys), Birkar outlined several fundamental open
+problems:
+
+\begin{itemize}
+\tightlist
+\item
+ Finding explicit bounds for the BAB conjecture.
+\item
+ Effective versions of the existence of minimal models.
+\item
+ Computational aspects of birational geometry.
+\end{itemize}
+
+\subsection{19.5 Positivity, Singularities, and
+Boundedness}\label{ch2018caucherbirkar:positivity-singularities-and-boundedness}
+
+His 2025 paper ``Positivity, singularities, and boundedness'' (submitted
+to a volume in honor of James McKernan's 60th birthday) explores recent
+connections between these three themes, synthesizing developments from
+the past decade.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{20. Conclusion}\label{ch2018caucherbirkar:conclusion}
+
+Caucher Birkar's journey from a Kurdish farming village in Iran to the
+Fields Medal is one of the most notable stories in modern
+mathematics. His mathematical achievements are equally notable: he
+proved the finite generation of canonical rings, established the
+existence of minimal models for varieties of log general type, proved
+the boundedness of Fano varieties (the BAB conjecture), and solved
+Shokurov's boundedness of complements conjecture.
+
+The Fields Medal citation --- ``For the proof of the boundedness of Fano
+varieties and for contributions to the minimal model program'' ---
+captures the essence of his contribution, but the impact of his work
+extends far beyond these specific results. The BCHM theorem is now a
+foundational tool in algebraic geometry. The theory of generalized
+pairs, which Birkar developed, is a standard technique used by
+researchers worldwide. The boundedness of Fano varieties has enabled the
+construction of moduli spaces of K-stable Fano varieties, with
+connections to differential geometry and mathematical physics.
+
+Birkar's work is characterized by its depth, technical power, and
+geometric insight. He has a notable ability to combine the heavy
+machinery of the MMP with delicate combinatorial and analytic estimates,
+and to find the right level of generality for a problem. His proofs are
+technically demanding but conceptually clear, revealing the underlying
+structure of the objects he studies.
+
+As of 2026, Birkar continues to push the boundaries of birational
+geometry, working on generalized pairs, positive characteristic
+geometry, and connections to theoretical physics. His ongoing work
+promises to yield further insights into the structure of algebraic
+varieties and their classification.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{21. References and Further
+Reading}\label{ch2018caucherbirkar:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch2018caucherbirkar:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 2018 Announcement:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2018
+\item
+ Fields Medal Citation for Caucher Birkar:
+ https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2018/Birkar-Citation.pdf
+\item
+ Jackson, A. ``The Work of Caucher Birkar.'' ICM 2018 Laudatio.
+ https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2018/birkar-final.pdf
+\end{itemize}
+
+\subsection{Biographical and Overview
+Articles}\label{ch2018caucherbirkar:biographical-and-overview-articles}
+
+\begin{itemize}
+\tightlist
+\item
+ Klarreich, E. ``A Refugee with an Unlikely Path Wins the Fields
+ Medal.'' \emph{Quanta Magazine}, August 1, 2018.
+\item
+ Castelvecchi, D. ``Number-theory prodigy among winners of most coveted
+ prize in mathematics.'' \emph{Nature}, August 1, 2018.
+\item
+ Davis, N. and Zhou, N. ``Former refugee among winners of Fields
+ medal.'' \emph{The Guardian}, August 1, 2018.
+\item
+ Phillips, D. ``World's most prestigious maths medal is stolen
+ alongside his wallet minutes after professor wins it.'' \emph{The
+ Guardian}, August 1, 2018.
+\item
+ ICM 2018 News: ``Fields Medal winner Caucher Birkar: `Suddenly I have
+ wings.'\,''
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch2018caucherbirkar:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Birkar, C., Cascini, P., Hacon, C., and McKernan, J. ``Existence of
+ minimal models for varieties of log general type.'' \emph{JAMS} 23
+ (2010), 405--468.
+\item
+ Birkar, C. ``Anti-pluricanonical systems on Fano varieties.''
+ \emph{Annals of Mathematics} 190 (2019), 345--463.
+\item
+ Birkar, C. ``Singularities of linear systems and boundedness of Fano
+ varieties.'' \emph{Annals of Mathematics} 193 (2021), 347--405.
+\item
+ Birkar, C. ``Existence of flips and minimal models for 3-folds in char
+ p.'' \emph{Annales Scientifiques de l'ENS} 49 (2016), 169--212.
+\item
+ Birkar, C. ``Log Calabi-Yau fibrations.'' arXiv:1811.10709 (2018).
+\item
+ Birkar, C. ``Generalised pairs in birational geometry.''
+ arXiv:2008.01008 (2020).
+\item
+ Birkar, C. and Zhang, D.-Q. ``Effectivity of Iitaka fibrations and
+ pluricanonical systems of polarized pairs.'' \emph{Pub. Math. IHES}
+ 123 (2016), 283--331.
+\item
+ Kollar, J. and Mori, S. \emph{Birational Geometry of Algebraic
+ Varieties}. Cambridge Tracts in Mathematics 134, 1998.
+\item
+ Xu, C. ``K-stability of Fano varieties: an algebro-geometric
+ approach.'' \emph{EMS Surveys in Mathematical Sciences} 8 (2021),
+ 265--354.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(End of report)}

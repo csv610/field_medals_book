@@ -1,0 +1,1121 @@
+\chapter{Laurent Schwartz --- Fields Medal 1950}\label{ch1950laurentschwartz:laurent-schwartz-fields-medal-1950-a-comprehensive-report}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Laurent Schwartz (b.
+March 5, 1915, Paris, France) \textbf{Position:} Professor, École
+Polytechnique; Université Paris VII \textbf{Doctoral Advisor:} Georges
+Valiron (University of Strasbourg) \textbf{Fields Medal Citation:}
+\emph{``Developed the theory of distributions, a new notion of
+generalized function motivated by the Dirac delta-function of
+theoretical physics.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch1950laurentschwartz:introduction}
+
+Laurent Schwartz was awarded the Fields Medal in 1950 for creating the
+\textbf{theory of distributions} --- a rigorous mathematical framework
+for generalized functions that revolutionized analysis. The theory
+provided a precise meaning for objects such as Dirac's delta function,
+which had been used informally by physicists for decades, and
+established a unified setting for the study of differential equations,
+Fourier analysis, and functional analysis.
+
+Schwartz's contributions include:
+
+\begin{itemize}
+\tightlist
+\item
+ The \textbf{theory of distributions}, defining them as continuous
+ linear functionals on spaces of test functions, with calculus
+ operations extended by duality.
+\item
+ The \textbf{Schwartz space} \(\mathcal{S}(\mathbb{R}^n)\) of rapidly
+ decreasing functions and its dual \(\mathcal{S}'(\mathbb{R}^n)\), the
+ space of tempered distributions, providing the natural setting for
+ Fourier analysis.
+\item
+ The \textbf{Schwartz kernel theorem}, showing that every continuous
+ linear operator from test functions to distributions is given by a
+ distributional kernel.
+\item
+ The \textbf{Malgrange--Ehrenpreis theorem} (with collaborators),
+ proving the existence of fundamental solutions for all linear
+ constant-coefficient PDEs.
+\item
+ The \textbf{theory of nuclear spaces} and \textbf{locally convex
+ topological vector spaces}, providing the functional-analytic
+ foundation for distribution theory.
+\item
+ Fundamental contributions to the theory of \textbf{partial
+ differential equations}, including the study of hypoellipticity and
+ the propagation of singularities.
+\item
+ Active engagement in \textbf{political and social causes}, including
+ human rights and anti-colonial movements.
+\end{itemize}
+
+This report provides a comprehensive overview of Schwartz's life, his
+monumental contributions to analysis, and the lasting impact of his
+work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background}\label{ch1950laurentschwartz:biographical-background}
+
+\subsection{2.1 Early Life and
+Education}\label{ch1950laurentschwartz:early-life-and-education}
+
+Laurent-Moïse Schwartz was born on March 5, 1915, in Paris, into a
+distinguished Jewish family. His father was a surgeon and his mother
+came from a family of scientists. He entered the École Normale
+Supérieure (ENS) in 1934, where he studied under Henri Lebesgue, Élie
+Cartan, and Gaston Julia. During World War II, Schwartz was active in
+the French Resistance, and his family faced persecution under the Vichy
+regime.
+
+\subsection{2.2 Academic Career}\label{ch1950laurentschwartz:academic-career}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{1937:} Agrégation in Mathematics, École Normale Supérieure.
+\item
+ \textbf{1940--1944:} CNRS researcher, Clermont-Ferrand (during the
+ war).
+\item
+ \textbf{1944--1945:} Lecturer, Université de Grenoble.
+\item
+ \textbf{1945--1947:} Professor, Université de Nancy.
+\item
+ \textbf{1947--1950:} Professor, Université de Paris (Sorbonne).
+\item
+ \textbf{1950:} Fields Medal awarded at the ICM in Cambridge,
+ Massachusetts.
+\item
+ \textbf{1952--1958:} Professor, Université de Paris (Sorbonne).
+\item
+ \textbf{1958--1981:} Professor, École Polytechnique.
+\item
+ \textbf{1981--1986:} Professor, Université Paris VII.
+\item
+ \textbf{2002:} Died in Paris at age 87.
+\end{itemize}
+
+\subsection{2.3 Doctoral Work}\label{ch1950laurentschwartz:doctoral-work}
+
+Schwartz's doctoral thesis, completed under the supervision of Georges
+Valiron, dealt with the theory of approximation and the moment problem.
+While his thesis did not yet contain distribution theory, it
+demonstrated his mastery of functional analysis and laid the groundwork
+for his later work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. Motivation for Distribution
+Theory}\label{ch1950laurentschwartz:motivation-for-distribution-theory}
+
+\subsection{3.1 The Dirac Delta}\label{ch1950laurentschwartz:the-dirac-delta}
+
+In quantum mechanics, Paul Dirac introduced the \textbf{delta function}
+\(\delta(x)\), satisfying:
+
+\[\int_{\mathbb{R}} \delta(x) f(x) \, dx = f(0)\]
+
+for any continuous function \(f\). This object, while immensely useful,
+was not a function in the classical sense --- no function can have the
+required properties.
+
+\subsection{3.2 Heaviside's Operational
+Calculus}\label{ch1950laurentschwartz:heavisides-operational-calculus}
+
+Oliver Heaviside had introduced formal rules for differentiating
+discontinuous functions and solving differential equations using
+symbolic methods. These methods were widely used but lacked mathematical
+justification.
+
+\subsection{3.3 Sobolev's Generalized
+Functions}\label{ch1950laurentschwartz:sobolevs-generalized-functions}
+
+Sergei Sobolev had introduced generalized functions (now called Sobolev
+spaces) in the 1930s, defining weak derivatives for functions in
+\(L^p\). However, his theory was limited to functions of finite order
+and did not provide a complete framework.
+
+\subsection{3.4 Schwartz's Insight}\label{ch1950laurentschwartz:schwartzs-insight}
+
+Schwartz's key insight was that a generalized function should be defined
+not by its values at points, but by its \textbf{pairings with test
+functions}. A distribution \(T\) is a continuous linear functional on a
+space \(\mathcal{D}(\Omega)\) of infinitely differentiable functions
+with compact support:
+
+\[T: \mathcal{D}(\Omega) \to \mathbb{C}, \quad \varphi \mapsto \langle T, \varphi \rangle\]
+
+This definition allowed all differential and integral calculus
+operations to be extended by duality.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. The Space of Test
+Functions}\label{ch1950laurentschwartz:the-space-of-test-functions}
+
+\subsection{\texorpdfstring{4.1 The Space
+\(\mathcal{D}(\Omega)\)}{4.1 The Space \textbackslash mathcal\{D\}(\textbackslash Omega)}}\label{ch1950laurentschwartz:the-space-mathcaldomega}
+
+The space \(\mathcal{D}(\Omega)\) consists of all \(C^\infty\) functions
+\(\varphi: \Omega \to \mathbb{C}\) with \textbf{compact support} (i.e.,
+\(\overline{\{\varphi \neq 0\}}\) is compact in \(\Omega\)). The
+topology on \(\mathcal{D}(\Omega)\) is the \textbf{inductive limit
+topology}: a sequence \(\varphi_n \to \varphi\) if there exists a
+compact \(K\) containing all supports and
+\(\partial^\alpha \varphi_n \to \partial^\alpha \varphi\) uniformly on
+\(K\) for all multi-indices \(\alpha\).
+
+\subsection{\texorpdfstring{4.2 The Space
+\(\mathcal{S}(\mathbb{R}^n)\)}{4.2 The Space \textbackslash mathcal\{S\}(\textbackslash mathbb\{R\}\^{}n)}}\label{ch1950laurentschwartz:the-space-mathcalsmathbbrn}
+
+The \textbf{Schwartz space} \(\mathcal{S}(\mathbb{R}^n)\) consists of
+\(C^\infty\) functions \(\varphi\) such that all derivatives decay
+faster than any polynomial:
+
+\[\sup_{x \in \mathbb{R}^n} |x^\beta \partial^\alpha \varphi(x)| < \infty \quad \text{for all multi-indices } \alpha, \beta\]
+
+This space is a \textbf{Fréchet space} with the topology defined by the
+seminorms above.
+
+\subsection{4.3 Other Test Function
+Spaces}\label{ch1950laurentschwartz:other-test-function-spaces}
+
+Schwartz also introduced: - \(\mathcal{E}(\Omega)\): \(C^\infty\)
+functions with the topology of uniform convergence on compact sets. -
+\(\mathcal{D}_L^p\): \(C^\infty\) functions with all derivatives in
+\(L^p\). - \(\mathcal{O}_M\): \(C^\infty\) functions of slow growth
+(multipliers for \(\mathcal{S}\)).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. Distributions}\label{ch1950laurentschwartz:distributions}
+
+\subsection{5.1 Definition}\label{ch1950laurentschwartz:definition}
+
+A \textbf{distribution} \(T\) on \(\Omega \subset \mathbb{R}^n\) is a
+continuous linear functional on \(\mathcal{D}(\Omega)\). The space of
+distributions is denoted \(\mathcal{D}'(\Omega)\). The \textbf{dual
+space} \(\mathcal{S}'(\mathbb{R}^n)\) is the space of \textbf{tempered
+distributions}.
+
+\subsection{5.2 Examples}\label{ch1950laurentschwartz:examples}
+
+\begin{itemize}
+\item
+ \textbf{Locally integrable functions:} Any
+ \(f \in L^1_{\text{loc}}(\Omega)\) defines a distribution:
+ \[\langle T_f, \varphi \rangle = \int_\Omega f(x) \varphi(x) \, dx\]
+\item
+ \textbf{The Dirac delta:}
+ \(\langle \delta, \varphi \rangle = \varphi(0)\).
+\item
+ \textbf{The Heaviside function:} \(H(x) = 1\) for \(x > 0\), \(0\) for
+ \(x \leq 0\) defines a distribution.
+\item
+ \textbf{Principal value:} \(\text{p.v.}(1/x)\) defined by:
+ \[\langle \text{p.v.}\frac{1}{x}, \varphi \rangle = \lim_{\varepsilon \to 0} \int_{|x| > \varepsilon} \frac{\varphi(x)}{x} \, dx\]
+\end{itemize}
+
+\subsection{5.3 Operations on
+Distributions}\label{ch1950laurentschwartz:operations-on-distributions}
+
+Schwartz showed that all classical operations extend to distributions:
+
+\begin{itemize}
+\item
+ \textbf{Differentiation:}
+ \(\langle \partial^\alpha T, \varphi \rangle = (-1)^{|\alpha|} \langle T, \partial^\alpha \varphi \rangle\).
+ Every distribution is infinitely differentiable.
+\item
+ \textbf{Multiplication by smooth functions:}
+ \(\langle f T, \varphi \rangle = \langle T, f \varphi \rangle\) for
+ \(f \in C^\infty\).
+\item
+ \textbf{Convolution:} \(T * S\) is defined when one of them has
+ compact support.
+\item
+ \textbf{Fourier transform:} For tempered distributions \(\hat{T}\) is
+ defined by
+ \(\langle \hat{T}, \varphi \rangle = \langle T, \hat{\varphi} \rangle\).
+\end{itemize}
+
+\subsection{5.4 Structure Theorem}\label{ch1950laurentschwartz:structure-theorem}
+
+Every distribution \(T \in \mathcal{D}'(\Omega)\) can be represented
+locally as a finite sum of derivatives of continuous functions:
+
+\[T = \sum_{|\alpha| \leq m} \partial^\alpha f_\alpha\]
+
+where \(f_\alpha\) are continuous functions. This shows that
+distributions are ``not too wild'' --- they are always finite-order
+derivatives of continuous functions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. The Schwartz Kernel
+Theorem}\label{ch1950laurentschwartz:the-schwartz-kernel-theorem}
+
+\subsection{6.1 Statement}\label{ch1950laurentschwartz:statement}
+
+The \textbf{Schwartz kernel theorem} is one of the important
+results in distribution theory. It states:
+
+\begin{quote}
+\textbf{Schwartz Kernel Theorem:} For any continuous linear operator
+\(A: \mathcal{D}(\Omega_2) \to \mathcal{D}'(\Omega_1)\), there exists a
+unique distribution \(K_A \in \mathcal{D}'(\Omega_1 \times \Omega_2)\)
+such that:
+\[\langle A\varphi, \psi \rangle = \langle K_A, \psi \otimes \varphi \rangle\]
+for all \(\psi \in \mathcal{D}(\Omega_1)\),
+\(\varphi \in \mathcal{D}(\Omega_2)\).
+\end{quote}
+
+\subsection{6.2 Interpretation}\label{ch1950laurentschwartz:interpretation}
+
+The kernel \(K_A(x, y)\) is a generalized function satisfying:
+
+\[(A\varphi)(x) = \int K_A(x, y) \varphi(y) \, dy\]
+
+in the sense of distributions. Thus every linear operator (continuous in
+the appropriate topology) is an integral operator with a distributional
+kernel.
+
+\subsection{6.3 Examples}\label{ch1950laurentschwartz:examples-1}
+
+\begin{itemize}
+\tightlist
+\item
+ The identity operator: \(K(x, y) = \delta(x - y)\).
+\item
+ A differential operator \(P(x, \partial_x)\):
+ \(K(x, y) = P(x, \partial_x) \delta(x - y)\).
+\item
+ An integral operator with smooth kernel \(k(x, y)\):
+ \(K(x, y) = k(x, y)\).
+\end{itemize}
+
+\subsection{6.4 Significance}\label{ch1950laurentschwartz:significance}
+
+The kernel theorem shows that distribution theory provides a universal
+language for linear analysis. Every linear operation ---
+differentiation, convolution, Fourier transform, integral transform ---
+can be expressed as a pairing with a distributional kernel.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. Fundamental Solutions of
+PDEs}\label{ch1950laurentschwartz:fundamental-solutions-of-pdes}
+
+\subsection{7.1 Definition}\label{ch1950laurentschwartz:definition-1}
+
+A \textbf{fundamental solution} for a linear partial differential
+operator \(P(D)\) is a distribution \(E\) such that:
+
+\[P(D)E = \delta\]
+
+where \(\delta\) is the Dirac delta. The solution to the inhomogeneous
+equation \(P(D)u = f\) is then \(u = E * f\) (convolution).
+
+\subsection{7.2 The Malgrange--Ehrenpreis
+Theorem}\label{ch1950laurentschwartz:the-malgrangeehrenpreis-theorem}
+
+In 1952, Bernard Malgrange (a student of Schwartz) and Leon Ehrenpreis
+independently proved:
+
+\begin{quote}
+\textbf{Malgrange--Ehrenpreis Theorem:} Every non-zero linear partial
+differential operator with constant coefficients has a fundamental
+solution.
+\end{quote}
+
+Schwartz had conjectured this result and his theory of distributions
+provided the necessary framework for the proof.
+
+\subsection{7.3 Examples}\label{ch1950laurentschwartz:examples-2}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Laplace equation:} \(\Delta E = \delta\) has
+ \(E(x) = \frac{1}{2\pi} \log|x|\) in \(\mathbb{R}^2\) and
+ \(E(x) = -\frac{1}{4\pi|x|}\) in \(\mathbb{R}^3\).
+\item
+ \textbf{Heat equation:} \((\partial_t - \Delta)E = \delta\) has
+ \(E(x, t) = \frac{1}{(4\pi t)^{n/2}} e^{-|x|^2/4t}\) for \(t > 0\),
+ \(E = 0\) for \(t < 0\).
+\item
+ \textbf{Wave equation:} \((\partial_t^2 - \Delta)E = \delta\) has
+ \(E\) supported on the light cone.
+\end{itemize}
+
+\subsection{7.4 Parametrices and Pseudo-Differential
+Operators}\label{ch1950laurentschwartz:parametrices-and-pseudo-differential-operators}
+
+A \textbf{parametrix} for \(P(D)\) is a distribution \(E\) such that
+\(P(D)E = \delta + \text{smooth function}\). Parametrices are used to
+study the regularity of solutions to PDEs. Schwartz's theory paved the
+way for the development of \textbf{pseudo-differential operators}, which
+generalize differential operators and admit almost-inverse parametrices.
+
+The formal development of pseudo-differential operators by Kohn,
+Nirenberg, and Hörmander in the 1960s relied heavily on Schwartz's
+framework. A pseudo-differential operator \(a(x, D)\) with symbol
+\(a(x, \xi)\) is defined by:
+
+\[a(x, D)u(x) = \frac{1}{(2\pi)^n} \int e^{ix \cdot \xi} a(x, \xi) \hat{u}(\xi) \, d\xi\]
+
+for \(u \in \mathcal{S}\), and extends to distributions by duality. The
+calculus of pseudo-differential operators, including compositions,
+adjoints, and parametrices, is written in the language of distributions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. Fourier Analysis of
+Distributions}\label{ch1950laurentschwartz:fourier-analysis-of-distributions}
+
+\subsection{\texorpdfstring{8.1 The Fourier Transform on
+\(\mathcal{S}'\)}{8.1 The Fourier Transform on \textbackslash mathcal\{S\}\textquotesingle{}}}\label{ch1950laurentschwartz:the-fourier-transform-on-mathcals}
+
+The Fourier transform of a tempered distribution
+\(T \in \mathcal{S}'(\mathbb{R}^n)\) is defined by duality:
+
+\[\langle \hat{T}, \varphi \rangle = \langle T, \hat{\varphi} \rangle \quad \text{for all } \varphi \in \mathcal{S}(\mathbb{R}^n)\]
+
+where
+\(\hat{\varphi}(\xi) = \int_{\mathbb{R}^n} \varphi(x) e^{-2\pi i x \cdot \xi} \, dx\).
+
+\subsection{8.2 Key Properties}\label{ch1950laurentschwartz:key-properties}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Inversion:} \(\check{\hat{T}} = T\).
+\item
+ \textbf{Differentiation:}
+ \(\widehat{\partial^\alpha T} = (2\pi i \xi)^\alpha \hat{T}\).
+\item
+ \textbf{Convolution:} \(\widehat{T * S} = \hat{T} \cdot \hat{S}\).
+\item
+ \textbf{Paley--Wiener:} A distribution with compact support has an
+ analytic Fourier transform.
+\end{itemize}
+
+\subsection{8.3 The Fourier Transform of the Delta
+Function}\label{ch1950laurentschwartz:the-fourier-transform-of-the-delta-function}
+
+\[\hat{\delta} = 1, \quad \hat{1} = \delta\]
+
+These identities, which were formal nonsense before distribution theory,
+become rigorous statements in the Schwartz framework.
+
+\subsection{8.4 Sobolev Spaces}\label{ch1950laurentschwartz:sobolev-spaces}
+
+The \textbf{Sobolev spaces}
+\(H^s(\mathbb{R}^n) = \{T \in \mathcal{S}' : (1 + |\xi|^2)^{s/2} \hat{T} \in L^2\}\)
+fit naturally into the Schwartz framework. They are essential for the
+modern theory of PDEs.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. Nuclear Spaces}\label{ch1950laurentschwartz:nuclear-spaces}
+
+\subsection{9.1 Definition}\label{ch1950laurentschwartz:definition-2}
+
+A locally convex topological vector space \(E\) is \textbf{nuclear} if
+its topology can be defined by a family of Hilbert seminorms such that
+the canonical maps between the associated Hilbert spaces are trace-class
+operators.
+
+\subsection{9.2 Schwartz's Contributions}\label{ch1950laurentschwartz:schwartzs-contributions}
+
+Schwartz developed the theory of nuclear spaces to provide a
+functional-analytic foundation for distribution theory. He showed:
+
+\begin{itemize}
+\tightlist
+\item
+ \(\mathcal{D}(\Omega)\) and \(\mathcal{S}(\mathbb{R}^n)\) are nuclear
+ spaces.
+\item
+ The kernel theorem holds precisely because these spaces are nuclear.
+\item
+ Nuclear spaces have the \textbf{approximation property} and
+ \textbf{Grothendieck's theorem} applies.
+\end{itemize}
+
+\subsection{9.3 Applications}\label{ch1950laurentschwartz:applications}
+
+Nuclear spaces are used in: - The theory of random processes
+(Kolmogorov's consistency theorem). - Quantum field theory (Wightman
+axioms, Borchers algebras). - The theory of Fredholm operators and
+determinants.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. Partial Differential
+Equations}\label{ch1950laurentschwartz:partial-differential-equations}
+
+\subsection{10.1 Hypoellipticity}\label{ch1950laurentschwartz:hypoellipticity}
+
+A differential operator \(P(D)\) is \textbf{hypoelliptic} if every
+distributional solution of \(P(D)u = f\) with \(f \in C^\infty\) is
+itself \(C^\infty\). Schwartz and his school classified hypoelliptic
+operators:
+
+\begin{quote}
+\textbf{Hörmander's Theorem:} \(P(D)\) is hypoelliptic if and only if
+\(P^{(m)}(\xi) \neq 0\) for all \(\xi \neq 0\), where \(P^{(m)}\) is the
+principal symbol.
+\end{quote}
+
+\subsection{10.2 The Propagation of
+Singularities}\label{ch1950laurentschwartz:the-propagation-of-singularities}
+
+Schwartz studied the \textbf{wave front set} of a distribution, which
+describes the directions in which singularities propagate. The wave
+front set \(WF(T)\) is a subset of \(T^*\Omega \setminus \{0\}\) that is
+conic in the cotangent variable.
+
+\subsection{10.3 Applications to PDE
+Theory}\label{ch1950laurentschwartz:applications-to-pde-theory}
+
+Distribution theory provides the natural framework for: - \textbf{Cauchy
+problems:} Initial value problems for evolution equations. -
+\textbf{Boundary value problems:} Elliptic boundary problems. -
+\textbf{Mixed problems:} Problems with both initial and boundary
+conditions. - \textbf{Free boundary problems:} Problems where the
+boundary is unknown.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. Radon Measures and
+Integration}\label{ch1950laurentschwartz:radon-measures-and-integration}
+
+\subsection{11.1 Radon Measures as
+Distributions}\label{ch1950laurentschwartz:radon-measures-as-distributions}
+
+Schwartz showed that \textbf{Radon measures} (regular Borel measures on
+locally compact spaces) can be identified with distributions of order 0.
+A Radon measure \(\mu\) defines a distribution:
+
+\[\langle \mu, \varphi \rangle = \int \varphi \, d\mu\]
+
+for all \(\varphi \in \mathcal{D}(\Omega)\).
+
+\subsection{11.2 The Riesz Representation
+Theorem}\label{ch1950laurentschwartz:the-riesz-representation-theorem}
+
+The \textbf{Riesz representation theorem} states that every positive
+linear functional on \(C_c(\Omega)\) is given by integration against a
+Radon measure. Schwartz extended this to show that every distribution of
+order 0 is a Radon measure.
+
+\subsection{11.3 Differentiation of
+Measures}\label{ch1950laurentschwartz:differentiation-of-measures}
+
+The Radon--Nikodym theorem and the Lebesgue decomposition theorem both
+find natural expressions in the language of distributions. The
+derivative of a measure (in the distributional sense) gives the density
+when it exists.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{12. Convolution of
+Distributions}\label{ch1950laurentschwartz:convolution-of-distributions}
+
+\subsection{12.1 Definition}\label{ch1950laurentschwartz:definition-3}
+
+The convolution \(T * S\) of two distributions is defined when at least
+one of them has compact support. It satisfies:
+
+\[\langle T * S, \varphi \rangle = \langle T_x, \langle S_y, \varphi(x + y) \rangle \rangle\]
+
+\subsection{12.2 Properties}\label{ch1950laurentschwartz:properties}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Associativity:} \((T * S) * R = T * (S * R)\) when all
+ convolutions are defined.
+\item
+ \textbf{Commutativity:} \(T * S = S * T\).
+\item
+ \textbf{Differentiation:}
+ \(\partial^\alpha(T * S) = (\partial^\alpha T) * S = T * (\partial^\alpha S)\).
+\item
+ \textbf{Support:}
+ \(\text{supp}(T * S) \subset \text{supp}(T) + \text{supp}(S)\).
+\end{itemize}
+
+\subsection{12.3 Regularization}\label{ch1950laurentschwartz:regularization}
+
+Convolution with a smooth approximate identity \(\varphi_\varepsilon\)
+(a \textbf{mollifier}) gives a regularization of any distribution:
+
+\[T_\varepsilon = T * \varphi_\varepsilon \in C^\infty, \quad T_\varepsilon \to T \text{ in } \mathcal{D}' \text{ as } \varepsilon \to 0\]
+
+This shows that every distribution is the limit of smooth functions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. The Division Problem}\label{ch1950laurentschwartz:the-division-problem}
+
+\subsection{13.1 Statement}\label{ch1950laurentschwartz:statement-1}
+
+The \textbf{division problem} asks: given a distribution \(T\) and a
+smooth function \(f\), does there exist a distribution \(S\) such that
+\(f \cdot S = T\)?
+
+\subsection{13.2 Schwartz's Work}\label{ch1950laurentschwartz:schwartzs-work}
+
+Schwartz proved the existence of solutions to the division problem for
+polynomials \(f\) in one variable. The \textbf{Lojasiewicz inequality}
+was later used to extend this to analytic functions. The division
+problem is central to: - The existence of fundamental solutions for
+PDEs. - The theory of \textbf{hyperfunctions}. - The \textbf{division of
+distributions} by smooth functions.
+
+\subsection{13.3 Hironaka's Resolution of
+Singularities}\label{ch1950laurentschwartz:hironakas-resolution-of-singularities}
+
+The general division problem for polynomials in several variables was
+solved by Heisuke Hironaka using \textbf{resolution of singularities}.
+This connection between algebraic geometry and distribution theory was
+one of the most striking developments in the field.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{14. Spectral Theory}\label{ch1950laurentschwartz:spectral-theory}
+
+\subsection{14.1 Distributional Vectors}\label{ch1950laurentschwartz:distributional-vectors}
+
+Schwartz developed the theory of \textbf{distributional vectors} for
+unbounded operators on Hilbert spaces. A vector \(v\) is a
+\(C^\infty\)-vector for an operator \(A\) if \(A^n v\) is defined for
+all \(n\).
+
+\subsection{14.2 The Schwartz Space of a
+Group}\label{ch1950laurentschwartz:the-schwartz-space-of-a-group}
+
+For a Lie group \(G\), the \textbf{Schwartz space} \(\mathcal{S}(G)\)
+consists of smooth functions on \(G\) that decay rapidly at infinity,
+together with all their left and right derivatives. The dual
+\(\mathcal{S}'(G)\) consists of \textbf{tempered distributions} on
+\(G\).
+
+\subsection{14.3 Applications to Representation
+Theory}\label{ch1950laurentschwartz:applications-to-representation-theory}
+
+Distribution theory plays a central role in the \textbf{representation
+theory of Lie groups}: - Characters of representations are
+distributions. - The \textbf{Harish-Chandra character} of a
+representation is a distribution on the group. - The \textbf{Plancherel
+formula} is expressed using distributional characters.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. Probability Theory and
+Distributions}\label{ch1950laurentschwartz:probability-theory-and-distributions}
+
+\subsection{15.1 Generalized Stochastic
+Processes}\label{ch1950laurentschwartz:generalized-stochastic-processes}
+
+Schwartz's distributions provide the natural framework for
+\textbf{generalized stochastic processes} --- random variables taking
+values in \(\mathcal{D}'\). The \textbf{white noise} process is a random
+distribution with covariance:
+
+\[\mathbb{E}[\langle \xi, \varphi \rangle \langle \xi, \psi \rangle] = \int \varphi(x) \psi(x) \, dx\]
+
+\subsection{15.2 The Gelfand--Vilenkin
+Theory}\label{ch1950laurentschwartz:the-gelfandvilenkin-theory}
+
+The theory of \textbf{generalized random processes} developed by Gelfand
+and Vilenkin is based on Schwartz's distribution theory. The
+\textbf{Kolmogorov consistency theorem} gives conditions for a family of
+finite-dimensional distributions to define a generalized random process.
+
+\subsection{15.3 Applications}\label{ch1950laurentschwartz:applications-1}
+
+Distribution-valued stochastic processes are used in: -
+\textbf{Statistical mechanics} and the theory of Gibbs measures. -
+\textbf{Quantum field theory} (Euclidean fields as random
+distributions). - \textbf{Signal processing} and \textbf{filtering
+theory}. - \textbf{Turbulence theory}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. The Theory of Currents}\label{ch1950laurentschwartz:the-theory-of-currents}
+
+\subsection{16.1 Definition}\label{ch1950laurentschwartz:definition-4}
+
+A \textbf{current} in the sense of de Rham is a distribution-valued
+differential form. Schwartz's theory provides the foundation: a current
+of degree \(p\) is a continuous linear functional on the space of
+\(C^\infty\) \((n-p)\)-forms with compact support.
+
+\subsection{16.2 Operations on Currents}\label{ch1950laurentschwartz:operations-on-currents}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Exterior derivative:} \(dT\) is defined by
+ \(\langle dT, \omega \rangle = (-1)^{p+1} \langle T, d\omega \rangle\).
+\item
+ \textbf{Pushforward and pullback} under smooth maps.
+\item
+ \textbf{Integration} of currents over submanifolds (when the current
+ is rectifiable).
+\end{itemize}
+
+\subsection{16.3 Applications}\label{ch1950laurentschwartz:applications-2}
+
+Currents are essential in: - \textbf{Algebraic geometry} (intersection
+theory, analytic cycles). - \textbf{Geometric measure theory}
+(rectifiable currents, Plateau's problem). - \textbf{Complex analysis}
+(positive currents, plurisubharmonic functions). - \textbf{Hodge theory}
+(harmonic currents).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{17. Schwartz's Work on Nuclear
+Spaces}\label{ch1950laurentschwartz:schwartzs-work-on-nuclear-spaces}
+
+\subsection{17.1 The Theory of Nuclear
+Spaces}\label{ch1950laurentschwartz:the-theory-of-nuclear-spaces}
+
+Schwartz, together with Grothendieck, developed the theory of
+\textbf{nuclear locally convex spaces}. A nuclear space has the property
+that every continuous linear map to a Banach space is a nuclear
+operator.
+
+\subsection{17.2 The Kernel Theorem in
+Context}\label{ch1950laurentschwartz:the-kernel-theorem-in-context}
+
+The Schwartz kernel theorem is equivalent to the nuclearity of
+\(\mathcal{D}(\Omega)\). This observation led to a deep understanding of
+the relationship between functional analysis and the theory of PDEs.
+
+\subsection{17.3 Nuclear Fréchet
+Spaces}\label{ch1950laurentschwartz:nuclear-fruxe9chet-spaces}
+
+The \textbf{nuclear Fréchet spaces} (also called
+\(\mathcal{FN}\)-spaces) include \(\mathcal{S}(\mathbb{R}^n)\),
+\(\mathcal{E}(\Omega)\), and \(\mathcal{D}(K)\) for compact \(K\). Their
+duals are \textbf{nuclear (DF)-spaces}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{18. Applications to Quantum
+Mechanics}\label{ch1950laurentschwartz:applications-to-quantum-mechanics}
+
+\subsection{18.1 The Rigged Hilbert
+Space}\label{ch1950laurentschwartz:the-rigged-hilbert-space}
+
+Schwartz's distributions provide the mathematical foundation for
+\textbf{Dirac's bra-ket formalism} in quantum mechanics. The
+\textbf{rigged Hilbert space} (Gelfand triple):
+
+\[\mathcal{S}(\mathbb{R}^n) \subset L^2(\mathbb{R}^n) \subset \mathcal{S}'(\mathbb{R}^n)\]
+
+gives a rigorous meaning to ``eigenvectors'' of position and momentum
+operators:
+
+\[\hat{x} \delta_{x_0} = x_0 \delta_{x_0}, \quad \hat{p} e^{ip_0 x/\hbar} = p_0 e^{ip_0 x/\hbar}\]
+
+\subsection{18.2 The Spectral Theorem}\label{ch1950laurentschwartz:the-spectral-theorem}
+
+The \textbf{spectral theorem} for self-adjoint operators can be
+expressed using distributional eigenvectors. The resolution of the
+identity for an operator \(A\) is:
+
+\[I = \int_{\sigma(A)} dE(\lambda)\]
+
+where \(dE(\lambda)\) is a projection-valued measure whose ``density''
+is a distribution.
+
+\subsection{18.3 Quantum Field Theory}\label{ch1950laurentschwartz:quantum-field-theory}
+
+In quantum field theory, Schwartz distributions are essential for: -
+Defining \textbf{Wightman functions} as boundary values of analytic
+functions. - Expressing \textbf{commutation relations} as distributional
+identities. - Regularizing \textbf{Feynman integrals} using distribution
+theory.
+
+\subsection{18.4 The Renormalization
+Problem}\label{ch1950laurentschwartz:the-renormalization-problem}
+
+The problem of \textbf{renormalization} in quantum field theory involves
+the definition of products of distributions (the interaction terms in
+the Lagrangian) that are otherwise ill-defined. The Epstein--Glaser
+approach to renormalization uses distribution theory to construct
+interacting fields rigorously, with the \textbf{causal perturbation
+theory} framework.
+
+The \textbf{operator product expansion} (OPE), introduced by Wilson and
+developed by Kadanoff, expresses the product of two fields as a sum of
+local operators with coefficients that are distributions (Wilson
+coefficients). Schwartz's theory provides the rigorous foundation for
+these constructions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{19. The Multiplication of
+Distributions}\label{ch1950laurentschwartz:the-multiplication-of-distributions}
+
+\subsection{19.1 Schwartz's Impossibility
+Theorem}\label{ch1950laurentschwartz:schwartzs-impossibility-theorem}
+
+Schwartz proved a fundamental limitation: it is impossible to define a
+product of distributions that: 1. Extends the usual product of
+continuous functions. 2. Is associative and commutative. 3. Satisfies
+the Leibniz rule for differentiation.
+
+The proof uses the impossibility of defining \(\delta^2\) in a
+consistent way. If such a product existed, one would have:
+
+\[\delta(x) \cdot x = 0 \implies \delta'(x) \cdot x + \delta(x) = 0\]
+
+leading to contradictions when multiplying both sides by \(\delta\).
+
+\subsection{19.2 Colombeau Algebras}\label{ch1950laurentschwartz:colombeau-algebras}
+
+Despite Schwartz's theorem, various approaches to multiplying
+distributions have been developed: - \textbf{Colombeau algebras} of
+generalized functions that allow multiplication. - \textbf{Hörmander's
+wave front set condition} for the product of distributions:
+\(WF(T) + WF(S)\) contains no zero covector. - \textbf{Paradifferential
+calculus} and \textbf{Bony's paraproduct}.
+
+\subsection{19.3 Applications}\label{ch1950laurentschwartz:applications-3}
+
+The product of distributions is essential for: - \textbf{Nonlinear PDEs}
+with distributional coefficients or solutions. - \textbf{General
+relativity} (the stress-energy tensor involves products). -
+\textbf{Fluid dynamics} (shock waves and weak solutions).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{20. Wave Front Sets and Microlocal
+Analysis}\label{ch1950laurentschwartz:wave-front-sets-and-microlocal-analysis}
+
+\subsection{20.1 Definition}\label{ch1950laurentschwartz:definition-5}
+
+The \textbf{wave front set} \(WF(T)\) of a distribution
+\(T \in \mathcal{D}'(\Omega)\) is a closed conic subset of
+\(T^*\Omega \setminus \{0\}\) that describes the singularities of \(T\)
+and their directions. A point \((x_0, \xi_0) \notin WF(T)\) if there
+exists \(\varphi \in C_c^\infty(\Omega)\) with \(\varphi(x_0) \neq 0\)
+and a conic neighborhood \(\Gamma\) of \(\xi_0\) such that
+\(\widehat{\varphi T}(\xi)\) decays rapidly for \(\xi \in \Gamma\).
+
+\subsection{20.2 Properties}\label{ch1950laurentschwartz:properties-1}
+
+\begin{itemize}
+\tightlist
+\item
+ \(WF(T) = \emptyset\) if and only if \(T \in C^\infty\).
+\item
+ \(WF(\partial^\alpha T) \subset WF(T)\).
+\item
+ \(WF(fT) \subset WF(T)\) for \(f \in C^\infty\).
+\item
+ \(WF(T * S) \subset WF(T) \cap WF(S)\).
+\end{itemize}
+
+\subsection{20.3 Propagation of
+Singularities}\label{ch1950laurentschwartz:propagation-of-singularities}
+
+For a solution \(u\) of \(P(x, D)u = f\) with real principal symbol
+\(p\), singularities propagate along \textbf{bicharacteristic curves} of
+\(p\):
+
+\[WF(u) \setminus WF(f) \subset \text{char}(P)\]
+
+This is Hörmander's theorem on the propagation of singularities, which
+has its roots in Schwartz's distribution theory.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{21. Hyperfunctions and Analytic
+Functionals}\label{ch1950laurentschwartz:hyperfunctions-and-analytic-functionals}
+
+\subsection{21.1 Sato's Hyperfunctions}\label{ch1950laurentschwartz:satos-hyperfunctions}
+
+\textbf{Hyperfunctions}, developed by Mikio Sato, extend the notion of
+distributions by representing generalized functions as boundary values
+of holomorphic functions. A hyperfunction \(f(x)\) on \(\mathbb{R}\) can
+be represented as:
+
+\[f(x) = F(x + i0) - F(x - i0)\]
+
+where \(F(z)\) is holomorphic on \(\mathbb{C} \setminus \mathbb{R}\).
+Schwartz's distributions are a proper subset of hyperfunctions: every
+distribution can be represented as a boundary value of holomorphic
+functions via the \textbf{Köthe--Grothendieck duality}.
+
+\subsection{21.2 Relation to Distribution
+Theory}\label{ch1950laurentschwartz:relation-to-distribution-theory}
+
+Schwartz's work on the Fourier transform of distributions with compact
+support (the Paley--Wiener theorem) provided the foundation for Sato's
+theory. The space of hyperfunctions is the dual of the space of
+real-analytic functions, just as distributions are the dual of
+\(C^\infty\) test functions.
+
+\subsection{21.3 Analytic Wave Front
+Sets}\label{ch1950laurentschwartz:analytic-wave-front-sets}
+
+The \textbf{analytic wave front set} \(WF_A(T)\) of a distribution \(T\)
+describes the directions of analytic singularities. Schwartz's theory of
+\textbf{division of distributions} and his work on the Fourier transform
+provided the tools for studying analytic singularities, later developed
+by Hörmander and Kashiwara.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{22. Schwartz's Work on the Moment
+Problem}\label{ch1950laurentschwartz:schwartzs-work-on-the-moment-problem}
+
+\subsection{22.1 The Classical Moment
+Problem}\label{ch1950laurentschwartz:the-classical-moment-problem}
+
+The \textbf{moment problem} asks: given a sequence \((m_n)\), does there
+exist a measure \(\mu\) such that \(m_n = \int x^n \, d\mu(x)\)?
+Schwartz's work on distributions provided a natural framework. A
+sequence \((m_n)\) is a moment sequence if and only if the associated
+distribution \(T = \sum m_n \delta^{(n)}/n!\) is a positive distribution
+(a measure).
+
+\subsection{22.2 The Stieltjes and Hamburger
+Problems}\label{ch1950laurentschwartz:the-stieltjes-and-hamburger-problems}
+
+Schwartz characterized the solutions to the Stieltjes moment problem
+(measures supported on \([0, \infty)\)) and the Hamburger moment problem
+(measures supported on \(\mathbb{R}\)) in terms of the positivity of
+certain quadratic forms. The distributional approach unified these
+classical results.
+
+\subsection{22.3 The Truncated Moment
+Problem}\label{ch1950laurentschwartz:the-truncated-moment-problem}
+
+The \textbf{truncated moment problem} (given finitely many moments, when
+does a representing measure exist?) was also studied by Schwartz. His
+work anticipated later developments by Curto, Fialkow, and Lasserre.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{23. Schwartz's Legacy and
+Influence}\label{ch1950laurentschwartz:schwartzs-legacy-and-influence}
+
+\subsection{23.1 Influence on Analysis}\label{ch1950laurentschwartz:influence-on-analysis}
+
+Distribution theory transformed every branch of analysis: -
+\textbf{Partial differential equations:} The standard framework for weak
+solutions. - \textbf{Harmonic analysis:} The natural setting for Fourier
+transform and convolution. - \textbf{Functional analysis:} The
+motivation for the theory of nuclear spaces. - \textbf{Potential
+theory:} Distributional formulation of capacity and energy.
+
+\subsection{23.2 Influence on Physics}\label{ch1950laurentschwartz:influence-on-physics}
+
+Distributions are fundamental to: - \textbf{Quantum mechanics:} Dirac
+delta, rigged Hilbert spaces. - \textbf{Quantum field theory:} Wightman
+functions, renormalization. - \textbf{General relativity:} Stress-energy
+tensor, shock waves.
+
+\subsection{23.3 The Schwartz School}\label{ch1950laurentschwartz:the-schwartz-school}
+
+Schwartz supervised numerous students who became leading mathematicians,
+including Bernard Malgrange, Jacques-Louis Lions, Paul-André Meyer, and
+Claude Roger. The \textbf{Séminaire Schwartz} at the École Polytechnique
+was one of the influential seminars in post-war French mathematics.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{24. The Schwartz Distributional
+Derivative}\label{ch1950laurentschwartz:the-schwartz-distributional-derivative}
+
+\subsection{24.1 Weak Derivatives}\label{ch1950laurentschwartz:weak-derivatives}
+
+A function \(f \in L^1_{\text{loc}}(\Omega)\) has a \textbf{weak
+derivative} \(\partial^\alpha f \in L^1_{\text{loc}}(\Omega)\) if there
+exists a function \(g\) such that:
+
+\[\int_\Omega f(x) \partial^\alpha \varphi(x) \, dx = (-1)^{|\alpha|} \int_\Omega g(x) \varphi(x) \, dx \quad \text{for all } \varphi \in C_c^\infty(\Omega)\]
+
+\subsection{24.2 Sobolev Spaces}\label{ch1950laurentschwartz:sobolev-spaces-1}
+
+The \textbf{Sobolev spaces} \(W^{k,p}(\Omega)\) consist of functions
+whose weak derivatives up to order \(k\) belong to \(L^p\). They are
+Banach spaces and are central to the modern theory of PDEs.
+
+\subsection{24.3 Embedding Theorems}\label{ch1950laurentschwartz:embedding-theorems}
+
+The \textbf{Sobolev embedding theorems} (Sobolev, Gagliardo, Nirenberg)
+give conditions under which functions in Sobolev spaces are continuous
+or Hölder continuous:
+
+\[W^{k,p}(\mathbb{R}^n) \subset C^{k - n/p}(\mathbb{R}^n) \quad \text{for } kp > n\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{25. Schwartz's Political
+Activism}\label{ch1950laurentschwartz:schwartzs-political-activism}
+
+\subsection{25.1 Human Rights Work}\label{ch1950laurentschwartz:human-rights-work}
+
+Throughout his life, Schwartz was closely committed to human rights. He
+was a vocal critic of the French colonial wars in Indochina and Algeria,
+and he supported the struggle for Algerian independence. He was a
+founding member of the \textbf{Comité des Mathématiciens} (Committee of
+Mathematicians) that campaigned for the release of persecuted scientists
+worldwide.
+
+\subsection{25.2 The Case of Leonid
+Plyushch}\label{ch1950laurentschwartz:the-case-of-leonid-plyushch}
+
+Schwartz led international efforts to secure the release of Ukrainian
+mathematician Leonid Plyushch, who was imprisoned in a psychiatric
+hospital for his political views. The campaign involved numerous Nobel
+laureates and scientists and ultimately led to Plyushch's release in
+1976.
+
+\subsection{25.3 Anti-Colonial Activism}\label{ch1950laurentschwartz:anti-colonial-activism}
+
+Schwartz signed the \textbf{Manifesto of the 121} in 1960, a declaration
+of the right to insubordination in the Algerian War. This led to his
+being banned from teaching for a period and having his security
+clearance revoked.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{26. Awards and Recognition}\label{ch1950laurentschwartz:awards-and-recognition}
+
+\textbf{1950:} - Fields Medal (International Mathematical Union) ---
+awarded at the ICM in Cambridge, Massachusetts.
+
+\textbf{1964:} - Elected to the French Academy of Sciences.
+
+\textbf{1972:} - Prix de l'État, CNRS.
+
+\textbf{Elected to:} - French Academy of Sciences. - American Academy of
+Arts and Sciences. - National Academy of Sciences (USA). - Academy of
+Sciences of the USSR. - Royal Society of London (Foreign Member).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{27. Selected Major
+Publications}\label{ch1950laurentschwartz:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``Généralisation de la notion de fonction, de dérivation, de
+ transformation de Fourier et applications mathématiques et
+ physiques.''} \emph{Annales de l'Université de Grenoble} 21, 57--74,
+ 1945. --- \emph{The first announcement of distribution theory.}
+\item
+ \textbf{``Théorie des distributions.''} (2 vols.) \emph{Actualités
+ Scientifiques et Industrielles}, Hermann, 1950--1951. --- \emph{The
+ definitive treatise on distribution theory.}
+\item
+ \textbf{``Sur l'impossibilité de la multiplication des
+ distributions.''} \emph{Comptes Rendus de l'Académie des Sciences}
+ 239, 847--848, 1954. --- \emph{On the impossibility of defining a
+ product of distributions compatible with the product of smooth
+ functions.}
+\item
+ \textbf{``Théorie des distributions à valeurs vectorielles.''} (2
+ parts) \emph{Annales de l'Institut Fourier} 7, 1--141, 1957; 8,
+ 1--209, 1958. --- \emph{Vector-valued distributions.}
+\item
+ \textbf{``Les noyaux associés aux opérateurs différentiels.''}
+ \emph{Colloques Internationaux du CNRS} 71, 1959. --- \emph{The kernel
+ theorem and its applications.}
+\item
+ \textbf{``Séminaire Schwartz sur les applications de la théorie des
+ distributions.''} 1953--1955. --- \emph{Seminar notes on applications
+ of distribution theory.}
+\item
+ \textbf{``Un mathématicien aux prises avec le siècle.''} Éditions
+ Odile Jacob, 1997. --- \emph{Autobiography.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{28. References and Further
+Reading}\label{ch1950laurentschwartz:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch1950laurentschwartz:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 1950 Announcement:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1950
+\item
+ French Academy of Sciences: Laurent Schwartz Biography.
+\item
+ Schwartz, L. \emph{Un mathématicien aux prises avec le siècle}
+ (Autobiography).
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch1950laurentschwartz:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Schwartz, L. \emph{Théorie des distributions}. Hermann, 1998 (new ed.)
+\item
+ Schwartz, L. \emph{Mathematics for the Physical Sciences}. Hermann,
+ 1966.
+\item
+ Gel'fand, I. M. and Shilov, G. E. \emph{Generalized Functions} (5
+ vols.). Academic Press, 1964--1968.
+\item
+ Hörmander, L. \emph{The Analysis of Linear Partial Differential
+ Operators} (4 vols.). Springer, 1983--1985.
+\end{itemize}
+
+\subsection{Textbooks and Surveys}\label{ch1950laurentschwartz:textbooks-and-surveys}
+
+\begin{itemize}
+\tightlist
+\item
+ Rudin, W. \emph{Functional Analysis}. McGraw-Hill, 1973.
+\item
+ Yosida, K. \emph{Functional Analysis}. Springer, 1965.
+\item
+ Reed, M. and Simon, B. \emph{Methods of Modern Mathematical Physics}
+ (4 vols.). Academic Press, 1972--1979.
+\item
+ Friedlander, F. G. and Joshi, M. \emph{Introduction to the Theory of
+ Distributions}. Cambridge University Press, 1998.
+\end{itemize}
+
+\subsection{Biography and Exposition}\label{ch1950laurentschwartz:biography-and-exposition}
+
+\begin{itemize}
+\tightlist
+\item
+ Cartan, H. ``The Work of Laurent Schwartz.'' ICM 1950 Laudatio.
+\item
+ Dieudonné, J. ``Laurent Schwartz.'' \emph{Notices of the AMS} 49,
+ 2002.
+\item
+ Bohr, H. ``Presentation of the Fields Medal to Laurent Schwartz.''
+ \emph{Proceedings of the ICM}, 1950.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(End of report)}

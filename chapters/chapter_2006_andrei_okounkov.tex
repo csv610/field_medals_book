@@ -1,0 +1,1122 @@
+\chapter{Andrei Okounkov --- Fields Medal 2006}\label{ch2006andreiokounkov:andrei-okounkov-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Andrei Okounkov (b. July
+26, 1969, Moscow, Russia) \textbf{Position:} Professor of Mathematics,
+Columbia University (since 2010) \textbf{Doctoral Advisor:} Alexander
+Kirillov (Moscow State University) \textbf{Fields Medal Citation:}
+\emph{``For his contributions to bridging probability, representation
+theory and algebraic geometry.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Table of Contents}\label{ch2006andreiokounkov:table-of-contents}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ Introduction
+\item
+ Biographical Background and Education
+\item
+ Random Partitions and the Plancherel Measure
+\item
+ The Asymptotic Representation Theory of Symmetric Groups
+\item
+ The Okounkov--Vershik Approach to the Symmetric Group
+\item
+ Gromov--Witten Invariants and Donaldson--Thomas Theory
+\item
+ The MNOP Conjecture
+\item
+ Nekrasov's Formula and the Seiberg--Witten Prepotential
+\item
+ Hilbert Schemes of Points on Surfaces
+\item
+ Quantum Integrable Systems
+\item
+ Okounkov Bodies in Algebraic Geometry
+\item
+ The Okounkov--Pandharipande Correspondence
+\item
+ Enumerative Geometry and Moduli Spaces
+\item
+ Tail Algebras and the Frozen Boundary
+\item
+ Representation Theory of Infinite-Dimensional Groups
+\item
+ Impact on Mathematics
+\item
+ Awards and Recognition
+\item
+ Selected Major Publications
+\item
+ Ongoing Work and Future Directions
+\item
+ Conclusion
+\item
+ References and Further Reading
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch2006andreiokounkov:introduction}
+
+Andrei Okounkov was awarded the Fields Medal in 2006 at the age of 36
+for his notable work spanning probability, representation theory,
+and algebraic geometry. The citation --- ``for his contributions to
+bridging probability, representation theory and algebraic geometry'' ---
+captures the defining character of his mathematics: the ability to
+uncover deep connections between fields that had been thought separate,
+and to use ideas from one to solve problems in another.
+
+Okounkov's career has followed a distinctive arc. His early work on the
+asymptotic representation theory of the symmetric groups, conducted
+jointly with Grigori Vershik, transformed a classical subject by
+introducing probabilistic and combinatorial methods. His later work on
+enumerative geometry --- including the proof of the MNOP conjecture with
+Rahul Pandharipande and his contributions to the Gromov--Witten /
+Donaldson--Thomas correspondence --- placed him at the center of some of
+the important developments in algebraic geometry of the early
+twenty-first century.
+
+This report provides a detailed account of Okounkov's major
+contributions, the mathematical context in which they arose, and their
+lasting impact.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background and
+Education}\label{ch2006andreiokounkov:biographical-background-and-education}
+
+\subsection{2.1 Early Life}\label{ch2006andreiokounkov:early-life}
+
+Andrei Okounkov was born in Moscow in 1969. He demonstrated exceptional
+mathematical ability from an early age and was selected for the
+prestigious Kolmogorov boarding school (Specialized School No.~18)
+affiliated with Moscow State University.
+
+\subsection{2.2 University Education}\label{ch2006andreiokounkov:university-education}
+
+Okounkov entered the Department of Mechanics and Mathematics at Moscow
+State University in 1986. During his undergraduate years, he began
+research under the supervision of Alexander Kirillov, working on
+representation theory. He completed his PhD in 1995, writing a thesis on
+``Asymptotic representation theory of the symmetric group.''
+
+\subsection{2.3 Academic Career}\label{ch2006andreiokounkov:academic-career}
+
+After completing his graduate studies, Okounkov held a series of
+prestigious positions: - \textbf{1995--1998:} Postdoctoral positions at
+the Institute for Advanced Study (Princeton), University of Chicago, and
+IHP (Paris). - \textbf{1998--2002:} Assistant/Associate Professor,
+University of Chicago. - \textbf{2002--2009:} Professor, Princeton
+University. - \textbf{2009--2010:} Professor, University of California,
+Berkeley. - \textbf{2010--present:} Professor, Columbia University.
+
+He has also held visiting professorships at the Institute for Advanced
+Study, the Kavli Institute for Theoretical Physics, and IHES.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. Random Partitions and the Plancherel
+Measure}\label{ch2006andreiokounkov:random-partitions-and-the-plancherel-measure}
+
+\subsection{3.1 Partitions and the Symmetric
+Group}\label{ch2006andreiokounkov:partitions-and-the-symmetric-group}
+
+A partition
+\(\lambda = (\lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_\ell > 0)\)
+is a weakly decreasing sequence of positive integers summing to \(n\).
+Partitions index both the conjugacy classes and the irreducible
+representations of the symmetric group \(S_n\). The \textbf{Plancherel
+measure} on partitions of \(n\) assigns to a partition \(\lambda\) the
+probability:
+
+\[
+\mathbb{P}(\lambda) = \frac{(\dim \lambda)^2}{n!}
+\]
+
+where \(\dim \lambda\) is the dimension of the corresponding irreducible
+representation. This measure arises naturally from the Fourier transform
+on \(S_n\) and from the decomposition of the regular representation.
+
+\subsection{3.2 The Limit Shape of Random
+Partitions}\label{ch2006andreiokounkov:the-limit-shape-of-random-partitions}
+
+The study of the Plancherel measure for large \(n\) is a central problem
+in asymptotic representation theory. A notable discovery, made
+independently by Okounkov, by Richard Stanley, and by Boris Kerov and
+Anatoly Vershik, is that a random partition under the Plancherel measure
+exhibits a \textbf{limit shape}.
+
+If we view a partition as a Young diagram (with rows of length
+\(\lambda_i\)), and rescale by a factor of \(1/\sqrt{n}\), the boundary
+of the diagram converges almost surely to a deterministic curve:
+
+\[
+\Omega(x) = \begin{cases}
+\frac{2}{\pi} \left( x \arcsin\frac{x}{2} + \sqrt{4 - x^2} \right) & |x| \le 2 \\
+|x| & |x| > 2
+\end{cases}
+\]
+
+This is the \textbf{Vershik--Kerov--Logan--Shepp} limit shape, and it
+coincides with the limiting distribution of eigenvalues of random
+matrices from the Gaussian Unitary Ensemble (GUE).
+
+\subsection{3.3 Okounkov's Contributions}\label{ch2006andreiokounkov:okounkovs-contributions}
+
+Okounkov made fundamental contributions to the study of the Plancherel
+measure, including:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ \textbf{Explicit asymptotics:} Exact formulas for the correlation
+ functions of the Plancherel measure in terms of the discrete sine
+ kernel.
+\item
+ \textbf{Relation to random matrices:} A precise correspondence between
+ the fluctuations of random partitions and the eigenvalues of random
+ matrices.
+\item
+ \textbf{The Arcsine law:} The distribution of the length of the first
+ row of a random partition follows the Tracy--Widom distribution from
+ random matrix theory.
+\end{enumerate}
+
+These results established the Plancherel measure as a fundamental model
+of random combinatorial structures, on par with random matrices and
+random permutations.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. The Asymptotic Representation Theory of Symmetric
+Groups}\label{ch2006andreiokounkov:the-asymptotic-representation-theory-of-symmetric-groups}
+
+\subsection{4.1 The Problem}\label{ch2006andreiokounkov:the-problem}
+
+The representation theory of the symmetric group \(S_n\) for fixed \(n\)
+is classical (Frobenius, Young, Schur). The problem of understanding the
+behavior of representations as \(n \to \infty\) --- \textbf{asymptotic
+representation theory} --- was initiated by Vershik and Kerov in the
+1970s.
+
+The central question: consider a sequence of irreducible representations
+of \(S_n\) whose dimensions grow appropriately with \(n\). What are the
+statistical properties of such representations? How do the characters
+behave in the limit?
+
+\subsection{4.2 Okounkov's
+Contributions}\label{ch2006andreiokounkov:okounkovs-contributions-1}
+
+Okounkov, building on his work with Vershik, established the foundations
+of asymptotic representation theory:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ \textbf{The character formula:} New formulas for the characters of the
+ symmetric group in terms of the geometry of Young diagrams.
+\item
+ \textbf{The Central Limit Theorem:} Fluctuations of characters around
+ their limits are Gaussian.
+\item
+ \textbf{Free probability:} Connections between the asymptotic
+ representation theory of \(S_n\) and Voiculescu's free probability
+ theory.
+\end{enumerate}
+
+This work revealed deep connections between representation theory and
+probability theory, showing that the large-\(n\) limit of the symmetric
+group exhibits striking parallels with random matrix theory and free
+probability.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. The Okounkov--Vershik Approach to the Symmetric
+Group}\label{ch2006andreiokounkov:the-okounkovvershik-approach-to-the-symmetric-group}
+
+\subsection{5.1 A New Approach}\label{ch2006andreiokounkov:a-new-approach}
+
+Traditionally, the irreducible representations of \(S_n\) are
+constructed using Young symmetrizers and the Young--Jucys--Murphy
+elements. In a landmark 1996 paper, Okounkov and Vershik proposed a
+radically different approach based on:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{The Gelfand--Tsetlin basis:} Starting from the chain of
+ subgroups: \[
+ S_1 \subset S_2 \subset \cdots \subset S_n
+ \] they construct representations by analyzing the branching rules at
+ each step.
+\item
+ \textbf{The Young graph:} The set of all partitions, with edges
+ connecting \(\lambda \vdash n\) to \(\mu \vdash (n+1)\) when \(\mu\)
+ is obtained from \(\lambda\) by adding a box. This is the
+ \textbf{Young graph} or the \textbf{Pascal graph of partitions}.
+\item
+ \textbf{Central measures:} Classification of all possible central
+ measures on the Young graph --- that is, measures that are consistent
+ under the branching rules.
+\end{enumerate}
+
+\subsection{5.2 The Main Theorem}\label{ch2006andreiokounkov:the-main-theorem}
+
+Okounkov and Vershik proved that the set of all \emph{central measures}
+on the Young graph is in bijection with a certain set of parameters ---
+the \textbf{Thoma simplex} --- which had earlier appeared in the work of
+Thoma on characters of the infinite symmetric group.
+
+They also gave a new construction of the irreducible representations of
+\(S_n\) using the Young--Jucys--Murphy elements, and they proved that
+the Bratteli diagram of the symmetric groups is isomorphic to the Young
+graph.
+
+This work provided the definitive modern framework for the
+representation theory of the symmetric groups and their
+infinite-dimensional limits.
+
+\subsection{5.3 Impact}\label{ch2006andreiokounkov:impact}
+
+The Okounkov--Vershik approach is now the standard way to study the
+representation theory of symmetric groups and their affine
+generalizations. It has been extended to: - \textbf{Hecke algebras:} The
+\(q\)-deformed version of the symmetric group. - \textbf{Affine Lie
+algebras:} The representation theory of \(\widehat{\mathfrak{sl}}_n\). -
+\textbf{Double affine Hecke algebras:} The representation theory of
+Cherednik's DAHA. - \textbf{Wreath products:} Symmetric groups with
+additional structure.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. Gromov--Witten Invariants and Donaldson--Thomas
+Theory}\label{ch2006andreiokounkov:gromovwitten-invariants-and-donaldsonthomas-theory}
+
+\subsection{6.1 Enumerative Geometry}\label{ch2006andreiokounkov:enumerative-geometry}
+
+\textbf{Enumerative geometry} counts geometric objects satisfying
+incidence conditions. The classical problem --- ``How many rational
+curves of degree \(d\) pass through \(3d-1\) points in the plane?'' ---
+was solved in the nineteenth century but resisted rigorous treatment
+until the advent of \textbf{Gromov--Witten theory}.
+
+Gromov--Witten invariants count (pseudo-)holomorphic curves in a smooth
+projective variety, and they are defined via intersection theory on the
+moduli space of stable maps. Donaldson--Thomas invariants, by contrast,
+count sheaves with fixed numeric invariants, and they are defined via
+the moduli space of ideal sheaves of curves.
+
+\subsection{6.2 The MNOP Conjecture}\label{ch2006andreiokounkov:the-mnop-conjecture}
+
+In 2003, Davesh Maulik, Nikita Nekrasov, Andrei Okounkov, and Rahul
+Pandharipande (hence ``MNOP'') proposed a deep conjecture relating
+Gromov--Witten invariants and Donaldson--Thomas invariants.
+
+The conjecture states that for a nonsingular projective threefold \(X\),
+the generating functions of Gromov--Witten invariants and
+Donaldson--Thomas invariants are related by a simple change of
+variables:
+
+\[
+Z_{GW}(X; q) = Z_{DT}(X; -q)^{\chi(X)}
+\]
+
+where \(\chi(X)\) is the topological Euler characteristic.
+
+This relationship was completely unexpected. Gromov--Witten invariants
+are defined in terms of curves (1-dimensional objects), while
+Donaldson--Thomas invariants are defined in terms of sheaves
+(0-dimensional objects). The MNOP conjecture asserted a deep duality
+between these two worlds.
+
+\subsection{6.3 Proof of the MNOP
+Conjecture}\label{ch2006andreiokounkov:proof-of-the-mnop-conjecture}
+
+Over the next several years, Okounkov and Pandharipande proved the MNOP
+conjecture for a wide class of threefolds: - \textbf{Local curves:} The
+total space of a vector bundle over a curve. - \textbf{Toric
+threefolds:} Using the localization techniques of equivariant geometry.
+- \textbf{Calabi--Yau threefolds:} Under certain conditions.
+
+The proof uses the method of \textbf{virtual localization} on the moduli
+space of stable pairs (Pandharipande--Thomas theory), combined with
+sophisticated combinatorial analysis of the fixed point contributions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. The Gromov--Witten / Donaldson--Thomas
+Correspondence}\label{ch2006andreiokounkov:the-gromovwitten-donaldsonthomas-correspondence}
+
+\subsection{7.1 The Correspondence}\label{ch2006andreiokounkov:the-correspondence}
+
+The MNOP conjecture implies a far-reaching correspondence between two
+different approaches to enumerative geometry:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Gromov--Witten Theory & Donaldson--Thomas Theory \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Curves & Sheaves \\
+Moduli of stable maps & Moduli of ideal sheaves \\
+Virtual fundamental class & Virtual fundamental class \\
+Descendent invariants & Descendent invariants \\
+Connected invariants & Disconnected invariants \\
+Genus expansion & No genus expansion \\
+\end{longtable}
+}
+
+The correspondence has been verified for many important examples,
+including all toric threefolds, local curves, and certain complete
+intersections.
+
+\subsection{7.2 Okounkov's
+Contributions}\label{ch2006andreiokounkov:okounkovs-contributions-2}
+
+Okounkov's work on the correspondence includes:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{Proof for toric threefolds:} With Pandharipande, they proved
+ the full Gromov--Witten / Donaldson--Thomas correspondence for toric
+ threefolds by computing both sides using localization.
+\item
+ \textbf{The descendent correspondence:} Extension of the
+ correspondence to include descendent invariants (insertions of Chern
+ classes).
+\item
+ \textbf{Pandharipande--Thomas theory:} Work on the moduli space of
+ stable pairs, which provides an alternative approach to
+ Donaldson--Thomas theory.
+\end{enumerate}
+
+\subsection{7.3 Impact}\label{ch2006andreiokounkov:impact-1}
+
+The MNOP conjecture and its proof transformed enumerative geometry. It
+established Donaldson--Thomas theory as a fundamental tool in algebraic
+geometry and revealed a deep unity between seemingly different
+approaches to curve counting. The techniques developed --- particularly
+the use of localization and the analysis of moduli spaces --- have been
+applied to many other problems.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. Nekrasov's Formula and the Seiberg--Witten
+Prepotential}\label{ch2006andreiokounkov:nekrasovs-formula-and-the-seibergwitten-prepotential}
+
+\subsection{8.1 Background}\label{ch2006andreiokounkov:background}
+
+In theoretical physics, the \textbf{Seiberg--Witten prepotential} is the
+effective action of \(N = 2\) supersymmetric gauge theories in four
+dimensions. It encodes the low-energy physics of the theory, including
+the masses of BPS states and the geometry of the moduli space of vacua.
+
+In 2002, Nikita Nekrasov proposed a formula for the instanton
+contributions to the Seiberg--Witten prepotential of \(N = 2\)
+supersymmetric Yang--Mills theory. The formula expresses the partition
+function as:
+
+\[
+Z(\epsilon_1, \epsilon_2, a) = \sum_{k=0}^\infty \Lambda^{2k} \int_{M_{k,N}} 1
+\]
+
+where \(M_{k,N}\) is the moduli space of instantons and the integral is
+over the virtual fundamental class.
+
+\subsection{8.2 Nekrasov's Conjecture and Okounkov's
+Proof}\label{ch2006andreiokounkov:nekrasovs-conjecture-and-okounkovs-proof}
+
+Nekrasov conjectured that in the limit \(\epsilon_1, \epsilon_2 \to 0\),
+his partition function reproduces the Seiberg--Witten prepotential:
+
+\[
+\lim_{\epsilon_1, \epsilon_2 \to 0} \epsilon_1 \epsilon_2 \log Z(\epsilon_1, \epsilon_2, a) = \mathcal{F}_{SW}(a)
+\]
+
+In 2003, Nekrasov and Okounkov published a complete proof of this
+conjecture for \(U(N)\) gauge groups. The proof used:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{The ADHM construction:} A description of the instanton moduli
+ space as a hyper-Kähler quotient, which allows its virtual fundamental
+ class to be computed.
+\item
+ \textbf{Equivariant localization:} The use of torus actions to reduce
+ the integrals to sums over fixed points, indexed by pairs of
+ partitions.
+\item
+ \textbf{The Cauchy identity:} A combinatorial identity for sums over
+ partitions, which simplifies the resulting expression to the
+ Seiberg--Witten form.
+\end{enumerate}
+
+The proof was a masterpiece of algebraic geometry and representation
+theory, showing that the instanton partition function can be expressed
+in terms of the representation theory of \(\mathfrak{gl}(\infty)\).
+
+\subsection{8.3 Physicists' Formula}\label{ch2006andreiokounkov:physicists-formula}
+
+The Nekrasov--Okounkov proof gave a rigorous foundation to a central
+result in supersymmetric gauge theory. The formula --- known as the
+\textbf{Nekrasov formula} or the \textbf{Nekrasov--Okounkov formula} ---
+is now a standard tool in both physics and mathematics, with
+applications to:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{AGT correspondence:} The relationship between 4D gauge
+ theories and 2D conformal field theories.
+\item
+ \textbf{Wall-crossing:} The transformation of BPS invariants under
+ changes of stability conditions.
+\item
+ \textbf{Topological strings:} The relationship between gauge theory
+ and string theory.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. Hilbert Schemes of Points on
+Surfaces}\label{ch2006andreiokounkov:hilbert-schemes-of-points-on-surfaces}
+
+\subsection{9.1 Definition}\label{ch2006andreiokounkov:definition}
+
+The \textbf{Hilbert scheme of \(n\) points} on a smooth algebraic
+surface \(S\), denoted \(S^{[n]}\), parametrizes zero-dimensional
+subschemes of \(S\) of length \(n\). It is a resolution of the symmetric
+product \(S^{(n)} = S^n / S_n\).
+
+Hilbert schemes of points are fundamental objects in algebraic geometry,
+with connections to: - \textbf{Moduli spaces:} They are the simplest
+moduli spaces of sheaves. - \textbf{Representation theory:} They carry
+actions of Heisenberg algebras. - \textbf{Topology:} Their cohomology is
+known to be infinite-dimensional and to carry a rich algebraic
+structure.
+
+\subsection{9.2 Okounkov's
+Contributions}\label{ch2006andreiokounkov:okounkovs-contributions-3}
+
+Okounkov made several fundamental contributions to the theory of Hilbert
+schemes:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{Quantum cohomology:} With Davesh Maulik, he computed the
+ quantum cohomology ring of \(S^{[n]}\) in terms of the quantum
+ cohomology of \(S\).
+\item
+ \textbf{Stable envelopes:} The development of the theory of stable
+ envelopes, which provide a systematic way to relate the equivariant
+ cohomology of different moduli spaces.
+\item
+ \textbf{Elliptic stable envelopes:} A generalization of stable
+ envelopes to the elliptic setting, which has applications to the
+ theory of elliptic quantum groups.
+\item
+ \textbf{Hilbert schemes and K-theory:} New results on the K-theory of
+ Hilbert schemes and their connections to vertex algebras.
+\end{enumerate}
+
+\subsection{9.3 The Maulik--Okounkov
+Theory}\label{ch2006andreiokounkov:the-maulikokounkov-theory}
+
+In a series of papers with Davesh Maulik, Okounkov developed a general
+theory of \textbf{quantum cohomology} for moduli spaces. The key insight
+is that the quantum cohomology of a moduli space can be computed using
+the geometry of correspondences and the combinatorics of stable
+envelopes.
+
+The Maulik--Okounkov theory has been influential in: -
+\textbf{Enumerative geometry:} A systematic approach to computing
+Gromov--Witten invariants. - \textbf{Geometric representation theory:}
+Connections to Yangians, quantum groups, and affine algebras. -
+\textbf{Integrable systems:} The relationship between quantum cohomology
+and quantum integrable models.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. Quantum Integrable
+Systems}\label{ch2006andreiokounkov:quantum-integrable-systems}
+
+\subsection{10.1 Integrability}\label{ch2006andreiokounkov:integrability}
+
+A \textbf{quantum integrable system} is a quantum mechanical system with
+as many commuting conserved quantities as degrees of freedom. The most
+famous examples are: - The quantum Heisenberg spin chain. - The XXZ and
+XYZ spin chains. - The Gaudin model.
+
+\subsection{10.2 Okounkov's Contributions to Integrable
+Systems}\label{ch2006andreiokounkov:okounkovs-contributions-to-integrable-systems}
+
+Okounkov has made important contributions to the theory of quantum
+integrable systems, including:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{The quantum Toda lattice:} A complete solution of the quantum
+ Toda lattice using representation theory of affine Lie algebras.
+\item
+ \textbf{Quantum cohomology and Bethe ansatz:} A connection between the
+ quantum cohomology of the Grassmannian and the Bethe ansatz for the
+ XXZ spin chain.
+\item
+ \textbf{Applied to Hilbert schemes:} The quantum cohomology of Hilbert
+ schemes of points on surfaces is related to an integrable system ---
+ the Calogero--Sutherland model.
+\item
+ \textbf{Stable envelopes and R-matrices:} A geometric construction of
+ the R-matrix for quantum groups using stable envelopes on moduli
+ spaces.
+\end{enumerate}
+
+\subsection{10.3 The Geometric R-Matrix}\label{ch2006andreiokounkov:the-geometric-r-matrix}
+
+One of Okounkov's influential recent ideas is the \textbf{geometric
+construction of the R-matrix} using stable envelopes. In joint work with
+Maulik and others, he showed that the stable envelopes of a moduli space
+satisfy a version of the Yang--Baxter equation, and thus give rise to an
+R-matrix for a quantum group.
+
+This construction has been applied to produce R-matrices for: - The
+Yangian of \(\mathfrak{gl}_n\). - The quantum loop algebra of
+\(\mathfrak{gl}_n\). - The elliptic quantum group of
+\(\mathfrak{gl}_n\).
+
+The geometric R-matrix provides a bridge between enumerative geometry
+and representation theory, allowing geometric methods to be used to
+study the representation theory of quantum groups.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. Okounkov Bodies in Algebraic
+Geometry}\label{ch2006andreiokounkov:okounkov-bodies-in-algebraic-geometry}
+
+\subsection{11.1 The Problem}\label{ch2006andreiokounkov:the-problem-1}
+
+A fundamental problem in algebraic geometry is to understand the
+asymptotic behavior of linear systems on a projective variety. Given a
+line bundle \(L\) on a variety \(X\), the \textbf{volume} of \(L\) is:
+
+\[
+\operatorname{vol}(L) = \limsup_{m \to \infty} \frac{h^0(X, L^{\otimes m})}{m^n / n!}
+\]
+
+where \(n = \dim X\). The volume measures the ``size'' of the linear
+system of \(L\), and it plays a central role in the theory of birational
+geometry.
+
+\subsection{11.2 Okounkov Bodies}\label{ch2006andreiokounkov:okounkov-bodies}
+
+In 2003, Okounkov introduced a construction that associates to a line
+bundle \(L\) a convex body \(\Delta(L) \subset \mathbb{R}^n\) --- now
+called an \textbf{Okounkov body} --- whose Euclidean volume equals the
+volume of \(L\).
+
+The construction works by choosing a \textbf{flag} of subvarieties:
+
+\[
+X = X_0 \supset X_1 \supset \cdots \supset X_n = \{pt\}
+\]
+
+and then using the orders of vanishing of sections along the flag to map
+the space of sections \(H^0(X, L^{\otimes m})\) to a semigroup in
+\(\mathbb{Z}^n\). The closure of the limiting shape of this semigroup is
+the Okounkov body.
+
+\subsection{11.3 Applications}\label{ch2006andreiokounkov:applications}
+
+Okounkov bodies have become a fundamental tool in birational geometry,
+with applications including:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{Theorem of Fujita:} A new proof of Fujita's approximation
+ theorem for volumes.
+\item
+ \textbf{Concavity of volumes:} Khovanskii's theorem on the
+ log-concavity of volumes.
+\item
+ \textbf{Zariski decompositions:} The existence of Zariski
+ decompositions for line bundles on surfaces can be understood in terms
+ of the Okounkov body.
+\item
+ \textbf{Newton--Okounkov bodies:} A generalization of the classical
+ Newton polytope to the setting of algebraic varieties, developed
+ jointly with Kaveh and Khovanskii.
+\item
+ \textbf{Seshadri constants:} Upper bounds on Seshadri constants in
+ terms of the geometry of Okounkov bodies.
+\end{enumerate}
+
+Okounkov bodies have also been used to prove the
+\textbf{Khovanskii--Teissier conjecture} about the concavity of
+intersection numbers, and they have been applied to the study of mirror
+symmetry and toric degenerations.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{12. The Okounkov--Pandharipande
+Correspondence}\label{ch2006andreiokounkov:the-okounkovpandharipande-correspondence}
+
+\subsection{12.1 The Idea}\label{ch2006andreiokounkov:the-idea}
+
+The Okounkov--Pandharipande correspondence is a general principle
+relating the enumeration of curves on a threefold to the representation
+theory of infinite-dimensional Lie algebras. Specifically, the
+Gromov--Witten invariants of a threefold \(X\) can be expressed as the
+matrix elements of certain operators on a Fock space.
+
+\subsection{12.2 The Fock Space Model}\label{ch2006andreiokounkov:the-fock-space-model}
+
+A \textbf{Fock space} is a Hilbert space spanned by partitions, with
+creation and annihilation operators that add or remove boxes from a
+Young diagram. The fundamental observation of Okounkov and Pandharipande
+is that the moduli space of curves on a threefold carries a natural
+action of the Heisenberg algebra, with the creation operators
+corresponding to curves of higher genus.
+
+The generating function of Gromov--Witten invariants becomes:
+
+\[
+Z_{GW}(X; q) = \langle \text{vacuum} | \prod_i \exp(\text{operator}_i) | \text{vacuum} \rangle
+\]
+
+This is the \textbf{vacuum expectation value} of a product of operators
+in the Fock space.
+
+\subsection{12.3 The Virasoro
+Constraints}\label{ch2006andreiokounkov:the-virasoro-constraints}
+
+The Okounkov--Pandharipande correspondence also predicts that the
+Gromov--Witten generating function satisfies a system of differential
+equations --- the \textbf{Virasoro constraints} --- which are analogous
+to the Ward identities in conformal field theory.
+
+For a threefold, these constraints take the form:
+
+\[
+L_n Z_{GW} = 0, \quad n \ge -1
+\]
+
+where \(L_n\) are Virasoro operators acting on the Fock space. These
+constraints completely determine the Gromov--Witten invariants once the
+initial data is known.
+
+\subsection{12.4 Impact}\label{ch2006andreiokounkov:impact-2}
+
+The Okounkov--Pandharipande correspondence has had a substantial
+effect on enumerative geometry. It has been used to: - Compute
+Gromov--Witten invariants for many threefolds. - Prove the Virasoro
+conjecture for target curves. - Connect Gromov--Witten theory to the
+representation theory of infinite-dimensional algebras.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. Enumerative Geometry and Moduli
+Spaces}\label{ch2006andreiokounkov:enumerative-geometry-and-moduli-spaces}
+
+\subsection{13.1 The Moduli Space of
+Curves}\label{ch2006andreiokounkov:the-moduli-space-of-curves}
+
+The moduli space \(M_g\) of genus \(g\) curves is one of the most
+important objects in algebraic geometry. Okounkov has contributed to the
+understanding of its tautological ring and its intersection theory.
+
+\subsection{13.2 Contributions}\label{ch2006andreiokounkov:contributions}
+
+With Pandharipande and others, Okounkov made contributions to:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{The ELSV formula:} A formula relating simple Hurwitz numbers
+ to intersection numbers on \(M_g\), which was conjectured by Ekedahl,
+ Lando, Shapiro, and Vainshtein, and proved by Okounkov and
+ Pandharipande.
+\item
+ \textbf{The \(r\)-spin theory:} A generalization of Gromov--Witten
+ theory to the setting of \(r\)-spin curves, with applications to the
+ representation theory of \(W\)-algebras.
+\item
+ \textbf{Cohomological field theories:} The construction of
+ cohomological field theories from Gromov--Witten invariants and their
+ classification.
+\end{enumerate}
+
+\subsection{13.3 The ELSV Formula}\label{ch2006andreiokounkov:the-elsv-formula}
+
+The ELSV formula states that:
+
+\[
+H_g(\mu) = \frac{(2g - 2 + n + |\mu|)!}{\prod_i \mu_i} \int_{\overline{M}_{g,n}} \frac{\Lambda_g^\vee(1)}{\prod_i (1 - \mu_i \psi_i)}
+\]
+
+where \(H_g(\mu)\) are simple Hurwitz numbers (counting branched covers
+of \(\mathbb{P}^1\) with a given ramification profile) and
+\(\Lambda_g^\vee\) is the Chern polynomial of the Hodge bundle. This
+formula was conjectured by Ekedahl, Lando, Shapiro, and Vainshtein and
+proved by Okounkov and Pandharipande using methods from Gromov--Witten
+theory.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{14. Tail Algebras and the Frozen
+Boundary}\label{ch2006andreiokounkov:tail-algebras-and-the-frozen-boundary}
+
+\subsection{14.1 Random Surfaces}\label{ch2006andreiokounkov:random-surfaces}
+
+A recurring theme in Okounkov's work is the study of \textbf{random
+surfaces} --- random interfaces in statistical mechanics models such as
+the dimer model, the six-vertex model, and the Ising model.
+
+\subsection{14.2 The Frozen Boundary}\label{ch2006andreiokounkov:the-frozen-boundary}
+
+In joint work with Richard Kenyon and Scott Sheffield, Okounkov studied
+the \textbf{dimer model} on the hexagonal lattice, which is equivalent
+to the problem of random tilings of a region by lozenges (rhombi).
+
+They proved that for a large class of regions, the random tiling
+exhibits a \textbf{frozen boundary} --- a curve that separates a region
+of high entropy (where all three orientations of lozenges appear) from a
+region of low entropy (where only two orientations appear). This frozen
+boundary is described by an algebraic curve, and its shape depends on
+the geometry of the region.
+
+This work has deep connections to: - \textbf{Algebraic geometry:} The
+frozen boundary is a real algebraic curve. - \textbf{Complex analysis:}
+The shape of the boundary is determined by the Schwarz--Christoffel
+mapping. - \textbf{Probability theory:} The fluctuations of the
+interface are described by the Gaussian free field.
+
+\subsection{14.3 The Limit Shape}\label{ch2006andreiokounkov:the-limit-shape}
+
+Okounkov and his collaborators showed that, as the size of the region
+tends to infinity, the random tiling converges almost surely to a
+\textbf{limit shape} --- a surface that minimizes a certain surface
+tension functional. The frozen boundary is the boundary of the ``liquid
+region'' where the surface is curved.
+
+This was a spectacular confirmation of the general theory of random
+interfaces and a testament to the power of integrable probability.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. Representation Theory of Infinite-Dimensional
+Groups}\label{ch2006andreiokounkov:representation-theory-of-infinite-dimensional-groups}
+
+\subsection{15.1 The Infinite Symmetric
+Group}\label{ch2006andreiokounkov:the-infinite-symmetric-group}
+
+The \textbf{infinite symmetric group} \(S_\infty = \bigcup_n S_n\) is
+the group of finitary permutations of a countable set. Its
+representation theory is governed by the work of Thoma, Vershik, and
+Kerov, and it is intimately connected to the asymptotic representation
+theory of the finite symmetric groups.
+
+\subsection{15.2 Okounkov's
+Contributions}\label{ch2006andreiokounkov:okounkovs-contributions-4}
+
+Okounkov studied the representation theory of \(S_\infty\) from the
+perspective of the Okounkov--Vershik approach. He showed:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{Classification of characters:} All characters of \(S_\infty\)
+ are parametrized by Thoma parameters \((\alpha, \beta, \delta)\) where
+ \(\alpha_i, \beta_i\) are nonnegative sequences summing to at most
+ \(\delta\).
+\item
+ \textbf{The Plancherel measure:} The Plancherel measure on partitions
+ of \(n\) converges to the \textbf{Vershik--Kerov measure} on Thoma
+ parameters as \(n \to \infty\).
+\item
+ \textbf{Free probability:} The characters of \(S_\infty\) satisfy the
+ same formulas as the cumulants in free probability theory.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. Impact on Mathematics}\label{ch2006andreiokounkov:impact-on-mathematics}
+
+\subsection{16.1 Impact on Enumerative
+Geometry}\label{ch2006andreiokounkov:impact-on-enumerative-geometry}
+
+Okounkov's work on Gromov--Witten invariants, Donaldson--Thomas theory,
+and the MNOP conjecture transformed enumerative geometry. The MNOP
+conjecture revealed a deep unity between two apparently different
+counting theories, and the techniques developed through its proof ---
+virtual localization, the Fock space approach, the Virasoro constraints
+--- have become standard tools.
+
+\subsection{16.2 Impact on Representation
+Theory}\label{ch2006andreiokounkov:impact-on-representation-theory}
+
+The Okounkov--Vershik approach to the symmetric group provided the
+definitive modern framework for the subject. It clarified the role of
+the Young--Jucys--Murphy elements, unified the different constructions
+of the irreducible representations, and opened the door to the
+asymptotic theory. The geometric construction of R-matrices using stable
+envelopes is a major contribution to geometric representation theory.
+
+\subsection{16.3 Impact on Probability}\label{ch2006andreiokounkov:impact-on-probability}
+
+Okounkov's work on the Plancherel measure, random partitions, and random
+surfaces established deep connections between probability theory and
+algebraic combinatorics. The limit shape of random partitions, the
+frozen boundary of random tilings, and the Tracy--Widom distribution of
+fluctuations are now central objects in integrable probability.
+
+\subsection{16.4 Impact on Algebraic
+Geometry}\label{ch2006andreiokounkov:impact-on-algebraic-geometry}
+
+Okounkov bodies have become a standard tool in birational geometry. They
+provide a convex-geometric approach to volumes, positivity, and
+asymptotic invariants of line bundles, and they have been used to prove
+fundamental results about the geometry of algebraic varieties.
+
+\subsection{16.5 Impact on Mathematical
+Physics}\label{ch2006andreiokounkov:impact-on-mathematical-physics}
+
+The Nekrasov--Okounkov proof of Nekrasov's conjecture provided rigorous
+foundations for the Seiberg--Witten prepotential and its relation to
+instanton counting. The AGT correspondence, which relates 4D gauge
+theories to 2D conformal field theories, relies crucially on the
+Nekrasov--Okounkov formula.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{17. Awards and Recognition}\label{ch2006andreiokounkov:awards-and-recognition}
+
+\textbf{2006:} - Fields Medal (International Mathematical Union) -
+European Prize in Combinatorics
+
+\textbf{2004:} - Invited Speaker, International Congress of
+Mathematicians (Beijing) - Clay Research Scholar (Clay Mathematics
+Institute)
+
+\textbf{2003:} - EMS Prize (European Mathematical Society)
+
+\textbf{2000:} - Packard Fellowship for Science and Engineering
+
+\textbf{1998--2000:} - Clay Research Fellow
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{18. Selected Major
+Publications}\label{ch2006andreiokounkov:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``Asymptotics of the Plancherel measure for the symmetric
+ group''} (with S. Kerov, G. Olshanski, A. Vershik). \emph{Journal of
+ Mathematical Sciences} 87(5), 3806--3856, 1997. --- \emph{The limit
+ shape of random partitions and the distribution of their
+ fluctuations.}
+\item
+ \textbf{``A new approach to the representation theory of the symmetric
+ groups''} (with A. Vershik). \emph{Selecta Mathematica} 2(4),
+ 581--605, 1996. --- \emph{The Okounkov--Vershik approach to the
+ symmetric group, providing a new construction of irreducible
+ representations.}
+\item
+ \textbf{``The equivalence of Gromov--Witten and Donaldson--Thomas
+ invariants''} (with D. Maulik, N. Nekrasov, R. Pandharipande).
+ \emph{Journal of the American Mathematical Society} 20(2), 499--549,
+ 2007. --- \emph{The MNOP conjecture and its proof for toric
+ threefolds.}
+\item
+ \textbf{``Seiberg--Witten prepotential from instanton counting''}
+ (with N. Nekrasov). \emph{Advances in Theoretical and Mathematical
+ Physics} 7(5), 831--864, 2003. --- \emph{Proof of Nekrasov's
+ conjecture relating the instanton partition function to the
+ Seiberg--Witten prepotential.}
+\item
+ \textbf{``Gromov--Witten theory, Hurwitz numbers, and matrix models''}
+ (with R. Pandharipande). \emph{Annals of Mathematics} 153(1),
+ 189--228, 2001. --- \emph{The ELSV formula and its proof using
+ Gromov--Witten theory.}
+\item
+ \textbf{``Quantum cohomology of the Hilbert scheme of points on a
+ surface''} (with D. Maulik). \emph{Inventiones Mathematicae} 209(2),
+ 459--547, 2017. --- \emph{Computation of the quantum cohomology ring
+ of Hilbert schemes using stable envelopes.}
+\item
+ \textbf{``Random tilings and the frozen boundary''} (with R. Kenyon,
+ S. Sheffield). \emph{Journal of the American Mathematical Society}
+ 19(4), 899--951, 2006. --- \emph{The frozen boundary of random lozenge
+ tilings and its description by algebraic curves.}
+\item
+ \textbf{``A new method for computing the volume of a line bundle.''}
+ \emph{Duke Mathematical Journal} 101(3), 441--467, 2000. ---
+ \emph{Introduction of Okounkov bodies and their application to volumes
+ of line bundles.}
+\item
+ \textbf{``The Gromov--Witten/Donaldson--Thomas correspondence for
+ toric threefolds''} (with R. Pandharipande). \emph{Inventiones
+ Mathematicae} 178(2), 319--386, 2009. --- \emph{Complete proof of the
+ GW/DT correspondence for toric varieties.}
+\item
+ \textbf{``Stable envelopes and quantum groups''} (with D. Maulik).
+ \emph{Pure and Applied Mathematics Quarterly} 16(4), 1133--1205, 2020.
+ --- \emph{Geometric construction of R-matrices using stable
+ envelopes.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{19. Ongoing Work and Future
+Directions}\label{ch2006andreiokounkov:ongoing-work-and-future-directions}
+
+\subsection{19.1 Stable Envelopes and Geometric Representation
+Theory}\label{ch2006andreiokounkov:stable-envelopes-and-geometric-representation-theory}
+
+Okounkov continues to develop his theory of stable envelopes and its
+applications to geometric representation theory. Current directions
+include: - Elliptic stable envelopes and their relationship to elliptic
+quantum groups. - Application of stable envelopes to the study of 3D
+mirror symmetry. - Connections between stable envelopes and the theory
+of quantum integrable systems.
+
+\subsection{19.2 Moduli Spaces and Enumerative
+Geometry}\label{ch2006andreiokounkov:moduli-spaces-and-enumerative-geometry}
+
+He continues to work on enumerative geometry of moduli spaces,
+including: - The Gromov--Witten theory of Calabi--Yau threefolds. - The
+relationship between enumerative geometry and the representation theory
+of vertex algebras. - Wall-crossing formulas in Donaldson--Thomas
+theory.
+
+\subsection{19.3 Random Structures and Integrable
+Probability}\label{ch2006andreiokounkov:random-structures-and-integrable-probability}
+
+The study of random surfaces, random partitions, and their limit shapes
+continues. Current work focuses on: - The connection between random
+tilings and the Gaussian free field. - The relationship between random
+matrix theory and the representation theory of infinite-dimensional
+groups.
+
+\subsection{19.4 Connections to Physics}\label{ch2006andreiokounkov:connections-to-physics}
+
+Okounkov remains interested in the connections between his work and
+theoretical physics, including: - The AGT correspondence and its
+generalizations. - Supersymmetric gauge theories and their moduli
+spaces. - The relationship between topological string theory and
+enumerative geometry.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{20. Conclusion}\label{ch2006andreiokounkov:conclusion}
+
+Andrei Okounkov is one of the most versatile and influential
+mathematicians of his generation. His work spans probability,
+representation theory, algebraic geometry, and mathematical physics, and
+he has made fundamental contributions to each field. The Fields Medal
+citation --- ``for his contributions to bridging probability,
+representation theory and algebraic geometry'' --- captures the essence
+of his mathematics: he builds bridges between fields, importing ideas
+from one to solve problems in another.
+
+The Okounkov--Vershik approach transformed the representation theory of
+symmetric groups. The MNOP conjecture and its proof transformed
+enumerative geometry. The Nekrasov--Okounkov formula provided rigorous
+foundations for instanton counting in supersymmetric gauge theory.
+Okounkov bodies became a fundamental tool in birational geometry. The
+frozen boundary of random tilings connected probability, algebraic
+geometry, and statistical mechanics.
+
+At Columbia University, Okounkov continues to push the boundaries of
+mathematics. His work on stable envelopes and the geometric construction
+of R-matrices is opening new directions in geometric representation
+theory. His ability to see connections between distant fields --- and to
+develop the technical machinery needed to exploit those connections ---
+ensures that his influence will continue to grow.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{21. References and Further
+Reading}\label{ch2006andreiokounkov:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch2006andreiokounkov:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 2006 Announcement:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medal-2006
+\item
+ Fields Medal Citation for Andrei Okounkov:
+ https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2006/okounkov-citation.pdf
+\item
+ Columbia University: ``Andrei Okounkov awarded the Fields Medal.''
+ 2006.
+\end{itemize}
+
+\subsection{Biographical and Overview
+Articles}\label{ch2006andreiokounkov:biographical-and-overview-articles}
+
+\begin{itemize}
+\tightlist
+\item
+ Borodin, A. ``The Work of Andrei Okounkov.'' ICM 2006 Laudatio.
+\item
+ Klarreich, E. ``Bridging Fields --- Andrei Okounkov's Mathematical
+ Connections.'' \emph{Science News}, 2006.
+\item
+ Okounkov, A. ``Mathematics: The Science of Patterns.''
+ \emph{Proceedings of the ICM}, 2006.
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch2006andreiokounkov:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Okounkov, A. and Vershik, A. ``A new approach to the representation
+ theory of the symmetric groups.'' \emph{Selecta Math.} 2 (1996),
+ 581--605.
+\item
+ Maulik, D., Nekrasov, N., Okounkov, A., and Pandharipande, R.
+ ``Gromov--Witten theory and Donaldson--Thomas theory I.''
+ \emph{Compositio Math.} 142 (2006), 1263--1285.
+\item
+ Maulik, D., Nekrasov, N., Okounkov, A., and Pandharipande, R.
+ ``Gromov--Witten theory and Donaldson--Thomas theory II.'' \emph{JAMS}
+ 20 (2007), 499--549.
+\item
+ Nekrasov, N. and Okounkov, A. ``Seiberg--Witten prepotential from
+ instanton counting.'' \emph{Adv. Theor. Math. Phys.} 7 (2003),
+ 831--864.
+\item
+ Kenyon, R., Okounkov, A., and Sheffield, S. ``Dimers and the frozen
+ boundary.'' \emph{JAMS} 19 (2006), 899--951.
+\item
+ Okounkov, A. ``A new method for computing the volume of a line
+ bundle.'' \emph{Duke Math. J.} 101 (2000), 441--467.
+\item
+ Okounkov, A. ``Random partitions and the frozen boundary.''
+ \emph{Current Developments in Mathematics}, 2005.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(End of report)}

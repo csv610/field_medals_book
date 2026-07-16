@@ -1,0 +1,1005 @@
+\chapter{Maryna Viazovska --- Fields Medal 2022}\label{ch2022marynaviazovska:maryna-viazovska-fields-medal-2022-a-comprehensive-report-on-her-work-and-impact}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Maryna Sergiivna
+Viazovska (b. December 2, 1984, Kyiv, Ukraine) \textbf{Position:} Full
+Professor and Chair of Number Theory, EPFL (Swiss Federal Institute of
+Technology Lausanne) \textbf{Doctoral Advisors:} Don Zagier, Werner
+Muller (University of Bonn) \textbf{Fields Medal Citation:} \emph{``For
+the proof that the E8 lattice provides the densest packing of identical
+spheres in 8 dimensions, and further contributions to related extremal
+problems and interpolation problems in Fourier analysis.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Table of Contents}\label{ch2022marynaviazovska:table-of-contents}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ Introduction
+\item
+ Biographical Background
+\item
+ The Sphere Packing Problem: Historical Context
+\item
+ Linear Programming Bounds for Sphere Packing
+\item
+ Modular Forms and the Magic Function
+\item
+ The E8 Lattice: Optimality in 8 Dimensions
+\item
+ The Leech Lattice: Optimality in 24 Dimensions
+\item
+ Universal Optimality of the E8 and Leech Lattices
+\item
+ Fourier Interpolation Formulas
+\item
+ Spherical Designs
+\item
+ Energy Minimization and Optimal Configurations
+\item
+ The Proof Technique: A Unification
+\item
+ Broader Impact on Mathematics and Science
+\item
+ Awards and Recognition
+\item
+ Selected Major Publications
+\item
+ Personal Resilience and Public Role
+\item
+ Ongoing Work and Future Directions
+\item
+ Conclusion
+\item
+ References and Further Reading
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch2022marynaviazovska:introduction}
+
+Maryna Viazovska was awarded the Fields Medal in 2022 for solving the
+sphere packing problem in 8 and 24 dimensions --- a feat that
+mathematicians had considered out of reach for centuries. Her proof,
+published in 2016, was breathtaking in its elegance and simplicity. In a
+field accustomed to multi-hundred-page computer-assisted proofs (the 3D
+case required 250 pages plus 3 gigabytes of computer code), Viazovska's
+argument fit in a few dozen pages and required no computer assistance.
+She simply constructed the right function --- a ``magic function'' ---
+using modular forms, and the sphere packing problem fell into place.
+
+Viazovska is the second woman (after Maryam Mirzakhani in 2014) and the
+first Ukrainian citizen to win the Fields Medal. Her work sits at the
+intersection of number theory, Fourier analysis, geometry, and
+combinatorics, drawing on deep ideas from the theory of modular forms to
+solve one of the oldest problems in discrete geometry.
+
+This report provides a detailed account of Viazovska's important
+contributions, the mathematical context in which they arose, the
+techniques she developed, and their lasting impact on mathematics and
+its applications.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background}\label{ch2022marynaviazovska:biographical-background}
+
+\subsection{2.1 Early Life and
+Education}\label{ch2022marynaviazovska:early-life-and-education}
+
+Maryna Sergiivna Viazovska was born on December 2, 1984, in Kyiv,
+Ukraine, the eldest of three sisters. Her father was a chemist who
+worked at the Antonov aircraft factory, and her mother was an engineer.
+She attended the Kyiv Natural Science Lyceum No.~145, a specialized
+secondary school for high-achieving students in science and technology.
+An influential teacher there, Andrii Knyazyuk, had previously worked as
+a professional research mathematician before becoming a secondary school
+teacher.
+
+Viazovska competed in domestic mathematics Olympiads in high school,
+placing 13th in a national competition. At Taras Shevchenko National
+University of Kyiv, she competed in the International Mathematics
+Competition for University Students in 2002, 2003, 2004, and 2005,
+placing first in 2002 and 2005. She co-authored her first research paper
+in 2005.
+
+\subsection{2.2 Graduate Studies}\label{ch2022marynaviazovska:graduate-studies}
+
+Viazovska earned a master's degree from the University of Kaiserslautern
+in Germany in 2007. She then pursued a PhD at the Max Planck Institute
+for Mathematics in Bonn under the supervision of Don Zagier --- one of
+the world's leading number theorists --- and Werner Muller. Her 2013
+thesis, titled ``Modular Functions and Special Cycles,'' focused on
+modular forms, the very objects that would later prove crucial for her
+sphere packing breakthrough.
+
+\subsection{2.3 Academic Career}\label{ch2022marynaviazovska:academic-career}
+
+After her PhD, Viazovska held a postdoctoral position at the Berlin
+Mathematical School and Humboldt University of Berlin (as a BMS
+Dirichlet Postdoctoral Fellow from 2014--2016). She was a visiting
+researcher at IHES (2013) and a Minerva Distinguished Visitor at
+Princeton University (2016). In 2017, she joined the faculty of the
+Ecole Polytechnique Federale de Lausanne (EPFL) in Switzerland, where
+she became a full professor and Chair of Number Theory in 2018 --- just
+one year after her breakthrough.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. The Sphere Packing Problem: Historical
+Context}\label{ch2022marynaviazovska:the-sphere-packing-problem-historical-context}
+
+\subsection{3.1 Statement of the
+Problem}\label{ch2022marynaviazovska:statement-of-the-problem}
+
+The sphere packing problem asks: what is the densest possible
+arrangement of congruent non-overlapping spheres in \(d\)-dimensional
+Euclidean space? The density is the fraction of space covered by the
+spheres. Despite its simple statement, the problem has a history
+stretching back over 400 years.
+
+\subsection{3.2 Known Results Before
+Viazovska}\label{ch2022marynaviazovska:known-results-before-viazovska}
+
+\textbf{Dimension 1:} Trivial --- intervals tile the line with density
+1.
+
+\textbf{Dimension 2:} Solved by Thue (1910) --- the optimal arrangement
+is the hexagonal honeycomb, with density
+\(\pi/\sqrt{12} \approx 0.9069\).
+
+\textbf{Dimension 3:} The Kepler conjecture (1611) --- Johannes Kepler
+conjectured that the densest packing is achieved by the face-centered
+cubic (FCC) lattice, with density \(\pi/\sqrt{18} \approx 0.74048\).
+This was finally proved by Thomas Hales in 1998 via an elaborate
+computer-assisted proof spanning 250 pages and 3 gigabytes of code. The
+proof was controversial and took years to verify; a formal verification
+was completed in 2014.
+
+\textbf{Dimensions 4--7:} The optimal packings were not known, though
+good candidates existed (lattices such as D4, D5, E6, E7).
+
+\textbf{Dimensions 8 and 24:} It was widely believed that the E8 lattice
+(in 8 dimensions) and the Leech lattice (in 24 dimensions) were optimal.
+Henry Cohn and Noam Elkies (2003) had shown using linear programming
+bounds that the E8 and Leech lattices achieve density within
+\(10^{-14}\) and \(10^{-23}\) of optimal, respectively --- tantalizingly
+close, but not a proof.
+
+The gap between the Cohn--Elkies upper bound and the actual density of
+E8 was a billionth of a percent. Closing that gap seemed hopeless
+without substantially new ideas.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. Linear Programming Bounds for Sphere
+Packing}\label{ch2022marynaviazovska:linear-programming-bounds-for-sphere-packing}
+
+\subsection{4.1 The Cohn--Elkies
+Framework}\label{ch2022marynaviazovska:the-cohnelkies-framework}
+
+The Cohn--Elkies method (2003) reduced the sphere packing problem to the
+construction of a function \(f: \mathbb{R}^d \to \mathbb{R}\)
+satisfying:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ \(f(0) = 1\)
+\item
+ \(f(x) \le 0\) for \(|x| \ge r\) (where \(r\) is the minimal distance
+ between sphere centers)
+\item
+ The Fourier transform \(\widehat{f}(t) \ge 0\) for all \(t\)
+\item
+ \(\widehat{f}(0) > 0\)
+\end{enumerate}
+
+If such a function exists, then the sphere packing density is bounded
+above by:
+
+\[
+\frac{\text{vol}(B(r/2))}{\widehat{f}(0)}
+\]
+
+where \(B(r/2)\) is a ball of radius \(r/2\).
+
+The challenge is to construct a function \(f\) that makes this upper
+bound as small as possible. For a lattice packing with minimal distance
+\(r\), the ideal function would make the upper bound match the density
+of the lattice exactly. Cohn and Elkies constructed functions that came
+exponentially close to this ideal, but could not reach it exactly.
+
+\subsection{4.2 The Need for a ``Magic
+Function''}\label{ch2022marynaviazovska:the-need-for-a-magic-function}
+
+To prove that a lattice achieves the optimal density, one needs a
+function \(f\) such that:
+
+\begin{itemize}
+\tightlist
+\item
+ \(f(0) = 1\)
+\item
+ \(f(x) = 0\) for all nonzero lattice vectors (so the packing
+ constraint is tight)
+\item
+ \(\widehat{f}(t) = 0\) for all nonzero dual lattice vectors (so the
+ Fourier constraint is tight)
+\item
+ \(\widehat{f}(0) = \text{density}^{-1}\)
+\end{itemize}
+
+The existence of such an \textbf{interpolating function} --- one that
+vanishes on the lattice and whose Fourier transform vanishes on the dual
+lattice --- would prove optimality. No one before Viazovska knew how to
+construct such a function.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. Modular Forms and the Magic
+Function}\label{ch2022marynaviazovska:modular-forms-and-the-magic-function}
+
+\subsection{5.1 What Are Modular Forms?}\label{ch2022marynaviazovska:what-are-modular-forms}
+
+Modular forms are complex-analytic functions on the upper half-plane
+that transform in a highly symmetric way under the action of the modular
+group \(\text{SL}_2(\mathbb{Z})\). They are among the most structured
+objects in mathematics, arising in number theory, algebraic geometry,
+and string theory. The theory of modular forms, developed over the 19th
+and 20th centuries, provides a rich source of functions with special
+properties.
+
+Viazovska's deep familiarity with modular forms, developed during her
+PhD under Don Zagier, was the key to her breakthrough.
+
+\subsection{5.2 Constructing the Magic
+Function}\label{ch2022marynaviazovska:constructing-the-magic-function}
+
+For dimension 8, Viazovska constructed the radial function:
+
+\[
+f(r) = \frac{\sin^2(\pi r^2/2)}{\pi^2} \int_0^\infty e^{\pi i t r^2} \frac{\Theta_{E_8}(t+1) - \Theta_{E_8}(t)}{\Theta_{E_8}(t+1) + \Theta_{E_8}(t)} \, \varphi(t) \, dt
+\]
+
+where \(\Theta_{E_8}\) is the theta series of the E8 lattice and
+\(\varphi(t)\) is a carefully chosen function involving modular forms of
+weight 4.
+
+The function can be expressed more explicitly. Define the Eisenstein
+series \(E_2, E_4, E_6\) and the Jacobi theta functions
+\(\theta_2, \theta_3, \theta_4\). Then Viazovska's magic function for
+dimension 8 is given by:
+
+For \(r > 0\):
+
+\[
+f(r) = \frac{4\pi \sin^2(\pi r^2/2)}{r^2} \int_0^\infty \frac{g_E(t)}{\sinh(\pi t)} \, \frac{\cos(\pi r^2 t) - \cosh(\pi t)}{(\cosh(\pi t) - \cos(\pi r^2))^2} \, dt
+\]
+
+where
+\(g_E(t) = \frac{4}{\pi^2 t^2} \left(E_4(e^{2\pi i t}) - 1\right)\)
+involves the Eisenstein series \(E_4\).
+
+The key property is that:
+
+\begin{itemize}
+\tightlist
+\item
+ \(f(0) = 1\)
+\item
+ \(f(x) = 0\) for all nonzero vectors \(x\) in the E8 lattice with
+ \(|x|^2 \ge 2\)
+\item
+ The Fourier transform \(\widehat{f}(t) = 0\) for all nonzero vectors
+ in the dual of E8
+\item
+ \(\widehat{f}(0) = \pi^4/384\), which equals the inverse density of
+ the E8 sphere packing
+\end{itemize}
+
+\subsection{5.3 Why Modular Forms?}\label{ch2022marynaviazovska:why-modular-forms}
+
+The use of modular forms was not accidental. The theta series of a
+lattice is a modular form, and its transformation properties under
+\(\tau \to -1/\tau\) correspond to the Fourier transform on
+\(\mathbb{R}^d\). This connection --- between modular forms and the
+Fourier transform --- is what made Viazovska's construction possible.
+
+The function \(f\) is built from the theta series of the E8 lattice in
+such a way that its values on the lattice and the values of its Fourier
+transform on the dual lattice are controlled by modular identities. The
+vanishing conditions are consequences of known identities for modular
+forms.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. The E8 Lattice: Optimality in 8
+Dimensions}\label{ch2022marynaviazovska:the-e8-lattice-optimality-in-8-dimensions}
+
+\subsection{6.1 The E8 Lattice}\label{ch2022marynaviazovska:the-e8-lattice}
+
+The E8 lattice is one of the most notable objects in mathematics. It
+is the unique even unimodular lattice in 8 dimensions (up to
+isomorphism) and appears in contexts ranging from Lie theory to string
+theory. Its minimal norm is \(\sqrt{2}\), and each sphere touches 240
+neighbors. Its packing density is:
+
+\[
+\frac{\pi^4}{384 \cdot 16} \approx 0.25367
+\]
+
+(This is the fraction of space covered by spheres of radius \(1/2\)
+centered at the lattice points.)
+
+\subsection{6.2 Viazovska's Proof}\label{ch2022marynaviazovska:viazovskas-proof}
+
+In March 2016, Viazovska posted her preprint ``The sphere packing
+problem in dimension 8'' on the arXiv. The proof was strikingly short
+--- just over 20 pages --- and entirely self-contained. It used no
+computer calculations and no heavy machinery beyond classical modular
+forms and Fourier analysis.
+
+The proof proceeds in three steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{Reduction to a function bound:} Using the Cohn--Elkies linear
+ programming method, the sphere packing density is bounded above by a
+ quantity depending on a radial function \(f\).
+\item
+ \textbf{Construction of the magic function:} Viazovska constructs an
+ explicit function \(f\) using modular forms, with the required
+ positivity and vanishing properties.
+\item
+ \textbf{Evaluation:} The bound from step 1, using the function from
+ step 2, gives exactly the density of the E8 lattice packing, proving
+ its optimality.
+\end{enumerate}
+
+The mathematical community was stunned. Henry Cohn, who had worked on
+the problem for years, described the proof as ``absolutely magical'' and
+``notablely simple.''
+
+\subsection{6.3 The 240 Neighbors}\label{ch2022marynaviazovska:the-240-neighbors}
+
+A beautiful consequence of the proof is that in the optimal packing,
+each sphere touches exactly 240 neighbors --- the kissing number of the
+E8 lattice. This was previously known to be the maximum possible, but
+the sphere packing proof provided independent confirmation.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. The Leech Lattice: Optimality in 24
+Dimensions}\label{ch2022marynaviazovska:the-leech-lattice-optimality-in-24-dimensions}
+
+\subsection{7.1 The Leech Lattice}\label{ch2022marynaviazovska:the-leech-lattice}
+
+The Leech lattice is a notable 24-dimensional lattice discovered by
+John Leech in 1967. It is unimodular and has minimal norm \(\sqrt{2}\),
+with each sphere touching 196,560 neighbors. Its discovery transformed
+the theory of finite simple groups (the Monster group was constructed
+from the Leech lattice's symmetries). Its packing density is:
+
+\[
+\frac{\pi^{12}}{12!} \approx 0.00193
+\]
+
+\subsection{7.2 Extension to 24
+Dimensions}\label{ch2022marynaviazovska:extension-to-24-dimensions}
+
+Within days of Viazovska's 8-dimensional proof, it became clear that the
+same method might work for 24 dimensions. Viazovska, together with Henry
+Cohn, Abhinav Kumar, Stephen Miller, and Danylo Radchenko, produced the
+proof for the Leech lattice. The preprint appeared in April 2016, less
+than a month after the 8-dimensional proof.
+
+The 24-dimensional magic function is constructed similarly, using the
+theta series of the Leech lattice and modular forms of weight 12. The
+proof is longer and more involved than the 8-dimensional case but
+follows the same conceptual blueprint.
+
+\subsection{7.3 Significance}\label{ch2022marynaviazovska:significance}
+
+The 24-dimensional proof was particularly significant because the Leech
+lattice has a more complicated structure than E8. The fact that the same
+method worked in both dimensions --- but apparently only in 8 and 24 ---
+suggested that these dimensions are special. Indeed, 8 and 24 are the
+only dimensions where even unimodular lattices exist (other than
+multiples of 8), and they are the only dimensions (along with 1 and 2)
+where the sphere packing problem has been solved.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. Universal Optimality of the E8 and Leech
+Lattices}\label{ch2022marynaviazovska:universal-optimality-of-the-e8-and-leech-lattices}
+
+\subsection{8.1 Beyond Sphere Packing}\label{ch2022marynaviazovska:beyond-sphere-packing}
+
+In 2019, Viazovska and her collaborators (Cohn, Kumar, Miller, and
+Radchenko) proved a much stronger result: the E8 and Leech lattices are
+\textbf{universally optimal}. This means they minimize the potential
+energy for a large class of pairwise interaction potentials, not just
+the hard-sphere potential (which gives the sphere packing problem).
+
+Specifically, for any completely monotone function
+\(g: (0,\infty) \to \mathbb{R}\) (i.e., a function whose derivatives
+alternate in sign, like \(g(r) = e^{-ar}\) or \(g(r) = 1/r^s\)), the E8
+and Leech lattices minimize the energy:
+
+\[
+E(\Lambda) = \sum_{x \in \Lambda \setminus \{0\}} g(|x|^2)
+\]
+
+among all periodic point configurations of the same density.
+
+\subsection{8.2 The Proof}\label{ch2022marynaviazovska:the-proof}
+
+The universal optimality proof is a major work (published in the
+\emph{Annals of Mathematics} in 2022, running 100 pages). It combines:
+
+\begin{itemize}
+\tightlist
+\item
+ The linear programming bound for energy minimization (generalizing the
+ Cohn--Elkies framework)
+\item
+ The magic functions from the sphere packing proofs
+\item
+ New Fourier interpolation formulas
+\item
+ Deep properties of the Gaussian distribution on lattices
+\end{itemize}
+
+\subsection{8.3 Impact}\label{ch2022marynaviazovska:impact}
+
+Universal optimality is a far-reaching result. It implies that the E8
+and Leech lattices are optimal not just for the sphere packing problem,
+but for a wide range of physical problems, including:
+
+\begin{itemize}
+\tightlist
+\item
+ Minimizing the energy of repelling particles (like electrons on a
+ sphere)
+\item
+ Optimality for Gaussian and Yukawa potentials
+\item
+ Robustness to changes in the interaction law
+\end{itemize}
+
+This suggests that these lattices represent universal physical optima,
+arising naturally in many contexts.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. Fourier Interpolation
+Formulas}\label{ch2022marynaviazovska:fourier-interpolation-formulas}
+
+\subsection{9.1 The Problem}\label{ch2022marynaviazovska:the-problem}
+
+A Fourier interpolation formula expresses the values of a bandlimited
+function in terms of its values on a discrete set and the values of its
+Fourier transform on another discrete set. The existence of such
+formulas is closely related to the sphere packing problem: the magic
+function is an interpolating function.
+
+\subsection{9.2 Viazovska's
+Contributions}\label{ch2022marynaviazovska:viazovskas-contributions}
+
+Viazovska and Radchenko developed a general theory of Fourier
+interpolation formulas. They proved that for certain lattices (including
+the integers, the E8 lattice, and the Leech lattice), there exist
+explicit interpolation formulas that reconstruct any suitable function
+from its values and the values of its Fourier transform on the lattice.
+
+These formulas are not just technical tools --- they represent deep
+structural facts about the interplay between lattices and the Fourier
+transform. They have applications to:
+
+\begin{itemize}
+\tightlist
+\item
+ Uncertainty principles in harmonic analysis
+\item
+ Sampling theory and signal processing
+\item
+ The theory of modular forms
+\end{itemize}
+
+\subsection{9.3 The Connection to Sphere
+Packing}\label{ch2022marynaviazovska:the-connection-to-sphere-packing}
+
+The Fourier interpolation formulas are intimately connected to the
+sphere packing problem. The magic function used in the sphere packing
+proof is the simplest example of such an interpolating function --- it
+interpolates between the function (which vanishes on the lattice except
+at zero) and its Fourier transform (which vanishes on the dual lattice).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. Spherical Designs}\label{ch2022marynaviazovska:spherical-designs}
+
+\subsection{10.1 What Are Spherical
+Designs?}\label{ch2022marynaviazovska:what-are-spherical-designs}
+
+A spherical \(t\)-design is a finite set of points on a sphere such that
+the average value of any polynomial of degree at most \(t\) over the set
+equals its average over the entire sphere. Spherical designs are
+important in:
+
+\begin{itemize}
+\tightlist
+\item
+ Numerical integration (cubature formulas on the sphere)
+\item
+ Coding theory (optimal signal constellations)
+\item
+ Approximation theory (optimal points for interpolation)
+\end{itemize}
+
+\subsection{10.2 The Korevaar--Meyers
+Conjecture}\label{ch2022marynaviazovska:the-korevaarmeyers-conjecture}
+
+With Andriy Bondarenko and Danylo Radchenko, Viazovska proved a
+conjecture of Korevaar and Meyers on the existence of spherical designs.
+They showed that for any dimension \(d\) and any \(t\), there exists a
+spherical \(t\)-design on the sphere \(S^{d-1}\) with at most
+\(C_d t^{d-1}\) points --- the optimal possible order of magnitude.
+
+This result, published in 2013, was Viazovska's first major contribution
+and established her as a leading figure in the field. The proof used
+combinatorial and number-theoretic methods that foreshadowed her later
+work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. Energy Minimization and Optimal
+Configurations}\label{ch2022marynaviazovska:energy-minimization-and-optimal-configurations}
+
+\subsection{11.1 The General Problem}\label{ch2022marynaviazovska:the-general-problem}
+
+Given a pairwise interaction potential \(g(r)\), the energy minimization
+problem asks for the configuration of points (usually in a lattice or on
+a sphere) that minimizes the total energy \(\sum g(|x-y|)\). This is a
+central problem in:
+
+\begin{itemize}
+\tightlist
+\item
+ Materials science (crystal structure prediction)
+\item
+ Condensed matter physics (ground states of interacting particle
+ systems)
+\item
+ Information theory (optimal signal sets)
+\end{itemize}
+
+\subsection{11.2 Optimality for Gaussian and Riesz
+Potentials}\label{ch2022marynaviazovska:optimality-for-gaussian-and-riesz-potentials}
+
+Viazovska's universal optimality result for E8 and Leech lattices
+implies that these lattices minimize energy for a huge class of
+potentials, including:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Gaussian potentials:} \(g(r) = e^{-\alpha r^2}\)
+\item
+ \textbf{Yukawa potentials:} \(g(r) = e^{-\alpha r}/r\)
+\item
+ \textbf{Riesz potentials:} \(g(r) = 1/r^s\) (for \(s > 0\))
+\item
+ \textbf{Hard-core potentials:} \(g(r) = \infty\) for \(r < 1\) and
+ \(g(r) = 0\) for \(r \ge 1\) (the sphere packing case)
+\end{itemize}
+
+This is a remarkably strong statement: the same lattices are optimal for
+all these different physical systems.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{12. The Proof Technique: A
+Unification}\label{ch2022marynaviazovska:the-proof-technique-a-unification}
+
+\subsection{12.1 The Key Ingredients}\label{ch2022marynaviazovska:the-key-ingredients}
+
+Viazovska's proof brings together several areas of mathematics:
+
+\begin{itemize}
+\item
+ \textbf{Modular forms:} Provide the building blocks for the magic
+ function. Theta series of lattices are modular forms; their
+ transformation properties control the function's behavior under
+ Fourier transform.
+\item
+ \textbf{Fourier analysis:} The linear programming bound is stated in
+ terms of a function and its Fourier transform. The magic function must
+ satisfy positivity conditions for both.
+\item
+ \textbf{Discrete geometry:} The sphere packing problem itself is a
+ problem in geometry. The Cohn--Elkies reduction translates geometric
+ constraints into analytic conditions.
+\item
+ \textbf{Number theory:} The properties of the E8 and Leech lattices
+ (their theta series, their dual lattices, their automorphism groups)
+ are essential.
+\end{itemize}
+
+\subsection{12.2 Why 8 and 24
+Dimensions?}\label{ch2022marynaviazovska:why-8-and-24-dimensions}
+
+A natural question is: why did Viazovska's method work for dimensions 8
+and 24 but not other dimensions? The reason is that 8 and 24 are the
+only dimensions (other than 1 and 2) where:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ There exists an even unimodular lattice (a lattice equal to its dual
+ with even norm squared).
+\item
+ The theta series of the lattice has a particularly simple form:
+ \(\Theta_{E_8}(\tau) = E_4(\tau)\) and
+ \(\Theta_{\Lambda_{24}}(\tau) = \Delta(\tau)^{-1}E_4(\tau)^3\).
+\item
+ The magic function can be expressed in closed form using modular forms
+ of low weight.
+\end{enumerate}
+
+In other dimensions, the necessary modular forms would be more
+complicated, and the magic function would not satisfy the required
+positivity conditions.
+
+\subsection{12.3 Elegance and Simplicity}\label{ch2022marynaviazovska:elegance-and-simplicity}
+
+What struck mathematicians most about Viazovska's proof was its
+elegance. The 3D proof (Hales) required 250 pages of human reasoning
+plus 3 gigabytes of computer code. Viazovska's 8D proof fit in 20 pages
+with no computer assistance. The function she constructed was not the
+result of numerical optimization but was built from first principles
+using modular forms.
+
+Her collaborator Henry Cohn described the proof as ``simply magical''
+and ``very beautiful.'' Don Zagier, her PhD advisor, called it
+``absolutely productive.''
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. Broader Impact on Mathematics and
+Science}\label{ch2022marynaviazovska:broader-impact-on-mathematics-and-science}
+
+\subsection{13.1 Impact on Discrete
+Geometry}\label{ch2022marynaviazovska:impact-on-discrete-geometry}
+
+Viazovska's work has revitalized the field of discrete geometry. The
+sphere packing problem was one of the oldest unsolved problems in
+mathematics; its solution (in dimensions 8 and 24) has inspired new work
+on:
+
+\begin{itemize}
+\tightlist
+\item
+ Optimal configurations on spheres and in Euclidean space
+\item
+ The kissing number problem (maximum number of spheres touching a
+ central sphere)
+\item
+ The covering problem (covering space with overlapping spheres of
+ minimal density)
+\end{itemize}
+
+\subsection{13.2 Impact on Number Theory}\label{ch2022marynaviazovska:impact-on-number-theory}
+
+The connection between sphere packing and modular forms, revealed by
+Viazovska's proof, has opened new directions in number theory. The
+Fourier interpolation formulas she developed are deep structural results
+about the interaction between lattices, modular forms, and the Fourier
+transform.
+
+\subsection{13.3 Impact on Harmonic
+Analysis}\label{ch2022marynaviazovska:impact-on-harmonic-analysis}
+
+The Fourier interpolation formulas have applications to:
+
+\begin{itemize}
+\tightlist
+\item
+ Sampling theory: Reconstructing functions from sparse samples
+\item
+ Uncertainty principles: Understanding when a function and its Fourier
+ transform can both have small support
+\item
+ Signal processing: Designing optimal sampling strategies
+\end{itemize}
+
+\subsection{13.4 Impact on Physics and Materials
+Science}\label{ch2022marynaviazovska:impact-on-physics-and-materials-science}
+
+Sphere packings in high dimensions are models for:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Crystal structure:} The optimal arrangement of atoms in solids
+\item
+ \textbf{Colloidal systems:} The packing of small particles in
+ suspension
+\item
+ \textbf{Granular materials:} The packing of grains in sand and powders
+\end{itemize}
+
+The universal optimality result implies that the E8 and Leech lattices
+are physical optima for many different interaction potentials.
+
+\subsection{13.5 Impact on Information Theory and Coding
+Theory}\label{ch2022marynaviazovska:impact-on-information-theory-and-coding-theory}
+
+Sphere packings are central to information theory. The \textbf{Gaussian
+channel} (the mathematical model for communication over a noisy channel)
+has an optimal signal constellation given by the densest sphere packing
+in high dimensions. Viazovska's results for dimensions 8 and 24 have
+implications for:
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Error-correcting codes:} The E8 lattice gives the famous Golay
+ code, used in deep space communication.
+\item
+ \textbf{Modulation:} The Leech lattice is used in modems and 4G/5G
+ communication standards.
+\item
+ \textbf{Data compression:} The geometry of the E8 lattice is used in
+ certain compression algorithms.
+\end{itemize}
+
+\subsection{13.6 Second Woman to Win the Fields
+Medal}\label{ch2022marynaviazovska:second-woman-to-win-the-fields-medal}
+
+Viazovska is the second woman (after Maryam Mirzakhani) to win the
+Fields Medal. Her achievement has been widely well-known as an
+inspiration for women in mathematics. She has spoken about the
+importance of role models and the need to support women in pursuing
+mathematical careers.
+
+\subsection{13.7 Ukrainian Mathematics on the World
+Stage}\label{ch2022marynaviazovska:ukrainian-mathematics-on-the-world-stage}
+
+Viazovska's Fields Medal brought global attention to Ukrainian
+mathematics. She has been a vocal advocate for Ukrainian science,
+especially following the 2022 Russian invasion of Ukraine. Her home city
+of Kyiv was under attack at the time of her award, and her family had to
+flee to Switzerland.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{14. Awards and Recognition}\label{ch2022marynaviazovska:awards-and-recognition}
+
+\textbf{2022:} - Fields Medal (International Mathematical Union)
+
+\textbf{2020:} - European Mathematical Society Prize
+
+\textbf{2019:} - Ruth Lyttle Satter Prize in Mathematics (AMS) - Fermat
+Prize
+
+\textbf{2018:} - New Horizons in Mathematics Prize (Breakthrough
+Foundation) - Invited Speaker, International Congress of Mathematicians
+
+\textbf{2017:} - Clay Research Award (Clay Mathematics Institute) -
+SASTRA Ramanujan Prize - European Prize in Combinatorics - Full
+Professor, EPFL
+
+\textbf{2016:} - Salem Prize
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. Selected Major
+Publications}\label{ch2022marynaviazovska:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``The sphere packing problem in dimension 8.''} \emph{Annals
+ of Mathematics} 185(3), 991--1015, 2017. --- \emph{The breakthrough
+ paper. Proof that the E8 lattice is optimal.}
+\item
+ \textbf{``The sphere packing problem in dimension 24''} (with H. Cohn,
+ A. Kumar, S. Miller, and D. Radchenko). \emph{Annals of Mathematics}
+ 185(3), 1017--1033, 2017. --- \emph{Proof that the Leech lattice is
+ optimal.}
+\item
+ \textbf{``Universal optimality of the E8 and Leech lattices and
+ interpolation formulas''} (with H. Cohn, A. Kumar, S. Miller, and D.
+ Radchenko). \emph{Annals of Mathematics} 196(3), 983--1082, 2022. ---
+ \emph{Proof that these lattices minimize energy for a wide class of
+ potentials.}
+\item
+ \textbf{``Fourier interpolation on the real line''} (with D.
+ Radchenko). \emph{Publications Mathematiques de l'IHES} 131, 51--86,
+ 2020. --- \emph{Development of Fourier interpolation theory.}
+\item
+ \textbf{``Optimal asymptotic bounds for spherical designs''} (with A.
+ Bondarenko and D. Radchenko). \emph{Annals of Mathematics} 178(2),
+ 443--452, 2013. --- \emph{Proof of the Korevaar--Meyers conjecture on
+ spherical designs.}
+\item
+ \textbf{``On the number of points in a spherical design''} (with A.
+ Bondarenko and D. Radchenko). \emph{Advances in Mathematics} 254,
+ 504--530, 2014. --- \emph{Further results on spherical designs.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. Personal Resilience and Public
+Role}\label{ch2022marynaviazovska:personal-resilience-and-public-role}
+
+\subsection{16.1 The 2022 Invasion of
+Ukraine}\label{ch2022marynaviazovska:the-2022-invasion-of-ukraine}
+
+Viazovska learned she had won the Fields Medal in early 2022, weeks
+before the Russian invasion of Ukraine. Her family in Kyiv --- her
+parents, grandmother, two sisters, niece, and nephew --- were in
+immediate danger. After a harrowing journey, her sisters and their
+children made it to Switzerland.
+
+The Fields Medal ceremony took place in July 2022 in Helsinki. Viazovska
+used her platform to speak about the war and the importance of
+supporting Ukrainian scientists.
+
+\subsection{16.2 Advocacy for Ukrainian
+Science}\label{ch2022marynaviazovska:advocacy-for-ukrainian-science}
+
+Since winning the Fields Medal, Viazovska has been a prominent advocate
+for Ukrainian science. She has spoken at numerous events about the
+impact of the war on education and research, and has helped raise funds
+for Ukrainian mathematicians and students.
+
+\subsection{16.3 Role Model}\label{ch2022marynaviazovska:role-model}
+
+Viazovska's journey --- from Kyiv schoolgirl to Fields Medalist --- has
+inspired mathematicians around the world. Her story is particularly
+meaningful for:
+
+\begin{itemize}
+\tightlist
+\item
+ Young women considering careers in mathematics
+\item
+ Students from countries with limited mathematical infrastructure
+\item
+ Anyone who has faced personal or political adversity
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{17. Ongoing Work and Future
+Directions}\label{ch2022marynaviazovska:ongoing-work-and-future-directions}
+
+\subsection{17.1 Formalization of the Sphere Packing
+Proof}\label{ch2022marynaviazovska:formalization-of-the-sphere-packing-proof}
+
+Since 2024, Viazovska has been involved in a project to formalize the
+sphere packing proof in the Lean proof assistant. This project aims to
+provide a fully computer-verified proof of the Kepler conjecture (3D)
+and of Viazovska's 8D and 24D results. The project builds on earlier
+formalizations of the 3D proof.
+
+\subsection{17.2 Further Universal Optimality
+Results}\label{ch2022marynaviazovska:further-universal-optimality-results}
+
+Viazovska and collaborators are investigating whether other lattices
+(such as the D4 lattice in 4 dimensions or the E6 and E7 lattices) are
+universally optimal. Preliminary results suggest that these lattices may
+also be optimal for a wide range of potentials.
+
+\subsection{17.3 Extension to Other
+Dimensions}\label{ch2022marynaviazovska:extension-to-other-dimensions}
+
+While the sphere packing problem in dimensions 4--7 and 9--23 remains
+open, Viazovska's work has provided new tools for attacking these
+problems. The Fourier interpolation method may yield improved bounds
+even if it cannot produce exact solutions.
+
+\subsection{17.4 Connections to Conformal Field
+Theory}\label{ch2022marynaviazovska:connections-to-conformal-field-theory}
+
+The modular forms used in Viazovska's proof appear in conformal field
+theory and string theory. There may be deeper connections between sphere
+packing and these areas of theoretical physics.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{18. Conclusion}\label{ch2022marynaviazovska:conclusion}
+
+Maryna Viazovska's solution of the sphere packing problem in 8 and 24
+dimensions is one of the most notable mathematical achievements of
+the 21st century. Her proof --- elegant, concise, and entirely
+self-contained --- stands in marked contrast to the computer-assisted
+complexity of earlier approaches. By constructing a ``magic function''
+from modular forms, she transformed a centuries-old problem into a
+triumph of analytic insight.
+
+The Fields Medal citation captures the essence of her contribution: the
+proof of optimality for the E8 lattice, along with further contributions
+to extremal problems and Fourier interpolation. But the reach of her
+work extends far beyond these specific results. The universal optimality
+of the E8 and Leech lattices, the Fourier interpolation formulas, and
+the spherical designs results have implications for number theory,
+harmonic analysis, discrete geometry, coding theory, and condensed
+matter physics.
+
+Viazovska's personal story --- a Ukrainian mathematician who achieved
+the highest honor in mathematics while her homeland was under attack ---
+adds a human dimension to her mathematical achievements. She has become
+a symbol of resilience, hope, and the universal value of scientific
+inquiry.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{19. References and Further
+Reading}\label{ch2022marynaviazovska:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch2022marynaviazovska:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 2022 Announcement:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medal-2022
+\item
+ Fields Medal Citation for Maryna Viazovska:
+ https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU\_Fields22\_Viazovska\_citation.pdf
+\item
+ Cohn, H. ``The Work of Maryna Viazovska.'' ICM 2022 Laudatio.
+ https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/laudatio-mv.pdf
+\end{itemize}
+
+\subsection{Biographical and Overview
+Articles}\label{ch2022marynaviazovska:biographical-and-overview-articles}
+
+\begin{itemize}
+\tightlist
+\item
+ Lin, T. and Klarreich, E. ``In Times of Scarcity, War and Peace, a
+ Ukrainian Finds the Magic in Math.'' \emph{Quanta Magazine}, July 5,
+ 2022.
+\item
+ Castelvecchi, D. ``Mathematics is an unknown land': meet Fields Medal
+ winner Maryna Viazovska.'' \emph{Nature}, July 15, 2022.
+\item
+ Chang, K. ``Maryna Viazovska: Second to none in any dimension.''
+ \emph{New York Times}, July 5, 2022.
+\item
+ Freiberger, M. and Thomas, R. ``The Fields Medals 2022: Maryna
+ Viazovska.'' \emph{Plus Magazine}, July 2022.
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch2022marynaviazovska:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Viazovska, M. ``The sphere packing problem in dimension 8.''
+ \emph{Annals of Mathematics} 185 (2017), 991--1015.
+\item
+ Cohn, H., Kumar, A., Miller, S., Radchenko, D., and Viazovska, M.
+ ``The sphere packing problem in dimension 24.'' \emph{Annals of
+ Mathematics} 185 (2017), 1017--1033.
+\item
+ Cohn, H. and Elkies, N. ``New upper bounds on sphere packings I.''
+ \emph{Annals of Mathematics} 157 (2003), 689--714.
+\item
+ Hales, T. ``A proof of the Kepler conjecture.'' \emph{Annals of
+ Mathematics} 162 (2005), 1065--1185.
+\item
+ Conway, J. H. and Sloane, N. J. A. \emph{Sphere Packings, Lattices and
+ Groups}. 3rd ed., Springer, 1999.
+\end{itemize}

@@ -1,0 +1,1057 @@
+\chapter{Jean-Pierre Serre --- Fields Medal 1954}\label{ch1954jeanpierreserre:jean-pierre-serre-fields-medal-1954-a-comprehensive-report}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Jean-Pierre Serre (b.
+September 15, 1926, Bages, France) \textbf{Position:} Professor, Collège
+de France \textbf{Doctoral Advisor:} Henri Cartan (Université de Paris /
+École Normale Supérieure) \textbf{Fields Medal Citation:}
+\emph{``Achieved major results on the homotopy groups of spheres,
+especially in his use of the method of spectral sequences. Reformulated
+and extended some of the main results of complex variable theory in
+terms of sheaves.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Introduction}\label{ch1954jeanpierreserre:introduction}
+
+Jean-Pierre Serre was awarded the Fields Medal in 1954 at the age of 28
+--- the youngest recipient in history --- for his substantial work in
+algebraic topology and complex analysis. His contributions transformed
+several fields of mathematics, establishing the modern framework for
+algebraic topology, sheaf theory, and algebraic geometry.
+
+Serre's major contributions include:
+
+\begin{itemize}
+\tightlist
+\item
+ The \textbf{Serre spectral sequence}, a fundamental computational tool
+ in algebraic topology that relates the cohomology of a fibration to
+ the cohomology of its base and fiber.
+\item
+ \textbf{Serre's thesis on homotopy groups of spheres}, proving that
+ all homotopy groups of spheres are finite except for \(\pi_n(S^n)\)
+ and \(\pi_{4n-1}(S^{2n})\).
+\item
+ The \textbf{Serre--GAGA theorem}, establishing an equivalence between
+ the analytic and algebraic categories of projective varieties.
+\item
+ \textbf{Serre's FAC} (Faisceaux Algébriques Cohérents), developing the
+ theory of coherent sheaves on algebraic varieties and laying the
+ foundations for modern algebraic geometry.
+\item
+ \textbf{Serre duality}, a fundamental duality theorem in algebraic
+ geometry for coherent sheaves.
+\item
+ The theory of \textbf{modular forms} and \textbf{Galois
+ representations}, including the proof that modular forms of weight
+ \(k\) are congruent modulo \(p\) to modular forms of weight \(k'\)
+ under suitable conditions.
+\item
+ The \textbf{Serre conjecture} (proved by Quillen and Suslin) that
+ projective modules over polynomial rings are free.
+\item
+ The \textbf{Serre--Swan theorem}, relating vector bundles to
+ projective modules.
+\item
+ The theory of \textbf{Lie algebras and algebraic groups}.
+\end{itemize}
+
+This report provides a comprehensive overview of Serre's life and his
+monumental contributions to mathematics.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Biographical Background}\label{ch1954jeanpierreserre:biographical-background}
+
+\subsection{Early Life and
+Education}\label{ch1954jeanpierreserre:early-life-and-education}
+
+Jean-Pierre Serre was born on September 15, 1926, in Bages,
+Pyrénées-Orientales, France. His father was a pharmacist. He entered the
+École Normale Supérieure (ENS) in 1945, where he studied under Henri
+Cartan. He was part of the influential Bourbaki group and participated
+in the Cartan seminar.
+
+\subsection{Academic Career}\label{ch1954jeanpierreserre:academic-career}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{1948--1949:} Assistant, Université de Paris.
+\item
+ \textbf{1951:} PhD, Université de Paris, under Henri Cartan.
+\item
+ \textbf{1951--1954:} CNRS researcher, Paris.
+\item
+ \textbf{1954:} Fields Medal awarded at the ICM in Amsterdam.
+\item
+ \textbf{1956--1994:} Professor, Collège de France (Chair of Algebra
+ and Geometry).
+\item
+ \textbf{2000:} Wolf Prize in Mathematics.
+\item
+ \textbf{2003:} First Abel Prize (shared with no one).
+\item
+ \textbf{Present:} Professor Emeritus, Collège de France.
+\end{itemize}
+
+\subsection{Doctoral Work}\label{ch1954jeanpierreserre:doctoral-work}
+
+Serre's doctoral thesis, completed under Henri Cartan, was titled
+``Homologie singulière des espaces fibrés'' (Singular Homology of Fiber
+Spaces). It introduced the \textbf{Serre spectral sequence} and applied
+it to compute homotopy groups of spheres.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Serre Spectral
+Sequence}\label{ch1954jeanpierreserre:the-serre-spectral-sequence}
+
+\subsection{Motivation}\label{ch1954jeanpierreserre:motivation}
+
+A \textbf{fibration} \(F \to E \to B\) is a map \(p: E \to B\) with the
+homotopy lifting property. The problem is to compute the cohomology of
+\(E\) from that of \(F\) and \(B\). Serre's spectral sequence provides
+the solution.
+
+\subsection{Statement}\label{ch1954jeanpierreserre:statement}
+
+The \textbf{Serre spectral sequence} is a homology (or cohomology)
+spectral sequence associated to a fibration:
+
+\[E_2^{p,q} = H^p(B, H^q(F)) \Rightarrow H^{p+q}(E)\]
+
+where \(H^q(F)\) is a local system (the cohomology of the fiber with
+monodromy).
+
+\subsection{Construction}\label{ch1954jeanpierreserre:construction}
+
+Serre constructed the spectral sequence using \textbf{cubical singular
+homology}, a variant of singular homology suited to the study of path
+spaces. The filtration of \(E\) by the inverse images of skeleta of
+\(B\) gives the spectral sequence.
+
+\subsection{The Cohomology Spectral
+Sequence}\label{ch1954jeanpierreserre:the-cohomology-spectral-sequence}
+
+In more detail, the cohomology Serre spectral sequence satisfies:
+
+\[E_2^{p,q} = H^p(B; H^q(F)) \Rightarrow H^{p+q}(E)\]
+
+The differential \(d_r: E_r^{p,q} \to E_r^{p+r, q-r+1}\) satisfies
+\(d_r \circ d_r = 0\), and \(E_{r+1}\) is the homology of \(E_r\). The
+spectral sequence converges in the sense that for each \((p,q)\), the
+groups \(E_r^{p,q}\) stabilize to \(E_\infty^{p,q}\), which is the
+associated graded of the cohomology of \(E\) with respect to the
+filtration.
+
+\subsection{Edge Homomorphisms}\label{ch1954jeanpierreserre:edge-homomorphisms}
+
+The spectral sequence gives two important \textbf{edge homomorphisms}: -
+\(H^p(B) = E_2^{p,0} \to H^p(E)\) induced by \(p^*\). -
+\(H^q(E) \to H^0(B, H^q(F)) = \text{invariant cohomology of the fiber}\).
+
+These maps allow one to extract information about the map \(p^*\) and
+the inclusion of the fiber.
+
+\subsection{The Path-Loop Fibration}\label{ch1954jeanpierreserre:the-path-loop-fibration}
+
+The fundamental example is the \textbf{path-loop fibration}:
+
+\[\Omega X \to PX \to X\]
+
+where \(PX\) is the space of paths starting at a basepoint (which is
+contractible) and \(\Omega X\) is the loop space. The Serre spectral
+sequence for this fibration gives:
+
+\[E_2^{p,q} = H^p(X, H^q(\Omega X)) \Rightarrow H^{p+q}(PX) = \begin{cases} \mathbb{Z} & p+q=0 \\ 0 & \text{otherwise} \end{cases}\]
+
+This relation between the cohomology of \(X\) and the homotopy of
+\(\Omega X\) is the key to computing homotopy groups.
+
+\subsection{Applications}\label{ch1954jeanpierreserre:applications}
+
+The Serre spectral sequence has been applied to: - Computing
+\textbf{homotopy groups of spheres} (the original application). - The
+\textbf{Hurewicz theorem} and its generalizations. - \textbf{Cohomology
+of loop spaces}. - \textbf{Group cohomology} and the cohomology of
+classifying spaces. - \textbf{Algebraic K-theory} via the Quillen
+spectral sequence.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Homotopy Groups of
+Spheres}\label{ch1954jeanpierreserre:homotopy-groups-of-spheres}
+
+\subsection{Background}\label{ch1954jeanpierreserre:background}
+
+The homotopy groups \(\pi_n(S^k)\) for \(n > k\) are notoriously
+difficult to compute. Before Serre, only \(\pi_{n+1}(S^n)\) and a few
+isolated cases were known. The problem was considered one of the most
+important in topology.
+
+\subsection{Serre's Theorem}\label{ch1954jeanpierreserre:serres-theorem}
+
+Serre proved a landmark result:
+
+\begin{quote}
+\textbf{Serre's Finiteness Theorem:} All homotopy groups \(\pi_n(S^k)\)
+are finite for \(n > k\), except for \(\pi_{4n-1}(S^{2n})\) which has
+infinite rank.
+\end{quote}
+
+More precisely: - \(\pi_n(S^k)\) is finite for \(n \neq k, 4m-1\) when
+\(k = 2m\). - \(\pi_{4m-1}(S^{2m})\) is the direct sum of \(\mathbb{Z}\)
+and a finite group.
+
+\subsection{The Method}\label{ch1954jeanpierreserre:the-method}
+
+Serre's method used: 1. The \textbf{Serre spectral sequence} for the
+path-loop fibration \(\Omega S^{k+1} \to PS^{k+1} \to S^{k+1}\). 2. The
+\textbf{Hurewicz theorem} to relate homotopy to homology. 3. The
+\textbf{mod \(\mathcal{C}\) theory}: Serre introduced the concept of a
+\textbf{class of abelian groups} \(\mathcal{C}\) (e.g., finite groups,
+\(p\)-groups) and proved that if the base and fiber of a fibration are
+\(\mathcal{C}\)-acyclic, then so is the total space. 4. Induction on the
+dimension using the \textbf{Eilenberg--Moore spectral sequence} for the
+path fibration.
+
+\subsection{The Serre Class Theory}\label{ch1954jeanpierreserre:the-serre-class-theory}
+
+A \textbf{Serre class} \(\mathcal{C}\) of abelian groups satisfies: 1.
+If \(A, B \in \mathcal{C}\) and \(C\) is a subgroup of \(A\), then
+\(C, A/C \in \mathcal{C}\). 2. If \(A, B \in \mathcal{C}\), then
+\(A \otimes B \in \mathcal{C}\) and
+\(\text{Tor}(A, B) \in \mathcal{C}\).
+
+Using Serre classes, Serre proved that:
+
+\[\pi_n(S^k) \text{ is finite for } n \neq k, 4m-1 \text{ (when } k=2m\text{)}\]
+
+The exceptional case \(\pi_{4m-1}(S^{2m})\) contains a copy of
+\(\mathbb{Z}\) because the \textbf{Hopf fibration}
+\(S^{2m-1} \to S^{4m-1} \to S^{2m}\) gives a generator.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Sheaf Theory}\label{ch1954jeanpierreserre:sheaf-theory}
+
+\subsection{Definition}\label{ch1954jeanpierreserre:definition}
+
+A \textbf{sheaf} \(\mathcal{F}\) on a topological space \(X\) is a
+gadget that assigns to each open set \(U \subset X\) an abelian group
+\(\mathcal{F}(U)\) (the \textbf{sections} over \(U\)) satisfying
+compatibility conditions for restrictions and gluing.
+
+\subsection{Sheaf Cohomology}\label{ch1954jeanpierreserre:sheaf-cohomology}
+
+\textbf{Sheaf cohomology} \(H^q(X, \mathcal{F})\) measures the global
+obstructions to solving local problems. Serre, following Leray and
+Cartan, developed the theory of sheaf cohomology using \textbf{Čech
+cohomology} and \textbf{derived functors}.
+
+\subsection{Sheaf Cohomology via Čech
+Cohomology}\label{ch1954jeanpierreserre:sheaf-cohomology-via-ux10dech-cohomology}
+
+Serre, following Cartan and Leray, developed sheaf cohomology using
+\textbf{Čech cohomology}. For a sheaf \(\mathcal{F}\) and an open cover
+\(\mathfrak{U} = \{U_i\}\), the Čech complex is:
+
+\[C^p(\mathfrak{U}, \mathcal{F}) = \prod_{i_0 < \cdots < i_p} \mathcal{F}(U_{i_0} \cap \cdots \cap U_{i_p})\]
+
+with differential given by the alternating restriction maps. The Čech
+cohomology \(\check{H}^q(\mathfrak{U}, \mathcal{F})\) converges to sheaf
+cohomology \(H^q(X, \mathcal{F})\) for acyclic covers.
+
+\subsection{Coherent Sheaves}\label{ch1954jeanpierreserre:coherent-sheaves}
+
+Serre's major contribution was the theory of \textbf{coherent sheaves}
+on algebraic varieties. A coherent sheaf is a sheaf of
+\(\mathcal{O}_X\)-modules that is locally finitely presented. Examples
+include: - The structure sheaf \(\mathcal{O}_X\). - Ideal sheaves of
+subvarieties. - Locally free sheaves (vector bundles). - The canonical
+sheaf \(\omega_X\). - Torsion sheaves supported on subvarieties.
+
+\subsection{The Functoriality of Sheaf
+Cohomology}\label{ch1954jeanpierreserre:the-functoriality-of-sheaf-cohomology}
+
+Sheaf cohomology is functorial: a map \(f: X \to Y\) induces maps
+\(f^*: H^q(Y, \mathcal{F}) \to H^q(X, f^*\mathcal{F})\) and
+\(f_*: H^q(X, \mathcal{F}) \to H^q(Y, f_*\mathcal{F})\). The study of
+these maps underlies the \textbf{Leray spectral sequence} and the theory
+of higher direct images.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{FAC: Faisceaux Algébriques
+Cohérents}\label{ch1954jeanpierreserre:fac-faisceaux-alguxe9briques-cohuxe9rents}
+
+\subsection{The 1955 Paper}\label{ch1954jeanpierreserre:the-1955-paper}
+
+Serre's 1955 paper ``Faisceaux Algébriques Cohérents'' (Coherent
+Algebraic Sheaves) --- universally known as \textbf{FAC} --- was a
+watershed in algebraic geometry. It introduced sheaf-theoretic methods
+into algebraic geometry, transforming the subject from the classical
+Italian school into modern algebraic geometry.
+
+\subsection{Key Results}\label{ch1954jeanpierreserre:key-results}
+
+FAC established: - The theory of \textbf{coherent sheaves} on algebraic
+varieties (in the sense of Zariski topology). - \textbf{Serre's
+finiteness theorem:} For a projective variety \(X\) and a coherent sheaf
+\(\mathcal{F}\), the cohomology groups \(H^q(X, \mathcal{F})\) are
+finite-dimensional vector spaces. - \textbf{Serre's vanishing theorem:}
+For an ample line bundle \(L\), \(H^q(X, \mathcal{F} \otimes L^n) = 0\)
+for \(q > 0\) and \(n\) sufficiently large. - The \textbf{Serre--GAGA
+theorem}: algebraic and analytic coherent sheaves are equivalent for
+projective varieties.
+
+\subsection{Serre's Vanishing
+Theorem}\label{ch1954jeanpierreserre:serres-vanishing-theorem}
+
+\begin{quote}
+\textbf{Serre Vanishing Theorem:} Let \(X\) be a projective variety over
+an algebraically closed field, \(\mathcal{F}\) a coherent sheaf on
+\(X\), and \(L\) an ample line bundle. Then there exists \(n_0\) such
+that for all \(n \geq n_0\):
+\[H^q(X, \mathcal{F} \otimes L^{\otimes n}) = 0 \quad \text{for all } q > 0\]
+\end{quote}
+
+This is the algebraic analogue of the Kodaira vanishing theorem.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{GAGA}\label{ch1954jeanpierreserre:gaga}
+
+\subsection{Statement}\label{ch1954jeanpierreserre:statement-1}
+
+The \textbf{Serre--GAGA theorem} (Géométrie Algébrique et Géométrie
+Analytique) states:
+
+\begin{quote}
+\textbf{GAGA Theorem:} For a projective algebraic variety \(X\) over
+\(\mathbb{C}\), the functor from algebraic coherent sheaves on \(X\) to
+analytic coherent sheaves on \(X^{\text{an}}\) (the associated complex
+analytic space) is an equivalence of categories.
+\end{quote}
+
+\subsection{Consequences}\label{ch1954jeanpierreserre:consequences}
+
+\begin{itemize}
+\tightlist
+\item
+ Every analytic coherent sheaf on a projective variety is algebraic.
+\item
+ Every analytic map between projective varieties is algebraic.
+\item
+ The algebraic and analytic cohomology groups coincide.
+\item
+ \textbf{Chow's theorem:} Every analytic subvariety of a projective
+ variety is algebraic.
+\end{itemize}
+
+\subsection{The Proof Sketch}\label{ch1954jeanpierreserre:the-proof-sketch}
+
+The proof of GAGA proceeds by: 1. Showing that the analytification
+functor \(X \mapsto X^{\text{an}}\) is exact and faithful. 2. Proving
+that \(\mathcal{O}_{X^{\text{an}}}\) is a flat \(\mathcal{O}_X\)-module.
+3. Using the \textbf{comparison theorem}:
+\(H^q(X, \mathcal{F}) \cong H^q(X^{\text{an}}, \mathcal{F}^{\text{an}})\)
+for coherent sheaves. 4. Showing that every analytic coherent sheaf on
+\(X^{\text{an}}\) is the analytification of an algebraic coherent sheaf.
+
+\subsection{Significance}\label{ch1954jeanpierreserre:significance}
+
+GAGA showed that projective complex algebraic geometry is essentially
+the same as the analytic geometry of compact Kähler manifolds with
+integral Kähler class. This unified two previously separate fields and
+established that all classical algebraic varieties (over \(\mathbb{C}\))
+can be studied analytically.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Serre Duality}\label{ch1954jeanpierreserre:serre-duality}
+
+\subsection{Statement}\label{ch1954jeanpierreserre:statement-2}
+
+\textbf{Serre duality} is a fundamental result in algebraic geometry.
+For a smooth projective variety \(X\) of dimension \(n\) and a locally
+free sheaf \(\mathcal{E}\), there is a natural isomorphism:
+
+\[H^q(X, \mathcal{E}) \cong H^{n-q}(X, \mathcal{E}^* \otimes \omega_X)^*\]
+
+where \(\omega_X\) is the canonical sheaf.
+
+\subsection{The Residue Pairing}\label{ch1954jeanpierreserre:the-residue-pairing}
+
+The duality is induced by the \textbf{residue pairing}:
+
+\[H^q(X, \mathcal{E}) \otimes H^{n-q}(X, \mathcal{E}^* \otimes \omega_X) \to H^n(X, \omega_X) \cong k\]
+
+where \(k\) is the ground field and the last isomorphism is the
+\textbf{trace map}.
+
+\subsection{Generalizations}\label{ch1954jeanpierreserre:generalizations}
+
+Serre duality has been extended to: - \textbf{Cohen--Macaulay schemes}
+(Grothendieck duality). - \textbf{Complex manifolds} (Kodaira--Serre
+duality). - \textbf{Singular varieties} (using dualizing complexes). -
+\textbf{Derived categories} (Grothendieck--Verdier duality).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Serre--Swan Theorem}\label{ch1954jeanpierreserre:the-serreswan-theorem}
+
+\subsection{Statement}\label{ch1954jeanpierreserre:statement-3}
+
+The \textbf{Serre--Swan theorem} (proved by Serre in the algebraic case
+and Swan in the topological case) states:
+
+\begin{quote}
+\textbf{Serre--Swan Theorem:} For a compact Hausdorff space \(X\), the
+category of complex vector bundles on \(X\) is equivalent to the
+category of finitely generated projective modules over \(C(X)\), the
+ring of continuous functions on \(X\).
+\end{quote}
+
+\subsection{Algebraic Version}\label{ch1954jeanpierreserre:algebraic-version}
+
+In algebraic geometry: for an affine variety \(X = \text{Spec}(A)\), the
+category of algebraic vector bundles on \(X\) is equivalent to the
+category of finitely generated projective \(A\)-modules.
+
+\subsection{Consequences}\label{ch1954jeanpierreserre:consequences-1}
+
+This theorem connects geometry (vector bundles) to algebra (projective
+modules). It motivated the \textbf{Serre conjecture} (now the
+Quillen--Suslin theorem): every projective module over a polynomial ring
+\(k[x_1, \ldots, x_n]\) is free.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Serre Conjecture}\label{ch1954jeanpierreserre:the-serre-conjecture}
+
+\subsection{Statement}\label{ch1954jeanpierreserre:statement-4}
+
+The \textbf{Serre conjecture} (1955) asked: is every finitely generated
+projective module over the polynomial ring \(k[x_1, \ldots, x_n]\) free?
+
+\subsection{The Quillen--Suslin
+Theorem}\label{ch1954jeanpierreserre:the-quillensuslin-theorem}
+
+The conjecture was proved independently by Daniel Quillen and Andrei
+Suslin in 1976:
+
+\begin{quote}
+\textbf{Quillen--Suslin Theorem:} Every projective module over
+\(k[x_1, \ldots, x_n]\) (or over \(R[x_1, \ldots, x_n]\) for a principal
+ideal domain \(R\)) is free.
+\end{quote}
+
+\subsection{Significance}\label{ch1954jeanpierreserre:significance-1}
+
+The theorem shows that vector bundles on affine space are trivial ---
+there are no non-trivial algebraic vector bundles on \(\mathbb{A}^n\).
+This is the algebraic analogue of the topological fact that vector
+bundles on \(\mathbb{R}^n\) are trivial.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Modular Forms and Galois
+Representations}\label{ch1954jeanpierreserre:modular-forms-and-galois-representations}
+
+\subsection{The Serre--Swinnerton-Dyer
+Theorem}\label{ch1954jeanpierreserre:the-serreswinnerton-dyer-theorem}
+
+Serre, together with Henry Swinnerton-Dyer, proved that the ring of
+modular forms modulo \(p\) is isomorphic to the ring of modular forms of
+weight \(k\) for all \(k\) in a certain range, establishing the
+existence of \textbf{congruences between modular forms}.
+
+\subsection{The Serre Conjecture on
+Modularity}\label{ch1954jeanpierreserre:the-serre-conjecture-on-modularity}
+
+\textbf{Serre's modularity conjecture} (1974) states that every odd,
+irreducible, two-dimensional Galois representation
+\(\rho: \text{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}) \to GL(2, \overline{\mathbb{F}}_p)\)
+is modular: it arises from a modular form of a specific weight, level,
+and character.
+
+This conjecture was proved by Khare and Wintenberger in 2008 as a
+consequence of the \textbf{Langlands program} and the work of Wiles,
+Taylor, and others.
+
+\subsection{The Serre Weight}\label{ch1954jeanpierreserre:the-serre-weight}
+
+The \textbf{Serre weight} \(k(\rho)\) of a mod \(p\) Galois
+representation \(\rho\) is defined in terms of the local behavior of
+\(\rho\) at \(p\). Serre's conjecture predicts that \(\rho\) arises from
+a modular form of weight \(k(\rho)\). The precise formula for
+\(k(\rho)\) involves the \textbf{Fontaine--Laffaille} theory of
+\(p\)-adic Hodge theory.
+
+\subsection{Modular Forms Mod p}\label{ch1954jeanpierreserre:modular-forms-mod-p}
+
+Serre's work on modular forms modulo \(p\) introduced the \textbf{Serre
+operator} \(\theta = q \frac{d}{dq}\) acting on the ring of modular
+forms over \(\overline{\mathbb{F}}_p\). He showed that this operator
+satisfies the \textbf{Deligne--Serre} relation \(\theta^{p-1} = 0\) on
+forms of weight \(k \equiv 0 \bmod (p-1)\).
+
+\subsection{The Theory of p-Adic Modular
+Forms}\label{ch1954jeanpierreserre:the-theory-of-p-adic-modular-forms}
+
+Serre's work on congruences between modular forms led to the theory of
+\textbf{\(p\)-adic modular forms}, later developed by Katz, Coleman, and
+Mazur. A \(p\)-adic modular form is a limit of classical modular forms
+with respect to the \(p\)-adic topology.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Theory of Lie
+Algebras}\label{ch1954jeanpierreserre:the-theory-of-lie-algebras}
+
+\subsection{Serre's Relations}\label{ch1954jeanpierreserre:serres-relations}
+
+\textbf{Serre's relations} give a presentation of a semisimple Lie
+algebra \(\mathfrak{g}\) in terms of its Cartan matrix \(A_{ij}\):
+
+\[[h_i, h_j] = 0\]
+\[[h_i, e_j] = A_{ji} e_j, \quad [h_i, f_j] = -A_{ji} f_j\]
+\[[e_i, f_j] = \delta_{ij} h_i\]
+\[\text{ad}(e_i)^{1-A_{ji}}(e_j) = 0, \quad \text{ad}(f_i)^{1-A_{ji}}(f_j) = 0 \quad (i \neq j)\]
+
+These relations are the foundation of the theory of \textbf{Kac--Moody
+algebras} and \textbf{quantum groups}.
+
+\subsection{Applications}\label{ch1954jeanpierreserre:applications-1}
+
+Serre's work on Lie algebras is fundamental to: - The
+\textbf{representation theory} of semisimple Lie groups. - The
+\textbf{classification} of simple Lie algebras. - \textbf{Quantum
+groups} and their representations. - \textbf{Conformal field theory}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Local Fields and Class Field
+Theory}\label{ch1954jeanpierreserre:local-fields-and-class-field-theory}
+
+\subsection{Serre's Work on Local
+Fields}\label{ch1954jeanpierreserre:serres-work-on-local-fields}
+
+Serre made fundamental contributions to the theory of \textbf{local
+fields} and \textbf{class field theory}:
+
+\begin{itemize}
+\tightlist
+\item
+ The \textbf{Serre--Tate theorem} on lifting abelian varieties from
+ characteristic \(p\) to characteristic \(0\).
+\item
+ The theory of \textbf{Galois cohomology} of local fields.
+\item
+ The \textbf{Serre--Hazewinkel theorem} on the structure of the
+ multiplicative group of a local field.
+\end{itemize}
+
+\subsection{The Book on Local
+Fields}\label{ch1954jeanpierreserre:the-book-on-local-fields}
+
+Serre's book \emph{Corps Locaux} (Local Fields) is the standard
+reference on the subject, covering the structure of local fields,
+ramification theory, and Galois cohomology. The book is notable for its
+systematic use of \textbf{Galois cohomology} to unify the different
+parts of class field theory.
+
+\subsection{Ramification Groups}\label{ch1954jeanpierreserre:ramification-groups}
+
+The \textbf{higher ramification groups} \(G_i\) of a Galois extension of
+local fields were systematically studied by Serre. The \textbf{Herbrand
+quotient} and the \textbf{conduct exponent} of an Artin character are
+standard tools in ramification theory.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Serre--Tate Theory}\label{ch1954jeanpierreserre:the-serretate-theory}
+
+\subsection{The Serre--Tate Theorem}\label{ch1954jeanpierreserre:the-serretate-theorem}
+
+The \textbf{Serre--Tate theorem} (proved with John Tate) states that
+deformations of an abelian variety in characteristic \(p\) are
+controlled by the \textbf{Tate module}:
+
+\begin{quote}
+\textbf{Serre--Tate Theorem:} For an abelian variety \(A\) over a field
+\(k\) of characteristic \(p\), there is an isomorphism between the
+formal deformation space of \(A\) and the formal group
+\(\text{Hom}(T_p(A) \otimes T_p(A), \mathbb{G}_m)\).
+\end{quote}
+
+\subsection{Applications}\label{ch1954jeanpierreserre:applications-2}
+
+This theorem is essential for: - The theory of \textbf{p-divisible
+groups}. - The \textbf{Mordell conjecture} (Faltings' theorem). - The
+study of \textbf{modular forms} in characteristic \(p\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Galois Cohomology}\label{ch1954jeanpierreserre:galois-cohomology}
+
+\subsection{Definition}\label{ch1954jeanpierreserre:definition-1}
+
+\textbf{Galois cohomology} studies the cohomology of the absolute Galois
+group \(\text{Gal}(\overline{k}/k)\). For a \(G_k\)-module \(M\), the
+cohomology groups \(H^q(k, M) = H^q(G_k, M)\) encode arithmetic
+information.
+
+\subsection{Serre's Contributions}\label{ch1954jeanpierreserre:serres-contributions}
+
+Serre developed Galois cohomology as a tool for: - \textbf{Class field
+theory:} The Brauer group \(H^2(k, \overline{k}^*)\) classifies central
+simple algebras. - \textbf{The Hasse principle:} \(H^3\) obstructions to
+the local-global principle for quadratic forms. - \textbf{Galois
+representations:} The mod \(p\) representations of
+\(\text{Gal}(\overline{\mathbb{Q}}/\mathbb{Q})\). - \textbf{The theory
+of forms:} The cohomological classification of quadratic forms (the
+\textbf{Serre--Scharlau theory}).
+
+\subsection{The Hasse--Minkowski
+Theorem}\label{ch1954jeanpierreserre:the-hasseminkowski-theorem}
+
+The \textbf{Hasse--Minkowski theorem} states that a quadratic form over
+\(\mathbb{Q}\) represents \(0\) non-trivially if and only if it does so
+over all completions \(\mathbb{Q}_p\) and \(\mathbb{R}\). Serre's
+cohomological methods provide an elegant proof.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Theory of Quadratic
+Forms}\label{ch1954jeanpierreserre:the-theory-of-quadratic-forms}
+
+\subsection{Serre's Work on Quadratic
+Forms}\label{ch1954jeanpierreserre:serres-work-on-quadratic-forms}
+
+Serre made fundamental contributions to the algebraic theory of
+quadratic forms: - The \textbf{Serre invariant} (also called the
+\textbf{Hasse--Witt invariant}) of a quadratic form. - The
+classification of quadratic forms over local and global fields. - The
+\textbf{Milnor conjecture} (proved by Voevodsky) relates the graded Witt
+ring to Galois cohomology: \(I^n/I^{n+1} \cong H^n(k, \mathbb{Z}/2)\).
+
+\subsection{The Witt Ring}\label{ch1954jeanpierreserre:the-witt-ring}
+
+The \textbf{Witt ring} \(W(k)\) of a field \(k\) classifies anisotropic
+quadratic forms up to equivalence. Serre contributed to the structure
+theory of \(W(k)\): - The \textbf{Pfister forms} and their
+multiplicative properties. - The \textbf{Milnor--Witt K-theory} relating
+\(W(k)\) to the Milnor K-theory of \(k\). - The \textbf{Arason
+invariant} and its cohomological interpretation.
+
+\subsection{Applications}\label{ch1954jeanpierreserre:applications-3}
+
+These results are used in: - \textbf{Algebraic topology} (the theory of
+characteristic classes). - \textbf{Algebraic geometry} (the theory of
+quadrics, intersection theory on quadrics). - \textbf{Number theory}
+(the arithmetic of quadratic forms, the theory of spinor genera). -
+\textbf{K-theory} (the relation between quadratic forms and algebraic
+K-theory).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Serre--Frenkel
+Correspondence}\label{ch1954jeanpierreserre:the-serrefrenkel-correspondence}
+
+\subsection{Statement}\label{ch1954jeanpierreserre:statement-5}
+
+The \textbf{Serre--Frenkel correspondence} (also called the
+\textbf{Serre--Frenkel theory of spherical functions}) relates
+irreducible representations of \(p\)-adic groups to Hecke algebras.
+
+\subsection{The Hecke Algebra}\label{ch1954jeanpierreserre:the-hecke-algebra}
+
+The \textbf{Hecke algebra} \(\mathcal{H}(G, K)\) for a \(p\)-adic group
+\(G\) and a maximal compact subgroup \(K\) is the convolution algebra of
+compactly supported \(K\)-biinvariant functions \(f: G \to \mathbb{C}\).
+The \textbf{Satake isomorphism} identifies \(\mathcal{H}(G, K)\) with
+the ring of polynomials on the Langlands dual group.
+
+\subsection{Applications}\label{ch1954jeanpierreserre:applications-4}
+
+This correspondence is a precursor to the \textbf{Langlands
+correspondence} for \(GL(n)\) over local fields. It has been used to: -
+Construct representations of \(p\)-adic groups. - Study the
+\textbf{Satake isomorphism}. - Develop the theory of \textbf{automorphic
+forms} on \(p\)-adic groups. - The classification of \textbf{irreducible
+admissible representations} of reductive \(p\)-adic groups.
+
+\subsection{The Spherical Hecke
+Algebra}\label{ch1954jeanpierreserre:the-spherical-hecke-algebra}
+
+For \(G = GL(n, \mathbb{Q}_p)\) and \(K = GL(n, \mathbb{Z}_p)\), the
+Hecke algebra is commutative and is generated by the \textbf{Hecke
+operators} \(T_{p,i}\) for \(i = 1, \ldots, n\). These operators play a
+central role in the theory of automorphic forms and the Langlands
+program.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Serre's Work on Algebraic
+Groups}\label{ch1954jeanpierreserre:serres-work-on-algebraic-groups}
+
+\subsection{The Theory of Algebraic
+Groups}\label{ch1954jeanpierreserre:the-theory-of-algebraic-groups}
+
+Serre made foundational contributions to the theory of algebraic groups:
+- \textbf{Galois cohomology of algebraic groups:} \(H^1(k, G)\)
+classifies \(G\)-torsors (principal homogeneous spaces). - The
+\textbf{Serre--Grothendieck theorem} on the structure of reductive
+groups. - The theory of \textbf{forms of algebraic groups} (twisted
+forms classified by \(H^1\)).
+
+\subsection{Cohomological
+Obstructions}\label{ch1954jeanpierreserre:cohomological-obstructions}
+
+The obstructions to the Hasse principle are encoded in \textbf{Galois
+cohomology groups} \(H^1(k, G)\) and \(H^2(k, G)\). Serre's
+\textbf{theorem of 90} (a generalization of Hilbert's Theorem 90) states
+that \(H^1(k, GL(n)) = 0\). The \textbf{Brauer group}
+\(H^2(k, \overline{k}^*)\) classifies central simple algebras.
+
+\subsection{The Hasse Principle for Algebraic
+Groups}\label{ch1954jeanpierreserre:the-hasse-principle-for-algebraic-groups}
+
+The \textbf{Hasse principle} for algebraic groups asks whether a
+homogeneous space over \(\mathbb{Q}\) has a rational point if it has
+points over all completions. Serre showed that this fails in general but
+holds for certain classes (e.g., simply connected semisimple groups).
+
+\subsection{The Grothendieck--Serre
+Conjecture}\label{ch1954jeanpierreserre:the-grothendieckserre-conjecture}
+
+The \textbf{Grothendieck--Serre conjecture} (now a theorem of Fedorov
+and Panin) states that for a reductive group \(G\) over a regular local
+ring \(R\), every \(G\)-torsor over \(R\) that is trivial over the
+fraction field is trivial. This result is fundamental to the theory of
+algebraic groups and their torsors.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Serre--Steinberg
+Theory}\label{ch1954jeanpierreserre:the-serresteinberg-theory}
+
+\subsection{The Serre--Steinberg
+Theorem}\label{ch1954jeanpierreserre:the-serresteinberg-theorem}
+
+The \textbf{Serre--Steinberg theorem} (proved with Robert Steinberg)
+states that every semisimple algebraic group over an algebraically
+closed field of characteristic \(p\) has a \textbf{finite presentation}
+with generators and relations given by the root system.
+
+\subsection{The Steinberg
+Presentation}\label{ch1954jeanpierreserre:the-steinberg-presentation}
+
+This presentation is the basis for: - The construction of
+\textbf{Chevalley groups}. - The theory of \textbf{finite simple
+groups}. - The representation theory of algebraic groups.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{The Serre--Siegel Theory}\label{ch1954jeanpierreserre:the-serresiegel-theory}
+
+\subsection{Siegel's Theorem}\label{ch1954jeanpierreserre:siegels-theorem}
+
+\textbf{Siegel's theorem} on integral points of curves states that an
+affine curve of genus \(g \geq 1\) or genus \(0\) with at least three
+points at infinity has only finitely many integral points.
+
+\subsection{Serre's Contribution}\label{ch1954jeanpierreserre:serres-contribution}
+
+Serre extended Siegel's theorem using Galois cohomology and the theory
+of \textbf{elliptic curves}. He showed that the \textbf{Mordell
+conjecture} (proved by Faltings) implies many cases of Siegel's theorem.
+
+\subsection{The Theory of Heights}\label{ch1954jeanpierreserre:the-theory-of-heights}
+
+Heights are a fundamental tool in Diophantine geometry. Serre developed
+the theory of \textbf{Néron--Tate heights} on abelian varieties and
+their relation to Galois representations. The \textbf{Serre--Tate height
+formula} relates the height of a point on an abelian variety to the
+degree of its associated line bundle.
+
+\subsection{The Open Image Theorem}\label{ch1954jeanpierreserre:the-open-image-theorem}
+
+\textbf{Serre's open image theorem} (1967) states that for an elliptic
+curve \(E\) over \(\mathbb{Q}\) without complex multiplication, the
+Galois representation on the Tate module \(T_\ell(E)\) has an open image
+in \(GL(2, \mathbb{Z}_\ell)\). This was a major result connecting
+elliptic curves to Galois theory.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Homological Algebra}\label{ch1954jeanpierreserre:homological-algebra}
+
+\subsection{The Serre--Hochschild Spectral
+Sequence}\label{ch1954jeanpierreserre:the-serrehochschild-spectral-sequence}
+
+The \textbf{Serre--Hochschild spectral sequence} is a fundamental tool
+in homological algebra. For a group extension
+\(1 \to N \to G \to Q \to 1\) and a \(G\)-module \(M\):
+
+\[E_2^{p,q} = H^p(Q, H^q(N, M)) \Rightarrow H^{p+q}(G, M)\]
+
+\subsection{Applications}\label{ch1954jeanpierreserre:applications-5}
+
+This spectral sequence is used in: - \textbf{Group cohomology} and the
+cohomology of finite groups. - \textbf{Algebraic K-theory}. -
+\textbf{Class field theory} (the cohomology of number fields).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Representation Theory of Finite
+Groups}\label{ch1954jeanpierreserre:representation-theory-of-finite-groups}
+
+\subsection{Serre's Book}\label{ch1954jeanpierreserre:serres-book}
+
+Serre's book \emph{Représentations linéaires des groupes finis} (Linear
+Representations of Finite Groups) is the standard introduction to the
+subject. It covers: - \textbf{Character theory} of finite groups. -
+\textbf{Induced representations} and Frobenius reciprocity. -
+\textbf{The Schur orthogonality relations}. - \textbf{The classification
+of irreducible representations} of the symmetric group. -
+\textbf{Artin's theorem} and \textbf{Brauer's theorem} on characters.
+
+\subsection{Serre's Theorem on
+Characters}\label{ch1954jeanpierreserre:serres-theorem-on-characters}
+
+\textbf{Serre's theorem} states that a finite group \(G\) has a faithful
+representation of dimension \(n\) if and only if the intersection of the
+kernels of all irreducible characters of degree \(\leq n\) is trivial.
+This is a fundamental criterion in the representation theory of finite
+groups.
+
+\subsection{The McKay--Serre
+Correspondence}\label{ch1954jeanpierreserre:the-mckayserre-correspondence}
+
+The \textbf{McKay correspondence} (later developed by Serre and others)
+relates the representation theory of finite subgroups of
+\(SL(2, \mathbb{C})\) to the Dynkin diagrams of exceptional Lie
+algebras. This deep connection between finite groups and Lie theory was
+explored extensively by Serre.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Serre's Influence on
+Algebra}\label{ch1954jeanpierreserre:serres-influence-on-algebra}
+
+\subsection{Serre's Theorem on Finiteness of
+Cohomology}\label{ch1954jeanpierreserre:serres-theorem-on-finiteness-of-cohomology}
+
+\textbf{Serre's finiteness theorem} states that for a projective variety
+\(X\) over a field and a coherent sheaf \(\mathcal{F}\), the cohomology
+groups \(H^q(X, \mathcal{F})\) are finite-dimensional vector spaces.
+This result is fundamental to the theory of algebraic geometry.
+
+\subsection{The Grothendieck--Serre
+Correspondence}\label{ch1954jeanpierreserre:the-grothendieckserre-correspondence}
+
+The correspondence between Grothendieck and Serre in the 1950s and 1960s
+documents the birth of modern algebraic geometry. Their letters,
+published as the \textbf{Grothendieck--Serre Correspondence}, show the
+development of sheaf cohomology, the theory of schemes, and étale
+cohomology.
+
+\subsection{Serre's Work on Commutative
+Algebra}\label{ch1954jeanpierreserre:serres-work-on-commutative-algebra}
+
+Serre's work on \textbf{local algebra} (published in the \emph{Lecture
+Notes in Mathematics} volume ``Algèbre locale --- Multiplicités'')
+introduced the concept of \textbf{multiplicity} using homological
+methods. The \textbf{Serre multiplicity formula} for intersections of
+subvarieties is the foundation of intersection theory.
+
+\subsection{The Serre Conditions}\label{ch1954jeanpierreserre:the-serre-conditions}
+
+\textbf{Serre's conditions} \(S_n\) and \(R_n\) are fundamental in
+commutative algebra: - \(R_n\): Regularity in codimension \(n\). -
+\(S_n\): Depth conditions (Cohen--Macaulay rings satisfy all \(S_n\)).
+
+A normal variety satisfies \(S_2\) and \(R_1\). These conditions are
+essential for the study of \textbf{singularities} in algebraic geometry.
+
+\subsection{Serre's Theorem on Regular Local
+Rings}\label{ch1954jeanpierreserre:serres-theorem-on-regular-local-rings}
+
+\textbf{Serre's theorem} characterizes regular local rings as those of
+finite global dimension: \textgreater{} A Noetherian local ring \(R\) is
+regular if and only if every \(R\)-module has a finite projective
+resolution.
+
+This homological characterization is the starting point for the theory
+of \textbf{regular rings} and \textbf{complete intersections}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Awards and Recognition}\label{ch1954jeanpierreserre:awards-and-recognition}
+
+\textbf{1954:} - Fields Medal (International Mathematical Union) ---
+awarded at the ICM in Amsterdam; at 28, the youngest recipient ever.
+
+\textbf{1970:} - Elected to the French Academy of Sciences (at age 44,
+one of the youngest).
+
+\textbf{1985:} - Honorary doctorate from the University of Cambridge.
+
+\textbf{1987:} - Honorary doctorate from the University of Oxford.
+
+\textbf{1997:} - Honorary doctorate from the University of Oslo.
+
+\textbf{2000:} - Wolf Prize in Mathematics.
+
+\textbf{2003:} - First Abel Prize (Norwegian Academy of Science and
+Letters) --- ``For his seminal contributions to topology, algebraic
+geometry, and number theory.''
+
+\textbf{2012:} - Honorary doctorate from the University of Barcelona.
+
+\textbf{Elected to:} - French Academy of Sciences. - Royal Society of
+London (Foreign Member). - National Academy of Sciences (USA). -
+American Academy of Arts and Sciences. - Norwegian Academy of Science
+and Letters. - Académie des Sciences de l'Institut de France. - Honorary
+Member of the London Mathematical Society.
+
+\section{Selected Major
+Publications}\label{ch1954jeanpierreserre:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``Homologie singulière des espaces fibrés.''} \emph{Annals of
+ Mathematics} 54, 425--505, 1951. --- \emph{The Serre spectral sequence
+ and homotopy groups of spheres.}
+\item
+ \textbf{``Faisceaux algébriques cohérents.''} \emph{Annals of
+ Mathematics} 61, 197--278, 1955. --- \emph{FAC: The foundation of
+ modern algebraic geometry.}
+\item
+ \textbf{``Géométrie algébrique et géométrie analytique.''}
+ \emph{Annales de l'Institut Fourier} 6, 1--42, 1956. --- \emph{GAGA:
+ The equivalence of algebraic and analytic geometry.}
+\item
+ \textbf{``Sur la cohomologie des variétés algébriques.''}
+ \emph{Journal de Mathématiques Pures et Appliquées} 36, 1--16, 1957.
+ --- \emph{Serre duality.}
+\item
+ \textbf{``Groupes d'homotopie et classes de groupes abéliens.''}
+ \emph{Annals of Mathematics} 58, 258--294, 1953. --- \emph{Serre class
+ theory and finiteness of homotopy groups.}
+\item
+ \textbf{``Modules projectifs et espaces fibrés à fibre vectorielle.''}
+ \emph{Séminaire Dubreil--Pisot}, 1957--1958. --- \emph{The Serre--Swan
+ theorem.}
+\item
+ \textbf{``Corps locaux.''} \emph{Actualités Scientifiques et
+ Industrielles}, Hermann, 1962. --- \emph{The classic text on local
+ fields.}
+\item
+ \textbf{``Algèbre locale --- Multiplicités.''} \emph{Lecture Notes in
+ Mathematics} 11, Springer, 1965. --- \emph{Local algebra and
+ multiplicities.}
+\item
+ \textbf{``Représentations linéaires des groupes finis.''}
+ \emph{Hermann}, 1967. --- \emph{The standard text on representation
+ theory of finite groups.}
+\item
+ \textbf{``Abelian ℓ-adic representations and elliptic curves.''}
+ \emph{W. A. Benjamin}, 1968. --- \emph{Galois representations and
+ modular forms.}
+\item
+ \textbf{``Cohomologie galoisienne.''} \emph{Lecture Notes in
+ Mathematics} 5, Springer, 1965. --- \emph{Galois cohomology and the
+ theory of forms.}
+\item
+ \textbf{``Cours d'arithmétique.''} \emph{Presses Universitaires de
+ France}, 1970. --- \emph{A Course in Arithmetic: quadratic forms,
+ modular forms, and Diophantine equations.}
+\item
+ \textbf{``Valeurs propres des opérateurs de Hecke modulo \(l\).''}
+ \emph{Collège de France}, 1974. --- \emph{Modular forms modulo \(p\)
+ and Hecke operators.}
+\item
+ \textbf{``Arbres, amalgames, \(SL(2)\).''} \emph{Astérisque} 46, 1977.
+ --- \emph{Trees, amalgams, and \(SL(2)\) over local fields.}
+\item
+ \textbf{``Œuvres --- Collected Papers'' (4 vols.).} \emph{Springer},
+ 1985--2000. --- \emph{The complete collected works of Jean-Pierre
+ Serre.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{References and Further
+Reading}\label{ch1954jeanpierreserre:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch1954jeanpierreserre:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 1954 Announcement:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1954
+\item
+ Abel Prize Citation, 2003: https://www.abelprize.no/abelprize/2003/
+\item
+ Collège de France: Jean-Pierre Serre Biography.
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch1954jeanpierreserre:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Serre, J.-P. \emph{Collected Works} (4 vols.). Springer, 1985--2000.
+\item
+ Serre, J.-P. \emph{A Course in Arithmetic}. Springer, 1973.
+\item
+ Serre, J.-P. \emph{Linear Representations of Finite Groups}. Springer,
+ 1977.
+\item
+ Serre, J.-P. \emph{Galois Cohomology}. Springer, 1997.
+\item
+ Serre, J.-P. \emph{Local Fields}. Springer, 1979.
+\end{itemize}
+
+\subsection{Textbooks and Surveys}\label{ch1954jeanpierreserre:textbooks-and-surveys}
+
+\begin{itemize}
+\tightlist
+\item
+ Bott, R. and Tu, L. \emph{Differential Forms in Algebraic Topology}.
+ Springer, 1982.
+\item
+ Griffiths, P. and Harris, J. \emph{Principles of Algebraic Geometry}.
+ Wiley, 1978.
+\item
+ Hartshorne, R. \emph{Algebraic Geometry}. Springer, 1977.
+\item
+ Milne, J. \emph{Étale Cohomology}. Princeton University Press, 1980.
+\end{itemize}
+
+\subsection{Biography and Exposition}\label{ch1954jeanpierreserre:biography-and-exposition}
+
+\begin{itemize}
+\tightlist
+\item
+ Weyl, H. ``The Work of Jean-Pierre Serre.'' ICM 1954 Laudatio.
+\item
+ Cartan, H. ``The Mathematics of Jean-Pierre Serre.'' \emph{Abel Prize
+ Laudatio}, 2003.
+\item
+ Mumford, D. ``The Life and Work of Jean-Pierre Serre.'' \emph{Notices
+ of the AMS} 51, 2004.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(End of report)}

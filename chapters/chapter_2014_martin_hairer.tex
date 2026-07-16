@@ -1,0 +1,970 @@
+\chapter{Martin Hairer --- Fields Medal 2014}\label{ch2014martinhairer:martin-hairer-fields-medal-2014-a-comprehensive-report-on-his-work-and-impact}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Sir Martin Hairer KBE FRS
+(b. November 14, 1975, Geneva, Switzerland) \textbf{Position:} Professor
+of Mathematics, EPFL and Imperial College London \textbf{Doctoral
+Advisor:} Jean-Pierre Eckmann \textbf{Fields Medal Citation:}
+\emph{``For outstanding contributions to the theory of stochastic
+partial differential equations, and in particular for the creation of a
+theory of regularity structures for such equations.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Table of Contents}\label{ch2014martinhairer:table-of-contents}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+ Introduction
+\item
+ Biographical Background
+\item
+ Stochastic Partial Differential Equations: Context and Challenges
+\item
+ The KPZ Equation: A Central Problem
+\item
+ Solving the KPZ Equation
+\item
+ Rough Path Theory: Foundations
+\item
+ Controlled Rough Paths
+\item
+ The Theory of Regularity Structures: Overview
+\item
+ Algebraic Framework of Regularity Structures
+\item
+ Analytic Framework: The Reconstruction Theorem
+\item
+ Renormalisation in Regularity Structures
+\item
+ The Dynamical \(\Phi^4_3\) Model
+\item
+ Other Singular SPDEs
+\item
+ Ergodicity and Hypoellipticity for Infinite-Dimensional Systems
+\item
+ The Navier-Stokes Equations and Stochastic Fluids
+\item
+ Numerical Methods and Software
+\item
+ Broader Impact and Influence
+\item
+ Awards and Recognition
+\item
+ Selected Major Publications
+\item
+ Ongoing Work and Future Directions
+\item
+ Conclusion
+\item
+ References and Further Reading
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch2014martinhairer:introduction}
+
+Martin Hairer was awarded the Fields Medal in 2014 at the age of 38 for
+his groundbreaking contributions to the theory of stochastic partial
+differential equations (SPDEs), and in particular for creating the
+theory of regularity structures. This theory provides a general
+framework for solving a large class of singular stochastic PDEs ---
+equations that arise naturally in statistical mechanics, quantum field
+theory, and fluid dynamics, but whose solutions had been considered
+mathematically ill-defined.
+
+The central difficulty that Hairer addressed is that many important
+SPDEs involve products of ``generalized functions'' (distributions) that
+are too singular for their product to be defined in the classical sense.
+Space-time white noise, for example, is so irregular that its values are
+not functions but distributions. When such noise appears inside a
+nonlinear term --- as in the KPZ equation or the dynamical \(\Phi^4_3\)
+model --- the equation becomes ill-posed: the nonlinear term is a
+product of distributions, which has no rigorous meaning.
+
+Hairer's theory of regularity structures resolves this difficulty by
+providing an algebraic and analytic framework that gives rigorous
+meaning to these ill-posed equations. The theory can be seen as a
+far-reaching extension of the theory of rough paths (pioneered by Terry
+Lyons in the 1990s) from one-dimensional time to multi-dimensional
+space-time, and from ordinary differential equations to partial
+differential equations.
+
+Hairer's contributions are characterized by notable technical
+power combined with deep physical intuition. He has a rare ability to
+identify the core mathematical structure underlying complex physical
+problems and to develop the precise tools needed to analyze them. His
+work has not only solved specific long-standing problems but has created
+a general theory that will continue to be applied for decades to come.
+
+This report provides a detailed account of Hairer's important
+contributions, the mathematical context in which they arose, the
+techniques he developed, and their lasting impact on mathematics and
+physics.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background}\label{ch2014martinhairer:biographical-background}
+
+\subsection{2.1 Early Life and
+Education}\label{ch2014martinhairer:early-life-and-education}
+
+Martin Hairer was born on November 14, 1975, in Geneva, Switzerland. His
+father, Ernst Hairer, is a well-known numerical analyst and professor of
+mathematics at the University of Geneva, specializing in the numerical
+solution of ordinary differential equations. Growing up in an academic
+environment, Martin was exposed to mathematics and computing from an
+early age.
+
+As a school student at Collège Claparède in Geneva, Hairer developed an
+interest in audio programming. He created sound editing software that he
+entered into a school science competition. This software eventually
+became ``Amadeus Pro,'' a professional audio editing application for
+macOS that Hairer continues to develop and maintain under his company
+HairerSoft.
+
+Hairer studied at the University of Geneva, earning a Bachelor of
+Science in Mathematics (1998), a Master of Science in Physics (1998),
+and a PhD in Physics (2001) under the supervision of Jean-Pierre
+Eckmann. His doctoral thesis, ``Comportement Asymptotique d'Équations à
+Dérivées Partielles Stochastiques'' (Asymptotic Behavior of Stochastic
+Partial Differential Equations), foreshadowed the direction of his
+future work.
+
+\subsection{2.2 Academic Career}\label{ch2014martinhairer:academic-career}
+
+After completing his PhD, Hairer held positions at the University of
+Warwick, the Courant Institute of Mathematical Sciences at NYU, and
+Imperial College London. He was appointed Regius Professor of
+Mathematics at the University of Warwick in 2014, a position he held
+until 2017. He is currently Professor of Mathematics at both EPFL (École
+Polytechnique Fédérale de Lausanne) and Imperial College London.
+
+Hairer was knighted as a Knight Commander of the Order of the British
+Empire (KBE) in 2025 for his services to mathematics. He is a Fellow of
+the Royal Society and a member of numerous international academies.
+
+\subsection{2.3 Personal Life}\label{ch2014martinhairer:personal-life}
+
+Hairer is married to Xue-Mei Li, a distinguished mathematician
+specializing in stochastic analysis and differential geometry who
+currently holds a position at Imperial College London.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. Stochastic Partial Differential Equations: Context and
+Challenges}\label{ch2014martinhairer:stochastic-partial-differential-equations-context-and-challenges}
+
+\subsection{3.1 What Are SPDEs?}\label{ch2014martinhairer:what-are-spdes}
+
+A stochastic partial differential equation (SPDE) is a partial
+differential equation that contains a random noise term. SPDEs arise
+naturally when modeling systems that are subject to random fluctuations
+--- for example, the random motion of particles in a fluid, the random
+growth of an interface, or the quantum fluctuations of a field.
+
+A typical SPDE takes the form:
+
+\[
+\partial_t u = \Delta u + F(u) + \xi
+\]
+
+where \(\xi\) denotes ``space-time white noise'' --- a random field that
+is delta-correlated in both space and time.
+
+\subsection{3.2 The Problem of
+Ill-Posedness}\label{ch2014martinhairer:the-problem-of-ill-posedness}
+
+The fundamental difficulty with singular SPDEs is that space-time white
+noise \(\xi\) is not a function but a distribution: it is too irregular
+to be evaluated at individual points. In one spatial dimension, it is
+just regular enough that the linear equation
+\(\partial_t u = \Delta u + \xi\) has a well-defined solution (the
+stochastic heat equation). However, in two or three spatial dimensions,
+the noise is so irregular that nonlinear terms like \(F(u) = u^3\) or
+\((\partial_x h)^2\) involve products of distributions, which are not
+classically defined.
+
+For decades, mathematicians struggled to give rigorous meaning to these
+equations. The problem was not merely technical: it went to the heart of
+what it means to be a solution to a differential equation.
+
+\subsection{3.3 The Need for
+Renormalisation}\label{ch2014martinhairer:the-need-for-renormalisation}
+
+Physicists had long known that these equations require
+``renormalisation'' --- the subtraction of infinite constants to obtain
+finite, physically meaningful quantities. This is analogous to the
+renormalisation program in quantum field theory. But a rigorous
+mathematical framework for renormalisation in SPDEs was lacking before
+Hairer's work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. The KPZ Equation: A Central
+Problem}\label{ch2014martinhairer:the-kpz-equation-a-central-problem}
+
+\subsection{4.1 Physical Origin}\label{ch2014martinhairer:physical-origin}
+
+The KPZ equation, named after Kardar, Parisi, and Zhang (1986),
+describes the stochastic growth of an interface:
+
+\[
+\partial_t h = \partial_x^2 h + (\partial_x h)^2 + \xi
+\]
+
+Here \(h(t,x)\) is the height of the interface at position \(x\) and
+time \(t\), and \(\xi\) is space-time white noise. The nonlinear term
+\((\partial_x h)^2\) captures the tendency of the interface to grow
+perpendicular to itself.
+
+\subsection{4.2 Universality}\label{ch2014martinhairer:universality}
+
+The KPZ equation is central to statistical mechanics because it belongs
+to a universality class that describes a wide range of growth phenomena,
+including: - Deposition of particles on a surface - Growth of bacterial
+colonies - Propagation of flame fronts - Fluctuations in liquid crystals
+
+The KPZ universality class is characterized by specific scaling
+exponents (the roughness exponent \(\chi = 1/2\) and the dynamic
+exponent \(z = 3/2\)) that are independent of the microscopic details of
+the system.
+
+\subsection{4.3 Mathematical Challenges}\label{ch2014martinhairer:mathematical-challenges}
+
+Despite its physical importance, the KPZ equation was mathematically
+ill-posed. The nonlinear term \((\partial_x h)^2\) involves the square
+of a derivative of the solution, which is not a function but a
+distribution when the noise is white. The equation requires
+renormalisation: formally, one must subtract an infinite constant from
+the nonlinear term to obtain a finite limit.
+
+Before Hairer's work, the only way to define solutions to the KPZ
+equation was through the Hopf-Cole transformation: setting \(Z = e^h\)
+transforms the KPZ equation into the stochastic heat equation
+\(\partial_t Z = \partial_x^2 Z + Z\xi\), which is linear and can be
+solved. However, this trick works only for the specific case of the KPZ
+equation with additive noise; it fails for generalizations such as
+coupled KPZ systems or KPZ with multiplicative noise.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. Solving the KPZ Equation}\label{ch2014martinhairer:solving-the-kpz-equation}
+
+\subsection{5.1 Hairer's 2013 Solution}\label{ch2014martinhairer:hairers-2013-solution}
+
+In 2013, Hairer published a landmark paper ``Solving the KPZ equation''
+in the Annals of Mathematics. Using ideas from rough path theory, he
+gave the first direct mathematical construction of solutions to the KPZ
+equation --- without relying on the Hopf-Cole transformation.
+
+The key innovation was to treat the nonlinear term \((\partial_x h)^2\)
+not as a product of distributions but as a ``rough path'' lift of the
+solution. Hairer showed that, just as in rough path theory, one needs to
+keep track of additional information --- in this case, the iterated
+integrals of the noise --- to make sense of the equation.
+
+\subsection{5.2 The Renormalisation
+Procedure}\label{ch2014martinhairer:the-renormalisation-procedure}
+
+Hairer's construction involved a renormalisation procedure:
+approximating the noise by smooth functions (regularisation), solving
+the regularised equation, subtracting a diverging constant from the
+nonlinear term, and then taking the limit as the regularisation is
+removed. He proved that this limit exists and is independent of the
+approximation scheme, giving a well-defined notion of solution.
+
+\subsection{5.3 The Cole-Hopf
+Connection}\label{ch2014martinhairer:the-cole-hopf-connection}
+
+Hairer also proved that his constructed solutions coincide with the
+Hopf-Cole solutions when the latter exist. This confirmed that the
+Hopf-Cole transformation was not just a trick but captured the correct
+physics.
+
+\subsection{5.4 Beyond Hopf-Cole}\label{ch2014martinhairer:beyond-hopf-cole}
+
+Crucially, Hairer's method extended to equations where the Hopf-Cole
+transformation is unavailable, such as coupled KPZ systems and KPZ with
+multiplicative noise. This generalization was essential for applications
+to physical systems with multiple interacting interfaces.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. Rough Path Theory:
+Foundations}\label{ch2014martinhairer:rough-path-theory-foundations}
+
+\subsection{6.1 Lyons's Theory}\label{ch2014martinhairer:lyonss-theory}
+
+Rough path theory, developed by Terry Lyons in the 1990s, provides a
+pathwise theory of differential equations driven by irregular signals.
+The central idea is that to make sense of the integral \(\int Y dX\)
+when \(X\) is rough (e.g., a Brownian path), one needs to augment \(X\)
+with its iterated integrals --- the ``rough path'' lift:
+
+\[
+\mathbb{X}_{s,t} = \left(1, \int_s^t dX_{r_1}, \int_s^t \int_s^{r_2} dX_{r_1} \otimes dX_{r_2}, \ldots\right)
+\]
+
+\subsection{6.2 The Signature}\label{ch2014martinhairer:the-signature}
+
+The collection of all iterated integrals of a path is called its
+``signature.'' The signature encodes the path in a way that is
+sufficient for solving differential equations: if one knows the
+signature of \(X\) to a sufficiently high order, one can define
+\(\int Y dX\) for any \(Y\) that is itself controlled by \(X\).
+
+\subsection{6.3 Limitations}\label{ch2014martinhairer:limitations}
+
+Rough path theory was restricted to one-dimensional time. It could
+handle stochastic ordinary differential equations (SODEs) but not
+stochastic partial differential equations (SPDEs), where the noise
+varies in both space and time.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. Controlled Rough Paths}\label{ch2014martinhairer:controlled-rough-paths}
+
+\subsection{7.1 Gubinelli's Controlled
+Paths}\label{ch2014martinhairer:gubinellis-controlled-paths}
+
+Hairer, together with Massimiliano Gubinelli, developed the theory of
+``controlled rough paths,'' which provides a more flexible framework for
+rough path analysis. Instead of requiring the integrand \(Y\) to be a
+function of the path \(X\), controlled rough path theory allows \(Y\) to
+be any process that is ``controlled'' by \(X\) in the sense that its
+increments can be expressed in terms of \(X\)'s increments plus a
+higher-order remainder.
+
+\subsection{7.2 The Space of Controlled
+Paths}\label{ch2014martinhairer:the-space-of-controlled-paths}
+
+A path \(Y\) is said to be controlled by \(X\) if there exists a process
+\(Y'\) such that:
+
+\[
+Y_t - Y_s = Y'_s (X_t - X_s) + O(|t-s|^{2\alpha})
+\]
+
+for some \(\alpha > 1/3\). This condition ensures that the integral
+\(\int Y dX\) can be defined using the rough path lift of \(X\).
+
+\subsection{7.3 Application to SPDEs}\label{ch2014martinhairer:application-to-spdes}
+
+The theory of controlled rough paths was crucial for Hairer's solution
+of the KPZ equation. By treating the solution \(h\) as a function
+controlled by the noise, Hairer was able to define the problematic
+nonlinear term \((\partial_x h)^2\) without requiring additional
+regularity.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. The Theory of Regularity Structures:
+Overview}\label{ch2014martinhairer:the-theory-of-regularity-structures-overview}
+
+\subsection{8.1 Motivation}\label{ch2014martinhairer:motivation}
+
+While rough path theory could handle the one-dimensional KPZ equation
+(one spatial dimension + one time dimension), higher-dimensional SPDEs
+required a substantially new approach. The theory of regularity
+structures, introduced by Hairer in his 2014 paper ``A theory of
+regularity structures'' (published in Inventiones Mathematicae),
+provides this generalization.
+
+\subsection{8.2 The Core Idea}\label{ch2014martinhairer:the-core-idea}
+
+Regularity structures generalize the concept of a Taylor expansion. In
+classical analysis, a smooth function can be approximated locally by a
+polynomial (its Taylor polynomial). The theory of regularity structures
+replaces polynomials with more general ``models'' that are purpose-built
+for the equation at hand.
+
+A regularity structure consists of three components: 1. \textbf{An index
+set} \(A \subset \mathbb{R}\) (the set of ``regularities'') 2. \textbf{A
+graded vector space} \(T = \oplus_{\alpha \in A} T_\alpha\) (the space
+of ``modelled distributions'') 3. \textbf{A structure group} \(G\) (the
+group of transformations that relate different local expansions)
+
+\subsection{8.3 The Reconstruction
+Theorem}\label{ch2014martinhairer:the-reconstruction-theorem}
+
+The centerpiece of the theory is the Reconstruction Theorem, which
+states that a ``model'' (a consistent family of local approximations)
+can be ``reconstructed'' into a global distribution. This theorem is the
+analogue of the fact that a smooth function is determined by its Taylor
+expansions at every point.
+
+\subsection{8.4 Application to SPDEs}\label{ch2014martinhairer:application-to-spdes-1}
+
+To solve a singular SPDE using regularity structures, one: 1. Identifies
+the relevant regularity structure (the set of ``symbols'' needed to
+describe the solution) 2. Constructs a model for this structure
+(encoding the noise and its iterated integrals) 3. Solves the equation
+as a fixed point in the space of modelled distributions 4. Proves that
+the solution converges as the regularization of the noise is removed
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. Algebraic Framework of Regularity
+Structures}\label{ch2014martinhairer:algebraic-framework-of-regularity-structures}
+
+\subsection{9.1 Trees and Symbols}\label{ch2014martinhairer:trees-and-symbols}
+
+A key feature of regularity structures is the use of combinatorial
+objects --- rooted trees decorated with labels --- to represent the
+terms that appear in the expansion of the solution. Each tree
+corresponds to a ``symbol'' that captures a particular combination of
+noise terms and their derivatives.
+
+For example, in the \(\Phi^4_3\) equation, the symbols include: -
+\(\Xi\): the noise - \(\mathcal{I}(\Xi)\): the heat kernel applied to
+the noise - \(\mathcal{I}(\Xi^3)\): the heat kernel applied to the cube
+of the noise - More complex trees representing the renormalisation
+counterterms
+
+\subsection{9.2 The Structure Group}\label{ch2014martinhairer:the-structure-group}
+
+The structure group \(G\) acts on the space of symbols by
+``relabelling'' the expansions. This group encodes the symmetries of the
+equation and plays a crucial role in the renormalisation procedure.
+
+\subsection{9.3 The Model Space}\label{ch2014martinhairer:the-model-space}
+
+The model space \(T\) is the graded vector space spanned by the symbols.
+The grading is given by the ``homogeneity'' of each symbol, which
+determines its regularity. The solution to the SPDE is represented as a
+modelled distribution --- a function that takes values in \(T\) and
+satisfies certain analytic constraints.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. Analytic Framework: The Reconstruction
+Theorem}\label{ch2014martinhairer:analytic-framework-the-reconstruction-theorem}
+
+\subsection{10.1 Statement}\label{ch2014martinhairer:statement}
+
+Let \(\mathcal{T} = (A, T, G)\) be a regularity structure. A
+\textbf{model} for \(\mathcal{T}\) consists of: - A family of linear
+maps \(\Pi_x: T \to \mathcal{S}'(\mathbb{R}^d)\) (the ``realizations''
+of symbols at each point \(x\)) - A family of linear maps
+\(\Gamma_{xy}: T \to T\) (the ``connection maps'' relating different
+points)
+
+satisfying certain compatibility conditions.
+
+The \textbf{Reconstruction Theorem} states that for any modelled
+distribution \(f\) (a function taking values in \(T\) that satisfies a
+Hölder-type condition), there exists a unique distribution
+\(\mathcal{R}f\) such that:
+
+\[
+\mathcal{R}f(x) \approx \Pi_x f(x)
+\]
+
+in a precise sense. This theorem is the analytic foundation of the
+theory.
+
+\subsection{10.2 Schauder Estimates}\label{ch2014martinhairer:schauder-estimates}
+
+Hairer proved Schauder-type estimates for regularity structures: if a
+modelled distribution has regularity \(\gamma\), then its reconstruction
+has regularity \(\alpha = \gamma + \beta\) (where \(\beta\) is the
+regularity of the model). These estimates are essential for solving
+SPDEs by fixed-point arguments.
+
+\subsection{10.3 Fixed-Point Solutions}\label{ch2014martinhairer:fixed-point-solutions}
+
+To solve an SPDE such as \(\partial_t u = \Delta u + F(u) + \xi\) using
+regularity structures: 1. Write the equation in mild form:
+\(u = K * (F(u) + \xi)\), where \(K\) is the heat kernel 2. Represent
+\(u\) as a modelled distribution in an appropriate regularity structure
+3. Show that the map \(u \mapsto K * (F(u) + \xi)\) is a contraction on
+a suitable space of modelled distributions 4. Apply the Banach
+fixed-point theorem
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. Renormalisation in Regularity
+Structures}\label{ch2014martinhairer:renormalisation-in-regularity-structures}
+
+\subsection{11.1 The Need for
+Renormalisation}\label{ch2014martinhairer:the-need-for-renormalisation-1}
+
+In singular SPDEs, certain ``Feynman diagrams'' (represented by trees in
+the regularity structure) become divergent because they involve products
+of distributions that are not well-defined. These divergences manifest
+as infinite constants that must be subtracted to obtain finite
+solutions.
+
+\subsection{11.2 The Renormalisation
+Group}\label{ch2014martinhairer:the-renormalisation-group}
+
+Hairer introduced a renormalisation group within the framework of
+regularity structures. The group consists of transformations of the
+model that correspond to adding counterterms to the equation. By
+applying appropriate transformations, one can cancel the divergences and
+obtain a well-defined limit.
+
+\subsection{11.3 The Renormalised Model}\label{ch2014martinhairer:the-renormalised-model}
+
+The key result is that there exists a renormalised model --- a modified
+version of the original model --- for which the fixed-point equation has
+a unique solution. This renormalised model is obtained by composing the
+original model with an element of the renormalisation group, which
+corresponds to subtracting diverging constants from the nonlinear terms.
+
+\subsection{11.4 Universality}\label{ch2014martinhairer:universality-1}
+
+Hairer proved that the renormalised solutions are independent of the
+regularization scheme: any reasonable approximation of the noise leads
+to the same limit after renormalisation. This universality property is
+essential for the physical interpretation of the solutions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{\texorpdfstring{12. The Dynamical \(\Phi^4_3\)
+Model}{12. The Dynamical \textbackslash Phi\^{}4\_3 Model}}\label{ch2014martinhairer:the-dynamical-phi4_3-model}
+
+\subsection{12.1 The Equation}\label{ch2014martinhairer:the-equation}
+
+The dynamical \(\Phi^4_3\) model is the stochastic quantization equation
+for the Euclidean \(\Phi^4\) quantum field theory in three spatial
+dimensions:
+
+\[
+\partial_t \Phi = \Delta \Phi + C \Phi - \Phi^3 + \xi
+\]
+
+where \(\xi\) is space-time white noise, \(C\) is a renormalisation
+constant that diverges as the regularization is removed, and the spatial
+domain is a three-dimensional torus.
+
+This equation describes the stochastic evolution of a scalar field
+\(\Phi(t,x)\) with a quartic self-interaction. It arises in quantum
+field theory as the Langevin equation for the \(\Phi^4\) Euclidean
+quantum field.
+
+\subsection{12.2 Previous Work}\label{ch2014martinhairer:previous-work}
+
+Before Hairer's work, the \(\Phi^4_3\) model had been studied using
+constructive quantum field theory methods, which established the
+existence of the stationary measure (the \(\Phi^4_3\) Euclidean quantum
+field) but did not provide a dynamical theory. The stochastic
+quantization approach --- which would give the dynamics --- was
+considered mathematically intractable because the equation is ill-posed.
+
+\subsection{12.3 Hairer's Construction}\label{ch2014martinhairer:hairers-construction}
+
+Using regularity structures, Hairer constructed solutions to the
+\(\Phi^4_3\) equation for spatial dimensions \(d < 4\). The construction
+involves: 1. Identifying the relevant trees (symbols) up to a certain
+degree 2. Computing the divergences associated with each tree 3.
+Defining the renormalised model by subtracting the divergences 4.
+Solving the fixed-point equation in the space of modelled distributions
+
+The result is a local-in-time solution that is almost surely continuous
+in time and takes values in a space of distributions.
+
+\subsection{12.4 The Critical Dimension}\label{ch2014martinhairer:the-critical-dimension}
+
+The dimension \(d = 4\) is critical for the \(\Phi^4\) model: above this
+dimension, the theory is trivial (non-interacting); below this
+dimension, it is super-renormalisable. Hairer's theory covers dimensions
+2 and 3, which are the physically most interesting cases.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. Other Singular SPDEs}\label{ch2014martinhairer:other-singular-spdes}
+
+\subsection{13.1 The Parabolic Anderson
+Model}\label{ch2014martinhairer:the-parabolic-anderson-model}
+
+The parabolic Anderson model:
+
+\[
+\partial_t u = \Delta u + u \xi
+\]
+
+describes the evolution of a particle in a random potential. In two and
+three dimensions, this equation requires renormalisation because the
+product \(u\xi\) involves the multiplication of distributions.
+
+Using regularity structures, Hairer and collaborators constructed
+solutions to the parabolic Anderson model in dimensions 2 and 3,
+providing the first rigorous treatment of this equation.
+
+\subsection{13.2 Stochastic Navier-Stokes
+Equations}\label{ch2014martinhairer:stochastic-navier-stokes-equations}
+
+In joint work with Jonathan Mattingly, Hairer studied the stochastic
+Navier-Stokes equations with highly singular forcing. While the
+deterministic Navier-Stokes equations are well understood in two
+dimensions, adding space-time white noise creates significant
+difficulties. Hairer's work on hypoellipticity (discussed below)
+provides tools for analyzing the ergodic properties of these equations.
+
+\subsection{13.3 Generalized KPZ
+Equations}\label{ch2014martinhairer:generalized-kpz-equations}
+
+Hairer extended his KPZ results to a broader class of equations of the
+form:
+
+\[
+\partial_t h = \partial_x^2 h + g_1(h)(\partial_x h)^2 + g_2(h)\partial_x h + g_3(h) + g_4(h)\xi
+\]
+
+These generalized KPZ equations arise in the study of fluctuating
+interfaces with coordinate-dependent growth rates. They cannot be solved
+by the Hopf-Cole transformation because the transformation does not
+eliminate the nonlinearity.
+
+\subsection{13.4 Coupled Systems}\label{ch2014martinhairer:coupled-systems}
+
+Hairer's theory also handles systems of coupled SPDEs, such as multiple
+KPZ equations coupled through their nonlinearities. Such systems appear
+in the study of chains of nonlinearly interacting oscillators and in
+models of universality classes beyond KPZ.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{14. Ergodicity and Hypoellipticity for Infinite-Dimensional
+Systems}\label{ch2014martinhairer:ergodicity-and-hypoellipticity-for-infinite-dimensional-systems}
+
+\subsection{14.1 The Problem of
+Ergodicity}\label{ch2014martinhairer:the-problem-of-ergodicity}
+
+A fundamental question in stochastic dynamics is whether the system has
+a unique stationary measure and converges to it exponentially fast
+(ergodicity). For SPDEs, this question is nontrivial because the state
+space is infinite-dimensional.
+
+\subsection{14.2 Hairer's Hypoellipticity
+Theory}\label{ch2014martinhairer:hairers-hypoellipticity-theory}
+
+In a series of papers with Jonathan Mattingly, Hairer developed a
+general theory of hypoellipticity for infinite-dimensional stochastic
+systems. Hypoellipticity refers to the smoothing property of stochastic
+differential equations: even if the noise only acts directly on some
+components of the system, the dynamics may still be smooth in all
+directions.
+
+\subsection{14.3 Key Results}\label{ch2014martinhairer:key-results}
+
+Hairer and Mattingly proved: - Unique ergodicity for the stochastic
+Navier-Stokes equations with degenerate noise - Exponential convergence
+to the stationary measure - A criterion for hypoellipticity in infinite
+dimensions based on the ``bracket condition'' (the stochastic analogue
+of Hörmander's condition)
+
+These results are among the most general available for ergodicity of
+SPDEs.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. The Navier-Stokes Equations and Stochastic
+Fluids}\label{ch2014martinhairer:the-navier-stokes-equations-and-stochastic-fluids}
+
+\subsection{15.1 The Stochastic Navier-Stokes
+Equations}\label{ch2014martinhairer:the-stochastic-navier-stokes-equations}
+
+The Navier-Stokes equations describe the motion of viscous fluids.
+Adding stochastic forcing models the effects of random external forces
+or thermal fluctuations:
+
+\[
+\partial_t v = \Delta v - (v \cdot \nabla)v - \nabla p + \xi, \quad \nabla \cdot v = 0
+\]
+
+\subsection{15.2 Hairer's Contributions}\label{ch2014martinhairer:hairers-contributions}
+
+Hairer's work on the stochastic Navier-Stokes equations includes: -
+Proof of unique ergodicity for the 2D stochastic Navier-Stokes equations
+with degenerate noise - Development of general criteria for ergodicity
+that apply beyond the Navier-Stokes equations - Analysis of the
+multiscale behavior of solutions
+
+\subsection{15.3 The ``Hypoelliptic
+Navier-Stokes''}\label{ch2014martinhairer:the-hypoelliptic-navier-stokes}
+
+The key difficulty is that the noise typically acts only on a finite
+number of Fourier modes, yet the dynamics must propagate this randomness
+to all modes. Hairer and Mattingly showed that the nonlinear term
+\((v \cdot \nabla)v\) provides the necessary ``hypoelliptic'' structure
+to spread the noise, resulting in a unique stationary measure.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. Broader Impact and
+Influence}\label{ch2014martinhairer:broader-impact-and-influence}
+
+\subsection{16.1 The Creation of a New
+Field}\label{ch2014martinhairer:the-creation-of-a-new-field}
+
+Hairer's theory of regularity structures has created a new subfield of
+stochastic analysis. It has been taken up by researchers around the
+world and applied to problems ranging from quantum field theory to
+finance.
+
+\subsection{16.2 Regularity Structures and Paracontrolled
+Distributions}\label{ch2014martinhairer:regularity-structures-and-paracontrolled-distributions}
+
+Around the same time as Hairer's work, Gubinelli, Imkeller, and
+Perkowski developed the theory of ``paracontrolled distributions,''
+which provides an alternative approach to singular SPDEs using
+paraproducts from harmonic analysis. The two theories are complementary:
+paracontrolled distributions are simpler in some respects but less
+general than regularity structures.
+
+\subsection{16.3 Applications to Quantum Field
+Theory}\label{ch2014martinhairer:applications-to-quantum-field-theory}
+
+Regularity structures have found important applications in constructive
+quantum field theory. The stochastic quantization approach to Euclidean
+quantum field theory --- pioneered by Parisi and Wu in 1981 --- uses
+SPDEs to construct quantum fields. Hairer's work provides the rigorous
+foundation for this approach in dimensions 2 and 3.
+
+\subsection{16.4 Rough Volatility in
+Finance}\label{ch2014martinhairer:rough-volatility-in-finance}
+
+In quantitative finance, ``rough volatility'' models --- which use
+fractional Brownian motion with small Hurst parameter to model
+volatility --- have become increasingly important. The theory of rough
+paths and regularity structures provides the mathematical tools needed
+to analyze these models.
+
+\subsection{16.5 Influence on Young
+Researchers}\label{ch2014martinhairer:influence-on-young-researchers}
+
+Hairer has supervised numerous PhD students and postdocs who have gone
+on to become leaders in stochastic analysis. His monograph ``A Course on
+Rough Paths'' (with Peter Friz) has become the standard introduction to
+the subject.
+
+\subsection{16.6 The Amadeus Software}\label{ch2014martinhairer:the-amadeus-software}
+
+Beyond his mathematical work, Hairer continues to develop Amadeus Pro, a
+professional audio editing application for macOS. The software, which
+originated from his school science project, is widely used for audio
+editing, analysis, and processing. This combination of pure mathematics
+with practical software development is unusual and reflects Hairer's
+diverse talents.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{17. Awards and Recognition}\label{ch2014martinhairer:awards-and-recognition}
+
+\textbf{2025:} - Sylvester Medal (Royal Society) - Knight Commander of
+the Order of the British Empire (KBE)
+
+\textbf{2022:} - King Faisal Prize in Mathematics - ESI Medal (Erwin
+Schrödinger International Institute)
+
+\textbf{2021:} - Breakthrough Prize in Mathematics
+
+\textbf{2014:} - Fields Medal (International Mathematical Union) -
+Fröhlich Prize (London Mathematical Society)
+
+\textbf{2013:} - Fermat Prize (Institut de Mathématiques de Toulouse)
+
+\textbf{2009:} - Wolfson Research Merit Award (Royal Society)
+
+\textbf{2008:} - Whitehead Prize (London Mathematical Society) - Philip
+Leverhulme Prize
+
+\textbf{2006:} - Royal Society University Research Fellowship
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{18. Selected Major
+Publications}\label{ch2014martinhairer:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``A theory of regularity structures.''} \emph{Inventiones
+ Mathematicae} 198(2), 269--504, 2014. --- \emph{The foundational paper
+ introducing regularity structures, providing a general framework for
+ solving singular SPDEs.}
+\item
+ \textbf{``Solving the KPZ equation.''} \emph{Annals of Mathematics}
+ 178(2), 559--664, 2013. --- \emph{First direct construction of
+ solutions to the KPZ equation using rough path methods.}
+\item
+ \textbf{``Ergodicity for the stochastic Navier-Stokes equations with
+ degenerate noise''} (with J. Mattingly). \emph{Annals of Mathematics}
+ 164(3), 993--1032, 2006. --- \emph{Proof of unique ergodicity for 2D
+ stochastic Navier-Stokes with degenerate forcing.}
+\item
+ \textbf{``Hypoellipticity in infinite dimensions''} (with J.
+ Mattingly). \emph{Communications on Pure and Applied Mathematics}
+ 64(6), 765--828, 2011. --- \emph{General theory of hypoellipticity for
+ infinite-dimensional stochastic systems.}
+\item
+ \textbf{``The strong Feller property for the stochastic Navier-Stokes
+ equation''} (with J. Mattingly). \emph{Journal of Functional Analysis}
+ 239(2), 363--407, 2006. --- \emph{Smoothing properties of the
+ stochastic Navier-Stokes semigroup.}
+\item
+ \textbf{``Rough stochastic PDEs.''} \emph{Communications on Pure and
+ Applied Mathematics} 64(11), 1547--1585, 2011. --- \emph{Extension of
+ rough path theory to SPDEs with one-dimensional spatial domain.}
+\item
+ \textbf{``Controlled rough paths''} (with M. Gubinelli). \emph{Journal
+ of Functional Analysis} 266(3), 1205--1235, 2014. ---
+ \emph{Development of the theory of controlled rough paths.}
+\item
+ \textbf{``A Course on Rough Paths''} (with P. Friz). Springer, 2014
+ (2nd ed.~2020). --- \emph{Standard textbook on rough path theory and
+ regularity structures.}
+\item
+ \textbf{``Introduction to Regularity Structures.''} \emph{Brazilian
+ Journal of Probability and Statistics} 29(2), 175--210, 2015. ---
+ \emph{Overview of regularity structures for a general audience.}
+\item
+ \textbf{``Singular stochastic PDEs.''} \emph{Proceedings of the
+ International Congress of Mathematicians} 2014. --- \emph{ICM survey
+ of Hairer's work on singular SPDEs.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{19. Ongoing Work and Future
+Directions}\label{ch2014martinhairer:ongoing-work-and-future-directions}
+
+\subsection{19.1 Extensions of Regularity
+Structures}\label{ch2014martinhairer:extensions-of-regularity-structures}
+
+Hairer and collaborators continue to extend the theory of regularity
+structures to new classes of equations: - Multi-scale regularity
+structures for systems with multiple characteristic scales - Regularity
+structures for non-parabolic equations (e.g., hyperbolic SPDEs) -
+Regularity structures for equations with non-local operators
+
+\subsection{19.2 Quantum Field Theory}\label{ch2014martinhairer:quantum-field-theory}
+
+The application of regularity structures to quantum field theory is an
+active area of research. Hairer is a principal investigator in the
+Simons Collaboration on Probabilistic Paths to Quantum Field Theory,
+which aims to use stochastic methods to construct non-perturbative
+quantum field theories.
+
+\subsection{19.3 Numerical Methods}\label{ch2014martinhairer:numerical-methods}
+
+The theory of regularity structures suggests new numerical methods for
+simulating singular SPDEs. By incorporating the algebraic structure of
+the theory, one can design numerical schemes that correctly capture the
+renormalisation needed for stable simulations.
+
+\subsection{19.4 Machine Learning and Rough
+Paths}\label{ch2014martinhairer:machine-learning-and-rough-paths}
+
+Recent work has explored connections between rough path theory and
+machine learning. The signature of a path provides a natural set of
+features for learning tasks involving sequential data, and regularity
+structures may provide a framework for learning solutions to PDEs.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{20. Hairer's Mathematical
+Style}\label{ch2014martinhairer:hairers-mathematical-style}
+
+\subsection{20.1 Physical Intuition}\label{ch2014martinhairer:physical-intuition}
+
+Hairer's work is distinguished by its deep physical intuition. He
+approaches SPDEs not as abstract mathematical objects but as
+descriptions of physical phenomena, and his constructions are guided by
+physical principles such as universality and renormalisation.
+
+\subsection{20.2 Technical Power}\label{ch2014martinhairer:technical-power}
+
+The theory of regularity structures is one of the most technically
+demanding constructions in modern mathematics. Hairer's ability to
+combine algebraic, analytic, and probabilistic ideas into a coherent
+whole reflects notable mathematical power.
+
+\subsection{20.3 Generosity}\label{ch2014martinhairer:generosity}
+
+Hairer is known for his generosity in sharing ideas and his commitment
+to clear exposition. His lecture notes and monographs are models of
+pedagogical clarity, making difficult subjects accessible to students
+and researchers.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{21. Conclusion}\label{ch2014martinhairer:conclusion}
+
+Martin Hairer is one of the influential mathematicians working at
+the interface of analysis, probability, and mathematical physics. In a
+career spanning two decades, he has: - Solved the KPZ equation, a
+central problem in statistical mechanics - Created the theory of
+regularity structures, a general framework for singular SPDEs -
+Developed the theory of controlled rough paths - Proved ergodicity and
+hypoellipticity for infinite-dimensional stochastic systems -
+Constructed the dynamical \(\Phi^4_3\) model, a milestone in rigorous
+quantum field theory - Trained a generation of researchers in stochastic
+analysis
+
+The Fields Medal citation --- \emph{``for outstanding contributions to
+the theory of stochastic partial differential equations, and in
+particular for the creation of a theory of regularity structures for
+such equations''} --- captures the essence of his contributions. The
+theory of regularity structures is not merely a solution to a specific
+set of problems but a new way of thinking about stochastic dynamics,
+with implications that will continue to unfold for decades to come.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{22. References and Further
+Reading}\label{ch2014martinhairer:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch2014martinhairer:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 2014 Announcement:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2014
+\item
+ Fields Medal Citation for Martin Hairer:
+ https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2014/news\_release\_hairer.pdf
+\end{itemize}
+
+\subsection{Biographical and Overview
+Articles}\label{ch2014martinhairer:biographical-and-overview-articles}
+
+\begin{itemize}
+\tightlist
+\item
+ Klarreich, E. ``A Mathematician Who Deciphers the Randomness of
+ Nature.'' \emph{Quanta Magazine}, August 13, 2014.
+\item
+ Ball, P. ``The Sound of Mathematics.'' \emph{Nature}, August 2014.
+\item
+ Royal Society biographical notes.
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch2014martinhairer:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Hairer, M. ``A theory of regularity structures.'' \emph{Inventiones
+ Mathematicae} 198 (2014), 269--504.
+\item
+ Hairer, M. ``Solving the KPZ equation.'' \emph{Annals of Mathematics}
+ 178 (2013), 559--664.
+\item
+ Hairer, M. and Mattingly, J. ``Ergodicity for the stochastic
+ Navier-Stokes equations with degenerate noise.'' \emph{Annals of
+ Mathematics} 164 (2006), 993--1032.
+\item
+ Friz, P. and Hairer, M. \emph{A Course on Rough Paths}. Springer, 2014
+ (2nd ed.~2020).
+\item
+ Hairer, M. ``Introduction to Regularity Structures.'' \emph{Brazilian
+ Journal of Probability and Statistics} 29 (2015), 175--210.
+\end{itemize}

@@ -1,0 +1,561 @@
+\chapter{Heisuke Hironaka --- Fields Medal 1970}\label{ch1970heisukehironaka:heisuke-hironaka-fields-medal-1970-a-comprehensive-report}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Heisuke Hironaka
+\textbf{Born:} April 9, 1931, Yamaguchi, Japan \textbf{Position:}
+Professor, Harvard University \textbf{Doctoral Advisor:} Oscar Zariski
+(Harvard University)
+
+\textbf{Fields Medal Citation:} \emph{``For his generalized solution of
+the problem of resolution of singularities of algebraic varieties of any
+characteristic, and the applications of his method to the theory of
+analytic spaces.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch1970heisukehironaka:introduction}
+
+Heisuke Hironaka was awarded the Fields Medal in 1970 for his
+\textbf{resolution of singularities} of algebraic varieties in
+characteristic zero.
+
+His 1964 Annals paper provided a complete proof that any algebraic
+variety over a field of characteristic zero can be desingularized by a
+finite sequence of blow-ups.
+
+This solved a problem that had occupied algebraic geometers since
+Zariski.
+
+Hironaka's proof introduced the concept of \textbf{Hironaka's resolution
+algorithm}, using the Hilbert--Samuel function and Newton polyhedra.
+
+The result is one of the central theorems of algebraic geometry.
+
+Hironaka's main achievements include: - Resolution of singularities in
+char. 0. - Hironaka's theorem on blow-ups. - The concept of strict
+transforms. - The notion of normal crossings divisors. - Hironaka's
+polyhedron of resolutions. - The Hironaka decomposition. - The concept
+of toroidal embeddings.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background}\label{ch1970heisukehironaka:biographical-background}
+
+\subsection{2.1 Early Life and
+Education}\label{ch1970heisukehironaka:early-life-and-education}
+
+Heisuke Hironaka was born on April 9, 1931, in Yamaguchi, Japan.
+
+He studied at Kyoto University and Harvard University.
+
+At Harvard, he worked under Oscar Zariski, the leading figure in
+birational geometry.
+
+\subsection{2.2 Academic Career}\label{ch1970heisukehironaka:academic-career}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{1954:} B.S., Kyoto University.
+\item
+ \textbf{1954--1956:} Graduate student, Kyoto University.
+\item
+ \textbf{1956--1960:} Ph.D., Harvard University, under Oscar Zariski.
+\item
+ \textbf{1960--1963:} Associate Professor, Brandeis University.
+\item
+ \textbf{1964--1992:} Professor, Harvard University.
+\item
+ \textbf{1968--1992:} Chairman of the Mathematics Department at
+ Harvard.
+\item
+ \textbf{1970:} Fields Medal at the ICM in Nice.
+\item
+ \textbf{1975:} President of the Mathematical Society of Japan.
+\item
+ \textbf{1992--1996:} President of Yamaguchi University.
+\item
+ \textbf{1996--2002:} President of the Japanese Society for the
+ Promotion of Science.
+\end{itemize}
+
+\subsection{2.3 Doctoral Work}\label{ch1970heisukehironaka:doctoral-work}
+
+Hironaka's early work under Zariski focused on resolution of surface
+singularities and the theory of complete ideals.
+
+His Ph.D.~thesis (1960) already contained the key ideas for the
+higher-dimensional case: the use of \textbf{weighted blow-ups} and the
+\textbf{normalization of the ideal sheaf}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. The Problem of Resolution of
+Singularities}\label{ch1970heisukehironaka:the-problem-of-resolution-of-singularities}
+
+\subsection{3.1 Historical Background}\label{ch1970heisukehironaka:historical-background}
+
+The problem of resolution of singularities dates to the 19th century.
+
+Riemann used desingularization of algebraic curves (smoothing a curve by
+blowing up its singular points).
+
+Picard and Levi studied surfaces.
+
+Zariski (1939) proved resolution for surfaces, using valuations and
+normalization.
+
+\subsection{3.2 Statement of the
+Problem}\label{ch1970heisukehironaka:statement-of-the-problem}
+
+Given an algebraic variety \(X\) over a field \(k\), find a proper
+birational morphism
+
+\[
+\pi: \tilde{X} \to X
+\]
+
+such that \(\tilde{X}\) is smooth (nonsingular) and \(\pi\) is an
+isomorphism over the smooth locus of \(X\).
+
+\subsection{3.3 Resolution in Characteristic
+Zero}\label{ch1970heisukehironaka:resolution-in-characteristic-zero}
+
+Hironaka proved that for any algebraic variety over a field of
+characteristic zero, there exists a resolution of singularities.
+
+The resolution can be realized by a finite sequence of blow-ups with
+smooth centers.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. Hironaka's Theorem}\label{ch1970heisukehironaka:hironakas-theorem}
+
+\subsection{4.1 Statement}\label{ch1970heisukehironaka:statement}
+
+Let \(X\) be an algebraic variety over a field of characteristic zero.
+
+Then there exists a finite sequence
+
+\[
+X_n \to X_{n-1} \to \cdots
+\to X_1 \to X_0 = X
+\]
+
+where each map \(X_i \to X_{i-1}\) is the blow-up of \(X_{i-1}\) along a
+smooth center, and \(X_n\) is smooth.
+
+\subsection{4.2 The Center of Blow-Up}\label{ch1970heisukehironaka:the-center-of-blow-up}
+
+The key difficulty is choosing the centers.
+
+Hironaka introduced an algorithm that: 1. Measures the local complexity
+of the singularity using the \textbf{Hilbert--Samuel function}. 2.
+Chooses the center in the locus of maximal complexity. 3. Shows that the
+complexity strictly decreases after each blow-up.
+
+\subsection{4.3 Normal Crossings}\label{ch1970heisukehironaka:normal-crossings}
+
+A divisor \(D\) on a smooth variety has \textbf{normal crossings} if
+each component is smooth and they intersect transversely.
+
+Hironaka's resolution constructs the blow-up so that the exceptional
+divisor is a divisor with normal crossings.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. The Hilbert--Samuel
+Function}\label{ch1970heisukehironaka:the-hilbertsamuel-function}
+
+\subsection{5.1 Definition}\label{ch1970heisukehironaka:definition}
+
+Let \((R, \mathfrak{m})\) be a local ring.
+
+The \textbf{Hilbert--Samuel function} is
+
+\[
+H_R(n) = \dim_k (\mathfrak{m}^n / \mathfrak{m}^{n+1})
+\]
+
+for \(n \geq 0\).
+
+\subsection{5.2 Hironaka's Use}\label{ch1970heisukehironaka:hironakas-use}
+
+Hironaka used the Hilbert--Samuel function to measure the complexity of
+singularities.
+
+The function behaves well under blow-up: the maximal Hilbert--Samuel
+function decreases (or stays the same and the next invariant decreases).
+
+This provides the induction step.
+
+\subsection{5.3 The Polyhedron of
+Resolutions}\label{ch1970heisukehironaka:the-polyhedron-of-resolutions}
+
+Hironaka associates to each singular point a \textbf{Newton polyhedron}
+in \(\mathbb{R}^n\).
+
+The resolution is achieved by blowing up faces of this polyhedron.
+
+The \textbf{Hironaka polyhedron} encodes the combinatorial structure of
+the resolution.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. The Algorithm}\label{ch1970heisukehironaka:the-algorithm}
+
+\subsection{6.1 Step 1: Normalization}\label{ch1970heisukehironaka:step-1-normalization}
+
+Given a variety \(X\), first normalize it.
+
+Normalization removes non-normal singularities and prepares the variety
+for resolution.
+
+\subsection{6.2 Step 2: The Ideal Sheaf}\label{ch1970heisukehironaka:step-2-the-ideal-sheaf}
+
+Consider the ideal sheaf \(\mathcal{I}\) of the singular locus of \(X\).
+
+The goal is to make this ideal locally principal and then blow up its
+zero set.
+
+\subsection{6.3 Step 3: The Coefficient
+Ideal}\label{ch1970heisukehironaka:step-3-the-coefficient-ideal}
+
+The \textbf{coefficient ideal} encodes the behavior of the singularity
+under blow-up.
+
+Hironaka shows that blowing up the center where the coefficient ideal
+has maximal order decreases the complexity.
+
+\subsection{6.4 Step 4: Stratification}\label{ch1970heisukehironaka:step-4-stratification}
+
+The singular locus is stratified by the Hilbert--Samuel function.
+
+The center of the blow-up is chosen as the stratum with maximal function
+value.
+
+This ensures that the blow-up improves the local structure.
+
+\subsection{6.5 Step 5: Iteration}\label{ch1970heisukehironaka:step-5-iteration}
+
+The process is repeated finitely many times.
+
+Eventually all singularities are resolved.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. Resolution of Surfaces}\label{ch1970heisukehironaka:resolution-of-surfaces}
+
+\subsection{7.1 Zariski's Surface
+Resolution}\label{ch1970heisukehironaka:zariskis-surface-resolution}
+
+Zariski (1939) proved that any algebraic surface over a field of char. 0
+can be resolved by blow-ups.
+
+The method uses the normalization of the surface in a finite extension
+of its function field.
+
+\subsection{7.2 Hironaka's Surface
+Result}\label{ch1970heisukehironaka:hironakas-surface-result}
+
+Hironaka gave a new proof of surface resolution using his general
+method.
+
+The surface case is simpler than higher dimensions because the
+Hilbert--Samuel function at a surface point is determined by the
+multiplicity of the singular point.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. Resolution in Analytic
+Geometry}\label{ch1970heisukehironaka:resolution-in-analytic-geometry}
+
+\subsection{8.1 Complex Analytic Spaces}\label{ch1970heisukehironaka:complex-analytic-spaces}
+
+Hironaka's theorem also applies to \textbf{complex analytic spaces}.
+
+Any reduced complex analytic space can be desingularized by blowing up
+smooth analytic subvarieties.
+
+\subsection{8.2 The Grauert--Hironaka
+Theorem}\label{ch1970heisukehironaka:the-grauerthironaka-theorem}
+
+Hironaka proved resolution of singularities for real analytic spaces as
+well, generalizing the complex case.
+
+This is the \textbf{Grauert--Hironaka theorem}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. The Hironaka
+Decomposition}\label{ch1970heisukehironaka:the-hironaka-decomposition}
+
+\subsection{9.1 Definition}\label{ch1970heisukehironaka:definition-1}
+
+Let \(R\) be a Cohen--Macaulay local ring.
+
+A \textbf{Hironaka decomposition} is a factorization
+
+\[
+R = k[x_1,\dots,x_n]
+\oplus \theta_1 \oplus \cdots \oplus \theta_t
+\]
+
+where the \(\theta_i\) are module generators.
+
+\subsection{9.2 Applications}\label{ch1970heisukehironaka:applications}
+
+Hironaka decompositions are used in: - \textbf{Invariant theory}: the
+ring of invariants of a finite group has a Hironaka decomposition. -
+\textbf{Representation theory}: the structure of Cohen--Macaulay
+modules. - \textbf{Computational algebra}: algorithms for computing
+invariant rings.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. The Hironaka--Grothendieck
+Theorem}\label{ch1970heisukehironaka:the-hironakagrothendieck-theorem}
+
+\subsection{10.1 Statement}\label{ch1970heisukehironaka:statement-1}
+
+The \textbf{Hironaka--Grothendieck theorem} states that for a coherent
+sheaf \(\mathcal{F}\) on a smooth projective variety \(X\), the
+cohomology groups \(H^i(X, \mathcal{F}(n))\) vanish for \(i > 0\) and
+\(n\) sufficiently large.
+
+This is a consequence of resolution of singularities and the
+\textbf{Leray spectral sequence}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. Toroidal Embeddings}\label{ch1970heisukehironaka:toroidal-embeddings}
+
+\subsection{11.1 Definition}\label{ch1970heisukehironaka:definition-2}
+
+A \textbf{toroidal embedding} is a pair \((X, D)\) where \(X\) is a
+normal variety and \(D\) is a divisor with normal crossings, such that
+for each point, the local structure resembles a toric variety.
+
+\subsection{11.2 Hironaka's Contribution}\label{ch1970heisukehironaka:hironakas-contribution}
+
+Hironaka's resolution method applies to toroidal embeddings: the blow-up
+centers are chosen to be the irreducible components of the intersection
+of the toroidal strata.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{12. Invariants of
+Singularities}\label{ch1970heisukehironaka:invariants-of-singularities}
+
+\subsection{12.1 The Multiplicity}\label{ch1970heisukehironaka:the-multiplicity}
+
+The \textbf{multiplicity} \(e(X,x)\) of a singularity is the leading
+coefficient of the Hilbert--Samuel function.
+
+It decreases under blow-up.
+
+\subsection{12.2 The Samuel Function}\label{ch1970heisukehironaka:the-samuel-function}
+
+The \textbf{Samuel function} is the Hilbert function of the associated
+graded ring.
+
+Hironaka proved that the Samuel function behaves well under blow-up: it
+drops in the lexicographic order.
+
+\subsection{12.3 The Nash Blow-Up}\label{ch1970heisukehironaka:the-nash-blow-up}
+
+Hironaka also studied the \textbf{Nash blow-up}: given a variety \(X\),
+the Nash blow-up is the closure of the Gauss map from the smooth locus
+to the Grassmannian.
+
+It provides an alternative approach to resolution.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. Impact and Influence}\label{ch1970heisukehironaka:impact-and-influence}
+
+\subsection{13.1 Resolution in Positive
+Characteristic}\label{ch1970heisukehironaka:resolution-in-positive-characteristic}
+
+Resolution of singularities in positive characteristic remains an open
+problem.
+
+Hironaka's method fails because the Hilbert--Samuel function does not
+behave well under blow-up.
+
+Abhyankar (1966) proved resolution for surfaces in positive
+characteristic.
+
+Recent progress in char. \(p\) uses alterations (de Jong) and
+perfectoids (Abramovich--Temkin).
+
+\subsection{13.2 Connections to Other
+Fields}\label{ch1970heisukehironaka:connections-to-other-fields}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{Birational geometry}: the minimal model program (Mori,
+ Kawamata).
+\item
+ \textbf{Log geometry}: the theory of log canonical pairs.
+\item
+ \textbf{Hodge theory}: resolution is used to define mixed Hodge
+ structures (Deligne).
+\item
+ \textbf{Computational algebra}: algorithms for resolution
+ (Bierstone--Milman, Villamayor, Wlodarczyk).
+\item
+ \textbf{Arithmetic geometry}: resolution in mixed characteristic.
+\end{itemize}
+
+\subsection{13.3 The Algorithmic Era}\label{ch1970heisukehironaka:the-algorithmic-era}
+
+Bierstone and Milman (1997) gave an explicit algorithmic version of
+Hironaka's resolution.
+
+Their algorithm has been implemented in computer algebra systems
+(Macaulay2, Singular).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{14. Awards and Recognition}\label{ch1970heisukehironaka:awards-and-recognition}
+
+\textbf{1970:} - Fields Medal (IMU).
+
+\textbf{1974:} - Member, Japan Academy.
+
+\textbf{1975:} - Honorary Doctorate, Kyoto University.
+
+\textbf{1976:} - Foreign Associate, National Academy of Sciences (USA).
+
+\textbf{1982:} - Honorary Doctorate, Harvard University.
+
+\textbf{1986:} - Japanese Order of Culture (Bunka Kōrōsha).
+
+\textbf{1998:} - Honorary Doctorate, University of Tokyo.
+
+\textbf{2006:} - Honorary Doctorate, University of Strasbourg.
+
+\textbf{Elected to:} - National Academy of Sciences (USA). - American
+Academy of Arts and Sciences. - Japan Academy. - French Academy of
+Sciences. - Royal Society of London.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. Selected Major
+Publications}\label{ch1970heisukehironaka:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``Resolution of singularities of an algebraic variety over a
+ field of characteristic zero.''} \emph{Annals of Mathematics} 79,
+ 109--326, 1964. --- \emph{The foundational 218-page paper containing
+ the complete proof of resolution.}
+\item
+ \textbf{``On the arithmetic of singularities.''} \emph{Journal of
+ Mathematics of Kyoto University} 10, 293--324, 1970. --- \emph{The
+ theory of the Hilbert--Samuel function in resolution.}
+\item
+ \textbf{``Normal cones in analytic Whitney stratification.''}
+ \emph{Publications Mathématiques de l'IHÉS} 36, 127--138, 1969. ---
+ \emph{Whitney stratifications and normal cones.}
+\item
+ \textbf{``Desingularization of complex-analytic varieties.''}
+ \emph{Actes du Congrès International des Mathématiciens} 1, 307--313,
+ 1970. --- \emph{The analytic case.}
+\item
+ \textbf{``Introduction to resolutions of singularities.''} In
+ \emph{Arithmetic and Geometry}, Birkhäuser, 1983. --- \emph{An
+ expository account of the method.}
+\item
+ \textbf{``Bimeromorphic geometry of complex analytic spaces.''}
+ \emph{Publications Mathématiques de l'IHÉS} 38, 97--143, 1970. ---
+ \emph{Bimeromorphic geometry and resolution.}
+\item
+ \textbf{``The resolution of singularities in characteristic zero.''}
+ In \emph{Proceedings of the ICM}, 1970. --- \emph{The Fields Medal
+ address.}
+\item
+ \textbf{``Hironaka's polyhedron of resolutions.''} (with S. Ishii)
+ \emph{Journal of Algebraic Geometry} 5, 1--30, 1996. ---
+ \emph{Combinatorial aspects of resolution.}
+\item
+ \textbf{``The decomposition of singularities.''} \emph{American
+ Journal of Mathematics} 99, 805--827, 1977. --- \emph{Hironaka
+ decomposition and toroidal geometry.}
+\item
+ \textbf{``Selected Papers of Heisuke Hironaka.''} World Scientific,
+ 2011. --- \emph{A collected volume of his major works.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. References and Further
+Reading}\label{ch1970heisukehironaka:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch1970heisukehironaka:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 1970:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1970
+\item
+ Japan Academy biographical notice.
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch1970heisukehironaka:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Hironaka, H. ``Resolution of singularities.'' \emph{Annals of
+ Mathematics} 79, 1964.
+\item
+ Hironaka, H. \emph{Selected Papers}. World Scientific, 2011.
+\end{itemize}
+
+\subsection{Textbooks and Surveys}\label{ch1970heisukehironaka:textbooks-and-surveys}
+
+\begin{itemize}
+\tightlist
+\item
+ Kollár, J. \emph{Lectures on Resolution of Singularities}. Princeton,
+ 2007.
+\item
+ Greuel, G.-M. and Pfister, G. \emph{A Singular Introduction to
+ Commutative Algebra}. Springer, 2002.
+\item
+ Hauser, H. ``Seventeen Obstacles for Resolution of Singularities.''
+ \emph{Bulletin AMS} 40, 2003.
+\end{itemize}
+
+\subsection{Exposition and History}\label{ch1970heisukehironaka:exposition-and-history}
+
+\begin{itemize}
+\tightlist
+\item
+ Grothendieck, A. ``Hironaka's Theorem.'' SGA 2, 1962.
+\item
+ Mumford, D. \emph{The Red Book of Varieties and Schemes}. Springer,
+ 1988.
+\item
+ Zariski, O. \emph{Algebraic Surfaces}. Springer, 1935.
+\item
+ Lipman, J. ``Introduction to Resolution of Singularities.''
+ \emph{Proceedings of Symposia in Pure Math.} 40,
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1982}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(End of report)}

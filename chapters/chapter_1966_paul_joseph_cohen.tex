@@ -1,0 +1,599 @@
+\chapter{Paul Joseph Cohen --- Fields Medal 1966}\label{ch1966pauljosephcohen:paul-joseph-cohen-fields-medal-1966-a-comprehensive-report}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Paul Joseph Cohen (b.
+April 2, 1934, Long Branch, New Jersey, USA) \textbf{Position:}
+Professor, Stanford University \textbf{Doctoral Advisor:} Antoni Zygmund
+(University of Chicago) \textbf{Fields Medal Citation:} \emph{``Used
+technique called `forcing' to prove the independence in set theory of
+the axiom of choice and of the generalized continuum hypothesis.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1. Introduction}\label{ch1966pauljosephcohen:introduction}
+
+Paul Cohen was awarded the Fields Medal in 1966 for his substantial
+proof of the independence of the Continuum Hypothesis (CH) and the Axiom
+of Choice (AC) from the Zermelo--Fraenkel axioms of set theory (ZF). He
+developed a substantially new technique called \textbf{forcing} that
+allowed him to construct models of set theory in which CH and AC are
+false, while still satisfying all the ZF axioms.
+
+Cohen's achievement is notable for several reasons. First, the
+Continuum Hypothesis was Hilbert's first problem, and it had resisted
+solution since Cantor posed it in 1878. Second, Cohen was not a set
+theorist by training --- he was an analyst who had already made
+significant contributions to harmonic analysis and the theory of
+idempotent measures. His fresh perspective allowed him to see past the
+entrenched assumptions of mathematical logic.
+
+Cohen's major contributions include: - \textbf{Forcing}: A general
+method for extending models of set theory, now a central tool in logic.
+- \textbf{Independence of CH}: Proving that CH can neither be proved nor
+disproved from ZFC (with Gödel's consistency proof). -
+\textbf{Independence of AC}: Proving AC is independent of ZF. -
+\textbf{The Cohen--Hewitt factorization theorem}: A fundamental result
+in harmonic analysis. - \textbf{Idempotent measures}: Work on the
+structure of idempotent measures on locally compact groups. -
+\textbf{Decision procedures for real and p-adic fields}: Applications of
+model theory to algebra.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{2. Biographical Background}\label{ch1966pauljosephcohen:biographical-background}
+
+\subsection{2.1 Early Life and
+Education}\label{ch1966pauljosephcohen:early-life-and-education}
+
+Paul Joseph Cohen was born on April 2, 1934, in Long Branch, New Jersey.
+He grew up in Brooklyn, New York, and attended Stuyvesant High School, a
+specialized school for talented students. He entered the University of
+Chicago at age 16, graduating in 1953. He completed his Master's degree
+(1954) and Ph.D.~(1958) at the University of Chicago under Antoni
+Zygmund, one of the leading analysts of the 20th century.
+
+\subsection{2.2 Academic Career}\label{ch1966pauljosephcohen:academic-career}
+
+\begin{itemize}
+\tightlist
+\item
+ \textbf{1958:} Ph.D., University of Chicago, under Antoni Zygmund.
+ Thesis: ``Topics in the Theory of Uniqueness of Trigonometrical
+ Series.''
+\item
+ \textbf{1958--1960:} Postdoctoral, University of Chicago.
+\item
+ \textbf{1959--1960:} Visiting scholar, Institute for Advanced Study,
+ Princeton.
+\item
+ \textbf{1961--1963:} Assistant Professor, Stanford University.
+\item
+ \textbf{1962--1964:} Alfred P. Sloan Research Fellowship.
+\item
+ \textbf{1964--2004:} Full Professor, Stanford University.
+\item
+ \textbf{1966:} Fields Medal at the ICM in Moscow.
+\item
+ \textbf{1967:} National Medal of Science.
+\item
+ \textbf{2007:} Died at age 72 in Stanford, California.
+\end{itemize}
+
+\subsection{2.3 Doctoral Work}\label{ch1966pauljosephcohen:doctoral-work}
+
+Cohen's Ph.D.~thesis in analysis was on the uniqueness of trigonometric
+series. He studied sets of uniqueness (the sets on which a trigonometric
+series converging to zero must have all coefficients zero), building on
+work of Cantor, Riemann, and Zygmund. His thesis already showed the
+originality and depth that would characterize his later work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3. The Continuum Hypothesis}\label{ch1966pauljosephcohen:the-continuum-hypothesis}
+
+\subsection{3.1 Background}\label{ch1966pauljosephcohen:background}
+
+The \textbf{Continuum Hypothesis} (CH) was posed by Cantor in 1878: is
+there a set whose cardinality is strictly between \(\aleph_0\) (the
+cardinality of the natural numbers) and \(2^{\aleph_0}\) (the
+cardinality of the continuum)?
+
+Equivalently, CH states: \(2^{\aleph_0} = \aleph_1\), where \(\aleph_1\)
+is the smallest uncountable cardinal.
+
+In 1900, Hilbert made CH the first of his 23 problems. Gödel in 1938
+proved that CH is consistent with ZFC (assuming ZF is consistent), by
+constructing the \textbf{constructible universe} \(L\), a model of ZFC
+in which CH holds. But the independence of CH --- whether its negation
+is also consistent --- remained open.
+
+\subsection{3.2 Cohen's Approach}\label{ch1966pauljosephcohen:cohens-approach}
+
+Cohen began working on the independence problem in late 1962. He
+realized that to construct a model of ZFC + \(\neg\)CH, one must add new
+real numbers to a model of ZFC while preserving the ZFC axioms. The
+challenge is that these new reals might inadvertently add well-orderings
+of \(\omega\) of length less than \(2^{\aleph_0}\).
+
+Cohen's breakthrough was the concept of \textbf{forcing}: a method to
+add sets to a model \(M\) of ZF in a controlled way, so that the
+resulting extension \(M[G]\) still satisfies ZF.
+
+\subsection{3.3 The Forcing Technique}\label{ch1966pauljosephcohen:the-forcing-technique}
+
+The forcing construction works as follows: 1. Start with a countable
+transitive model \(M\) of ZFC. 2. Choose a \textbf{partial order}
+\(\mathbb{P} \in M\), whose elements are called \textbf{conditions}. 3.
+A \textbf{filter} \(G \subseteq \mathbb{P}\) is \textbf{generic} over
+\(M\) if it meets every dense subset of \(\mathbb{P}\) that belongs to
+\(M\). 4. The \textbf{generic extension} \(M[G]\) is built using
+\textbf{names} in \(M\): elements of \(M[G]\) are interpreted from names
+using \(G\).
+
+The fundamental theorem of forcing states: \(M[G]\) is a model of ZFC,
+and the truth of statements in \(M[G]\) can be determined by conditions
+in \(\mathbb{P}\): \[p \Vdash \phi \quad \text{iff} \quad
+\text{for all generic } G \ni p, M[G] \vDash \phi\]
+
+To negate CH, Cohen uses \(\mathbb{P}\) consisting of finite partial
+functions from \(\omega_2 \times \omega\) to \(\{0,1\}\). This adds
+\(\aleph_2\) new Cohen reals to \(M\), so in \(M[G]\),
+\(2^{\aleph_0} \geq \aleph_2 > \aleph_1\), hence \(M[G] \vDash \neg\)CH.
+
+\subsection{3.4 The Independence of the Axiom of
+Choice}\label{ch1966pauljosephcohen:the-independence-of-the-axiom-of-choice}
+
+Cohen also proved the independence of AC from ZF. He constructed a model
+\(M[G]\) of ZF in which the axiom of choice fails. The construction adds
+a set of Cohen reals indexed by the natural numbers, but with the
+indexing function absent. The result is a model with a countable set of
+pairs of sets of reals without a choice function.
+
+\subsection{3.5 Impact}\label{ch1966pauljosephcohen:impact}
+
+Cohen's results, combined with Gödel's, showed that both CH and AC are
+\textbf{independent} of ZF --- they can neither be proved nor disproved
+within ZF set theory. This was a watershed moment in mathematical logic,
+showing the limitations of the axiomatic method and the richness of the
+set-theoretic universe.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. The Forcing Technique}\label{ch1966pauljosephcohen:the-forcing-technique-1}
+
+\subsection{4.1 General Framework}\label{ch1966pauljosephcohen:general-framework}
+
+Forcing is a remarkably flexible method. By choosing different partial
+orders \(\mathbb{P}\), one can add sets with prescribed properties: -
+\textbf{Cohen reals}: add a new real number using finite partial
+functions \(\omega \to 2\). - \textbf{Random reals}: add a real using
+positive-measure Borel sets. - \textbf{Sacks reals}: add a real using
+perfect trees. - \textbf{Silver reals}: add a real using Silver forcing.
+- \textbf{Collapsing cardinals}: make large cardinals countable using
+partial functions.
+
+\subsection{4.2 The Forcing Relation}\label{ch1966pauljosephcohen:the-forcing-relation}
+
+The forcing relation \(\Vdash\) is defined within \(M\) using the
+partial order. The \textbf{forcing language} has names \(\dot{x}\) for
+elements of \(M[G]\). The forcing relation satisfies:
+
+\[M[G] \vDash \phi(\tau_1,\ldots,\tau_n) \iff
+\exists p \in G: p \Vdash \phi(\tau_1,\ldots,\tau_n)\]
+
+The definition of \(\Vdash\) is by recursion on the complexity of
+\(\phi\), and it is \textbf{definable} in \(M\), so the properties of
+\(M[G]\) can be studied from within \(M\).
+
+\subsection{4.3 Variations}\label{ch1966pauljosephcohen:variations}
+
+Forcing has been extended in many directions: - \textbf{Iterated
+forcing}: building extensions in stages to obtain models with complex
+properties. - \textbf{Proper forcing}: Shelah's theory of forcings that
+preserve stationary subsets. - \textbf{Class forcing}: forcing over
+proper class models. - \textbf{Set-theoretic geology}: the study of
+ground models and the mantle of the universe. - \textbf{Forcing axioms}:
+Martin's axiom, PFA, MM assert that certain sets exist in the universe.
+
+\subsection{4.4 Impact}\label{ch1966pauljosephcohen:impact-1}
+
+Forcing is one of the important tools in set theory and
+mathematical logic. It has been used to prove independence results for
+virtually every major open problem in set theory, including: - The
+Suslin hypothesis. - The Whitehead problem in group theory. - The
+Kaplansky conjecture on Banach algebras. - The measure problem and the
+existence of Lebesgue non-measurable sets. - The Borel chromatic number
+problem.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5. The Cohen Reals}\label{ch1966pauljosephcohen:the-cohen-reals}
+
+\subsection{5.1 Definition}\label{ch1966pauljosephcohen:definition}
+
+A \textbf{Cohen real} over a model \(M\) of ZFC is a generic filter
+\(c \subseteq 2^{<\omega}\), where \(2^{<\omega}\) is the set of finite
+binary sequences ordered by reverse inclusion. Equivalently, \(c\) is a
+function \(\omega \to 2\) that is generic in the sense that it meets
+every dense open subset of \(2^{<\omega}\) that lies in \(M\).
+
+\subsection{5.2 Properties}\label{ch1966pauljosephcohen:properties}
+
+Cohen reals have notable properties: - They are \textbf{minimal}: if
+\(c\) is Cohen over \(M\) and \(d \in \mathbb{R} \cap M[c]\), then
+either \(d \in M\) or \(M[c] = M[d]\) (for some notions of equivalence).
+- They have \textbf{measure zero}: the set of Cohen reals over a given
+model has Lebesgue measure zero. - They are \textbf{meager}: the set of
+Cohen reals is meager. - Adding a Cohen real does not collapse
+cardinals: cardinals of \(M\) remain cardinals in \(M[c]\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6. The Continuum Hypothesis after
+Cohen}\label{ch1966pauljosephcohen:the-continuum-hypothesis-after-cohen}
+
+\subsection{6.1 The Size of the
+Continuum}\label{ch1966pauljosephcohen:the-size-of-the-continuum}
+
+Cohen's work showed that \(2^{\aleph_0}\) can be made arbitrarily large:
+for any cardinal \(\kappa\) with uncountable cofinality, there is a
+model of ZFC with \(2^{\aleph_0} = \kappa\). This is the \textbf{Easton
+theorem}: the behavior of the continuum function \(\kappa \to 2^\kappa\)
+on regular cardinals can be almost anything, subject only to
+\(\kappa < \text{cf}(2^\kappa)\) and monotonicity.
+
+\subsection{6.2 Martin's Axiom}\label{ch1966pauljosephcohen:martins-axiom}
+
+\textbf{Martin's Axiom (MA)} is a forcing axiom that states: for any
+partial order \(\mathbb{P}\) satisfying the countable chain condition
+(ccc), and any family of fewer than \(2^{\aleph_0}\) dense subsets of
+\(\mathbb{P}\), there is a filter meeting all of them.
+
+MA + \(\neg\)CH provides a rich theory of the continuum that settles
+many problems (like the Suslin problem, the Whitehead problem) while
+being consistent with ZFC (by Cohen's methods).
+
+\subsection{6.3 Cardinal Invariants of the
+Continuum}\label{ch1966pauljosephcohen:cardinal-invariants-of-the-continuum}
+
+Cohen's work initiated the study of \textbf{cardinal invariants} of the
+continuum --- cardinal numbers that measure properties of
+\(\mathbb{R}\): the bounding number \(\mathfrak{b}\), the dominating
+number \(\mathfrak{d}\), the splitting number \(\mathfrak{s}\), the
+reaping number \(\mathfrak{r}\), etc. These can vary widely in forcing
+extensions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7. Cohen's Work in Harmonic
+Analysis}\label{ch1966pauljosephcohen:cohens-work-in-harmonic-analysis}
+
+\subsection{7.1 The Cohen--Hewitt Factorization
+Theorem}\label{ch1966pauljosephcohen:the-cohenhewitt-factorization-theorem}
+
+Before his work on the continuum hypothesis, Cohen made fundamental
+contributions to analysis. The \textbf{Cohen--Hewitt factorization
+theorem} states: if \(A\) is a Banach algebra with a bounded approximate
+identity, then every element \(x \in A\) can be factored as \(x = yz\)
+with \(y,z \in A\).
+
+The proof uses an elegant algebraic argument that has become a standard
+technique in Banach algebra theory.
+
+\subsection{7.2 Idempotent Measures}\label{ch1966pauljosephcohen:idempotent-measures}
+
+On a locally compact abelian group \(G\), an \textbf{idempotent measure}
+is a bounded measure \(\mu\) such that \(\mu * \mu = \mu\). Cohen
+characterized the idempotent measures on \(G\): they are exactly the
+measures whose Fourier transform \(\hat\mu\) takes only the values 0 and
+1, and \(\hat\mu\) is the characteristic function of an element of the
+\textbf{coset ring} of the dual group \(\hat G\).
+
+This solved a problem posed by Rudin and established Cohen's reputation
+in analysis. For this work, he received the \textbf{Bôcher Prize} in
+1964.
+
+\subsection{7.3 Uniqueness of Trigonometric
+Series}\label{ch1966pauljosephcohen:uniqueness-of-trigonometric-series}
+
+Cohen's Ph.D.~work on uniqueness sets for trigonometric series studied
+when a trigonometric series converging to zero must have all
+coefficients zero. He proved that the union of two sets of uniqueness is
+not necessarily a set of uniqueness, solving a long-standing problem.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8. Decision Procedures for Real and p-Adic
+Fields}\label{ch1966pauljosephcohen:decision-procedures-for-real-and-p-adic-fields}
+
+\subsection{8.1 The Real Closed Field Decision
+Problem}\label{ch1966pauljosephcohen:the-real-closed-field-decision-problem}
+
+After his work on set theory, Cohen turned to questions in model theory.
+He gave a new decision procedure for the theory of real closed fields.
+While Tarski had proved the theory is decidable, Cohen's method was
+simpler and more direct, using \textbf{Sturm sequences} and the theory
+of real algebraic geometry.
+
+\subsection{8.2 The p-Adic Decision
+Problem}\label{ch1966pauljosephcohen:the-p-adic-decision-problem}
+
+Cohen gave a decision procedure for the theory of \(p\)-adic fields
+\(\mathbb{Q}_p\). This was the first decision procedure for a
+non-Archimedean valued field, and it used the model theory of Henselian
+fields. The procedure decides whether a system of polynomial equations
+and inequalities has a solution in \(\mathbb{Q}_p\).
+
+This work has applications in number theory (the Hasse principle,
+local-global principles) and in the theory of Diophantine equations.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{9. Cohen's Influence on Set
+Theory}\label{ch1966pauljosephcohen:cohens-influence-on-set-theory}
+
+\subsection{9.1 The Development of
+Forcing}\label{ch1966pauljosephcohen:the-development-of-forcing}
+
+Forcing revolutionized set theory. Within a decade of Cohen's work: -
+Solovay constructed a model of ZF in which every set of reals is
+Lebesgue measurable (using an inaccessible cardinal). - Martin and
+Solovay developed Martin's Axiom. - Silver proved the consistency of the
+failure of CH with the existence of a Suslin tree. - Jensen developed
+the fine structure of \(L\) and proved covering lemmas. - Shelah
+developed proper forcing, iterated forcing, and classification theory.
+
+\subsection{9.2 Set Theory after
+Forcing}\label{ch1966pauljosephcohen:set-theory-after-forcing}
+
+Cohen's work transformed set theory from a subject focused on
+consistency proofs to a vibrant field where independence results are the
+norm rather than the exception. Today, set theorists study: -
+\textbf{Large cardinals}: their consistency strength and relationship to
+forcing. - \textbf{Descriptive set theory}: projective sets,
+determinacy, and Woodin cardinals. - \textbf{Inner model theory}:
+canonical inner models for large cardinals. - \textbf{Cardinal
+arithmetic}: the behavior of the continuum function beyond ZFC.
+
+\subsection{9.3 The Only Fields Medal for
+Logic}\label{ch1966pauljosephcohen:the-only-fields-medal-for-logic}
+
+Cohen's Fields Medal remains (as of 2026) the only Fields Medal awarded
+for work in mathematical logic. This reflects the notable
+significance of his achievement in solving Hilbert's first problem.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{10. Cohen's Method and Gödel's Constructible
+Universe}\label{ch1966pauljosephcohen:cohens-method-and-guxf6dels-constructible-universe}
+
+\subsection{\texorpdfstring{10.1 Relationship to
+\(L\)}{10.1 Relationship to L}}\label{ch1966pauljosephcohen:relationship-to-l}
+
+Gödel had shown that CH holds in \(L\), the constructible universe.
+Cohen's method showed that \(L\) is only one of many possible universes
+of set theory. The contrast between \(L\) and forcing extensions is
+stark: \(L\) is minimal and rigid, while forcing extensions are flexible
+and varied.
+
+\subsection{\texorpdfstring{10.2 The \(L\) vs.~\(V\)
+Debate}{10.2 The L vs.~V Debate}}\label{ch1966pauljosephcohen:the-l-vs.-v-debate}
+
+Cohen's work intensified the debate about whether there is a ``true''
+universe of set theory. While \(V\) (the actual universe) may be closer
+to forcing extensions than to \(L\) in some sense, the independence
+results show that many questions are not settled by ZFC alone. This has
+led to the search for new axioms (large cardinals, forcing axioms) that
+might determine the truth of statements like CH.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{11. The Independence of the Axiom of
+Choice}\label{ch1966pauljosephcohen:the-independence-of-the-axiom-of-choice-1}
+
+\subsection{11.1 Cohen's First Model}\label{ch1966pauljosephcohen:cohens-first-model}
+
+Cohen's first independence result was for the Axiom of Choice (AC). He
+constructed a model of ZF in which there is a countable family of pairs
+of sets of reals with no choice function. In this model, AC fails
+dramatically: there are sets of reals that are not well-orderable, and
+the real numbers cannot be well-ordered.
+
+\subsection{11.2 Consequences}\label{ch1966pauljosephcohen:consequences}
+
+The failure of AC has many consequences: - There is a set without a
+well-ordering. - The axiom of choice for countable families fails. - The
+Hahn--Banach theorem (which depends on AC) fails. - There are vector
+spaces without a basis. - The union of countably many countable sets may
+be uncountable.
+
+\subsection{11.3 The Fraenkel--Mostowski
+Models}\label{ch1966pauljosephcohen:the-fraenkelmostowski-models}
+
+Before Cohen, Fraenkel and Mostowski had constructed models of ZF with
+atoms (urelements) in which AC fails. But these models used atoms, not
+pure sets. Cohen's work showed that AC is independent even in pure set
+theory (ZF without atoms), which was a much stronger result.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{12. The National Medal of
+Science}\label{ch1966pauljosephcohen:the-national-medal-of-science}
+
+In 1967, President Lyndon B. Johnson awarded Cohen the \textbf{National
+Medal of Science}, the highest scientific honor in the United States.
+The citation noted: ``For his work on the independence of the continuum
+hypothesis and the axiom of choice in set theory, and for his
+fundamental contributions to analysis.''
+
+Cohen remains one of the few mathematicians to have received both the
+Fields Medal and the National Medal of Science.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{13. Cohen's Personality and
+Style}\label{ch1966pauljosephcohen:cohens-personality-and-style}
+
+\subsection{13.1 A Direct Approach}\label{ch1966pauljosephcohen:a-direct-approach}
+
+Cohen was known for his direct, no-nonsense approach to mathematics. He
+once said of his forcing technique: ``It's really quite simple. I was
+surprised no one had thought of it before.''
+
+His style was characterized by: - A preference for simplicity and
+clarity. - A willingness to challenge orthodoxy. - An ability to see
+through technical complexity to the essential idea.
+
+\subsection{13.2 Influence on Students}\label{ch1966pauljosephcohen:influence-on-students}
+
+Despite his fame, Cohen taught undergraduates regularly at Stanford. He
+supervised Peter Sarnak (now a leading number theorist) as a doctoral
+student, and his teaching influenced many other students who went on to
+distinguished careers in analysis and logic.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{14. Cohen's Later Years}\label{ch1966pauljosephcohen:cohens-later-years}
+
+In his later years, Cohen continued to think about fundamental questions
+in mathematics. He remained at Stanford University until his retirement
+in 2004. He died on March 23, 2007, at age 72, after a long illness.
+
+In his final years, Cohen expressed optimism about the possibility of
+settling the Continuum Hypothesis through new axioms, noting that the
+independence results do not preclude the discovery of compelling new
+principles that might decide CH.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{15. Awards and Recognition}\label{ch1966pauljosephcohen:awards-and-recognition}
+
+\textbf{1964:} - Bôcher Memorial Prize (American Mathematical Society).
+
+\textbf{1966:} - Fields Medal (International Mathematical Union).
+
+\textbf{1967:} - National Medal of Science (USA).
+
+\textbf{Elected to:} - National Academy of Sciences (USA). - American
+Academy of Arts and Sciences.
+
+\textbf{Honorary doctorates:} - University of Chicago. - University of
+Pennsylvania. - Université Paris VII.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{16. Selected Major
+Publications}\label{ch1966pauljosephcohen:selected-major-publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+ \textbf{``The independence of the continuum hypothesis.''}
+ \emph{Proceedings of the National Academy of Sciences} 50, 1143--1148,
+ 1963; 51, 105--110, 1964. --- \emph{The proof that CH is independent
+ of ZFC.}
+\item
+ \textbf{``The independence of the axiom of choice.''}
+ \emph{Proceedings of the National Academy of Sciences} 50, 1143--1148,
+ 1963. --- \emph{The proof that AC is independent of ZF.}
+\item
+ \textbf{``Set theory and the continuum hypothesis.''} W. A. Benjamin,
+ 1966; Dover reprint, 2008. --- \emph{The definitive account of forcing
+ and independence.}
+\item
+ \textbf{``On a conjecture of Littlewood and idempotent measures.''}
+ \emph{American Journal of Mathematics} 82, 191--212, 1960. ---
+ \emph{Characterization of idempotent measures on groups.}
+\item
+ \textbf{``Factorization in group algebras.''} \emph{Duke Mathematical
+ Journal} 26, 199--206, 1959. --- \emph{The Cohen--Hewitt factorization
+ theorem.}
+\item
+ \textbf{``On groups of measure-preserving transformations.''}
+ \emph{Proceedings of the National Academy of Sciences} 51, 657--661,
+ 1964. --- \emph{Applications of forcing to ergodic theory.}
+\item
+ \textbf{``Decision procedures for real and p-adic fields.''}
+ \emph{Communications on Pure and Applied Mathematics} 22, 131--151,
+ 1969. --- \emph{Decision procedures for real closed and p-adic
+ fields.}
+\item
+ \textbf{``The uniqueness of trigonometric series.''}
+ \emph{Ph.D.~Thesis, University of Chicago}, 1958. --- \emph{Work on
+ sets of uniqueness.}
+\item
+ \textbf{``A proof of the independence of the continuum hypothesis.''}
+ \emph{Mathematical Systems Theory} 1, 1--10, 1967. --- \emph{An
+ expository account of the independence proof.}
+\item
+ \textbf{``Automorphisms of the continuum.''} (with R. Solovay)
+ \emph{Proceedings of the AMS Symposium on Set Theory}, 1971. ---
+ \emph{The study of automorphisms of forcing extensions.}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{17. References and Further
+Reading}\label{ch1966pauljosephcohen:references-and-further-reading}
+
+\subsection{Official Sources}\label{ch1966pauljosephcohen:official-sources}
+
+\begin{itemize}
+\tightlist
+\item
+ IMU Fields Medal 1966:
+ https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1966
+\item
+ National Medal of Science:
+ https://www.nationalmedals.org/laureates/paul-j-cohen
+\end{itemize}
+
+\subsection{Key Technical References}\label{ch1966pauljosephcohen:key-technical-references}
+
+\begin{itemize}
+\tightlist
+\item
+ Cohen, P. \emph{Set Theory and the Continuum Hypothesis}. Dover, 2008.
+\item
+ Cohen, P. ``The independence of the continuum hypothesis.''
+ \emph{PNAS} 50, 1963.
+\item
+ Kunen, K. \emph{Set Theory: An Introduction to Independence Proofs}.
+ North-Holland, 1980.
+\item
+ Jech, T. \emph{Set Theory: The Third Millennium Edition}. Springer,
+ 2003.
+\end{itemize}
+
+\subsection{Textbooks and Surveys}\label{ch1966pauljosephcohen:textbooks-and-surveys}
+
+\begin{itemize}
+\tightlist
+\item
+ Kunen, K. \emph{Set Theory}. College Publications, 2011.
+\item
+ Jech, T. \emph{Set Theory}. Springer, 2003.
+\item
+ Shelah, S. \emph{Proper and Improper Forcing}. Springer, 1998.
+\item
+ Kanamori, A. \emph{The Higher Infinite}. Springer, 2003.
+\end{itemize}
+
+\subsection{Biography and Exposition}\label{ch1966pauljosephcohen:biography-and-exposition}
+
+\begin{itemize}
+\tightlist
+\item
+ Church, A. ``Paul J. Cohen and the Continuum Problem.'' ICM 1966
+ Laudatio.
+\item
+ Moore, G. H. \emph{Zermelo's Axiom of Choice}. Springer, 1982.
+\item
+ Yandell, B. \emph{The Honors Class: Hilbert's Problems and Their
+ Solvers}. A. K. Peters, 2002.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(End of report)}
