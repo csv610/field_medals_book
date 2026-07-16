@@ -237,6 +237,29 @@ defined by a rank function that satisfies certain axioms; the
 \textbf{characteristic polynomial} of \(M\) is defined analogously to
 the chromatic polynomial of a graph.
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0]
+  % The uniform matroid U_{2,4}: rank 2 on 4 elements
+  % Visualize as vectors in R^2
+  \draw[->, thick] (-0.5,0) -- (3.5,0) node[right] {\(x\)};
+  \draw[->, thick] (0,-0.5) -- (0,3.5) node[above] {\(y\)};
+  
+  % Draw 4 vectors
+  \foreach \angle/\label in {30/a, 75/b, 150/c, 270/d} {
+    \draw[thick, blue!60!black, ->] (0,0) -- (\angle:2.8);
+    \fill[blue!60!black] (\angle:2.8) circle (3pt);
+    \node[blue!60!black] at (\angle:3.2) {\(\label\)};
+  }
+  
+  % Annotations
+  \node[below right] at (1.5,0.3) {\small rank\(\=2\)};
+  \node[below right] at (1.5,-0.5) {\small any 2 of \(\{a,b,c,d\}\) are independent};
+\end{tikzpicture}
+\caption{The uniform matroid \(U_{2,4}\): four vectors in general position in \(\mathbb{R}^2\), any two of which are linearly independent.}
+\label{fig:matroid-example}
+\end{figure}
+
 The Heron--Rota--Welsh conjecture (also called the Rota conjecture)
 states that for any matroid \(M\), the absolute values of the
 coefficients of its characteristic polynomial form a

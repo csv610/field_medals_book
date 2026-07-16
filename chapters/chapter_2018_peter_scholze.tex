@@ -177,6 +177,30 @@ allows problems in mixed characteristic (characteristic 0 residue field
 of characteristic p) to be reduced to equal characteristic \(p\), where
 many tools are more developed.
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, node distance=3cm]
+  % Left side: characteristic 0
+  \node[draw, thick, ellipse, minimum width=2.5cm, minimum height=1.5cm, fill=blue!8] (K) {\(K\) \\ \small char 0};
+  
+  % Right side: characteristic p
+  \node[draw, thick, ellipse, minimum width=2.5cm, minimum height=1.5cm, fill=red!8, right=of K] (Kflat) {\(K^\flat\) \\ \small char \(p\)};
+  
+  % Tilting arrow
+  \draw[->, thick, blue!60!black] (K) -- (Kflat) node[midway, above] {\(\text{tilt}\)};
+  \draw[->, thick, red!60!black] (Kflat) -- (K) node[midway, below] {\(\text{untilt}\)};
+  
+  % Examples
+  \node[below=0.8cm of K, text width=3.5cm, align=center] {\(\mathbb{Q}_p(p^{1/p^\infty})\)};
+  \node[below=0.8cm of Kflat, text width=3.5cm, align=center] {\(\mathbb{F}_p((t))\)};
+  
+  % Bidirectional label
+  \node[below=1.8cm of K, text width=7cm, align=center] {The tilting correspondence is a bijection between perfectoid fields};
+\end{tikzpicture}
+\caption{The tilting correspondence: a bijection between perfectoid fields of characteristic 0 and characteristic \(p\).}
+\label{fig:tilting-correspondence}
+\end{figure}
+
 \subsection{4.3 The Key Observation}\label{ch2018peterscholze:the-key-observation}
 
 Scholze's key insight was that the tilting correspondence extends from

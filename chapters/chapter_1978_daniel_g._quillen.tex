@@ -80,6 +80,35 @@ elementary matrix group \(E(A)\). Soon after, John Milnor defined
 \(K_2(A)\) as the kernel of the natural map from the Steinberg group
 \(St(A)\) to the elementary group \(E(A)\):
 \[K_2(A) = \text{Ker}(St(A) \to E(A))\] These groups were shown to
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, node distance=1.8cm]
+  % K-theory groups as a tower
+  \node[draw, thick, circle, minimum size=1.5cm, fill=blue!8] (K0) {\(K_0\)};
+  \node[draw, thick, circle, minimum size=1.5cm, fill=blue!8, above=of K0] (K1) {\(K_1\)};
+  \node[draw, thick, circle, minimum size=1.5cm, fill=blue!8, above=of K1] (K2) {\(K_2\)};
+  \node[draw, thick, circle, minimum size=1.5cm, fill=blue!8, above=of K2] (K3) {\(K_3\)};
+  \node[above=0.8cm of K3] (dots) {\(\vdots\)};
+  
+  % Arrows
+  \draw[->, thick] (K0) -- (K1);
+  \draw[->, thick] (K1) -- (K2);
+  \draw[->, thick] (K2) -- (K3);
+  \draw[->, thick] (K3) -- (dots);
+  
+  % Annotations
+  \node[right=0.5cm of K0, text width=4cm] {\small vector bundles};
+  \node[right=0.5cm of K1, text width=4cm] {\small \(GL(A)/[GL,GL]\)};
+  \node[right=0.5cm of K2, text width=4cm] {\small Steinberg kernel};
+  \node[right=0.5cm of K3, text width=4cm] {\small higher extensions};
+  
+  % Title
+  \node[below=0.3cm of K0, text width=6cm, align=center] {The algebraic K-theory tower};
+\end{tikzpicture}
+\caption{The algebraic K-theory groups form a tower \(K_0, K_1, K_2, \ldots\), each encoding deeper algebraic information. Quillen's contribution was defining \(K_n\) for all \(n\).}
+\label{fig:k-theory-tower}
+\end{figure}
 possess deep arithmetic meanings, connected to quadratic reciprocity,
 class field theory, and Brauer groups.
 

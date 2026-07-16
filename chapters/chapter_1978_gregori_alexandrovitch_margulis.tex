@@ -36,6 +36,36 @@ constructed the first explicit families of expander graphs, a
 fundamental object in computer science, by utilizing the representation
 theory of Lie groups, specifically Kazhdan's Property (T).
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.9]
+  % Expander graph: a bipartite graph with good expansion
+  % Left vertices
+  \foreach \i in {1,...,5} {
+    \node[circle, draw, thick, fill=blue!15, minimum size=0.5cm] (L\i) at (0, \i*1.2) {};
+  }
+  % Right vertices
+  \foreach \i in {1,...,5} {
+    \node[circle, draw, thick, fill=red!15, minimum size=0.5cm] (R\i) at (4, \i*1.2) {};
+  }
+  
+  % Edges (each left vertex connects to ~3 right vertices)
+  \draw[thick] (L1) -- (R1); \draw[thick] (L1) -- (R2); \draw[thick] (L1) -- (R4);
+  \draw[thick] (L2) -- (R1); \draw[thick] (L2) -- (R3); \draw[thick] (L2) -- (R5);
+  \draw[thick] (L3) -- (R2); \draw[thick] (L3) -- (R3); \draw[thick] (L3) -- (R4);
+  \draw[thick] (L4) -- (R1); \draw[thick] (L4) -- (R4); \draw[thick] (L4) -- (R5);
+  \draw[thick] (L5) -- (R2); \draw[thick] (L5) -- (R3); \draw[thick] (L5) -- (R5);
+  
+  % Labels
+  \node[below] at (0,0.6) {\small Left};
+  \node[below] at (4,0.6) {\small Right};
+  \node[below] at (2,-0.2) {Expander graph: every subset \(S\) on the left};
+  \node[below] at (2,-0.8) {has many neighbors on the right};
+\end{tikzpicture}
+\caption{An expander graph: a sparse graph where every small subset of vertices has a disproportionately large set of neighbors. Margulis constructed the first explicit family using representation theory.}
+\label{fig:expander-graph}
+\end{figure}
+
 This comprehensive report is structured to explore all facets of
 Margulis's life, his mathematical creations, and their lasting legacy.
 We survey his early life and education in the Soviet Union, the

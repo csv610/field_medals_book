@@ -109,6 +109,31 @@ When the driving function is a Brownian motion, the Loewner equation
 generates a random curve --- the \textbf{Schramm--Loewner Evolution}
 with parameter \(\kappa\), denoted SLE\(_\kappa\).
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0]
+  % Upper half-plane
+  \fill[blue!3] (-3,0) rectangle (3,3);
+  \draw[thick] (-3,0) -- (3,0);
+  \node[below] at (0,0) {real axis};
+  \node[above] at (0,3) {upper half-plane \(\mathbb{H}\)};
+  
+  % Simulated SLE curve (a wiggly path from 0 upward)
+  \draw[thick, red!70!black, decorate, decoration={snake, amplitude=1.5mm, segment length=3mm, post length=1mm}]
+    (0,0) .. controls (0.3,0.8) and (-0.2,1.5) .. (0.5,2.2)
+    .. controls (0.8,2.8) and (0.2,3.0) .. (0.6,3);
+  
+  % Driving point
+  \fill[red!70!black] (0,0) circle (2pt);
+  \node[below right] at (0,0) {\(\gamma(t)\)};
+  
+  % Caption
+  \node[below] at (0,-0.8) {SLE curve \(\gamma\) growing from boundary into \(\mathbb{H}\)};
+\end{tikzpicture}
+\caption{A schematic SLE curve growing from the boundary into the upper half-plane. The shape is determined by Brownian motion driving the Loewner equation.}
+\label{fig:sle-curve}
+\end{figure}
+
 Different values of \(\kappa\) produce curves with different geometric
 properties: - \textbf{\(0 < \kappa < 4\):} Simple curves. -
 \textbf{\(\kappa = 4\):} The curve is simple but approaches itself. -

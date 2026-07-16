@@ -286,6 +286,31 @@ More precisely, a motive \(M(X)\) is a
 universal object from which all cohomology theories (singular, étale, de
 Rham, Hodge, crystalline) can be obtained by realization functors.
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, node distance=2.5cm]
+  % Central node: Motive
+  \node[draw, thick, circle, minimum size=2cm, fill=blue!8] (M) {\(M(X)\)};
+  
+  % Realization nodes
+  \node[draw, thick, rectangle, above left=of M, fill=green!8] (etale) {étale};
+  \node[draw, thick, rectangle, above right=of M, fill=green!8] (derham) {de Rham};
+  \node[draw, thick, rectangle, below left=of M, fill=green!8] (hodge) {Hodge};
+  \node[draw, thick, rectangle, below right=of M, fill=green!8] (sing) {singular};
+  
+  % Arrows from motive to realizations
+  \draw[->, thick, blue!60!black] (M) -- (etale) node[midway, above left, sloped] {\small realization};
+  \draw[->, thick, blue!60!black] (M) -- (derham) node[midway, above right, sloped] {\small realization};
+  \draw[->, thick, blue!60!black] (M) -- (hodge) node[midway, below left, sloped] {\small realization};
+  \draw[->, thick, blue!60!black] (M) -- (sing) node[midway, below right, sloped] {\small realization};
+  
+  % Label
+  \node[below=0.3cm of sing, text width=5cm, align=center] {All cohomology theories factor through the motive};
+\end{tikzpicture}
+\caption{The motive \(M(X)\) as a universal object: all cohomology theories are obtained by realization functors from the motive.}
+\label{fig:motives-realization}
+\end{figure}
+
 The category of (pure) motives is built from: - Objects: smooth
 projective varieties \(X\). - Morphisms: correspondences modulo rational
 equivalence. - The \textbf{Tate motive} \(\mathbb{Q}(1)\): the Lefschetz motive, providing the twisting.

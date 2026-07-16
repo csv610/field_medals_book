@@ -151,6 +151,25 @@ Viazovska}\label{ch2022marynaviazovska:known-results-before-viazovska}
 is the hexagonal honeycomb, with density
 \(\pi/\sqrt{12} \approx 0.9069\).
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.8]
+  % Draw hexagonal circle packing in 2D
+  \def\r{0.45}
+  \foreach \row in {0,...,4} {
+    \foreach \col in {0,...,5} {
+      \pgfmathsetmacro{\x}{\col*2*\r + mod(\row,2)*\r}
+      \pgfmathsetmacro{\y}{\row*1.732*\r}
+      \draw[thick, blue!60!black, fill=blue!8] (\x,\y) circle (\r);
+    }
+  }
+  % Label
+  \node[below] at (2.5,-0.8) {Hexagonal packing in \(\mathbb{R}^2\) --- density \(\approx 0.9069\)};
+\end{tikzpicture}
+\caption{The densest sphere packing in 2D is the hexagonal lattice, proved by Thue (1910).}
+\label{fig:hexagonal-packing}
+\end{figure}
+
 \textbf{Dimension 3:} The Kepler conjecture (1611) --- Johannes Kepler
 conjectured that the densest packing is achieved by the face-centered
 cubic (FCC) lattice, with density \(\pi/\sqrt{18} \approx 0.74048\).

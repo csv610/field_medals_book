@@ -91,6 +91,39 @@ d_A * F_A = 0
 where \(F_A = dA + A \wedge A\) is the curvature of a connection \(A\)
 on a principal bundle.
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0]
+  % Draw a 2D projection of a 4-manifold (as a torus-like shape)
+  \draw[thick, blue!60!black, fill=blue!5, opacity=0.5]
+    plot[smooth, tension=0.7] coordinates {
+      (-2,0) (-1.8,0.8) (-1.2,1.5) (-0.5,1.8) (0.5,1.8)
+      (1.2,1.5) (1.8,0.8) (2,0) (1.8,-0.8) (1.2,-1.5)
+      (0.5,-1.8) (-0.5,-1.8) (-1.2,-1.5) (-1.8,-0.8) (-2,0)
+    };
+  
+  % Inner hole
+  \draw[thick, blue!60!black, fill=white]
+    plot[smooth, tension=0.7] coordinates {
+      (-0.7,0) (-0.6,0.4) (-0.3,0.6) (0.3,0.6) (0.6,0.4)
+      (0.7,0) (0.6,-0.4) (0.3,-0.6) (-0.3,-0.6) (-0.6,-0.4) (-0.7,0)
+    };
+  
+  % Two 2-cycles intersecting
+  \draw[thick, red!70!black, ->] (-1.5,0) -- (1.5,0) node[right] {\(\alpha\)};
+  \draw[thick, green!50!black, ->] (0,-1.2) -- (0,1.2) node[above] {\(\beta\)};
+  
+  % Intersection point
+  \fill[black] (0,0) circle (3pt);
+  \node[below right] at (0.1,-0.1) {\(\alpha \cdot \beta = 1\)};
+  
+  % Label
+  \node[below] at (0,-2.2) {Intersection form on \(H_2(X^4)\): \(\alpha \cdot \beta \in \mathbb{Z}\)};
+\end{tikzpicture}
+\caption{A 4-manifold \(X^4\) with two 2-cycles \(\alpha\) and \(\beta\) intersecting at a point. The intersection form \(\alpha \cdot \beta\) is a key invariant that Donaldson's theorem constrains.}
+\label{fig:four-manifold}
+\end{figure}
+
 \subsection{3.2 Instantons}\label{ch1986simondonaldson:instantons}
 
 \textbf{Instantons} (or anti-self-dual connections) satisfy the
