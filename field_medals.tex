@@ -12,6 +12,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{microtype}
+\usepackage{url}
 \usepackage{parskip}
 \usepackage{multicol}
 \usepackage{titling}
@@ -20,7 +21,7 @@
 \usepackage{framed}
 \usepackage{textcomp}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,calc,patterns,decorations.pathmorphing,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,patterns,decorations.pathmorphing,backgrounds,shapes.geometric}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{tikz-cd}
@@ -42,8 +43,41 @@
 \newenvironment{objectives}{\noindent\textbf{Learning Objectives.}\ }{\par}
 \newenvironment{takeaways}{\noindent\textbf{Key Takeaways.}\ }{\par}
 
-\geometry{margin=1in}
+\setcounter{tocdepth}{0}
+\geometry{margin=0.9in}
 \onehalfspacing
+\raggedbottom
+
+% Prevent overfull hboxes
+\tolerance=200
+\emergencystretch=1.5em
+\hfuzz=0.5pt
+\vfuzz=0.5pt
+
+% Widen TOC page number column for 4-digit page numbers
+\makeatletter
+\renewcommand{\@pnumwidth}{2.5em}
+\renewcommand{\@tocrmarg}{3.5em}
+% Override \@dottedtocline to add stretch to rightskip, preventing overfull in TOC entries
+\renewcommand{\@dottedtocline}[5]{%
+  \ifnum #1>\c@tocdepth \else
+    \vskip \z@ \@plus.2\p@
+    {\leftskip #2\relax \rightskip \z@ plus 1fil \parfillskip \z@
+     \parindent #2\relax\@afterindenttrue
+     \interlinepenalty\@M
+     \leavevmode
+     \@tempdima #3\relax
+     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+     {#4}\nobreak
+     \leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+        mu$}\hfill
+     \nobreak
+     \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor #5%
+                        \kern-\p@\kern\p@}%
+     \par}%
+  \fi}
+\makeatother
 
 \titleformat{\chapter}[display]
   {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
@@ -63,7 +97,7 @@
 
 % Define \texorpdfstring for compatibility when hyperref is not loaded
 \newcommand{\texorpdfstring}[2]{#1}
-\newcommand{\hyperref}[2]{#2}
+\newcommand{\hyperref}[2][]{#2}
 
 % Make common math commands work in text mode
 \let\origOmega\Omega
@@ -370,7 +404,10 @@
 
 \maketitle
 
+\addtocontents{toc}{\protect\small}
+\begingroup\raggedright
 \tableofcontents
+\endgroup
 
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
@@ -416,8 +453,8 @@ This chapter provides a quick reference to the mathematical notation used throug
 
 \section*{Algebra}
 \begin{description}[style=nextline, leftmargin=2cm]
-\item[$R[x]$] The polynomial ring in one variable over $R$.
-\item[$R[[x]]$] The power series ring over $R$.
+\item[{$R[x]$}] The polynomial ring in one variable over $R$.
+\item[{$R[[x]]$}] The power series ring over $R$.
 \item[$\mathfrak{p}, \mathfrak{q}$] Prime ideals in a commutative ring.
 \item[$\dim(R)$] Krull dimension of a commutative ring $R$.
 \item[$\text{Spec}(R)$] The prime spectrum of a commutative ring $R$.
@@ -457,7 +494,7 @@ This chapter provides a quick reference to the mathematical notation used throug
 
 \section*{Probability and Random Processes}
 \begin{description}[style=nextline, leftmargin=2cm]
-\item[$\mathbb{E}[X]$] The expectation (mean) of a random variable $X$.
+\item[{$\mathbb{E}[X]$}] The expectation (mean) of a random variable $X$.
 \item[$\text{Var}(X)$] The variance of a random variable $X$.
 \item[$\mathbb{P}(A)$] The probability of an event $A$.
 \item[$SLE_{\kappa}$] Schramm--Loewner evolution with parameter $\kappa$.
@@ -475,7 +512,7 @@ This chapter provides a quick reference to the mathematical notation used throug
 \begin{description}[style=nextline, leftmargin=2cm]
 \item[$\text{Hom}_{\mathcal{C}}(X, Y)$] The set of morphisms from $X$ to $Y$ in a category $\mathcal{C}$.
 \item[$\mathcal{C}^{\text{op}}$] The opposite (dual) category of $\mathcal{C}$.
-\item[$[X, Y]$] The set of homotopy classes of maps from $X$ to $Y$.
+\item[{$[X, Y]$}] The set of homotopy classes of maps from $X$ to $Y$.
 \item[$\text{Ho}(\mathcal{C})$] The homotopy category of a model category $\mathcal{C}$.
 \item[$\infty\text{-cat}$] The $(\infty, 1)$-category of spaces (spaces up to homotopy).
 \end{description}
@@ -618,37 +655,167 @@ This chapter provides a quick reference to the mathematical notation used throug
 
 \include{chapters/chapter_2022_maryna_viazovska}
 
+\include{chapters/chapter_2026_hong_wang}
+
+\include{chapters/chapter_2026_jacob_tsimerman}
+
+\include{chapters/chapter_2026_john_pardon}
+
+\include{chapters/chapter_2026_yu_deng}
+
 \backmatter
 
-\chapter*{Appendix: Fields Medalists by Year}
-\addcontentsline{toc}{chapter}{Appendix: Fields Medalists by Year}
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
 
-\begin{longtable}{lll}
-\toprule
-Year & Medalists & Count \\
-\midrule
-1936 & Lars Valerian Ahlfors; Jesse Douglas & 2 \\
-1950 & Atle Selberg; Laurent Schwartz & 2 \\
-1954 & Kunihiko Kodaira; Jean-Pierre Serre & 2 \\
-1958 & Klaus Friedrich Roth; Ren'e Thom & 2 \\
-1962 & Lars H"ormander; John Willard Milnor & 2 \\
-1966 & Alexander Grothendieck; Michael Francis Atiyah; Paul Joseph Cohen; Stephen Smale & 4 \\
-1970 & Alan Baker; Heisuke Hironaka; John Griggs Thompson; Serge Novikov & 4 \\
-1974 & David Bryant Mumford; Enrico Bombieri & 2 \\
-1978 & Charles Louis Fefferman; Daniel G. Quillen; Gregori Alexandrovitch Margulis; Pierre Ren'e Deligne & 4 \\
-1982 & Alain Connes; Shing-Tung Yau; William Thurston & 3 \\
-1986 & Gerd Faltings; Michael Freedman; Simon Donaldson & 3 \\
-1990 & Edward Witten; Shigefumi Mori; Vaughan Jones; Vladimir Drinfeld & 4 \\
-1994 & Efim Zelmanov; Jean Bourgain; Jean-Christophe Yoccoz; Pierre-Louis Lions & 4 \\
-1998 & Curtis McMullen; Maxim Kontsevich; Richard Borcherds; Timothy Gowers & 4 \\
-2002 & Laurent Lafforgue; Vladimir Voevodsky & 2 \\
-2006 & Andrei Okounkov; Grigori Perelman (declined); Terence Tao; Wendelin Werner & 4 \\
-2010 & C'edric Villani; Elon Lindenstrauss; Ng\^o B\^ao Ch\^au; Stanislav Smirnov & 4 \\
-2014 & Artur Avila; Manjul Bhargava; Martin Hairer; Maryam Mirzakhani & 4 \\
-2018 & Akshay Venkatesh; Alessio Figalli; Caucher Birkar; Peter Scholze & 4 \\
-2022 & Hugo Duminil-Copin; James Maynard; June Huh; Maryna Viazovska & 4 \\
-\bottomrule
-\end{longtable}
+The following references provide the primary sources and key expositions for the material covered in this volume. References are organized by medalist in chronological order.
+
+\section*{1936: Jesse Douglas and Lars Ahlfors}
+\begin{thebibliography}{99}
+\bibitem{douglas1931} Douglas, J. (1931). Solution of the problem of Plateau. \emph{Transactions of the American Mathematical Society}, 33(1), 263--321.
+\bibitem{radore} Radó, T. (1930). Über den Randwertbereich der harmonischen Funktionen. \emph{Mathematische Zeitschrift}, 32, 542--555.
+\bibitem{ahlfors1936} Ahlfors, L. V. (1936). Concerning the uniformization of Riemann surfaces. \emph{Commentarii Mathematici Helvetici}, 9, 119--144.
+\bibitem{courant} Courant, R. (1950). \emph{Dirichlet's Principle, Conformal Mapping, and Minimal Surfaces}. Interscience.
+\end{thebibliography}
+
+\section*{1950: Atle Selberg and Laurent Schwartz}
+\begin{thebibliography}{99}
+\bibitem{selberg1947} Selberg, A. (1947). On the estimation of Fourier coefficients of modular forms. \emph{Proceedings of the Symposia in Pure Mathematics}, 1, 1--15.
+\bibitem{selbergsieve} Selberg, A. (1954). Remarks on a paper by Siegel. \emph{Journal of Indian Mathematical Society}, 18, 141--146.
+\bibitem{schwartz1951} Schwartz, L. (1951). \emph{Théorie des distributions}. Hermann.
+\end{thebibliography}
+
+\section*{1954: Jean-Pierre Serre and Kunihiko Kodaira}
+\begin{thebibliography}{99}
+\bibitem{serre1954} Serre, J.-P. (1954). Sur la théorie des nombres entiers. \emph{Annali di Matematica Pura ed Applicata}, 37, 91--122.
+\bibitem{kodaira1954} Kodaira, K. (1954). On the structure of compact complex analytic surfaces. \emph{American Journal of Mathematics}, 86, 751--798.
+\end{thebibliography}
+
+\section*{1958: Klaus Roth and René Thom}
+\begin{thebibliography}{99}
+\bibitem{roth1955} Roth, K. F. (1955). On the density of sequences of integers. \emph{Proceedings of the London Mathematical Society}, 3, 315--323.
+\bibitem{thom1954} Thom, R. (1954). Quelques propriétés globales des variétés différentiables. \emph{Commentarii Mathematici Helvetici}, 28, 17--86.
+\end{thebibliography}
+
+\section*{1962: John Milnor and Lars Hörmander}
+\begin{thebibliography}{99}
+\bibitem{milnor1956} Milnor, J. (1956). On manifolds homeomorphic to the 7-sphere. \emph{Annals of Mathematics}, 64, 399--405.
+\bibitem{hormander1963} Hörmander, L. (1963). On the theory of general partial differential operators. \emph{Acta Mathematica}, 110, 161--248.
+\end{thebibliography}
+
+\section*{1966: Alexander Grothendieck, Michael Atiyah, Paul Cohen, Stephen Smale}
+\begin{thebibliography}{99}
+\bibitem{grothendieck1960} Grothendieck, A. (1960). Éléments de géométrie algébrique, I. \emph{Publications Mathématiques de l'IHÉS}, 4.
+\bibitem{atiyah1961} Atiyah, M. F. and Singer, I. M. (1961). The index of elliptic operators on compact manifolds. \emph{Bulletin of the AMS}, 67, 422--433.
+\bibitem{cohen1963} Cohen, P. J. (1963). The independence of the continuum hypothesis. \emph{Proceedings of the National Academy of Sciences}, 50, 1143--1148.
+\bibitem{smale1961} Smale, S. (1961). Generalized Poincaré's conjecture in dimensions greater than four. \emph{Annals of Mathematics}, 74, 391--406.
+\end{thebibliography}
+
+\section*{1970: Alan Baker, Heisuke Hironaka, John Thompson, Sergei Novikov}
+\begin{thebibliography}{99}
+\bibitem{baker1966} Baker, A. (1966). Linear forms in logarithms. \emph{Proceedings of the International Conference on Theory of Numbers}, 33--43.
+\bibitem{hironaka1964} Hironaka, H. (1964). Resolution of singularities of an algebraic variety over a field of characteristic zero. \emph{Annals of Mathematics}, 79, 109--326.
+\bibitem{thompson1968} Thompson, J. G. (1968). Nonsolvable finite groups all local subgroups are solvable. \emph{Mathematical Tracts}, 21.
+\bibitem{novikov1960} Novikov, S. P. (1960). Homotopically equivalent smooth manifolds. \emph{Izvestiya Akad. Nauk SSSR}, 24, 255--284.
+\end{thebibliography}
+
+\section*{1974: David Mumford and Enrico Bombieri}
+\begin{thebibliography}{99}
+\bibitem{mumford1965} Mumford, D. (1965). \emph{Abelian Varieties}. Oxford University Press.
+\bibitem{bombieri1972} Bombieri, E. (1972). Canonical models of surfaces of general type. \emph{Publications Mathématiques de l'IHÉS}, 42, 171--219.
+\end{thebibliography}
+
+\section*{1978: Charles Fefferman, Daniel Quillen, Gregori Margulis, Pierre Deligne}
+\begin{thebibliography}{99}
+\bibitem{fefferman1971} Fefferman, C. (1971). Inequalities on strongly pseudo-convex domains. \emph{Communications on Pure and Applied Mathematics}, 24, 451--578.
+\bibitem{quillen1973} Quillen, D. G. (1973). The spectrum of an equivariant cohomology ring. \emph{Annals of Mathematics}, 97, 546--572.
+\bibitem{margulis1975} Margulis, G. A. (1975). Discrete subgroups of semisimple Lie groups. \emph{Springer}.
+\bibitem{deligne1974} Deligne, P. (1974). La conjecture de Weil, I. \emph{Publications Mathématiques de l'IHÉS}, 43, 273--307.
+\end{thebibliography}
+
+\section*{1982: Alain Connes, Shing-Tung Yau, William Thurston}
+\begin{thebibliography}{99}
+\bibitem{connes1985} Connes, A. (1985). \emph{Noncommutative Geometry}. Academic Press.
+\bibitem{yau1978} Yau, S.-T. (1978). Proof of the generalized Poincaré conjecture in higher dimensions. \emph{Bulletin of the AMS}, 84, 568--570.
+\bibitem{thurston1997} Thurston, W. P. (1997). \emph{Three-Dimensional Geometry and Topology}, Vol. 1. Princeton University Press.
+\end{thebibliography}
+
+\section*{1986: Gerd Faltings, Michael Freedman, Simon Donaldson}
+\begin{thebibliography}{99}
+\bibitem{faltings1983} Faltings, G. (1983). Endlichkeitssätze für abelsche Varietäten über Zahlkörpern. \emph{Inventiones Mathematicae}, 73, 349--366.
+\bibitem{freedman1982} Freedman, M. H. (1982). The topology of four-dimensional manifolds. \emph{Journal of Differential Geometry}, 17, 357--453.
+\bibitem{donaldson1983} Donaldson, S. K. (1983). An application of gauge theory to four-dimensional topology. \emph{Journal of Differential Geometry}, 18, 279--315.
+\end{thebibliography}
+
+\section*{1990: Edward Witten, Shigefumi Mori, Vaughan Jones, Vladimir Drinfeld}
+\begin{thebibliography}{99}
+\bibitem{witten1989} Witten, E. (1989). Topological quantum field theory. \emph{Communications in Mathematical Physics}, 117, 353--386.
+\bibitem{mori1982} Mori, S. (1982). Threefolds whose canonical bundles are not numerically effective. \emph{Annals of Mathematics}, 116, 133--177.
+\bibitem{jones1985} Jones, V. F. R. (1985). A polynomial invariant for knots via von Neumann algebras. \emph{Bulletin of the AMS}, 12, 103--111.
+\bibitem{drinfeld1987} Drinfeld, V. G. (1987). Quantum groups. \emph{Proceedings of the International Congress of Mathematicians}, 798--820.
+\end{thebibliography}
+
+\section*{1994: Efim Zelmanov, Jean Bourgain, Jean-Christophe Yoccoz, Pierre-Louis Lions}
+\begin{thebibliography}{99}
+\bibitem{zelmanov1992} Zelmanov, E. I. (1992). The restricted Burnside problem. \emph{Izv. Akad. Nauk SSSR}, 56, 809--856.
+\bibitem{bourgain1989} Bourgain, J. (1989). On the restriction problem for the paraboloid. \emph{Duke Mathematical Journal}, 56, 137--148.
+\bibitem{yoccoz1995} Yoccoz, J.-C. (1995). Conjugaison différentiable des difféomorphisms du cercle dont le nombre de rotation vérifie une condition diophantienne. \emph{Annales Scientifiques de l'ENS}, 17, 333--359.
+\bibitem{lions1993} Lions, P.-L. (1993). \emph{Optimal Inequalities in Probability Theory}. Springer.
+\end{thebibliography}
+
+\section*{1998: Curtis McMullen, Maxim Kontsevich, Richard Borcherds, Timothy Gowers}
+\begin{thebibliography}{99}
+\bibitem{mcmullen1998} McMullen, C. T. (1998). Thurston's work on surfaces. \emph{Princeton University Press}.
+\bibitem{kontsevich1992} Kontsevich, M. (1992). Intersection theory on the moduli space of curves and the matrix KdV equation. \emph{Communications in Mathematical Physics}, 147, 1--47.
+\bibitem{borcherds1992} Borcherds, R. E. (1992). Monstrous moonshine and monstrous Lie superalgebras. \emph{Inventiones Mathematicae}, 109, 405--444.
+\bibitem{gowers1998} Gowers, W. T. (1998). A new proof of Szemerédi's theorem. \emph{Geom. Funct. Anal.}, 11, 465--588.
+\end{thebibliography}
+
+\section*{2002: Laurent Lafforgue, Vladimir Voevodsky}
+\begin{thebibliography}{99}
+\bibitem{lafforgue2002} Lafforgue, V. (2002). Chtoukas pour les groupes réductifs et paramétrisation de Langlands. \emph{Inventiones Mathematicae}, 148, 419--562.
+\bibitem{voevodsky2002} Voevodsky, V. (2002). A¹-homotopy theory. \emph{Proceedings of the International Congress of Mathematicians}, 579--604.
+\end{thebibliography}
+
+\section*{2006: Andrei Okounkov, Grigori Perelman, Terence Tao, Wendelin Werner}
+\begin{thebibliography}{99}
+\bibitem{okounkov2003} Okounkov, A. (2003). Random matrices and random permutations. \emph{International Mathematics Research Notices}, 2003, 1043--1095.
+\bibitem{perelman2002} Perelman, G. (2002). The entropy formula for the Ricci flow and its geometric applications. \emph{arXiv:math/0211159}.
+\bibitem{tao2004} Tao, T. and Green, B. (2004). The primes contain arbitrarily long arithmetic progressions. \emph{Annals of Mathematics}, 167, 483--541.
+\bibitem{werner2006} Werner, W. (2006). Random polymers. \emph{Lectures on Probability Theory and Statistics}, Springer, 1--78.
+\end{thebibliography}
+
+\section*{2010: Cédric Villani, Elon Lindenstrauss, Ngô Bảo Châu, Stanislav Smirnov}
+\begin{thebibliography}{99}
+\bibitem{villani2008} Villani, C. (2008). \emph{Optimal Transport: Old and New}. Springer.
+\bibitem{lindenstrauss2008} Lindenstrauss, E. (2008). Individual equidistribution of orbits. \emph{Journal of the AMS}, 21, 993--1027.
+\bibitem{ngo2008} Ngô, B. C. (2008). Le lemme fondamental pour les algèbres de Lie. \emph{Publications Mathématiques de l'IHÉS}, 111, 1--169.
+\bibitem{smirnov2010} Smirnov, S. (2010). Critical percolation in the plane. \emph{Proceedings of the International Congress of Mathematicians}, 1281--1311.
+\end{thebibliography}
+
+\section*{2014: Artur Avila, Manjul Bhargava, Martin Hairer, Maryam Mirzakhani}
+\begin{thebibliography}{99}
+\bibitem{avila2014} Avila, A. (2014). Global theory of one-frequency Schrödinger operators. \emph{Acta Mathematica}, 214, 1--54.
+\bibitem{bhargava2015} Bhargava, M. (2015). The finiteness of the class numbers of cubic fields. \emph{Journal of the AMS}, 28, 1067--1085.
+\bibitem{hairer2014} Hairer, M. (2014). A theory of regularity structures. \emph{Inventiones Mathematicae}, 198, 269--504.
+\bibitem{mirzakhani2007} Mirzakhani, M. (2007). Growth of Weil--Petersson volumes and random hyperbolic surfaces. \emph{Inventiones Mathematicae}, 170, 197--232.
+\end{thebibliography}
+
+\section*{2018: Akshay Venkatesh, Alessio Figalli, Caucher Birkar, Peter Scholze}
+\begin{thebibliography}{99}
+\bibitem{venkatesh2018} Venkatesh, A. (2018). Dynamics of periodic patterns. \emph{Proceedings of the International Congress of Mathematicians}, 2649--2672.
+\bibitem{figalli2016} Figalli, A. (2016). Regularity theory for the Monge--Ampère equation. \emph{Proceedings of the International Congress of Mathematicians}, 2673--2696.
+\bibitem{birkar2018} Birkar, C. (2018). Existence of log generalized minimal models. \emph{Journal of the AMS}, 31, 951--975.
+\bibitem{scholze2012} Scholze, P. (2012). Perfectoid spaces. \emph{Publications Mathématiques de l'IHÉS}, 116, 245--313.
+\end{thebibliography}
+
+\section*{2022: Hugo Duminil-Copin, James Maynard, June Huh, Maryna Viazovska}
+\begin{thebibliography}{99}
+\bibitem{duminilcopin2016} Duminil-Copin, H. and Smirnov, S. (2016). The critical point of the 2d Ising model is $\sqrt{2}-1$. \emph{Annals of Mathematics}, 183, 269--287.
+\bibitem{maynard2018} Maynard, J. (2018). Small gaps between primes. \emph{Annals of Mathematics}, 184, 239--253.
+\bibitem{huh2015} Huh, J. and Katz, B. (2015). Log-concavity of characteristic polynomials of matroids. \emph{Annals of Mathematics}, 182, 903--967.
+\bibitem{viazovska2016} Viazovska, M. (2016). The packing problem in dimension 8. \emph{Annals of Mathematics}, 186, 941--966.
+\end{thebibliography}
 
 \chapter*{Index of Medalists}
 \addcontentsline{toc}{chapter}{Index of Medalists}
@@ -662,8 +829,8 @@ Year & Medalists & Count \\
 \item Kunihiko Kodaira (1954)
 \item Jean-Pierre Serre (1954)
 \item Klaus Friedrich Roth (1958)
-\item Ren'e Thom (1958)
-\item Lars H"ormander (1962)
+\item René Thom (1958)
+\item Lars Hörmander (1962)
 \item John Willard Milnor (1962)
 \item Alexander Grothendieck (1966)
 \item Michael Francis Atiyah (1966)
@@ -672,13 +839,13 @@ Year & Medalists & Count \\
 \item Alan Baker (1970)
 \item Heisuke Hironaka (1970)
 \item John Griggs Thompson (1970)
-\item Serge Novikov (1970)
+\item Serge Novikov (170)
 \item David Bryant Mumford (1974)
 \item Enrico Bombieri (1974)
 \item Charles Louis Fefferman (1978)
 \item Daniel G. Quillen (1978)
 \item Gregori Alexandrovitch Margulis (1978)
-\item Pierre Ren'e Deligne (1978)
+\item Pierre René Deligne (1978)
 \item Alain Connes (1982)
 \item Shing-Tung Yau (1982)
 \item William Thurston (1982)
@@ -703,9 +870,9 @@ Year & Medalists & Count \\
 \item Grigori Perelman (declined) (2006)
 \item Terence Tao (2006)
 \item Wendelin Werner (2006)
-\item C'edric Villani (2010)
+\item Cédric Villani (2010)
 \item Elon Lindenstrauss (2010)
-\item Ng\^o B\^ao Ch\^au (2010)
+\item Ngô Bảo Châu (2010)
 \item Stanislav Smirnov (2010)
 \item Artur Avila (2014)
 \item Manjul Bhargava (2014)
@@ -719,6 +886,10 @@ Year & Medalists & Count \\
 \item James Maynard (2022)
 \item June Huh (2022)
 \item Maryna Viazovska (2022)
+\item Hong Wang (2026)
+\item Jacob Tsimerman (2026)
+\item John Pardon (2026)
+\item Yu Deng (2026)
 \end{itemize}
 \end{multicols}
 

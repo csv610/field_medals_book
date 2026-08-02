@@ -1,0 +1,116 @@
+\chapter{2026:Yu Deng}\label{ch2026yudeng:yu-deng-fields-medal-2026}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Yu Deng (b. 1990, Shenzhen, Guangdong, China) \textbf{Position:} Professor of Mathematics, University of Chicago \textbf{Doctoral Advisor:} Alexandru D. Ionescu (Princeton University) \textbf{Fields Medal Citation:} \emph{``For his contributions to the rigorous mathematical foundation of the laws of physics, in particular for his proof of the derivation of the Boltzmann equation from Newtonian dynamics, and for his work on wave turbulence.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{prereqs} Partial differential equations, statistical mechanics, Newtonian mechanics, functional analysis, probability theory. \end{prereqs}
+
+\begin{objectives} Explain Hilbert's sixth problem and its modern formulation; describe the Boltzmann equation and its role in kinetic theory; understand the strategy for deriving the Boltzmann equation from particle dynamics. \end{objectives}
+
+\section{Problem History}
+
+In 1900, David Hilbert presented his famous list of 23 unsolved problems. The sixth problem called for the axiomatization of physics: ``To treat in the same manner, by means of axioms, those physical sciences in which already today mathematics plays an important part; in the first rank are the theory of probabilities and mechanics.'' The modern interpretation asks whether the macroscopic kinetic equations governing gases---such as the Boltzmann equation---can be derived from the microscopic Newtonian dynamics of a large number of particles.
+
+The Boltzmann equation, introduced by Ludwig Boltzmann in 1872, describes the statistical behavior of a gas at the kinetic level:
+\[
+\partial_t f + v \cdot \nabla_x f = Q(f,f),
+\]
+where $f(t,x,v)$ is the distribution of particles at position $x$ and velocity $v$, and $Q(f,f)$ is the collision operator encoding binary elastic collisions. The equation rests on the \emph{molecular chaos assumption} (Stosszahlansatz): colliding particles are assumed to have uncorrelated velocities before collision.
+
+Lanford proved in 1975 a rigorous derivation of the Boltzmann equation from Newtonian dynamics for hard spheres, but only for very short times (approximately one collision time, roughly $10^{-12}$ seconds for a gas at standard conditions). Extending this to longer times---and ideally to all positive times---had been a major open problem for half a century.
+
+The Boltzmann equation is a nonlinear integro-differential equation that describes the evolution of the distribution function $f(t,x,v)$. The collision operator $Q(f,f)$ is defined by
+\[
+Q(f,f)(v) = \int_{\mathbb{R}^3} \int_{S^2} (f(v') f(w') - f(v) f(w)) |v-w| \, d\sigma \, dw,
+\]
+where $v'$ and $w'$ are the post-collision velocities determined by the conservation of momentum and energy. The equation conserves mass, momentum, and energy, and the $H$-theorem states that the Boltzmann entropy $H(f) = \int f \log f \, dx \, dv$ is non-increasing along solutions.
+
+The fundamental difficulty in deriving the Boltzmann equation from Newtonian dynamics is the \emph{propagation of molecular chaos}. The molecular chaos assumption states that before a collision, the velocities of the two colliding particles are uncorrelated: $\langle f_2(x_1, v_1, x_2, v_2) \rangle = f(x_1, v_1) f(x_2, v_2)$, where $f_2$ is the two-particle distribution function. This assumption is justified if the particles are well-separated and have not interacted recently, but after many collisions, the correlations between particles can build up and threaten the validity of the assumption.
+
+The mathematical challenge is to show that these correlations remain small on average, even after many collisions. Lanford's original proof used a Gronwall-type argument to bound the growth of correlations, but the bounds deteriorate exponentially in time and become useless after one collision time. Deng's breakthrough was to develop new techniques for controlling correlations that remain effective for all positive times.
+
+Wave turbulence theory provides a parallel story. It predicts that energy injected at one scale in a system of interacting waves will cascade to other scales through nonlinear interactions. The \emph{wave kinetic equation}---the analogue of the Boltzmann equation for wave systems---describes this energy cascade. Deriving the wave kinetic equation from the underlying nonlinear wave equations with rigorous error bounds was another fundamental problem in mathematical physics.
+
+The difficulty in both cases is that repeated interactions create correlations between particles (or waves), threatening the molecular chaos assumption. A single collision between two particles is simple to analyze, but after many collisions, the state of the system becomes highly correlated. Controlling these correlations---showing they remain small on average---is the central mathematical challenge.
+
+\section{How Was It Solved}
+
+Deng and his collaborators Zaher Hani and Xiao Ma completed the derivation of the Boltzmann equation from Newtonian dynamics for a gas of hard spheres in 2025. Their proof established that in the appropriate scaling limit (the Boltzmann--Grad limit: number of particles $N\to\infty$, diameter $\epsilon\to 0$, with $N\epsilon^2$ fixed), the empirical distribution of particle positions and velocities satisfies the Boltzmann equation with quantitative error estimates valid for all positive times.
+
+The central innovation was the ``collision ledger'' method, originally developed by Deng and Hani for wave turbulence and extended to the particle setting. The collision ledger records every possible collision history---whether a particle pair has collided once, twice, or many times. The difficulty is that repeated collisions create correlations between particles.
+
+The collision ledger is a combinatorial device that tracks the history of collisions in a gas of hard spheres. Each entry in the ledger corresponds to a specific collision pattern: a pair of particles has collided $k$ times, with specific trajectories between collisions. The key insight is that the contribution of $k$-fold collisions to the collision operator decays like $C^k/k!$ for some constant $C$, ensuring that the total contribution of all multi-fold collisions is summable. This exponential decay is a consequence of the geometric fact that the probability of a specific $k$-fold collision pattern decreases factorially in $k$.
+
+The proof proceeds by decomposing complex collision histories into simpler pieces using a \emph{cutting algorithm}. Each entry in the ledger represents a specific pattern of repeated collisions. Deng and his collaborators showed that these entries remain small enough to be managed statistically: the correlations created by repeated collisions are controlled by showing that the probability of a ``bad'' collision history is exponentially small in the relevant parameter.
+
+The cutting algorithm works by decomposing a complex collision history into a tree of simpler histories. Each node in the tree corresponds to a single collision, and the branches correspond to the different possible outcomes. The key estimate is that the total contribution of all trees of depth $k$ is bounded by $C^k/k!$, which ensures that the sum over all trees converges. This estimate is proved by induction on $k$, using the geometric fact that the phase space volume of $k$-fold collision patterns decreases factorially in $k$.
+
+The key technical estimate shows that the contribution of $k$-fold collisions to the collision operator decays like $C^k/k!$ for some constant $C$, ensuring that the total contribution of all multi-fold collisions is summable. This allows the proof to go through by showing that the empirical distribution converges to the solution of the Boltzmann equation, with error bounds uniform in time.
+
+For wave turbulence, Deng and Hani developed rigorous methods for deriving wave kinetic equations from nonlinear wave equations. Their ``collision ledger'' approach tracks every pattern of wave interactions and uses a decomposition algorithm to break complex interaction histories into manageable pieces. This established long-time convergence results for wave kinetic theory, proving that energy cascades in nonlinear wave systems are described by the wave kinetic equation.
+
+The work on wave turbulence preceded and motivated the attack on Hilbert's sixth problem. The techniques for controlling repeated interactions in wave systems were adapted to the particle setting, where the analogous problem---controlling repeated collisions---is even more challenging because particles are discrete objects rather than continuous fields.
+
+The wave kinetic equation describes the evolution of the wave energy spectrum $n(t,k)$ in a system of weakly interacting waves:
+\[
+\partial_t n = Q(n,n),
+\]
+where the collision operator $Q$ encodes the nonlinear wave interactions. The derivation of this equation from the underlying nonlinear wave equation requires controlling the correlations between waves, which is analogous to the molecular chaos assumption in kinetic theory. Deng and Hani's collision ledger method provides a systematic framework for controlling these correlations.
+
+The key difference between the wave and particle settings is the nature of the interactions. In wave turbulence, the interactions are continuous and described by the nonlinear terms in the wave equation. In particle dynamics, the interactions are discrete (collisions) and described by the hard-sphere potential. The collision ledger method adapts to both settings by tracking the pattern of interactions and bounding their cumulative effect.
+
+\section{Impact of This Discovery}
+
+Deng's result represents the first rigorous derivation of the Boltzmann equation valid for all positive times, overcoming the fundamental limitation of Lanford's theorem. This provides a rigorous foundation for the kinetic theory of gases, one of the cornerstones of statistical mechanics.
+
+The derivation validates the molecular chaos assumption---Boltzmann's key postulate---by showing it emerges naturally from Newtonian dynamics in the appropriate limit. This closes a foundational gap that had persisted since the earliest days of statistical mechanics.
+
+The collision ledger framework has proven to be a versatile tool, applicable to both wave and particle systems. It has opened new avenues for similar derivations: extending to softer potentials (beyond hard spheres), non-equilibrium steady states, and quantum systems are natural next steps.
+
+Deng's work on wave turbulence has contributed to the mathematical understanding of energy cascades in physical systems. The rigorous derivation of wave kinetic equations has potential applications in climate science (understanding energy transfer in atmospheric waves), plasma physics (wave-particle interactions), and quantum field theory (thermalization of quantum systems).
+
+The proof demonstrates the power of modern PDE techniques---including dispersive estimates, harmonic analysis, probability theory, and kinetic theory---in addressing fundamental questions about the mathematical foundations of physics.
+
+The \textbf{BBGKY hierarchy} (Bogoliubov--Born--Green--Kirkwood--Yvon) provides a systematic expansion of the many-particle dynamics in terms of reduced distribution functions. The hierarchy couples the $k$-particle distribution function to the $(k+1)$-particle distribution function, and truncating at the first level gives the Boltzmann equation under the molecular chaos assumption. Deng's work provides a rigorous justification for this truncation by showing that the correlations between particles remain small in the Boltzmann--Grad limit.
+
+\section{Modern Views and Improvements}
+
+The derivation of the Boltzmann equation has opened numerous research directions. Extensions to softer interaction potentials (Lennard-Jones, Coulomb) would cover physically realistic gases. The derivation for quantum systems---replacing Newtonian dynamics with the Schr\"{o}dinger equation---is a major open problem.
+
+The \textbf{Boltzmann--Grad limit} is the scaling limit in which the number of particles $N \to \infty$, the diameter of the particles $\epsilon \to 0$, and $N\epsilon^2$ is held fixed. In this limit, the empirical distribution of particle positions and velocities converges to the solution of the Boltzmann equation. The key difficulty is controlling the correlations between particles, which can build up over time due to repeated collisions. Deng's work provides a rigorous proof that these correlations remain small in the Boltzmann--Grad limit, valid for all positive times.
+
+The \textbf{quantitative error estimates} in Deng's proof are uniform in time, which is the key improvement over Lanford's theorem. Lanford's proof gave error bounds that deteriorated exponentially in time, becoming useless after one collision time. Deng's proof gives error bounds that are polynomial in time, which allows the derivation to be valid for all positive times. The improvement comes from the collision ledger method, which provides a more efficient way of tracking correlations between particles.
+
+The collision ledger method continues to be refined and applied to related problems. In wave turbulence, it has been used to derive kinetic equations for specific physical systems, including water waves and plasma waves.
+
+Future directions include the derivation of hydrodynamic equations (Navier--Stokes, Euler) from kinetic theory, the study of fluctuations and large deviations in the Boltzmann--Grad limit, and the application of these techniques to quantum many-body physics.
+
+The connection between Deng's work on wave turbulence and the derivation of the Boltzmann equation illustrates a broader principle: methods developed for one class of physical systems often transfer to apparently different settings. The collision ledger framework, born from the study of ocean waves, proved essential for understanding the kinetic theory of gases.
+
+Deng and Hong Wang were classmates at Peking University, making 2026 the first time two former classmates have simultaneously won the Fields Medal. Their shared mathematical interests in harmonic analysis and PDE theory, developed during their undergraduate years, led to parallel breakthroughs in seemingly different areas---Wang in geometric analysis and Deng in kinetic theory. Their collaboration and mutual influence exemplify the interconnectedness of modern mathematics.
+
+The rigorous derivation of the Boltzmann equation has implications for the foundations of statistical mechanics. The second law of thermodynamics states that the entropy of an isolated system is non-increasing, and this law is derived from the $H$-theorem of the Boltzmann equation. Deng's rigorous derivation provides a mathematical foundation for the second law by showing that it emerges from the Newtonian dynamics of particles. This closes a foundational gap that had persisted since the earliest days of statistical mechanics, and it provides a rigorous justification for the use of kinetic equations in physics.
+
+The connection between kinetic theory and hydrodynamic limits is an active direction. The Euler and Navier--Stokes equations can be derived from the Boltzmann equation in the hydrodynamic limit, where the mean free path of particles goes to zero. Deng's rigorous derivation of the Boltzmann equation provides a starting point for the derivation of hydrodynamic equations from first principles, which would complete the chain from Newtonian mechanics to macroscopic fluid dynamics.
+
+The study of the Boltzmann equation for quantum systems is another major open problem. In quantum mechanics, the dynamics of particles is governed by the Schrodinger equation rather than Newton's laws, and the derivation of the quantum Boltzmann equation from the Schrodinger equation requires new techniques. The quantum Boltzmann equation describes the evolution of the Wigner function, which is the quantum analogue of the classical distribution function. The derivation of the quantum Boltzmann equation from first principles is a major challenge that connects Deng's work on classical kinetic theory to quantum mechanics.
+
+The connection between Deng's work and the theory of mean-field limits is an active area. The mean-field limit describes the passage from a system of many interacting particles to a kinetic equation, and the derivation of the Boltzmann equation from Newtonian dynamics is a special case of this more general framework. The development of rigorous methods for deriving mean-field limits for other physical systems, such as the Vlasov equation for plasma physics and the Schrodinger equation for quantum mechanics, is an active area that builds on the collision ledger technique.
+
+The wave kinetic equation derived by Deng and Hani has applications to the study of wave turbulence in physical systems. Wave turbulence describes the statistical behavior of systems of weakly interacting waves, such as ocean waves, plasma waves, and optical waves. The wave kinetic equation describes the evolution of the wave energy spectrum, and the rigorous derivation of this equation from the underlying nonlinear wave equation provides a mathematical foundation for the theory of wave turbulence.
+
+The collision ledger method has been extended to other problems in mathematical physics beyond the Boltzmann equation. The method has been applied to the derivation of Vlasov-type equations from Newtonian particle dynamics, where the interaction potential is longer-range than the hard-sphere potential. The development of new techniques for controlling correlations in systems with long-range interactions is an active area that builds on the collision ledger framework. The connection between the Boltzmann equation and the Vlasov equation, through the different scaling limits of the particle dynamics, is an active area of research with applications to plasma physics and astrophysics.
+
+The study of fluctuations and large deviations in the Boltzmann-Grad limit is another active direction. The central limit theorem and the large deviation principle describe the behavior of statistical quantities as the number of particles becomes large, and the rigorous derivation of these results from Newtonian dynamics requires controlling the correlations between particles. Deng's collision ledger method provides a framework for studying fluctuations and large deviations, and the development of new techniques for these problems is an active area that builds on the derivation of the Boltzmann equation.
+
+The study of the Boltzmann equation with boundary conditions is another active direction. The interaction of a gas with a solid boundary is described by boundary conditions on the Boltzmann equation, and the derivation of these boundary conditions from the microscopic dynamics is a major open problem. The development of rigorous methods for studying the Boltzmann equation with boundary conditions, including the derivation of the Knudsen boundary condition and the accommodation coefficient, is an active area that builds on Deng's foundational work on the derivation of the Boltzmann equation.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+Deng rigorously derived the Boltzmann equation from Newtonian dynamics using the collision ledger method, resolving a special case of Hilbert's sixth problem, and developed new techniques for wave kinetic theory.

@@ -1,973 +1,107 @@
-\chapter{William P. Thurston --- Fields Medal 1982}\label{ch1982williamthurston:william-p.-thurston-fields-medal-1982-a-comprehensive-report}
+\chapter{1982: William Thurston}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\addcontentsline{toc}{chapter}{Problem History}
+\section*{Problem History}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} William P. Thurston (b.
-October 30, 1946, Washington, D.C., USA; d.~August 21, 2012)
-\textbf{Position:} Professor, University of California, Berkeley;
-Cornell University; Princeton University \textbf{Doctoral Advisor:}
-Morris Hirsch (University of California, Berkeley) \textbf{Fields Medal
-Citation:} \emph{``For his significant contributions to the study of
-3-manifolds and the geometrization conjecture.''}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{1. Introduction}\label{ch1982williamthurston:introduction}
-
-William P. Thurston was awarded the Fields Medal in 1982 for his
-substantial work in low-dimensional topology, particularly his
-\textbf{geometrization conjecture} for 3-manifolds. This conjecture,
-which he formulated in the late 1970s and proved in many cases himself,
-proposed that every compact 3-manifold can be decomposed into pieces
-that each admit one of eight canonical geometric structures. This
-transformed the study of 3-manifolds from a largely topological subject
-into one closely connected with geometry, analysis, and dynamics.
-
-\begin{prereqs} Algebraic topology (fundamental group, covering spaces), hyperbolic geometry (Fuchsian groups), basic differential geometry. \end{prereqs}
-
-\begin{objectives} State the geometrization conjecture; explain the eight model geometries; describe the classification of foliations of 3-manifolds. \end{objectives}
-
-
-Thurston's contributions span a notable range of mathematics: -
-The geometrization conjecture, which classifies all 3-manifolds by their
-geometric structures and was eventually proved in full by Perelman in
-2003 using Ricci flow. - The classification of surface diffeomorphisms
-and the study of pseudo-Anosov mappings, which revolutionized the study
-of surface dynamics and Teichmüller theory. - The theory of hyperbolic
-3-manifolds, showing that ``most'' 3-manifolds are hyperbolic and
-providing the first systematic construction of hyperbolic structures. -
-The development of the orbifold theorem, proved by Thurston and later by
-Boileau--Leeb--Porti. - The Thurston norm on the homology of 3-manifolds
-and its relationship to foliations. - Fundamental contributions to the
-theory of foliations, including the Thurston stability theorem. - The
-study of combinatorial geometry and the development of circle packing
-techniques. - The definition and study of the stretch factor (Thurston's
-algorithm) for surface automorphisms. - Deep contributions to the theory
-of Kleinian groups and Mostow rigidity.
-
-Thurston's geometric vision and his ability to see deep connections
-between disparate areas of mathematics made him one of the most
-influential mathematicians of the late 20th century. His work has had a
-lasting impact on topology, geometry, dynamics, and group theory.
-
-This report provides a comprehensive overview of Thurston's life, work,
-and lasting impact on mathematics, organized by the major themes of his
-research.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{2. Biographical Background}\label{ch1982williamthurston:biographical-background}
-
-\subsection{2.1 Early Life and
-Education}\label{ch1982williamthurston:early-life-and-education}
-
-William Paul Thurston was born in 1946 in Washington, D.C. He showed
-mathematical talent from an early age, building topological models as a
-teenager. He entered New College in Sarasota, Florida, where he studied
-mathematics. He then moved to the University of California, Berkeley for
-graduate studies.
-
-\subsection{2.2 Doctoral Work}\label{ch1982williamthurston:doctoral-work}
-
-At Berkeley, Thurston studied under Morris Hirsch, working on foliations
-of 3-manifolds. His PhD thesis (1972) on foliations already contained
-groundbreaking ideas, including the Thurston stability theorem for
-foliations.
-
-\subsection{2.3 Academic Career}\label{ch1982williamthurston:academic-career}
-
+\begin{prereqs}
+\noindent \textbf{Background}
 \begin{itemize}
-\tightlist
-\item
- \textbf{1973:} PhD, University of California, Berkeley.
-\item
- \textbf{1973--1974:} Member, Institute for Advanced Study, Princeton.
-\item
- \textbf{1974--1991:} Professor, Princeton University --- where he
- developed the geometrization program.
-\item
- \textbf{1991--1996:} Professor, University of California, Berkeley.
-\item
- \textbf{1996--2003:} Professor, University of California, Davis.
-\item
- \textbf{2003--2012:} Professor, Cornell University.
-\item
- \textbf{1982:} Fields Medal awarded at the ICM in Warsaw.
-\item
- \textbf{2012:} Died at age 65 from complications of melanoma.
+\item Topology of 3-manifolds
+\item Hyperbolic geometry and geometric structures
+\item Group theory and geometrization
 \end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. The Geometrization
-Conjecture}\label{ch1982williamthurston:the-geometrization-conjecture}
-
-\subsection{3.1 Background}\label{ch1982williamthurston:background}
-
-Before Thurston, the classification of 3-manifolds was a major open
-problem, one of the important in topology. For surfaces
-(2-manifolds), the uniformization theorem provides a complete
-classification: every closed surface admits a Riemannian metric of
-constant curvature \(+1\), \(0\), or \(-1\). This geometric
-classification underlies the entire theory of Riemann surfaces. For
-3-manifolds, no such unified classification existed, despite the work of
-Poincaré, Haken, Waldhausen, and others.
-
-\subsection{3.2 Thurston's Conjecture}\label{ch1982williamthurston:thurstons-conjecture}
-
-Thurston conjectured that every compact 3-manifold can be decomposed
-along incompressible tori and spheres into pieces, each of which admits
-one of eight geometric structures. These eight geometries are: 1.
-\textbf{Spherical} \(S^3\): constant positive curvature, corresponding
-to elliptic geometry. 2. \textbf{Euclidean} \(\mathbb{E}^3\): constant
-zero curvature, corresponding to flat geometry. 3. \textbf{Hyperbolic}
-\(\mathbb{H}^3\): constant negative curvature, the richest and most
-common case. 4. \(S^2 \times \mathbb{R}\): the product of a sphere and a
-line. 5. \(\mathbb{H}^2 \times \mathbb{R}\): the product of the
-hyperbolic plane and a line. 6. \(\widetilde{\text{SL}_2\mathbb{R}}\):
-the universal cover of the Lie group \(\text{SL}_2\mathbb{R}\). 7.
-\textbf{Nil} geometry: the Heisenberg group, a nilpotent Lie group. 8.
-\textbf{Sol} geometry: the solvable Lie group, the least symmetric of
-the eight.
-
-\subsection{3.3 The Eight Geometries}\label{ch1982williamthurston:the-eight-geometries}
-
-Each of the eight geometries is a model geometry \((X, G)\) where \(X\)
-is a simply connected Riemannian manifold and \(G\) is a Lie group
-acting transitively on \(X\) with compact stabilizers. A 3-manifold
-admits a geometric structure modeled on \((X, G)\) if it is
-diffeomorphic to \(X/\Gamma\) for a discrete subgroup
-\(\Gamma \subset G\) acting freely.
-
-\subsection{3.4 Significance}\label{ch1982williamthurston:significance}
-
-The geometrization conjecture is the 3-dimensional analogue of the
-uniformization theorem for surfaces. It provides a complete
-classification of 3-manifolds and reduces many topological questions to
-geometric ones. For example: - The Poincaré conjecture (every simply
-connected closed 3-manifold is \(S^3\)) follows from the spherical case.
-- The Borel conjecture about rigidity of aspherical manifolds reduces to
-the hyperbolic case. - Many topological invariants of 3-manifolds can be
-computed from their geometric decomposition.
-
-\subsection{3.5 Proof by Perelman}\label{ch1982williamthurston:proof-by-perelman}
-
-The full geometrization conjecture was proved by Grigori Perelman in
-2003 using Richard Hamilton's Ricci flow. Perelman showed that Ricci
-flow with surgery converges to a collection of geometric pieces,
-confirming Thurston's vision. Perelman's proof earned him a Fields Medal
-(which he declined) and a Clay Millennium Prize. The proof substantially
-relies on Thurston's geometric insight and his decomposition framework.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. Hyperbolic 3-Manifolds}\label{ch1982williamthurston:hyperbolic-3-manifolds}
-
-\subsection{4.1 Mostow Rigidity}\label{ch1982williamthurston:mostow-rigidity}
-
-Mostow's rigidity theorem states that a closed hyperbolic 3-manifold is
-determined up to isometry by its fundamental group. This means that the
-hyperbolic structure is unique when it exists --- topological invariants
-become geometric invariants. This rigidity, which fails in higher
-dimensions, makes hyperbolic 3-manifolds particularly tractable.
-
-\subsection{4.2 Thurston's Hyperbolization
-Theorem}\label{ch1982williamthurston:thurstons-hyperbolization-theorem}
-
-Thurston proved that a Haken 3-manifold (one containing an
-incompressible surface) that is atoroidal admits a hyperbolic structure.
-This was the first major evidence for the geometrization conjecture and
-remains one of its deepest partial results. The proof uses: - The theory
-of Kleinian groups and their deformation spaces (quasiconformal
-deformations). - The measurable Riemann mapping theorem and the
-Ahlfors--Bers theory. - The analysis of the boundaries of deformation
-spaces. - The construction of pleated surfaces and the use of the
-Thurston norm.
-
-\subsection{4.3 The Density of Hyperbolic
-3-Manifolds}\label{ch1982williamthurston:the-density-of-hyperbolic-3-manifolds}
-
-Thurston showed that ``most'' 3-manifolds are hyperbolic through his
-work on Dehn surgery. The \textbf{hyperbolic Dehn surgery theorem}
-states that all but finitely many Dehn surgeries on a hyperbolic knot
-yield hyperbolic 3-manifolds. Moreover, the set of hyperbolic
-3-manifolds is dense in the space of all 3-manifolds in a precise sense.
-
-\subsection{4.4 Volumes of Hyperbolic
-3-Manifolds}\label{ch1982williamthurston:volumes-of-hyperbolic-3-manifolds}
-
-Thurston studied the volume function on the space of hyperbolic
-3-manifolds, showing that: - The volumes of hyperbolic 3-manifolds form
-a well-ordered subset of \(\mathbb{R}\). - There is a smallest volume
-hyperbolic 3-manifold (conjectured to be the Weeks manifold). - The
-volume is related to the simplicial volume (Gromov norm) and satisfies
-the proportionality principle.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. The Thurston Norm}\label{ch1982williamthurston:the-thurston-norm}
-
-\subsection{5.1 Definition}\label{ch1982williamthurston:definition}
-
-The \textbf{Thurston norm} on \(H_2(M, \partial M)\) measures the
-minimal complexity of a surface representing a given homology class. For
-a compact, orientable 3-manifold \(M\) and an embedded surface \(S\)
-with Euler characteristic \(\chi(S)\), define: \[
-x(S) = \max\{-\chi(S), 0\}
-\] For a homology class \(a \in H_2(M, \partial M)\), the Thurston norm
-is: \[
-x(a) = \min\{x(S) : S \text{ is an embedded surface representing } a\}
-\]
-
-\subsection{5.2 Properties}\label{ch1982williamthurston:properties}
-
-The Thurston norm extends to a seminorm on the real homology
-\(H_2(M, \partial M; \mathbb{R})\). Its unit ball is a convex polytope
-whose vertices are integer homology classes. The norm detects whether a
-homology class can be represented by a surface of a given Euler
-characteristic.
-
-\subsection{5.3 Relationship to
-Foliations}\label{ch1982williamthurston:relationship-to-foliations}
-
-The Thurston norm is intimately connected to the theory of taut
-foliations. Thurston proved that the unit ball of the Thurston norm is a
-polytope whose faces correspond to taut foliations on the 3-manifold.
-Specifically, a homology class \(a\) is represented by a taut foliation
-if and only if it lies on the boundary of the unit ball and its
-supporting face is rational.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. Foliations}\label{ch1982williamthurston:foliations}
-
-\subsection{6.1 The Thurston Stability
-Theorem}\label{ch1982williamthurston:the-thurston-stability-theorem}
-
-Thurston's stability theorem is a fundamental result in foliation
-theory. It states that a foliation of a compact manifold with no
-holonomy --- meaning that nearby leaves are not ``twisted'' around each
-other --- must have a compact leaf. More precisely, if \(\mathcal{F}\)
-is a foliation of a compact manifold \(M\) such that the holonomy group
-of every leaf is trivial, then there exists a compact leaf.
-
-\subsection{6.2 Codimension-One
-Foliations}\label{ch1982williamthurston:codimension-one-foliations}
-
-Thurston made deep contributions to the study of codimension-one
-foliations on 3-manifolds: - He showed that every closed 3-manifold with
-\(b_1(M) > 0\) admits a codimension-one foliation. - He developed the
-relationship between foliations and the Thurston norm, showing that taut
-foliations correspond to faces of the Thurston norm ball. - He proved
-that the existence of a taut foliation implies that the 3-manifold is
-covered by \(\mathbb{R}^3\). - The construction of foliations from
-branched surfaces and the study of their transverse measures. -
-Applications of foliations to the study of mapping tori and surface
-bundles over the circle.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{7. Orbifolds}\label{ch1982williamthurston:orbifolds}
-
-\subsection{7.1 Definition}\label{ch1982williamthurston:definition-1}
-
-An \textbf{orbifold} is a generalization of a manifold that allows for
-cone points (points with isotropy) and reflector edges. Orbifolds arise
-naturally in the study of 3-manifolds as quotients of manifolds by
-finite group actions. The geometrization conjecture extends naturally to
-orbifolds, which are essential for understanding branched covers and
-Seifert fibered spaces.
-
-\subsection{7.2 The Orbifold Theorem}\label{ch1982williamthurston:the-orbifold-theorem}
-
-Thurston proved the orbifold theorem: every compact, orientable
-3-orbifold with a geometric decomposition admits a geometric structure.
-This theorem was later rigorized and generalized by Boileau, Leeb, and
-Porti (2005). The orbifold theorem is essential for: - Understanding
-branched covers of 3-manifolds. - The classification of finite group
-actions on 3-manifolds. - The proof of the Smith conjecture and other
-classical problems.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Surface Automorphisms and Pseudo-Anosov
-Maps}\label{ch1982williamthurston:surface-automorphisms-and-pseudo-anosov-maps}
-
-\subsection{8.1 Classification of Surface
-Diffeomorphisms}\label{ch1982williamthurston:classification-of-surface-diffeomorphisms}
-
-Thurston's classification of surface diffeomorphisms (often called the
-\textbf{Nielsen--Thurston classification}) is a fundamental result
-in low-dimensional topology. It divides all elements of the mapping
-class group of a compact surface into three mutually exclusive types: -
-\textbf{Periodic:} \(f^n = \text{id}\) for some \(n > 0\), corresponding
-to finite-order automorphisms of a Riemann surface. -
-\textbf{Reducible:} \(f\) preserves a multicurve (a disjoint union of
-essential simple closed curves), reducing the complexity of the surface.
-- \textbf{Pseudo-Anosov:} \(f\) expands and contracts along a pair of
-transverse measured foliations, the most common and most interesting
-type.
-
-\subsection{8.2 Pseudo-Anosov Maps}\label{ch1982williamthurston:pseudo-anosov-maps}
-
-A pseudo-Anosov map \(f: S \to S\) preserves a pair of transverse
-measured foliations \((\mathcal{F}^u, \mathcal{F}^s)\) and stretches one
-by a factor \(\lambda > 1\) (the \textbf{dilatation} or stretch factor)
-while contracting the other by \(1/\lambda\). These maps are the
-building blocks of surface dynamics and exhibit: - Exponential growth of
-the number of periodic points. - Mixing dynamics with a Markov
-partition. - Minimality of the invariant foliations. - Relationship to
-Teichmüller theory, where pseudo-Anosov maps correspond to geodesics in
-Teichmüller space.
-
-\subsection{8.3 The Stretch Factor}\label{ch1982williamthurston:the-stretch-factor}
-
-The stretch factor \(\lambda > 1\) of a pseudo-Anosov map is a key
-invariant. Thurston showed that \(\lambda\) is an algebraic integer
-whose degree is bounded by the topology of the surface. The set of
-possible stretch factors for a given surface is well-ordered, with the
-smallest being the \textbf{minimal dilatation}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. Kleinian Groups}\label{ch1982williamthurston:kleinian-groups}
-
-\subsection{9.1 Definition}\label{ch1982williamthurston:definition-2}
-
-A \textbf{Kleinian group} is a discrete subgroup
-\(\Gamma \subset \text{PSL}_2\mathbb{C}\) acting on the Riemann sphere
-\(\widehat{\mathbb{C}}\) by Möbius transformations. The quotient
-\(\mathbb{H}^3/\Gamma\) is a hyperbolic 3-manifold (or orbifold).
-Kleinian groups are thus the fundamental groups of hyperbolic
-3-manifolds, and their study connects 3-manifold topology with complex
-analysis, dynamics, and group theory.
-
-\subsection{9.2 Thurston's Contributions}\label{ch1982williamthurston:thurstons-contributions}
-
-Thurston made fundamental contributions to the theory of Kleinian
-groups: - \textbf{Deformation theory:} Thurston developed a complete
-theory of deformations of Kleinian groups, parameterizing hyperbolic
-structures on 3-manifolds by the space of quasiconformal deformations. -
-\textbf{Density of cusps:} Thurston showed that cusped hyperbolic
-3-manifolds are dense in the deformation space of hyperbolic structures.
-- \textbf{Geometric limits:} The study of limits of Kleinian groups
-under algebraic and geometric convergence, leading to the theory of
-strong convergence. - \textbf{The ending lamination theorem:} Thurston
-formulated the ending lamination conjecture (proved by
-Brock--Canary--Minsky), which classifies Kleinian groups by their
-topological type and ending laminations. - \textbf{The Bers--Thurston
-theory:} Connections between Kleinian groups, Teichmüller theory, and
-the boundary of deformation spaces.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. Circle Packing}\label{ch1982williamthurston:circle-packing}
-
-\subsection{10.1 Definition}\label{ch1982williamthurston:definition-3}
-
-\textbf{Circle packing} is the arrangement of circles in the plane (or
-on a surface) such that each pair of circles is either disjoint or
-externally tangent. A circle packing is determined by its
-\textbf{nerve}, a graph whose vertices correspond to circles and edges
-to tangencies. The \textbf{circle packing theorem}
-(Koebe--Andreev--Thurston) states that every planar graph can be
-realized as the nerve of a circle packing.
-
-\subsection{10.2 The Thurston--Rodin--Sullivan
-Theorem}\label{ch1982williamthurston:the-thurstonrodinsullivan-theorem}
-
-Thurston conjectured that circle packings could approximate conformal
-maps, providing a discrete analogue of the Riemann mapping theorem. This
-was proved by Rodin and Sullivan (1987): given a simply connected region
-\(\Omega \subset \mathbb{C}\) and a regular hexagonal circle packing of
-\(\Omega\), the packing converges to the Riemann mapping as the circle
-radii go to zero. This opened the field of \textbf{discrete complex
-analysis} and has applications to: - Numerical conformal mapping. - The
-study of circle packings on surfaces and 3-manifolds. - Connections to
-hyperbolic geometry and the study of 3-manifolds.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. The Work on 3-Manifold
-Invariants}\label{ch1982williamthurston:the-work-on-3-manifold-invariants}
-
-\subsection{11.1 The Thurston--Bennequin
-Number}\label{ch1982williamthurston:the-thurstonbennequin-number}
-
-In contact geometry and knot theory, the Thurston--Bennequin number
-\(tb(K)\) is an invariant of Legendrian knots in contact 3-manifolds. It
-measures the twisting of the contact framing relative to the Seifert
-framing along the knot. The Thurston--Bennequin number satisfies the
-Thurston--Bennequin inequality and plays a central role in the
-classification of Legendrian and transverse knots.
-
-\subsection{11.2 Simplicial Volume}\label{ch1982williamthurston:simplicial-volume}
-
-Thurston defined the \textbf{simplicial volume} (also called the Gromov
-norm) \(\|M\|\) of a closed manifold \(M\). It is defined as the infimum
-of \(\sum |a_i|\) over all singular chains representing the fundamental
-class of \(M\). For hyperbolic 3-manifolds, the simplicial volume is
-proportional to the hyperbolic volume: \[
-\|M\| = \frac{\text{Vol}(M)}{v_3}
-\] where \(v_3\) is the volume of the ideal regular tetrahedron in
-\(\mathbb{H}^3\). This proportionality theorem is one of the
-foundational results in the study of hyperbolic manifolds.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. The Work on the Mapping Class
-Group}\label{ch1982williamthurston:the-work-on-the-mapping-class-group}
-
-\subsection{12.1 The Mapping Class Group}\label{ch1982williamthurston:the-mapping-class-group}
-
-The mapping class group \(\text{Mod}(S)\) of a surface \(S\) is the
-group of isotopy classes of orientation-preserving diffeomorphisms of
-\(S\). One of the central problems in low-dimensional topology is
-understanding the structure of this group.
-
-\subsection{12.2 The Nielsen--Thurston
-Classification}\label{ch1982williamthurston:the-nielsenthurston-classification}
-
-Thurston's classification of surface automorphisms provides a complete
-understanding of the mapping class group of a surface. The
-Nielsen--Thurston classification divides mapping classes into three
-types: periodic, reducible, and pseudo-Anosov. This classification is
-the analogue for surfaces of the classification of elements of
-\(\text{SL}_2\mathbb{Z}\) into elliptic, parabolic, and hyperbolic
-types.
-
-\subsection{12.3 The Thurston Measure}\label{ch1982williamthurston:the-thurston-measure}
-
-Thurston introduced a natural measure \(\mu_{\text{Th}}\) on the space
-\(\mathcal{MF}\) of measured foliations on a surface. The Thurston
-measure is invariant under the action of the mapping class group and is
-used to compute intersection numbers and to study the dynamics of
-pseudo-Anosov maps. The total mass of the Thurston measure on the
-projectivized space \(\mathcal{PMF}\) is finite and related to the
-Weil--Petersson volume of moduli space.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. The Work on Combinatorial
-Geometry}\label{ch1982williamthurston:the-work-on-combinatorial-geometry}
-
-\subsection{13.1 Thick-Thin
-Decomposition}\label{ch1982williamthurston:thick-thin-decomposition}
-
-A fundamental concept in hyperbolic geometry is the thick-thin
-decomposition of a hyperbolic manifold \(M\). The \textbf{thin part}
-\(M_{\text{thin}}\) consists of points where the injectivity radius is
-less than a fixed constant \(\epsilon\) (the Margulis constant). For
-hyperbolic 3-manifolds, the thin part consists of: - \textbf{Cusps:}
-Tubular neighborhoods of short geodesics that are actually tori cusps
-(for manifolds with torus boundary). - \textbf{Tubes:} Solid tori around
-short geodesics of length less than \(\epsilon\). The \textbf{thick
-part} \(M_{\text{thick}}\) has bounded geometry and is compact when
-\(M\) has finite volume.
-
-\subsection{13.2 The Jørgensen--Thurston
-Theorem}\label{ch1982williamthurston:the-juxf8rgensenthurston-theorem}
-
-Jørgensen and Thurston studied the space of hyperbolic 3-manifolds with
-finite volume and showed that: - The volume function
-\(\text{Vol}: \mathcal{M}_3 \to \mathbb{R}_{\geq 0}\) is continuous in
-the topology of geometric convergence. - There are only finitely many
-hyperbolic 3-manifolds with volume less than any given bound. - The set
-of volumes is well-ordered, and the minimal volume hyperbolic
-3-manifolds occur at the bottom of this set.
-
-\subsection{13.3 The Volume Spectrum}\label{ch1982williamthurston:the-volume-spectrum}
-
-The study of volumes of hyperbolic 3-manifolds is a major area of
-research. The smallest known orientable hyperbolic 3-manifold is the
-Weeks manifold (volume \(\approx 0.9427\)). It is conjectured to be the
-unique minimal volume hyperbolic 3-manifold.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. The Work on Nielsen
-Theory}\label{ch1982williamthurston:the-work-on-nielsen-theory}
-
-\subsection{14.1 The Nielsen Realization
-Problem}\label{ch1982williamthurston:the-nielsen-realization-problem}
-
-The Nielsen realization problem asks whether every finite subgroup of
-the mapping class group \(\text{Mod}(S)\) can be realized as a group of
-automorphisms of some Riemann surface structure on \(S\). Thurston
-solved this problem in the affirmative, using his work on the geometry
-and dynamics of surface automorphisms.
-
-\subsection{14.2 Proof Strategy}\label{ch1982williamthurston:proof-strategy}
-
-Thurston's proof uses: - The Nielsen--Thurston classification of mapping
-classes. - The action of the mapping class group on Teichmüller space
-and its Thurston compactification. - Fixed point theory and the Brouwer
-fixed point theorem. - The fact that finite subgroups have a global
-fixed point in the Thurston compactification, which corresponds to a
-Riemann surface structure where the group acts by isometries.
-
-\subsection{14.3 Applications}\label{ch1982williamthurston:applications}
-
-The Nielsen realization theorem has important applications to: - The
-study of moduli spaces of Riemann surfaces and their orbifold structure.
-- The structure of the mapping class group and its subgroups. - The
-theory of Teichmüller spaces and the geometry of the mapping class group
-action.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. The Work on the Smith
-Conjecture}\label{ch1982williamthurston:the-work-on-the-smith-conjecture}
-
-\subsection{15.1 Statement}\label{ch1982williamthurston:statement}
-
-The Smith conjecture states that a periodic diffeomorphism of the
-3-sphere \(S^3\) has a fixed point set that is an unknotted circle. This
-seemingly simple statement was one of the major open problems in
-3-manifold topology for many decades.
-
-\subsection{15.2 Thurston's Contribution}\label{ch1982williamthurston:thurstons-contribution}
-
-Thurston contributed to the proof of the Smith conjecture as part of a
-collaborative effort in the late 1970s. The proof used: - Thurston's
-work on hyperbolic geometry and the orbifold theorem. - The theory of
-Kleinian groups and their deformation spaces. - The classification of
-finite group actions on 3-manifolds. The solution of the Smith
-conjecture was a landmark result that demonstrated the power of
-Thurston's geometric methods.
-
-\subsection{15.3 Related Results}\label{ch1982williamthurston:related-results}
-
-The methods developed for the Smith conjecture were subsequently applied
-to prove other classical results, including the characterization of
-finite group actions on \(S^3\) and the classification of spherical
-space forms.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. The Work on the Marden
-Conjecture}\label{ch1982williamthurston:the-work-on-the-marden-conjecture}
-
-\subsection{16.1 Statement}\label{ch1982williamthurston:statement-1}
-
-The Marden conjecture (now the Marden--Thurston theorem, proved by Agol
-and Calegari--Gabai) states that a hyperbolic 3-manifold with finitely
-generated fundamental group is \textbf{tame} --- that is, it is
-homeomorphic to the interior of a compact 3-manifold with boundary.
-
-\subsection{16.2 Thurston's
-Contribution}\label{ch1982williamthurston:thurstons-contribution-1}
-
-Thurston proved the Marden conjecture for Haken manifolds as part of his
-hyperbolization theorem. More specifically, he showed that any
-hyperbolic 3-manifold that is geometrically finite and contains an
-incompressible surface is tame. The general case was later proved by: -
-Calegari and Gabai (2006) for the case of freely indecomposable
-fundamental group. - Agol (2004) for the general case, completing the
-proof.
-
-\subsection{16.3 Significance}\label{ch1982williamthurston:significance-1}
-
-The tameness theorem is fundamental for the structure theory of
-hyperbolic 3-manifolds. It implies that every hyperbolic 3-manifold with
-finitely generated fundamental group has a compact core (the Scott core
-theorem with a geometric refinement) and can be studied using the
-methods of geometric topology.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. The Work on the Volume
-Conjecture}\label{ch1982williamthurston:the-work-on-the-volume-conjecture}
-
-\subsection{17.1 Statement}\label{ch1982williamthurston:statement-2}
-
-The \textbf{volume conjecture} (formulated by Kashaev and later
-Murakami--Murakami) relates the hyperbolic volume of a knot complement
-to the asymptotic behavior of the colored Jones polynomial.
-Specifically, for a hyperbolic knot \(K\), the conjecture states: \[
-\lim_{n \to \infty} \frac{2\pi \log |J_n(K, e^{2\pi i/n})|}{n} = \text{Vol}(S^3 \setminus K)
-\] where \(J_n(K, q)\) is the \(n\)-colored Jones polynomial.
-
-\subsection{17.2 Thurston's
-Contribution}\label{ch1982williamthurston:thurstons-contribution-2}
-
-Thurston's work on hyperbolic knot complements provided the geometric
-foundation for the volume conjecture: - He showed that the complement of
-a hyperbolic knot admits a complete hyperbolic structure of finite
-volume. - He developed the theory of ideal triangulations of hyperbolic
-knot complements, which allows for the computation of volumes. - His
-work on the relationship between geometry and quantum invariants
-inspired the formulation of the volume conjecture. - The conjecture has
-been verified for many knots and is one of the important
-connections between geometry and quantum topology.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. The Work on Cobordisms}\label{ch1982williamthurston:the-work-on-cobordisms}
-
-\subsection{18.1 Thurston's Work}\label{ch1982williamthurston:thurstons-work}
-
-Thurston studied the cobordism theory of 3-manifolds and its
-relationship to foliations and the Thurston norm. The cobordism group
-\(\Omega_3\) classifies 3-manifolds up to cobordism (the existence of a
-4-manifold bounding them). Thurston showed that: - The Thurston norm is
-a key tool in understanding the cobordism group of 3-manifolds. - Taut
-foliations give rise to nontrivial cobordism invariants. - The
-relationship between the Thurston norm and the cobordism group leads to
-constraints on which 3-manifolds can bound a 4-manifold with a given
-signature.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. The Work on the Geometrization of
-2-Complexes}\label{ch1982williamthurston:the-work-on-the-geometrization-of-2-complexes}
-
-\subsection{19.1 Curvature of
-2-Complexes}\label{ch1982williamthurston:curvature-of-2-complexes}
-
-Thurston studied geometric structures on 2-dimensional complexes and
-their relationship to 3-manifold topology. This work contributed to: -
-The theory of non-positively curved metric spaces and the work of Gromov
-on hyperbolic groups. - The study of CAT(0) geometries and their
-applications to geometric group theory. - The understanding of how
-geometric structures on 2-complexes relate to the topology of
-3-manifolds branched over them.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{20. The Work on the Measured
-Foliations}\label{ch1982williamthurston:the-work-on-the-measured-foliations}
-
-\subsection{20.1 Definition}\label{ch1982williamthurston:definition-4}
-
-A \textbf{measured foliation} \(\mathcal{F}\) on a surface \(S\) is a
-foliation (a decomposition of \(S\) into 1-dimensional leaves) equipped
-with a transverse measure \(\mu\). The transverse measure assigns a
-positive number to arcs transverse to the foliation, invariant under
-homotopy of the arc. The space \(\mathcal{MF}\) of measured foliations
-on \(S\) up to isotopy and Whitehead equivalence is homeomorphic to
-\(\mathbb{R}^{6g-6}\) for a surface of genus \(g \geq 2\).
-
-\subsection{20.2 Train Tracks}\label{ch1982williamthurston:train-tracks}
-
-Thurston introduced \textbf{train tracks} as a combinatorial tool for
-studying measured foliations and the mapping class group. A train track
-is a 1-complex with a smooth structure that models the local structure
-of a measured foliation. Train tracks provide: - A finite-dimensional
-approximation of the space of measured foliations. - A computational
-framework for studying the action of the mapping class group. - A method
-for computing stretch factors of pseudo-Anosov maps. Train tracks are
-now a standard tool in low-dimensional topology, hyperbolic geometry,
-and Teichmüller theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{21. The Work on the Earle--Thurston
-Theorem}\label{ch1982williamthurston:the-work-on-the-earlethurston-theorem}
-
-\subsection{21.1 Statement}\label{ch1982williamthurston:statement-3}
-
-The \textbf{Earle--Thurston theorem} (proved with Clifford Earle) states
-that the space of conformal structures on a surface of genus
-\(g \geq 2\) is homeomorphic to Teichmüller space. This result provides
-a topological framework for studying Riemann surfaces and their moduli.
-
-\subsection{21.2 Significance}\label{ch1982williamthurston:significance-2}
-
-The Earle--Thurston theorem is important because: - It shows that
-Teichmüller space is topologically a cell, confirming the
-contractibility of the space of conformal structures. - It provides a
-natural topology for the space of Riemann surfaces that is compatible
-with the deformation theory of Kleinian groups. - It is used in the
-proof of the Nielsen realization theorem and other results about the
-mapping class group.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{22. The Work on the Thurston
-Compactification}\label{ch1982williamthurston:the-work-on-the-thurston-compactification}
-
-\subsection{22.1 Definition}\label{ch1982williamthurston:definition-5}
-
-The \textbf{Thurston compactification} \(\overline{\mathcal{T}}(S)\) of
-Teichmüller space \(\mathcal{T}(S)\) adds a boundary
-\(\partial\mathcal{T}(S)\) consisting of \textbf{projective measured
-foliations} \(\mathcal{PMF}\). The compactification is homeomorphic to a
-closed ball of dimension \(6g-6\). The boundary
-\(\partial\mathcal{T}(S)\) is homeomorphic to a sphere of dimension
-\(6g-7\).
-
-\subsection{22.2 Properties}\label{ch1982williamthurston:properties-1}
-
-The Thurston compactification has the following crucial properties: -
-The mapping class group \(\text{Mod}(S)\) acts continuously on the
-compactification. - Periodic mapping classes fix interior points of
-\(\mathcal{T}(S)\). - Pseudo-Anosov mapping classes have fixed points on
-the boundary \(\partial\mathcal{T}(S)\). - Reducible mapping classes fix
-points in the interior of boundary strata. - The compactification is
-compatible with the Weil--Petersson geometry of Teichmüller space.
-
-\subsection{22.3 Applications}\label{ch1982williamthurston:applications-1}
-
-The Thurston compactification is essential for: - Understanding the
-dynamics of the mapping class group action on Teichmüller space. - The
-proof of the Nielsen--Thurston classification. - The study of the
-boundary of moduli space and its compactification. - The relationship
-between Teichmüller theory and the geometry of hyperbolic 3-manifolds.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{23. The Work on the Markov
-Numbers}\label{ch1982williamthurston:the-work-on-the-markov-numbers}
-
-\subsection{23.1 Markov Triples}\label{ch1982williamthurston:markov-triples}
-
-Markov triples are integer solutions to the Markov diophantine equation:
-\[
-x^2 + y^2 + z^2 = 3xyz
-\] Markov numbers are the numbers appearing in Markov triples, and they
-form one of the most fascinating sequences in number theory.
-
-\subsection{23.2 Thurston's Connection}\label{ch1982williamthurston:thurstons-connection}
-
-Thurston discovered a deep connection between Markov numbers and
-hyperbolic geometry. He showed that Markov numbers correspond to the
-cusps of hyperbolic structures on the punctured torus. Specifically: -
-Each Markov triple corresponds to a hyperbolic structure on the
-complement of a figure-eight knot. - The Markov numbers are related to
-the lengths of closed geodesics on the modular torus. - The Markov
-spectrum (the set of Markov numbers as a subset of \(\mathbb{R}\)) has
-important connections to Diophantine approximation and the Lagrange
-spectrum.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{24. The Work on the Thurston
-Algorithm}\label{ch1982williamthurston:the-work-on-the-thurston-algorithm}
-
-\subsection{24.1 Definition}\label{ch1982williamthurston:definition-6}
-
-The Thurston algorithm (also called the \textbf{Thurston train track
-algorithm}) computes the stretching factor (dilatation) of a
-pseudo-Anosov map by analyzing its action on the space of measured
-foliations represented by train tracks.
-
-\subsection{24.2 Algorithm}\label{ch1982williamthurston:algorithm}
-
-The algorithm proceeds as follows: 1. Represent the mapping class by its
-action on a train track. 2. Find the induced linear map on the vector
-space of weights on the train track. 3. Compute the spectral radius of
-this linear map --- this is the stretch factor \(\lambda > 1\). 4. The
-corresponding eigenvector gives the invariant measured foliation.
-
-\subsection{24.3 Significance}\label{ch1982williamthurston:significance-3}
-
-The Thurston algorithm is fundamental for: - Computing the dynamics of
-surface automorphisms. - Studying the growth of periodic points and
-other dynamical invariants. - Understanding the spectrum of possible
-dilatations for surfaces of a given genus. - Applications in Teichmüller
-theory and the study of the mapping class group.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{25. Awards and Recognition}\label{ch1982williamthurston:awards-and-recognition}
-
-\textbf{1974:} - Invited Speaker, International Congress of
-Mathematicians, Vancouver --- presenting his early work on foliations.
-
-\textbf{1976:} - Alan T. Waterman Award (National Science Foundation)
---- the first mathematician to receive this award, recognizing
-outstanding early-career research.
-
-\textbf{1978:} - Invited Plenary Speaker, International Congress of
-Mathematicians, Helsinki --- presenting the geometrization program.
-
-\textbf{1982:} - Fields Medal (International Mathematical Union) ---
-awarded at the ICM in Warsaw for his significant contributions to the
-study of 3-manifolds and the geometrization conjecture.
-
-\textbf{1995:} - Member, National Academy of Sciences (USA).
-
-\textbf{2001:} - Oswald Veblen Prize in Geometry (American Mathematical
-Society).
-
-\textbf{2008:} - Leroy P. Steele Prize for Seminal Contribution to
-Research (American Mathematical Society) --- for his paper
-``Three-dimensional manifolds, Kleinian groups and hyperbolic
-geometry.''
-
-\textbf{2012:} - Elected to the American Academy of Arts and Sciences. -
-Died at age 65 in Ithaca, New York, from complications of melanoma.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{26. Selected Major
-Publications}\label{ch1982williamthurston:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``The Geometry and Topology of Three-Manifolds.''} Princeton
- lecture notes, 1979. --- \emph{The seminal lecture notes that
- introduced the geometrization conjecture and transformed 3-manifold
- topology.}
-\item
- \textbf{``Three-dimensional manifolds, Kleinian groups and hyperbolic
- geometry.''} \emph{Bulletin of the AMS} 6, 357--381, 1982. ---
- \emph{The survey article that laid out the geometrization program.}
-\item
- \textbf{``On the geometry and dynamics of diffeomorphisms of
- surfaces.''} \emph{Bulletin of the AMS} 19, 417--431, 1988. ---
- \emph{The classification of surface automorphisms and the introduction
- of pseudo-Anosov maps.}
-\item
- \textbf{``The theory of foliations of codimension greater than one.''}
- \emph{Comment. Math. Helv.} 49, 214--231, 1974. --- \emph{The Thurston
- stability theorem for foliations.}
-\item
- \textbf{``A norm for the homology of 3-manifolds.''} \emph{Memoirs of
- the AMS} 59, no. 339, 1986. --- \emph{The introduction of the Thurston
- norm and its relationship to foliations.}
-\item
- \textbf{``Hyperbolic structures on 3-manifolds I: Deformation of
- acylindrical manifolds.''} \emph{Annals of Mathematics} 124, 203--246,
- 1986. --- \emph{The hyperbolization theorem for Haken manifolds.}
-\item
- \textbf{``The topology of 3-manifolds.''} \emph{Proceedings of the
- ICM}, Helsinki, 1978. --- \emph{Thurston's ICM address presenting the
- geometrization program.}
-\item
- \textbf{``How to see 3-manifolds.''} \emph{Classical and Quantum
- Gravity} 15, 2545, 1998. --- \emph{A survey of 3-manifold topology.}
-\item
- \textbf{``On the construction and classification of foliations.''}
- \emph{Proc. Int. Conf. on Prospects in Mathematics}, Kyoto, 1976. ---
- \emph{Contributions to the theory of foliations.}
-\item
- \textbf{``Shapes of polyhedra and triangulations of the sphere.''} In
- \emph{The Epstein Birthday Schrift}, 1998. --- \emph{Connections
- between circle packing and 3-manifolds.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Show that $\\mathbb{H}^3$ is the unique complete simply connected 3-manifold of constant curvature $-1$. \end{exercise}
-
-\begin{exercise} Verify that the figure-eight knot complement admits a complete hyperbolic structure by computing the holonomy representation. \end{exercise}
-
-\begin{exercise} Construct a Reeb foliation of $S^3$ and verify it has a single compact leaf. \end{exercise}
-
-\begin{exercise} Prove that a closed 3-manifold with trivial fundamental group is homeomorphic to $S^3$ (Poincar\\'{e} conjecture in dimension 3, special case). \end{exercise}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\end{prereqs}
+
+\begin{objectives}
+\noindent \textbf{Learning Objectives}
+\begin{itemize}
+\item Understand Thurston's geometrization conjecture and its eight model geometries
+\item Learn how hyperbolic geometry characterizes the complexity of 3-manifolds
+\item Appreciate the unifying vision of geometrization and its implications for topology
+\end{itemize}
+\end{objectives}
+
+Thurston transformed 3-manifold study from topological to geometric. His
+geometrization conjecture proposes that every closed 3-manifold decomposes
+along spheres and tori into pieces each carrying one of eight model
+geometries: $\mathbb{E}^3$, $S^3$, $\mathbb{H}^3$, $S^2 \times \mathbb{R}$,
+$\mathbb{H}^2 \times \mathbb{R}$, $\widetilde{SL(2,\mathbb{R})}$, Nil,
+and Sol.
+
+The prime decomposition theorem (Kneser--Milnor) splits along spheres
+into primes. Thurston's conjecture further splits along essential tori
+via the JSJ decomposition into geometric pieces.
+
+A geometry on a 3-manifold $M$ is a Riemannian metric whose isometry
+group acts transitively and whose universal cover is one of the eight
+model spaces. A $(G, X)$-structure---an atlas of charts into $X$ with
+transition maps in $G$---formalizes this. The developing map sends the
+universal cover to $X$, with holonomy representation
+$\rho: \pi_1(M) \to G$ determining the structure.
+
+Hyperbolic 3-manifolds are ``generic'': most 3-manifolds admit a
+hyperbolic structure. Mostow rigidity ensures uniqueness for
+finite-volume hyperbolic structures, making volume a topological
+invariant.
+
+\addcontentsline{toc}{chapter}{How Was It Solved}
+\section*{How Was It Solved}
+
+Thurston proved geometrization for Haken manifolds (containing essential
+surfaces). His hyperbolic Dehn surgery theorem---that filling cusps of a
+hyperbolic 3-manifold yields hyperbolic structures for all but finitely
+many coefficients---connects cusped to closed manifolds.
+
+The ending lamination conjecture (proved by Brock--Canary--Minsky, 2012)
+provides a complete description of Kleinian group deformation spaces: a
+hyperbolic 3-manifold is determined by its end invariants (conformal
+structure at infinity or ending laminations).
+
+For Haken manifolds, the proof proceeds by induction on complexity. Normal
+surface theory provides a combinatorial framework for analyzing surface
+intersections. Essential surfaces allow decomposition into simpler pieces
+or identification of one of the eight geometries.
+
+For hyperbolic pieces, quasi-Fuchsian group theory and Bers simultaneous
+uniformization apply: the quasi-Fuchsian deformation space of a surface
+group is parameterized by conformal structure pairs, with ending
+laminations providing complete descriptions.
+
+\addcontentsline{toc}{chapter}{Impact}
+\section*{Impact}
+
+Geometrization provided a unifying framework for 3-manifold topology,
+encompassing the Poincar\'{e} conjecture, prime decomposition, and JSJ
+decomposition. Hyperbolic volume---a topological invariant by Mostow
+rigidity---connects hyperbolic geometry with combinatorial topology.
+
+The theory of $(G, X)$-structures has been applied to higher dimensions.
+The ending lamination theorem deepened the topology-holonomy
+correspondence. In physics, hyperbolic volume appears in Chern-Simons
+invariant perturbative expansions; the Volume Conjecture links the
+colored Jones polynomial to hyperbolic volume.
+
+\addcontentsline{toc}{chapter}{Modern Views}
+\section*{Modern Views}
+
+Perelman's proof of geometrization (2003) using Ricci flow with surgery
+confirms Thurston's vision and resolves the Poincar\'{e} conjecture. The
+virtual Haken and virtual fibering conjectures follow (Agol, 2012).
+
+Active research continues on exceptional Dehn surgeries, small-volume
+classification, and volume-invariant relationships. Thurston's geometric
+perspective influenced geometric group theory (asymptotic cones,
+hyperbolic and CAT(0) groups), with the interaction between 3-manifold
+topology and cubulated groups being especially productive.
+
+Thurston received the Fields Medal in 1982 for 3-manifold topology,
+geometrization, and hyperbolic structures.
 
 \section*{Summary}
-\addcontentsline{toc}{section}{Summary}
+Thurston's geometrization conjecture proposes that every closed 3-manifold
+decomposes into pieces admitting one of eight model geometries. His work
+on hyperbolic manifolds, Kleinian groups, and deformation theory provided
+the tools. Perelman's Ricci flow proof confirms the vision and has
+transformed 3-manifold topology.
 
-Thurston proposed the geometrization conjecture, classifying all 3-manifolds in terms of eight model geometries. His work on hyperbolic 3-manifolds, foliation theory, and the mapping class group revolutionized low-dimensional topology and his vision ultimately guided Perelman's proof of the Poincar\'{e} conjecture.
-
-\section{27. References and Further
-Reading}\label{ch1982williamthurston:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch1982williamthurston:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1982 Announcement, Warsaw.
-\item
- Thurston, W. \emph{The Geometry and Topology of Three-Manifolds}.
- Princeton University lecture notes, 1979. Electronically published by
- MSRI.
-\item
- Thurston, W. ``On the geometry and dynamics of diffeomorphisms of
- surfaces.'' \emph{Bull. AMS} 19, 1988.
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch1982williamthurston:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Thurston, W. \emph{The Geometry and Topology of Three-Manifolds}.
- Princeton lecture notes, 1979.
-\item
- Thurston, W. ``Three-dimensional manifolds, Kleinian groups and
- hyperbolic geometry.'' \emph{Bull. AMS} 6, 357--381, 1982.
-\item
- Thurston, W. ``Hyperbolic structures on 3-manifolds I: Deformation of
- acylindrical manifolds.'' \emph{Ann. Math.} 124, 203--246, 1986.
-\item
- Thurston, W. ``A norm for the homology of 3-manifolds.'' \emph{Memoirs
- AMS} 59, 1986.
-\item
- Morgan, J. ``On Thurston's uniformization theorem for
- three-dimensional manifolds.'' In \emph{The Smith Conjecture},
- Academic Press, 1984.
-\item
- McMullen, C. ``Riemann surfaces and the geometrization of
- 3-manifolds.'' \emph{Bull. AMS} 27, 1992.
-\end{itemize}
-
-\subsection{Textbooks}\label{ch1982williamthurston:textbooks}
-
-\begin{itemize}
-\tightlist
-\item
- Benedetti, R. and Petronio, C. \emph{Lectures on Hyperbolic Geometry}.
- Springer Universitext, 1992.
-\item
- Canary, R., Epstein, D., and Marden, A. (eds.) \emph{Fundamentals of
- Hyperbolic Manifolds}. Cambridge University Press, 2006.
-\item
- Kapovich, M. \emph{Hyperbolic Manifolds and Discrete Groups}.
- Birkhäuser, 2001.
-\item
- Martelli, B. \emph{An Introduction to Geometric Topology}.
- CreateSpace, 2016.
-\item
- Ratcliffe, J. \emph{Foundations of Hyperbolic Manifolds}. Springer GTM
- 149, 2006.
-\item
- Farb, B. and Margalit, D. \emph{A Primer on Mapping Class Groups}.
- Princeton University Press, 2012.
-\end{itemize}
-
-\subsection{Biography and Laudations}\label{ch1982williamthurston:biography-and-laudations}
-
-\begin{itemize}
-\tightlist
-\item
- Gabai, D. ``William P. Thurston.'' \emph{Notices of the AMS}, 60(10),
- 2013.
-\item
- Sullivan, D. ``The Work of William Thurston.'' ICM 1982 Laudatio.
-\item
- Morgan, J. ``The Geometrization Conjecture.'' In \emph{Fields
- Medalists' Laudations}, IMU, 1982.
-\item
- Thurston, W. ``William P. Thurston.'' In \emph{The Princeton Companion
- to Mathematics}, 2008.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1986simondonaldson:simon-k.-donaldson-fields-medal-1986-a-comprehensive-report]{See Chapter on related work}} --- Thurston's work on 3-manifolds relates to Donaldson.
-  \item \textbf{\hyperref[ch1986michaelfreedman:michael-h.-freedman-fields-medal-1986-a-comprehensive-report]{See Chapter on related work}} --- Freedman's work on 4-manifolds relates to Thurston.
-  \item \textbf{\hyperref[ch2014maryammirzakhani:maryam-mirzakhani-fields-medal-2014-a-comprehensive-report-on-her-work-and-impact]{See Chapter on related work}} --- Mirzakhani used Thurston's work.
-\end{itemize}
-
-\emph{(End of report)}
+\addcontentsline{toc}{chapter}{Exercises}

@@ -1,1298 +1,352 @@
-\chapter{Vaughan F.R. Jones --- Fields Medal 1990}\label{ch1990vaughanjones:vaughan-f.r.-jones-fields-medal-1990-a-comprehensive-report}
+\chapter{1990:Vaughan F. R. Jones}\label{ch1990vaughanjones:vaughan-f.-r.-jones-fields-medal-1990-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Vaughan Frederick Randal
-Jones (b. December 31, 1952, Gisborne, New Zealand; d.~September 6,
-2020, Nashville, TN, USA) \textbf{Position:} Distinguished Professor,
-University of California, Berkeley (1985--2011); Distinguished
-Professor, Vanderbilt University (2011--2020) \textbf{Doctoral Advisor:}
-André Haefliger (University of Geneva) \textbf{Fields Medal Citation:}
-\emph{``For his discovery of the Jones polynomial, a new invariant of
-knots and links, and his contributions to the theory of von Neumann
-algebras.''}
+\textbf{Prepared:} July 2026 \textbf{Subject:} Vaughan Frederick Randal Jones (b.~May 31, 1952, Gisborne, New Zealand; d.~September 6, 2020) \textbf{Position:} Professor of Mathematics, University of California, Berkeley (1985--2020) \textbf{Doctoral Advisor:} George Whaples (University of Pennsylvania) \textbf{Fields Medal Citation:} \emph{``For his work on von Neumann algebras, particularly his discovery of the Jones polynomial and the Jones index for subfactors.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{1. Introduction}\label{ch1990vaughanjones:introduction}
+\begin{prereqs} von Neumann algebras, operator algebras, subfactor theory, representation theory. \end{prereqs}
 
-Vaughan Jones was awarded the Fields Medal in 1990 for his discovery of
-the \textbf{Jones polynomial}, a substantial new invariant of knots
-and links. The Jones polynomial transformed knot theory, which had been
-largely dormant since the Alexander polynomial was discovered in 1928,
-and led to unexpected connections between von Neumann algebras,
-statistical mechanics, quantum groups, and quantum field theory.
+\begin{objectives} State the skein relation for the Jones polynomial; explain the connection between subfactors and knot invariants; describe the Temperley--Lieb algebra and its role in knot theory. \end{objectives}
 
-\begin{prereqs} Elementary topology (knots, links, crossings), basic linear algebra (matrices, traces), introductory abstract algebra (groups, rings). \end{prereqs}
+\section{Problem History}
 
-\begin{objectives} Define the Jones polynomial via the skein relation; explain its connection to the Temperley-Lieb algebra; describe applications to statistical mechanics. \end{objectives}
+The theory of von Neumann algebras, introduced by John von Neumann in the 1930s, studies certain types of algebras of bounded linear operators on Hilbert spaces. Type II$_1$ factors---infinite-dimensional von Neumann algebras with a unique trace---are the natural setting for Jones's work. The classification of factors was a central problem in operator algebras before Jones's work.
 
+In the 1940s and 1950s, Murray and von Neumann developed the fundamental theory of factors and established the trichotomy: Type I, Type II, and Type III. Type I factors are classified by their dimension (matrices over $\mathbb{C}$), Type II factors have a trace but are infinite-dimensional, and Type III factors have no trace. Within Type II, there are two subtypes: Type II$_1$ (finite trace) and Type II$_\infty$ (infinite trace).
 
-The discovery emerged from Jones's work on \textbf{von Neumann
-algebras}, specifically his classification of subfactors --- inclusions
-of one factor into another. The Jones polynomial arose from a trace on
-the Temperley--Lieb algebra, which appears naturally in the theory of
-subfactors as the relative commutant of the Jones tower. This connection
-between operator algebras and knot theory was one of the most surprising
-and fruitful developments in late 20th century mathematics,
-demonstrating the deep unity of seemingly disparate areas.
+The classification problem for Type II$_1$ factors was thought to be intractable. Every Type II$_1$ factor contains the hyperfinite Type II$_1$ factor $R$ (also called the hyperfinite factor), which is unique up to isomorphism. The question was whether there existed non-hyperfinite Type II$_1$ factors, and if so, how to classify them.
 
-The Jones polynomial was not merely a new invariant; it opened entirely
-new fields (quantum topology, categorification) and revitalized knot
-theory as a central area of mathematical research. The subsequent
-development of quantum invariants of three-manifolds, Khovanov homology,
-and the volume conjecture all trace their roots to Jones's discovery.
+A Type II$_1$ factor is characterized by the existence of a faithful normal tracial state $\text{tr}: M \to \mathbb{C}$ satisfying $\text{tr}(xy) = \text{tr}(yx)$ for all $x, y \in M$. The trace allows one to define a Hilbert space $L^2(M, \text{tr})$ by completing $M$ with respect to the inner product $\langle x, y \rangle = \text{tr}(y^* x)$. The left regular representation of $M$ on $L^2(M, \text{tr})$ gives a concrete realization of the factor.
 
-This report provides a comprehensive overview of Jones's life,
-mathematical contributions, and lasting legacy. It covers his work on
-von Neumann algebras and subfactors, the discovery of the Jones
-polynomial, the development of planar algebras, and the many connections
-to physics and other areas of mathematics that his work inspired.
+The concept of a \textbf{subfactor} $N \subset M$---an inclusion of von Neumann algebras where both $N$ and $M$ are Type II$_1$ factors---was well understood, but the invariant measuring the ``size'' of the inclusion, called the \textbf{index} $[M:N]$, was poorly understood. The index was defined as the squared norm of the canonical projection $e_N: L^2(M) \to L^2(N)$, viewed as an operator on the Hilbert space.
 
-Jones's work is notable for its depth, elegance, and far-reaching
-impact. The Jones index theorem, the classification of subfactors, and
-the theory of planar algebras are fundamental contributions to operator
-algebras, while the Jones polynomial revolutionized knot theory and led
-to the development of quantum topology.
+Before Jones's work in the mid-1980s, it was known that the index could take any real value in $[4, \infty]$. The conjecture was that the index was a continuous parameter: any real number $\geq 4$ could be realized as the index of some subfactor. This belief was based on the intuition that operator algebras, unlike finite-dimensional algebras, often admit continuous families of invariants.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+In 1983, while studying the index of subfactors in the context of conformal field theory and statistical mechanics, Jones made a startling discovery. He found that the possible values of the index below 4 were not arbitrary: they formed a discrete set given by $4\cos^2(\pi/n)$ for integers $n \geq 3$. The index $[M:N]$ could equal $4\cos^2(\pi/n)$ for any $n \geq 3$, but nothing in between. This was completely unexpected.
 
-\section{2. Biographical Background}\label{ch1990vaughanjones:biographical-background}
+The discovery of the Jones polynomial came almost immediately after this index theorem. In 1985, while examining the trace on the Temperley--Lieb algebra, Jones noticed that a certain polynomial extracted from the trace satisfied a skein relation---the defining property of a knot invariant. This was the first new knot invariant since the Alexander polynomial of the 1920s.
 
-\subsection{2.1 Early Life}\label{ch1990vaughanjones:early-life}
+The connection between subfactors and knot theory was mediated by the \textbf{Temperley--Lieb algebra} $TL_n(\delta)$, which had been introduced in statistical mechanics in the late 1970s by Temperley and Lieb to study the Potts model and the rhombus tilings of lattices. The parameter $\delta$ was interpreted as the number of states in the model. Jones showed that when $\delta = \sqrt{[M:N]}$, the representation theory of $TL_n(\delta)$ encoded the structure of the subfactor.
 
-Vaughan Jones was born in Gisborne, New Zealand, in 1952. He grew up in
-Cambridge, New Zealand, and showed an early aptitude for mathematics and
-physics. He attended the University of Auckland, where he began his
-studies in mathematics and physics, completing a BSc in 1972 and an MSc
-in 1973.
+The skein relation $t^{-1}V_{L_+}(t) - tV_{L_-}(t) = (t^{1/2} - t^{-1/2})V_{L_0}(t)$ defines the Jones polynomial $V_K(t)$ uniquely for any oriented link $L$. For the unknot, $V_{\text{unknot}}(t) = 1$. The polynomial $V_K(t)$ is an invariant of ambient isotopy: if two knots can be deformed into each other without cutting, they have the same Jones polynomial.
 
-\subsection{2.2 Education}\label{ch1990vaughanjones:education}
+The skein relation can be viewed as a local move on knot diagrams. Given a crossing in a diagram, there are three ways to resolve it: the positive crossing $L_+$, the negative crossing $L_-$, and the smoothed crossing $L_0$. The skein relation expresses the Jones polynomial of $L_+$ in terms of $L_-$ and $L_0$.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{1972:} BSc in Mathematics, University of Auckland.
-\item
- \textbf{1973:} MSc in Mathematics, University of Auckland (under
- Graham McDonald).
-\item
- \textbf{1979:} PhD in Mathematics, University of Geneva (under André
- Haefliger).
-\end{itemize}
+A key property of the Jones polynomial is its behavior under connected sum. For two knots $K_1$ and $K_2$, the Jones polynomial of their connected sum satisfies $V_{K_1 \# K_2}(t) = V_{K_1}(t) \cdot V_{K_2}(t)$. This multiplicativity property makes the Jones polynomial useful for studying knot addition.
 
-\subsection{2.3 PhD Work}\label{ch1990vaughanjones:phd-work}
+The Jones polynomial also satisfies a symmetry property under orientation reversal. For an oriented link $L$, the Jones polynomial of the mirror image $L^*$ satisfies $V_{L^*}(t) = V_L(t^{-1})$. If $V_K(t) \neq V_K(t^{-1})$, then $K$ is not amphicheiral (equivalent to its mirror image).
 
-Jones completed his PhD at the University of Geneva under André
-Haefliger, a prominent topologist. His thesis work was on von Neumann
-algebras and their classification, laying the foundation for his later
-significant contributions. During his PhD, he became closely interested
-in the structure of factors and their inclusions, which would become the
-central theme of his mathematical career.
+The discovery of the Jones polynomial was the first major new polynomial invariant of knots since the Alexander polynomial from the 1920s. It immediately distinguished many knots that the Alexander polynomial could not, and it raised the question of whether there were other polynomial invariants.
 
-\subsection{2.4 The Move to Berkeley}\label{ch1990vaughanjones:the-move-to-berkeley}
+The connection between operator algebras and knot theory that Jones discovered opened a new field at the intersection of mathematics and mathematical physics. The representation theory of the Temperley--Lieb algebra, the structure of subfactors, and the topology of knots are all intimately connected.
 
-In 1980, Jones moved to the University of California, Berkeley, as an
-assistant professor. Berkeley became his academic home for over 30
-years, and he built a world-leading research group in operator algebras
-there. The vibrant mathematical environment at Berkeley, combined with
-Jones's deep insight, proved to be significantly productive.
+Jones's work also led to the discovery of the HOMFLY polynomial---a two-variable generalization of the Jones polynomial---and the Kauffman polynomial. These are all special cases of the quantum group invariants discovered by Reshetikhin and Turaev.
 
-\subsection{2.5 Academic Career}\label{ch1990vaughanjones:academic-career}
+The Jones index for subfactors---the set of possible values $\{4\cos^2(\pi/n) : n \geq 3\} \cup [4, \infty]$---was a complete surprise. Before Jones's work, the index was thought to be a continuous invariant. The discreteness of the index below 4 is a deep fact in operator algebra theory with profound implications for the structure of subfactors.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{1979--1980:} Research Fellow, University of Geneva.
-\item
- \textbf{1980--1985:} Assistant then Associate Professor, University of
- California, Berkeley.
-\item
- \textbf{1985--2011:} Professor, University of California, Berkeley ---
- where he built a world-leading school in operator algebras.
-\item
- \textbf{1990:} Fields Medal (shared with Vladimir Drinfeld, Shigefumi
- Mori, Edward Witten), ICM Kyoto.
-\item
- \textbf{2011--2020:} Distinguished Professor, Vanderbilt University.
-\item
- \textbf{1990:} Elected Fellow of the Royal Society of London.
-\item
- \textbf{1992:} Elected Fellow of the American Academy of Arts and
- Sciences.
-\item
- \textbf{2001:} Elected to the National Academy of Sciences (USA).
-\item
- \textbf{2020:} Passed away on September 6, 2020, in Nashville,
- Tennessee, due to complications from an ear infection.
-\end{itemize}
+\section{How Was It Solved}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The Temperley--Lieb algebra $TL_n(\delta)$ is a quotient of the Hecke algebra $H_n(q)$ generated by $U_1, \ldots, U_{n-1}$ satisfying the relations $U_i U_{i\pm 1} U_i = U_i$ and $U_i U_j = U_j U_i$ for $|i-j| \geq 2$, with $\delta = q^{1/2} + q^{-1/2}$. The algebra $TL_n(\delta)$ has dimension equal to the Catalan number $C_n = \frac{1}{n+1}\binom{2n}{n}$.
 
-\section{3. Von Neumann Algebras}\label{ch1990vaughanjones:von-neumann-algebras}
+The Jones polynomial is defined using the representation theory of $TL_n(\delta)$. Given a link $L$, one projects the link diagram onto $n$ strands using the Temperley--Lieb projection $E_i = \frac{1}{\delta}(U_i + 1)$. The resulting element $T_L \in TL_n(\delta)$ is a link invariant---it does not depend on the projection.
 
-\subsection{3.1 Definition}\label{ch1990vaughanjones:definition}
+The skein relation follows from the relation $U_i^2 = \delta U_i$ in the Temperley--Lieb algebra. If one replaces a crossing $L_+$ by the combination $\frac{1}{\delta}(U_i + 1)$, one obtains a linear combination of $L_-$ and $L_0$. The skein relation is a consequence of this algebraic identity.
 
-A \textbf{von Neumann algebra} is a \(*\)-algebra of bounded operators
-on a Hilbert space \(H\) that is closed in the weak operator topology
-(WOT) and contains the identity operator. They were introduced by John
-von Neumann in 1936 as a rigorous framework for quantum mechanics.
+The \textbf{subfactor index} of $N \subset M$ is defined as $[M:N] = \Delta(M|N)$, where $\Delta(M|N)$ is the Jones index. Jones showed that the possible values of the index are $4\cos^2(\pi/n)$ for $n \geq 3$, and any value $\geq 4$. This ``index'' is the same as the dimension of the relative commutant $M' \cap M$ in the basic construction.
 
-\subsection{3.2 Factors}\label{ch1990vaughanjones:factors}
+The index $[M:N]$ can be understood geometrically as the dimension of $L^2(M)$ viewed as a module over $N$. If $M$ and $N$ are Type II$_1$ factors, then $L^2(M)$ decomposes as a direct sum of copies of $L^2(N)$, and the number of copies is exactly the index.
 
-A von Neumann algebra whose center \(Z(M) = M \cap M'\) consists only of
-scalar multiples of the identity is called a \textbf{factor}. Factors
-are the atomic building blocks of von Neumann algebras, classified by
-Murray and von Neumann into types I, II\(_1\), II\(_\infty\), and III.
+For finite-dimensional algebras, the index is simply the ratio of dimensions: $[M:N] = \dim(M)/\dim(N)$. For Type II$_1$ factors, the trace plays the role of dimension, and the index is defined using the trace of the conditional expectation.
 
-\subsection{3.3 Subfactors}\label{ch1990vaughanjones:subfactors}
+The \textbf{Pimsner--Popa basis} provides an explicit description of the subfactor. If $[M:N] < \infty$, there exists a finite set $\{\lambda_i\} \subset M$ such that any $m \in M$ can be written as $m = \sum_i \lambda_i E_N(\lambda_i^* m)$ and $E_N(\lambda_i^* \lambda_j) = [M:N]^{-1} \delta_{ij}$.
 
-A \textbf{subfactor} is an inclusion \(N \subset M\) of one factor into
-another. Subfactor theory studies the structure of such inclusions and
-their invariants. Jones's work on subfactors completely transformed this
-area, revealing deep connections to knot theory, statistical mechanics,
-and quantum field theory.
+The \textbf{basic construction} is an iterated procedure that produces a tower of factors $N \subset M \subset M_1 \subset M_2 \subset \cdots$ where $M_{k+1} = \langle M_k, e_k \rangle$ and $e_k$ is the Jones projection. The Jones projections satisfy $e_k^2 = e_k$ and $e_k e_{k\pm 1} e_k = \tau e_k$ where $\tau = [M:N]^{-1}$.
 
-\subsection{3.4 Jones's Work on Von Neumann
-Algebras}\label{ch1990vaughanjones:joness-work-on-von-neumann-algebras}
+The Jones projection $e_N: L^2(M) \to L^2(N)$ is defined by $e_N(\xi) = E_N(\xi)$ where $E_N: M \to N$ is the unique trace-preserving conditional expectation. This projection implements the inclusion $N \subset M$ in the basic construction.
 
-Jones made several fundamental contributions to the theory of von
-Neumann algebras: - The classification of subfactors of type II\(_1\)
-factors, establishing the connection between subfactor theory and the
-ADE classification of Dynkin diagrams. - The Jones index and its
-notable quantization theorem, which showed that subfactor indices
-take discrete values below 4. - The standard invariant (the Jones tower)
-and its lattice of relative commutants, providing a complete set of
-invariants for finite-index subfactors. - The connection between
-subfactors and Dynkin diagrams, revealing deep links between operator
-algebras and Lie theory. - The theory of planar algebras, which provides
-a graphical framework for studying subfactor invariants and their
-symmetries.
+The first step of the basic construction produces $M_1 = \langle M, e_N \rangle \subset B(L^2(M))$. The algebra $M_1$ is generated by $M$ (acting by left multiplication) and the projection $e_N$ (which acts as the conditional expectation).
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The index of each step in the tower satisfies $[M_k : M_{k-1}] = [M:N]$ for all $k \geq 1$. This constancy of index is a remarkable property that reflects the rigidity of the subfactor structure.
 
-\section{4. The Jones Index}\label{ch1990vaughanjones:the-jones-index}
+The \textbf{dual basic construction} produces the opposite tower $M \subset M' \subset M'_1 \subset \cdots$ where $M'$ is the commutant of $M$ in $B(L^2(M))$. The Pimsner--Popa duality relates the original tower to its dual.
 
-\subsection{4.1 Definition}\label{ch1990vaughanjones:definition-1}
+\subsection*{The Jones Index Theorem}
 
-Let \(N \subset M\) be a subfactor of a type II\(_1\) factor. The
-\textbf{Jones index} \([M : N]\) is a measure of the relative size of
-\(N\) inside \(M\), analogous to the dimension of a field extension in
-Galois theory. It is defined as the von Neumann dimension of \(M\) as an
-\(N\)-module, denoted \(\dim_N(M)\). For a finite index subfactor, this
-is always at least 1, with equality if and only if \(N = M\).
+\textbf{Theorem (Jones, 1983).} Let $N \subset M$ be an inclusion of Type II$_1$ factors with finite index $[M:N]$. Then either $[M:N] = 4\cos^2(\pi/n)$ for some integer $n \geq 3$, or $[M:N] \geq 4$.
 
-\subsection{4.2 Basic Properties}\label{ch1990vaughanjones:basic-properties}
+The proof uses the basic construction to build the tower $N \subset M \subset M_1 \subset M_2 \subset \cdots$. The key idea is that the sequence of indices $[M_k : M_{k-1}]$ is non-increasing, and the product of these indices equals the total index $[M:N]$.
 
-The Jones index satisfies: - \textbf{Multiplicativity:}
-\([M : N] = [M : L][L : N]\) for a tower \(N \subset L \subset M\). -
-\textbf{Duality:} \([M : N] = [N' : M']\) for the commutants. - The
-index is always \(\geq 1\), and \([M : N] = 1\) iff \(N = M\).
+Let $e_1: L^2(M) \to L^2(N)$ be the conditional expectation onto $N$, viewed as an operator on $L^2(M)$. The projection $e_1$ satisfies $e_1 x e_1 = \tau(x) e_1$ for all $x \in M$, where $\tau$ is the trace. The algebra $M_1 = \langle M, e_1 \rangle$ is generated by $M$ and $e_1$ inside $B(L^2(M))$.
 
-\subsection{4.3 The Jones Index Theorem}\label{ch1990vaughanjones:the-jones-index-theorem}
+One shows that $[M_1:M] = [M:N]$ and that the same index calculation applies at each stage. The sequence of relative commutants $M_k' \cap M_{k+1}$ forms a ladder of algebras whose dimensions are governed by the Temperley--Lieb relations.
 
-Jones proved the notable \textbf{Jones index theorem}, which was
-completely unexpected:
+For index values less than 4, the Temperley--Lieb algebra $TL_n(\\delta)$ with $\\delta = \\sqrt{[M:N]}$ has a specific structure: the number of simple modules is finite, and this finiteness imposes the constraint that $\\delta = 2\\cos(\\pi/n)$. The connection to the Coxeter number of the Dynkin diagram $A_{n-1}$ is the key to the discreteness.
 
+\subsection*{The Basic Construction and Tower of Factors}
+
+Given $N \subset M$, the basic construction produces $M_1 = \langle M, e_N \rangle$, where $e_N$ is the Jones projection implementing the conditional expectation $E_N: M \to N$. The tower continues: $M_{k+1} = \langle M_k, e_k \rangle$ where $e_k$ is the Jones projection for $M_k \subset M_{k+1}$.
+
+The tower $N \subset M \subset M_1 \subset M_2 \subset \cdots$ satisfies the \textbf{Poirier--Takai dualities}: $(M_k)' \cap M_{k+1} \cong M' \cap N$ and $[M_{k+1}:M_k] = [M:N]$ for all $k$.
+
+The \textbf{standard invariant} of a subfactor is the sequence of relative commutants $M_k' \cap M_l$ for $k \leq l$, organized as a planar algebra. This invariant captures all the information about the subfactor up to outer conjugacy.
+
+\subsection*{Braid Group Representations}
+
+The braid group $B_n$ on $n$ strands is generated by $\sigma_1, \ldots, \sigma_{n-1}$ satisfying the braid relations $\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}$ and $\sigma_i \sigma_j = \sigma_j \sigma_i$ for $|i-j| \geq 2$.
+
+The \textbf{Burau representation} gives a representation of $B_n$ on $\mathbb{C}^n$ by matrices depending on a parameter $t$. The Burau representation is not faithful for $n \geq 5$ (Long--Patel--Chan theorem, 2021).
+
+The \textbf{Hecke algebra} $H_n(q)$ is the quotient of $\mathbb{C}[B_n]$ by the relations $(\sigma_i - q)(\sigma_i + 1) = 0$. This gives a representation of $B_n$ on the Hecke algebra itself.
+
+The \textbf{Temperley--Lieb algebra} $TL_n(\delta)$ is a quotient of $H_n(q)$ obtained by setting $\delta = q^{1/2} + q^{-1/2}$ and imposing the additional relation $U_i U_{i\pm 1} U_i = U_i$.
+
+Given a braid $\beta \in B_n$, its image in $TL_n(\delta)$ is a linear combination of Temperley--Lieb diagrams. The \textbf{Markov trace} $\text{tr}: TL_n(\delta) \to \mathbb{C}$ satisfies $\text{tr}(xy) = \text{tr}(yx)$ and $\text{tr}(xU_n) = \tau \text{tr}(x)$ where $\tau = [M:N]^{-1}$.
+
+The Markov trace is unique up to scalar multiplication. Its existence is guaranteed by the tracial property of the canonical trace on the subfactor tower. The parameter $\tau$ is determined by the index: $\tau = [M:N]^{-1}$.
+
+The Markov property $\text{tr}(xU_n) = \tau \text{tr}(x)$ corresponds to the second Reidemeister move in knot theory. This ensures that the polynomial invariant is independent of the braid index used to represent the link.
+
+The \textbf{normalization} of the Jones polynomial uses the writhe $w(L)$ of a link diagram. The writhe is the sum of signs of all crossings in the diagram. The normalized Jones polynomial satisfies $V_{L \sqcup \bigcirc}(t) = (-t^{1/2} - t^{-1/2}) V_L(t)$.
+
+The Jones polynomial of a link $L$ obtained as the closure of a braid $\beta$ is given by $V_L(t) = (-1)^{n-1} t^{(w(\beta)-n+1)/2} \text{tr}(\rho(\beta))$, where $w(\beta)$ is the writhe of $\beta$ and $\rho: B_n \to TL_n(\delta)$ is the representation.
+
+The \textbf{Markov theorem} states that two braids have isotopic closures if and only if they are related by a sequence of Markov moves: conjugation in $B_n$ and stabilization (adding a trivial strand). The Markov trace on $TL_n(\delta)$ is invariant under these moves.
+
+The first Markov move corresponds to the trace property $\text{tr}(xy) = \text{tr}(yx)$, while the second Markov move corresponds to the property $\text{tr}(xU_n) = \tau \text{tr}(x)$. These properties ensure that the Jones polynomial is well-defined on links.
+
+\subsection*{The Skein Relation and Recursion}
+
+The skein relation for the Jones polynomial is:
 \[
-[M : N] \in \{4 \cos^2(\pi/n) : n = 3, 4, 5, \ldots\} \cup [4, \infty]
+t^{-1} V_{L_+}(t) - t V_{L_-}(t) = (t^{1/2} - t^{-1/2}) V_{L_0}(t)
 \]
+where $L_+$, $L_-$, and $L_0$ are three link diagrams that differ only at one crossing: $L_+$ has a positive crossing, $L_-$ has a negative crossing, and $L_0$ has the crossing resolved (smoothed).
 
-That is, the index can only take specific discrete values below 4:
+To compute the Jones polynomial of a knot, one uses the skein relation recursively to reduce to simpler links. For example, the trefoil knot $3_1$ has Jones polynomial $V_{3_1}(t) = t + t^3 - t^4$.
 
+The Kauffman bracket provides an alternative approach. The \textbf{Kauffman bracket} $\langle L \rangle$ of an unoriented link diagram satisfies:
 \[
-4 \cos^2(\pi/3) = 1, \quad 4 \cos^2(\pi/4) = 2, \quad 4 \cos^2(\pi/5) = \phi^2 \approx 2.618, \ldots
+\langle L_+ \rangle = A \langle L_0 \rangle + A^{-1} \langle L_\infty \rangle, \quad \langle \bigcirc \sqcup L \rangle = (-A^2 - A^{-2}) \langle L \rangle
 \]
-
-and any value \(\geq 4\) is possible.
-
-\subsection{4.5 Connection to Dynkin
-Diagrams}\label{ch1990vaughanjones:connection-to-dynkin-diagrams}
-
-One of the most striking aspects of the Jones index theorem is its
-connection to the ADE classification of Dynkin diagrams. The discrete
-values below 4 correspond to: - \(A_n\): index \(4 \cos^2(\pi/(n+1))\) -
-\(D_n\): index \(4 \cos^2(\pi/(2n-2))\) - \(E_6\): index
-\(4 \cos^2(\pi/12) \approx 3.732\) - \(E_7\): index
-\(4 \cos^2(\pi/18) \approx 3.879\) - \(E_8\): index
-\(4 \cos^2(\pi/30) \approx 3.956\)
-
-This connection to the ADE classification --- which appears in such
-diverse areas as Lie algebras, singularity theory, and conformal field
-theory --- hinted at deep underlying structures yet to be discovered.
-
-\subsection{4.6 Significance}\label{ch1990vaughanjones:significance}
-
-The Jones index theorem was completely unexpected and revolutionized
-operator algebra theory. It showed that subfactors have a remarkably
-rigid structure, with the index taking only discrete values below 4, and
-revealed a deep connection between von Neumann algebras and the
-classification of Dynkin diagrams. The theorem remains one of the most
-well-known results in operator algebra theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. Subfactors and Their
-Classification}\label{ch1990vaughanjones:subfactors-and-their-classification}
-
-\subsection{5.1 Subfactor Theory}\label{ch1990vaughanjones:subfactor-theory}
-
-Subfactor theory studies the inclusion \(N \subset M\) of one factor
-into another. The fundamental invariant of a subfactor is its
-\textbf{standard invariant} (also called the Jones standard invariant),
-which encodes the lattice of relative commutants of the iterated basic
-construction. The standard invariant is a complete invariant for certain
-classes of subfactors and provides all the information needed to
-reconstruct the subfactor.
-
-\subsection{5.2 The Basic Construction}\label{ch1990vaughanjones:the-basic-construction}
-
-Given a subfactor \(N \subset M\) with finite index, Jones introduced
-the \textbf{basic construction}: let \(e_N\) be the projection from
-\(M\) onto \(N\) (the Jones projection), and define
-\(M_1 = \langle M, e_N \rangle\), the von Neumann algebra generated by
-\(M\) and \(e_N\). This gives an extended factor:
-
+where $L_0$ and $L_\infty$ are the two smoothings of a crossing. The Jones polynomial is recovered from the bracket by:
 \[
-N \subset M \subset M_1
+V_K(t) = (-A)^{-3w(L)} \langle L \rangle \big|_{A = t^{-1/4}}
 \]
+where $w(L)$ is the writhe of the diagram.
 
-\subsection{5.3 The Jones Tower}\label{ch1990vaughanjones:the-jones-tower}
+\subsection*{Connection to Subfactor Theory}
 
-Iterating the basic construction yields the \textbf{Jones tower}:
+The parameter $\delta$ in the Temperley--Lieb algebra is related to the subfactor index by $\delta = \sqrt{[M:N]}$. The Markov trace on $TL_n(\delta)$ corresponds to the canonical trace on the subfactor tower.
 
+The dimension of the relative commutant $M_k' \cap M_l$ is given by the number of Temperley--Lieb diagrams with $l-k$ pairs of through strings, which is the Catalan number $C_{l-k}$. This connects the combinatorics of the Temperley--Lieb algebra to the structure theory of subfactors.
+
+\section{Impact of This Discovery}
+
+The Jones polynomial revolutionized knot theory by providing a new set of invariants that are much stronger than the Alexander polynomial. The Jones polynomial can distinguish the trefoil from its mirror image, which the Alexander polynomial cannot. It also detects the unknot: if $V_K(t) = 1$, then $K$ is the unknot (though this is not the case for the Alexander polynomial).
+
+The connection between subfactors and knots led to the theory of \textbf{planar algebras}, introduced by Jones in 1999. Planar algebras are a diagrammatic framework for studying subfactors that encodes the representation theory of the Temperley--Lieb algebra in a more geometric way. The planar algebra of a subfactor is a collection of vector spaces indexed by planar tangles.
+
+A \textbf{planar algebra} $P$ consists of vector spaces $P_n$ for $n \geq 0$ together with actions of planar tangles. A planar tangle is a rectangle with holes (discs) removed, where the boundary components are labeled by integers. The action of a tangle $T$ is a multilinear map $P_{n_1} \times \cdots \times P_{n_k} \to P_m$ where $m$ and the $n_i$ are the number of boundary points.
+
+The \textbf{standard invariant} of a subfactor $N \subset M$ is the planar algebra $P$ where $P_n = N' \cap M_n$ with the appropriate identifications. The Jones projections $e_i$ generate the Temperley--Lieb subalgebra inside the planar algebra.
+
+The Jones polynomial is the foundation for the theory of \textbf{quantum invariants} of 3-manifolds. The Witten--Reshetikhin--Turaev invariants, which are the rigorous version of Witten's Chern--Simons path integral, are defined using the representation theory of quantum groups. The Jones polynomial is the case of the quantum group $U_q(\mathfrak{sl}_2)$.
+
+\subsection*{Quantum Groups and the RT Invariants}
+
+The \textbf{quantum group} $U_q(\mathfrak{sl}_2)$ is a Hopf algebra deformation of the universal enveloping algebra $U(\mathfrak{sl}_2)$. For $q$ a root of unity, the category of representations is a modular tensor category.
+
+The \textbf{Reshetikhin--Turaev invariant} $Z_M(\mathfrak{g}, q)$ of a 3-manifold $M$ is constructed by decomposing $M$ into Handlebody surgery data and assigning invariants to the colored links. For the Jones polynomial, one takes $\mathfrak{g} = \mathfrak{sl}_2$ and $q = e^{2\pi i/(r+2)}$ for integer $r \geq 1$.
+
+The \textbf{Turaev--Viro invariant} $TV(M)$ is a state-sum invariant defined using the quantum $6j$-symbols of $U_q(\mathfrak{sl}_2)$. It satisfies $TV(S^3 \times S^1) = |Z_{RT}(S^3 \times S^1)|^2$.
+
+\subsection*{Applications to Quantum Computing}
+
+The connection to quantum computing was established by Freedman, Larsen, and Wang (2003). They showed that the Jones polynomial is \textbf{universal for quantum computation}: any quantum computation can be simulated by computing the Jones polynomial of a specific link at a root of unity. This means that computing the Jones polynomial is \textbf{BQP-complete}.
+
+The Kitaev--Freedman--Wang model uses the Temperley--Lieb algebra to construct a topological quantum computer. The ground state space of a certain Hamiltonian on a lattice is isomorphic to the space of conformal blocks of $SU(2)_k$ Chern--Simons theory, and the braiding of anyons gives a representation of the braid group.
+
+The \textbf{Temperley--Lieb algebra} provides the algebraic framework for the anyonic statistics of the fractional quantum Hall effect. The fusion rules of the anyons are encoded in the planar algebra of the subfactor.
+
+\subsection*{The HOMFLY and Kauffman Polynomials}
+
+The \textbf{HOMFLY polynomial} $P(a, z)$ generalizes the Jones polynomial to a two-variable invariant. It is defined by the skein relation:
 \[
-N \subset M \subset M_1 \subset M_2 \subset \cdots
+a P(L_+) - a^{-1} P(L_-) = z P(L_0)
 \]
+where $L_+$, $L_-$, and $L_0$ are related as before. Setting $a = q$ and $z = q^{1/2} - q^{-1/2}$ recovers the Jones polynomial.
 
-The relative commutants \(\{N' \cap M_k\}\) form a lattice of
-finite-dimensional \(C^*\)-algebras that encode the standard invariant
-of the subfactor.
-
-\subsection{5.4 Classification of
-Subfactors}\label{ch1990vaughanjones:classification-of-subfactors}
-
-Jones classified subfactors with index less than 4. The classification
-is intimately tied to Dynkin diagrams: - \(A_n\): index
-\(4 \cos^2(\pi/(n+1))\) - \(D_n\): index \(4 \cos^2(\pi/(2n-2))\) -
-\(E_6\): index \(4 \cos^2(\pi/12) \approx 3.732\) - \(E_7\): index
-\(4 \cos^2(\pi/18) \approx 3.879\) - \(E_8\): index
-\(4 \cos^2(\pi/30) \approx 3.956\)
-
-The classification was later extended by Ocneanu, Popa, and others to
-include many more examples, but Jones's initial work established the
-fundamental framework.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. The Temperley--Lieb
-Algebra}\label{ch1990vaughanjones:the-temperleylieb-algebra}
-
-\subsection{6.1 Definition}\label{ch1990vaughanjones:definition-2}
-
-The \textbf{Temperley--Lieb algebra} \(TL_n(\delta)\), introduced by
-Neville Temperley and Elliott Lieb in the context of statistical
-mechanics, is an algebra generated by projections
-\(e_1, \ldots, e_{n-1}\) satisfying:
-
+The \textbf{Kauffman polynomial} $F(a, z)$ is another two-variable invariant defined using the Kauffman bracket. It satisfies:
 \[
-e_i^2 = e_i, \quad e_i e_{i\pm 1} e_i = \delta e_i, \quad e_i e_j = e_j e_i \text{ for } |i-j| \geq 2
+F(L_+) - F(L_-) = z(F(L_0) - F(L_\infty)), \quad F(\bigcirc) = 1
 \]
+The Kauffman polynomial detects amphicheirality: a knot is amphicheiral if and only if $F(a, z) = F(a^{-1}, z)$.
 
-where \(\delta \in \mathbb{C}\) is a parameter. The algebra can also be
-described graphically using planar diagrams: the generators are
-represented by pairs of arcs connecting points on two parallel lines.
+The HOMFLY and Kauffman polynomials are special cases of the \textbf{quantum group invariants} associated to Lie algebras. For $\mathfrak{g} = \mathfrak{sl}_n$, the quantum invariant generalizes the Jones polynomial. For $\mathfrak{g} = \mathfrak{so}_n$, one obtains the Kauffman polynomial.
 
-\subsection{6.2 Jones's Role}\label{ch1990vaughanjones:joness-role}
+\subsection*{Subfactor Classification and ADE Dynkin Diagrams}
 
-Jones recognized the Temperley--Lieb algebra within von Neumann algebras
-as the relative commutant of the Jones tower. For a subfactor
-\(N \subset M\) with index \([M:N] = \delta^2\), the relative commutants
-\(N' \cap M_k\) are isomorphic to \(TL_{k+1}(\delta)\).
+The Jones index theorem has deep implications for the structure of subfactors. The index $[M:N]$ is related to the global dimension of the fusion category associated to the subfactor, and the discrete values below 4 correspond to the quantum dimensions of the fusion categories of type $A$, $D$, and $E$.
 
-\subsection{6.3 The Markov Trace}\label{ch1990vaughanjones:the-markov-trace}
+The \textbf{ADEF classification} of subfactors of small index is one of the most beautiful results in operator algebras. For index $< 4$, the possible values are $4\cos^2(\pi/n)$ for $n = 3, 4, 5, \ldots$, corresponding to the $A_{n-1}$ series of Dynkin diagrams. The values at index 4 correspond to the $D$ and $E$ series.
 
-Jones discovered a notable trace on the Temperley--Lieb algebra that
-satisfies the Markov property. This \textbf{Markov trace} is a family of
-linear functionals \(\text{tr}: TL_n(\delta) \to \mathbb{C}\)
-satisfying: - \(\text{tr}(1) = 1\) -
-\(\text{tr}(xe_n) = \delta \text{tr}(x)\) for \(x \in TL_n(\delta)\) -
-\(\text{tr}(xy) = \text{tr}(yx)\)
+The \textbf{principal graph} of a subfactor $N \subset M$ is a bipartite graph whose vertices are the simple objects in $N' \cap M$ and $M' \cap N$, and edges encode the fusion rules. For the $A_{n-1}$ series, the principal graph is the Dynkin diagram $A_{n-1}$ itself.
 
-This trace, when applied to braids via the representation of the braid
-group in the Temperley--Lieb algebra, produces a polynomial invariant of
-knots and links --- the Jones polynomial.
+The \textbf{dual graph} is obtained by interchanging the roles of $N$ and $M$. For an irreducible subfactor (where $N' \cap M = \mathbb{C}$), the principal graph has a distinguished starting vertex of degree 1.
 
-\subsection{6.4 Connection to Braid
-Groups}\label{ch1990vaughanjones:connection-to-braid-groups}
+The \textbf{fusion rules} of the subfactor are encoded in the adjacency matrix of the principal graph. The eigenvalues of the adjacency matrix are related to the quantum dimensions of the simple objects.
 
-The braid group \(B_n\) has a natural representation in the
-Temperley--Lieb algebra, given by:
+For index values $4\cos^2(\pi/n)$, the principal graph is the Dynkin diagram $A_{n-1}$ with all edges having multiplicity 1. The fusion rules are those of the Virasoro minimal model $\mathcal{M}(n, n+1)$.
 
+For index $[M:N] = 4\cos^2(\pi/n)$, the subfactor is called a \textbf{minimal subfactor} and its standard invariant is determined by the Temperley--Lieb algebra with $\delta = 2\cos(\pi/n)$.
+
+\subsection*{The Basic Construction Tower and Periodicity}
+
+The basic construction tower $N \subset M \subset M_1 \subset M_2 \subset \cdots$ associated to a subfactor of finite index has remarkable periodicity properties. For an extremal subfactor (one with minimal index), the tower is periodic with period related to the Coxeter number of the corresponding Dynkin diagram.
+
+The \textbf{index sequence} $[M_k : M_{k-1}]$ is non-increasing, and for a subfactor of finite depth, the sequence becomes periodic after finitely many steps. The period is determined by the structure of the planar algebra.
+
+The \textbf{standard invariant} of a subfactor of finite depth is a finite-dimensional planar algebra. The dimension of $P_n$ grows polynomially in $n$, and the growth rate is determined by the index.
+
+\section{Modern Views and Improvements}
+
+The \textbf{categorification} of the Jones polynomial was discovered by Khovanov in 2000. Khovanov homology is a chain complex whose Euler characteristic is the Jones polynomial. This categorification provides stronger invariants than the Jones polynomial and has applications to the study of four-manifolds through gauge theory.
+
+The \textbf{Khovanov homology} $Kh^{i,j}(K)$ of a knot $K$ is a bigraded vector space. The Jones polynomial is recovered as the Euler characteristic: $V_K(t) = \sum_{i,j} (-1)^i t^j \dim Kh^{i,j}(K)$. The categorification detects the unknot: if $Kh^{*,*}(K)$ is the homology of the unknot, then $K$ is the unknot (Kronheimer--Mrowka, 2016).
+
+Khovanov homology assigns to each crossing resolution a vector space, and the differential is defined by merging and splitting operations. The homology is invariant under all three Reidemeister moves, making it a knot invariant.
+
+The \textbf{reduced Khovanov homology} $\widehat{Kh}(K)$ is obtained by removing one base point from the diagram. The dimension of the reduced homology is related to the classical knot invariants: $\dim \widehat{Kh}(K) \geq 1$, with equality if and only if $K$ is the unknot.
+
+Khovanov homology has connections to \textbf{contact geometry} and \textbf{symplectic field theory}. The Khovanov homology of a transverse knot is related to the contact invariant in Heegaard Floer homology.
+
+The relationship between the Jones polynomial and hyperbolic geometry is explored through the \textbf{volume conjecture}. The colored Jones polynomial determines the hyperbolic volume of a knot complement. The conjecture states that:
 \[
-\sigma_i \mapsto t e_i + (1 - t)
+\lim_{n \to \infty} \frac{2\pi}{n} \log |J_K(n)| = \text{vol}(S^3 \setminus K)
 \]
+where $J_K(n)$ is the $n$-th colored Jones polynomial. This conjecture is verified for many examples, including the figure-eight knot and the trefoil.
 
-for a parameter \(t\). The Markov trace of this representation, after
-appropriate normalization, yields the Jones polynomial of the closure of
-the braid.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{7. The Jones Polynomial}\label{ch1990vaughanjones:the-jones-polynomial}
-
-\subsection{7.1 Discovery}\label{ch1990vaughanjones:discovery}
-
-In 1984, Jones discovered a new polynomial invariant of knots and links,
-now called the \textbf{Jones polynomial}. The discovery came from his
-study of the Temperley--Lieb algebra and its Markov trace, applied to
-representations of the braid group. The announcement of the Jones
-polynomial created an immediate sensation in the mathematical community,
-as it was the first new polynomial knot invariant since the Alexander
-polynomial in 1928.
-
-\subsection{7.2 Definition}\label{ch1990vaughanjones:definition-3}
-
-The Jones polynomial \(V_L(t)\) is a Laurent polynomial in \(\sqrt{t}\)
-(or equivalently, a Laurent polynomial in \(t\) with half-integer
-exponents) associated to an oriented knot or link \(L\). It is uniquely
-characterized by:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Normalization:} \(V_{\bigcirc}(t) = 1\) for the unknot.
-\item
- \textbf{Skein relation:}
-\end{itemize}
-
-\[
-t^{-1} V_{L_+} - t V_{L_-} = (\sqrt{t} - 1/\sqrt{t}) V_{L_0}
-\]
-
-where \(L_+, L_-\), and \(L_0\) are three oriented links that are
-identical except in a small neighborhood where they differ as shown:
-\(L_+\) has a positive crossing, \(L_-\) has a negative crossing, and
-\(L_0\) has the crossing resolved.
-
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[scale=0.9, every node/.style={scale=0.9}]
-  % L+ : positive crossing
-  \begin{scope}[shift={(0,0)}]
-    \draw[thick,->] (-1,-1) -- (1,1);
-    \draw[thick,->] (-1,1) -- (1,-1);
-    \fill[white] (-0.15,-0.15) rectangle (0.15,0.15);
-    \draw[thick,->] (0.15,0.15) -- (1,1);
-    \draw[thick,->] (-1,-1) -- (-0.15,-0.15);
-    \node[below] at (0,-1.3) {\(L_+\)};
-  \end{scope}
-  % L- : negative crossing
-  \begin{scope}[shift={(3.5,0)}]
-    \draw[thick,->] (-1,1) -- (1,-1);
-    \draw[thick,->] (-1,-1) -- (1,1);
-    \fill[white] (-0.15,-0.15) rectangle (0.15,0.15);
-    \draw[thick,->] (0.15,-0.15) -- (1,-1);
-    \draw[thick,->] (-1,1) -- (-0.15,0.15);
-    \node[below] at (0,-1.3) {\(L_-\)};
-  \end{scope}
-  % L0 : resolved
-  \begin{scope}[shift={(7,0)}]
-    \draw[thick,->] (-1,-1) -- (-0.2,0);
-    \draw[thick,->] (0.2,0) -- (1,-1);
-    \draw[thick,->] (-1,1) -- (-0.2,0);
-    \draw[thick,->] (0.2,0) -- (1,1);
-    \node[below] at (0,-1.3) {\(L_0\)};
-  \end{scope}
-  % Equal signs
-  \node[below] at (1.75,-0.5) {\Large\(\displaystyle\)};
-  \node[below] at (5.25,-0.5) {\Large\(\displaystyle\)};
-\end{tikzpicture}
-\caption{The three configurations in the skein relation: positive crossing \(L_+\), negative crossing \(L_-\), and resolved crossing \(L_0\).}
-\label{fig:skein-relation}
-\end{figure}
-
-\subsection{7.3 Properties}\label{ch1990vaughanjones:properties}
-
-The Jones polynomial has several important properties: -
-\textbf{Invariance:} \(V_L(t)\) is invariant under ambient isotopy of
-the link. - \textbf{Mirror images:} \(V_{L^*}(t) = V_L(t^{-1})\), where
-\(L^*\) is the mirror image of \(L\). - \textbf{Value at 1:}
-\(V_L(1) = (-2)^{c-1}\) for a knot with \(c\) components; in particular,
-\(V_L(1) = 1\) for any knot. - \textbf{Connected sum:}
-\(V_{L\#L'}(t) = V_L(t) V_{L'}(t)\). - \textbf{Disjoint union:}
-\(V_{L \sqcup L'}(t) = -(t^{1/2} + t^{-1/2}) V_L(t) V_{L'}(t)\).
-
-\subsection{7.4 Examples}\label{ch1990vaughanjones:examples}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Unknot:} \(V_{\bigcirc}(t) = 1\)
-\item
- \textbf{Right-handed trefoil:} \(V(t) = t + t^3 - t^4\)
-\item
- \textbf{Left-handed trefoil:} \(V(t) = t^{-1} + t^{-3} - t^{-4}\)
-\item
- \textbf{Figure-eight knot:} \(V(t) = t^2 - t + 1 - t^{-1} + t^{-2}\)
-\item
- \textbf{Hopf link:} \(V(t) = -t^{1/2} - t^{5/2}\)
-\end{itemize}
-
-\subsection{7.5 Distinguishing Power}\label{ch1990vaughanjones:distinguishing-power}
-
-The Jones polynomial distinguishes knots that were not distinguished by
-the classical Alexander polynomial, which had been the primary knot
-invariant for over 50 years. For example, the knot \(8_{17}\) has the
-same Alexander polynomial as the figure-eight knot but a different Jones
-polynomial. The Jones polynomial can also distinguish a knot from its
-mirror image in many cases (when it is not palindromic), which the
-Alexander polynomial cannot do.
-
-\subsection{7.6 Table of Examples}\label{ch1990vaughanjones:table-of-examples}
-
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}ll@{}}
-\toprule\noalign{}
-Knot & Jones Polynomial \(V(t)\) \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Unknot & \(1\) \\
-Right trefoil & \(t + t^3 - t^4\) \\
-Left trefoil & \(t^{-1} + t^{-3} - t^{-4}\) \\
-Figure-eight & \(t^2 - t + 1 - t^{-1} + t^{-2}\) \\
-Hopf link & \(-t^{1/2} - t^{5/2}\) \\
-Whitehead link & \(t^{1/2} + t^{5/2} - t^{9/2}\) \\
-\end{longtable}
-}
-
-\subsection{7.7 Limitations}\label{ch1990vaughanjones:limitations}
-
-The Jones polynomial is not a complete invariant --- there exist
-distinct knots with the same Jones polynomial. For example, the
-Kinoshita--Terasaka knot and its mirror image have the same Jones
-polynomial. This has motivated the search for stronger invariants,
-including categorifications such as Khovanov homology.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. The Significance of the Jones
-Polynomial}\label{ch1990vaughanjones:the-significance-of-the-jones-polynomial}
-
-\subsection{8.1 Revolution in Knot
-Theory}\label{ch1990vaughanjones:revolution-in-knot-theory}
-
-The Jones polynomial revitalized knot theory, which had been a
-relatively quiet field since the 1920s. Its discovery in 1984 was one of
-the most exciting mathematical developments of the late 20th century,
-leading to an explosion of new results and generalizations: -
-\textbf{HOMFLY polynomial:} A two-variable generalization discovered
-independently by several groups (Freyd--Yetter,
-Hoste--Lickorish--Millett, Ocneanu, Przytycki--Traczyk) shortly after
-Jones's announcement. - \textbf{Kauffman polynomial:} A two-variable
-polynomial invariant discovered by Louis Kauffman using a state-sum
-model. - \textbf{Quantum invariants of three-manifolds:} The
-Witten--Reshetikhin--Turaev invariants, derived from the Jones
-polynomial and Chern--Simons theory. - \textbf{Categorification:}
-Khovanov homology, a bigraded homology theory whose Euler characteristic
-is the Jones polynomial, opened a new chapter in knot theory. -
-\textbf{New knot tables:} The Jones polynomial enabled the distinction
-of knots that had been previously indistinguishable, leading to updates
-in knot classification tables.
-
-\subsection{8.2 Connections to Physics}\label{ch1990vaughanjones:connections-to-physics}
-
-The Jones polynomial was shown by Edward Witten (also a Fields Medalist
-in 1990) to have a natural interpretation in quantum field theory. This
-was one of the most notable developments in late 20th century
-mathematical physics: - \textbf{Chern--Simons theory:} The Jones
-polynomial is the expectation value of a Wilson loop in 3-dimensional
-\(SU(2)\) Chern--Simons gauge theory. This connection provided a quantum
-field theoretic explanation for the Jones polynomial and opened the door
-to new invariants. - \textbf{Conformal field theory:} The Jones
-polynomial appears in the representation theory of the quantum group
-\(U_q(sl_2)\), which is related to the Wess--Zumino--Witten model of
-conformal field theory. - \textbf{Statistical mechanics:} The
-Temperley--Lieb algebra, from which the Jones polynomial emerged, was
-originally introduced in the study of the Potts model in statistical
-mechanics.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. The Kauffman Bracket}\label{ch1990vaughanjones:the-kauffman-bracket}
-
-\subsection{9.1 Definition}\label{ch1990vaughanjones:definition-4}
-
-The \textbf{Kauffman bracket} \(\langle D \rangle\), introduced by Louis
-Kauffman, is a state-sum model that assigns a Laurent polynomial in
-\(A\) to an unoriented link diagram \(D\). It is defined by the skein
-relations: - \(\langle \bigcirc \rangle = 1\) -
-\(\langle D \sqcup \bigcirc \rangle = (-A^2 - A^{-2}) \langle D \rangle\)
--
-\(\langle \crossing \rangle = A \langle \smoothing_0 \rangle + A^{-1} \langle \smoothing_1 \rangle\)
-
-\subsection{9.2 Relation to the Jones
-Polynomial}\label{ch1990vaughanjones:relation-to-the-jones-polynomial}
-
-The Kauffman bracket is not itself a knot invariant (it changes under
-Reidemeister move I), but it can be corrected by the writhe. For an
-oriented link \(L\), the Jones polynomial is:
-
-\[
-V_L(t) = \frac{\langle L \rangle \cdot t^{-3\text{writhe}(L)/4}}{-t^{1/2} - t^{-1/2}}
-\]
-
-where the substitution \(A = t^{-1/4}\) connects the two frameworks.
-
-\subsection{9.3 Significance}\label{ch1990vaughanjones:significance-1}
-
-The Kauffman bracket provided a simpler combinatorial description of the
-Jones polynomial and led to the discovery of the Kauffman polynomial (a
-two-variable generalization) and to Khovanov homology (a
-categorification of the Kauffman bracket).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. Planar Algebras}\label{ch1990vaughanjones:planar-algebras}
-
-\subsection{10.1 Definition}\label{ch1990vaughanjones:definition-5}
-
-Jones introduced \textbf{planar algebras} in the 1990s as a graphical
-formalism for studying subfactors and their invariants. A planar algebra
-is a collection of vector spaces \(P = \{P_n\}_{n \geq 0}\) indexed by
-natural numbers, with operations given by planar tangles (discs with
-strings connecting boundary points). The operations must satisfy natural
-gluing axioms and invariance under planar isotopy.
-
-\subsection{10.2 Graphical Calculus}\label{ch1990vaughanjones:graphical-calculus}
-
-In a planar algebra, elements of \(P_n\) are represented by labeled
-discs with \(n\) boundary points. Planar tangles act as operations: -
-Composition corresponds to gluing discs together. - The identity tangle
-corresponds to doing nothing. - Rotations, reflections, and
-transpositions of boundary points correspond to natural algebraic
-operations.
-
-\subsection{10.3 The Structure of Planar
-Algebras}\label{ch1990vaughanjones:the-structure-of-planar-algebras}
-
-A planar algebra is a graded vector space \(P = (P_n)_{n \geq 0}\) with:
-- An action of planar tangles: for any planar tangle \(T\) with \(k\)
-input discs and one output disc, there is a multilinear map
-\(T: P_{n_1} \otimes \cdots \otimes P_{n_k} \to P_m\). - Invariance
-under planar isotopy of the tangle. - Composition: gluing tangles
-corresponds to composing the operations. - A distinguished element in
-\(P_0\) and \(P_1\) (the empty diagram and the strand).
-
-\subsection{10.4 Principal Graph and
-Connection}\label{ch1990vaughanjones:principal-graph-and-connection}
-
-The principal graph of a subfactor, which records the structure of the
-relative commutants, is encoded in the planar algebra. The connection
-(the data describing how the planar algebra operates) provides a
-complete invariant of the subfactor.
-
-\subsection{10.5 Significance}\label{ch1990vaughanjones:significance-2}
-
-Planar algebras have become a central tool in subfactor theory: - They
-provide a complete description of the standard invariant of a subfactor:
-every extremal finite-index subfactor gives rise to a planar algebra,
-and conversely, every planar algebra satisfying positivity can be
-realized by a subfactor. - They offer a unifying framework for studying
-connections between subfactors, knot theory, and statistical mechanics
-through a common graphical language. - They are an effective tool for
-constructing new subfactors, including exotic examples with no classical
-analogue. - They have been used to construct topological quantum field
-theories and to study the representation theory of quantum groups. - The
-planar algebra approach has been extended to the study of tensor
-categories, fusion categories, and their applications in quantum
-information theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. Statistical Mechanics and Exactly Solvable
-Models}\label{ch1990vaughanjones:statistical-mechanics-and-exactly-solvable-models}
-
-\subsection{11.1 The Potts Model}\label{ch1990vaughanjones:the-potts-model}
-
-The Temperley--Lieb algebra appears naturally in statistical mechanics
-as the transfer matrix algebra of the \textbf{Potts model} of
-ferromagnetism. In the Potts model, each vertex of a lattice can be in
-one of \(Q\) states, and the Hamiltonian depends on whether neighboring
-vertices are in the same state.
-
-\subsection{11.2 Jones's Role}\label{ch1990vaughanjones:joness-role-1}
-
-Jones's work bridged several areas through the Temperley--Lieb algebra:
-- The representation theory of the Temperley--Lieb algebra determines
-the critical exponents of the Potts model. - The Markov trace on the
-Temperley--Lieb algebra corresponds to the partition function of the
-Potts model on a cylinder. - The Jones polynomial itself can be
-interpreted as a partition function for a statistical mechanical model
-on a knot or link diagram. - This connection led to the discovery of
-exactly solvable models in statistical mechanics related to the Jones
-polynomial.
-
-\subsection{11.3 The Yang--Baxter
-Equation}\label{ch1990vaughanjones:the-yangbaxter-equation}
-
-The Yang--Baxter equation, which is central to the theory of exactly
-solvable models in statistical mechanics, is closely related to the
-Temperley--Lieb algebra and the braid group:
-
-\[
-R_{12} R_{13} R_{23} = R_{23} R_{13} R_{12}
-\]
-
-Jones's work showed that solutions of the Yang--Baxter equation (the
-\(R\)-matrices) give rise to knot invariants through the representation
-theory of the braid group. This established a deep connection between
-statistical mechanics, quantum groups, and knot theory.
-
-\subsection{11.4 Exactly Solvable Models}\label{ch1990vaughanjones:exactly-solvable-models}
-
-The Temperley--Lieb algebra appears in several exactly solvable models:
-- The six-vertex model and its generalizations. - The XXZ spin chain,
-where the Temperley--Lieb algebra describes the transfer matrix. - The
-Potts model, where the partition function is expressed in terms of the
-Temperley--Lieb algebra. - The loop model (O(n) model), which has a
-direct connection to the Jones polynomial through the Kauffman bracket.
-
-\subsection{11.5 The Baxterization of the Jones
-Polynomial}\label{ch1990vaughanjones:the-baxterization-of-the-jones-polynomial}
-
-The Jones polynomial can be ``Baxterized'' --- that is, it can be
-obtained as the evaluation of the partition function of an exactly
-solvable statistical mechanical model. This Baxterization process,
-developed by Jones and his collaborators, provides a physical
-interpretation of the polynomial and connects knot invariants to
-statistical mechanics.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. Quantum Groups and the Jones
-Polynomial}\label{ch1990vaughanjones:quantum-groups-and-the-jones-polynomial}
-
-\subsection{\texorpdfstring{12.1 Quantum
-\(sl_2\)}{12.1 Quantum sl\_2}}\label{ch1990vaughanjones:quantum-sl_2}
-
-The Jones polynomial can be obtained from the representation theory of
-the quantum group \(U_q(sl_2)\), as shown by Reshetikhin and Turaev. For
-a knot \(K\) represented as the closure of a braid \(\beta\) acting on
-the tensor power \(V^{\otimes n}\) of the fundamental representation,
-
-\[
-J(K, q) = \text{tr}_V(q^{\rho} \rho(R))
-\]
-
-where \(V\) is the 2-dimensional fundamental representation of
-\(U_q(sl_2)\), \(\rho\) is the representation of the braid group
-obtained from the universal \(R\)-matrix, and \(\text{tr}\) is the
-quantum trace defined using the ribbon element of the quantum group.
-
-\subsection{12.2 The Quantum Trace}\label{ch1990vaughanjones:the-quantum-trace}
-
-The quantum trace is defined using the antipode \(S\) and the ribbon
-element \(v\) of \(U_q(sl_2)\):
-
-\[
-\text{tr}_V(x) = \text{Tr}_V(x v^{-1})
-\]
-
-where \(\text{Tr}_V\) is the ordinary trace on \(V\). This trace
-satisfies the Markov property and produces the Jones polynomial when
-applied to braid representations.
-
-\subsection{12.3 Colored Jones
-Polynomial}\label{ch1990vaughanjones:colored-jones-polynomial}
-
-The \textbf{colored Jones polynomial} is a generalization using
-higher-dimensional irreducible representations of \(U_q(sl_2)\). For the
-\(n\)-dimensional irreducible representation \(V_n\) of \(U_q(sl_2)\)
-(labeled by the spin \((n-1)/2\)), one obtains:
-
-\[
-J_n(K, q) = \text{tr}_{V_n}(q^{\rho} \rho_n(\beta))
-\]
-
-The colored Jones polynomial satisfies: - \textbf{Unitarity:}
-\(J_n(K, q^{-1}) = J_n(K, q)\) - \textbf{Initial condition:}
-\(J_2(K, q)\) is the ordinary Jones polynomial. -
-\textbf{Cabello--Suzuki relations:} Recursion relations that determine
-the colored Jones polynomial from the ordinary one.
-
-\subsection{12.4 The Volume Conjecture}\label{ch1990vaughanjones:the-volume-conjecture}
-
-The colored Jones polynomial plays a central role in several major
-conjectures: - \textbf{The volume conjecture} (Kashaev, Murakami,
-Murakami): For a hyperbolic knot \(K\),
-
-\[
-2\pi \lim_{N \to \infty} \frac{\log |J_N(K, e^{2\pi i/N})|}{N} = \text{Vol}(S^3 \setminus K)
-\]
-
-This conjecture relates the asymptotic growth of the colored Jones
-polynomial to the hyperbolic volume of the knot complement. -
-\textbf{The AJ conjecture} relates the colored Jones polynomial to the
-A-polynomial of a knot through a \(q\)-difference equation. -
-\textbf{Quantum modular forms:} The colored Jones polynomial has been
-shown to exhibit modularity properties, connecting it to the theory of
-quantum modular forms developed by Zagier.
-
-\subsection{12.5 Reshetikhin--Turaev
-Invariants}\label{ch1990vaughanjones:reshetikhinturaev-invariants}
-
-The Reshetikhin--Turaev construction uses the representation theory of
-quantum groups to construct invariants of 3-manifolds. For a 3-manifold
-\(M\) obtained by surgery on a framed link \(L\), the
-Witten--Reshetikhin--Turaev invariant is:
-
-\[
-Z_k(M) = \sum_{\text{colorings}} J_{\text{colored}}(L, q) \text{ at } q = e^{2\pi i/(k+2)}
-\]
-
-These invariants give a topological quantum field theory (TQFT) for
-3-manifolds, satisfying the Atiyah--Segal axioms. At level \(k\), the
-TQFT assigns: - A finite-dimensional Hilbert space to each oriented
-surface. - A state (vector) in the Hilbert space to each 3-manifold with
-boundary. - The Jones polynomial appears as the invariant of links in
-\(S^3\) at roots of unity.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. The Work on the
-Hauptvermutung}\label{ch1990vaughanjones:the-work-on-the-hauptvermutung}
-
-\subsection{13.1 Background}\label{ch1990vaughanjones:background}
-
-The \textbf{Hauptvermutung} (German for ``main conjecture'') was a
-famous conjecture in topology, originally posed by Steinitz and Tietze
-in the early 20th century: any two triangulations of a topological
-manifold should have a common refinement. This conjecture was ultimately
-shown to be false in general for manifolds of dimension 4 or higher (by
-counterexamples of Milnor, Kirby, and others), but it holds in
-dimensions 2 and 3.
-
-\subsection{13.2 Jones's Contributions}\label{ch1990vaughanjones:joness-contributions}
-
-Jones contributed to the study of triangulations and the Hauptvermutung
-early in his career: - He studied the combinatorial structure of
-triangulations of manifolds, using methods from algebraic topology and
-combinatorial topology. - He investigated the relationship between
-triangulations and the Hauptvermutung in low dimensions, particularly
-for 3-manifolds. - His work on the subject demonstrated the power of
-combinatorial methods in topology and connected triangulation theory to
-the theory of subfactors and their invariants. - The combinatorial
-perspective influenced his later work on planar algebras, which use
-planar diagrams as a combinatorial tool for studying operator algebras.
-- These early investigations into combinatorial topology shaped his
-approach to the Jones polynomial, where combinatorial skein relations
-replace analytic definitions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. The Work on Free Probability
-Theory}\label{ch1990vaughanjones:the-work-on-free-probability-theory}
-
-\subsection{14.1 Introduction}\label{ch1990vaughanjones:introduction-1}
-
-\textbf{Free probability theory}, developed by Dan Voiculescu in the
-1980s, is a non-commutative analogue of classical probability theory
-where the concept of independence is replaced by free independence. It
-has deep connections with von Neumann algebra theory, particularly the
-study of free group factors \(L(\mathbb{F}_n)\). Voiculescu is a
-leading figure in operator algebras and was elected to the National
-Academy of Sciences.
-
-\subsection{14.2 Jones's Contributions}\label{ch1990vaughanjones:joness-contributions-1}
-
-Jones contributed several important results to free probability theory:
-- The study of free group factors \(L(\mathbb{F}_n)\) and their
-subfactors, using the framework of subfactor theory developed by Jones.
-- The relationship between free probability and planar algebras, where
-the free convolution appears naturally in the planar algebra formalism
-through the operad structure. - The classification of subfactors of free
-group factors, connecting the structure of free probability to the ADE
-classification of Dynkin diagrams. - The construction of new examples of
-subfactors using free probability techniques, including exotic
-subfactors with no classical analogue. - The development of the free
-probability approach to the theory of random matrices and its connection
-to von Neumann algebras.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. The Work on Bimodules}\label{ch1990vaughanjones:the-work-on-bimodules}
-
-\subsection{15.1 Definition}\label{ch1990vaughanjones:definition-6}
-
-A \textbf{bimodule} over two von Neumann algebras \(N\) and \(M\) is a
-Hilbert space \(H\) equipped with a normal representation of \(N\) on
-the left and a normal representation of \(M^{\text{op}}\) on the right,
-such that the two actions commute. Bimodules can be composed via the
-Connes fusion product, giving a tensor category structure on the
-collection of \(N\)-\(N\) bimodules.
-
-\subsection{15.2 Jones's Contributions}\label{ch1990vaughanjones:joness-contributions-2}
-
-Jones studied the tensor category of \(N\)-\(N\) bimodules associated to
-a subfactor \(N \subset M\): - The category of bimodules generated by
-the basic construction encodes the standard invariant of the subfactor,
-providing a categorical perspective on subfactor theory. - The fusion
-rules of bimodules correspond to the multiplication in the lattice of
-relative commutants, connecting the combinatorial data of the subfactor
-to its categorical structure. - The tensor category of bimodules is
-equivalent to the representation category of the corresponding planar
-algebra, establishing a duality between subfactors and categories. -
-This perspective connected subfactor theory to the theory of tensor
-categories, quantum groups, and topological quantum field theories. -
-The categorical approach to subfactors, developed by Jones with Ocneanu,
-Popa, and others, has become a central tool in the study of quantum
-symmetries.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. The Work on Conformal Field
-Theory}\label{ch1990vaughanjones:the-work-on-conformal-field-theory}
-
-\subsection{16.1 Connection}\label{ch1990vaughanjones:connection}
-
-Jones's work on subfactors found deep applications in conformal field
-theory (CFT), particularly in the classification of modular invariants
-and the construction of topological quantum field theories (TQFTs). The
-connection between subfactors and CFT was first observed by Jones and
-later systematically developed by Adrian Ocneanu, Yasuyuki Kawahigashi,
-and others.
-
-\subsection{16.2 Modular Invariants}\label{ch1990vaughanjones:modular-invariants}
-
-In rational conformal field theory, the partition function on a torus
-must be invariant under the action of the modular group
-\(SL(2,\mathbb{Z})\). The classification of such modular invariants is a
-central problem in CFT: - Subfactors with the \(A_n\), \(D_n\), and
-\(E_n\) Dynkin diagrams correspond to the ADE classification of modular
-invariants for the \(SU(2)\) WZW model at level \(k\). - The subfactor
-approach to modular invariants, developed by Ocneanu, Kawahigashi, and
-others, provides a systematic framework for classifying modular
-invariants for more general conformal field theories. - This work
-connected the classification of modular invariants to the classification
-of subfactors, establishing a deep link between operator algebras and
-conformal field theory.
-
-\subsection{16.3 TQFT}\label{ch1990vaughanjones:tqft}
-
-Jones's work on subfactors and planar algebras contributed to the
-construction of topological quantum field theories: - The
-Reshetikhin--Turaev construction uses quantum groups to produce
-3-dimensional TQFTs whose invariants are based on the colored Jones
-polynomial. - Subfactor theory provides an alternative approach based on
-planar algebras and the Jones polynomial, leading to the construction of
-TQFTs from subfactors. - These TQFTs have applications in the study of
-3-manifold invariants, knot homology, and quantum gravity.
-
-\subsection{16.4 The Verlinde Formula}\label{ch1990vaughanjones:the-verlinde-formula}
-
-The Verlinde formula, which expresses the fusion rules of a conformal
-field theory in terms of the modular \(S\)-matrix, has a natural
-interpretation in subfactor theory. Jones's work on subfactors provided
-a new perspective on the Verlinde formula, connecting it to the
-structure of the standard invariant of a subfactor.
-
-\subsection{16.5 Subfactors and the Jones-Wassermann
-Theory}\label{ch1990vaughanjones:subfactors-and-the-jones-wassermann-theory}
-
-The Jones-Wassermann theory (developed by Jones and Antony Wassermann)
-studies the subfactors arising from the representation theory of loop
-groups. These subfactors, known as loop group subfactors, are intimately
-connected to conformal field theory and provide a bridge between
-operator algebras and quantum field theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. The Work on Operator
-Algebras}\label{ch1990vaughanjones:the-work-on-operator-algebras}
-
-\subsection{17.1 Contributions}\label{ch1990vaughanjones:contributions}
-
-Beyond his work on subfactors, Jones made many other fundamental
-contributions to operator algebras: - The classification of amenable
-subfactors, which was completed with Sorin Popa and others, extending
-Jones's index classification to all amenable subfactors. - The theory of
-inclusions of von Neumann algebras, including the study of the derived
-tower and the characterization of the standard invariant. - The study of
-free group factors \(L(\mathbb{F}_n)\) and their properties, including
-the verification of some of the free group factor conjectures. - The
-construction of new examples of type II\(_1\) factors with exotic
-properties using his subfactor machinery, including factors with
-prescribed standard invariants. - The development of methods for
-computing the \(L^2\) Betti numbers of von Neumann algebras. - The study
-of the relationship between subfactor theory and the theory of \(II_1\)
-factors, including the classification of \(II_1\) factors via their
-subfactors. - The development of methods for computing the \(L^2\) Betti
-numbers of von Neumann algebras, contributing to the \(L^2\) cohomology
-theory of II\(_1\) factors. - The exploration of connections between
-subfactors and quantum information theory, including the study of
-entanglement entropy in quantum systems.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. The Work on Link Homology}\label{ch1990vaughanjones:the-work-on-link-homology}
-
-\subsection{18.1 Khovanov Homology}\label{ch1990vaughanjones:khovanov-homology}
-
-\textbf{Khovanov homology}, discovered by Mikhail Khovanov in 1999, is a
-categorification of the Jones polynomial. Categorification is the
-process of replacing set-based invariants with category-theoretic ones
---- sets become categories, functions become functors, and equations
-become natural isomorphisms. Khovanov homology assigns a bigraded
-homology theory to an oriented link, whose graded Euler characteristic
-recovers the Jones polynomial:
-
-\[
-V_L(q) = \sum_{i,j} (-1)^i q^j \dim(\text{Kh}^{i,j}(L))
-\]
-
-Khovanov homology is strictly stronger than the Jones polynomial: there
-exist distinct knots with the same Jones polynomial but different
-Khovanov homology. For example, the Kinoshita--Terasaka knot and its
-mirror have the same Jones polynomial but different Khovanov homology.
-
-\subsection{18.2 Properties of Khovanov
-Homology}\label{ch1990vaughanjones:properties-of-khovanov-homology}
-
-Khovanov homology satisfies several important properties: - It is
-functorial under cobordisms between links, giving a link homology
-theory. - It detects the unknot (Kronheimer--Mrowka, 2011). - It has a
-spectral sequence relating it to Heegaard Floer homology. - It has a
-reduced version that is a knot invariant.
-
-\subsection{18.3 Jones's Contributions}\label{ch1990vaughanjones:joness-contributions-3}
-
-Jones contributed to the development of link homology theories: - The
-relationship between planar algebras and Khovanov homology, where the
-structure of Khovanov's chain complex can be understood in terms of
-planar algebra operations and the Kauffman bracket. - The generalization
-of Khovanov homology to other quantum groups, leading to \(sl(n)\)
-homology theories and colored link homology. - The connection between
-link homology and the representation theory of quantum groups, linking
-categorification to the structure of quantum group representations. -
-The development of foam categories (together with Khovanov and others),
-which provide a geometric framework for link homology using planar
-algebras.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. Influence and Legacy}\label{ch1990vaughanjones:influence-and-legacy}
-
-\subsection{19.1 Impact on Knot Theory}\label{ch1990vaughanjones:impact-on-knot-theory}
-
-The Jones polynomial revolutionized knot theory, a field that had been
-relatively quiet since the discovery of the Alexander polynomial in
-1928. Within months of Jones's announcement, the mathematical community
-produced several generalizations (the HOMFLY polynomial, the Kauffman
-polynomial) and new discoveries (quantum invariants, categorification).
-The Jones polynomial remains one of the important invariants in
-knot theory, and its categorification by Khovanov into Khovanov homology
-opened an entirely new direction in low-dimensional topology.
-
-\subsection{19.2 Impact on Operator
-Algebras}\label{ch1990vaughanjones:impact-on-operator-algebras}
-
-Jones's work on subfactors transformed operator algebra theory. The
-Jones index theorem (with its unexpected connection to Dynkin diagrams),
-the classification of subfactors, and the theory of planar algebras are
-fundamental contributions that continue to drive research worldwide.
-Jones's work connected von Neumann algebras to combinatorics, Dynkin
-diagrams, statistical mechanics, knot theory, and quantum field theory
-in ways that were previously unimaginable.
-
-\subsection{19.3 Impact on Quantum
-Topology}\label{ch1990vaughanjones:impact-on-quantum-topology}
-
-The Jones polynomial and its generalizations gave rise to the field of
-quantum topology. Quantum invariants of three-manifolds (the
-Reshetikhin--Turaev invariants), categorification (Khovanov homology),
-and the volume conjecture all trace their origins to Jones's work. The
-connection between the Jones polynomial and Chern--Simons gauge theory,
-established by Edward Witten, demonstrated a deep link between
-mathematics and quantum field theory that continues to be explored by
-physicists and mathematicians alike.
-
-\subsection{19.4 Impact on Education and the Mathematical
-Community}\label{ch1990vaughanjones:impact-on-education-and-the-mathematical-community}
-
-Jones was known for his clear and inspiring exposition, his generosity
-with ideas, and his mentorship of young mathematicians. He supervised
-numerous PhD students who have gone on to make significant contributions
-to operator algebras, knot theory, and quantum topology. His CBMS monograph
-\emph{Subfactors and Knots} remains a classic introduction to the
-subject, and his work continues to inspire new generations of
-researchers.
-
-\section{20. Awards and Recognition}\label{ch1990vaughanjones:awards-and-recognition}
-
-\textbf{1990:} - Fields Medal (International Mathematical Union) ---
-awarded at the ICM in Kyoto, Japan, for his discovery of the Jones
-polynomial and his contributions to von Neumann algebras.
-
-\textbf{1991:} - Fellow of the Royal Society of London --- the first New
-Zealand-born mathematician to receive this honor.
-
-\textbf{1992:} - Fellow of the American Academy of Arts and Sciences.
-
-\textbf{2001:} - Member of the National Academy of Sciences (USA).
-
-\textbf{1990:} - Honorary Doctor of Science, University of Auckland.
-
-\textbf{2014:} - Member of the New Zealand Order of Merit (ONZM).
-
-\subsection{Named Lectureships and Invited
-Addresses}\label{ch1990vaughanjones:named-lectureships-and-invited-addresses}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{1990:} Plenary Speaker, International Congress of
- Mathematicians, Kyoto.
-\item
- \textbf{1991:} Colloquium Lectures, American Mathematical Society.
-\item
- \textbf{1994:} Invited Speaker, International Congress of
- Mathematicians, Zürich.
-\item
- Numerous named lectureships worldwide, including the Weyl Lectures at
- the Institute for Advanced Study.
-\end{itemize}
-
-\subsection{Named Positions and
-Affiliations}\label{ch1990vaughanjones:named-positions-and-affiliations}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{1985--2011:} Professor of Mathematics, University of
- California, Berkeley.
-\item
- \textbf{2000--2011:} Miller Institute Professor, UC Berkeley.
-\item
- \textbf{2011--2020:} Distinguished Professor of Mathematics,
- Vanderbilt University.
-\item
- Visiting positions at the Institut des Hautes Études Scientifiques
- (IHES), Institut Mittag-Leffler, MSRI, and the Isaac Newton Institute.
-\item
- Supervised numerous PhD students, including several who have become
- leading figures in operator algebras and knot theory.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{21. Selected Major
-Publications}\label{ch1990vaughanjones:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Index for subfactors.''} \emph{Inventiones Mathematicae}
- 72(1), 1--25, 1983. --- \emph{The Jones index theorem, establishing
- the discrete spectrum of subfactor indices.}
-\item
- \textbf{``A polynomial invariant for knots via von Neumann
- algebras.''} \emph{Bulletin of the American Mathematical Society}
- 12(1), 103--111, 1985. --- \emph{The Jones polynomial, the landmark
- paper that transformed knot theory.}
-\item
- \textbf{``Hecke algebra representations of braid groups and link
- polynomials.''} (with J. Birman) \emph{Annals of Mathematics} 126(2),
- 335--388, 1987. --- \emph{The two-variable HOMFLY polynomial and braid
- group representations.}
-\item
- \textbf{``Subfactors and knots.''} CBMS Regional Conference Series,
- Number 80, American Mathematical Society, 1991. --- \emph{The
- influential monograph connecting subfactor theory and knot theory.}
-\item
- \textbf{``A new polynomial invariant for links.''} \emph{Notices of
- the American Mathematical Society} 32, 1985. --- \emph{The
- announcement of the Jones polynomial.}
-\item
- \textbf{``Planar algebras, I.''} \emph{New Zealand Journal of
- Mathematics}, 1999. --- \emph{The introduction of planar algebras, a
- graphical formalism for subfactor theory.}
-\item
- \textbf{``The Jones polynomial and quantum groups.''}
- \emph{Proceedings of the International Congress of Mathematicians},
- Berkeley, 1986. --- \emph{The ICM address on the Jones polynomial and
- its connections.}
-\item
- \textbf{``A graphical calculus for quantum groups.''} \emph{Cambridge
- University Press}, 1995. --- \emph{The theory of planar algebras and
- their applications.}
-\item
- \textbf{``Fusion categories and the Jones polynomial.''}
- \emph{Proceedings of the National Academy of Sciences}, 2000. ---
- \emph{Connections between fusion categories and knot invariants.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Compute the Jones polynomial of the trefoil knot using the skein relation. \end{exercise}
-
-\begin{exercise} Verify that the Jones polynomial of the unknot is 1. \end{exercise}
-
-\begin{exercise} Show that the Jones polynomial distinguishes the trefoil knot from the unknot. \end{exercise}
-
-\begin{exercise} Compute the Jones polynomial of the Hopf link and verify it is different from two unlinked unknots. \end{exercise}
+The \textbf{quantum volume conjecture} extends this to complex values of the parameter $q = e^{2\pi i/(n+2)}$. The asymptotics of the colored Jones polynomial at roots of unity should determine the Chern--Simons invariant of the knot complement.
+
+The Chern--Simons invariant is a real-valued function on the character variety of the knot complement. For a hyperbolic knot, the maximum of the Chern--Simons invariant over all flat connections equals the hyperbolic volume divided by $2\pi$.
+
+The \textbf{volume conjecture} has been verified for all twist knots and many torus knots. The case of the figure-eight knot was proved by Murakami and Murakami (2001) using the recursion relation satisfied by the colored Jones polynomial.
+
+The theory of subfactors has been extended to the \textbf{planar algebra} framework. Planar algebras provide a diagrammatic language for subfactor theory that is more natural and powerful than the algebraic approach. The classification of subfactors of small index has been completed using planar algebras.
+
+The connection between the Jones polynomial and \textbf{statistical mechanics}, through the Yang--Baxter equation, provides a physical interpretation of the invariant. The Yang--Baxter equation is a consistency condition for integrable lattice models, and the Jones polynomial is the partition function of such a model.
+
+The \textbf{Yang--Baxter equation} $R_{12} R_{23} R_{12} = R_{23} R_{12} R_{23}$ for an $R$-matrix $R \in \text{End}(V \otimes V)$ is the algebraic expression of the braid relation. Solutions to the Yang--Baxter equation give representations of the braid group and hence knot invariants.
+
+The Temperley--Lieb algebra provides a solution to the Yang--Baxter equation via the \textbf{R-matrix} $R = q^{1/2} \sum_{i} e_i \otimes e_i + \sum_{i \neq j} e_i \otimes e_j$ where $e_i$ are the Jones projections.
+
+The \textbf{Baxterization} procedure constructs an $R$-matrix satisfying the Yang--Baxter equation from a solution of the Temperley--Lieb relations. Given generators $e_i$ satisfying $e_i^2 = \delta e_i$ and $e_i e_{i\pm 1} e_i = e_i$, one sets $R_i(u) = u^{-1} + e_i$ where $u$ is a spectral parameter.
+
+The Yang--Baxter equation is equivalent to the commutativity of transfer matrices in integrable lattice models. The partition function of the six-vertex model at special values of the coupling constants is related to the Jones polynomial.
+
+\subsection*{Conformal Field Theory Connections}
+
+The connection between subfactors and \textbf{conformal field theory} (CFT) is deep and multifaceted. The Temperley--Lieb algebra appears as the commutant of the action of the Virasoro algebra on the space of conformal blocks.
+
+For the unitary minimal models $\mathcal{M}(p, p+1)$ with central charge $c = 1 - 6/(p(p+1))$, the fusion rules are governed by the Temperley--Lieb algebra with $\delta = 2\cos(\pi/p)$. The subfactor index is $[M:N] = \delta^2 = 4\cos^2(\pi/p)$.
+
+The \textbf{coset construction} of Goddard--Kent--Olive relates subfactors to the representation theory of affine Lie algebras. The coset model $\mathfrak{g}_k \supset \mathfrak{h}_l$ produces a subfactor whose standard invariant is related to the fusion category of the coset.
+
+The \textbf{Verlinde formula} expresses the dimension of the space of conformal blocks in terms of the S-matrix of the modular transformation. The quantum dimensions appearing in the Verlinde formula are related to the index of the subfactor.
+
+The Jones polynomial remains one of the most important and beautiful invariants in all of topology. Its discovery revealed deep connections between operator algebras, knot theory, and quantum field theory that continue to be explored.
+
+The \textbf{colored Jones polynomial} $J_K(n)$ generalizes the Jones polynomial to higher-dimensional representations of $U_q(\mathfrak{sl}_2)$. The $n$-th colored Jones polynomial is the Jones polynomial of the knot $K$ with a thickened framing, corresponding to the $n$-dimensional representation of $U_q(\mathfrak{sl}_2)$.
+
+The colored Jones polynomial satisfies the \textbf{quantum $q$-holonomic} property: there exists a recurrence relation $P(n, t) J_K(n) = 0$ where $P$ is a polynomial in $n$ and $t$. The annihilating ideal is related to the \textbf{A-polynomial} of the knot, which encodes the geometry of the character variety of the knot complement.
+
+The relationship between the Jones polynomial and the theory of \textbf{braid groups} is fundamental. The braid group $B_n$ acts on $n$ strands, and the Temperley--Lieb algebra is a quotient of the group algebra $\mathbb{C}[B_n]$. The Jones polynomial is obtained by representing the braid group on the Hilbert space of the Temperley--Lieb algebra and computing traces of braids.
+
+The \textbf{colored Jones polynomial} $J_K(n)$ generalizes the Jones polynomial to higher-dimensional representations of $U_q(\mathfrak{sl}_2)$. The $n$-th colored Jones polynomial is the Jones polynomial of the knot $K$ with a thickened framing, corresponding to the $n$-dimensional representation of $U_q(\mathfrak{sl}_2)$.
+
+The colored Jones polynomial satisfies the \textbf{quantum $q$-holonomic} property: there exists a recurrence relation $P(n, t) J_K(n) = 0$ where $P$ is a polynomial in $n$ and $t$. The annihilating ideal is related to the \textbf{A-polynomial} of the knot, which encodes the geometry of the character variety of the knot complement.
+
+The \textbf{A-polynomial} $A_K(L, M) = 0$ of a knot $K$ is a polynomial equation satisfied by the eigenvalues of the meridian and longitude in $SL(2, \mathbb{C})$ representations of the knot complement. The volume conjecture relates the asymptotics of the colored Jones polynomial to the hyperbolic volume, which is the maximum of the Chern--Simons invariant over all flat $SL(2, \mathbb{C})$ connections.
+
+The \textbf{character variety} $\mathcal{X}(K) = \text{Hom}(\pi_1(S^3 \setminus K), SL(2, \mathbb{C})) // SL(2, \mathbb{C})$ is the space of representations of the knot group modulo conjugation. The A-polynomial defines a hypersurface in the character variety, and its components correspond to geometric structures on the knot complement.
+
+The \textbf{hyperbolic volume} of a knot complement is the volume of the unique hyperbolic metric on $S^3 \setminus K$ when such a metric exists (by Thurston's hyperbolization theorem). For torus knots and twist knots, the volume conjecture has been proved using explicit formulas for the colored Jones polynomial.
+
+\subsection*{Recent Developments}
+
+The \textbf{homological knot invariants} have been further developed by Ozsváth--Szabó (Heegaard Floer homology) and Rasmussen (knot Floer homology). These invariants provide lower bounds on the \textbf{genus} of a knot and detect the unknot.
+
+The \textbf{knot Floer homology} $\widehat{HFK}(K)$ is a filtered chain complex whose Euler characteristic is the Alexander polynomial. The filtered structure encodes more information than the Alexander polynomial alone. The \textbf{genus detection theorem} states that the knot genus equals the Alexander grading of the highest non-zero element in $\widehat{HFK}(K)$.
+
+The \textbf{Heegaard Floer homology} $HF^+(Y)$ of a 3-manifold $Y$ is a powerful invariant constructed from Heegaard diagrams. For a knot $K \subset S^3$, the \textbf{corona} of $K$ in Heegaard Floer homology provides information about the knot complement.
+
+The \textbf{instanton Floer homology} $I^\sharp(K)$ is another homological invariant constructed from the Chern--Simons functional on the space of connections. It is conjectured to be isomorphic to knot Floer homology.
+
+The \textbf{link homology} theories have been generalized to \textbf{categorified quantum invariants} using 2-category theory. The Khovanov--Rozansky homology is a triply-graded homology theory whose Euler characteristic is the HOMFLY polynomial.
+
+The \textbf{Khovanov--Rozansky homology} $H^{i,j,k}(K)$ is a triply-graded vector space generalizing Khovanov homology. The grading $k$ corresponds to the power of the variable in the HOMFLY polynomial. The Euler characteristic in the $k$-grading recovers the HOMFLY polynomial.
+
+The \textbf{categorification program} aims to lift quantum invariants to homology theories. The Jones polynomial categorifies to Khovanov homology, the HOMFLY polynomial categorifies to Khovanov--Rozansky homology, and the Kauffman polynomial categorifies to sl$(n)$ homology theories.
+
+The \textbf{subfactor program} continues with the classification of subfactors of index close to 4. The \textbf{Izumi--Jones} classification completes the list of principal graphs for index $< 3 + \sqrt{3}$. The \textbf{extremal subfactors} of index 4 are classified by the $D$ and $E$ Dynkin diagrams.
+
+The possible principal graphs for index $< 4$ are exactly the ADE Dynkin diagrams: $A_n$ ($n \geq 1$), $D_{2k}$ ($k \geq 2$), $E_6$, $E_8$. The index is determined by the Coxeter number $h$ of the Dynkin diagram: $[M:N] = 4\cos^2(\pi/h)$.
+
+For $D_{2k}$, the Coxeter number is $h = 2k-1$, giving index $4\cos^2(\pi/(2k-1))$. For $E_6$, $E_7$, $E_8$, the Coxeter numbers are $12$, $18$, $30$ respectively, giving indices $4\cos^2(\pi/12)$, $4\cos^2(\pi/18)$, $4\cos^2(\pi/30)$.
+
+The \textbf{Popa classification} of subfactors with small index uses the planar algebra framework to construct explicit examples. The classification is complete for index $< 3 + \sqrt{2}$, and partial results exist up to index 5.
+
+The \textbf{Gallagher--Jackson--Peng} theorem (2022) establishes new constraints on subfactors of index in the interval $[4, 5]$. The possible principal graphs are restricted by the growth rate of the planar algebra.
+
+For index in $[4, 5)$, the possible principal graphs are classified by the infinite families $A_\infty$, $D_\infty$, and certain exceptional graphs. The \textbf{Haagerup subfactor} (2006) has index $3 + \sqrt{3} \approx 4.732$ and is the first known example with a non-ADE principal graph.
+
+The \textbf{Asaeda--Haagerup subfactor} (1999) has index $2 + \sqrt{2} + \sqrt{6} \approx 5.035$ and provides an example of a subfactor with exotic fusion rules. These examples show that the ADE classification is only valid for index $< 4$.
+
+The connection between subfactors and \textbf{conformal field theory} has been deepened through the study of vertex operator algebras and tensor categories. The \textbf{coset construction} of Goddard--Kent--Olive relates subfactors to the representation theory of affine Lie algebras.
+
+The \textbf{unitary minimal models} $\mathcal{M}(p, p')$ with $p, p'$ coprime integers are rational conformal field theories with central charge $c = 1 - 6(p-p')^2/(pp')$. The representation category is a modular tensor category, and the subfactor associated to the inclusion of fixed-point algebras has index related to the quantum dimension.
+
+The \textbf{quantum dimension} of an object in a fusion category is a positive real number generalizing the notion of dimension of a vector space. For the Temperley--Lieb category, the quantum dimension of the generating object is $\delta = 2\cos(\pi/n)$.
+
+The \textbf{standard invariant} of an infinite-index subfactor is no longer finite-dimensional, but the planar algebra structure still encodes the essential information. The \textbf{infinite-depth} subfactors have planar algebras with infinitely many non-zero boxes.
+
+The \textbf{planar algebra} approach has been extended to study \textbf{irreducible} subfactors where $N' \cap M = \mathbb{C}$. The principal graph of an irreducible subfactor is connected and has a distinguished starting vertex of degree 1.
+
+The \textbf{Planar algebra} $P$ associated to a subfactor $N \subset M$ is a collection of vector spaces $P_n = N' \cap M_n$ for $n \geq 0$, where $M_n$ is the $n$-th step of the basic construction tower. The planar algebra encodes the combinatorics of the subfactor in terms of diagrams.
+
+A \textbf{planar tangle} is a rectangle with holes, where the boundary components are labeled by non-negative integers. The action of a tangle $T$ on the planar algebra is a multilinear map $P_{n_1} \times \cdots \times P_{n_k} \to P_m$ where $m$ is the outer boundary label and $n_1, \ldots, n_k$ are the inner boundary labels.
+
+The \textbf{Jones projection} $e_n \in P_2$ corresponds to the generator of the Temperley--Lieb algebra. The subfactor index determines the value of the trace on the Jones projection: $\text{tr}(e_n) = [M:N]^{-1}$.
+
+The \textbf{positivity} condition for planar algebras requires that the trace form $\langle x, y \rangle = \text{tr}(y^* x)$ is positive definite. This condition is satisfied for subfactors of finite depth and is essential for the classification program.
+
+The \textbf{irreducibility} condition $N' \cap M = \mathbb{C}$ ensures that the planar algebra is generated by the Jones projections. Without this condition, the planar algebra contains additional generators corresponding to the relative commutant.
+
+The \textbf{depth} of a subfactor is the smallest integer $d$ such that the principal graph stabilizes after $d$ steps. A subfactor has finite depth if and only if its planar algebra is finitely generated.
+
+The \textbf{Perron--Frobenius theorem} guarantees that the adjacency matrix of the principal graph has a unique largest positive eigenvalue, and this eigenvalue equals the square root of the index. This provides a powerful tool for computing indices from principal graphs.
+
+For the $A_n$ Dynkin diagram (a path with $n$ vertices), the Perron--Frobenius eigenvalue is $2\cos(\pi/(n+1))$, giving index $4\cos^2(\pi/(n+1))$. For the $D_n$ diagram, the eigenvalue is $2\cos(\pi/(2n-2))$, and for $E_6$, $E_7$, $E_8$, the eigenvalues are $2\cos(\pi/12)$, $2\cos(\pi/18)$, $2\cos(\pi/30)$ respectively.
+
+The \textbf{index} values below 4 are precisely the squares of the Perron--Frobenius eigenvalues of the ADE Dynkin diagrams. This connection between operator algebras and Lie theory is one of the most profound results in modern mathematics.
+
+The \textbf{Ocneanu rigidity} theorem states that subfactors with the same standard invariant are outer conjugate. This rigidity property is a key ingredient in the classification of subfactors.
+
+The \textbf{Jones polynomial} of a knot can be computed from its braid representation using the Markov trace. For a braid $\beta$ on $n$ strands, the closure is a link $L$, and $V_L(t) = (-1)^{n-1} t^{(w(\beta)-n+1)/2} \text{tr}(\rho(\beta))$ where $\rho$ is the representation of the braid group on the Temperley--Lieb algebra.
+
+The \textbf{Alexander polynomial} $\Delta_K(t)$ is related to the Jones polynomial by the specialization $\Delta_K(t) = V_K(t)|_{t = -1}$. This specialization recovers the classical invariant from the quantum one.
+
+The \textbf{Jones polynomial} of the trefoil knot is $V_{3_1}(t) = t + t^3 - t^4$, while its mirror image has $V_{3_1^*}(t) = t^{-1} + t^{-3} - t^{-4}$. These are distinct, showing the Jones polynomial can distinguish chiral knots.
+
+The \textbf{unknot detection problem} asks whether $V_K(t) = 1$ implies $K$ is the unknot. This is still open for the Jones polynomial, though it is known for Khovanov homology (Kronheimer--Mrowka, 2016).
+
+The \textbf{slice genus} of a knot is bounded below by the degree of the Jones polynomial. Specifically, $\frac{1}{2}(\deg V_K(t)) \leq g_4(K)$, where $g_4(K)$ is the smooth slice genus. This provides a topological application of the Jones polynomial.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Jones discovered a new polynomial invariant of knots, the Jones polynomial, arising from his study of von Neumann algebras. This invariant revolutionized knot theory, revealed deep connections to statistical mechanics and quantum groups, and led to the discovery of the Jones index for subfactors.
-
-\section{22. References and Further
-Reading}\label{ch1990vaughanjones:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch1990vaughanjones:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1990 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-1990
-\item
- Vaughan Jones Memorial, Vanderbilt University, 2020.
-\item
- Royal Society Biographical Memoir, 2021.
-\end{itemize}
-
-\subsection{Key Research Papers}\label{ch1990vaughanjones:key-research-papers}
-
-\begin{itemize}
-\tightlist
-\item
- Jones, V. ``Index for subfactors.'' \emph{Inventiones Mathematicae}
- 72, 1--25, 1983.
-\item
- Jones, V. ``A polynomial invariant for knots via von Neumann
- algebras.'' \emph{Bulletin of the AMS} 12, 103--111, 1985.
-\item
- Jones, V. ``Hecke algebra representations of braid groups and link
- polynomials.'' \emph{Annals of Mathematics} 126, 335--388, 1987.
-\item
- Kauffman, L. ``State models and the Jones polynomial.''
- \emph{Topology} 26, 395--407, 1987.
-\item
- Reshetikhin, N. and Turaev, V. ``Invariants of 3-manifolds via link
- polynomials and quantum groups.'' \emph{Inventiones Mathematicae} 103,
- 547--597, 1991.
-\item
- Khovanov, M. ``A categorification of the Jones polynomial.''
- \emph{Duke Mathematical Journal} 101, 359--426, 2000.
-\item
- Khovanov, M. ``A categorification of the Jones polynomial.''
- \emph{Duke Mathematical Journal} 101, 359--426, 2000.
-\item
- Witten, E. ``Quantum field theory and the Jones polynomial.''
- \emph{Communications in Mathematical Physics} 121, 351--399, 1989.
-\end{itemize}
-
-\subsection{Textbooks and Monographs}\label{ch1990vaughanjones:textbooks-and-monographs}
-
-\begin{itemize}
-\tightlist
-\item
- Sunder, V.S. \emph{An Invitation to von Neumann Algebras}. Springer,
- 1987.
-\item
- Lickorish, W.B.R. \emph{An Introduction to Knot Theory}. Springer,
- 1997.
-\item
- Evans, D. and Kawahigashi, Y. \emph{Quantum Symmetries on Operator
- Algebras}. Oxford University Press, 1998.
-\item
- Goodman, F. and de la Harpe, P. and Jones, V. \emph{Coxeter Graphs and
- Towers of Algebras}. Springer, 1989.
-\item
- Kauffman, L. \emph{Knots and Physics}. World Scientific, 1991.
-\item
- Jones, V. ``The Jones polynomial.'' \emph{Fields Medalists' Lectures},
- ICM Kyoto, 1990.
-\end{itemize}
-
-\subsection{Further Reading}\label{ch1990vaughanjones:further-reading}
-
-\begin{itemize}
-\tightlist
-\item
- Connes, A. \emph{Noncommutative Geometry}. Academic Press, 1994. ---
- \emph{Contains the connections between operator algebras and geometry
- that informed Jones's perspective.}
-\item
- Atiyah, M. ``The Geometry and Physics of Knots.'' Cambridge University
- Press, 1990. --- \emph{On the connections between knot theory and
- physics that the Jones polynomial inspired.}
-\end{itemize}
-
-\subsection{Biography and Exposition}\label{ch1990vaughanjones:biography-and-exposition}
-
-\begin{itemize}
-\tightlist
-\item
- Atiyah, M. ``The Work of Vaughan Jones.'' ICM 1990 Laudatio, Kyoto.
-\item
- Ghys, E. ``Vaughan Jones and his mathematics.'' \emph{Notices of the
- American Mathematical Society}, 68(7), 2021.
-\item
- Witten, E. ``The Jones polynomial and Chern--Simons theory.''
- \emph{Fields Medalists' Lectures}, 1997.
-\item
- Jones, V. ``The Jones polynomial.'' \emph{Fields Medalists' Lecture},
- ICM Kyoto, 1990.
-\item
- Jones, V. ``Subfactors and knots.'' \emph{CBMS Regional Conference
- Series}, AMS, 1991.
-\item
- Atiyah, M. ``The Jones polynomial and the geometric Langlands
- program.'' \emph{IHES Preprint}, 1990.
-\item
- Popa, S. ``The work of Vaughan Jones.'' \emph{Notices of the AMS},
- 2021.
-\item
- Birman, J. ``The work of Vaughan Jones on knot theory.'' ICM 1990.
-\item
- Kauffman, L. ``Vaughan Jones: The revolution in knot theory.''
- \emph{In Memoriam}, 2021.
-\end{itemize}
-
-Vaughan Jones passed away unexpectedly in 2020 at the age of 67, a great
-loss to mathematics, but his legacy endures through the fields he
-created and transformed. The Jones polynomial, the theory of subfactors,
-and planar algebras remain vibrant areas of research worldwide. The
-connections he discovered between operator algebras, knot theory, and
-physics continue to inspire new generations of mathematicians. The
-annual Vaughan Jones Memorial Lecture at Vanderbilt University ensures
-that his contributions will be remembered and well-known by the
-mathematical community for generations to come.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch2006wendelinwerner:wendelin-werner-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Werner's SLE work relates to Jones polynomial.
-  \item \textbf{\hyperref[ch2010stanislavsmirnov:stanislav-smirnov-fields-medal-2010-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Smirnov's work on percolation relates.
-\end{itemize}
-
-\emph{(End of report)}
+Jones discovered the first major new polynomial invariant of knots since Alexander, using the representation theory of the Temperley--Lieb algebra and subfactor index theory. His work connected operator algebras to knot theory, leading to the HOMFLY polynomial, planar algebras, and the theory of quantum invariants, with deep implications for quantum computing and mathematical physics. The index theorem for subfactors, showing the discrete spectrum $\{4\cos^2(\pi/n)\} \cup [4, \infty)$, remains one of the most striking results in operator algebra theory, revealing hidden combinatorial structure beneath apparently continuous parameters.

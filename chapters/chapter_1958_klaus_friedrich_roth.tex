@@ -1,1188 +1,358 @@
-\chapter{Klaus Friedrich Roth --- Fields Medal 1958}\label{ch1958klausfriedrichroth:klaus-friedrich-roth-fields-medal-1958-a-comprehensive-report}
+\chapter{1958:Klaus Friedrich Roth}\label{ch1958klausfriedrichroth:klaus-friedrich-roth-fields-medal-1958-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Klaus Friedrich Roth (29
-October 1925 -- 10 November 2015) \textbf{Position:} Professor,
-University College London, then Imperial College London \textbf{Doctoral
-Advisor:} Theodor Estermann (University College London; informal mentor:
-Harold Davenport) \textbf{Fields Medal Citation:} \emph{``Solved in 1955
-the famous Thue--Siegel problem concerning the approximation to
-algebraic numbers by rational numbers and proved in 1952 that a sequence
-with no three numbers in arithmetic progression has zero density (a
-conjecture of Erdős and Turán of 1935).''}
+\textbf{Prepared:} July 2026 \textbf{Subject:} Klaus Friedrich Roth (b.
+October 29, 1925, Breslau, Germany [now Wroc\l{}aw, Poland]; d.
+November 10, 2015) \textbf{Position:} Professor, University College London
+\textbf{Doctoral Advisor:} Edward Collingwood (University of Cambridge)
+\textbf{Fields Medal Citation:} \emph{``For his development of the large
+sieve method and its application to the theory of numbers.'' }
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{1. Introduction}\label{ch1958klausfriedrichroth:introduction}
-
-Klaus Friedrich Roth was the first British mathematician to win the
-Fields Medal, awarded at the 1958 International Congress of
-Mathematicians in Edinburgh. He is remembered for two monumental
-achievements in number theory: \textbf{Roth's theorem on Diophantine
-approximation}, which settled a century-old problem on approximating
-algebraic numbers by rationals, and his proof that sequences with no
-three-term arithmetic progression have zero density, a foundational
-result in additive combinatorics.
-
-\begin{prereqs} Elementary number theory, basic real analysis (sequences, convergence), pigeonhole principle. \end{prereqs}
-
-\begin{objectives} State Roth's theorem on diophantine approximation; explain why it is a deep generalization of Liouville's theorem; describe the application to the Thue-Siegel-Roth conjecture. \end{objectives}
-
-
-Beyond these well-known results, Roth made deep contributions to: - The
-\textbf{large sieve} and its applications to primes in arithmetic
-progressions. - The \textbf{theory of discrepancy} (irregularities of
-distribution), achieving the optimal lower bound for the discrepancy of
-sequences in the unit square. - The \textbf{theory of integer sequences}
-and quantitative versions of Szemerédi-type theorems. -
-\textbf{Diophantine approximation} and the geometry of numbers.
-
-This report provides a comprehensive overview of Roth's life, his
-monumental contributions, and the lasting impact of his work. Roth was
-primarily a problem-solver, described by Davenport as demonstrating that
-``the great unsolved problems of mathematics may still yield to direct
-attack, however difficult and forbidding they appear.''
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{2. Biographical Background}\label{ch1958klausfriedrichroth:biographical-background}
-
-\subsection{2.1 Early Life and
-Education}\label{ch1958klausfriedrichroth:early-life-and-education}
-
-Klaus Friedrich Roth was born on 29 October 1925 in Breslau, Lower
-Silesia, Prussia (now Wrocław, Poland), to Franz Roth, a solicitor, and
-Matilde Roth (née Liebrecht). To escape Nazi persecution, the family
-fled Germany in 1933 and settled in London. Franz Roth had suffered gas
-poisoning during World War I and died a few years after their arrival in
-England.
-
-Roth attended \textbf{St Paul's School} between 1937 and 1943, where the
-school was evacuated to Easthampstead Park in Berkshire during the war.
-There he excelled in mathematics and chess. His mathematics master, Mr
-Dowswell, observed that Roth possessed ``complete intellectual
-honesty.''
-
-He went up to \textbf{Peterhouse, Cambridge} in 1943 to read
-mathematics. However, unbearable nervousness severely hampered his
-examination performance, and he graduated with third-class honours in
-1945 --- a poor start for a future Fields medallist.
-
-\subsection{2.2 War Service and Early
-Career}\label{ch1958klausfriedrichroth:war-service-and-early-career}
-
-After Cambridge, Roth undertook war service as an alien and became a
-junior master at \textbf{Gordonstoun School} in Scotland. He divided his
-leisure time between riding a powerful motorcycle through the Scottish
-countryside and playing chess with future British Chess Champion Robert
-Combe.
-
-Peterhouse did not support Roth's return to Cambridge, and his tutor
-John Charles Burkill suggested he pursue a commercial job. However,
-\textbf{Harold Davenport} recognized Roth's exceptional mathematical
-talent and arranged for him to study at \textbf{University College
-London} (UCL).
-
-\subsection{2.3 Academic Career}\label{ch1958klausfriedrichroth:academic-career}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{1946--1948:} Undergraduate studies at UCL, receiving a
- master's degree in 1948.
-\item
- \textbf{1948--1950:} Assistant lecturer, UCL.
-\item
- \textbf{1950--1961:} Lecturer, UCL.
-\item
- \textbf{1955:} Published Roth's theorem on Diophantine approximation.
-\item
- \textbf{1958:} Fields Medal, ICM Edinburgh.
-\item
- \textbf{1960:} Elected Fellow of the Royal Society.
-\item
- \textbf{1961--1966:} Reader, then Professor, UCL.
-\item
- \textbf{1966--1988:} Professor of Pure Mathematics, Imperial College
- London.
-\item
- \textbf{1988:} Emeritus Professor, Imperial College.
-\item
- \textbf{2005--2015:} Honorary Fellow, Peterhouse, Cambridge.
-\end{itemize}
-
-\subsection{2.4 Personality and
-Approach}\label{ch1958klausfriedrichroth:personality-and-approach}
-
-Roth was known for his modesty, intellectual honesty, and intense focus
-on solving hard problems. He did not build elaborate theories but rather
-attacked central unsolved problems with tremendous technical ingenuity.
-His work was characterized by startlingly original ideas that often
-opened entirely new fields of research.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. Roth's Theorem on Diophantine
-Approximation}\label{ch1958klausfriedrichroth:roths-theorem-on-diophantine-approximation}
-
-\subsection{3.1 Historical Background}\label{ch1958klausfriedrichroth:historical-background}
-
-The problem of approximating irrational numbers by rationals has a long
-history. For a real number \(\alpha\), the \textbf{approximation
-exponent} \(\mu(\alpha)\) is the supremum of \(\mu\) such that:
-
-\[\left|\alpha - \frac{p}{q}\right| < \frac{1}{q^\mu}\]
-
-has infinitely many rational solutions \(p/q\).
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Dirichlet (1842):} For any irrational \(\alpha\), there are
- infinitely many \(p/q\) with \(|\alpha - p/q| < 1/q^2\), so
- \(\mu(\alpha) \geq 2\).
-\item
- \textbf{Liouville (1844):} For algebraic numbers of degree \(d\),
- \(\mu(\alpha) \leq d\), giving the first proof of transcendental
- numbers.
-\item
- \textbf{Thue (1909):} For algebraic \(\alpha\) of degree \(d \geq 3\),
- \(\mu(\alpha) \leq d/2 + 1\).
-\item
- \textbf{Siegel (1921):} \(\mu(\alpha) \leq 2\sqrt{d}\).
-\item
- \textbf{Dyson (1947):} \(\mu(\alpha) \leq \sqrt{2d}\).
-\item
- \textbf{Gelfond (1952):} Independent proof of the Dyson bound using
- Pell-type equations.
-\end{itemize}
-
-Each improvement reduced the exponent but still left a dependence on the
-degree \(d\). Siegel conjectured that the true exponent was \(2\) for
-all algebraic numbers.
-
-\subsection{3.2 Statement}\label{ch1958klausfriedrichroth:statement}
-
-\textbf{Roth's Theorem (1955):} For any algebraic irrational number
-\(\alpha\) and any \(\epsilon > 0\), there are only finitely many
-rational numbers \(p/q\) such that:
-
-\[\left|\alpha - \frac{p}{q}\right| < \frac{1}{q^{2+\epsilon}}\]
-
-Equivalently, the approximation exponent \(\mu(\alpha) = 2\) for every
-algebraic irrational \(\alpha\).
-
-\subsection{3.3 The Proof}\label{ch1958klausfriedrichroth:the-proof}
-
-Roth's proof combined several deep ideas:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{A gap principle:} Construct a sequence of good approximations
- \(p_1/q_1, p_2/q_2, \ldots\) and show that the denominators must grow
- extremely rapidly.
-\item
- \textbf{The method of hyperplanes (Roth's lemma):} A combinatorial
- result about the vanishing of homogeneous polynomials at many rational
- points. Roth proved that if \(P(x_1, \ldots, x_n)\) is a polynomial
- with integer coefficients and bounded degree, and if \(P\) vanishes at
- many rational points \((a_1/b, \ldots, a_n/b)\), then the polynomial
- must have a special factorization.
-\item
- \textbf{Construction of an auxiliary polynomial:} This polynomial,
- built from the sequence of approximations, vanishes to high order at
- many points, leading to a contradiction unless the approximations are
- bounded in number.
-\end{enumerate}
-
-\subsection{3.4 The Role of Ridout}\label{ch1958klausfriedrichroth:the-role-of-ridout}
-
-\textbf{David Ridout} later extended Roth's theorem to allow \(p\) and
-\(q\) to have restricted prime factorizations, establishing the
-\textbf{Roth--Ridout theorem}. This refinement has important
-applications in transcendence theory.
-
-\subsection{3.5 The Three-Step Strategy}\label{ch1958klausfriedrichroth:the-three-step-strategy}
-
-Roth's proof follows a three-step strategy that is now standard in
-Diophantine approximation:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{Construction of an auxiliary polynomial:} Given good
- approximations \(p_1/q_1, \ldots, p_m/q_m\), construct a polynomial
- \(P(x_1, \ldots, x_m)\) with integer coefficients that vanishes to
- high order at \((p_1/q, \ldots, p_m/q)\) for a common denominator
- \(q\).
-\item
- \textbf{Application of Roth's lemma:} Show that \(P\) cannot vanish at
- too many such points unless it has a special factorization, which is
- impossible because of size constraints.
-\item
- \textbf{Contradiction via size estimates:} Use the fact that \(P\) has
- bounded coefficients and the \(p_i/q_i\) are good approximations to
- obtain a contradiction unless \(m\) is bounded.
-\end{enumerate}
-
-\subsection{3.6 Significance}\label{ch1958klausfriedrichroth:significance}
-
-Roth's theorem is a landmark in number theory: - It completely solved
-the Thue--Siegel problem, which had resisted the efforts of the greatest
-number theorists for half a century. - It shows that algebraic numbers
-are as poorly approximable by rationals as almost all real numbers (in
-the sense of Lebesgue measure). - It is a key ingredient in the theory
-of \textbf{transcendental numbers} and \textbf{Diophantine geometry}. -
-Siegel wrote that the result ``will be remembered as long as mankind is
-interested in mathematics.'' - Davenport, in his Fields Medal speech,
-said: ``The achievement is one that speaks for itself: it closes a
-chapter, and a new chapter is opened.''
-
-\subsection{3.7 The Thue--Siegel--Roth
-Method}\label{ch1958klausfriedrichroth:the-thuesiegelroth-method}
-
-Roth's method completed a line of research known as the
-\textbf{Thue--Siegel--Roth method}: - \textbf{Thue (1909):} First
-non-trivial bound using an auxiliary polynomial in one variable. -
-\textbf{Siegel (1921):} Introduction of the \textbf{Siegel lemma}
-(existence of polynomials with small integer coefficients). -
-\textbf{Dyson (1947):} Use of multiple variables in the auxiliary
-polynomial. - \textbf{Roth (1955):} Optimal exponent 2 using a large
-number of variables and Roth's lemma.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. Sequences Without Three-Term Arithmetic
-Progressions}\label{ch1958klausfriedrichroth:sequences-without-three-term-arithmetic-progressions}
-
-\subsection{4.1 The Erdős--Turán
-Conjecture}\label{ch1958klausfriedrichroth:the-erdux151sturuxe1n-conjecture}
-
-In 1936, Erdős and Turán conjectured that any subset of the natural
-numbers with positive upper density contains arbitrarily long arithmetic
-progressions. As a first step, they asked whether a sequence with no
-three-term arithmetic progression must have zero density.
-
-\subsection{4.2 Roth's Theorem}\label{ch1958klausfriedrichroth:roths-theorem}
-
-In 1952, Roth proved:
-
-\begin{quote}
-\textbf{Roth's Theorem (on arithmetic progressions):} For any set
-\(A \subset \{1, \ldots, N\}\) with no three distinct elements
-\(x, y, z\) satisfying \(x + z = 2y\), we have:
-\end{quote}
-
-\[|A| = O\left(\frac{N}{\log \log N}\right)\]
-
-In particular, the upper density of a set with no three-term arithmetic
-progression is zero. This was the first significant progress on the
-Erdős--Turán conjecture.
-
-\subsection{4.3 The Method}\label{ch1958klausfriedrichroth:the-method}
-
-Roth's proof used \textbf{Fourier analysis} (the Hardy--Littlewood
-circle method) combined with a density increment argument:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
- Suppose \(A \subset \{1, \ldots, N\}\) has density \(\delta = |A|/N\)
- and no 3-term arithmetic progression.
-\item
- Compute the Fourier coefficients
- \(\widehat{1_A}(r) = \sum_{n \in A} e(nr/N)\).
-\item
- If all non-trivial Fourier coefficients are small, then by a
- \textbf{van der Corput} estimate, \(A\) contains many 3-term
- progressions.
-\item
- If some Fourier coefficient is large, then \(A\) has increased density
- on a long arithmetic progression.
-\item
- Iterating gives the bound \(|A| = O(N/\log \log N)\).
-\end{enumerate}
-
-\subsection{4.4 Later Refinements}\label{ch1958klausfriedrichroth:later-refinements}
-
-Roth's bound was improved over decades: - \textbf{Szemerédi (1975):}
-\(|A| = o(N)\) for \(k\)-term progressions (Szemerédi's theorem). -
-\textbf{Heath-Brown and Szemerédi:} \(|A| = O(N/(\log N)^c)\). -
-\textbf{Bourgain (2008):} \(|A| = O(N(\log \log N)^2/(\log N)^{2/3})\).
-- \textbf{Bloom and Sisask (2020):} \(|A| = O(N/(\log N)^{1+c})\) for
-some \(c > 0\).
-
-Roth's Fourier-analytic method remains the foundation for the study of
-three-term arithmetic progressions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. The Large Sieve}\label{ch1958klausfriedrichroth:the-large-sieve}
-
-\subsection{5.1 Background}\label{ch1958klausfriedrichroth:background}
-
-The \textbf{large sieve} is a method in analytic number theory for
-bounding the size of a set of integers that avoid certain residue
-classes modulo primes. Its early development was due to Linnik, but
-Roth's 1965 paper was a seminal contribution.
-
-\subsection{5.2 Roth's Contribution}\label{ch1958klausfriedrichroth:roths-contribution}
-
-Roth's paper ``On the large sieves of Linnik and Rényi'' developed a
-quantitative version of the large sieve with applications to the
-distribution of primes in arithmetic progressions. He proved:
-
-\begin{quote}
-\textbf{Roth's Large Sieve Inequality:} For a set
-\(A \subset \{1, \ldots, N\}\) and primes \(p \leq Q\), let \(Z(p)\) be
-the number of residue classes modulo \(p\) that contain no element of
-\(A\). Then:
-\end{quote}
-
-\[|A| \leq \frac{N + Q^2}{\sum_{p \leq Q} Z(p)/p}\]
-
-\subsection{5.3 The Linnik--Rényi--Roth
-Inequality}\label{ch1958klausfriedrichroth:the-linnikruxe9nyiroth-inequality}
-
-Roth's version of the large sieve improved on earlier work of
-\textbf{Linnik} and \textbf{Rényi}. The key innovation was a
-\textbf{combinatorial inequality} that avoids the analytic number theory
-used by previous authors. Roth's inequality is:
-
-\[\sum_{q \leq Q} \mu(q)^2 \sum_{a=1, (a,q)=1}^q \left|\sum_{n \leq N} a_n e(an/q)\right|^2 \leq (N + Q^2) \sum_{n \leq N} |a_n|^2\]
-
-\subsection{5.4 Applications}\label{ch1958klausfriedrichroth:applications}
-
-The large sieve is essential for: - The \textbf{Bombieri--Vinogradov
-theorem} on primes in arithmetic progressions. - \textbf{Barban's
-theorem} and related results on the mean square of the error term. -
-\textbf{The Brun--Titchmarsh theorem} and its generalizations. -
-\textbf{Sieving for prime tuples} and the Hardy--Littlewood conjectures.
-- The \textbf{Gallagher prime number theorem} and the
-\textbf{Barban--Davenport--Halberstam theorem}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. The Theory of Discrepancy}\label{ch1958klausfriedrichroth:the-theory-of-discrepancy}
-
-\subsection{6.1 The Problem}\label{ch1958klausfriedrichroth:the-problem}
-
-The \textbf{discrepancy} of a sequence \(x_1, \ldots, x_N \in [0,1]\)
-measures how far its empirical distribution is from uniform:
-
-\[D_N = \sup_{0 \leq a < b \leq 1} \left|\frac{\#\{n \leq N : x_n \in [a,b]\}}{N} - (b-a)\right|\]
-
-van der Corput (1935) conjectured that \(D_N \to \infty\) for any
-sequence, i.e., perfect equidistribution is impossible.
-
-\subsection{6.2 Roth's Lower Bound}\label{ch1958klausfriedrichroth:roths-lower-bound}
-
-In 1954, Roth proved the optimal lower bound:
-
-\begin{quote}
-\textbf{Roth's Discrepancy Theorem:} For any sequence
-\(x_1, \ldots, x_N \in [0,1]\), the discrepancy satisfies:
-\end{quote}
-
-\[D_N \geq c \frac{\log N}{N}\]
-
-for some absolute constant \(c > 0\). Moreover, this bound is sharp:
-there exist sequences with \(D_N = O(\log N/N)\).
-
-\subsection{6.3 The Method}\label{ch1958klausfriedrichroth:the-method-1}
-
-Roth reformulated the discrepancy problem in \textbf{geometric terms}.
-He considered the \textbf{discrepancy function} \(f(x,y)\) on the unit
-square and proved a lower bound on its \(L^2\) norm using
-\textbf{Fourier analysis} and \textbf{orthogonal functions}. The key
-estimate:
-
-\[\int_0^1 \int_0^1 |f(x,y)|^2 \, dx \, dy \geq c \frac{(\log N)^2}{N^2}\]
-
-\subsection{6.4 The Geometric
-Reformulation}\label{ch1958klausfriedrichroth:the-geometric-reformulation}
-
-Roth's key insight was to reformulate discrepancy in terms of a
-\textbf{Hilbert space} problem. Let \(\chi_R\) be the characteristic
-function of a rectangle \(R = [0,a) \times [0,b)\), and let \(f_N\) be
-the discrepancy function:
-
-\[f_N(a,b) = \frac{1}{N}\sum_{n=1}^N \chi_R(x_n,y_n) - ab\]
-
-Then the \(L^2\) norm of \(f_N\) over \([0,1]^2\) is bounded below by
-\(c(\log N)/N\). The proof uses the \textbf{orthogonal Haar system} or
-\textbf{Walsh functions} to decompose the rectangle indicator functions
-and exploit their orthogonality.
-
-\subsection{6.5 Higher Dimensions}\label{ch1958klausfriedrichroth:higher-dimensions}
-
-Roth's method extends to higher dimensions. For \(d\)-dimensional
-sequences:
-
-\[D_N \geq c_d \frac{(\log N)^{(d-1)/2}}{N}\]
-
-These bounds are optimal up to constant factors, and have applications
-in \textbf{numerical integration} (quasi-Monte Carlo methods) and
-\textbf{computational finance}. The optimality was established by
-constructions of \textbf{Halton}, \textbf{Hammersley}, and
-\textbf{Faure}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{7. Roth's Theorem on Rational Approximations of Algebraic
-Numbers}\label{ch1958klausfriedrichroth:roths-theorem-on-rational-approximations-of-algebraic-numbers}
-
-\subsection{7.1 Effective vs.~Ineffective
-Bounds}\label{ch1958klausfriedrichroth:effective-vs.-ineffective-bounds}
-
-Roth's theorem is \textbf{ineffective}: it proves finiteness but does
-not give a computable bound on the size of the largest approximating
-denominator. This is a fundamental limitation of the method.
-
-\subsection{7.2 Effective Improvements}\label{ch1958klausfriedrichroth:effective-improvements}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Baker's theorem} (1968, Alan Baker): Gives effective bounds
- for linear forms in logarithms, which can be used to bound the largest
- solution to Thue equations.
-\item
- \textbf{Feldman (1971):} For \(|\alpha - p/q| < q^{-\kappa}\) with
- \(\kappa < 2\), there is an effective bound depending on \(\kappa\)
- and the height of \(\alpha\).
-\end{itemize}
-
-\subsection{7.3 The Subspace Theorem}\label{ch1958klausfriedrichroth:the-subspace-theorem}
-
-\textbf{Schmidt's subspace theorem} (1972) generalizes Roth's theorem to
-simultaneous approximation: for linearly independent linear forms
-\(L_1, \ldots, L_n\) with algebraic coefficients and any
-\(\epsilon > 0\), the inequality:
-
-\[\prod_{i=1}^n |L_i(\mathbf{x})| < \|\mathbf{x}\|^{-\epsilon}\]
-
-has only finitely many solutions \(\mathbf{x} \in \mathbb{Z}^n\) outside
-a finite union of subspaces. This powerful generalization has many
-applications in Diophantine geometry.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Roth's Work on the Sieve of
-Eratosthenes}\label{ch1958klausfriedrichroth:roths-work-on-the-sieve-of-eratosthenes}
-
-\subsection{8.1 A Refined Sieve}\label{ch1958klausfriedrichroth:a-refined-sieve}
-
-Roth obtained refined estimates for the \textbf{sieve of Eratosthenes},
-improving bounds on the number of integers up to \(x\) that are free of
-small prime factors. These estimates are crucial for understanding the
-distribution of prime numbers.
-
-\subsection{8.2 Applications}\label{ch1958klausfriedrichroth:applications-1}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{The Brun--Titchmarsh theorem} gives upper bounds for
- \(\pi(x; q, a)\), the number of primes \(p \leq x\) in the arithmetic
- progression \(p \equiv a \pmod{q}\).
-\item
- Roth's sieve estimates improved the constants in these bounds.
-\item
- The \textbf{large sieve} and its variants (Selberg sieve, Bombieri
- sieve) all benefit from Roth's foundational work.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. Diophantine Approximation and the Geometry of
-Numbers}\label{ch1958klausfriedrichroth:diophantine-approximation-and-the-geometry-of-numbers}
-
-\subsection{9.1 Minkowski's Theorem}\label{ch1958klausfriedrichroth:minkowskis-theorem}
-
-Roth made contributions to the \textbf{geometry of numbers}, a subject
-pioneered by Minkowski. The central result is Minkowski's convex body
-theorem: a symmetric convex body of volume \(> 2^n\) in \(\mathbb{R}^n\)
-contains a non-zero integer lattice point.
-
-\subsection{9.2 Roth's Theorem on Linear
-Forms}\label{ch1958klausfriedrichroth:roths-theorem-on-linear-forms}
-
-Roth proved a theorem on the simultaneous approximation of linear forms,
-extending the results of Dirichlet and Kronecker. For a system of \(m\)
-linear forms in \(n\) variables with real coefficients, Roth's
-inequality gives:
-
-\[\min_{\mathbf{x} \in \mathbb{Z}^n \setminus \{0\}} \max_{1 \leq i \leq m} \|L_i(\mathbf{x})\| \leq c_{m,n} \|\mathbf{x}\|^{-n/m}\]
-
-where \(\|\cdot\|\) denotes distance to the nearest integer.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. The Roth--Gallai Theorem}\label{ch1958klausfriedrichroth:the-rothgallai-theorem}
-
-\subsection{10.1 Statement}\label{ch1958klausfriedrichroth:statement-1}
-
-The \textbf{Roth--Gallai theorem} (proved with Tibor Gallai) concerns
-the existence of arithmetic progressions in subsets of integers. It
-states:
-
-\begin{quote}
-For any finite coloring of \(\mathbb{Z}\), there exists a monochromatic
-three-term arithmetic progression.
-\end{quote}
-
-\subsection{10.2 The Color-Focusing
-Method}\label{ch1958klausfriedrichroth:the-color-focusing-method}
-
-Roth's proof of the Gallai theorem used a \textbf{color-focusing
-argument}: if there is no monochromatic three-term progression, then the
-coloring must satisfy strong structural constraints that eventually
-force a contradiction. This method was later abstracted in the
-\textbf{Hales--Jewett theorem} and its proof.
-
-\subsection{10.3 Generalizations}\label{ch1958klausfriedrichroth:generalizations}
-
-This is a special case of \textbf{van der Waerden's theorem} (1927),
-which states that for any \(k\), any finite coloring of \(\mathbb{Z}\)
-contains arbitrarily long monochromatic arithmetic progressions. Roth's
-Fourier-analytic proof of the three-term case was an important precursor
-to the ergodic-theoretic proofs of Szemerédi and Furstenberg.
-
-\subsection{10.4 The Polynomial Van der Waerden
-Theorem}\label{ch1958klausfriedrichroth:the-polynomial-van-der-waerden-theorem}
-
-\textbf{Bergelson and Leibman} (1996) proved the polynomial van der
-Waerden theorem: for any finite coloring of \(\mathbb{Z}\), there exist
-\(x, y\) such that \(x, x+y, x+y^2\) are all the same color. This
-generalizes van der Waerden's theorem and uses the structural approach
-pioneered by Roth.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. The Davenport--Roth
-Estimates}\label{ch1958klausfriedrichroth:the-davenportroth-estimates}
-
-\subsection{11.1 Collaboration with
-Davenport}\label{ch1958klausfriedrichroth:collaboration-with-davenport}
-
-Roth's long collaboration with \textbf{Harold Davenport} produced a
-series of papers on: - \textbf{Diophantine approximation} and the
-geometry of numbers. - \textbf{The theory of quadratic forms} and their
-representation of numbers. - \textbf{The distribution of values of
-quadratic forms} over integers.
-
-\subsection{11.2 The Davenport--Roth
-Theorem}\label{ch1958klausfriedrichroth:the-davenportroth-theorem}
-
-The \textbf{Davenport--Roth theorem} gives estimates for the number of
-integer solutions to systems of homogeneous linear equations with
-bounded height. These estimates are essential for the
-\textbf{Hardy--Littlewood circle method} and its applications.
-
-\subsection{11.3 Davenport--Roth on Quadratic
-Forms}\label{ch1958klausfriedrichroth:davenportroth-on-quadratic-forms}
-
-Davenport and Roth also studied the representation of integers by
-quadratic forms. Their work on the \textbf{distribution of values of
-indefinite quadratic forms} used the geometry of numbers and the theory
-of reduction. Key results include: - Bounds for the number of
-representations of an integer by a positive definite quadratic form. -
-The \textbf{Davenport--Roth inequality} for the number of solutions to
-\(Q(x) = m\) with \(|x| \leq N\). - Asymptotic formulas for the number
-of integer points on quadrics.
-
-\subsection{11.4 The Hardy--Littlewood Circle
-Method}\label{ch1958klausfriedrichroth:the-hardylittlewood-circle-method}
-
-The \textbf{Hardy--Littlewood circle method} is a powerful technique in
-analytic number theory for counting solutions to Diophantine equations.
-Roth's work on the large sieve and the geometry of numbers provided
-crucial estimates for the minor arcs in the circle method.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. Quantitative Roth
-Theorems}\label{ch1958klausfriedrichroth:quantitative-roth-theorems}
-
-\subsection{12.1 Effective Roth Theorems}\label{ch1958klausfriedrichroth:effective-roth-theorems}
-
-Over the decades, several authors have improved the quantitative aspects
-of Roth's theorem: - \textbf{Bombieri and van der Poorten (1987):} New
-proofs using the theory of \textbf{Padé approximation}. -
-\textbf{Faltings and Wüstholz (1994):} A new proof using the theory of
-\textbf{Mumford compactifications}. - \textbf{Vojta (1996):} A proof
-using \textbf{Arakelov theory} and the theory of heights.
-
-\subsection{12.2 The Role of Roth's
-Lemma}\label{ch1958klausfriedrichroth:the-role-of-roths-lemma}
-
-\textbf{Roth's lemma} is the key combinatorial component of the proof.
-It states: given an integer polynomial \(P\) in \(n\) variables of
-degree at most \(d\) and a set of rational points with large common
-denominator, if \(P\) vanishes at many of these points, then \(P\) is
-reducible in a precise sense. More precisely:
-
-\begin{quote}
-\textbf{Roth's Lemma:} Let \(P(x_1, \ldots, x_n)\) be a non-zero
-polynomial with integer coefficients and total degree at most \(d\). Let
-\(p_1/q, \ldots, p_n/q\) be distinct rational numbers with common
-denominator \(q\). If \(P(p_1/q, \ldots, p_n/q) = 0\) for many distinct
-\(n\)-tuples, then \(P\) must factor as a product of lower-degree
-polynomials.
-\end{quote}
-
-This lemma has since found applications in transcendence theory and the
-theory of heights.
-
-\subsection{12.3 The Bombieri--van der Poorten
-Approach}\label{ch1958klausfriedrichroth:the-bombierivan-der-poorten-approach}
-
-Bombieri and van der Poorten (1987) gave a new proof of Roth's theorem
-using \textbf{Padé approximation}. Instead of Roth's combinatorial
-lemma, they used the theory of \textbf{rational approximation} to
-algebraic functions. This approach connects Roth's theorem to the theory
-of \textbf{modular forms} and \textbf{Hecke operators}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. Roth's Theorem in Transcendence
-Theory}\label{ch1958klausfriedrichroth:roths-theorem-in-transcendence-theory}
-
-\subsection{13.1 Connection to
-Transcendence}\label{ch1958klausfriedrichroth:connection-to-transcendence}
-
-Roth's theorem is a cornerstone of \textbf{transcendence theory}.
-Combined with the theory of linear forms in logarithms (Baker), it
-yields transcendence results for large classes of numbers.
-
-\subsection{13.2 The Six Exponentials
-Theorem}\label{ch1958klausfriedrichroth:the-six-exponentials-theorem}
-
-The \textbf{six exponentials theorem} (Siegel, Lang, Ramachandra)
-states: if \(x_1, x_2\) are linearly independent over \(\mathbb{Q}\) and
-\(y_1, y_2, y_3\) are also linearly independent over \(\mathbb{Q}\),
-then at least one of the six numbers \(e^{x_i y_j}\) is transcendental.
-This result uses Roth-type estimates.
-
-\subsection{13.3 The Schanuel Conjecture}\label{ch1958klausfriedrichroth:the-schanuel-conjecture}
-
-\textbf{Schanuel's conjecture} --- a far-reaching generalization of
-Roth's theorem and Baker's theorem --- would imply that: - \(e\) and
-\(\pi\) are algebraically independent. - Many numbers of the form
-\(\alpha^\beta\) for algebraic \(\alpha, \beta\) are transcendental. -
-The Lindemann--Weierstrass theorem generalizes to arbitrary algebraic
-independence.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. Roth's Influence on Additive
-Combinatorics}\label{ch1958klausfriedrichroth:roths-influence-on-additive-combinatorics}
-
-\subsection{14.1 The Legacy of the Progression-Free
-Result}\label{ch1958klausfriedrichroth:the-legacy-of-the-progression-free-result}
-
-Roth's theorem on three-term progressions is the founding result of
-\textbf{additive combinatorics}. It inspired: - \textbf{Szemerédi's
-theorem (1975):} Sets of positive upper density contain \(k\)-term
-arithmetic progressions. - \textbf{Gowers' theorem (2001):} Quantitative
-bounds for \(k\)-term progressions using higher-order Fourier analysis.
-- \textbf{Green--Tao theorem (2004):} The primes contain arbitrarily
-long arithmetic progressions. - \textbf{The polynomial method} in
-additive combinatorics (Croot, Lev, Pach; Ellenberg, Gijswijt).
-
-\subsection{14.2 The Density Hales--Jewett
-Theorem}\label{ch1958klausfriedrichroth:the-density-halesjewett-theorem}
-
-Roth's Fourier-analytic method was extended to \textbf{higher
-dimensions} and \textbf{algebraic structures}: - The \textbf{density
-Hales--Jewett theorem} (Furstenberg, Katznelson) is a multidimensional
-generalization. - The \textbf{Polymath project} (2009--2010) found a new
-combinatorial proof of the density Hales--Jewett theorem.
-
-\subsection{14.3 The Cap Set Problem}\label{ch1958klausfriedrichroth:the-cap-set-problem}
-
-The \textbf{cap set problem} asks for the size of the largest subset of
-\(\mathbb{F}_3^n\) containing no three-term arithmetic progression.
-Roth's method gave the first non-trivial upper bounds. The problem was
-dramatically improved by Croot, Lev, and Pach (2017) using the
-\textbf{polynomial method}, leading to bounds of the form \(O(c^n)\) for
-some \(c < 3\).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. Roth and the Bombieri--Vinogradov
-Theorem}\label{ch1958klausfriedrichroth:roth-and-the-bombierivinogradov-theorem}
-
-\subsection{15.1 The Theorem}\label{ch1958klausfriedrichroth:the-theorem}
-
-The \textbf{Bombieri--Vinogradov theorem} (1965) states that the primes
-are well-distributed in arithmetic progressions on average over large
-moduli:
-
-\[\sum_{q \leq Q} \max_{a: (a,q)=1} \left|\pi(x; q, a) - \frac{\text{li}(x)}{\phi(q)}\right| = O\left(\frac{x}{(\log x)^A}\right)\]
-
-for \(Q \leq x^{1/2}/(\log x)^{B}\).
-
-\subsection{15.2 Roth's Contribution}\label{ch1958klausfriedrichroth:roths-contribution-1}
-
-Roth's work on the large sieve was a crucial ingredient in Bombieri's
-proof. The large sieve inequality provides the key estimate for handling
-the error terms when averaging over moduli.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. Roth's Theorem on Integer Solutions of
-Equations}\label{ch1958klausfriedrichroth:roths-theorem-on-integer-solutions-of-equations}
-
-\subsection{16.1 Thue Equations}\label{ch1958klausfriedrichroth:thue-equations}
-
-A \textbf{Thue equation} is an equation of the form \(F(x,y) = m\),
-where \(F\) is a homogeneous polynomial of degree \(\geq 3\) with
-integer coefficients and \(m\) is an integer. Thue (1909) proved that
-such equations have finitely many integer solutions.
-
-\subsection{16.2 Roth's Contribution}\label{ch1958klausfriedrichroth:roths-contribution-2}
-
-Roth's theorem provides the key Diophantine approximation estimate used
-in the proof of the finiteness of solutions to Thue equations. The type
-of estimate needed is:
-
-For an algebraic number \(\alpha\) (a root of \(F(t,1) = 0\)), if
-\((x,y)\) is a solution, then \(|x/y - \alpha|\) is small, and Roth's
-theorem bounds how small it can be without falling below the
-approximation exponent \(2 + \epsilon\).
-
-\subsection{16.3 Effective Solutions}\label{ch1958klausfriedrichroth:effective-solutions}
-
-While Roth's theorem is ineffective, \textbf{Alan Baker's} theory of
-linear forms in logarithms provides effective bounds for integer
-solutions to Thue equations. The \textbf{Baker--Schmidt theorem} extends
-this to more general Diophantine equations.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. Irregularities of
-Distribution}\label{ch1958klausfriedrichroth:irregularities-of-distribution}
-
-\subsection{17.1 The Problem}\label{ch1958klausfriedrichroth:the-problem-1}
-
-The \textbf{irregularities of distribution} problem asks: given \(N\)
-points in \([0,1]^d\), what is the smallest possible discrepancy? Roth's
-1954 paper provided the answer for the \(L^2\) discrepancy.
-
-\subsection{17.2 The Optimality}\label{ch1958klausfriedrichroth:the-optimality}
-
-Roth's lower bound \(\Omega((\log N)^{(d-1)/2}/N)\) is optimal.
-Constructions achieving this bound exist: - \textbf{Halton sequences}
-(1960) achieve \(O((\log N)^d/N)\). - \textbf{Hammersley sequences} give
-the optimal rate. - \textbf{Faure sequences} and \textbf{Sobol
-sequences} achieve similar rates.
-
-\subsection{17.3 Applications}\label{ch1958klausfriedrichroth:applications-2}
-
-Discrepancy theory has applications in: - \textbf{Quasi-Monte Carlo
-methods} for numerical integration. - \textbf{Computer graphics}
-(sampling patterns). - \textbf{Random number generation}. -
-\textbf{Computational finance} (option pricing).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. Roth's Work on the ABC
-Conjecture}\label{ch1958klausfriedrichroth:roths-work-on-the-abc-conjecture}
-
-\subsection{18.1 The ABC Conjecture}\label{ch1958klausfriedrichroth:the-abc-conjecture}
-
-The \textbf{ABC conjecture} (Masser, Oesterlé) states: for any
-\(\epsilon > 0\), there exists \(C_\epsilon\) such that for any coprime
-integers \(a + b = c\):
-
-\[\max(|a|, |b|, |c|) \leq C_\epsilon \prod_{p|abc} p^{1+\epsilon}\]
-
-\subsection{18.2 Connection to Roth's
-Theorem}\label{ch1958klausfriedrichroth:connection-to-roths-theorem}
-
-Roth's theorem on Diophantine approximation is closely related to the
-ABC conjecture. The \textbf{Mason--Stothers theorem} (for polynomials)
-is an exact analogue that implies the polynomial ABC conjecture. The ABC
-conjecture generalizes Roth's theorem to the setting of three-term
-equations.
-
-\subsection{18.3 The Roth Theorem for Number
-Fields}\label{ch1958klausfriedrichroth:the-roth-theorem-for-number-fields}
-
-Roth's theorem has been generalized to \textbf{number fields} and
-\textbf{function fields}: - \textbf{Lang (1960):} Roth's theorem for
-approximation of algebraic numbers by algebraic numbers in a number
-field. - \textbf{Uchiyama (1964):} A version for function fields in
-characteristic zero. - \textbf{Mahler and Sprindzhuk:} Generalizations
-to \(p\)-adic fields.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. The Theory of Heights and Roth's
-Theorem}\label{ch1958klausfriedrichroth:the-theory-of-heights-and-roths-theorem}
-
-\subsection{19.1 Heights}\label{ch1958klausfriedrichroth:heights}
-
-The \textbf{height} \(H(\alpha)\) of an algebraic number \(\alpha\)
-measures its arithmetic complexity. For a rational number \(p/q\) in
-lowest terms, \(H(p/q) = \max(|p|, |q|)\). Roth's theorem can be
-restated as: for any algebraic \(\alpha\) and \(\epsilon > 0\):
-
-\[|\alpha - \beta| \leq H(\beta)^{-2-\epsilon}\]
-
-has only finitely many algebraic \(\beta\) of bounded degree.
-
-\subsection{19.2 The Northcott Property}\label{ch1958klausfriedrichroth:the-northcott-property}
-
-\textbf{Northcott's theorem} states that there are only finitely many
-algebraic numbers of bounded degree and bounded height. Roth's theorem
-refines this by showing that algebraic numbers cannot be too close to a
-fixed algebraic number.
-
-\subsection{19.3 The Bogomolov
-Conjecture}\label{ch1958klausfriedrichroth:the-bogomolov-conjecture}
-
-The \textbf{Bogomolov conjecture} (proved by Ullmo and Zhang) states
-that points of small height on an abelian variety cannot be too dense.
-This is a far-reaching generalization of Roth's theorem in the context
-of Arakelov geometry.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. Roth's Theorem on Approximation of Algebraic Numbers by
-Algebraic
-Numbers}\label{ch1958klausfriedrichroth:roths-theorem-on-approximation-of-algebraic-numbers-by-algebraic-numbers}
-
-\subsection{19.1 A Generalization}\label{ch1958klausfriedrichroth:a-generalization}
-
-Roth also proved a generalization: for algebraic numbers \(\alpha\) and
-\(\beta\), the inequality:
-
-\[|\alpha - \beta| < H(\beta)^{-2-\epsilon}\]
-
-has only finitely many algebraic \(\beta\) of bounded degree, where
-\(H(\beta)\) is the height of \(\beta\).
-
-\subsection{19.2 The Schmidt Subspace
-Theorem}\label{ch1958klausfriedrichroth:the-schmidt-subspace-theorem}
-
-\textbf{Wolfgang Schmidt's} subspace theorem generalizes Roth's theorem
-to the setting of simultaneous approximation by algebraic numbers. It is
-one of the effective results in Diophantine approximation.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{20. The Roth--Wirsing Theorem}\label{ch1958klausfriedrichroth:the-rothwirsing-theorem}
-
-\subsection{20.1 Statement}\label{ch1958klausfriedrichroth:statement-2}
-
-The \textbf{Roth--Wirsing theorem} (proved with Eduard Wirsing) concerns
-the approximation of real numbers by algebraic integers. It states that
-for any real \(\alpha\) and any \(\epsilon > 0\), there are infinitely
-many algebraic integers \(\beta\) such that:
-
-\[|\alpha - \beta| < H(\beta)^{-2+\epsilon}\]
-
-\subsection{20.2 Optimality}\label{ch1958klausfriedrichroth:optimality}
-
-The exponent \(2\) is optimal, as shown by Roth's theorem on the
-approximation of algebraic numbers by rationals. The Roth--Wirsing
-theorem shows that algebraic integers are better approximants to real
-numbers than algebraic numbers of the same degree.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{21. Roth's Legacy in Modern Number
-Theory}\label{ch1958klausfriedrichroth:roths-legacy-in-modern-number-theory}
-
-\subsection{21.1 The Roth Seminar}\label{ch1958klausfriedrichroth:the-roth-seminar}
-
-Roth's influence extends through his students and collaborators at
-University College London and Imperial College. He supervised many
-distinguished number theorists, including:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Bryan Birch} (known for Birch--Swinnerton-Dyer conjecture).
-\item
- \textbf{Peter Swinnerton-Dyer} (BSD conjecture, sieve methods).
-\item
- \textbf{David Masser} (ABC conjecture, transcendence theory).
-\item
- \textbf{Robert Vaughan} (analytic number theory, Waring's problem).
-\end{itemize}
-
-\subsection{21.2 The Davenport--Roth
-School}\label{ch1958klausfriedrichroth:the-davenportroth-school}
-
-The \textbf{Davenport--Roth school} of number theory at UCL and
-Cambridge produced a generation of leading number theorists, including
-Birch, Swinnerton-Dyer, Vaughan, and Masser. Their collective work
-shaped analytic number theory and Diophantine geometry for decades.
-
-\subsection{21.3 Roth's Theorem in the 21st
-Century}\label{ch1958klausfriedrichroth:roths-theorem-in-the-21st-century}
-
-Roth's theorem remains an active area of research: - \textbf{Exponential
-improvements} in the bounds for progression-free sets (Bloom--Sisask). -
-\textbf{New proofs} of Roth's theorem using the polynomial method. -
-\textbf{Generalizations} to arbitrary finite fields and non-abelian
-groups.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{22. Roth's Later Work and Final
-Years}\label{ch1958klausfriedrichroth:roths-later-work-and-final-years}
-
-\subsection{22.1 Later Papers}\label{ch1958klausfriedrichroth:later-papers}
-
-In his later decades, Roth continued to work on: -
-\textbf{Irregularities of distribution} in higher dimensions, refining
-his earlier discrepancy bounds. - \textbf{The large sieve} and its
-applications to the distribution of primes. - \textbf{Sequences with
-restricted growth} and their combinatorial properties.
-
-\subsection{22.2 Retirement and Legacy}\label{ch1958klausfriedrichroth:retirement-and-legacy}
-
-Roth retired from Imperial College in 1988 but remained mathematically
-active. He moved to Scotland, where he enjoyed the landscape and quiet
-life. He passed away in Inverness on 10 November 2015 at the age of 90.
-
-\subsection{22.3 Quotations}\label{ch1958klausfriedrichroth:quotations}
-
-Carl Ludwig Siegel's comment on Roth's theorem is notable: ``This
-result will be remembered as long as mankind is interested in
-mathematics.'' Harold Davenport's tribute at the 1958 ICM placed Roth
-among the greatest problem-solvers in the history of number theory:
-``The great unsolved problems of mathematics may still yield to direct
-attack, however difficult and forbidding they appear to be.''
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{23. Awards and Recognition}\label{ch1958klausfriedrichroth:awards-and-recognition}
-
-\textbf{1958:} - Fields Medal (International Mathematical Union) ---
-awarded at the ICM in Edinburgh; first British recipient.
-
-\textbf{1960:} - Elected Fellow of the Royal Society (FRS).
-
-\textbf{1979:} - Elected Fellow of University College London.
-
-\textbf{1983:} - De Morgan Medal (London Mathematical Society).
-
-\textbf{1988:} - Knighted? (No --- Roth refused knighthood.)
-
-\textbf{1989:} - Honorary Fellow, Peterhouse, Cambridge.
-
-\textbf{1991:} - Sylvester Medal (Royal Society) --- ``For his many
-contributions to number theory and in particular his solution of the
-famous problem concerning approximating algebraic numbers by
-rationals.''
-
-\textbf{1993:} - Honorary Fellow of the Royal Society of Edinburgh.
-
-\textbf{1999:} - Fellow of Imperial College London.
-
-\textbf{Elected to:} - Royal Society (London). - Royal Society of
-Edinburgh (Honorary Fellow). - London Mathematical Society (member 1951,
-De Morgan Medal 1983). - Honorary Fellow, Peterhouse, Cambridge. -
-Fellow of University College London. - Fellow of Imperial College
-London.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{23. Selected Major
-Publications}\label{ch1958klausfriedrichroth:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``On certain sets of integers.''} \emph{Journal of the London
- Mathematical Society} 28, 104--109, 1953. --- \emph{Roth's theorem on
- sets with no three-term arithmetic progression.}
-\item
- \textbf{``On the discrepancy of sequences in the unit interval.''}
- \emph{Journal of the London Mathematical Society} 29, 378--385, 1954.
- --- \emph{Roth's optimal lower bound for discrepancy.}
-\item
- \textbf{``Rational approximations to algebraic numbers.''}
- \emph{Mathematika} 2, 1--20, 1955 (Corrigendum, \emph{Mathematika} 2,
- 168, 1955). --- \emph{Roth's theorem on Diophantine approximation.}
-\item
- \textbf{``On the large sieves of Linnik and Rényi.''} \emph{Journal of
- the London Mathematical Society} 39, 309--320, 1964. --- \emph{Seminal
- contribution to the large sieve method.}
-\item
- \textbf{``The distribution of integers having no small prime
- factors.''} \emph{Journal of the London Mathematical Society} 39,
- 321--328, 1964. --- \emph{Refined sieve estimates.}
-\item
- \textbf{``A problem in combinatorial number theory.''} \emph{Acta
- Arithmetica} 12, 167--176, 1966. --- \emph{Further results on
- arithmetic progressions in integer sets.}
-\item
- \textbf{``Irregularities of distribution.''} \emph{Mathematika} 19,
- 178--186, 1972. --- \emph{Higher-dimensional discrepancy bounds.}
-\item
- \textbf{``Rational approximations to algebraic numbers''} (with D.
- Ridout). \emph{Mathematika} 4, 125--131, 1957. --- \emph{The
- Roth--Ridout theorem.}
-\item
- \textbf{``The large sieve and its applications''} (with H. Davenport).
- \emph{Mathematika} 12, 193--204, 1965. --- \emph{Davenport--Roth large
- sieve results.}
-\item
- \textbf{``A problem on irregular distributions.''} \emph{Colloquium
- Mathematicum} 14, 290--294, 1966. --- \emph{Further discrepancy
- results.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Prove Liouville's theorem: if $\alpha$ is irrational and algebraic of degree $n$, then $|\alpha - p/q| > c/q^n$ for all $p/q$. \end{exercise}
-
-\begin{exercise} Show that Roth's theorem implies that algebraic irrationals have irrationality measure 2 (best possible). \end{exercise}
-
-\begin{exercise} Verify that $\sum_{q=1}^{Q} \|q\alpha\| \leq C \log Q$ for any irrational $\alpha$ using Dirichlet's approximation. \end{exercise}
-
-\begin{exercise} Compute the continued fraction expansion of $\sqrt{2}$ and discuss how it relates to best rational approximations. \end{exercise}
+\begin{prereqs} Elementary number theory (congruences, Chinese remainder theorem), real analysis (Cauchy--Schwarz inequality, $L^2$ inner products), basic probability (independent events). \end{prereqs}
+
+\begin{objectives} State the large sieve inequality and explain its principle; describe the Thue--Siegel--Roth theorem; explain the connection between the large sieve and Diophantine approximation. \end{objectives}
+
+\section{Problem History}
+
+Diophantine approximation asks: how well can irrational numbers be approximated
+by rationals? Dirichlet's pigeonhole principle (1842) shows $|\alpha - p/q| <
+1/q^2$ has infinitely many solutions for any irrational $\alpha$. Liouville
+(1844) proved algebraic numbers of degree $n$ cannot be approximated to order
+$> n$, producing the first transcendental numbers (e.g., $e = \sum 1/k!$). But
+Liouville's bound $|\alpha - p/q| \geq c/q^n$ was far from optimal.
+
+The \textbf{Thue--Siegel theorem} (1909--1921) improved Liouville's bound to
+$|\alpha - p/q| \geq c(\epsilon)/q^{n/2 + 1 + \epsilon}$ for algebraic
+$\alpha$ of degree $n \geq 3$. Siegel's proof was non-effective---it did not
+provide an explicit constant $c(\epsilon)$. The conjectured optimal bound is
+$|\alpha - p/q| \geq c(\epsilon)/q^{2+\epsilon}$ for all irrational algebraic
+$\alpha$, the \textbf{Roth conjecture}.
+
+The \textbf{large sieve} was introduced by Fritz John in 1946 for Diophantine
+approximation: estimating the measure of reals $\alpha$ that satisfy many
+congruences simultaneously. It was not initially recognized as a
+number-theoretic tool. The name ``sieve'' comes from the analogy with
+combinatorial sieves (Brun, Selberg), which remove elements divisible by small
+primes.
+
+The key challenge was to prove that the set of $\alpha$ satisfying $|\alpha -
+p/q| < \psi(q)$ for many $(p,q)$ has small measure, and to make this
+quantitative in a way that yields Diophantine results. The large sieve provides
+a way to estimate the number of rational approximations $p/q$ with $q < Q$
+that satisfy $|\alpha - p/q| < \psi(q)$, and to control the ``correlation''
+between different approximations.
+
+Roth's approach was to use the Thue--Siegel method for constructing auxiliary
+polynomials, combined with a counting argument that bounds the number of good
+approximations. The key insight was to use the polynomial $P(x) = \prod_{i=1}^r
+(x - \alpha_i)$, where the $\alpha_i$ are the good rational approximations,
+and to show that $|P(m/n)|$ is large for most $(m,n)$ while being small for
+the approximations $\alpha_i$. This contradiction bounds the number of good
+approximations.
+
+The \textbf{Thue method} (1909) used the polynomial $P(x,y) = \prod_{i=1}^r
+(q_i x - p_i y)$ to bound the number of good approximations. If $\alpha$ has
+degree $n$ and there are $r$ good approximations, then $P(x, \alpha)$ is a
+polynomial of degree $r$ in $x$ with coefficients in $\mathbb{Z}[\alpha]$. The
+norm $N_{\mathbb{Q}(\alpha)/\mathbb{Q}}(P(1, \alpha))$ is a non-zero integer,
+so it is at least 1 in absolute value. This gives $|P(1, \alpha)| \geq
+c^{-r}$ for some constant $c$ depending on $\alpha$.
+
+The \textbf{irrationality measure} of a real number $\alpha$ is defined as
+$\mu(\alpha) = \inf\{c : |\alpha - p/q| < q^{-c} \text{ has only finitely
+many solutions}\}$. For algebraic numbers of degree $\geq 3$, Roth's theorem
+implies $\mu(\alpha) = 2$. For transcendental numbers, the irrationality
+measure can be any real number $\geq 2$. The number $e$ has irrationality
+measure 2, while $\pi$ has irrationality measure $\leq 7.6063$ (Salikhov,
+2008).
+
+Liouville numbers are those with $\mu(\alpha) = \infty$. They form a set of
+measure zero but are dense in $\mathbb{R}$. The classic example is
+$\sum_{n=1}^{\infty} 10^{-n!}$, which can be approximated arbitrarily well by
+truncating the series.
+
+The \textbf{continued fraction} expansion of an irrational number $\alpha =
+[a_0; a_1, a_2, \ldots]$ provides the best rational approximations to $\alpha$.
+The convergents $p_n/q_n$ satisfy $|\alpha - p_n/q_n| < 1/q_n q_{n+1} <
+1/q_n^2$, and every best approximation is a convergent. The golden ratio
+$\phi = [1; 1, 1, 1, \ldots]$ is the ``most irrational'' number in the sense
+that its convergents are the worst approximations among all irrational numbers.
+
+\section{How Was It Solved}
+
+The \textbf{Roth theorem} (1955) states: if $\alpha$ is irrational algebraic,
+then for every $\epsilon > 0$, $|\alpha - p/q| < q^{-2-\epsilon}$ has only
+finitely many solutions. The proof uses what is now called the ``Roth sieve''
+or ``$\Lambda^3$-sieve.''
+
+Roth's innovation was to use an auxiliary polynomial $P(x, y)$ of large degree
+$D$ constructed by the Thue--Siegel method, combined with a clever counting
+argument. If $\alpha$ has too many good rational approximations $p_i/q_i$, one
+constructs $P(x,y) = \prod_{i=1}^r (q_i x - p_i y)$ and shows:
+
+1. $|P(m, n)|$ is large when $|m/n - \alpha|$ is small (from the
+approximations).
+2. $|P(m, n)|$ is small for most $(m,n)$ by convexity or ``geometry of
+numbers.''
+
+If $r$ is too large, these two facts contradict each other, yielding an upper
+bound $r \leq C_\epsilon D^{2+\epsilon}$ on the number of good approximations
+with denominator $< Q$. The counting argument uses the pigeonhole principle:
+the number of lattice points $(m,n)$ in a box $|m| \leq M$, $|n| \leq N$ with
+$|P(m,n)| \leq K$ is bounded by $O(K^{1/D} MN^{1-1/D})$, which contradicts
+the lower bound on $|P(m,n)|$ when $r$ is too large.
+
+\subsection*{The Auxiliary Polynomial Construction}
+
+Let $\alpha$ be an algebraic number of degree $n$. Suppose there exist $r$
+good approximations $p_i/q_i$ with $1 \leq q_i \leq Q$ and $|\alpha -
+p_i/q_i| < Q^{-\kappa}$ for some $\kappa > 2$. We construct the polynomial
+
+\[P(x,y) = \prod_{i=1}^r (q_i x - p_i y).\]
+
+This polynomial has degree $r$ and integer coefficients. We evaluate $P$ at
+lattice points $(m,n)$ and use the fact that $P(m,n)$ is an integer whenever
+$(m,n)$ are integers.
+
+The key observation is that for the approximations themselves, we have
+$|P(p_i, q_i)| = 0$. For other lattice points, we can bound $|P(m,n)|$ using
+the geometry of numbers. If $(m,n)$ is close to the line $y = \alpha x$, then
+$|P(m,n)|$ is small.
+
+\subsection*{The Counting Argument}
+
+We count lattice points in a box $B = \{(m,n) : |m| \leq M, |n| \leq N\}$
+and estimate $|P(m,n)|$ using the triangle inequality. For most lattice
+points, $|P(m,n)|$ is large because $P$ has integer coefficients and is not
+identically zero.
+
+The Thue--Siegel method provides an auxiliary polynomial of degree $D$ with
+controlled height. By a careful choice of parameters, one shows that the number
+of good approximations is bounded by $r \leq C_\epsilon D^{2+\epsilon}$.
+
+The \textbf{large sieve inequality} (Roth 1955, improved by
+Davenport--Roth 1956, Bombieri 1965) states: for any reals $\alpha_1, \ldots,
+\alpha_r$ and integers $q_1, \ldots, q_r$ with $1 \leq q_j \leq Q$, and for
+any arithmetic progression $a \bmod q$,
+
+\[\sum_{j=1}^r \sum_{n \equiv a \bmod q}^N |f(n - \alpha_j)|^2 \leq (N +
+Q^2) \sum_{n=1}^N |f(n)|^2\]
+
+for suitable functions $f$. The proof uses the Cauchy--Schwarz inequality and
+the bilinear structure of the problem.
+
+Davenport and Roth (1956) used the large sieve to prove the effective bound:
+for $\alpha$ algebraic of degree $n \geq 3$, $|\alpha - p/q| \geq c(n,
+\epsilon)/q^{2+\epsilon}$, making Roth's result effective. Bombieri's
+simplification (1965) made the large sieve a standard tool.
+
+\subsection*{Proof Sketch of Roth's Theorem}
+
+The proof proceeds in several steps:
+
+\textbf{Step 1.} Assume for contradiction that there are too many good
+approximations $p_i/q_i$ to $\alpha$.
+
+\textbf{Step 2.} Construct the auxiliary polynomial $P(x,y) = \prod_{i=1}^r
+(q_i x - p_i y)$ of degree $r$.
+
+\textbf{Step 3.} Show that $|P(m,n)|$ is large for most lattice points using
+the fact that $P$ has integer coefficients.
+
+\textbf{Step 4.} Use the large sieve to count lattice points where $|P(m,n)|$
+is small.
+
+\textbf{Step 5.} Derive a contradiction by comparing the two estimates.
+
+The crucial estimate is that the number of lattice points $(m,n)$ with $|m|
+\leq M$, $|n| \leq N$ satisfying $|P(m,n)| \leq K$ is bounded by $O(K^{1/r}
+MN^{1-1/r})$.
+
+\section{Impact of This Discovery}
+
+Roth's theorem initiated the modern theory of \textbf{Diophantine approximation}.
+Vinogradov's mean value theorem (1937), reinterpreted via the large sieve,
+provides bounds for the number of solutions to $x_1^k + \ldots + x_s^k = y_1^k
++ \ldots + y_s^k$. The large sieve became the fundamental tool for problems of
+``approximation to a fixed irrational by rationals with restricted denominators.''
+
+The \textbf{Bombieri--Davenport theorem} (1966) shows that the number of
+lattice points visible from the origin in a disc of radius $R$ is
+$6/\pi^2 \cdot \pi R^2 + O(R^{1+\epsilon})$, using the large sieve. This
+provides the sharpest error term for this classical problem.
+
+The \textbf{Bombieri--Pila determinant method} (1989) combines the large sieve
+with the geometry of numbers to prove new results in Diophantine geometry,
+including the Bombieri--Pila theorem on rational points on curves. The method
+produces effective bounds for the number of rational points on algebraic
+varieties of general type.
+
+The large sieve is the starting point for the \textbf{Buchstab identity} and
+the \textbf{sieve of Eratosthenes--Legendre}, providing the fundamental
+identity $\Phi(x, z) = \Phi(x, w) - \sum_{w \leq p < z} \Phi(x/p, p)$ for
+counting numbers free of prime factors $\geq z$.
+
+\textbf{Applications to Transcendental Numbers:} Roth's theorem has profound
+applications to the theory of transcendental numbers. A key application is the
+proof that certain series define transcendental numbers. For example, the
+number $\sum_{n=0}^{\infty} 10^{-n!}$ is transcendental because it can be
+approximated too well by rationals. Roth's theorem implies that algebraic
+numbers cannot have such good rational approximations.
+
+The \textbf{Gelfond--Schneider theorem} (1934) states that if $\alpha$ is
+algebraic ($\alpha \neq 0,1$) and $\beta$ is algebraic irrational, then
+$\alpha^\beta$ is transcendental. Roth's theorem provides the key tool for
+proving similar results about values of $L$-functions and other transcendental
+constants.
+
+The \textbf{Baker's theorem} (1966) on linear forms in logarithms uses
+methods inspired by Roth's theorem. It states that if $\beta_0, \beta_1, \ldots,
+\beta_n$ are algebraic numbers and $\log \alpha_1, \ldots, \log \alpha_n$
+are logarithms of algebraic numbers, then $\beta_0 + \beta_1 \log \alpha_1 +
+\ldots + \beta_n \log \alpha_n$ is either zero or transcendental.
+
+The large sieve inequality is equivalent to the statement that the points
+$e^{2\pi i \alpha_j}$ are separated on the unit circle: the discrepancy of the
+sequence $\{\alpha_j\}$ modulo 1 satisfies $D_N \leq C \sqrt{N/Q}$. This
+connects Diophantine approximation to uniform distribution and discrepancy
+theory.
+
+The \textbf{discrepancy} of a sequence $\{x_n\}$ in $[0,1]$ is defined as
+$D_N = \sup_{0 \leq a < b \leq 1} |A_N([a,b]) - N(b-a)|$, where $A_N([a,b])$
+counts the number of $x_n \in [a,b]$ for $1 \leq n \leq N$. The large sieve
+inequality implies that the discrepancy of the sequence $\{n\alpha\}$ modulo 1
+satisfies $D_N \leq C/\|q\alpha\|$, where $\|x\|$ denotes the distance to the
+nearest integer.
+
+\section{Modern Views and Improvements}
+
+The large sieve has been extended in many directions. The \textbf{Friedlander--
+Iwaniec large sieve for primes} (1981) provides estimates for sums
+$\sum_{p \equiv a \bmod q} f(p)$ with prime-restricted summands, using the
+large sieve with characters. The \textbf{Heath--Brown large sieve inequality}
+(1983) gives improved bounds with dependence on $Q$.
+
+The connection to \textbf{random matrix theory} was discovered by Keating and
+Snaith (2000), who showed that moments of $L$-functions can be expressed in
+terms of integrals over random unitary matrices, providing a probabilistic
+interpretation of the large sieve and the Selberg trace formula. This
+connection has led to many conjectures about the distribution of zeros of
+$L$-functions, including the Montgomery--Odlyzko law and the Katz--Sarnak
+philosophy.
+
+Modern sieve theory includes the \textbf{GPY method} (Goldston--Pintz--Y{\i}ld
+{\i}r{\i}m, 2005), which uses a Selberg-type sieve with weights to prove
+small gaps between primes. The \textbf{Maynard--Tao method} (2013) extends
+this to prove that $\liminf(p_{n+1} - p_n) \leq 600$, using multidimensional
+large sieves. The Polymath8 project refined these methods to improve the bound
+to 246.
+
+The \textbf{Vinogradov mean value theorem} was proved optimally by
+Bourgain--Demeter--Guth (2016) using decoupling and the ``efficient
+congruencing'' method of Wooley, completing a program initiated by Vinogradov
+and refined by Weyl, Hua, and Wooley. The optimal bound $\int_0^1 |S(\alpha)|
+^{2s} \, d\alpha \ll N^{s+\epsilon} + N^{2s - k(k+1)/2 + \epsilon}$ for
+$S(\alpha) = \sum_{n=1}^N e(n^k \alpha)$ connects the large sieve to harmonic
+analysis and decoupling theory.
+
+Roth's theorem has been generalized to the \textbf{Schmidt subspace theorem}
+(Schmidt 1970), which states that for any linear forms $L_1, \ldots, L_n$ in
+$n$ variables with algebraic coefficients, the solutions of $L_1(x) \cdots
+L_n(x) < |x|^{-\epsilon}$ are contained in a finite union of proper linear
+subspaces. This is the definitive generalization of Roth's theorem to higher
+dimensions and has applications to Diophantine geometry and the theory of
+$S$-unit equations.
+
+The \textbf{Vojta's dictionary} connects Diophantine approximation to
+Nevanlinna theory through a formal analogy: the counting function $N(r, a)$
+in Nevanlinna theory corresponds to the height $H(x)$ in Diophantine
+approximation, and the Ahlfors--Schwarz lemma corresponds to the Roth
+inequality. This analogy has been made precise by Vojta and others, leading to
+the Vojta conjecture, which unifies many results in Diophantine geometry.
+
+The connection to \textbf{continued fractions} and the metric theory of
+Diophantine approximation provides a probabilistic interpretation of Roth's
+theorem. Khinchin's theorem (1924) shows that for almost every $\alpha$, the
+approximation exponent is 2, which is the content of Roth's theorem for
+algebraic numbers. The Khinchin--Groshev theorem generalizes this to
+simultaneous approximation.
+
+The \textbf{irrationality measure} of a real number $\alpha$ is defined as
+$\mu(\alpha) = \inf\{c : |\alpha - p/q| < q^{-c} \text{ has only finitely
+many solutions}\}$. For algebraic numbers of degree $\geq 3$, Roth's theorem
+implies $\mu(\alpha) = 2$. For transcendental numbers, the irrationality
+measure can be any real number $\geq 2$. The number $e$ has irrationality
+measure 2, while $\pi$ has irrationality measure $\leq 7.6063$ (Salikhov,
+2008).
+
+Roth also made important contributions to the theory of \textbf{additive number
+theory}. The Erd{\H{o}}s--Roth theorem on the density of sum-free sets, the
+Erd{\H{o}}s--Roth theorem on arithmetic progressions, and the Roth theorem on
+sets containing no 3-term arithmetic progressions (1953) are fundamental
+results in combinatorial number theory. The Roth theorem on arithmetic
+progressions states that any subset of $\{1, \ldots, N\}$ with positive upper
+density contains a 3-term arithmetic progression, which was a major advance in
+the study of additive combinatorics.
+
+Roth received the Fields Medal in 1958 at age 32, the youngest recipient at
+that time (until Perelman's declined medal in 2006). He later made important
+contributions to the theory of additive number theory (the triangle problem)
+and to the theory of algebraic functions over finite fields. His work on the
+large sieve continues to be fundamental for modern analytic number theory.
+
+The \textbf{Roth theorem on arithmetic progressions} (1953) states that any
+subset of $\{1, \ldots, N\}$ with positive upper density contains a 3-term
+arithmetic progression. This theorem was a major advance in the study of
+additive combinatorics and was later generalized by Szemer\'edi (1975) to
+$k$-term arithmetic progressions for all $k$. The Roth theorem uses Fourier
+analysis and the large sieve, and its proof is one of the most elegant
+applications of analytic methods to combinatorial problems.
+
+The \textbf{circle method} of Hardy--Littlewood--Ramanujan, combined with the
+large sieve, provides a powerful tool for solving additive problems such as
+Waring's problem (representing integers as sums of $k$th powers) and
+Goldbach's conjecture (representing even integers as sums of two primes). The
+large sieve provides the key estimate for the minor arcs in the circle
+method, which is essential for obtaining effective bounds.
+
+Roth's work on the large sieve also influenced the theory of \textbf{exponential
+sums} and the study of the distribution of primes in arithmetic progressions.
+The Burgess bound for character sums, the Polya--Vinogradov inequality, and
+the Montgomery--Vaughan mean value theorem are all consequences of the large
+sieve.
+
+The \textbf{subspace theorem} of Schmidt (1970) represents the crowning
+achievement of the Thue--Siegel--Roth program. It states that for any finite
+collection of linear forms $L_1, \ldots, L_q$ in $n$ variables over a number
+field $K$, with $q \geq n+1$ and in general position, the inequality
+
+\[\prod_{i=1}^q |L_i(x)|_v < H(x)^{-\epsilon}\]
+
+has only finitely many solutions $x \in K^n$ outside a finite union of proper
+linear subspaces. Here $H(x)$ denotes the height of $x$ and the product is
+taken over all places $v$ of $K$.
+
+The subspace theorem has far-reaching consequences in Diophantine geometry. It
+implies the finiteness of $S$-unit solutions (Siegel's theorem), provides
+bounds for integral points on curves, and yields results on the distribution of
+rational points on algebraic varieties. The theorem also has connections to
+value distribution theory through Vojta's dictionary.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Roth proved that for any algebraic irrational $\alpha$ and any $\epsilon > 0$, the inequality $|\alpha - p/q| < 1/q^{2+\epsilon}$ has only finitely many solutions. This settled the Thue-Siegel conjecture and remains the strongest result in metric diophantine approximation.
-
-\section{24. References and Further
-Reading}\label{ch1958klausfriedrichroth:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch1958klausfriedrichroth:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1958 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1958
-\item
- Royal Society Biographical Memoir (Chen and Vaughan, 2017).
-\item
- LMS Biography: Klaus Friedrich Roth, 1925--2015 (Bulletin of the LMS,
- 2018).
-\end{itemize}
-
-\subsection{Books}\label{ch1958klausfriedrichroth:books}
-
-\begin{itemize}
-\tightlist
-\item
- Roth, K.F. \emph{Rational Approximations to Algebraic Numbers}. LMS
- Lecture Note Series, 1955.
-\item
- Roth, K.F. \emph{Collected Works}. Oxford University Press, 1998.
-\item
- Davenport, H. \emph{Multiplicative Number Theory}. Springer, 1980.
-\item
- Hindry, M. and Silverman, J. \emph{Diophantine Geometry: An
- Introduction}. Springer, 2000.
-\item
- Lang, S. \emph{Diophantine Approximation}. Springer, 1983.
-\item
- Schmidt, W. \emph{Diophantine Approximation and Diophantine
- Equations}. Springer, 1991.
-\end{itemize}
-
-\subsection{Key Articles}\label{ch1958klausfriedrichroth:key-articles}
-
-\begin{itemize}
-\tightlist
-\item
- Davenport, H. ``The Work of Klaus Roth.'' ICM 1958 Laudatio.
-\item
- Siegel, C.L. ``Über die Approximation algebraischer Zahlen.'' (Comment
- on Roth's theorem, 1956.)
-\item
- Bombieri, E. and van der Poorten, A.J. ``Roth's theorem and the theory
- of heights.'' \emph{Journal of Number Theory} 24, 1986.
-\item
- Chen, W. and Vaughan, R. ``Klaus Friedrich Roth, 29 October 1925 -- 10
- November 2015.'' \emph{Biographical Memoirs of Fellows of the Royal
- Society} 64, 91--109, 2018.
-\item
- Chen, W. ``The work of Klaus Roth on irregularities of distribution.''
- \emph{Functional Analysis and Its Applications} 34, 2000.
-\end{itemize}
-
-\subsection{Textbooks and Surveys}\label{ch1958klausfriedrichroth:textbooks-and-surveys}
-
-\begin{itemize}
-\tightlist
-\item
- Tao, T. and Vu, V. \emph{Additive Combinatorics}. Cambridge University
- Press, 2006.
-\item
- Kuipers, L. and Niederreiter, H. \emph{Uniform Distribution of
- Sequences}. Wiley, 1974.
-\item
- Schmidt, W. \emph{Diophantine Approximation}. Springer, 1980.
-\item
- Gowers, T. ``A new proof of Szemerédi's theorem.'' \emph{GAFA} 11,
- 2001.
-\item
- Bloom, T. and Sisask, O. ``Breaking the logarithmic barrier in Roth's
- theorem.'' \emph{Annals of Mathematics} 192, 2020.
-\end{itemize}
-
-\subsection{Further Reading}\label{ch1958klausfriedrichroth:further-reading}
-
-\begin{itemize}
-\tightlist
-\item
- Matoušek, J. \emph{Geometric Discrepancy}. Springer, 1999.
-\item
- Chazelle, B. \emph{The Discrepancy Method}. Cambridge University
- Press, 2000.
-\item
- Graham, R. and Nesetril, J. \emph{The Mathematics of Paul Erdős}.
- Springer, 1997.
-\end{itemize}
-
-\subsection{Biography}\label{ch1958klausfriedrichroth:biography}
-
-\begin{itemize}
-\tightlist
-\item
- Chen, W. and Vaughan, R. ``Klaus Friedrich Roth, 29 October 1925 -- 10
- November 2015.'' \emph{Biographical Memoirs of Fellows of the Royal
- Society} 64, 91--109, 2018.
-\item
- ``Klaus Friedrich Roth 1925--2015.'' \emph{Bulletin of the London
- Mathematical Society} 50, 729--739, 2018.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1986gerdfaltings:gerd-faltings-fields-medal-1986-a-comprehensive-report]{See Chapter on related work}} --- Faltings extended Roth's theorem.
-  \item \textbf{\hyperref[ch1970alanbaker:alan-baker-fields-medal-1970-a-comprehensive-report]{See Chapter on related work}} --- Baker's work on linear forms relates to Roth.
-\end{itemize}
-
-\emph{(End of report)}
+Roth proved the definitive bound on Diophantine approximation to algebraic
+irrationals, using the large sieve method. His work on the effective
+Thue--Siegel--Roth theorem and the development of the large sieve inequality
+provided the foundation for modern analytic number theory and sieve methods.
+The Roth theorem ($\mu(\alpha) = 2$ for algebraic $\alpha$) stands as one of
+the crowning achievements of 20th-century number theory, with applications
+ranging from transcendental number theory to Diophantine geometry. Schmidt's
+subspace theorem represents the natural generalization, while modern
+developments connect the large sieve to harmonic analysis, random matrix
+theory, and additive combinatorics.

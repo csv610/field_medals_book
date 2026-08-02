@@ -13,6 +13,7 @@ CROSS_REFS = {
         ("chapter_1974_david_bryant_mumford", "Mumford extended Grothendieck's algebraic geometry"),
         ("chapter_2002_vladimir_voevodsky", "Voevodsky extended motivic cohomology"),
         ("chapter_1978_daniel_g._quillen", "Quillen's K-theory builds on Grothendieck's foundational work"),
+        ("2026_jacob_tsimerman", "Tsimerman's work on Shimura varieties builds on Grothendieck's foundations"),
     ],
     "chapter_1978_pierre_rene_deligne": [
         ("chapter_1966_alexander_grothendieck", "Deligne was Grothendieck's student"),
@@ -283,6 +284,7 @@ CROSS_REFS = {
         ("chapter_1986_simon_donaldson", "Thurston's work on 3-manifolds relates to Donaldson"),
         ("chapter_1986_michael_freedman", "Freedman's work on 4-manifolds relates to Thurston"),
         ("chapter_2014_maryam_mirzakhani", "Mirzakhani used Thurston's work"),
+        ("2026_john_pardon", "Pardon's work on group actions on 3-manifolds extends Thurston's vision"),
     ],
     "chapter_1970_serge_novikov": [
         ("chapter_1966_michael_francis_atiyah", "Atiyah's work on topology relates to Novikov"),
@@ -303,6 +305,27 @@ CROSS_REFS = {
     "chapter_1970_john_griggs_thompson": [
         ("chapter_1994_efim_zelmanov", "Zelmanov extended Thompson's work"),
         ("chapter_1998_richard_borcherds", "Borcherds' work on vertex algebras relates"),
+    ],
+    "2026_hong_wang": [
+        ("chapter_2006_terence_tao", "Tao's work on harmonic analysis relates to Wang's"),
+        ("chapter_1994_jean_bourgain", "Bourgain's work on restriction theory relates"),
+        ("chapter_2006_wendelin_werner", "Werner's SLE work connects to geometric measure theory"),
+    ],
+    "2026_yu_deng": [
+        ("chapter_2014_martin_hairer", "Hairer's work on stochastic PDEs relates to Deng's"),
+        ("chapter_1994_pierre_louis_lions", "Lions' work on PDEs relates to Deng's"),
+        ("chapter_2006_terence_tao", "Tao's work on dispersive equations relates"),
+    ],
+    "2026_john_pardon": [
+        ("chapter_1982_william_thurston", "Thurston's work on 3-manifolds relates to Pardon's"),
+        ("chapter_1986_simon_donaldson", "Donaldson's invariants relate to symplectic geometry"),
+        ("chapter_1986_michael_freedman", "Freedman's work on 4-manifolds relates"),
+        ("chapter_1998_maxim_kontsevich", "Kontsevich's work on moduli spaces relates"),
+    ],
+    "2026_jacob_tsimerman": [
+        ("chapter_1986_gerd_faltings", "Faltings' work on arithmetic geometry relates"),
+        ("chapter_1966_alexander_grothendieck", "Grothendieck's techniques underlie Tsimerman's work"),
+        ("chapter_2018_peter_scholze", "Scholze's work on perfectoid spaces relates to arithmetic geometry"),
     ],
 }
 

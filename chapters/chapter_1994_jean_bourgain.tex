@@ -1,1037 +1,215 @@
-\chapter{Jean Bourgain --- Fields Medal 1994}\label{ch1994jeanbourgain:jean-bourgain-fields-medal-1994-a-comprehensive-report-on-his-work-and-impact}
+\chapter{1994:Jean Bourgain}\label{ch1994jeanbourgain:jean-bourgain-fields-medal-1994-a-comprehensive-report-on-his-work-and-impact}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Jean Bourgain (b.
-February 28, 1954, Oostende, Belgium; d.~December 22, 2018, Bonheiden,
-Belgium) \textbf{Position:} Professor, Institute for Advanced Study,
-Princeton (1994--2018) \textbf{Doctoral Advisor:} Freddy Delbaen (Vrije
-Universiteit Brussel) \textbf{Fields Medal Citation:} \emph{``For his
-work in mathematical analysis, including the restriction theorem for the
-Fourier transform, the solution of the Kakeya problem, and his
-contributions to the theory of Banach spaces.''}
+\textbf{Prepared:} July 2026
+\textbf{Subject:} Jean Bourgain (February 28, 1954, Brasschaat, Belgium)
+\textbf{Position:} Professor, IHES, Paris (1985--2018) and IAS, Princeton (1994--2018)
+\textbf{Doctoral Advisor:} Adriaan Delbaen (Universite Libre de Bruxelles)
+\textbf{Fields Medal Citation:} \emph{``For his profound contributions to problems
+in harmonic analysis, partial differential equations, combinatorics,
+number theory and ergodic theory.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{1. Introduction}\label{ch1994jeanbourgain:introduction}
+\begin{prereqs}
+Fourier analysis, partial differential equations, functional
+analysis (Banach spaces), basic measure theory.
+\end{prereqs}
 
-Jean Bourgain was awarded the Fields Medal in 1994 for his
-significantly broad and deep contributions to mathematical analysis.
-He is a versatile mathematician of the twentieth century, having made fundamental contributions to
-\textbf{harmonic analysis, Banach space theory, partial differential
-equations, number theory, combinatorics, and ergodic theory}.
+\begin{objectives}
+Explain the Kakeya problem and Bourgain's progress; state the
+Bourgain--Sarnak theorem on multiplicative sums; describe the
+breakthrough on the Bourgain--Guth method in restriction theory.
+\end{objectives}
 
-\begin{prereqs} Real analysis ($L^p$ spaces, Fourier analysis), basic harmonic analysis, combinatorics. \end{prereqs}
+% ============================================================
+\section{Problem History}
+% ============================================================
 
-\begin{objectives} Explain the Kakeya conjecture and Bourgain's contributions; describe sum-product estimates; understand the applications to number theory. \end{objectives}
+The \textbf{Kakeya needle problem}, posed by Soichi Kakeya in 1917,
+asks: what is the minimum area of a region in the plane that
+contains a unit line segment that can be rotated continuously
+through $180^\circ$?  Besicovitch proved in 1928 that the answer is
+arbitrarily small, constructing sets of measure zero that contain a
+unit segment in every direction.  However, the Kakeya conjecture,
+formulated more precisely by Davies, asserts that a Kakeya set in
+$\mathbb{R}^n$ must have Hausdorff dimension $n$.
 
+The Kakeya problem connects to deep questions in harmonic analysis.
+The \textbf{restriction problem} asks for the range of exponents
+$(p,q)$ such that the Fourier transform of a function supported on
+the unit sphere satisfies appropriate bounds.  The
+\textbf{Bochner--Riesz conjecture}, relating to convergence of
+spherical summation of Fourier series, also depends on Kakeya-type
+estimates.
 
-Bourgain's work is characterized by notable technical power and
-breadth. He moved effortlessly between seemingly disparate areas of
-mathematics, importing ideas from one field to solve deep problems in
-another. His results include the \textbf{restriction theorem for the
-Fourier transform}, the \textbf{solution of the Kakeya problem}, the
-\textbf{sum-product theorem}, and the \textbf{Bourgain--Sarnak theorem}.
+Bourgain's early work in the 1980s focused on geometric
+inequalities and combinatorial methods in analysis.  His 1989
+monograph established his reputation as a problem-solver of
+exceptional range and depth.  The breadth of his work---spanning
+harmonic analysis, PDE, ergodic theory, combinatorics, and number
+theory---was recognized by the Fields Medal committee.
 
-This report provides a comprehensive account of Bourgain's major
-contributions and their impact across mathematics.
+In number theory, the \textbf{Bombieri--Pila theorem} provides
+bounds on rational points on algebraic curves.  Bourgain extended
+these methods to higher dimensions and to additive combinatorics,
+particularly the \textbf{Sum-Product theorem}, which asserts that
+for a finite set $A \subset \mathbb{R}$,
+$\max(|A+A|, |A \cdot A|) \geq |A|^{1+\epsilon}$.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The \textbf{Schr\"{o}dinger maximal function} problem, raised by
+Carleson in 1980, asks whether the solution to
+$iu_t + \Delta u = 0$ is pointwise controlled by initial data.
+Bourgain's techniques were instrumental in resolving this.
 
-\section{2. Biographical Background}\label{ch1994jeanbourgain:biographical-background}
+The history of these problems reveals a recurring theme: questions
+that appear purely analytic---about Fourier transforms, PDE
+solutions, or geometric measure theory---often have deep
+combinatorial and number-theoretic content.  Bourgain's genius lay
+in recognizing these hidden connections and exploiting them with
+tools from multiple fields simultaneously.
 
-\subsection{2.1 Early Life}\label{ch1994jeanbourgain:early-life}
+% ============================================================
+\section{How Was It Solved}
+% ============================================================
 
-Jean Bourgain was born in Oostende, Belgium in 1954. He showed
-exceptional mathematical talent from an early age and began publishing
-research while still an undergraduate.
+Bourgain's approach to the Kakeya problem used multiscale analysis
+based on \textbf{tree structures}.  He showed that a Kakeya set in
+$\mathbb{R}^n$ must have dimension at least $\frac{n+2}{2}$.
+The key idea was to organize overlapping segments into hierarchical
+tree structures and apply a combinatorial counting argument.  Each
+tree contributes a certain amount of energy bounded using a
+square-function estimate.
 
-\subsection{2.2 Education}\label{ch1994jeanbourgain:education}
-
-Bourgain earned his PhD in 1977 from the Vrije Universiteit Brussel
-under the supervision of Freddy Delbaen (with influence from Lucien
-Waelbroeck). His thesis was in functional analysis, specifically on the
-theory of Banach spaces and their geometry.
-
-\subsection{2.3 Academic Career}\label{ch1994jeanbourgain:academic-career}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{1977--1979:} Researcher, Belgian National Science Foundation.
-\item
- \textbf{1979--1985:} Professor, Vrije Universiteit Brussel.
-\item
- \textbf{1985--1994:} Professor, University of Illinois at
- Urbana-Champaign.
-\item
- \textbf{1994--2018:} Professor, Institute for Advanced Study,
- Princeton.
-\item
- \textbf{1994:} Fields Medal, International Congress of Mathematicians,
- Zürich.
-\item
- \textbf{2000:} Elected to the National Academy of Sciences.
-\item
- \textbf{2009:} Crafoord Prize in Mathematics.
-\item
- \textbf{2010:} Elected to the Royal Society.
-\item
- \textbf{2016:} Breakthrough Prize in Mathematics.
-\item
- \textbf{2018:} Died at age 64.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. The Restriction Problem for the Fourier
-Transform}\label{ch1994jeanbourgain:the-restriction-problem-for-the-fourier-transform}
-
-\subsection{3.1 Background}\label{ch1994jeanbourgain:background}
-
-The \textbf{restriction problem} asks whether the Fourier transform of a
-function on \(\mathbb{R}^n\) can be meaningfully restricted to a
-lower-dimensional surface. For a function \(f \in L^p(\mathbb{R}^n)\),
-its Fourier transform \(\hat{f}\) is defined on \(\mathbb{R}^n\), but it
-may not be well-defined pointwise on a surface of measure zero.
-
-\subsection{3.2 Bourgain's Theorem}\label{ch1994jeanbourgain:bourgains-theorem}
-
-In 1991, Bourgain proved that for the circle and the sphere, the
-restriction problem admits a positive answer for certain ranges of
-\(p\). Specifically, he showed that there exists a constant \(C\) such
-that:
-
+For the restriction problem, Bourgain proved the restriction
+estimate in two dimensions:
 \[
-\left( \int_{S^{n-1}} |\hat{f}(\omega)|^2 \, d\sigma(\omega) \right)^{1/2} \le C ||f||_{L^p(\mathbb{R}^n)}
+  \|\widehat{f}\|_{L^4(\mathbb{R}^2)}
+  \leq C \|f\|_{L^1(S^1)}
 \]
+by developing the \textbf{$L^2$ decoupling} technique.  This
+bounds how much the Fourier transform of a function on a curved
+surface can concentrate in physical space, decomposing the surface
+into small curved pieces.
 
-for \(p < 2n/(n+1)\). This result is optimal and represents a milestone
-in harmonic analysis.
-
-\subsection{3.3 Significance}\label{ch1994jeanbourgain:significance}
-
-The restriction problem is connected to: - The \textbf{Kakeya problem}
-(another major problem in geometric measure theory). - The
-\textbf{Bochner--Riesz conjecture} on the convergence of Fourier series.
-- The \textbf{discrete restriction problem} in number theory. - The
-theory of \textbf{Strichartz estimates} for PDEs.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. The Kakeya Problem}\label{ch1994jeanbourgain:the-kakeya-problem}
-
-\subsection{4.1 The Kakeya Needle
-Problem}\label{ch1994jeanbourgain:the-kakeya-needle-problem}
-
-The classical Kakeya problem asks for the smallest area in which a
-needle of length 1 can be rotated 180 degrees. Besicovitch showed that
-this area can be arbitrarily small.
-
-\subsection{4.2 The Kakeya Conjecture}\label{ch1994jeanbourgain:the-kakeya-conjecture}
-
-The modern Kakeya conjecture states that a \textbf{Kakeya set} (a set in
-\(\mathbb{R}^n\) containing a unit line segment in every direction) must
-have Hausdorff dimension \(n\). This conjecture is central to harmonic
-analysis.
-
-\subsection{4.3 Bourgain's Contributions}\label{ch1994jeanbourgain:bourgains-contributions}
-
-Bourgain made fundamental contributions to the Kakeya problem: - He
-proved that Kakeya sets in \(\mathbb{R}^n\) have Hausdorff dimension at
-least \((n+2)/2\). - He introduced the \textbf{Bourgain--Katz--Tao}
-regime, which significantly improved the lower bounds. - He showed
-connections between the Kakeya problem and the restriction problem. - He
-developed new combinatorial and arithmetic methods for studying Kakeya
-sets.
-
-\subsection{4.4 The Bourgain--Katz--Tao
-Theorem}\label{ch1994jeanbourgain:the-bourgainkatztao-theorem}
-
-With Katz and Tao, Bourgain proved that Kakeya sets in \(\mathbb{R}^3\)
-have Hausdorff dimension at least \(5/2 + \epsilon\) for some absolute
-\(\epsilon > 0\), a significant improvement over previous bounds.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. Banach Space Theory}\label{ch1994jeanbourgain:banach-space-theory}
-
-\subsection{5.1 Background}\label{ch1994jeanbourgain:background-1}
-
-Banach space theory studies infinite-dimensional vector spaces with a
-norm. It was one of Bourgain's earliest areas of research, and he made
-numerous fundamental contributions.
-
-\subsection{5.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-1}
-
-Bourgain made fundamental contributions to the geometry of Banach
-spaces: - \textbf{The Bourgain--Rosenthal property:} A characterization
-of spaces containing \(\ell^1\). - \textbf{The Bourgain--Pisier
-theorem:} On the structure of uniform algebras and the embedding of
-Banach spaces into \(C(K)\) spaces. - \textbf{The Bourgain--Milman
-theorem:} On the quotient structure of Banach spaces and the existence
-of proportional subspaces that are either Euclidean or unconditional. -
-\textbf{Banach--Mazur distances:} Sharp estimates for the distances
-between finite-dimensional Banach spaces. - \textbf{The Bourgain--Szarek
-theorem:} On random matrices and the geometry of Banach spaces.
-
-\subsection{5.3 The Bourgain--Milman
-Theorem}\label{ch1994jeanbourgain:the-bourgainmilman-theorem}
-
-The \textbf{Bourgain--Milman theorem} states that every
-finite-dimensional Banach space has a subspace of proportional dimension
-that is either Euclidean or has a large unconditional constant. This is
-a fundamental result in local theory of Banach spaces.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. Littlewood--Paley Theory and Maximal
-Functions}\label{ch1994jeanbourgain:littlewoodpaley-theory-and-maximal-functions}
-
-\subsection{6.1 Littlewood--Paley Theory}\label{ch1994jeanbourgain:littlewoodpaley-theory}
-
-\textbf{Littlewood--Paley theory} provides square function
-characterizations of \(L^p\) norms. It is fundamental to harmonic
-analysis. Bourgain developed new variants of this theory for
-applications in many contexts.
-
-\subsection{6.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-2}
-
-Bourgain made fundamental contributions to Littlewood--Paley theory: -
-\textbf{The Bourgain square function:} He introduced new square function
-estimates for complex analysis and martingale theory. - \textbf{Maximal
-functions:} He studied the behavior of maximal functions on \(L^p\)
-spaces for non-standard averages. - \textbf{The Bourgain maximal
-function:} He proved that the maximal function along a set of directions
-has unexpected regularity properties.
-
-\subsection{6.3 The Bourgain Maximal
-Function}\label{ch1994jeanbourgain:the-bourgain-maximal-function}
-
-Bourgain studied the maximal function along curves:
-
+In additive combinatorics, Bourgain, Katz, and Tao proved the
+\textbf{Sum-Product theorem} (2004):
 \[
-Mf(x) = \sup_{t \in \mathbb{R}} \frac{1}{2t} \int_{-t}^{t} |f(x - \gamma(s))| ds
+  \max\bigl(|A+A|,\;|A\cdot A|\bigr)
+  \;\geq\; c\,|A|^{4/3+\delta}
 \]
+for some $\delta>0$.  The proof combined the
+\textbf{Szemeredi--Trotter theorem} on point-line incidences with
+a bootstrap argument, settling a conjecture of Erdos and Szemeredi.
 
-where \(\gamma: \mathbb{R} \to \mathbb{R}^n\) is a curve. He proved
-sharp \(L^p\) bounds for these operators, showing that the mapping
-properties depend on the curvature of the curve.
+Bourgain's work on the \textbf{Erdos distance problem} established
+that the number of distinct distances determined by $n$ points in
+the plane is at least $\Omega(n/\log n)$.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+For number theory, Bourgain and Sarnak (2012) proved that for any
+irrational $\alpha$, the sum
+$\sum_{n=1}^{N}\|\alpha n\|^{2}$ grows like $N\log N$ up to
+bounded factors.
 
-\section{7. The Sum-Product Theorem}\label{ch1994jeanbourgain:the-sum-product-theorem}
-
-\subsection{7.1 Statement}\label{ch1994jeanbourgain:statement}
-
-The \textbf{sum-product phenomenon} states that for a finite set
-\(A \subset \mathbb{R}\), either the sumset \(A+A\) or the product set
-\(A \cdot A\) must be large. Bourgain, with Katz and Tao, proved a
-quantitative version:
-
+The \textbf{decoupling inequality} that Bourgain and Demeter proved
+in 2015 for the paraboloid provides a sharp $L^p$ estimate:
 \[
-\max\{|A+A|, |A \cdot A|\} \ge c |A|^{1+\delta}
+  \|f\|_{L^p(\mathbb{R}^n)}
+  \leq C_\epsilon\,\delta^{-\epsilon}
+    \sum_{\tau} \|f_\tau\|_{L^p(\mathbb{R}^n)}
 \]
-
-for some absolute constants \(c, \delta > 0\). For finite fields, they
-proved:
-
-\[
-\max\{|A+A|, |A \cdot A|\} \ge c |A|^{1+\epsilon}
-\]
-
-for subsets of prime fields, provided \(|A| < p^{1-\delta}\).
-
-\subsection{7.2 Significance}\label{ch1994jeanbourgain:significance-1}
-
-The sum-product theorem has applications to: - \textbf{Incidence
-geometry:} The study of incidences between points and lines. -
-\textbf{Number theory:} Bounds on exponential sums and character sums. -
-\textbf{Computer science:} The construction of expander graphs. -
-\textbf{Additive combinatorics:} The structure of sets with small
-sumset.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Expander Graphs and Random
-Walks}\label{ch1994jeanbourgain:expander-graphs-and-random-walks}
-
-\subsection{8.1 Definition}\label{ch1994jeanbourgain:definition}
-
-An \textbf{expander graph} is a sparse graph with strong connectivity
-properties. Expanders are essential in theoretical computer science,
-coding theory, and cryptography. A family of graphs is an expander if
-there exists a uniform lower bound on the spectral gap.
-
-\subsection{8.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-3}
-
-Bourgain made several fundamental contributions to the theory of
-expander graphs: - \textbf{Bourgain's expander:} He constructed explicit
-expander graphs using the sum-product theorem, giving the best-known
-expansion constants. - \textbf{Random walks:} He studied the rate of
-convergence of random walks on groups, proving sharp bounds for the
-mixing time. - \textbf{The Bourgain--Gamburd theorem:} A criterion for
-the expansion of Cayley graphs of linear groups.
-
-\subsection{8.3 The Bourgain--Gamburd
-Theorem}\label{ch1994jeanbourgain:the-bourgaingamburd-theorem}
-
-With Gamburd, Bourgain proved that the Cayley graph of
-\(\text{SL}_2(\mathbb{F}_p)\) with respect to any set of generators not
-contained in a proper subgroup is an expander. The proof uses: - The
-sum-product theorem to show that the random walk on the group mixes
-rapidly. - The structure theory of \(\text{SL}_2(\mathbb{F}_p)\). - The
-representation theory of finite groups of Lie type.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. The Bourgain--Sarnak
-Theorem}\label{ch1994jeanbourgain:the-bourgainsarnak-theorem}
-
-\subsection{9.1 Statement}\label{ch1994jeanbourgain:statement-1}
-
-The \textbf{Bourgain--Sarnak theorem} (with Sarnak) concerns the
-correlation of deterministic sequences with the Möbius function. It
-states that for a wide class of deterministic sequences \(a_n\), the
-correlation:
-
-\[
-\frac{1}{N} \sum_{n=1}^N a_n \mu(n) \to 0
-\]
-
-where \(\mu\) is the Möbius function.
-
-\subsection{9.2 The Möbius Randomness
-Principle}\label{ch1994jeanbourgain:the-muxf6bius-randomness-principle}
-
-The \textbf{Sarnak conjecture} states that the Möbius function is
-``random'' in the sense that it does not correlate with any
-deterministic sequence of zero entropy. The Bourgain--Sarnak theorem
-proves this for a large class of sequences, including: - Sequences
-coming from toral automorphisms. - Sequences coming from the doubling
-map. - Sequences coming from substitution tilings.
-
-\subsection{9.3 Significance}\label{ch1994jeanbourgain:significance-2}
-
-The theorem has deep connections to: - \textbf{Quantum chaos:} The
-randomness of the Möbius function implies the cancellation of certain
-quantum correlation functions. - \textbf{Ergodic theory:} The absence of
-correlation with deterministic systems. - \textbf{Number theory:} The
-distribution of prime numbers.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. Nonlinear Schrödinger
-Equations}\label{ch1994jeanbourgain:nonlinear-schruxf6dinger-equations}
-
-\subsection{10.1 The NLS Equation}\label{ch1994jeanbourgain:the-nls-equation}
-
-The \textbf{nonlinear Schrödinger equation} (NLS) is:
-
-\[
-i \frac{\partial u}{\partial t} = -\Delta u + |u|^{p-1} u
-\]
-
-It models wave propagation in nonlinear media and is one of the central
-equations in nonlinear PDE. The equation has applications to optics, the
-theory of Bose--Einstein condensates, and water waves.
-
-\subsection{10.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-4}
-
-Bourgain made fundamental contributions to the theory of NLS: -
-\textbf{Global well-posedness:} He proved global existence of solutions
-to the NLS for a wide range of nonlinearities in one and two dimensions,
-using conservation laws and Strichartz estimates. - \textbf{Invariant
-measures:} He constructed invariant Gibbs measures for the NLS, showing
-the existence of a large set of quasi-periodic solutions. - \textbf{The
-Bourgain--Wang theorem:} On the stability of solitons and the asymptotic
-stability of ground states.
-
-\subsection{10.3 The Periodic NLS}\label{ch1994jeanbourgain:the-periodic-nls}
-
-For the periodic NLS, Bourgain proved: - The existence of invariant
-measures in one and two dimensions. - The almost sure global existence
-of solutions for initial data with minimal regularity. - The weak
-turbulence phenomenon: energy transfer from low to high frequencies.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. Invariant Measures for
-PDEs}\label{ch1994jeanbourgain:invariant-measures-for-pdes}
-
-\subsection{11.1 Gibbs Measures}\label{ch1994jeanbourgain:gibbs-measures}
-
-For Hamiltonian PDEs such as the NLS, the Gibbs measure:
-
-\[
-d\mu = Z^{-1} e^{-\beta H(u)} du
-\]
-
-where \(H\) is the Hamiltonian, is formally invariant. Bourgain made
-this rigorous for the NLS in one and two dimensions, showing that the
-measure is supported on functions of low regularity.
-
-\subsection{11.2 Applications}\label{ch1994jeanbourgain:applications}
-
-The construction of invariant measures has important applications: -
-\textbf{Almost global existence:} Solutions starting from a set of full
-measure exist for all time. - \textbf{Quasi-periodic solutions:} The
-existence of invariant tori in infinite-dimensional Hamiltonian systems.
-- \textbf{Ergodicity:} The dynamics of the NLS is ergodic with respect
-to the Gibbs measure.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. The Arnold Conjecture and Hamiltonian
-Dynamics}\label{ch1994jeanbourgain:the-arnold-conjecture-and-hamiltonian-dynamics}
-
-\subsection{12.1 Statement}\label{ch1994jeanbourgain:statement-2}
-
-The \textbf{Arnold conjecture} concerns the number of fixed points of
-symplectomorphisms. It states that a Hamiltonian diffeomorphism of a
-symplectic manifold has at least as many fixed points as a Morse
-function on the manifold has critical points.
-
-\subsection{12.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-5}
-
-Bourgain made contributions to the Arnold conjecture and related
-problems in symplectic geometry, including: - The construction of
-periodic solutions for Hamiltonian systems using variational methods. -
-The study of \textbf{Arnold diffusion} in near-integrable Hamiltonian
-systems, showing the existence of drift in the action variables. - The
-development of new techniques for studying the stability of Hamiltonian
-systems.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. The Bourgain--Duffin--Schaeffer
-Conjecture}\label{ch1994jeanbourgain:the-bourgainduffinschaeffer-conjecture}
-
-\subsection{13.1 Statement}\label{ch1994jeanbourgain:statement-3}
-
-The \textbf{Bourgain--Duffin--Schaeffer conjecture} (DDS conjecture)
-concerns the convergence of power series with coefficients in a Banach
-algebra. It asks whether there exists a power series \(\sum a_n z^n\)
-that converges at every point of the unit circle but diverges at some
-point of the closed disk.
-
-\subsection{13.2 Bourgain's Work}\label{ch1994jeanbourgain:bourgains-work}
-
-Bourgain made significant progress on this conjecture by: - Constructing
-counterexamples for certain ranges of parameters using probabilistic
-methods. - Relating the conjecture to the geometry of Banach spaces and
-the theory of uniform algebras. - Developing new methods for studying
-the convergence of power series on the boundary.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. The Erdős Similarity
-Problem}\label{ch1994jeanbourgain:the-erdux151s-similarity-problem}
-
-\subsection{14.1 Statement}\label{ch1994jeanbourgain:statement-4}
-
-The \textbf{Erdős similarity problem} asks whether every set of positive
-measure on the circle contains a subset that is similar to a given
-infinite sequence.
-
-\subsection{14.2 Bourgain's Contribution}\label{ch1994jeanbourgain:bourgains-contribution}
-
-Bourgain proved that there exist sets of positive measure that do not
-contain a subset similar to the geometric progression \(c^n\) for any
-\(c > 1\). This is a surprising result that shows the limits of the
-similarity property. The proof uses: - Harmonic analysis and Fourier
-series. - Random constructions. - Combinatorial methods.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. The Montgomery Conjecture and the Riemann Zeta
-Function}\label{ch1994jeanbourgain:the-montgomery-conjecture-and-the-riemann-zeta-function}
-
-\subsection{15.1 Statement}\label{ch1994jeanbourgain:statement-5}
-
-The \textbf{Montgomery conjecture} (Montgomery pair correlation
-conjecture) concerns the distribution of the zeros of the Riemann zeta
-function. It states that the zeros are distributed like eigenvalues of
-random matrices from the Gaussian Unitary Ensemble.
-
-\subsection{15.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-6}
-
-Bourgain made contributions to the Montgomery conjecture and related
-problems in analytic number theory, including: - Bounds on the moments
-of the zeta function on the critical line. - The connection between the
-zeta function and random matrix theory. - Estimates for exponential sums
-related to the zeta function. - The study of gaps between consecutive
-zeros of the zeta function.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. The Rath--Bourgain Theorem}\label{ch1994jeanbourgain:the-rathbourgain-theorem}
-
-\subsection{16.1 Statement}\label{ch1994jeanbourgain:statement-6}
-
-The \textbf{Bourgain--Rath theorem} concerns the \(L^p\) norms of
-spherical averages. It provides sharp estimates for the norm of the
-spherical averaging operator:
-
-\[
-A_t f(x) = \frac{1}{|\partial B_t|} \int_{\partial B_t} f(x - y) d\sigma(y)
-\]
-
-\subsection{16.2 Applications}\label{ch1994jeanbourgain:applications-1}
-
-This theorem has applications to: - The restriction problem for the
-Fourier transform. - The Kakeya problem. - The theory of maximal
-functions. - The Bochner--Riesz conjecture.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. The Lattice Point Problem}\label{ch1994jeanbourgain:the-lattice-point-problem}
-
-\subsection{17.1 Background}\label{ch1994jeanbourgain:background-2}
-
-The \textbf{lattice point problem} asks for the number of integer
-lattice points in a region of \(\mathbb{R}^n\). This is a classical
-problem in number theory with connections to the geometry of numbers and
-spectral theory.
-
-\subsection{17.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-7}
-
-Bourgain made significant contributions to the lattice point problem: -
-\textbf{Bourgain's theorem on lattice points:} Sharp bounds for the
-number of lattice points in ellipsoids. - \textbf{Connections to
-spectral geometry:} The distribution of lattice points is related to the
-eigenvalues of the Laplacian. - \textbf{Discrete restriction:} The
-lattice point problem is connected to the discrete restriction problem
-for the Fourier transform.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. The Bourgain--Tao Theorem}\label{ch1994jeanbourgain:the-bourgaintao-theorem}
-
-\subsection{18.1 Statement}\label{ch1994jeanbourgain:statement-7}
-
-The \textbf{Bourgain--Tao theorem} concerns the distribution of
-polynomial orbits on the torus. It states that for any polynomial
-\(P: \mathbb{Z} \to \mathbb{T}^d\), the sequence \(\{P(n)\}\) is
-equidistributed unless it takes values in a proper subtorus.
-
-\subsection{18.2 Significance}\label{ch1994jeanbourgain:significance-3}
-
-This theorem is a fundamental result in equidistribution theory and has
-applications to: - \textbf{Ergodic theory:} The study of polynomial
-actions on tori and nilmanifolds. - \textbf{Number theory:} The
-distribution of fractional parts of polynomials. - \textbf{Analytic
-number theory:} Bounds for exponential sums with polynomial phase.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. The Work on Random
-Matrices}\label{ch1994jeanbourgain:the-work-on-random-matrices}
-
-\subsection{19.1 The Circular Law}\label{ch1994jeanbourgain:the-circular-law}
-
-The \textbf{circular law} states that the eigenvalues of a random
-\(n \times n\) matrix with independent entries are uniformly distributed
-in the unit disk. This is a universal law in random matrix theory.
-
-\subsection{19.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-8}
-
-Bourgain made contributions to the theory of random matrices: -
-\textbf{The circular law:} He proved the circular law for a wide class
-of random matrices with independent but not necessarily identically
-distributed entries. - \textbf{The smallest singular value:} He gave
-bounds for the smallest singular value of random matrices, with
-applications to numerical analysis. - \textbf{The condition number:} He
-studied the condition number of random matrices and its behavior in high
-dimensions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{20. The Work on the Navier--Stokes
-Equations}\label{ch1994jeanbourgain:the-work-on-the-navierstokes-equations}
-
-\subsection{20.1 Background}\label{ch1994jeanbourgain:background-3}
-
-The \textbf{Navier--Stokes equations} describe the motion of viscous
-fluids. The global regularity problem for the 3D Navier--Stokes
-equations is one of the Clay Millennium Problems.
-
-\subsection{20.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-9}
-
-Bourgain studied the Navier--Stokes equations from the point of view of:
-- \textbf{Invariant measures:} He constructed invariant measures for the
-2D Navier--Stokes equations with stochastic forcing. -
-\textbf{Ergodicity:} He proved ergodicity for the 2D Navier--Stokes with
-stochastic forcing, showing that the dynamics converges to a unique
-stationary measure. - \textbf{Regularity:} He studied the regularity of
-solutions and the existence of singularities.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{21. The Work on the Erdős--Moser
-Problem}\label{ch1994jeanbourgain:the-work-on-the-erdux151smoser-problem}
-
-\subsection{21.1 The Problem}\label{ch1994jeanbourgain:the-problem}
-
-The \textbf{Erdős--Moser problem} asks for the maximum size of a set of
-integers with distinct subset sums. This is a classical problem in
-additive combinatorics.
-
-\subsection{21.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-10}
-
-Bourgain improved the bounds for the Erdős--Moser problem, showing that
-the maximum size is at most \(\log_2 N + O(1)\). This result uses: -
-Fourier-analytic methods. - The structure theory of sets with small
-doubling. - New results in additive combinatorics.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{22. The Borel--Cantelli Lemma for Dynamical
-Systems}\label{ch1994jeanbourgain:the-borelcantelli-lemma-for-dynamical-systems}
-
-\subsection{22.1 Statement}\label{ch1994jeanbourgain:statement-8}
-
-The \textbf{Borel--Cantelli lemma} is a fundamental result in
-probability theory concerning the convergence of series of
-probabilities.
-
-\subsection{22.2 Bourgain's
-Contribution}\label{ch1994jeanbourgain:bourgains-contribution-1}
-
-Bourgain proved a quantitative version of the Borel--Cantelli lemma for
-dynamical systems, showing that the rate of convergence can be
-determined for certain systems. This result has applications to: - The
-theory of mixing in dynamical systems. - The distribution of orbits of
-group actions. - The study of recurrence rates and hitting times.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{23. The Work on the Pointwise Ergodic
-Theorem}\label{ch1994jeanbourgain:the-work-on-the-pointwise-ergodic-theorem}
-
-\subsection{23.1 Background}\label{ch1994jeanbourgain:background-4}
-
-The \textbf{pointwise ergodic theorem} (Birkhoff's theorem) states that
-for an ergodic transformation, time averages converge to space averages
-for almost every point.
-
-\subsection{23.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-11}
-
-Bourgain proved a version of the pointwise ergodic theorem for
-polynomial averages:
-
-\[
-\frac{1}{N} \sum_{n=1}^N f(T^{P(n)} x) \to \int f \, d\mu
-\]
-
-for almost every \(x\), where \(P\) is a polynomial. This result is a
-major generalization of Birkhoff's theorem and required the development
-of new harmonic analysis techniques.
-
-\subsection{23.3 Polynomial Averages}\label{ch1994jeanbourgain:polynomial-averages}
-
-Bourgain also studied averages along more general sequences: - Prime
-numbers: \(\frac{1}{\pi(N)} \sum_{p \le N} f(T^p x)\). - Lacunary
-sequences: \(\frac{1}{N} \sum_{n=1}^N f(T^{2^n} x)\).
-
-He proved that these averages converge almost everywhere, extending the
-ergodic theorem to these settings.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{24. The Work on the Carleson
-Problem}\label{ch1994jeanbourgain:the-work-on-the-carleson-problem}
-
-\subsection{24.1 Carleson's Theorem}\label{ch1994jeanbourgain:carlesons-theorem}
-
-Carleson's theorem states that the Fourier series of an \(L^2\) function
-converges almost everywhere. This is a fundamental result in
+where the sum is over $\delta$-caps $\tau$ on the paraboloid and
+$\epsilon>0$ is arbitrary.  This inequality, building on
+Bourgain's earlier 2D work, settled the main case of the
+Vinogradov mean value theorem and the restriction conjecture in
+all dimensions.
+
+% ============================================================
+\section{Impact of This Discovery}
+% ============================================================
+
+Bourgain's work fundamentally reshaped harmonic analysis.  The
+decoupling method has become a central tool, with the
+Bourgain--Demeter decoupling theorem (2015) achieving the optimal
+restriction estimate in all dimensions.
+
+The Sum-Product theorem initiated modern additive combinatorics.
+It showed that algebraic structure (addition and multiplication) is
+incompatible with randomness in finite sets.  The methods have been
+applied to incidence geometry, expander graphs, and
+pseudorandomness.
+
+Bourgain's Kakeya estimates influenced the resolution of the
+Bochner--Riesz conjecture and contributed to progress on the
+Schr\"{o}dinger maximal function problem.  His work on the Erdos
+distance problem opened new connections between combinatorics and
 harmonic analysis.
 
-\subsection{24.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-12}
-
-Bourgain generalized Carleson's theorem to higher dimensions, showing
-that the Fourier series of an \(L^2\) function on the torus
-\(\mathbb{T}^d\) converges almost everywhere in the sense of cubic
-partial sums. This result resolved a major open problem in harmonic
-analysis and required the development of new multi-parameter techniques.
-
-\subsection{24.3 The Multi-Parameter Carleson
-Theorem}\label{ch1994jeanbourgain:the-multi-parameter-carleson-theorem}
-
-The \textbf{multi-parameter Carleson theorem} is significantly more
-difficult than the one-dimensional case because: - The partial sums do
-not have a distinguished order. - The maximal operator is more singular.
-- The underlying geometry is more complex.
-
-Bourgain's proof used a combination of time-frequency analysis and
-combinatorial methods.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{25. The Work on the Bochner--Riesz
-Conjecture}\label{ch1994jeanbourgain:the-work-on-the-bochnerriesz-conjecture}
-
-\subsection{25.1 Statement}\label{ch1994jeanbourgain:statement-9}
-
-The \textbf{Bochner--Riesz conjecture} concerns the convergence of
-Fourier integrals in \(L^p\). It states that the Bochner--Riesz means of
-order \(\delta\) converge in \(L^p\) if and only if
-\(\delta > (n-1)|1/p - 1/2|\).
-
-\subsection{25.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-13}
-
-Bourgain proved new results on the Bochner--Riesz conjecture, including:
-- Improved bounds for the Bochner--Riesz operator in higher dimensions.
-- The connection between the Bochner--Riesz conjecture and the
-restriction problem. - Sharp estimates for the Bochner--Riesz means on
-\(L^p\) spaces.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{26. The Work on the Equidistribution of
-Polynomials}\label{ch1994jeanbourgain:the-work-on-the-equidistribution-of-polynomials}
-
-\subsection{26.1 Background}\label{ch1994jeanbourgain:background-5}
-
-The equidistribution of polynomials modulo 1 is a classical problem in
-number theory. Weyl's theorem states that for a polynomial \(P(n)\) with
-at least one irrational coefficient, the sequence \(\{P(n)\}\) is
-equidistributed modulo 1.
-
-\subsection{26.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-14}
-
-Bourgain studied quantitative versions of Weyl's theorem: - \textbf{The
-rate of equidistribution:} How fast does the discrepancy of \(\{P(n)\}\)
-decay? - \textbf{The Bourgain--Tao theorem:} For polynomial actions on
-tori, the equidistribution is uniform unless there is an algebraic
-obstruction.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{27. The Work on the Three-Dimensional Kakeya
-Problem}\label{ch1994jeanbourgain:the-work-on-the-three-dimensional-kakeya-problem}
-
-\subsection{27.1 The Conjecture in 3D}\label{ch1994jeanbourgain:the-conjecture-in-3d}
-
-The Kakeya conjecture in \(\mathbb{R}^3\) states that every Kakeya set
-has Hausdorff dimension 3. This is still open.
-
-\subsection{27.2 Bourgain's Progress}\label{ch1994jeanbourgain:bourgains-progress}
-
-Bourgain, with Katz and Tao, proved that Kakeya sets in \(\mathbb{R}^3\)
-have Hausdorff dimension at least \(5/2 + \epsilon\) for some absolute
-\(\epsilon > 0\). The proof uses: - The combinatorial geometry of
-arithmetic progressions. - The theory of restriction estimates. - The
-sum-product phenomenon.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{28. The Work on the Determinant of Random
-Matrices}\label{ch1994jeanbourgain:the-work-on-the-determinant-of-random-matrices}
-
-\subsection{28.1 Background}\label{ch1994jeanbourgain:background-6}
-
-The determinant of a random matrix is a fundamental object in random
-matrix theory. The distribution of the determinant for matrices with
-independent entries is not fully understood.
-
-\subsection{28.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-15}
-
-Bourgain studied the determinant of random matrices with independent
-entries: - He proved that the determinant is typically non-zero for
-matrices with continuous distributions. - He gave bounds for the
-probability that the determinant is small. - He related the determinant
-to the condition number of the matrix.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{29. The Work on Spectral Gaps}\label{ch1994jeanbourgain:the-work-on-spectral-gaps}
-
-\subsection{29.1 Spectral Gap}\label{ch1994jeanbourgain:spectral-gap}
-
-The \textbf{spectral gap} of a finite group is the difference between
-the largest and second-largest eigenvalues of the averaging operator.
-Groups with a uniform spectral gap are essential for expander graphs.
-
-\subsection{29.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-16}
-
-Bourgain proved the existence of a uniform spectral gap for
-\(\text{SL}_2(\mathbb{F}_p)\) with respect to any set of generators not
-contained in a proper subgroup. This is a key step in the construction
-of expander graphs.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{30. The Work on the Berry Phase and Quantum
-Dynamics}\label{ch1994jeanbourgain:the-work-on-the-berry-phase-and-quantum-dynamics}
-
-\subsection{30.1 The Berry Phase}\label{ch1994jeanbourgain:the-berry-phase}
-
-The \textbf{Berry phase} is a geometric phase acquired by a quantum
-system undergoing adiabatic evolution. It has deep connections to the
-geometry of quantum state space.
-
-\subsection{30.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-17}
-
-Bourgain studied the Berry phase and related phenomena in quantum
-dynamics: - The rate of adiabatic convergence in quantum systems. - The
-existence of quantum holonomy. - The relationship between the Berry
-phase and the geometry of the parameter space.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{31. The Work on Kolmogorov--Arnold--Moser
-Theory}\label{ch1994jeanbourgain:the-work-on-kolmogorovarnoldmoser-theory}
-
-\subsection{31.1 Background}\label{ch1994jeanbourgain:background-7}
-
-The \textbf{KAM theory} concerns the persistence of quasi-periodic
-motions under small perturbations of integrable Hamiltonian systems. It
-is one of the important results in Hamiltonian dynamics. The
-classical KAM theorem deals with finite-dimensional systems.
-
-\subsection{31.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-18}
-
-Bourgain made contributions to KAM theory for infinite-dimensional
-systems: - \textbf{Nonlinear wave equations:} He proved the existence of
-quasi-periodic solutions for the nonlinear wave equation, showing that
-small amplitude solutions persist under perturbation. -
-\textbf{Nonlinear Schrödinger equation:} He constructed quasi-periodic
-solutions for the NLS using a combination of KAM theory and the theory
-of invariant measures. - \textbf{The infinite-dimensional KAM theorem:}
-He extended the classical KAM theorem to infinite-dimensional
-Hamiltonian PDEs, a major advance in the field. - \textbf{Applications
-to water waves:} He applied KAM theory to the existence of
-quasi-periodic water waves.
-
-\subsection{31.3 The Melnikov Condition}\label{ch1994jeanbourgain:the-melnikov-condition}
-
-A key technical issue in infinite-dimensional KAM theory is the
-\textbf{Melnikov condition}, which requires that the eigenvalues of the
-linearized operator are non-resonant. Bourgain developed new methods for
-verifying this condition in the context of PDEs.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{32. The Work on the Reverse Littlewood--Paley
-Theory}\label{ch1994jeanbourgain:the-work-on-the-reverse-littlewoodpaley-theory}
-
-\subsection{32.1 Background}\label{ch1994jeanbourgain:background-8}
-
-\textbf{Littlewood--Paley theory} provides square function
-characterizations of \(L^p\) norms. The reverse theory asks when the
-square function dominates the function itself.
-
-\subsection{32.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-19}
-
-Bourgain proved reverse Littlewood--Paley inequalities for functions on
-the torus, showing that:
-
-\[
-\left( \sum_{k} |\Delta_k f|^2 \right)^{1/2} \le C ||f||_{L^p}
-\]
-
-holds for \(p \ge 2\), but not for \(p < 2\). This result has
-implications for the convergence of Fourier series.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{33. The Work on the Geometry of
-Numbers}\label{ch1994jeanbourgain:the-work-on-the-geometry-of-numbers}
-
-\subsection{33.1 Background}\label{ch1994jeanbourgain:background-9}
-
-The \textbf{geometry of numbers} studies the relationship between the
-geometry of convex bodies and the arithmetic of integer lattices. It was
-founded by Minkowski.
-
-\subsection{33.2 Bourgain's
-Contributions}\label{ch1994jeanbourgain:bourgains-contributions-20}
-
-Bourgain contributed to the geometry of numbers by: - Proving new
-results on the distribution of lattice points in convex bodies. -
-Relating the successive minima of a convex body to its volume. -
-Developing new methods based on Fourier analysis for lattice point
-problems.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{34. Awards and Recognition}\label{ch1994jeanbourgain:awards-and-recognition}
-
-\textbf{1994:} - Fields Medal (International Mathematical Union)
-
-\textbf{2009:} - Crafoord Prize in Mathematics (Royal Swedish Academy of
-Sciences)
-
-\textbf{2010:} - Elected to the Royal Society
-
-\textbf{2011:} - Invited Speaker, International Congress of Mathematical
-Physics
-
-\textbf{2012:} - Elected to the National Academy of Sciences
-
-\textbf{2016:} - Breakthrough Prize in Mathematics
-
-\textbf{1994:} - Empain Prize
-
-\textbf{1990:} - Salem Prize
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{35. Selected Major
-Publications}\label{ch1994jeanbourgain:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Besicovitch-type maximal operators and applications to
- Fourier analysis.''} \emph{Geometric and Functional Analysis} 1,
- 147--187, 1991. --- \emph{The restriction theorem for the Fourier
- transform.}
-\item
- \textbf{``On the Hausdorff dimension of Kakeya sets'' (with A. Katz
- and T. Tao).} \emph{Mathematical Research Letters} 6, 431--440, 1999.
- --- \emph{Improved bounds for the Kakeya problem.}
-\item
- \textbf{``A sum-product estimate in finite fields and applications''
- (with N. Katz and T. Tao).} \emph{Geometric and Functional Analysis}
- 14, 27--57, 2004. --- \emph{The sum-product theorem.}
-\item
- \textbf{``On the distribution of periodic orbits of polynomial actions
- on tori'' (with T. Tao).} \emph{Annals of Mathematics} 166, 523--555,
- 2007. --- \emph{The Bourgain--Tao theorem on polynomial orbits.}
-\item
- \textbf{``Affine linear groups and expanders'' (with A. Gamburd).}
- \emph{Annals of Mathematics} 176, 1213--1265, 2012. --- \emph{The
- Bourgain--Gamburd theorem on expanders.}
-\item
- \textbf{``The Bourgain--Sarnak theorem'' (with P. Sarnak).}
- \emph{Journal d'Analyse Mathématique} 125, 1--34, 2015. ---
- \emph{Correlation of the Möbius function with deterministic
- sequences.}
-\item
- \textbf{``Gibbs measures and the periodic nonlinear Schrödinger
- equation.''} \emph{Journal de Mathématiques Pures et Appliquées} 73,
- 623--666, 1994. --- \emph{Invariant measures for NLS.}
-\item
- \textbf{``Pointwise ergodic theorems for arithmetic sets.''}
- \emph{Publications Mathématiques de l'IHÉS} 69, 5--45, 1989. ---
- \emph{The pointwise ergodic theorem for polynomial averages.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Prove the sum-product estimate: $\\max(|A+A|, |A \\cdot A|) \\geq c|A|^{1+\\epsilon}$ for finite sets $A \\subset \\mathbb{F}_p$. \end{exercise}
-
-\begin{exercise} Show that the Kakeya set in $\\mathbb{R}^2$ has Hausdorff dimension at least 1. \end{exercise}
-
-\begin{exercise} Verify Bourgain's bound on the restriction theorem for the Fourier transform on the sphere. \end{exercise}
-
-\begin{exercise} Compute the $L^p$ norm of the directional maximal function for $p > 2$. \end{exercise}
-
+Beyond specific results, Bourgain's methodological
+innovations---multiscale analysis, tree decompositions, and
+combinatorial arguments in analysis---have become standard tools.
+His ability to combine techniques from disparate fields set a new
+standard for interdisciplinary research.
+
+Bourgain's influence extended to mathematical physics as well.  His
+work on quantum ergodicity, random Schrodinger operators, and the
+Anderson localization conjecture demonstrated that the same
+multiscale and combinatorial ideas could attack problems in
+mathematical physics.  His 1988 work on the \textbf{frequency set}
+of eigenfunctions on manifolds of negative curvature influenced the
+quantum chaos program significantly.
+
+The breadth of Bourgain's impact is almost unparalleled in modern
+analysis.  He received the Fields Medal in 1994, the Shaw Prize in
+2012, and the Crafoord Prize in 2012, and he was elected to
+numerous academies worldwide.  His death in 2018 was a profound
+loss to the mathematical community.
+
+% ============================================================
+\section{Modern Views and Improvements}
+% ============================================================
+
+Decoupling theory continues to develop, with applications to
+dispersive PDE (Strichartz estimates, nonlinear Schrodinger
+equations) and to number theory (Vinogradov's mean value theorem
+via decoupling).
+
+The Kakeya conjecture remains open in dimensions $n\geq 3$.
+Bourgain's dimension bound $n/2+1$ has been improved only
+marginally.  New approaches using the polynomial method, algebraic
+geometry, and information-theoretic methods continue to seek the
+full resolution.
+
+In additive combinatorics, the Sum-Product phenomenon has been
+refined and extended to general fields.  Modern research continues
+Bourgain's legacy by combining harmonic analysis, combinatorics,
+and number theory.
+
+The \textbf{Bourgain--Sarnak--Ziegler theory} on correlations of
+multiplicative functions has found applications in analytic number
+theory and ergodic theory.  Recent work by Tao, Ziegler, and others
+extends Bourgain's decoupling to more general contexts, including
+the \textbf{wave decoupling} conjecture.
+
+Modern researchers including Demeter, Guth, and Nelson have built
+directly on Bourgain's framework.  The \textbf{polynomial method}
+in harmonic analysis, developed by Dvir, Guth, and others, can be
+seen as extending Bourgain's combinatorial approach to geometric
+problems.  The study of \textbf{incidence geometry} and its
+applications to the Kakeya and related problems continues to be one
+of the most active areas of research in analysis.
+
+% ============================================================
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Bourgain made fundamental contributions to harmonic analysis, additive combinatorics, and number theory. His work on the Kakeya conjecture, sum-product phenomena, and the restriction problem introduced powerful new techniques that bridged analysis and combinatorics, influencing areas from PDE theory to the distribution of primes.
+Bourgain made profound contributions across harmonic analysis, PDE,
+combinatorics, and number theory, including progress on the Kakeya
+problem, the Sum-Product theorem, decoupling inequalities, and the
+Erdos distance problem.  His interdisciplinary methods transformed
+modern analysis.
 
-\section{36. References and Further
-Reading}\label{ch1994jeanbourgain:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch1994jeanbourgain:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1994 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-1994
-\item
- Institute for Advanced Study: ``Jean Bourgain, 1954--2018.''
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch1994jeanbourgain:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Bourgain, J. ``Besicovitch-type maximal operators.'' \emph{GAFA} 1,
- 1991.
-\item
- Bourgain, J., Katz, N., and Tao, T. ``A sum-product estimate.''
- \emph{GAFA} 14, 2004.
-\item
- Bourgain, J. and Gamburd, A. ``Affine linear groups and expanders.''
- \emph{Annals of Mathematics} 176, 2012.
-\item
- Bourgain, J. ``Gibbs measures and NLS.'' \emph{Journal de
- Mathématiques Pures et Appliquées} 73, 1994.
-\end{itemize}
-
-\subsection{Biography and Overview}\label{ch1994jeanbourgain:biography-and-overview}
-
-\begin{itemize}
-\tightlist
-\item
- Tao, T. ``The Work of Jean Bourgain.'' ICM 1994 Laudatio.
-\item
- Lindenstrauss, J. ``Jean Bourgain: A life in mathematics.''
- \emph{Notices of the AMS}, 2019.
-\item
- Sarnak, P. ``Jean Bourgain (1954--2018).'' \emph{Nature}, 2019.
-\end{itemize}
-
-\subsection{Textbooks}\label{ch1994jeanbourgain:textbooks}
-
-\begin{itemize}
-\tightlist
-\item
- Stein, E. \emph{Harmonic Analysis}. Princeton University Press, 1993.
-\item
- Milman, V. and Schechtman, G. \emph{Asymptotic Theory of
- Finite-Dimensional Normed Spaces}. Springer, 1986.
-\item
- Tao, T. and Vu, V. \emph{Additive Combinatorics}. Cambridge University
- Press, 2006.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch2006terencetao:terence-tao-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Bourgain and Tao collaborated.
-  \item \textbf{\hyperref[ch1994pierrelouislions:pierre-louis-lions-fields-medal-1994-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Bourgain's work on PDEs relates to Lions.
-\end{itemize}
-
-\emph{(End of report)}
+% ============================================================

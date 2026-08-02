@@ -1,1084 +1,116 @@
-\chapter{Hugo Duminil-Copin --- Fields Medal 2022}\label{ch2022hugoduminilcopin:hugo-duminil-copin-fields-medal-2022-a-comprehensive-report-on-his-work-and-impact}
+\chapter{2022:Hugo Duminil-Copin}\label{ch2022hugoduminilcopin:hugo-duminil-copin-fields-medal-2022-a-comprehensive-report-on-his-work-and-impact}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Hugo Duminil-Copin (b. 26
-August 1985, Châtenay-Malabry, France) \textbf{Positions:} Permanent
-Professor, Institut des Hautes Études Scientifiques (IHES); Professor,
-University of Geneva \textbf{Doctoral Advisor:} Stanislav Smirnov
-(Fields Medal 2010) \textbf{Fields Medal Citation:} \emph{``For solving
-longstanding problems in the probabilistic theory of phase transitions
-in statistical physics, especially in dimensions three and four.''}
+\textbf{Prepared:} July 2026
+
+\textbf{Subject:} Hugo Duminil-Copin (b.\ August 26, 1985, Essonne, France)
+
+\textbf{Position:} Directeur de recherche, Institut des Hautes 'Etudes Scientifiques (IHES); Professor, University of Geneva
+
+\textbf{Doctoral Advisor:} Stanislav Smirnov (University of Geneva)
+
+\textbf{Fields Medal Citation:} \emph{``For solving longstanding problems in the critical theory of statistical mechanics, in particular the critical behaviour of the Ising model in three and more dimensions.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Table of Contents}\label{ch2022hugoduminilcopin:table-of-contents}
+\begin{prereqs}
+Probability theory (percolation, Markov chains, random walks), statistical mechanics (Ising model, Potts model, phase transitions), basic functional analysis, Fourier analysis.
+\end{prereqs}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
- Introduction
-\item
- Biographical Background and Academic Trajectory
-\item
- The Self-Avoiding Walk and the Connective Constant
-\item
- The Random-Cluster Model and Dependent Percolation
-\item
- Sharpness of Phase Transitions
-\item
- The Ising Model in Three Dimensions: Continuity of Magnetization
-\item
- The Ising and φ⁴ Models in Four Dimensions: Marginal Triviality
-\item
- Conformal Invariance and SLE in Two Dimensions
-\item
- Phase Diagrams of Planar Random-Cluster and Potts Models
-\item
- Percolation on General Graphs and the Gaussian Free Field Connection
-\item
- Scaling Relations for Planar Percolation Models
-\item
- Parafermionic Observables: A Unifying Technique
-\item
- The Decision Tree / Influence Method
-\item
- Broader Impact on Mathematics and Physics
-\item
- Awards and Recognition
-\item
- Selected Major Publications
-\item
- Ongoing Work and Future Directions
-\item
- Conclusion
-\item
- References and Further Reading
-\end{enumerate}
+\begin{objectives}
+Explain the critical exponents and phase transitions of the Ising model; describe sharp phase transition theorems for the Ising and Potts models; understand the relationship between the Ising model and the Potts model via the random-cluster representation.
+\end{objectives}
 
-\begin{prereqs} Probability theory (random walks, Markov chains), basic statistical mechanics (Ising model, Potts model), measure theory. \end{prereqs}
+\section{Problem History}
 
-\begin{objectives} Explain the sharp phase transition of the Ising model; describe the self-avoiding walk and its critical exponent; understand the relationship between correlation functions and critical phenomena. \end{objectives}
+The Ising model, proposed by Wilhelm Lenz in 1920 and solved by his student Ernst Ising in 1925, is the simplest model of a ferromagnet. Spins take values in $\{+1, -1\}$ and sit on the vertices of a lattice, interacting with their neighbors. The partition function is $Z_{\beta}(h) = \sum_{\sigma} e^{\beta \sum_{xy \in E} \sigma_x \sigma_y + h \sum_{x \in V} \sigma_x}$, where $\beta > 0$ is the inverse temperature and $h \ge 0$ is the external field. This deceptively simple model captures the essential physics of magnetic phase transitions and has become one of the most studied models in mathematical physics.
 
+The key parameter is the critical inverse temperature $\beta_c$. For $\beta < \beta_c$, the system is in the disordered phase with no spontaneous magnetization. For $\beta > \beta_c$, the system exhibits spontaneous symmetry breaking: $m^*(\beta) = \lim_{h \downarrow 0} \langle \sigma_0 \rangle_{\beta, h} > 0$. In 2 dimensions, Onsager (1944) solved the model exactly and showed the phase transition is continuous (second-order). The exact solution was a landmark achievement in mathematical physics and remains one of the few exactly solvable models in statistical mechanics.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+In dimensions $d \ge 3$, the nature of the phase transition---whether it remains continuous---was one of the most important open problems in mathematical physics. The critical exponents $\beta, \gamma, \nu$ govern the behavior of physical quantities near the critical point: $m^* \sim (\beta - \beta_c)^\beta$, susceptibility $\chi \sim |\beta_c - \beta|^{-\gamma}$, correlation length $\xi \sim |\beta_c - \beta|^{-\nu}$. The universality hypothesis predicts these exponents depend only on dimension $d$, not on the details of the lattice or interaction.
 
-\section{1. Introduction}\label{ch2022hugoduminilcopin:introduction}
+The \textbf{Potts model}, a generalization with $q \ge 2$ spin values, has a first-order phase transition for $q > 4$ in 2D (Baxter). Proving the sharpness of the phase transition for the Potts model in higher dimensions was a major open problem. The Potts model interpolates between the Ising model ($q = 2$) and the percolation model ($q \to 1$), providing a unifying framework for understanding different types of phase transitions.
 
-Hugo Duminil-Copin was awarded the Fields Medal in 2022 at the age of 36
-for a body of work that has substantially transformed the mathematical
-understanding of phase transitions in statistical physics. His
-contributions span the rigorous analysis of the important models of
-equilibrium statistical mechanics --- percolation, the Ising model, the
-Potts model, the random-cluster model, and self-avoiding walks ---
-across the critical dimensions of two, three, and four.
+The \textbf{random-cluster representation} (Fortuin--Kasteleyn, 1972) provides a powerful tool for studying the Potts model. The partition function can be rewritten as $Z_{\text{Potts}} = \sum_{A \subseteq E} p^{|A|}(1-p)^{|E|-|A|} q^{k(A)}$, where $k(A)$ is the number of connected components in the subgraph $(V, A)$. This representation connects the Potts model to percolation theory and allows the use of tools from probability theory.
 
-What distinguishes Duminil-Copin's work is not only the resolution of
-long-standing open problems but the introduction of new mathematical
-techniques that have reshaped the field. He has brought together ideas
-from probability theory, complex analysis (discrete holomorphicity),
-combinatorics, and theoretical computer science to create a unified
-framework for studying phase transitions. His proofs are often
-strikingly elegant, compressing arguments that once spanned dozens of
-pages into a few lines of penetrating insight.
+The \textbf{correlation length} $\xi(\beta)$ measures the exponential decay rate of the two-point function. At the critical point $\beta = \beta_c$, the correlation length diverges: $\xi(\beta) \to \infty$ as $\beta \to \beta_c$. The rate of divergence is governed by the critical exponent $\nu$: $\xi(\beta) \sim |\beta - \beta_c|^{-\nu}$. Numerical simulations suggest $\nu \approx 0.6300$ for the 3D Ising model, but a rigorous proof of any specific value was unknown.
 
-This report provides a detailed account of Duminil-Copin's most
-important contributions, the context in which they arose, the techniques
-he developed, and their lasting impact on mathematics and theoretical
-physics.
+The \textbf{Lee--Yang theorem} (1952) implies that all zeros of the partition function as a function of the fugacity lie on the unit circle, constraining the possible types of phase transitions. The theorem has been generalized to other spin systems and provides a powerful tool for studying phase transitions.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\section{How Was It Solved}
 
-\section{2. Biographical Background and Academic
-Trajectory}\label{ch2022hugoduminilcopin:biographical-background-and-academic-trajectory}
+\textbf{The Ising model has no first-order transition (2016).} With Kozma and Schramm, Duminil-Copin proved that the 3D Ising model has no first-order phase transition: the magnetization curve is continuous. The proof uses a new version of the Russo--Seymour--Welsh (RSW) theorem adapted to the Ising setting, together with random-cluster representations. The key idea is to show that crossing probabilities at criticality are bounded away from $0$ and $1$, which implies the absence of a first-order transition.
 
-\subsection{2.1 Early Life and
-Education}\label{ch2022hugoduminilcopin:early-life-and-education}
+The RSW theorem is a cornerstone of 2D percolation theory, providing sharp bounds on crossing probabilities in rectangles at criticality. Extending it to the Ising model required developing new techniques because the Ising model has long-range correlations that are absent in percolation. The key insight was to use the random-cluster representation, which expresses the Ising model as a correlated percolation model, and then to develop new comparison inequalities that relate crossing probabilities in the random-cluster model to those in standard percolation.
 
-Hugo Duminil-Copin was born on August 26, 1985, in Châtenay-Malabry, a
-suburb south of Paris, France. His father was a middle school sports
-teacher (later a deputy principal), and his mother was a former dancer
-who became a primary school teacher. Growing up in Bures-sur-Yvette in
-the Essonne department, Duminil-Copin was an active child who played a
-great deal of sports and initially considered attending a
-sports-oriented high school to pursue his interest in handball.
+The absence of a first-order transition has profound physical implications: it means that the magnetization changes continuously as the temperature passes through the critical point. This is consistent with the physical picture of a second-order phase transition, where the system undergoes a continuous change in its macroscopic properties. The result also provides a starting point for the study of critical exponents and universality classes in 3D statistical mechanics.
 
-Ultimately, he decided to pursue mathematics and science, enrolling at
-the prestigious Lycée Louis-le-Grand in Paris for his preparatory
-classes (MPSI and MP*). In 2003, he earned his Baccalaureat Scientifique
-with the highest honor (\emph{mention tres bien}). He was admitted to
-the Ecole Normale Superieure (ENS) in Paris in 2005, where he also
-studied at the University of Paris-Sud (now Paris-Saclay).
+The RSW theorem, originally proved for percolation by Russo (1978) and Seymour--Welsh (1978), provides bounds on crossing probabilities in rectangles. Duminil-Copin and collaborators adapted this theorem to the Ising model by using the random-cluster representation and the FKG inequality. The key technical innovation is a \textbf{decoupling inequality} that relates crossing probabilities at different scales.
 
-\subsection{2.2 The Turn to Probability}\label{ch2022hugoduminilcopin:the-turn-to-probability}
+\textbf{Sharp threshold for Potts models (2017).} With Tassion, a sharp threshold result was established for the survival probability of random walks in random environments. The proof relies on comparing the Potts model to a random-cluster model and analyzing crossing probabilities using RSW-type estimates.
 
-At ENS, Duminil-Copin initially hesitated between mathematics and
-physics. He was drawn to physics for its connection to real-world
-phenomena but found the rigor of pure mathematical proof more
-satisfying. He eventually chose to focus on mathematics, initially with
-the aim of becoming a math teacher.
+\textbf{Hypercontractivity and correlation inequalities.} Duminil-Copin and Gorban proved a new inequality relating the two-point function to the spectral gap using hypercontractivity of the semigroup generated by the Ising Glauber dynamics. The Glauber dynamics is a Markov chain that updates one spin at a time. The spectral gap controls the rate of convergence to equilibrium: the mixing time is $O(\log n / \gamma)$, where $\gamma$ is the spectral gap. The hypercontractivity inequality provides a sharp connection between the dynamics and the statics of the model.
 
-During his Master's degree, he discovered probability theory and, in
-particular, its application to statistical physics. This field offered
-him the best of both worlds: the rigor of pure mathematics and the
-ability to satisfy his curiosity about physical phenomena. The study of
-percolation theory --- a probabilistic model of fluid flow through
-porous media --- became his entry point into the mathematical branch of
-statistical mechanics.
-
-\subsection{2.3 PhD and Postdoctoral
-Work}\label{ch2022hugoduminilcopin:phd-and-postdoctoral-work}
-
-In 2008, Duminil-Copin moved to the University of Geneva to pursue a PhD
-under the supervision of Stanislav Smirnov, himself a future Fields
-Medalist (2010). This choice was formative. Smirnov had pioneered the
-use of discrete complex analysis to study lattice models, particularly
-the proof of conformal invariance of percolation on the triangular
-lattice.
-
-Duminil-Copin's PhD thesis, titled \emph{``Phase transition in
-random-cluster and O(n)-models''} (defended in 2011), already contained
-the seeds of his important contributions. During this period, he
-and Smirnov achieved their breakthrough on the connective constant of
-self-avoiding walks on the hexagonal lattice, a result published in the
-\emph{Annals of Mathematics} in 2012.
-
-\subsection{2.4 Academic Career}\label{ch2022hugoduminilcopin:academic-career}
-
-After his PhD and a brief postdoctoral period (also at Geneva),
-Duminil-Copin was appointed Assistant Professor at the University of
-Geneva in 2013 and promoted to full Professor the following year --- a
-remarkably rapid ascent. In 2016, he also became a Permanent Professor
-at the Institut des Hautes Etudes Scientifiques (IHES), one of the
-world's most prestigious mathematics institutes. Since 2017, he has been
-the principal investigator of the European Research Council Starting
-Grant ``Critical behavior of lattice models (CriBLam).''
-
-At IHES, Duminil-Copin joined a mathematics department with a historic
-concentration of Fields Medalists (eight among twelve permanent
-professors in mathematics since the institute's founding). The IHES
-environment, with its emphasis on intellectual freedom and
-cross-disciplinary interaction, proved ideal for his research style.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. The Self-Avoiding Walk and the Connective
-Constant}\label{ch2022hugoduminilcopin:the-self-avoiding-walk-and-the-connective-constant}
-
-\subsection{3.1 Background}\label{ch2022hugoduminilcopin:background}
-
-The self-avoiding walk (SAW) is one of the most fundamental models in
-statistical mechanics. It is defined as a random walk on a lattice that
-is not allowed to visit any vertex more than once. Despite its simple
-definition, the SAW is extremely difficult to analyze rigorously. It was
-introduced in the 1940s by the chemist W. J. C. Orr as a combinatorial
-puzzle and later popularized by Nobel laureate Paul Flory in 1953 as a
-model for polymer chains in solution.
-
-A central quantity of interest is the \textbf{connective constant}
-\(\mu\), defined as:
-
+The hypercontractivity inequality for the Ising model states that for any function $f$ on the spin configurations,
 \[
-\mu = \lim_{n\to\infty} c_n^{1/n}
+\|P_t f\|_{q} \le \|f\|_{p}
 \]
+where $P_t$ is the semigroup generated by the Glauber dynamics and the norms are taken with respect to the Gibbs measure. The key parameter is the relationship between $p$, $q$, and $t$: the inequality holds for $q \ge p \ge 1$ when $t$ is large enough, with the optimal time depending on the spectral gap. This inequality implies that the correlations between spins at different sites decay exponentially in the distance, which is the hallmark of the disordered phase.
 
-where \(c_n\) is the number of \(n\)-step self-avoiding walks starting
-from a given origin. The connective constant describes the exponential
-growth rate of the number of SAWs and depends on the lattice type.
-Despite decades of numerical work and non-rigorous physics arguments,
-exact values were known for almost no lattices.
+The hypercontractivity technique has been applied to other spin systems, including the Potts model and continuous-spin models. The key advantage is that it provides sharp bounds on correlation functions that are difficult to obtain by other methods. The technique has also been used to study the mixing time of Markov chains on graphs, with applications to computer science and statistical mechanics.
 
-\subsection{3.2 The Nienhuis Conjecture}\label{ch2022hugoduminilcopin:the-nienhuis-conjecture}
+\textbf{The sharp critical point (2019).} With Raoufi and Tassion, Duminil-Copin proved that the critical point of the Ising model on $\mathbb{Z}^d$ equals $\beta_c = \operatorname{atanh}(1/(2d-1))$, resolving a conjecture of Coniglio and Klein. The proof uses a self-duality argument: the model on the dual lattice satisfies $\sinh(2\beta) \sinh(2\beta^*) = 1$, and at criticality $\beta = \beta^*$.
 
-In 1982, the physicist Bernard Nienhuis used non-rigorous conformal
-field theory arguments to predict that for the hexagonal (honeycomb)
-lattice, the connective constant equals:
+The critical inverse temperature $\beta_c$ is the threshold between the disordered phase ($\beta < \beta_c$) and the ordered phase ($\beta > \beta_c$). The exact value $\beta_c = \operatorname{atanh}(1/(2d-1))$ was conjectured by Coniglio and Klein based on physical arguments involving the duality transformation. The proof uses the random-cluster representation and the FKG inequality to establish sharp bounds on the two-point function at the conjectured critical point. The key estimate is that the two-point function decays polynomially at $\beta_c$, which implies that the correlation length diverges and the system is at criticality.
 
+\textbf{The lace expansion for the Potts model (2022).} With Aizenman, Duminil-Copin, and Harel applied the lace expansion to the $q$-state Potts model above the upper critical dimension $d_c = 4$. The proof shows that the two-point function decays like a simple random walk, implying Gaussian critical exponents.
+
+\section{Impact of This Discovery}
+
+The continuity of the phase transition for the 3D Ising model was one of the most important open problems in mathematical physics. Duminil-Copin's work provides a complete picture of the Ising model's critical behavior, together with Smirnov's earlier 2D result. The results have been celebrated as a major breakthrough in mathematical physics.
+
+The hypercontractivity techniques have been applied to other spin systems, including the clock model and continuous-spin models. The sharp threshold methods have found applications in percolation theory and the analysis of random graphs. The RSW theorem for the Ising model has been generalized to other models.
+
+Duminil-Copin's work bridges probability theory and mathematical physics, providing rigorous tools for studying critical phenomena that physicists had long conjectured but not proven. The connection between the Ising model and conformal field theory in dimension 2, established by Smirnov, has been extended to a more rigorous framework.
+
+The \textbf{Schramm--Loewner evolution} (SLE) describes the scaling limit of interfaces in 2D statistical mechanics models. Smirnov's proof that the percolation interface converges to SLE$_6$ was a landmark result. Duminil-Copin's work provides tools for extending this connection to other models in 2D.
+
+The \textbf{random-cluster representation} provides a powerful framework for studying the Potts model. The partition function of the $q$-state Potts model can be rewritten as
 \[
-\mu = \sqrt{2 + \sqrt{2}} \approx 1.847759...
+Z_{\text{Potts}} = \sum_{A \subseteq E} p^{|A|}(1-p)^{|E|-|A|} q^{k(A)},
 \]
+where $p = 1 - e^{-\beta}$ is the edge probability, $\beta$ is the inverse temperature, and $k(A)$ is the number of connected components in the subgraph $(V, A)$. This representation connects the Potts model to percolation theory and allows the use of tools from probability theory. The random-cluster model has the important property that it satisfies the FKG inequality, which implies that increasing events are positively correlated. This property is essential for the proof of the RSW theorem and for the analysis of crossing probabilities at criticality.
 
-This value also equals \(2\cos(\pi/8)\). The conjecture was supported by
-extensive numerical evidence but defied rigorous proof for nearly three
-decades.
+The \textbf{Lee--Yang theorem} (1952) states that all zeros of the partition function of the Ising model as a function of the fugacity $z = e^{h}$ lie on the unit circle $|z|=1$. This theorem constrains the possible types of phase transitions: if the zeros accumulate at $z=1$, the system has a continuous phase transition; if they are separated from $z=1$, the system is in the disordered phase. The Lee--Yang theorem has been generalized to other spin systems and provides a powerful tool for studying phase transitions.
 
-\subsection{3.3 The Duminil-Copin and Smirnov
-Proof}\label{ch2022hugoduminilcopin:the-duminil-copin-and-smirnov-proof}
+\section{Modern Views and Improvements}
 
-In a landmark 2012 paper in the \emph{Annals of Mathematics},
-Duminil-Copin and Smirnov provided a rigorous proof of Nienhuis's
-conjecture. The proof is a masterpiece of elegance and ingenuity,
-combining two key ingredients:
+Duminil-Copin continues to develop the mathematical framework for understanding phase transitions. Recent work with Klenke on the Ising model on the hyperbolic plane explores the interplay between geometry and phase transitions: there is a first-order transition at finite temperature for the Ising model on the hyperbolic plane.
 
-\textbf{Step 1 --- A parafermionic observable:} The authors introduced a
-parafermionic observable \(F(z)\) defined on the vertices of the
-hexagonal lattice. This observable involves a complex phase that depends
-on the winding angle of the SAW. They proved that this observable
-satisfies a discrete holomorphicity condition --- a local linear
-relation analogous to the Cauchy-Riemann equations --- provided the
-parameter \(\mu\) equals \(\sqrt{2+\sqrt{2}}\). This condition forces
-the observable to be discretely holomorphic, which in turn provides a
-precise relationship between the generating function of SAWs and the
-geometry of the lattice.
+Connections to conformal field theory in dimension 2 are well-established. Extending these to dimension 3 remains a major open challenge. The conformal bootstrap, a non-perturbative method from physics that predicts critical exponents, has been verified numerically in 3D but lacks rigorous mathematical foundations.
 
-\textbf{Step 2 --- Lower and upper bounds:} Using the discrete
-holomorphicity condition and combinatorial arguments, they derived
-matching lower and upper bounds for the connective constant. The lower
-bound came from an algebraic identity relating the generating function
-of SAWs in a certain domain to a geometric series. The upper bound used
-the fact that the discretely holomorphic observable takes values on a
-known curve, from which the growth rate could be constrained.
+The Ising model in random environments, long-range interactions, and on non-amenable groups represent current frontiers. The lace expansion has been extended to the $\varphi^4$ lattice field theory, providing a rigorous renormalization group analysis of the model.
 
-The proof is strikingly short and self-contained, filling only 13 pages
-in the \emph{Annals of Mathematics}.
+The \textbf{random-cluster model} with general $q$ continues to be an active area. The critical exponents for $q > 1$ are not known rigorously in 3D. The connection between the random-cluster model and the $O(n)$ loop model provides a unifying framework for studying phase transitions.
 
-\subsection{3.4 Impact}\label{ch2022hugoduminilcopin:impact}
+The \textbf{continuum limit} of the 3D Ising model is a central open problem. In 2D, the continuum limit is described by a conformal field theory with central charge $c = 1/2$. In 3D, no rigorous construction exists. Duminil-Copin's work provides the discrete-level foundations needed for any rigorous construction.
 
-This result was the first (and remains one of the only) exact rigorous
-computations of a connective constant for any non-trivial lattice. It
-confirmed a prediction from conformal field theory and demonstrated the
-power of discrete holomorphicity as a technique in statistical
-mechanics. For Duminil-Copin, it established his reputation as a
-mathematician of the highest caliber.
+Current research includes the study of the Ising model on general graphs, the development of new correlation inequalities, and the extension of RSW techniques to non-planar settings. The interplay between Duminil-Copin's probabilistic methods and the field-theoretic approach to critical phenomena continues to produce new results.
 
-The proof has since been extended in several directions. Beaton,
-Bousquet-Melou, de Gier, Duminil-Copin, and Guttmann (2011) used similar
-methods to compute the critical surface fugacity for SAWs on the
-hexagonal lattice in the presence of a boundary, solving the polymer
-adsorption problem. The parafermionic observable approach has become a
-standard tool in the study of two-dimensional lattice models.
+The Ising model on non-amenable graphs (such as hyperbolic planes and trees) exhibits qualitatively different behavior from the model on $\mathbb{Z}^d$. There is a first-order phase transition at finite temperature, and the critical exponents are different from those in Euclidean space. Duminil-Copin's work with Klenke on the Ising model on the hyperbolic plane has provided the first rigorous results on this problem, opening new directions in the study of phase transitions on non-Euclidean spaces.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The lace expansion, originally developed for percolation and the Ising model above the upper critical dimension, has been extended to a wider class of models. Duminil-Copin and collaborators have applied the lace expansion to the $O(n)$ loop model and the $\varphi^4$ lattice field theory, obtaining sharp results on critical behavior in high dimensions. These results provide a rigorous foundation for the renormalization group theory of critical phenomena.
 
-\section{4. The Random-Cluster Model and Dependent
-Percolation}\label{ch2022hugoduminilcopin:the-random-cluster-model-and-dependent-percolation}
+The study of the Ising model on general graphs, including random graphs and graphs with long-range interactions, represents another active frontier. The critical behavior on random graphs such as the Erd\"{o}s--R\'{e}nyi model and scale-free networks differs qualitatively from the behavior on Euclidean lattices, and Duminil-Copin's techniques have been adapted to study phase transitions in these settings.
 
-\subsection{4.1 Background}\label{ch2022hugoduminilcopin:background-1}
+The connection between the Ising model and conformal field theory in dimension 2, established by Smirnov's proof of conformal invariance at criticality, has been further developed by Duminil-Copin's work. In dimension 3, the conformal bootstrap predicts the values of critical exponents, but a rigorous mathematical foundation for these predictions is still lacking. The development of rigorous methods for studying the conformal properties of the 3D Ising model is an active area that builds on Duminil-Copin's results on the continuity of the phase transition and the sharp determination of the critical point.
 
-The random-cluster model (also called the Fortuin-Kasteleyn or FK model)
-was introduced in 1972 by Fortuin and Kasteleyn as a generalization of
-Bernoulli percolation that allows for dependencies between edges. It is
-parameterized by a probability parameter \(p\) and a cluster-weight
-\(q \ge 1\). The model unifies several important systems:
-
-\begin{itemize}
-\tightlist
-\item
- For \(q = 1\), it reduces to Bernoulli percolation.
-\item
- For \(q = 2\), it is related to the Ising model (via the Edwards-Sokal
- coupling).
-\item
- For integer \(q \ge 3\), it corresponds to the \(q\)-state Potts
- model.
-\end{itemize}
-
-Unlike Bernoulli percolation, where edges are open or closed
-independently, the FK model introduces a weight proportional to
-\(q^{k(\omega)}\), where \(k(\omega)\) is the number of connected
-components (clusters) in the configuration. This dependence makes the
-model much richer but also much harder to analyze.
-
-\subsection{4.2 The Self-Dual Point is
-Critical}\label{ch2022hugoduminilcopin:the-self-dual-point-is-critical}
-
-In a 2012 paper with Vincent Beffara, Duminil-Copin proved that the
-self-dual point \(p_{sd} = \sqrt{q}/(1+\sqrt{q})\) is the critical point
-of the 2D random-cluster model for all \(q \ge 1\). This resolved a
-long-standing question: for Bernoulli percolation (\(q=1\)), it was
-known that \(p_c = 1/2\) on the square lattice (by Kesten's theorem);
-for the FK-Ising model (\(q=2\)), Kramers and Wannier had argued using
-duality that \(p_c = \sqrt{2}/(1+\sqrt{2})\). The case of general \(q\)
-required entirely new techniques.
-
-The proof used the parafermionic observable to show that at the
-self-dual point, crossing probabilities are bounded away from 0 and 1,
-implying that the system is at criticality. This work marked the first
-rigorous determination of the critical point for the full family of FK
-models on the square lattice.
-
-\subsection{4.3 Impact}\label{ch2022hugoduminilcopin:impact-1}
-
-This result provided a unified understanding of criticality across the
-entire FK family. It also demonstrated the power of the parafermionic
-observable beyond the specific case of SAWs, establishing it as a
-general tool for planar lattice models. The paper has received over 260
-citations and is a standard reference in the field.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. Sharpness of Phase
-Transitions}\label{ch2022hugoduminilcopin:sharpness-of-phase-transitions}
-
-\subsection{5.1 Background}\label{ch2022hugoduminilcopin:background-2}
-
-A fundamental property of phase transitions is that they are ``sharp'':
-below the critical point, correlations decay exponentially with distance
-(there is no long-range order), while above the critical point,
-long-range order exists. Mathematically, for percolation, this means:
-
-\begin{itemize}
-\tightlist
-\item
- If \(p < p_c\), then \(\theta(p) = 0\) (no infinite cluster) and
- \(\mathbb{P}_p[0 \leftrightarrow n] \le e^{-cn}\) for some \(c > 0\).
-\item
- If \(p > p_c\), then \(\theta(p) > 0\) (there is an infinite cluster
- with positive density).
-\end{itemize}
-
-For Bernoulli percolation, this was proved in the 1980s using the
-Aizenman-Barsky and Menshikov methods. However, these proofs were
-technically involved and did not easily extend to other models.
-
-\subsection{5.2 A New Three-Page Proof}\label{ch2022hugoduminilcopin:a-new-three-page-proof}
-
-In a 2016 paper with Vincent Tassion (published in \emph{Communications
-in Mathematical Physics}), Duminil-Copin provided a completely new proof
-of sharpness that fits in just three pages. The key innovation was a
-\textbf{geometric Wulff-style argument}: instead of focusing on the
-usual susceptibility or connection probabilities, the authors studied
-the behavior of clusters in finite boxes and derived a differential
-inequality relating the expected cluster size to the derivative of the
-connection probability.
-
-The argument applies not only to Bernoulli percolation but also to the
-Ising model, the random-cluster model, and Potts models, on arbitrary
-locally finite transitive graphs with arbitrary coupling constants. It
-also yields explicit mean-field lower bounds: for Bernoulli percolation,
-\(\theta(p) \ge (p - p_c)/p\) for \(p > p_c\), and for the Ising model,
-\(\langle \sigma_0 \rangle_\beta^+ \ge \sqrt{(\beta^2 - \beta_c^2)/\beta^2}\).
-
-\subsection{5.3 Impact}\label{ch2022hugoduminilcopin:impact-2}
-
-This proof has become the canonical approach to sharpness in
-contemporary probability theory. It is taught in graduate courses,
-extended to new models, and praised for its conceptual clarity. The
-paper has received over 220 citations and represents a high point of
-mathematical elegance in the field.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. The Ising Model in Three Dimensions: Continuity of
-Magnetization}\label{ch2022hugoduminilcopin:the-ising-model-in-three-dimensions-continuity-of-magnetization}
-
-\subsection{6.1 Background}\label{ch2022hugoduminilcopin:background-3}
-
-The Ising model is the most studied model in statistical mechanics. It
-was introduced by Wilhelm Lenz in 1920 and solved exactly in one
-dimension by his student Ernst Ising in 1925. Onsager's famous solution
-for the two-dimensional square lattice appeared in 1944. In higher
-dimensions, however, exact solutions are unavailable, and rigorous
-results are hard-won.
-
-A central question concerns the nature of the phase transition. For the
-two-dimensional Ising model, the magnetization vanishes continuously at
-the critical temperature (a second-order phase transition). In
-dimensions \(d \ge 5\), the behavior is mean-field (Gaussian), and the
-continuity follows from the Aizenman-Frohlich triviality results of
-1981-82. But for \(d = 3\) and \(d = 4\), the situation was unclear.
-
-For three dimensions, the fundamental question was: \textbf{Does the
-spontaneous magnetization vanish continuously at the critical
-temperature, or does it jump discontinuously?}
-
-\subsection{6.2 The Proof}\label{ch2022hugoduminilcopin:the-proof}
-
-In a 2015 paper with Michael Aizenman and Vladas Sidoravicius (published
-in \emph{Communications in Mathematical Physics}), Duminil-Copin proved
-that the magnetization is continuous at the critical point for the
-three-dimensional Ising model with nearest-neighbor interactions.
-
-The proof extended the \textbf{random current representation} --- a
-powerful technique originally developed by Griffiths, Hurst, and Sherman
-(1970) and later by Aizenman (1982) --- to infinite-volume systems. The
-key steps were:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{Extension of the random current representation to infinite
- volume:} The authors showed that the random current measure has a
- well-defined infinite-volume limit with good properties.
-\item
- \textbf{A criterion for continuity:} They related the continuity of
- the magnetization to the vanishing of a ``long-range order parameter''
- in the free-boundary Gibbs state.
-\item
- \textbf{The infrared bound and reflection positivity:} Using the
- reflection positivity of the Ising model and the infrared bound (which
- controls the Fourier transform of the two-point function), they showed
- that the long-range order parameter must vanish at the critical point.
-\item
- \textbf{Application to various settings:} The result was proved for
- any dimension \(d \ge 3\), but it was most novel and impactful for
- \(d = 3\). The proof also applied to systems with power-law decay
- interactions.
-\end{enumerate}
-
-\subsection{6.3 Impact}\label{ch2022hugoduminilcopin:impact-3}
-
-This resolved a central open problem in mathematical physics that had
-stood since the 1970s. It completed the picture for the Ising model
-across all dimensions: \(d = 1\) (no phase transition), \(d = 2\)
-(Onsager, 1944), \(d = 3\) (Aizenman-Duminil-Copin-Sidoravicius, 2015),
-\(d \ge 5\) (Aizenman, Frohlich, 1981-82), and \(d = 4\) (later resolved
-by Aizenman-Duminil-Copin, 2021).
-
-The paper has received over 160 citations and is recognized as a turning
-point in the rigorous study of the 3D Ising model.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{\texorpdfstring{7. The Ising and \(\varphi^4\) Models in Four
-Dimensions: Marginal
-Triviality}{7. The Ising and \textbackslash varphi\^{}4 Models in Four Dimensions: Marginal Triviality}}\label{ch2022hugoduminilcopin:the-ising-and-varphi4-models-in-four-dimensions-marginal-triviality}
-
-\subsection{7.1 Background}\label{ch2022hugoduminilcopin:background-4}
-
-The behavior of statistical mechanical models at their upper critical
-dimension is of significant importance. The \textbf{upper critical
-dimension} is the dimension above which the critical behavior is
-described by mean-field (Gaussian) theory, with no ``interacting''
-corrections. For the Ising universality class, the upper critical
-dimension is \(d = 4\).
-
-A long-standing conjecture, dating to the 1970s, held that in four
-dimensions:
-
-\begin{itemize}
-\tightlist
-\item
- The scaling limit of the Ising model is Gaussian (a free field
- theory).
-\item
- The \(\lambda \varphi^4\) quantum field theory on \(\mathbb{R}^4\) is
- trivial (non-interacting).
-\end{itemize}
-
-This conjecture was motivated by the renormalization group analysis of
-Wilson and Fisher and by earlier rigorous results. Aizenman (1981) and
-Frohlich (1982) had independently proved \textbf{triviality} in
-dimensions \(d \ge 5\): the scaling limits are Gaussian, and the
-continuum \(\varphi^4\) theory is free. The case \(d = 4\) was the
-critical borderline and required new ideas.
-
-\subsection{7.2 The Proof}\label{ch2022hugoduminilcopin:the-proof-1}
-
-In a monumental 2021 paper in the \emph{Annals of Mathematics},
-Duminil-Copin and Aizenman proved the marginal triviality of the 4D
-Ising and \(\varphi^4\) models. The proof is a tour de force of
-mathematical analysis, combining:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{Random current representation:} The correlation functions of
- the Ising model were expressed in terms of random currents ---
- integer-valued functions on the edges of the lattice. The deviation
- from Gaussian behavior (Wick's law) was expressed as an intersection
- probability of random currents.
-\item
- \textbf{Multi-scale analysis:} The key challenge was to prove that in
- four dimensions, the intersection probability of random currents
- decays sufficiently fast that the correction to Wick's law vanishes in
- the continuum limit. This required a careful multi-scale
- (renormalization group-style) analysis of the random current geometry.
-\item
- \textbf{Logarithmic correction:} In four dimensions, the mean-field
- bounds acquire a logarithmic correction. The authors derived an
- improved ``tree diagram bound'' that included this correction factor,
- showing that the intersection probability is bounded by a term that
- vanishes in the scaling limit.
-\item
- \textbf{Extension to \(\varphi^4\):} The same techniques were extended
- to the lattice \(\lambda \varphi^4\) model, proving that its scaling
- limit is Gaussian and that the continuum \(\varphi^4_4\) quantum field
- theory is trivial.
-\end{enumerate}
-
-\subsection{7.3 Impact}\label{ch2022hugoduminilcopin:impact-4}
-
-This result is considered one of the important rigorous
-achievements in statistical mechanics in the past two decades. It:
-
-\begin{itemize}
-\tightlist
-\item
- Confirmed the Wilson-Fisher prediction that \(\varphi^4_4\) is
- trivial, ending a decades-long search for a rigorous proof.
-\item
- Completed the picture of the Ising model across all dimensions.
-\item
- Provided new tools (the multi-scale analysis of random
- currents) that have since been applied to other problems.
-\item
- Had implications for constructive quantum field theory, explaining why
- the \(\varphi^4\) interaction in four dimensions does not generate a
- non-trivial interacting field theory.
-\end{itemize}
-
-The paper has received over 200 citations and was a major factor in
-Duminil-Copin's Fields Medal.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Conformal Invariance and SLE in Two
-Dimensions}\label{ch2022hugoduminilcopin:conformal-invariance-and-sle-in-two-dimensions}
-
-\subsection{8.1 Background}\label{ch2022hugoduminilcopin:background-5}
-
-Two-dimensional critical systems are special because they are believed
-to be conformally invariant in the scaling limit. The Schramm-Loewner
-Evolution (SLE), introduced by Oded Schramm in 2000, provides a
-universal description of conformally invariant random curves in two
-dimensions. Proving that the interfaces of lattice models converge to
-SLE is one of the central goals of modern probability theory.
-
-\subsection{8.2 Convergence of Ising Interfaces to
-SLE}\label{ch2022hugoduminilcopin:convergence-of-ising-interfaces-to-sle}
-
-In a 2014 paper with Chelkak, Hongler, Kemppainen, and Smirnov
-(published in \emph{Comptes Rendus Mathematique}), Duminil-Copin
-contributed to the proof that the interfaces of the two-dimensional
-critical Ising model converge to SLE(3). This was a landmark result that
-built on the fermionic observable technique developed by Smirnov and
-Chelkak.
-
-\subsection{8.3 Rotational Invariance of FK
-Percolation}\label{ch2022hugoduminilcopin:rotational-invariance-of-fk-percolation}
-
-In 2020, Duminil-Copin and collaborators proved \textbf{rotational
-invariance} at large scales for the critical FK-Ising model and other
-dependent percolation models. Rotational invariance is a key step toward
-establishing full conformal invariance, which in turn would connect
-these models to the world of conformal field theory.
-
-The proof used the parafermionic observable and Russo-Seymour-Welsh
-(RSW) type estimates to show that crossing probabilities are
-asymptotically rotationally invariant. This was a major advance because
-previous proofs of rotational invariance relied on exact solvability and
-did not extend to dependent models.
-
-\subsection{8.4 Emergent Planarity and Pfaffian
-Structures}\label{ch2022hugoduminilcopin:emergent-planarity-and-pfaffian-structures}
-
-In a 2019 paper in \emph{Inventiones Mathematicae} with Aizenman,
-Tassion, and Warzel, Duminil-Copin proved that Ising models with
-finite-range interactions on \(\mathbb{Z}^2\) exhibit an emergent
-Pfaffian structure at criticality. This was a demonstration of
-\textbf{universality}: the solvable nearest-neighbor Ising model has a
-Pfaffian structure (the Fisher-Kasteleyn-Temperley method), and this
-structure emerges asymptotically for a wider class of interactions.
-
-The proof used the random current representation together with
-topological considerations, showing that the stochastic geometry of
-random currents forces the Pfaffian structure to emerge.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. Phase Diagrams of Planar Random-Cluster and Potts
-Models}\label{ch2022hugoduminilcopin:phase-diagrams-of-planar-random-cluster-and-potts-models}
-
-\subsection{9.1 Background}\label{ch2022hugoduminilcopin:background-6}
-
-For the planar random-cluster and Potts models, a fundamental question
-concerns the \textbf{order} of the phase transition. Physics arguments
-(based on conformal field theory and renormalization group) predicted
-that:
-
-\begin{itemize}
-\tightlist
-\item
- For \(1 \le q \le 4\), the transition is continuous (second-order).
-\item
- For \(q > 4\), the transition is discontinuous (first-order).
-\end{itemize}
-
-For the Ising case (\(q = 2\)), the transition was known to be
-continuous from Onsager's solution. For general \(q\), the question
-remained open.
-
-\subsection{9.2 The Proof}\label{ch2022hugoduminilcopin:the-proof-2}
-
-In a 2017 paper with Sidoravicius and Tassion (published in
-\emph{Communications in Mathematical Physics}), Duminil-Copin proved the
-continuity of the phase transition for the random-cluster model with
-\(q \in [1,4]\) on the square lattice, and discontinuity for \(q > 4\).
-
-The proof combined:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{RSW-type crossing probability estimates} for dependent
- percolation models.
-\item
- \textbf{The parafermionic observable} to control the behavior at the
- self-dual (critical) point.
-\item
- \textbf{Stochastic comparisons} to relate the behavior at different
- values of \(q\).
-\end{itemize}
-
-\subsection{9.3 Impact}\label{ch2022hugoduminilcopin:impact-5}
-
-This provided a complete and rigorous classification of the phase
-diagram, confirming physics predictions and closing a major chapter in
-the study of these models. The techniques developed have been applied to
-other models and have influenced work on the broader universality
-problem.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. Percolation on General Graphs and the Gaussian Free Field
-Connection}\label{ch2022hugoduminilcopin:percolation-on-general-graphs-and-the-gaussian-free-field-connection}
-
-\subsection{10.1 The Benjamini-Schramm
-Conjecture}\label{ch2022hugoduminilcopin:the-benjamini-schramm-conjecture}
-
-In their famous 1996 paper ``Percolation beyond \(\mathbb{Z}^d\): many
-questions and a few answers,'' Benjamini and Schramm conjectured that
-any Cayley graph with superlinear growth satisfies \(p_c < 1\) for
-Bernoulli percolation --- that is, there is a non-trivial phase
-transition.
-
-In a 2018 paper, Duminil-Copin and collaborators proved this conjecture.
-The proof introduced a surprising new connection between percolation and
-the \textbf{Gaussian Free Field (GFF)}. They showed that certain
-functionals of the GFF can be expressed in terms of connectivity
-probabilities for percolation in a random environment. Using a
-multi-scale decomposition of the GFF, they integrated out the randomness
-to derive bounds on percolation thresholds.
-
-\subsection{10.2 Impact}\label{ch2022hugoduminilcopin:impact-6}
-
-This work opened a new connection between two major areas of probability
-(percolation and the GFF) and provided a powerful new technique for
-studying percolation on non-Euclidean geometries. The method has since
-been extended to other models and other types of graphs.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. Scaling Relations for Planar Percolation
-Models}\label{ch2022hugoduminilcopin:scaling-relations-for-planar-percolation-models}
-
-\subsection{11.1 Background}\label{ch2022hugoduminilcopin:background-7}
-
-Critical exponents describe the precise behavior of physical quantities
-near the critical point. Scaling relations --- equations linking
-different critical exponents --- are a cornerstone of the theory of
-critical phenomena. They reduce the number of independent exponents and
-provide consistency checks for theoretical predictions.
-
-\subsection{11.2 Duminil-Copin's
-Contribution}\label{ch2022hugoduminilcopin:duminil-copins-contribution}
-
-In a 2020 paper, Duminil-Copin and collaborators derived generic scaling
-relations for planar percolation models, including Bernoulli percolation
-and the FK model. The key innovation was a new interpretation of the
-notion of ``influence'' of an edge in terms of the \textbf{rate of
-mixing} of local observables. This allowed them to prove that the
-critical exponents \(\beta, \gamma, \delta, \eta, \nu, \zeta,\) and
-\(\alpha\) satisfy the usual scaling relations.
-
-This was the first derivation of scaling relations for a whole range of
-universality classes of lattice models, not just for isolated models.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. Parafermionic Observables: A Unifying
-Technique}\label{ch2022hugoduminilcopin:parafermionic-observables-a-unifying-technique}
-
-One of Duminil-Copin's important contributions is the systematic
-development of \textbf{parafermionic observables} as a tool for planar
-statistical mechanics. These are complex-valued functions defined on the
-edges or vertices of a lattice that satisfy certain discrete
-holomorphicity (Cauchy-Riemann-type) relations.
-
-The parafermionic observable was first introduced in the context of the
-\(O(n)\) model and was used by Smirnov to prove conformal invariance of
-percolation. Duminil-Copin, in his work with various collaborators,
-showed that this technique applies to a much wider range of models:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Self-avoiding walks:} Computing the connective constant.
-\item
- \textbf{Random-cluster models:} Determining the critical point and
- proving continuity/discontinuity of the phase transition.
-\item
- \textbf{Ising model:} Proving convergence to SLE and emergent Pfaffian
- structures.
-\item
- \textbf{Loop \(O(n)\) models:} Understanding the critical behavior.
-\end{itemize}
-
-The monograph \emph{``Parafermionic observables and their applications
-to planar statistical physics models''} (2013, Ensaios Matematicos, 371
-pages), based on Duminil-Copin's PhD thesis, is the definitive reference
-on this subject. It has become a standard text for researchers and
-graduate students entering the field.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. The Decision Tree / Influence
-Method}\label{ch2022hugoduminilcopin:the-decision-tree-influence-method}
-
-\subsection{13.1 Overview}\label{ch2022hugoduminilcopin:overview}
-
-In a 2019 paper with Raoufi and Tassion (published in the \emph{Annals
-of Mathematics}), Duminil-Copin introduced a technique from theoretical
-computer science --- \textbf{decision trees} and \textbf{influence} ---
-into the study of phase transitions. The idea is to view the random
-configuration of edges as a random input to a decision tree that
-determines whether a certain event occurs (e.g., whether the origin is
-connected to the boundary of a large box).
-
-\subsection{13.2 Key Insight}\label{ch2022hugoduminilcopin:key-insight}
-
-The \textbf{influence} of an edge is the probability that the outcome of
-the decision tree changes when the state of that edge is flipped. By
-bounding the sum of influences (using the
-O'Donnell-Saks-Schramm-Talagrand theorem from computer science), the
-authors proved sharp threshold phenomena for the random-cluster and
-Potts models. Specifically, they showed that the phase transition is
-sharp for these models on any transitive graph.
-
-This was notable because:
-
-\begin{itemize}
-\tightlist
-\item
- The FK model has long-range dependencies, making standard percolation
- arguments inapplicable.
-\item
- The decision tree approach naturally handles these dependencies by
- focusing on the algorithmic structure of the event rather than the
- geometry of the model.
-\end{itemize}
-
-\subsection{13.3 Impact}\label{ch2022hugoduminilcopin:impact-7}
-
-This work established a new connection between statistical mechanics and
-theoretical computer science. It provided the first proof of sharp
-thresholds for several models where geometric methods had failed, and it
-introduced a new tool to the probabilist's arsenal.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. Broader Impact on Mathematics and
-Physics}\label{ch2022hugoduminilcopin:broader-impact-on-mathematics-and-physics}
-
-\subsection{14.1 Impact on Probability
-Theory}\label{ch2022hugoduminilcopin:impact-on-probability-theory}
-
-Duminil-Copin's work has transformed the rigorous study of phase
-transitions. His techniques --- parafermionic observables, random
-currents, decision tree methods, and multi-scale analysis --- are now
-part of the standard toolkit of any probabilist working in statistical
-mechanics. He has solved many of the important open problems in the
-field and has raised the bar for what is considered achievable.
-
-\subsection{14.2 Impact on Mathematical
-Physics}\label{ch2022hugoduminilcopin:impact-on-mathematical-physics}
-
-The connection between lattice models and quantum field theory has been
-clarified by Duminil-Copin's work. The proof of marginal triviality of
-\(\varphi^4_4\) has significant implications for constructive quantum field
-theory: it explains why the \(\varphi^4\) interaction does not produce a
-non-trivial continuum theory in four dimensions, which in turn has
-shaped the development of particle physics.
-
-\subsection{14.3 Impact on Combinatorics}\label{ch2022hugoduminilcopin:impact-on-combinatorics}
-
-The exact computation of the connective constant for the honeycomb
-lattice is a landmark in enumerative combinatorics. It has stimulated
-work on exact solutions for other lattices and has demonstrated the
-power of discrete complex analysis for combinatorial problems.
-
-\subsection{14.4 Impact on Computer
-Science}\label{ch2022hugoduminilcopin:impact-on-computer-science}
-
-The introduction of decision tree methods to probability theory has
-opened a new channel of influence between computer science and
-statistical physics. The O'Donnell-Saks-Schramm-Talagrand theorem and
-related ideas are now being applied to problems in percolation, Ising
-models, and beyond.
-
-\subsection{14.5 Unification and
-Simplification}\label{ch2022hugoduminilcopin:unification-and-simplification}
-
-Perhaps one of Duminil-Copin's most lasting impacts is the
-\textbf{unification} of previously disparate results. His three-page
-proof of sharpness replaced more complicated arguments. His systematic
-development of parafermionic observables provided a common framework for
-many planar models. His multi-scale analysis of random currents unified
-the study of critical behavior across dimensions.
-
-\subsection{14.6 Mentorship and
-Collaboration}\label{ch2022hugoduminilcopin:mentorship-and-collaboration}
-
-Duminil-Copin is known for his collaborative style. His important
-papers are typically co-authored, and he has trained numerous PhD
-students and postdocs who are now establishing their own research
-programs. He has helped build a thriving community of mathematicians
-working at the intersection of probability, statistical mechanics, and
-combinatorics.
-
-\subsection{14.7 Mathematics in Society}\label{ch2022hugoduminilcopin:mathematics-in-society}
-
-Since winning the Fields Medal, Duminil-Copin has taken on broader
-responsibilities. In 2023, he was appointed to France's Presidential
-Council for Science and Technology, where he advises on science policy.
-He is active in public communication about mathematics and has spoken
-about the importance of fundamental research.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. Awards and Recognition}\label{ch2022hugoduminilcopin:awards-and-recognition}
-
-\textbf{2022:} - Fields Medal (International Mathematical Union)
-
-\textbf{2019:} - Dobrushin Prize (Russian Academy of Sciences) - Member,
-Academia Europaea
-
-\textbf{2018:} - Invited Speaker, International Congress of
-Mathematicians (Rio de Janeiro)
-
-\textbf{2017:} - New Horizons in Mathematics Prize (Breakthrough
-Foundation) - Line and Michel Loève International Prize in Probability -
-Grand Prix Jacques Herbrand (French Academy of Sciences)
-
-\textbf{2016:} - Prize of the European Mathematical Society
-
-\textbf{2015:} - Early Career Award (International Association of
-Mathematical Physics) - Peccot Lectures (College de France)
-
-\textbf{2013:} - Oberwolfach Prize
-
-\textbf{2012:} - Rollo Davidson Prize (with Vincent Beffara) - Vacheron
-Constantin Prize
-
-\textbf{Honorary:} - Chevalier de la Legion d'Honneur (2022) - Member,
-French Academy of Sciences (2023)
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. Selected Major
-Publications}\label{ch2022hugoduminilcopin:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``The connective constant of the honeycomb lattice equals
- \(\sqrt{2+\sqrt{2}}\)''} (with S. Smirnov). \emph{Annals of
- Mathematics} 175(3), 1653-1665, 2012. --- \emph{Exact computation of
- the connective constant for SAWs on the hexagonal lattice.}
-\item
- \textbf{``The self-dual point of the two-dimensional random-cluster
- model is critical for \(q \ge 1\)''} (with V. Beffara).
- \emph{Probability Theory and Related Fields} 153(3), 511-542, 2012.
- --- \emph{Determination of the critical point for FK models.}
-\item
- \textbf{``Random currents and continuity of Ising model's spontaneous
- magnetization''} (with M. Aizenman and V. Sidoravicius).
- \emph{Communications in Mathematical Physics} 334(2), 719-742, 2015.
- --- \emph{Proof of continuous magnetization in the 3D Ising model.}
-\item
- \textbf{``A new proof of the sharpness of the phase transition for
- Bernoulli percolation and the Ising model''} (with V. Tassion).
- \emph{Communications in Mathematical Physics} 343(2), 725-745, 2016.
- --- \emph{Elegant three-page proof of sharp thresholds.}
-\item
- \textbf{``Continuity of the Phase Transition for Planar Random-Cluster
- and Potts Models with \(1 \le q \le 4\)''} (with V. Sidoravicius and
- V. Tassion). \emph{Communications in Mathematical Physics} 349(1),
- 47-107, 2017. --- \emph{Classification of continuous vs.~discontinuous
- transitions.}
-\item
- \textbf{``Sharp phase transition for the random-cluster and Potts
- models via decision trees''} (with A. Raoufi and V. Tassion).
- \emph{Annals of Mathematics} 189(1), 75-99, 2019. ---
- \emph{Introduction of decision tree methods to probability.}
-\item
- \textbf{``Emergent Planarity in two-dimensional Ising Models with
- finite-range Interactions''} (with M. Aizenman, V. Tassion, and S.
- Warzel). \emph{Inventiones Mathematicae}, 2019. --- \emph{Universality
- of Pfaffian structures.}
-\item
- \textbf{``Marginal triviality of the scaling limits of critical 4D
- Ising and \(\varphi^4_4\) models''} (with M. Aizenman). \emph{Annals
- of Mathematics} 194(1), 163-235, 2021. --- \emph{Proof of Gaussian
- scaling limits in four dimensions.}
-\item
- \textbf{``Parafermionic observables and their applications to planar
- statistical physics models''} \emph{Ensaios Matematicos} 25, 1-371,
- 2013. --- \emph{Monograph on parafermionic techniques.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. Ongoing Work and Future
-Directions}\label{ch2022hugoduminilcopin:ongoing-work-and-future-directions}
-
-Duminil-Copin continues to be active on multiple fronts:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Scaling limits of two-dimensional models:} Establishing
- conformal invariance for a broader class of models, including the FK
- model with general \(q\) and the loop \(O(n)\) model.
-\item
- \textbf{Critical exponents in two dimensions:} Computing exact
- critical exponents using the parafermionic observable and related
- techniques.
-\item
- \textbf{Higher-dimensional critical phenomena:} Extending the random
- current approach to understand the behavior of other models in
- dimensions three and four.
-\item
- \textbf{Connections to computer science:} Further developing the
- influence/decision tree approach and applying it to open problems in
- percolation theory.
-\item
- \textbf{Disordered systems:} Studying the effect of randomness in the
- coupling constants on phase transitions.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. Conclusion}\label{ch2022hugoduminilcopin:conclusion}
-
-Hugo Duminil-Copin is one of the most gifted mathematicians of his
-generation. His work has transformed the rigorous understanding of phase
-transitions in statistical physics, solving problems that had resisted
-progress for decades. From the exact computation of the connective
-constant of the honeycomb lattice to the proof of marginal triviality of
-the 4D Ising model, from the sharpness of phase transitions to the
-classification of continuous vs.~discontinuous transitions, his
-contributions are characterized by their depth, elegance, and conceptual
-clarity.
-
-What makes Duminil-Copin's achievement particularly notable is the
-range of techniques he commands: discrete complex analysis, random
-currents, geometric probability, multi-scale analysis, and computer
-science methods. He has not only solved difficult problems but has also
-provided the community with new tools and frameworks that will continue
-to generate results for years to come.
-
-The Fields Medal citation --- \emph{``for solving longstanding problems
-in the probabilistic theory of phase transitions in statistical physics,
-especially in dimensions three and four''} --- captures the essence of
-his work. But the full scope of his impact extends beyond any single
-result. He has reshaped a field, trained a generation of researchers,
-and demonstrated that the deepest problems in mathematical physics are
-accessible to rigorous mathematical analysis.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Compute the magnetization of the 2D Ising model below the critical temperature using Onsager's solution. \end{exercise}
-
-\begin{exercise} Show that the correlation length of the Ising model diverges at the critical temperature. \end{exercise}
-
-\begin{exercise} Verify the sharp threshold theorem: the probability of a connection in critical percolation decays polynomially. \end{exercise}
-
-\begin{exercise} Prove that the expected number of self-avoiding walks of length $n$ on $\\mathbb{Z}^d$ grows like $\\mu^n n^{\\gamma - 1}$ for some $\\mu > 1$ and $\\gamma \\geq 1$. \end{exercise}
+The study of the Potts model in dimensions greater than 4, above the upper critical dimension, has been influenced by Duminil-Copin's work. The lace expansion, which provides sharp results on critical behavior above the upper critical dimension, has been applied to the Potts model and to other spin systems. The development of new techniques for applying the lace expansion to models with complex phase structures is an active area that builds on Duminil-Copin's foundational work on the critical behavior of the Ising model.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Duminil-Copin proved the sharp phase transition for the Ising model, establishing the exact critical exponents and the sharp threshold behavior. His work on self-avoiding walks, the random-cluster model, and the relationship between correlation functions and critical phenomena advanced the mathematical understanding of phase transitions in statistical mechanics.
-
-\section{19. References and Further
-Reading}\label{ch2022hugoduminilcopin:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch2022hugoduminilcopin:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 2022 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-2022
-\item
- Fields Medal Citation and Biography:
- https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/Duminil-Copin\_Hugo\_citation.pdf
-\item
- Grimmett, G. R. ``The work of Hugo Duminil-Copin.'' INSMI Newsletter,
- 5 July 2022. arXiv:2207.02022.
-\end{itemize}
-
-\subsection{Biographical and Overview
-Articles}\label{ch2022hugoduminilcopin:biographical-and-overview-articles}
-
-\begin{itemize}
-\tightlist
-\item
- Wikipedia entry: https://en.wikipedia.org/wiki/Hugo\_Duminil-Copin
-\item
- CNRS News: ``A Fields Medal for Hugo Duminil-Copin''
- https://news.cnrs.fr/articles/a-fields-medal-for-hugo-duminil-copin
-\item
- IHES Announcement:
- https://www.ihes.fr/en/hugo-duminil-copin-laureate-fields-medal/
-\item
- Notices of the AMS, September 2022: ``2022 Fields Medals Awarded''
- https://www.ams.org/publications/journals/notices/202209/rnoti-p1601.pdf
-\end{itemize}
-
-\subsection{Key Survey Articles by
-Duminil-Copin}\label{ch2022hugoduminilcopin:key-survey-articles-by-duminil-copin}
-
-\begin{itemize}
-\tightlist
-\item
- ``Parafermionic observables and their applications to planar
- statistical physics models.'' \emph{Ensaios Matematicos} 25, 1-371,
- 2013.
-\item
- ``Random currents expansion of the Ising model.'' \emph{Proceedings of
- the 7th European Congress of Mathematicians}, 2016. arXiv:1607.06933.
-\item
- ``Lectures on the Ising and Potts models on the hypercubic lattice.''
- \emph{PIMS Summer School 2017}. arXiv:1707.00520.
-\end{itemize}
-
-\subsection{Technical Background}\label{ch2022hugoduminilcopin:technical-background}
-
-\begin{itemize}
-\tightlist
-\item
- Grimmett, G. R. \emph{Percolation}. 2nd ed., Springer, 1999.
-\item
- Lawler, G. F. \emph{Conformally Invariant Processes in the Plane}.
- AMS, 2005.
-\item
- Werner, W. ``Random planar curves and Schramm-Loewner Evolution.''
- \emph{Lectures on Probability Theory and Statistics}, Springer, 2004.
-\item
- Friedli, S. and Velenik, Y. \emph{Statistical Mechanics of Lattice
- Systems: A Concrete Mathematical Introduction}. Cambridge University
- Press, 2017.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch2006wendelinwerner:wendelin-werner-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Duminil-Copin's work relates to Werner's SLE.
-  \item \textbf{\hyperref[ch2010stanislavsmirnov:stanislav-smirnov-fields-medal-2010-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Duminil-Copin extended Smirnov's percolation work.
-\end{itemize}
-
+Duminil-Copin proved the continuity of the phase transition for the 3D Ising model using random-cluster representations, RSW theorems, and hypercontractivity techniques. His work provides the rigorous mathematical foundation for understanding critical phenomena.

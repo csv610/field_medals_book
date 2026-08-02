@@ -1,667 +1,242 @@
-\chapter{Edward Witten --- Fields Medal 1990}\label{ch1990edwardwitten:edward-witten-fields-medal-1990-a-comprehensive-report}
+\chapter{1990:Edward Witten}\label{ch1990edwardwitten:edward-witten-fields-medal-1990-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Edward Witten (b. August
-26, 1951, Baltimore, Maryland, USA) \textbf{Position:} Professor
-Emeritus, Institute for Advanced Study, Princeton (since 1987)
-\textbf{Doctoral Advisor:} David Gross (Princeton University)
-\textbf{Fields Medal Citation:} \emph{``For his contributions to
-mathematical physics, including the proof of the positive energy
-theorem, supersymmetry, and the Jones polynomial in quantum field
-theory.''}
+\textbf{Prepared:} July 2026 \textbf{Subject:} Edward Witten (b.~August 26, 1951, Baltimore, Maryland, USA) \textbf{Position:} Charles Simonyi Professor in the School of Natural Sciences, Institute for Advanced Study (since 1987) \textbf{Doctoral Advisor:} John Schwarz (Princeton University) \textbf{Fields Medal Citation:} \emph{``For his work on the Jones polynomial and related invariants of knots and three-manifolds.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{1. Introduction}\label{ch1990edwardwitten:introduction}
+\begin{prereqs} Quantum field theory, topology of manifolds, knot theory, gauge theory, Chern--Simons theory, Morse theory, index theory, supersymmetry, string theory. \end{prereqs}
 
-Edward Witten was awarded the Fields Medal in 1990 --- the first and
-only physicist to receive the Fields Medal. His work has substantially
-reshaped both theoretical physics and mathematics, building bridges
-between the two fields that have transformed each.
+\begin{objectives} State the Chern--Simons formulation of the Jones polynomial; explain the connection between quantum field theory and knot invariants; describe Witten's topological quantum field theory framework; explain Witten's approach to Morse theory; describe topological sigma models and mirror symmetry. \end{objectives}
 
-\begin{prereqs} Quantum mechanics (Hilbert spaces, operators), differential geometry (connections, curvature), basic algebraic topology. \end{prereqs}
+\section{Problem History}
 
-\begin{objectives} Explain Witten's interpretation of the Jones polynomial via Chern-Simons theory; describe topological quantum field theory; understand the relation between supersymmetry and Morse theory. \end{objectives}
+The Jones polynomial, discovered by Vaughan Jones in 1984, was the first new polynomial invariant of knots since Alexander's polynomial from the 1920s. Jones discovered it through the representation theory of the von Neumann algebra $B(H)$, using the Temperley--Lieb algebra and the theory of subfactors. The polynomial $V_K(t)$ is an invariant of regular isotopy of knots, defined through the skein relation $t^{-1}V_{L_+}(t) - tV_{L_-}(t) = (t^{1/2} - t^{-1/2})V_{L_0}(t)$.
 
+The origin of the Jones polynomial remained mysterious until Witten showed it arises naturally from Chern--Simons gauge theory. Chern--Simons theory is a topological quantum field theory in three dimensions whose action is $S = \frac{k}{4\pi}\int_X \text{tr}(A \wedge dA + \frac{2}{3}A \wedge A \wedge A)$ for a connection $A$ on a principal $G$-bundle over $X$.
 
-Witten's contributions include: - \textbf{The positive energy theorem}
-(with Richard Schoen and Shing-Tung Yau). - \textbf{Supersymmetry and
-supergravity.} - \textbf{The Jones polynomial in Chern--Simons theory.}
-- \textbf{String theory and M-theory.} - \textbf{Mirror symmetry and
-Calabi--Yau compactifications.} - \textbf{Seiberg--Witten invariants.} -
-\textbf{Topological quantum field theory.}
+Jones's discovery raised the question: why does the Jones polynomial exist? Where does it come from? Jones himself noted the polynomial appeared somewhat ``out of nowhere'' in his original construction. Witten's approach explained the origin and predicted generalizations.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The connection between knot theory and physics had been suggested earlier by several physicists and mathematicians. The skein relation was known to have a physical interpretation in terms of the statistical mechanics of lattice models. However, Witten's interpretation---that the Jones polynomial is the expectation value of a Wilson loop operator in Chern--Simons theory---was entirely new and far-reaching.
 
-\section{2. Biographical Background}\label{ch1990edwardwitten:biographical-background}
+Chern--Simons theory was introduced by Siegel in 1979 and studied by Schwarz and Witten in the context of three-dimensional gauge theory. It is a topological theory because the action is independent of the metric on $X$, and the partition function is a topological invariant. Witten recognized that this topological nature implies the partition function computes knot and manifold invariants.
 
-\subsection{2.1 Early Life}\label{ch1990edwardwitten:early-life}
+The Jones polynomial has many remarkable properties that Witten's approach explains: the skein relation, the relationship to the Alexander polynomial (as a limit), the connection to representation theory, and the existence of the HOMFLY and Kauffman polynomials as generalizations. Witten showed all of these arise from different choices of gauge group and representation in Chern--Simons theory.
 
-Edward Witten was born in Baltimore in 1951. His father, Louis Witten,
-was a theoretical physicist specializing in general relativity. Edward
-studied at Brandeis University and the University of Wisconsin--Madison.
+The idea that a physical theory could illuminate pure mathematics was not new---index theorems, characteristic classes, and the Atiyah--Singer theorem all had physical interpretations. But Witten's Chern--Simons construction was the first time a quantum field theory directly produced new topological invariants of knots and manifolds, establishing a new paradigm for the interaction between physics and mathematics.
 
-\subsection{2.2 Education}\label{ch1990edwardwitten:education}
+Witten's work on Morse theory, developed around the same period, provided a profound physical interpretation of classical topology. He showed that Morse theory could be understood as a supersymmetric quantum mechanical system, where the gradient flow of a Morse function governs the dynamics. The critical points of the Morse function correspond to supersymmetric ground states, and the Morse inequalities emerge from the index of a certain Dirac operator.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{1971:} BA in History, Brandeis University.
-\item
- \textbf{1974:} MA in Mathematics, University of Wisconsin--Madison.
-\item
- \textbf{1976:} PhD in Physics, Princeton University (under David
- Gross).
-\end{itemize}
+The Atiyah--Singer index theorem, which relates the analytical index of an elliptic operator to topological invariants of the underlying manifold, had been understood geometrically through the heat kernel method. Witten showed that supersymmetric quantum mechanics provides an especially natural framework for understanding index theorems, where the Witten index $\text{Tr}(-1)^F$ computes the dimension of the kernel minus the dimension of the cokernel of a Dirac-type operator.
 
-\subsection{2.3 Academic Career}\label{ch1990edwardwitten:academic-career}
+The relationship between Morse theory and index theory has deep historical roots. The original Morse inequalities relate the number of critical points of a Morse function to the Betti numbers of the underlying manifold. Witten's reformulation reveals that these inequalities have a natural interpretation in terms of supersymmetric ground states, where the de Rham complex plays the role of the state space of a quantum mechanical system.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{1976--1977:} Postdoctoral Fellow, Harvard University.
-\item
- \textbf{1977--1980:} Junior Fellow, Harvard Society of Fellows.
-\item
- \textbf{1980--1987:} Professor of Physics, Princeton University.
-\item
- \textbf{1987--present:} Professor, Institute for Advanced Study,
- Princeton.
-\item
- \textbf{1990:} Fields Medal.
-\item
- \textbf{1991:} MacArthur Fellowship.
-\item
- \textbf{2004:} Appointed Charles Simonyi Professor, IAS.
-\item
- \textbf{2008:} Awarded the Crafoord Prize.
-\end{itemize}
+The Atiyah--Singer index theorem unifies several classical results. For the signature operator on a $4k$-manifold, the index is the signature $\tau(M)$. For the Dolbeault operator on a complex manifold, the index is the arithmetic genus $\chi(X, \mathcal{O}_X)$. Witten's perspective showed these results are all instances of a single physical principle: supersymmetric quantum mechanics on loop spaces.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The development of topological quantum field theory in the late 1980s was motivated by physics. The work of Fradkin, Polyakov, and others on topological terms in gauge theory suggested that certain quantum field theories should have metric-independent observables. Witten's insight was to take these ideas seriously and develop them into a rigorous mathematical framework.
 
-\section{3. The Positive Energy
-Theorem}\label{ch1990edwardwitten:the-positive-energy-theorem}
+The Jones polynomial's skein relation had been known to have a physical interpretation in terms of the Yang--Baxter equation. The R-matrix of quantum groups provides solutions to the Yang--Baxter equation, and the bracket polynomial (Jones polynomial) can be interpreted as a partition function of a statistical mechanical system. Witten's Chern--Simons formulation provided a field-theoretic explanation for why these structures appear.
 
-\subsection{3.1 Background}\label{ch1990edwardwitten:background}
+The work of Drinfel'd and Jimbo on quantum groups in the mid-1980s provided the algebraic framework for understanding the structure underlying the Jones polynomial. The quantum group $U_q(\mathfrak{sl}_2)$ at a root of unity gives rise to the representation theory needed to construct the Jones polynomial via the R-matrix. Witten's Chern--Simons theory provided the physical explanation for why quantum groups appear in knot theory.
 
-In general relativity, the \textbf{positive energy theorem} states that
-the total energy (mass) of an asymptotically flat spacetime is
-non-negative, and zero only for flat Minkowski space.
+Alexander's polynomial $\Delta_K(t)$ was the classical invariant, defined using the presentation matrix of the Alexander module. It can be obtained from the Jones polynomial by taking a certain limit. The relationship is given by $\Delta_K(t) = \lim_{q \to 1} V_K(q)$ up to normalization, and this limit corresponds to the Abelianization of the gauge group in Chern--Simons theory.
 
-\subsection{3.2 Witten's Proof}\label{ch1990edwardwitten:wittens-proof}
+The HOMFLY polynomial $P(a, z)$ generalizes both the Alexander and Jones polynomials, and it arises from Chern--Simons theory with gauge group $SU(N)$ for arbitrary $N$. The skein relation for the HOMFLY polynomial is $a P_{L_+} - a^{-1} P_{L_-} = z P_{L_0}$, which generalizes the Jones skein relation.
 
-Witten (with Schoen and Yau) gave a proof using spinors: 1. Construct a
-spinor field satisfying the Dirac equation. 2. Express the total mass as
-an integral over the boundary. 3. The integral is non-negative due to
-the dominant energy condition.
+Kauffman's polynomial arises from Chern--Simons theory with orthogonal gauge groups, providing another generalization of the Jones polynomial. The relationships between these polynomials are encoded in the structure of the underlying quantum groups and their representations.
 
-\subsection{3.3 Significance}\label{ch1990edwardwitten:significance}
+\section{How Was It Solved}
 
-This theorem is fundamental to general relativity, ensuring that
-gravitationally bound systems have positive energy.
+Witten's approach uses the path integral of Chern--Simons theory to define knot invariants. The Chern--Simons action $S_{CS}$ is a functional of the gauge field $A$, and the partition function $Z(X) = \int \mathcal{D}A \, e^{iS_{CS}(A)}$ is a topological invariant of $X$. For a knot $K \subset X$, the Wilson loop $W_R(K) = \text{tr}_R(\mathcal{P}e^{\oint_K A})$ is the expectation value of the holonomy of $A$ around $K$ in representation $R$ of $G$.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The key computation is the evaluation of the expectation value $\langle W_R(K) \rangle$ in Chern--Simons theory. This is a path integral over all gauge field configurations, weighted by $e^{iS_{CS}}$. Witten showed that this expectation value equals the Jones polynomial (for $G = SU(2)$) or its generalizations (for other groups).
 
-\section{4. Supersymmetry}\label{ch1990edwardwitten:supersymmetry}
+The path integral is not defined rigorously, but Witten showed that the perturbative expansion is well-defined and reproduces the Jones polynomial order by order in $1/k$, where $k$ is the level (the coupling constant). The perturbative expansion uses the Feynman diagrams of Chern--Simons theory, which are determined by the topology of the knot and the structure constants of the Lie algebra.
 
-\subsection{4.1 Definition}\label{ch1990edwardwitten:definition}
+The topological invariance of $Z(X)$ follows from the metric-independence of the Chern--Simons action. The classical action $S_{CS}$ satisfies $\delta S_{CS} = \frac{k}{4\pi}\int_X \text{tr}(F \wedge \delta A)$, so the classical equations of motion are $F = 0$ (flat connections). The quantization of $S_{CS}$ produces a finite-dimensional Hilbert space $\mathcal{H}(X)$ for each surface $X$, and the partition function is the dimension of this Hilbert space.
 
-\textbf{Supersymmetry} is a symmetry relating bosons (integer spin) and
-fermions (half-integer spin). It is a central concept in modern
-theoretical physics.
+Witten showed that the Hilbert space $\mathcal{H}(\Sigma)$ associated to a surface $\Sigma$ is the space of conformal blocks of the Wess--Zumino--Witten model. The conformal blocks are representations of the affine Kac--Moody algebra $\widehat{\mathfrak{g}}_k$ associated to the gauge group $G$ and level $k$.
 
-\subsection{4.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions}
+The surgery formula for the Jones polynomial---that surgery on a link produces the Jones polynomial of the resulting 3-manifold---follows naturally from Chern--Simons theory. The surgery corresponds to inserting Wilson loops in the path integral, and the surgery formula is a consequence of the topological invariance of the theory.
 
-Witten has made numerous contributions to supersymmetry: -
-\textbf{Supersymmetric quantum mechanics} as a toy model. -
-\textbf{Supersymmetric gauge theories} in various dimensions. -
-\textbf{The index theorem and supersymmetry.} - \textbf{Dynamical
-supersymmetry breaking.}
+The topological field theory framework introduced by Witten is the foundation for modern TQFT. A TQFT is a functor from the cobordism category to the category of vector spaces. Witten showed that Chern--Simons theory is a TQFT, and this provides the axioms for the invariants of 3-manifolds and knots.
 
-\subsection{4.3 Supersymmetric Gauge
-Theories}\label{ch1990edwardwitten:supersymmetric-gauge-theories}
+The perturbative expansion of the Chern--Simons path integral produces a universal finite-type invariant of knots, known as the Kontsevich integral. Each term in the $1/k$ expansion corresponds to a chord diagram, and the coefficients are determined by the Lie algebra structure of $\mathfrak{g}$. The Jones polynomial is the image of the Kontsevich integral under the specializations $q = e^{2\pi i/k}$.
 
-Witten studied the dynamics of supersymmetric gauge theories: - The
-moduli space of vacua. - The chiral ring and its properties. - The
-relationship between supersymmetry and confinement.
+The relationship between the path integral and the moduli space of flat connections is central to the theory. The classical solutions of the Chern--Simons equations are flat connections, and the moduli space of flat connections on a surface $\Sigma$ is the critical locus of the action. The quantization procedure localizes the path integral to this moduli space, and the resulting Hilbert space is finite-dimensional.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{Witten's Approach to Morse Theory}
 
-\section{5. The Jones Polynomial and Chern--Simons
-Theory}\label{ch1990edwardwitten:the-jones-polynomial-and-chernsimons-theory}
+Witten's 1982 paper ``Supersymmetry and Morse Theory'' revealed that Morse theory has a natural interpretation as a supersymmetric quantum mechanical system. Given a smooth function $f: M \to \mathbb{R}$ on a compact Riemannian manifold $M$, one considers the supersymmetric quantum mechanics with Hamiltonian $H = \frac{1}{2}(d + d^*)^2$ acting on the space of differential forms $\Omega^*(M)$.
 
-\subsection{5.1 Chern--Simons Theory}\label{ch1990edwardwitten:chernsimons-theory}
+The gradient flow equation $\frac{dx}{dt} = -\nabla f(x)$ governs the dynamics of classical trajectories. Witten showed that by deforming the differential as $d_T = e^{-Tf} \circ d \circ e^{Tf} = e^{-Tf}de^{Tf}$, the Hamiltonian becomes $H_T = \frac{1}{2}(d_T + d_T^*)^2$, which for large $T$ localizes near the critical points of $f$. The potential energy $V_T = \frac{T^2}{2}|\nabla f|^2 + T \cdot \text{Hess}(f)$ grows large away from critical points, suppressing non-supersymmetric states.
 
-Witten showed that the \textbf{Jones polynomial} arises naturally from
-\textbf{Chern--Simons gauge theory} in three dimensions.
+The Morse complex is recovered in the limit $T \to \infty$. The chain complex $(\Omega^*(M), d_T)$ computes the de Rham cohomology of $M$, and the number of critical points of index $k$ equals the dimension of the subspace of forms with $k$ anticommuting variables. The Morse inequalities $m_k \geq b_k$ follow from the fact that the kernel of $d_T$ contains the cohomology.
 
-\subsection{5.2 The Partition Function}\label{ch1990edwardwitten:the-partition-function}
+The Witten index $\text{ind}(D) = \text{Tr}(-1)^F e^{-\beta H}$, where $F$ is the fermion number operator, counts the difference between the number of bosonic and fermionic ground states. This index is independent of $\beta$ and equals the Euler characteristic $\chi(M) = \sum_{k} (-1)^k b_k(M)$. The index theorem relates this to topological invariants: $\text{ind}(D) = \int_M \widehat{A}(TM) \cdot \text{ch}(E)$.
 
-The partition function of Chern--Simons theory with gauge group
-\(SU(2)\) at level \(k\) is:
+Witten's approach also yields a physical interpretation of the Poincar\'e--Hopf theorem. The critical points of $f$ correspond to isolated zeros of the vector field $-\nabla f$, and the sum of indices equals the Euler characteristic. In the quantum mechanical picture, this follows from the index formula applied to the Dirac operator twisted by the spinor bundle.
 
+The gradient flow lines between critical points of adjacent indices define the boundary operator in the Morse complex. If $\text{ind}(p) - \text{ind}(q) = 1$, the moduli space of flow lines from $p$ to $q$ is a finite set (after quotienting by translation). The coefficient of $q$ in $\partial p$ is the signed count of these flow lines. In the quantum mechanical picture, these coefficients arise from instanton contributions.
+
+The Morse--Bott theory generalizes Witten's approach to functions with degenerate critical sets. When the critical set is a submanifold rather than isolated points, the Morse complex must be modified to account for the geometry of the critical manifold. This has applications to the study of loop spaces and gauge theory.
+
+The relationship between Witten's approach and the Ray--Singer torsion has been studied extensively. The analytic torsion is defined using the zeta-regularized determinant of the Laplacian, and Ray and Singer conjectured that it equals the Reidemeister torsion. Witten showed that supersymmetric quantum mechanics provides a natural framework for understanding this result.
+
+\subsection{Index Theory and Supersymmetry}
+
+The Atiyah--Singer index theorem has a beautiful physical interpretation through supersymmetric quantum mechanics. Given a Dirac operator $D$ on a spin manifold $M$, the index is $\text{ind}(D) = \dim \ker D_+ - \dim \ker D_-$. In the supersymmetric framework, this counts the difference between bosonic and fermionic zero modes.
+
+The heat kernel method computes the index as $\text{ind}(D) = \lim_{t \to 0} \text{Tr}((-1)^F e^{-tD^2})$. By the supersymmetry, the trace localizes to the kernel of $D$, giving the index formula. The short-time asymptotics of the heat kernel are controlled by the curvature of the manifold, leading to the topological expression involving characteristic classes.
+
+For the de Rham complex, the Dirac operator is $D = d + d^*$, and the index is the Euler characteristic. For the Dolbeault complex on a complex manifold, the index is the arithmetic genus. Witten showed that these index theorems arise naturally from supersymmetric quantum mechanics on the loop space of $M$, connecting to the loop space index theorem of Bott, Atiyah, and Singer.
+
+The family index theorem, proved by Atiyah and Singer, generalizes the index to families of operators parametrized by a base space $B$. The index becomes a class in $K(B)$, and the theorem relates this to the pushforward of the symbol class under the projection $\pi: M \times B \to B$.
+
+The Atiyah--Patodi--Singer index theorem extends the index theory to manifolds with boundary, introducing the eta invariant $\eta(s) = \sum_\lambda \text{sgn}(\lambda)|\lambda|^{-s}$ to correct for the boundary contribution. The index formula becomes $\text{ind}(D) = \int_M \widehat{A}(TM) - \frac{1}{2}(\eta(0) + h)$, where $h$ is the dimension of the kernel of the boundary operator.
+
+The eta invariant measures the spectral asymmetry of the boundary operator. For the signature operator on a 3-manifold, the eta invariant is related to the Chern--Simons invariant. This connection is fundamental to the study of 3-manifold invariants and has applications to the theory of quantum invariants.
+
+Witten's work on index theory extended to the study of anomalies in quantum field theory. The chiral anomaly arises when a classical symmetry is not preserved by quantization, and the anomaly is measured by an index theorem. The consistent anomaly and the covariant anomaly are related by the Bardeen--Zumino polynomial, and both can be understood through the framework of supersymmetric quantum mechanics.
+
+The index theorem on manifolds with corners and singular spaces has been studied extensively. The work of Melrose, Leichtnam, and others extends the Atiyah--Patodi--Singer theory to more general geometric settings. These generalizations have applications to the study of moduli spaces in gauge theory.
+
+\subsection{Topological Sigma Models and Mirror Symmetry}
+
+Witten's 1988 paper ``The Verlinde Algebra and the Cohomology of the Grassmannian'' and his subsequent work on topological sigma models initiated the mathematical study of mirror symmetry. A topological sigma model is a two-dimensional quantum field theory whose target space is a Riemannian manifold $X$. The action is $S = \frac{1}{4\pi} \int_\Sigma g_{ij}(\phi) \partial_a \phi^i \partial^a \phi^j \, d^2\sigma$, where $\phi: \Sigma \to X$ is a map from the worldsheet $\Sigma$ to the target $X$.
+
+Witten showed that by twisting the supersymmetry algebra, one obtains a topological field theory whose observables are independent of the metric on $X$. There are two distinct twists: the A-model and the B-model. The A-model depends only on the symplectic structure of $X$, while the B-model depends only on the complex structure.
+
+The A-model computes Gromov--Witten invariants, which count pseudoholomorphic curves in $X$ representing a given homology class. The B-model computes period integrals of holomorphic forms on $X$. Mirror symmetry conjectures that for a Calabi--Yau threefold $X$, there exists a mirror manifold $X'$ such that the A-model on $X$ is equivalent to the B-model on $X'$.
+
+The mirror symmetry conjecture was proposed by Candelas, de la Ossa, Green, and Parkes in 1991, based on physical considerations from string theory. They observed that for the quintic threefold in $\mathbb{CP}^4$, the number of rational curves of degree $d$ on the mirror manifold could be computed from the periods of the holomorphic form. This provided an unexpected method for counting curves on algebraic varieties.
+
+The mirror map relates the complex structure moduli of $X'$ to the K\"ahler moduli of $X$. Near the large complex structure limit, the mirror map has an asymptotic expansion involving the Gromov--Witten invariants. The period integrals satisfy the Picard--Fuchs differential equations, which can be solved explicitly for many examples.
+
+For the quintic threefold $X_5 \subset \mathbb{CP}^4$, the mirror family is constructed by quotienting by a discrete symmetry group $\Gamma \cong (\mathbb{Z}/5)^4$ and resolving singularities. The mirror $X'_5$ has Hodge numbers $h^{1,1}(X_5) = 1$ and $h^{2,1}(X_5) = 101$, while $h^{1,1}(X'_5) = 101$ and $h^{2,1}(X'_5) = 1$. This exchange of Hodge numbers is the hallmark of mirror symmetry.
+
+The number of rational curves of degree $d$ on the quintic threefold was computed using mirror symmetry. For $d = 1$, there are 2875 lines; for $d = 2$, there are 609250 conics; for $d = 3$, there are 317206375 rational cubic curves. These numbers were previously unknown and have been verified using Gromov--Witten invariants and the Vafa--Intriligator formula.
+
+The homological mirror symmetry conjecture, proposed by Kontsevich in 1994, provides a rigorous mathematical formulation. It states that the derived category of coherent sheaves $D^b\text{Coh}(X)$ on one side is equivalent to the Fukaya category $Fuk(X')$ on the mirror side. This conjecture has been verified for elliptic curves and K3 surfaces but remains open in general.
+
+The A-model correlators are computed using the topological string partition function $Z_A = \sum_{g=0}^\infty g_s^{2g-2} F_g$, where $F_g$ are the genus-$g$ Gromov--Witten invariants. The B-model partition function is computed from period integrals of the holomorphic 3-form on the mirror. The equality $Z_A = Z_B$ is the mathematical formulation of mirror symmetry.
+
+The moduli space of flat $G$-connections on a surface $\Sigma$ carries a natural symplectic structure, and its quantization produces the space of conformal blocks. The mapping class group $\text{Mod}(\Sigma)$ acts on this Hilbert space, and the representation factors through a finite-dimensional quotient. The dimension is given by the Verlinde formula.
+
+\section{Impact of This Discovery}
+
+Witten's interpretation of the Jones polynomial opened the door to using quantum field theory as a tool in topology. The path integral, previously a heuristic in physics, became a rigorous computational tool for defining topological invariants. This ``physical'' approach to mathematics has been enormously productive.
+
+The topological quantum field theory framework introduced by Witten led to a revolution in algebraic topology. Atiyah formalized Witten's ideas into an axiomatic framework, and TQFT became a major area of research. The axioms of TQFT are: (1) each cobordism gives a linear map; (2) the identity cobordism gives the identity map; (3) composition of cobordisms corresponds to composition of maps.
+
+The Chern--Simons path integral predicts and explains many properties of the Jones polynomial. The skein relation arises from the perturbative expansion around a singular connection. The mirror symmetry of the HOMFLY polynomial follows from the duality of Chern--Simons theory on $S^3 \times \mathbb{R}$. The relationship to conformal field theory explains the connection to the Yang--Lee edge singularity.
+
+Witten's approach also predicts the existence of new invariants that go beyond the Jones polynomial. The HOMFLY polynomial is the invariant of Chern--Simons theory with gauge group $SU(N)$, and the Kauffman polynomial arises from the quantum group $SO(N)$. These are all special cases of the general framework.
+
+The connection to quantum computing was discovered later by Freedman, Larsen, and Wang. They showed that the Jones polynomial is universal for quantum computation---any quantum computation can be simulated by a computation of the Jones polynomial. This is remarkable: a purely topological invariant is powerful enough to simulate quantum computers.
+
+The relationship between Chern--Simons theory and string theory, through the AdS/CFT correspondence, is a major theme in modern theoretical physics. The Chern--Simons theory on a 3-manifold is dual to a string theory on the 4-manifold $M \times S^1$, where $M$ is the 3-manifold. This duality connects knot theory to quantum gravity and black hole physics.
+
+The Witten--Reshetikhin--Turaev invariants of 3-manifolds are the rigorous realization of Witten's path integral. For a compact simple Lie group $G$ and level $k$, the WRT invariant $\tau_k(M)$ of a 3-manifold $M$ is defined by surgery on a link diagram using the quantum group $U_q(\mathfrak{g})$ with $q = e^{2\pi i/(k+h^\vee)}$, where $h^\vee$ is the dual Coxeter number.
+
+The relationship between Chern--Simons theory and the theory of conformal blocks has been developed extensively. The space of conformal blocks $\mathcal{H}(\Sigma)$ on a Riemann surface $\Sigma$ is a finite-dimensional vector space that carries a projective representation of the mapping class group $\text{Mod}(\Sigma)$. This representation is the quantization of the symplectic structure on the moduli space of flat connections, and it provides the kinematical framework for Chern--Simons TQFT.
+
+The Reshetikhin--Turaev construction of quantum invariants of 3-manifolds provides the mathematical foundation for Witten's physical ideas. Given a compact semisimple Lie group $G$ and a representation $R$, the Reshetikhin--Turaev invariant of a 3-manifold is constructed using the modular tensor category of representations of the quantum group $U_q(\mathfrak{g})$. This categorical framework provides a rigorous definition of the invariants that Witten originally defined using path integrals.
+
+The connection between Chern--Simons theory and the theory of mapping class groups of surfaces provides a rich source of representations. The mapping class group $\text{Mod}(\Sigma_g)$ of a genus-$g$ surface acts on the Hilbert space $\mathcal{H}(\Sigma_g)$ of Chern--Simons theory, and this action factors through a finite-dimensional quotient. The study of these representations connects Chern--Simons theory to the theory of modular forms, the theory of Teichm\"uller spaces, and the study of algebraic curves.
+
+The Witten--Reshetikhin--Turaev invariant of a 3-manifold $M$ obtained by surgery on a framed link $L \subset S^3$ is computed by the formula $\tau_k(M) = \frac{1}{\mathcal{D}^{|L|}} \sum_{\mathbf{i}} \prod_{a} d_{i_a} \, V_L(q; \mathbf{i})$, where $V_L$ is the colored Jones polynomial, $\mathbf{i}$ labels the representations on each component, $d_i$ are quantum dimensions, and $\mathcal{D}$ is the total quantum dimension.
+
+The Chern--Simons partition function on a 3-manifold $M$ with boundary $\partial M = \Sigma$ gives a vector in the Hilbert space $\mathcal{H}(\Sigma)$. For $M$ obtained by surgery on a link in $S^3$, this vector is an eigenstate of the mapping class group action. The eigenvalues are related to the quantum dimensions of the representations.
+
+The geometric Langlands program has been profoundly influenced by Witten's work. The geometric Langlands correspondence relates representations of the fundamental group of a Riemann surface to D-modules on the moduli space of bundles. Topological field theory provides a physical framework for understanding this correspondence through S-duality in gauge theory.
+
+The study of 4-manifold invariants has been transformed by Witten's introduction of Seiberg--Witten theory. The Seiberg--Witten invariants provide a simpler alternative to Donaldson invariants while capturing the same topological information. These invariants have been used to prove fundamental results about the smooth topology of 4-manifolds, including the existence of exotic structures on $\mathbb{R}^4$.
+
+The relationship between Chern--Simons theory and the theory of quantum groups has been further developed by the work of Drinfel'd, Reshetikhin, and others. The quantum group $U_q(\mathfrak{g})$ at a root of unity provides a modular tensor category, and the Drinfel'd double construction gives the mapping class group representation. This categorical framework provides a rigorous foundation for the physical ideas.
+
+The study of the moduli space of stable vector bundles on a Riemann surface has deep connections to Chern--Simons theory. The moduli space carries a natural symplectic structure, and its quantization produces the space of conformal blocks. The Verlinde formula computes the dimension of this space in terms of the modular $S$-matrix.
+
+\section{Modern Views and Improvements}
+
+The rigorous definition of the Chern--Simons path integral remains an open problem. However, Witten's perturbative approach has been made rigorous by Kontsevich, who defined the Kontsevich integral---a universal finite-type invariant of knots that reproduces the Jones polynomial as a special case.
+
+The relationship between Chern--Simons theory and categorification was discovered by Khovanov. Khovanov homology is a categorification of the Jones polynomial---a chain complex whose Euler characteristic is the Jones polynomial. This was later given a physical interpretation by Witten as the state space of a 4-dimensional topological field theory.
+
+The volume conjecture---that the colored Jones polynomial determines the hyperbolic volume of a knot complement---connects Chern--Simons theory to hyperbolic geometry. If true, this would mean that quantum invariants of knots carry complete geometric information. The conjecture is verified for many examples but remains open in general.
+
+The connection to conformal field theory has been extended to many areas of mathematics. The WZW model, which arises from Chern--Simons theory, is the foundation for the theory of vertex operator algebras and has applications to number theory, combinatorics, and mathematical physics. The monster group, moonshine, and modular forms are all connected through this framework.
+
+Witten's influence on mathematics and physics extends far beyond the Jones polynomial. His work on string theory, mirror symmetry, black hole entropy, and the AdS/CFT correspondence has shaped modern theoretical physics. The interaction between physics and mathematics that Witten exemplifies continues to produce deep results in both fields.
+
+The Verlinde formula, which computes the dimension of the space of conformal blocks, is a central result in the theory:
 \[
-Z(M) = \int \mathcal{D}A \, \exp\left(\frac{ik}{4\pi} \int_M \text{Tr}\left(A \wedge dA + \frac{2}{3} A \wedge A \wedge A\right)\right)
+\dim \mathcal{H}_k(\Sigma) = \sum_{\lambda} \left( \frac{S_{0\lambda}}{S_{00}} \right)^{2-2g}
 \]
+where $S$ is the modular $S$-matrix of the WZW model and the sum is over integrable representations at level $k$. This formula connects the topology of the surface to the representation theory of the affine Lie algebra.
 
-\subsection{5.3 The Wilson Loop
-Expectation}\label{ch1990edwardwitten:the-wilson-loop-expectation}
+The connection between Chern--Simons theory and 2-dimensional conformal field theory is central to the axiomatic framework. The chiral algebras (vertex operator algebras) that arise in the quantization of Chern--Simons theory are the same algebras that appear in 2-dimensional CFT. The representation theory of these algebras provides the Hilbert spaces of the TQFT, and the modular properties of the characters of these representations encode the topological invariance of the theory.
 
-Witten showed that the expectation value of a Wilson loop along a knot
-\(K\):
+The categorification of the Jones polynomial by Khovanov has deep connections to 4-dimensional topology. Khovanov homology is the state space of a 4-dimensional TQFT, and its construction uses ideas from both Chern--Simons theory and gauge theory. The relationship between Khovanov homology and the Seiberg--Witten invariants of 4-manifolds, conjectured by Witten and proved by Kronheimer and Mrowka, connects knot theory to the smooth topology of 4-manifolds.
 
+The modern theory of TQFT has been axiomatized by Atiyah and Segal. An $n$-dimensional TQFT is a symmetric monoidal functor from the category of $n$-cobordisms to the category of vector spaces. For $n = 3$, the cobordism category includes oriented 3-manifolds with boundary, and the functor assigns to each closed surface a vector space (the Hilbert space) and to each cobordism a linear map.
+
+The study of 3-manifold invariants has led to the development of quantum groups and their representations. The quantum group $U_q(\mathfrak{g})$ at a root of unity provides a modular tensor category whose Drinfel'd double gives the mapping class group representation. This categorical framework has applications to knot theory, conformal field theory, and topological phases of matter.
+
+The connection to condensed matter physics has emerged through the study of topological order and anyons. The fractional quantum Hall effect realizes Chern--Simons theory with non-abelian statistics, and the quasiparticle excitations are described by the representation theory of quantum groups. Topological quantum computation, proposed by Kitaev, uses the braiding of anyons to perform quantum operations that are protected from local perturbations.
+
+Homological mirror symmetry has been verified for several important cases. For elliptic curves, the equivalence between the derived category of coherent sheaves and the Fukaya category was established by Seidel and Thomas. For K3 surfaces, partial results have been obtained using the theory of hyperk\"ahler manifolds. The general case remains one of the most important open problems in mathematics.
+
+The Seiberg--Witten invariants of 4-manifolds, introduced by Witten in 1994, provided a simpler alternative to Donaldson invariants. These invariants are defined using the moduli space of solutions to the Seiberg--Witten equations, which involve a spinor field and a $U(1)$ connection. The invariants have been used to distinguish smooth structures on 4-manifolds and to study the topology of symplectic 4-manifolds.
+
+The AdS/CFT correspondence, proposed by Maldacena in 1997, relates a gravitational theory in anti-de Sitter space to a conformal field theory on the boundary. For Chern--Simons theory, this duality connects the topological invariants of 3-manifolds to the partition function of string theory on $AdS_3 \times S^3$. This has led to new insights into the quantum gravity in three dimensions and the classification of 3-manifolds.
+
+Modern developments in topological string theory have led to the enumeration of curves on Calabi--Yau manifolds through the Gromov--Witten invariants. The topological string partition function computes these invariants and satisfies the mirror symmetry predictions. The BCOV theory provides a mathematical framework for understanding the topological string amplitudes.
+
+The relationship between Chern--Simons theory and Floer homology has been extensively studied. Floer homology, introduced by Floer in the context of the Yang--Mills equations, provides a graded refinement of the Morse theory of the Chern--Simons functional on the space of connections. The Euler characteristic of Floer homology equals the Casson invariant of the 3-manifold.
+
+The volume conjecture, proposed by Rumsey and generalized by Kashaev, states that the asymptotic behavior of the colored Jones polynomial $J_N(K; q)$ as $N \to \infty$ with $q = e^{2\pi i/N}$ determines the hyperbolic volume of the knot complement:
 \[
-\langle W_R(K) \rangle = \frac{\int \mathcal{D}A \, \text{Tr}_R(P e^{\oint_K A}) \, e^{iS_{CS}(A)}}{\int \mathcal{D}A \, e^{iS_{CS}(A)}}
+\lim_{N \to \infty} \frac{2\pi}{N} \log |J_N(K; e^{2\pi i/N})| = \text{Vol}(S^3 \setminus K)
 \]
+This conjecture connects quantum topology to hyperbolic geometry and has been verified for torus knots and twist knots but remains open in general.
 
-is equal to the Jones polynomial (or its generalization, the HOMFLY
-polynomial) evaluated at \(q = e^{2\pi i/(k+2)}\).
+The higher-dimensional generalizations of Chern--Simons theory involve higher gauge theories and categorified structures. The Baas--Sullivan--Rouquier theory of 2-connections and the theory of gerbes provide frameworks for understanding higher Chern--Simons theories. These have applications to the classification of topological phases and to the study of extended TQFTs.
 
-\subsection{5.4 Three-Manifold
-Invariants}\label{ch1990edwardwitten:three-manifold-invariants}
+Extended TQFTs, as formulated by Baez and Dolan and later by Lurie, assign algebraic data not just to manifolds but to cobordisms of all dimensions. The cobordism hypothesis relates extended TQFTs to fully dualizable objects in higher categories. This framework has applications to the classification of topological phases of matter and to the study of anomalies in quantum field theory.
 
-Witten constructed invariants of three-manifolds from Chern--Simons
-theory, now called \textbf{Witten--Reshetikhin--Turaev invariants}.
+The relationship between TQFT and the geometric Langlands program has been established through the work of Kapustin, Witten, and others. The geometric Langlands correspondence relates representations of the fundamental group of a Riemann surface to D-modules on the moduli space of bundles. Topological field theory provides a physical framework for understanding this correspondence through S-duality in gauge theory.
 
-\subsection{5.5 Impact}\label{ch1990edwardwitten:impact}
+The study of knot homology has led to new invariants beyond the Jones polynomial. The knotFloer homology, introduced by Ozsv\'ath and Szab\'o, categorifies the Alexander polynomial and provides information about the genus of knots. The surgery formula for knotFloer homology has applications to the study of 3-manifold invariants.
 
-This work connected: - Knot theory and quantum field theory. - The Jones
-polynomial and conformal field theory. - Three-manifold topology and
-quantum groups.
+The relationship between Chern--Simons theory and the theory of quantum groups has been deepened by the work of Drinfel'd, Reshetikhin, and others. The quantum group $U_q(\mathfrak{g})$ provides a deformation of the universal enveloping algebra, and its representation theory at roots of unity gives rise to modular tensor categories. These categories are the algebraic input for the construction of TQFTs.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The work of Witten has had a profound impact on the study of 3-manifolds. The geometrization conjecture, proved by Perelman, implies that every closed 3-manifold can be decomposed into geometric pieces. Chern--Simons theory provides invariants that can distinguish these pieces and has been used to study the topology of hyperbolic 3-manifolds.
 
-\section{6. Topological Quantum Field
-Theory}\label{ch1990edwardwitten:topological-quantum-field-theory}
+The relationship between topological quantum field theory and the theory of moduli spaces has led to deep insights in algebraic geometry. The moduli space of flat connections on a surface is a symplectic manifold, and its quantization produces the Hilbert space of the TQFT. The geometric invariant theory construction of this moduli space involves the Marsden--Weinstein reduction.
 
-\subsection{6.1 Definition}\label{ch1990edwardwitten:definition-1}
+The study of anomalies in gauge theory has been profoundly influenced by Witten's work. The SU(2) anomaly, discovered by Witten, shows that certain gauge theories with an odd number of fermion doublets are inconsistent. This anomaly is detected by computing the partition function on certain 4-manifolds, where it picks up a sign depending on the topology.
 
-Witten introduced \textbf{topological quantum field theory} (TQFT) as a
-quantum field theory whose correlation functions are topological
-invariants.
+The relationship between Chern--Simons theory and the theory of quantum invariants of 3-manifolds has been further developed by Reshetikhin and Turaev, who provided a rigorous mathematical construction of the Witten--Reshetikhin--Turaev invariants. Their construction uses the representation theory of quantum groups at roots of unity and provides a complete mathematical foundation for Witten's physical ideas.
 
-\subsection{6.2 Examples}\label{ch1990edwardwitten:examples}
+The modern theory of topological phases of matter has been deeply influenced by Chern--Simons theory. The fractional quantum Hall effect is described by an Abelian Chern--Simons theory, and the quasiparticle excitations have anyonic statistics described by the representation theory of the quantum group. Non-Abelian Chern--Simons theories describe more exotic phases of matter.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{Chern--Simons theory:} A three-dimensional TQFT.
-\item
- \textbf{Topological sigma models:} Two-dimensional TQFTs related to
- mirror symmetry.
-\item
- \textbf{Donaldson theory:} A four-dimensional TQFT related to
- Donaldson invariants.
-\end{itemize}
+The connection between mirror symmetry and enumerative geometry has led to the computation of Gromov--Witten invariants for many Calabi--Yau manifolds. The mirror map provides a method for computing these invariants from the periods of the holomorphic form on the mirror. The predictions of mirror symmetry have been verified in many cases and have led to new results in algebraic geometry.
 
-\subsection{6.3 The Atiyah--Segal Axioms}\label{ch1990edwardwitten:the-atiyahsegal-axioms}
+The study of the moduli space of Calabi--Yau manifolds has revealed deep connections to number theory and arithmetic geometry. The periods of the holomorphic form satisfy Picard--Fuchs differential equations, and the monodromy of these equations provides information about the arithmetic properties of the manifold. The study of these monodromy groups has connections to automorphic forms and L-functions.
 
-Witten's work inspired the axiomatization of TQFT by Atiyah and Segal.
+The relationship between Chern--Simons theory and the theory of conformal field theory has led to deep results in representation theory. The fusion rules of the WZW model are computed using the Verlinde formula, and the braiding of conformal blocks is described by the monodromy of the Knizhnik--Zamolodchikov equations. The chiral algebra structure provides the algebraic framework for understanding the operator product expansion.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The work of Witten on M-theory and the classification of string theory dualities has had profound implications for the mathematical understanding of quantum field theory. The web of dualities connecting different string theories has led to new insights into the structure of TQFTs and their relationship to geometric structures.
 
-\section{7. Seiberg--Witten Theory}\label{ch1990edwardwitten:seibergwitten-theory}
+The study of the moduli space of Higgs bundles, introduced by Hitchin, has deep connections to the geometric Langlands program and to Witten's work on supersymmetric gauge theories. The Hitchin fibration provides an integrable system structure on the moduli space, and its fibers are abelian varieties whose Jacobians play a role in the Langlands correspondence.
 
-\subsection{7.1 The Seiberg--Witten
-Equations}\label{ch1990edwardwitten:the-seibergwitten-equations}
-
-In 1994, Witten (with Nathan Seiberg) introduced the
-\textbf{Seiberg--Witten equations}, a new set of equations in
-four-dimensional gauge theory:
-
-\[
-\not{D}_A \psi = 0, \quad F_A^+ = \psi \otimes \psi^* - \frac{1}{2}|\psi|^2 I
-\]
-
-\subsection{7.2 Seiberg--Witten
-Invariants}\label{ch1990edwardwitten:seibergwitten-invariants}
-
-The Seiberg--Witten equations give invariants of smooth four-manifolds
-that are much easier to compute than Donaldson invariants.
-
-\subsection{7.3 Applications}\label{ch1990edwardwitten:applications}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Classification of four-manifolds:} The Seiberg--Witten
- invariants distinguish many smooth structures.
-\item
- \textbf{The Thom conjecture:} Proved using Seiberg--Witten theory.
-\item
- \textbf{Symplectic geometry:} Applications to the topology of
- symplectic four-manifolds.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. String Theory}\label{ch1990edwardwitten:string-theory}
-
-\subsection{8.1 Background}\label{ch1990edwardwitten:background-1}
-
-\textbf{String theory} posits that fundamental particles are
-one-dimensional ``strings'' rather than point particles.
-
-\subsection{8.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-1}
-
-Witten has been a leading figure in string theory: - \textbf{Heterotic
-string theory:} The construction of the heterotic string. -
-\textbf{Calabi--Yau compactifications:} The study of string theory
-compactified on Calabi--Yau manifolds. - \textbf{Mirror symmetry:} The
-duality between Calabi--Yau manifolds and their mirrors. -
-\textbf{D-branes:} The discovery of D-branes and their role in string
-dualities.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. M-Theory}\label{ch1990edwardwitten:m-theory}
-
-\subsection{9.1 The Unification of String
-Theories}\label{ch1990edwardwitten:the-unification-of-string-theories}
-
-In 1995, Witten proposed \textbf{M-theory} as the unifying framework for
-the five consistent superstring theories: - Type I - Type IIA - Type IIB
-- Heterotic \(SO(32)\) - Heterotic \(E_8 \times E_8\)
-
-\subsection{9.2 Duality}\label{ch1990edwardwitten:duality}
-
-M-theory lives in 11 dimensions and is related to 10-dimensional string
-theories through dualities: - \textbf{T-duality:} Equivalence of string
-theories on large and small circles. - \textbf{S-duality:} Equivalence
-of strongly and weakly coupled theories. - \textbf{U-duality:} The
-unification of T and S dualities.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. Mirror Symmetry}\label{ch1990edwardwitten:mirror-symmetry}
-
-\subsection{10.1 The Conjecture}\label{ch1990edwardwitten:the-conjecture}
-
-\textbf{Mirror symmetry} predicts that for every Calabi--Yau threefold
-\(X\), there exists a mirror Calabi--Yau threefold \(\hat{X}\) such that
-
-\[
-h^{1,1}(X) = h^{2,1}(\hat{X}), \quad h^{2,1}(X) = h^{1,1}(\hat{X})
-\]
-
-\subsection{10.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-2}
-
-Witten contributed: - The connection between mirror symmetry and
-T-duality. - The sigma model approach to mirror symmetry. - The quantum
-cohomology ring.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. The Index Theorem and
-Anomalies}\label{ch1990edwardwitten:the-index-theorem-and-anomalies}
-
-\subsection{11.1 The Atiyah--Singer Index
-Theorem}\label{ch1990edwardwitten:the-atiyahsinger-index-theorem}
-
-The \textbf{Atiyah--Singer index theorem} relates the analytical index
-of an elliptic operator to a topological invariant.
-
-\subsection{11.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-3}
-
-Witten contributed to: - The proof of the index theorem using
-supersymmetry. - The study of gravitational anomalies. - The
-relationship between anomalies and the topology of spacetime.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. The Work on Gravitational
-Anomalies}\label{ch1990edwardwitten:the-work-on-gravitational-anomalies}
-
-\subsection{12.1 Definition}\label{ch1990edwardwitten:definition-2}
-
-\textbf{Gravitational anomalies} arise when a quantum field theory that
-is classically invariant under diffeomorphisms fails to be invariant
-after quantization.
-
-\subsection{12.2 Witten's Classification}\label{ch1990edwardwitten:wittens-classification}
-
-Witten classified gravitational anomalies and showed that they obstruct
-the consistency of quantum gravity theories.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. The Work on the BPS Bound}\label{ch1990edwardwitten:the-work-on-the-bps-bound}
-
-\subsection{13.1 Definition}\label{ch1990edwardwitten:definition-3}
-
-The \textbf{Bogomolny--Prasad--Sommerfield (BPS) bound} is a lower bound
-on the mass of solitons in supersymmetric theories.
-
-\subsection{13.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-4}
-
-Witten studied: - BPS states in supersymmetric gauge theories. - The
-relationship between BPS states and moduli spaces. - The wall-crossing
-phenomenon for BPS states.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. The Work on the Donaldson
-Invariants}\label{ch1990edwardwitten:the-work-on-the-donaldson-invariants}
-
-\subsection{14.1 Donaldson Theory}\label{ch1990edwardwitten:donaldson-theory}
-
-\textbf{Donaldson invariants} are invariants of smooth four-manifolds
-obtained from the moduli space of anti-self-dual connections.
-
-\subsection{14.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-5}
-
-Witten reformulated Donaldson theory as a topological quantum field
-theory: - The Donaldson--Witten theory. - The relationship between
-Donaldson and Seiberg--Witten invariants. - The computation of Donaldson
-invariants using Seiberg--Witten theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. The Work on the Geometric Langlands
-Program}\label{ch1990edwardwitten:the-work-on-the-geometric-langlands-program}
-
-\subsection{15.1 Background}\label{ch1990edwardwitten:background-2}
-
-The \textbf{geometric Langlands program} is a geometric reformulation of
-the Langlands conjectures in number theory.
-
-\subsection{15.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-6}
-
-Witten (with Kapustin) showed: - The geometric Langlands correspondence
-arises from S-duality in \(N=4\) super Yang--Mills theory. - The Hecke
-eigensheaves correspond to boundary conditions in the quantum field
-theory. - This provides a physical origin for the Langlands program.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. The Work on Khovanov
-Homology}\label{ch1990edwardwitten:the-work-on-khovanov-homology}
-
-\subsection{16.1 Definition}\label{ch1990edwardwitten:definition-4}
-
-\textbf{Khovanov homology} is a categorification of the Jones
-polynomial.
-
-\subsection{16.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-7}
-
-Witten (with Gukov and others) studied: - The physical interpretation of
-Khovanov homology in string theory. - The relationship between Khovanov
-homology and BPS states. - The categorification of knot invariants from
-M-theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. The Work on the Space of
-Vacua}\label{ch1990edwardwitten:the-work-on-the-space-of-vacua}
-
-\subsection{17.1 Moduli Spaces}\label{ch1990edwardwitten:moduli-spaces}
-
-Witten studied the moduli space of vacua in supersymmetric gauge
-theories: - The classical moduli space is parameterized by expectation
-values of scalar fields. - Quantum effects modify the moduli space and
-can break supersymmetry.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. The Work on the AdS/CFT
-Correspondence}\label{ch1990edwardwitten:the-work-on-the-adscft-correspondence}
-
-\subsection{18.1 The Correspondence}\label{ch1990edwardwitten:the-correspondence}
-
-The \textbf{AdS/CFT correspondence} (Maldacena, 1997) relates string
-theory in anti-de Sitter space to conformal field theory on the
-boundary.
-
-\subsection{18.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-8}
-
-Witten significantly advanced the AdS/CFT correspondence: - Holographic
-entanglement entropy. - The computation of correlation functions in
-AdS/CFT. - The relationship between AdS/CFT and the renormalization
-group.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. The Work on the Verlinde
-Formula}\label{ch1990edwardwitten:the-work-on-the-verlinde-formula}
-
-\subsection{19.1 The Formula}\label{ch1990edwardwitten:the-formula}
-
-The \textbf{Verlinde formula} computes the dimensions of the spaces of
-conformal blocks in rational conformal field theory.
-
-\subsection{19.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-9}
-
-Witten gave a derivation of the Verlinde formula from Chern--Simons
-theory: - The Hilbert space of Chern--Simons theory is the space of
-conformal blocks. - The Verlinde formula computes the dimension of this
-Hilbert space.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{20. The Work on the Analytic Continuation in Chern--Simons
-Theory}\label{ch1990edwardwitten:the-work-on-the-analytic-continuation-in-chernsimons-theory}
-
-\subsection{20.1 The Problem}\label{ch1990edwardwitten:the-problem}
-
-Chern--Simons theory is defined for integer levels, but can be
-analytically continued to complex levels.
-
-\subsection{20.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-10}
-
-Witten studied: - The analytic continuation of Chern--Simons theory. -
-The relationship to the volume conjecture. - The asymptotic expansion of
-the Jones polynomial.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{21. The Work on the Volume
-Conjecture}\label{ch1990edwardwitten:the-work-on-the-volume-conjecture}
-
-\subsection{21.1 The Conjecture}\label{ch1990edwardwitten:the-conjecture-1}
-
-The \textbf{volume conjecture} relates the asymptotic behavior of the
-colored Jones polynomial of a hyperbolic knot to the hyperbolic volume
-of the knot complement.
-
-\subsection{21.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-11}
-
-Witten contributed to the physical understanding of the volume
-conjecture: - The relationship between Chern--Simons theory and
-hyperbolic geometry. - The asymptotic expansion of the path integral.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{22. The Work on the Three-Manifold
-Invariants}\label{ch1990edwardwitten:the-work-on-the-three-manifold-invariants}
-
-\subsection{22.1 Witten--Reshetikhin--Turaev
-Invariants}\label{ch1990edwardwitten:wittenreshetikhinturaev-invariants}
-
-Witten constructed invariants of three-manifolds from Chern--Simons
-theory. These were later put on a rigorous mathematical foundation by
-Reshetikhin and Turaev.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{23. The Work on Quantum
-Cohomology}\label{ch1990edwardwitten:the-work-on-quantum-cohomology}
-
-\subsection{23.1 Definition}\label{ch1990edwardwitten:definition-5}
-
-\textbf{Quantum cohomology} is a deformation of the ordinary cohomology
-ring of a symplectic manifold, using Gromov--Witten invariants.
-
-\subsection{23.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-12}
-
-Witten contributed to: - The relationship between quantum cohomology and
-mirror symmetry. - The sigma model approach to quantum cohomology. - The
-computation of Gromov--Witten invariants.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{24. The Work on Gromov--Witten
-Invariants}\label{ch1990edwardwitten:the-work-on-gromovwitten-invariants}
-
-\subsection{24.1 Definition}\label{ch1990edwardwitten:definition-6}
-
-\textbf{Gromov--Witten invariants} count curves on a symplectic
-manifold.
-
-\subsection{24.2 Witten's Contributions}\label{ch1990edwardwitten:wittens-contributions-13}
-
-Witten studied: - The relationship between Gromov--Witten invariants and
-quantum cohomology. - The topological sigma model and Gromov--Witten
-theory. - The application of Gromov--Witten invariants to enumerative
-geometry.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{25. Awards and Recognition}\label{ch1990edwardwitten:awards-and-recognition}
-
-\textbf{1990:} - Fields Medal (International Mathematical Union)
-
-\textbf{1991:} - MacArthur Fellowship
-
-\textbf{2004:} - Henri Poincaré Prize
-
-\textbf{2008:} - Crafoord Prize in Astronomy
-
-\textbf{2010:} - Nemmers Prize in Mathematics
-
-\textbf{2012:} - Fundamental Physics Prize
-
-\textbf{2014:} - Lorentz Medal
-
-\textbf{2016:} - Breakthrough Prize in Fundamental Physics
-
-\textbf{2017:} - Election to the National Academy of Sciences
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{26. Selected Major
-Publications}\label{ch1990edwardwitten:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``A new proof of the positive energy theorem.''}
- \emph{Communications in Mathematical Physics} 80, 381--402, 1981. ---
- \emph{The proof of the positive energy theorem.}
-\item
- \textbf{``Supersymmetry and the index theorem.''} \emph{Journal of
- Differential Geometry} 17, 661--692, 1982. --- \emph{The index theorem
- from supersymmetry.}
-\item
- \textbf{``Quantum field theory and the Jones polynomial.''}
- \emph{Communications in Mathematical Physics} 121, 351--399, 1989. ---
- \emph{Chern--Simons theory and the Jones polynomial.}
-\item
- \textbf{``Topological quantum field theory.''} \emph{Communications in
- Mathematical Physics} 117, 353--386, 1988. --- \emph{The introduction
- of TQFT.}
-\item
- \textbf{``Monopoles and four-manifolds.''} (with N. Seiberg)
- \emph{Mathematical Research Letters} 1, 769--796, 1994. ---
- \emph{Seiberg--Witten theory.}
-\item
- \textbf{``String theory dynamics in various dimensions.''}
- \emph{Nuclear Physics B} 443, 85--126, 1995. --- \emph{The proposal of
- M-theory.}
-\item
- \textbf{``Mirror symmetry and the moduli space of Calabi--Yau
- manifolds.''} \emph{Nuclear Physics B} 403, 1993. --- \emph{Mirror
- symmetry and string theory.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Verify that the Chern-Simons functional $\\operatorname{CS}(A) = \\frac{k}{4\\pi} \\int_M \\operatorname{tr}(A \\wedge dA + \\frac{2}{3} A \\wedge A \\wedge A)$ is gauge-invariant up to an integer multiple of $2\\pi i$. \end{exercise}
-
-\begin{exercise} Show that the Jones polynomial of the trefoil knot equals $-t^4 + t^3 + t$ by computing the Kauffman bracket. \end{exercise}
-
-\begin{exercise} Prove that the Witten genus of a string manifold is a modular form. \end{exercise}
-
-\begin{exercise} Verify that the path integral for Chern-Simons theory on $S^3$ gives the value $\\frac{1}{\\sqrt{k+2}} \\sin\\left(\\frac{\\pi}{k+2}\\right)$ for the unknot. \end{exercise}
+The relationship between Chern--Simons theory and the theory of quantum invariants has been further developed through the work of Turaev, Viro, and others. The state sum constructions provide combinatorial definitions of TQFTs that are independent of the path integral formalism. These constructions have been extended to higher dimensions and to more general topological structures.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Witten provided a physical interpretation of the Jones polynomial through Chern-Simons gauge theory, launching the field of topological quantum field theory (TQFT). His work connecting quantum field theory to knot theory, mirror symmetry, and quantum gravity established deep bridges between theoretical physics and pure mathematics.
-
-\section{27. References and Further
-Reading}\label{ch1990edwardwitten:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch1990edwardwitten:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1990 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-1990
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch1990edwardwitten:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Witten, E. ``Quantum field theory and the Jones polynomial.''
- \emph{Commun. Math. Phys.} 121, 1989.
-\item
- Witten, E. ``Topological quantum field theory.'' \emph{Commun. Math.
- Phys.} 117, 1988.
-\item
- Seiberg, N. and Witten, E. ``Monopoles and four-manifolds.''
- \emph{Math. Res. Lett.} 1, 1994.
-\end{itemize}
-
-\subsection{Textbooks}\label{ch1990edwardwitten:textbooks}
-
-\begin{itemize}
-\tightlist
-\item
- Deligne, P. et al.~\emph{Quantum Fields and Strings: A Course for
- Mathematicians}. AMS, 1999.
-\item
- Freed, D. and Uhlenbeck, K. \emph{Instantons and Four-Manifolds}.
- Springer, 1984.
-\item
- Kaku, M. \emph{Strings, Conformal Fields, and M-Theory}. Springer,
- 2000.
-\end{itemize}
-
-\subsection{Biography}\label{ch1990edwardwitten:biography}
-
-\begin{itemize}
-\tightlist
-\item
- Atiyah, M. ``The Work of Edward Witten.'' ICM 1990 Laudatio.
-\item
- Greene, B. \emph{The Elegant Universe}. Norton, 1999.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1986simondonaldson:simon-k.-donaldson-fields-medal-1986-a-comprehensive-report]{See Chapter on related work}} --- Witten applied Donaldson's invariants.
-  \item \textbf{\hyperref[ch2006terencetao:terence-tao-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Tao worked on related harmonic analysis.
-  \item \textbf{\hyperref[ch2018peterscholze:peter-scholze-fields-medal-2018-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Scholze's work connects to string theory.
-  \item \textbf{\hyperref[ch1998maximkontsevich:maxim-kontsevich-fields-medal-1998-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Kontsevich's work on moduli spaces relates to Witten.
-\end{itemize}
-
-\emph{(End of report)}
+Witten showed that the Jones polynomial arises from Chern--Simons gauge theory, interpreting it as the expectation value of Wilson loop operators. His topological quantum field theory framework provided the axioms for 3-manifold invariants and opened the path integral as a computational tool in topology, leading to the modern theory of TQFT, quantum invariants, and connections to quantum computing. His work on Morse theory revealed deep connections between supersymmetry and classical topology, while his pioneering work on topological sigma models initiated the mathematical study of mirror symmetry. These contributions fundamentally transformed the interaction between physics and mathematics.

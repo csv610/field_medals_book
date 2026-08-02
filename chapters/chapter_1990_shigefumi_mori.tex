@@ -1,1216 +1,532 @@
-\chapter{Shigefumi Mori --- Fields Medal 1990}\label{ch1990shigefumimori:shigefumi-mori-fields-medal-1990-a-comprehensive-report}
+\chapter{1990:Shigefumi Mori}\label{ch1990shigefumimori:shigefumi-mori-fields-medal-1990-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Shigefumi Mori (b.
-February 23, 1951, Nagoya, Japan) \textbf{Position:} Professor, RIMS,
-Kyoto University \textbf{Doctoral Advisor:} Masayoshi Nagata (Kyoto
-University) \textbf{Fields Medal Citation:} \emph{``For his proof of the
-Hartshorne conjecture and his development of the minimal model program
-in algebraic geometry.''}
+\textbf{Prepared:} July 2026 \textbf{Subject:} Shigefumi Mori (b.~February 17, 1951, Nagoya, Japan)
+\textbf{Position:} Professor, Kyoto University (since 1990)
+\textbf{Doctoral Advisor:} Masayoshi Nagata (Kyoto University)
+\textbf{Fields Medal Citation:} \emph{``For his work on the classification of algebraic three-folds and the construction of new algebraic three-folds.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{1. Introduction}\label{ch1990shigefumimori:introduction}
+\begin{prereqs}
+Algebraic geometry (divisor theory, Mori theory, birational geometry),
+minimal model program, cone theorem, deformation theory of curves.
+\end{prereqs}
 
-Shigefumi Mori was awarded the Fields Medal in 1990 for his
-substantial work in algebraic geometry. His solution of the
-\textbf{Hartshorne conjecture} (characterizing projective space) and his
-development of the \textbf{minimal model program} (Mori program)
-transformed the birational geometry of algebraic varieties, establishing
-a systematic structure for understanding algebraic varieties up to
-birational equivalence.
+\begin{objectives}
+State Mori's cone theorem and the bend-and-break lemma;
+explain the minimal model program for three-folds;
+describe the classification of Fano three-folds;
+understand the existence of flips and the log minimal model program.
+\end{objectives}
 
-\begin{prereqs} Algebraic geometry (projective varieties, divisors, line bundles), basic commutative algebra (local rings, completion). \end{prereqs}
+\section{Problem History}
 
-\begin{objectives} Explain the Mori fiber space program; describe the cone theorem; understand the classification of Fano varieties. \end{objectives}
+The classification of algebraic varieties---specifically, finding a canonical
+representative in each birational equivalence class---is one of the central
+problems in algebraic geometry. For surfaces (dimension 2), the classification
+was completed by Enriques, Kodaira, and Zariski in the early 20th century.
+Every surface is birationally equivalent to either a minimal surface (with no
+$(-1)$-curves) or a ruled surface. The minimal model is unique up to
+isomorphism.
 
+For varieties of dimension $\geq 3$, the minimal model program was expected to
+generalize the surface case, but the obstacles were much more severe. In
+dimension 3, Mori introduced new techniques to construct minimal models,
+fundamentally changing the understanding of birational geometry.
 
-Mori's work introduced powerful new methods that gave birational
-geometry a systematic structure: the use of \textbf{extremal rays} to
-study the cone of curves, \textbf{Kawamata--Viehweg vanishing} to prove
-existence of flips, and the \textbf{base-point-free theorem} to
-construct contractions. The minimal model program aims to classify
-algebraic varieties up to birational equivalence, and Mori's
-contributions were fundamental to every aspect of this program.
+The central problem is to find, for every smooth projective variety $X$, either
+a minimal model (a smooth variety with nef canonical divisor $K_X$) or a Mori
+fiber space (a variety fibred by Fano varieties). The existence of such a
+canonical representative would provide a complete classification of algebraic
+varieties up to birational equivalence.
 
-The impact of Mori's work extends throughout algebraic geometry, from
-the classification of Fano varieties to the study of moduli spaces, and
-his methods have become standard tools in the subject. His proof of the
-Hartshorne conjecture at age 28 immediately established him as a leading
-figure, and his subsequent development of the MMP dominated birational
-geometry for decades, culminating in the proof of finite generation of
-the canonical ring by Birkar--Cascini--Hacon--McKernan in 2010.
-
-Mori's work is characterized by a combination of deep geometric insight
-and technical power. His papers are known for their clarity and
-precision, and his methods continue to be developed and applied by
-geometers around the world. The minimal model program remains one of the
-most active and important research areas in algebraic geometry, and the
-tools Mori developed are essential in fields ranging from arithmetic
-geometry to complex differential geometry.
-
-This report has surveyed Mori's major contributions to algebraic
-geometry, from his early solution of the Hartshorne conjecture to the
-development of the minimal model program and its many applications. The
-depth and breadth of his work establish him as one of the important
-algebraic geometers of the modern era.
-
-\subsection{1.1 Organization of This
-Report}\label{ch1990shigefumimori:organization-of-this-report}
-
-This report surveys Mori's major contributions: - \textbf{Section 2:}
-Biographical background and career. - \textbf{Section 3:} The Hartshorne
-conjecture and the bend-and-break method. - \textbf{Sections 4--5:} The
-minimal model program and Fano varieties. - \textbf{Sections 6--10:}
-Core technical tools: the cone theorem, vanishing theorems,
-base-point-free theorem, flips, and flops. - \textbf{Sections 11--25:}
-Selected further contributions. - \textbf{Sections 26--27:} Awards,
-recognition, and major publications.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{2. Biographical Background}\label{ch1990shigefumimori:biographical-background}
-
-\subsection{2.1 Early Life}\label{ch1990shigefumimori:early-life}
-
-Shigefumi Mori was born on February 23, 1951, in Nagoya, Japan. He
-showed early mathematical talent, excelling in his studies throughout
-primary and secondary school. He entered Kyoto University, one of
-Japan's premier institutions, where he was drawn to algebraic geometry.
-Kyoto University has a strong tradition in algebraic geometry, with
-luminaries such as Heisuke Hironaka (Fields Medalist, 1970) having
-studied there.
-
-\subsection{2.2 Education}\label{ch1990shigefumimori:education}
-
+The minimal model program proceeds through a sequence of birational transformations.
+Starting from a smooth projective variety $X$, one seeks to contract curves $C$
+with negative intersection $K_X \cdot C < 0$ while preserving the "goodness" of
+the variety. The process should terminate in either:
 \begin{itemize}
-\tightlist
-\item
- \textbf{1973:} BSc in Mathematics, Kyoto University --- Mori graduated
- at the top of his class.
-\item
- \textbf{1975:} MSc in Mathematics, Kyoto University --- his master's
- thesis explored the geography of algebraic surfaces.
-\item
- \textbf{1978:} PhD in Mathematics, Kyoto University (under Masayoshi
- Nagata). His doctoral work focused on the birational geometry of
- threefolds, laying the foundation for his later substantial
- contributions. Nagata was a renowned algebraist known for his work on
- the resolution of singularities and Hilbert's 14th problem.
+    \item A \textbf{minimal model}: a variety $X_{\min}$ with nef canonical divisor
+    $K_{X_{\min}}$, where no further contractions of curves are possible; or
+    \item A \textbf{Mori fiber space}: a fibration $f: X \to Y$ with $\dim Y < \dim X$
+    whose general fiber is a Fano variety (i.e., has ample anticanonical divisor).
 \end{itemize}
 
-\subsection{2.3 Academic Career}\label{ch1990shigefumimori:academic-career}
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{1975--1980:} Research Associate, Kyoto University.
-\item
- \textbf{1980--1982:} Visiting Member, Institute for Advanced Study,
- Princeton --- where he began his work on the Hartshorne conjecture.
-\item
- \textbf{1982--1990:} Associate Professor then Professor, Nagoya
- University --- where he proved the Hartshorne conjecture and developed
- the minimal model program.
-\item
- \textbf{1990--present:} Professor, Research Institute for Mathematical
- Sciences (RIMS), Kyoto University.
-\item
- \textbf{1990:} Fields Medal (shared with Vladimir Drinfeld, Vaughan
- Jones, Edward Witten) at the ICM in Kyoto.
-\item
- \textbf{1995--1997:} Director of RIMS.
-\item
- \textbf{2005:} Awarded the Wolf Prize in Mathematics (shared with
- Simon K. Donaldson).
-\item
- \textbf{2014:} Elected to the Japan Academy.
-\item
- \textbf{2016:} Delivered the Plenary Talk at the European Congress of
- Mathematics.
-\item
- \textbf{2021:} Celebrated for his lifetime achievements at a special
- session of the Mathematical Society of Japan.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. The Hartshorne Conjecture}\label{ch1990shigefumimori:the-hartshorne-conjecture}
-
-\subsection{3.1 Statement}\label{ch1990shigefumimori:statement}
-
-The \textbf{Hartshorne conjecture} (formulated by Robin Hartshorne in
-the 1970s) states that a smooth projective variety \(X\) of dimension
-\(n\) over an algebraically closed field is isomorphic to projective
-space \(\mathbb{P}^n\) if and only if its tangent bundle \(T_X\) is
-ample. This conjecture was motivated by the fact that the tangent bundle
-of \(\mathbb{P}^n\) is a direct sum of ample line bundles and is
-therefore ample.
-
-\subsection{3.2 Mori's Proof}\label{ch1990shigefumimori:moris-proof}
-
-Mori proved the Hartshorne conjecture in 1979 at the age of 28, in a
-paper that instantly established his reputation as one of the world's
-leading algebraic geometers. His proof used a productive combination of:
-- \textbf{Deformation theory:} Studying deformations of rational curves
-on algebraic varieties, showing that curves can be moved to pass through
-prescribed points. - \textbf{The bend-and-break technique:} A method for
-constructing rational curves on varieties with negative canonical
-bundle. - \textbf{Characteristic \(p\) methods:} Mori used reduction to
-positive characteristic and the Frobenius map to construct rational
-curves, a technique that was completely unexpected at the time.
-
-\subsection{3.3 The Bend-and-Break
-Lemma}\label{ch1990shigefumimori:the-bend-and-break-lemma}
-
-Mori's \textbf{bend-and-break lemma} is a fundamental tool in birational
-geometry. It states that if a smooth projective variety \(X\) has a
-rational curve through a general point, then \(X\) is covered by
-rational curves that can be ``broken'' into simpler curves. More
-precisely, given a non-constant morphism \(f: C \to X\) from a smooth
-curve \(C\) and two points \(p, q \in C\), one can deform \(f\) keeping
-\(f(p)\) and \(f(q)\) fixed. If the deformation space is
-positive-dimensional, the curve must ``break'' into a union of rational
-curves.
-
-\subsection{\texorpdfstring{3.4 Characteristic \(p\)
-Methods}{3.4 Characteristic p Methods}}\label{ch1990shigefumimori:characteristic-p-methods}
-
-A key innovation in Mori's proof was his use of \textbf{reduction to
-characteristic \(p\)}. By reducing the variety modulo a prime, Mori
-could use the Frobenius morphism to construct rational curves in
-positive characteristic, then lift them back to characteristic 0. This
-technique was completely unexpected and demonstrated the deep connection
-between algebraic geometry in characteristic \(p\) and complex algebraic
-geometry.
-
-\subsection{3.5 Impact}\label{ch1990shigefumimori:impact}
-
-The proof of the Hartshorne conjecture was a milestone in algebraic
-geometry. It showed that projective space can be characterized purely in
-terms of its tangent bundle, and it introduced the bend-and-break
-technique, which became one of the important tools in birational
-geometry. The paper also demonstrated the power of characteristic \(p\)
-methods in complex geometry, inspiring a generation of geometers to use
-these techniques.
-
-\subsection{3.6 Proof Sketch}\label{ch1990shigefumimori:proof-sketch}
-
-Mori's proof proceeds in several steps: 1. Reduce the problem to
-positive characteristic \(p\) using spreading-out and specialization
-arguments. 2. In characteristic \(p\), use the Frobenius morphism
-\(F: X \to X'\) to produce rational curves. The iterated Frobenius
-\(F^e\) provides maps from curves to \(X\) with increasing degree with
-respect to the ample tangent bundle. 3. Apply the bend-and-break lemma
-to these curves to produce rational curves through general points of
-\(X\). 4. Show that the existence of many rational curves forces \(X\)
-to be isomorphic to \(\mathbb{P}^n\). 5. Lift the result back to
-characteristic 0.
-
-\subsection{3.7 Subsequent Developments}\label{ch1990shigefumimori:subsequent-developments}
-
-The Hartshorne conjecture was generalized and extended in several
-directions: - Campana and Peternell proved that a smooth projective
-variety with nef tangent bundle has a finite étale cover by a Fano
-variety. - The work of Kollár--Miyaoka--Mori gave a characterization of
-projective space using the canonical bundle. - Mori's methods were
-applied to study varieties with ample or nef cotangent bundle and
-related positivity conditions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. The Minimal Model Program}\label{ch1990shigefumimori:the-minimal-model-program}
-
-\subsection{4.1 Birational
-Classification}\label{ch1990shigefumimori:birational-classification}
-
-The goal of birational classification is to find a ``simplest''
-representative in each birational equivalence class of algebraic
-varieties. Two varieties are birational if they are isomorphic on dense
-open subsets --- that is, they share the same field of rational
-functions. For surfaces, the minimal model theory had been established
-by the Italian school of algebraic geometry (Castelnuovo, Enriques,
-Severi) in the early 20th century, and the classification of algebraic
-surfaces was completed by Kodaira and others. However, for higher
-dimensions the problem remained open, and many geometers believed that a
-systematic approach was impossible.
-
-\subsection{4.2 Mori's Framework}\label{ch1990shigefumimori:moris-framework}
-
-Mori developed the \textbf{minimal model program} (MMP), also known as
-the \textbf{Mori program}, to systematically construct minimal models in
-all dimensions. The program proceeds by: 1. Starting with a smooth
-projective variety \(X\). 2. Computing the cone of curves
-\(\overline{NE}(X)\) and identifying extremal rays. 3. Contracting an
-extremal ray --- a family of curves that cannot be deformed --- via a
-birational morphism \(f: X \to Y\). 4. If the contraction is divisorial,
-continue with \(Y\). 5. If the contraction is small, perform a flip
-\(X \dashrightarrow X^+\) to replace bad singularities. 6. Repeating
-until a minimal model (a variety with nef canonical bundle and terminal
-singularities) is reached. 7. If the variety is uniruled, the result is
-a Mori fiber space rather than a minimal model.
-
-The key insight was that the cone of curves on a variety has a
-polyhedral structure that can be studied systematically using the
-intersection pairing with the canonical divisor.
-
-\subsection{4.3 Extremal Rays}\label{ch1990shigefumimori:extremal-rays}
-
-An \textbf{extremal ray} is a one-dimensional face of the closed cone of
-effective curves \(\overline{NE}(X)\) on a variety \(X\). Mori showed
-that each extremal ray \(R\) that is negative with respect to the
-canonical divisor \(K_X\) can be contracted by a birational morphism
-\(f: X \to Y\), producing a new variety \(Y\). The contraction can be of
-two types: - \textbf{Divisorial:} It contracts a divisor (a subvariety
-of codimension 1). The resulting variety \(Y\) has milder singularities
-but still shares the same function field as \(X\). - \textbf{Small:} It
-contracts a subvariety of codimension at least 2. Small contractions
-produce varieties with bad singularities and must be resolved by flips.
-
-\subsection{4.4 The Cone Theorem}\label{ch1990shigefumimori:the-cone-theorem}
-
-Mori's \textbf{cone theorem} is one of the cornerstones of the MMP. It
-describes the structure of the cone of effective curves:
-
-\[
-\overline{NE}(X) = \overline{NE}_{K_X \geq 0}(X) + \sum_{i} \mathbb{R}_{\geq 0}[C_i]
-\]
-
-where the sum is over countably many extremal rays generated by rational
-curves \(C_i\) that are \(K_X\)-negative. The cone theorem shows that
-the \(K_X\)-negative part of the cone is locally polyhedral. Each
-extremal ray \(R\) can be contracted by a birational morphism.
-
-\subsection{4.5 The Contraction Theorem}\label{ch1990shigefumimori:the-contraction-theorem}
-
-For each extremal ray \(R\), there exists a contraction morphism
-\(\operatorname{cont}_R : X \to Y\) to a projective variety \(Y\) that
-contracts exactly the curves in \(R\). This is the \textbf{contraction
-theorem}, which provides the basic operation of the MMP. The contracted
-variety \(Y\) may have mild singularities (terminal or canonical) that
-are well-understood.
-
-The contraction can be of two types: - \textbf{Divisorial:} It contracts
-a divisor (a subvariety of codimension 1), producing a variety closer to
-a minimal model. - \textbf{Small:} It contracts a subvariety of
-codimension at least 2. Small contractions produce varieties with bad
-singularities and must be resolved by flips. - \textbf{Fiber type:} If
-the contracted locus is the whole variety, the result is a Mori fiber
-space --- a Fano fibration.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. Fano Varieties and the Anticanonical
-Bundle}\label{ch1990shigefumimori:fano-varieties-and-the-anticanonical-bundle}
-
-\subsection{5.1 Definition}\label{ch1990shigefumimori:definition}
-
-A \textbf{Fano variety} is a smooth projective variety \(X\) whose
-anticanonical bundle \(-K_X\) (the determinant of the cotangent bundle)
-is ample. Fano varieties are the ``atomic'' building blocks of algebraic
-geometry --- they are the basic pieces from which more complicated
-varieties are constructed. Every variety that is not of general type can
-be expressed in terms of Fano varieties through the MMP.
-
-\subsection{5.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions}
-
-Mori made fundamental contributions to the study of Fano varieties: -
-\textbf{Classification of Fano threefolds:} Mori, together with Mukai
-and others, classified Fano threefolds, showing that there are 105
-families. This classification is a cornerstone of threefold geometry and
-has been used extensively in the study of higher-dimensional varieties.
-- \textbf{Fano varieties and the MMP:} The existence of a rational curve
-through every point of a Fano variety (proved using the bend-and-break
-method) is essential for the MMP, as these curves generate the extremal
-rays that are contracted. - \textbf{Boundedness:} Mori contributed to
-the proof that the set of Fano varieties of fixed dimension forms a
-bounded family --- there are only finitely many deformation types. -
-\textbf{The Mukai--Mori classification:} Joint work with Shigeru Mukai
-that classified Fano threefolds with Picard number greater than 1, a
-major step in the classification. - \textbf{Applications to Calabi--Yau
-varieties:} Fano varieties appear as the building blocks of Calabi--Yau
-varieties, and Mori's classification of Fano threefolds is essential for
-understanding three-dimensional Calabi--Yau manifolds. - \textbf{Fano
-varieties and the index theorem:} Mori studied the Fano index (the
-largest integer \(r\) such that \(-K_X = rH\) for an ample divisor
-\(H\)), relating it to the classification of extremal rays. -
-\textbf{Boundedness of Fano varieties:} Mori contributed to the proof
-that Fano varieties of fixed dimension form a bounded family, meaning
-they are parameterized by finitely many algebraic families. This result
-is fundamental for the classification of Fano varieties.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. Rational Curves on Algebraic
-Varieties}\label{ch1990shigefumimori:rational-curves-on-algebraic-varieties}
-
-\subsection{6.1 The Bend-and-Break
-Method}\label{ch1990shigefumimori:the-bend-and-break-method}
-
-Mori's bend-and-break method is one of the effective techniques in
-birational geometry. It constructs rational curves on varieties with
-negative canonical bundle. The method works as follows: 1. Start with a
-family of curves parameterized by a base \(B\), whose general member is
-a smooth curve mapping to \(X\). 2. Fix two points \(p, q\) on the
-source curve and consider maps that send \(p\) and \(q\) to prescribed
-points in \(X\). 3. If the deformation space (the space of such maps)
-has dimension at least 1, the curve can be deformed. 4. In the limit of
-the deformation, the curve ``breaks'' into a union of rational curves.
-
-\subsection{6.2 The Bend-and-Break
-Lemma}\label{ch1990shigefumimori:the-bend-and-break-lemma-1}
-
-The precise statement: if \(X\) is a projective variety and
-\(f: C \to X\) is a non-constant morphism from a smooth projective curve
-\(C\) such that \(-K_X \cdot f_*C > 0\), then there exists a rational
-curve on \(X\) passing through a general point of \(f(C)\).
-
-\subsection{6.3 Applications}\label{ch1990shigefumimori:applications}
-
-The bend-and-break method has been used to prove fundamental results: -
-The Hartshorne conjecture, characterizing projective space. - The
-existence of rational curves on Fano varieties, showing that every Fano
-variety is covered by rational curves. - The cone theorem, which
-describes the structure of the cone of curves. - The existence of
-minimal models in dimension 3, via the construction of flips. - The
-study of the geometry of moduli spaces of curves and their
-compactifications. - The Kollár--Miyaoka--Mori theorem on the existence
-of rational curves on varieties with negative canonical bundle. - The
-characterization of uniruled varieties in terms of their canonical
-bundle. - The boundedness of Fano varieties.
-
-\subsection{6.4 The Space of Rational
-Curves}\label{ch1990shigefumimori:the-space-of-rational-curves}
-
-A key object studied by Mori is the \textbf{space of rational curves}
-\(\text{RatCurves}^n(X)\) on a variety \(X\). This scheme parameterizes
-all rational curves on \(X\) and can be used to understand the geometry
-of \(X\) itself. Mori showed that for Fano varieties, the space of
-rational curves has components of the expected dimension, and its
-geometry reflects the structure of extremal rays.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{7. The Kawamata--Viehweg Vanishing
-Theorem}\label{ch1990shigefumimori:the-kawamataviehweg-vanishing-theorem}
-
-\subsection{7.1 Statement}\label{ch1990shigefumimori:statement-1}
-
-The \textbf{Kawamata--Viehweg vanishing theorem}, proved independently
-by Yujiro Kawamata and Eckart Viehweg in 1982, generalizes the classical
-Kodaira vanishing theorem to singular varieties and
-\(\mathbb{Q}\)-divisors. The classical Kodaira vanishing theorem states
-\(H^i(X, \mathcal{O}_X(K_X + A)) = 0\) for \(i > 0\) when \(A\) is
-ample, but the MMP produces divisors \(D\) that are only nef and big,
-and varieties that are only mildly singular. The Kawamata--Viehweg
-generalization handles precisely this situation. It states:
-
-\[
-H^i(X, \mathcal{O}_X(K_X + D)) = 0 \text{ for } i > 0
-\]
-
-for a nef and big \(\mathbb{Q}\)-divisor \(D\) on a normal projective
-variety \(X\) with mild singularities. This generalization is essential
-because the MMP naturally produces singular varieties.
-
-\subsection{7.2 Role in the MMP}\label{ch1990shigefumimori:role-in-the-mmp}
-
-The Kawamata--Viehweg vanishing theorem is essential for the MMP: - It
-is used in the proof of the \textbf{base-point-free theorem}, which
-guarantees that linear systems become base-point-free after sufficient
-twisting. - It enables the construction of contractions in the MMP by
-ensuring the vanishing of higher cohomology groups. - It allows the
-study of the cohomology of singular varieties that arise in the MMP. -
-Together with the cone theorem, it provides the cohomological
-foundations for the entire minimal model program.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. The Base-Point-Free
-Theorem}\label{ch1990shigefumimori:the-base-point-free-theorem}
-
-\subsection{8.1 Statement}\label{ch1990shigefumimori:statement-2}
-
-The \textbf{base-point-free theorem} (also called the
-\textbf{Kawamata--Shokurov base-point-free theorem}) is one of the key
-results of the MMP, proved by Kawamata, Shokurov, and others building on
-Mori's cone theorem and the Kawamata--Viehweg vanishing theorem. It
-states: if \(D\) is a nef divisor on a projective variety \(X\) such
-that \(aD - K_X\) is ample for some \(a > 0\), then the linear system
-\(|mD|\) is base-point-free for all sufficiently large integers \(m\).
-
-\subsection{8.2 Proof Strategy}\label{ch1990shigefumimori:proof-strategy}
-
-The proof uses the Kawamata--Viehweg vanishing theorem to show that the
-base locus of \(|mD|\) must be empty for large \(m\): 1. Assume there is
-a base point, and consider the blow-up along the base locus. 2. Apply
-vanishing to show that the associated line bundle has no higher
-cohomology. 3. Use the Riemann--Roch theorem and asymptotic estimates to
-derive a contradiction unless the base locus is empty.
-
-\subsection{8.2 Application to
-Contractions}\label{ch1990shigefumimori:application-to-contractions}
-
-The base-point-free theorem is essential for constructing contractions
-in the MMP: - Given an extremal ray \(R\) generated by a curve \(C\)
-with \(K_X \cdot C < 0\), one can find a divisor \(D\) such that \(D\)
-is nef and \(D^\perp\) contains \(R\). - The theorem guarantees that a
-sufficiently large multiple of \(D\) defines a contraction map. - This
-contraction is precisely the morphism that contracts the extremal ray
-\(R\).
-
-\subsection{8.3 Significance}\label{ch1990shigefumimori:significance}
-
-The base-point-free theorem is one of the cornerstones of the MMP.
-Without it, the contraction theorem would not hold, and the MMP could
-not proceed beyond the first step.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. The Threefold Minimal
-Model}\label{ch1990shigefumimori:the-threefold-minimal-model}
-
-\subsection{9.1 Classification}\label{ch1990shigefumimori:classification}
-
-Mori, together with János Kollár, Miles Reid, and others, completed the
-minimal model program for threefolds (varieties of dimension 3) in the
-1980s and 1990s. This was a landmark achievement in algebraic geometry,
-showing that every smooth projective threefold is birational to either:
-- A minimal model (a threefold with nef canonical bundle and terminal
-singularities). - A Mori fiber space (a Fano fibration), in which case
-the variety is uniruled.
-
-\subsection{9.2 Singularities in the
-MMP}\label{ch1990shigefumimori:singularities-in-the-mmp}
-
-The MMP works with two main classes of singularities: - \textbf{Terminal
-singularities:} The mildest singularities that appear in the MMP.
-Threefold terminal singularities were classified by Mori and Reid. -
-\textbf{Canonical singularities:} Slightly more general, appearing in
-the classification of varieties of general type. These singularities
-arise naturally when contracting extremal rays, and the MMP provides a
-systematic way to work with them.
-
-\subsection{9.3 The Existence of Flips for
-Threefolds}\label{ch1990shigefumimori:the-existence-of-flips-for-threefolds}
-
-A key step in the threefold MMP was the proof of existence of flips.
-Mori proved that flips exist for threefolds with terminal singularities,
-completing the MMP for dimension 3. This was a major technical
-achievement that required deep results about the classification of
-terminal singularities. The proof involved: - A detailed classification
-of all possible flipping contractions for threefolds. - The construction
-of an explicit resolution of the flipping singularity. - Verification
-that the resulting variety \(X^+\) has terminal singularities and is
-closer to being a minimal model. - The finiteness of the flip process,
-showing that only finitely many flips are needed to reach a minimal
-model.
-
-\subsection{9.4 Mori Fiber Spaces}\label{ch1990shigefumimori:mori-fiber-spaces}
-
-When the MMP terminates with a variety that still has \(K_X\)-negative
-curves, the result is a \textbf{Mori fiber space}: a morphism
-\(f: X \to Z\) to a lower-dimensional variety such that the general
-fiber is a Fano variety. These correspond to uniruled varieties and are
-the building blocks of the classification opposite to minimal models.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. Flips and Flops}\label{ch1990shigefumimori:flips-and-flops}
-
-\subsection{10.1 Definition}\label{ch1990shigefumimori:definition-1}
-
-A \textbf{flip} is a birational transformation that replaces a
-divisorial contraction by a small contraction. Flips are necessary in
-the MMP when an extremal ray is small --- that is, when the contraction
-changes the variety only in codimension 2 and produces singularities
-that are too severe. The flip replaces \(X\) with another variety
-\(X^+\) that is birational to \(X\) but has milder singularities.
-
-\subsection{10.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-1}
-
-Mori proved the existence of flips for threefolds, completing the MMP
-for dimension 3. His work classified all possible threefold flips and
-showed that they can be explicitly constructed. The existence of flips
-in higher dimensions was later proved by Birkar, Cascini, Hacon, and
-McKernan (2010) --- a result that built directly on Mori's foundational
-work and earned Caucher Birkar a Fields Medal in 2018.
-
-\subsection{10.4 The Flip Conjecture}\label{ch1990shigefumimori:the-flip-conjecture}
-
-The general \textbf{flip conjecture} states that flips exist in all
-dimensions. This was one of the central problems of birational geometry
-for over two decades. The proof by Birkar--Cascini--Hacon--McKernan
-used: - Mori's techniques of extremal rays and the cone theorem. - The
-theory of adjoint divisors and the canonical bundle formula. -
-Higher-dimensional generalizations of Mori's classification of terminal
-singularities. - Induction on dimension and the finite generation of the
-canonical ring.
-
-\subsection{10.3 Flops}\label{ch1990shigefumimori:flops}
-
-A \textbf{flop} is a birational transformation that is similar to a flip
-but preserves the canonical bundle: \(K_X\) is numerically trivial on
-the curves being contracted. Flops arise in the study of Calabi--Yau
-varieties and in the context of the McKay correspondence. Mori's work on
-flops connected birational geometry to the classification of threefold
-singularities.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. The Work on Abelian
-Varieties}\label{ch1990shigefumimori:the-work-on-abelian-varieties}
-
-\subsection{11.1 Introduction}\label{ch1990shigefumimori:introduction-1}
-
-\textbf{Abelian varieties} are projective algebraic groups --- smooth
-projective varieties that are also group varieties. They are the natural
-setting for the theory of theta functions and play a central role in
-arithmetic geometry and Hodge theory.
-
-\subsection{11.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-2}
-
-Mori studied several aspects of abelian varieties: - The classification
-of abelian varieties and their endomorphism algebras, building on the
-classical theory of complex multiplication. - The relationship between
-abelian varieties and the minimal model program, particularly how
-abelian varieties appear as the building blocks of varieties with
-Kodaira dimension 0. - The structure of moduli spaces of abelian
-varieties and their compactifications. - The use of abelian varieties in
-the study of threefold singularities, particularly in the context of the
-minimal model program and terminal resolutions. - The relationship
-between abelian varieties and the cone of curves, particularly in the
-study of extremal rays on abelian varieties and their quotients.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. The Work on Crepant
-Resolutions}\label{ch1990shigefumimori:the-work-on-crepant-resolutions}
-
-\subsection{12.1 Definition}\label{ch1990shigefumimori:definition-2}
-
-A \textbf{crepant resolution} is a resolution of singularities
-\(f: Y \to X\) such that \(K_Y = f^* K_X\). Unlike ordinary resolutions,
-crepant resolutions preserve the canonical class, making them
-particularly important in the minimal model program and the study of
-Calabi--Yau varieties.
-
-\subsection{12.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-3}
-
-Mori studied crepant resolutions of threefold singularities: - Terminal
-singularities and their crepant resolutions, classifying all possible
-resolutions. - The relationship between crepant resolutions and flops,
-showing that flops exchange different crepant resolutions. - The
-classification of threefold terminal singularities, which is essential
-for understanding when crepant resolutions exist.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. The Work on the Bogomolov--Miyaoka--Yau
-Inequality}\label{ch1990shigefumimori:the-work-on-the-bogomolovmiyaokayau-inequality}
-
-\subsection{13.1 Statement}\label{ch1990shigefumimori:statement-3}
-
-The \textbf{Bogomolov--Miyaoka--Yau inequality} for a surface of general
-type states:
-
-\[
-c_1^2 \leq 3c_2
-\]
-
-where \(c_1\) and \(c_2\) are the Chern classes of the surface. This
-inequality is a fundamental constraint on the topology of algebraic
-surfaces and is sharp exactly for ball quotients (surfaces uniformized
-by the complex ball).
-
-\subsection{13.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-4}
-
-Mori contributed to the proof of a generalization of the inequality for
-threefolds and its relationship to the minimal model program, showing
-how the inequality constrains the possible singularities that can appear
-in the MMP.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. The Work on the Iitaka
-Conjecture}\label{ch1990shigefumimori:the-work-on-the-iitaka-conjecture}
-
-\subsection{14.1 Statement}\label{ch1990shigefumimori:statement-4}
-
-The \textbf{Iitaka conjecture} (also called the \(C_{n,m}\) conjecture)
-concerns the birational invariants of algebraic varieties. It states:
-for a fibration \(f: X \to Y\) with general fiber \(F\), the Kodaira
-dimension satisfies \(\kappa(X) \geq \kappa(F) + \kappa(Y)\).
-
-\subsection{14.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-5}
-
-Mori contributed to the study of: - The relationship between the Iitaka
-conjecture and the MMP, showing how minimal models provide a natural
-framework for understanding the conjecture. - The structure of varieties
-of Kodaira dimension 0 (Calabi--Yau varieties), which are the building
-blocks of the MMP. - The classification of varieties with non-negative
-Kodaira dimension through the MMP.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. The Work on the Debarre
-Conjecture}\label{ch1990shigefumimori:the-work-on-the-debarre-conjecture}
-
-\subsection{15.1 Statement}\label{ch1990shigefumimori:statement-5}
-
-The \textbf{Debarre conjecture} (now a theorem of Kollár--Miyaoka--Mori)
-concerns the existence of higher-dimensional rational curves ---
-specifically, \(r\)-dimensional rational varieties --- through general
-points of Fano varieties of sufficiently large anticanonical degree.
-
-\subsection{15.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-6}
-
-Mori used his bend-and-break method to study: - The existence of
-rational curves on Fano varieties, proving that every Fano variety is
-covered by rational curves. - The structure of the space of rational
-curves (the scheme \(\text{RatCurves}^n(X)\)), including its dimension
-and singularities. - The relationship between rational curves and the
-MMP, where rational curves generate the extremal rays that must be
-contracted.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. The Work on the Mukai
-Conjecture}\label{ch1990shigefumimori:the-work-on-the-mukai-conjecture}
-
-\subsection{16.1 Statement}\label{ch1990shigefumimori:statement-6}
-
-The \textbf{Mukai conjecture} (formulated by Shigeru Mukai) gives a
-bound on the Fano index of a Fano variety in terms of its dimension.
-Specifically, it states that if a Fano variety \(X\) has index greater
-than \(\dim X/2\), then \(X\) is isomorphic to projective space or a
-quadric.
-
-\subsection{16.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-7}
-
-Mori studied: - The classification of Fano manifolds with high index,
-using the bend-and-break method and the cone theorem. - The relationship
-between Fano varieties and projective space, showing that varieties with
-large tangent bundle are projective spaces. - The use of extremal rays
-to classify Fano manifolds, leading to the Mukai--Mori classification of
-Fano threefolds. - The characterization of projective space in terms of
-its tangent bundle, which was the starting point for the Hartshorne
-conjecture.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. The Work on the Clemens
-Conjecture}\label{ch1990shigefumimori:the-work-on-the-clemens-conjecture}
-
-\subsection{17.1 Statement}\label{ch1990shigefumimori:statement-7}
-
-The \textbf{Clemens conjecture} (formulated by Herbert Clemens) states
-that for a general quintic threefold \(X \subset \mathbb{P}^4\), there
-are only finitely many rational curves of each degree. This conjecture
-was a driving force in enumerative geometry and mirror symmetry.
-
-\subsection{17.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-8}
-
-Mori contributed to: - The study of rational curves on Calabi--Yau
-threefolds using deformation theory and the bend-and-break method. - The
-relationship between rational curves and mirror symmetry, where counts
-of rational curves on the quintic are predicted by period integrals on
-the mirror manifold. - The application of his rational curve methods to
-enumerative geometry, providing tools for computing Gromov--Witten
-invariants.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. The Work on the Geometry of Moduli
-Spaces}\label{ch1990shigefumimori:the-work-on-the-geometry-of-moduli-spaces}
-
-\subsection{18.1 Moduli of Curves}\label{ch1990shigefumimori:moduli-of-curves}
-
-The moduli space of curves \(\mathcal{M}_g\) parameterizes smooth
-projective curves of genus \(g\). Its compactification
-\(\overline{\mathcal{M}}_g\) (the Deligne--Mumford--Knudsen
-compactification) is one of the important objects in algebraic
-geometry.
-
-\subsection{18.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-9}
-
-Mori studied: - The birational geometry of moduli spaces of curves,
-applying the MMP to understand their structure. - The relationship
-between moduli spaces and the MMP, showing how moduli spaces can
-themselves be studied using the techniques Mori developed. - The
-structure of the cone of curves on moduli spaces and its extremal rays.
-- The geometry of the boundary divisors in \(\overline{\mathcal{M}}_g\)
-and their contractions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. The Work on the Geometry of the Cone of
-Curves}\label{ch1990shigefumimori:the-work-on-the-geometry-of-the-cone-of-curves}
-
-\subsection{19.1 The Cone Theorem}\label{ch1990shigefumimori:the-cone-theorem-1}
-
-Mori's cone theorem is one of the foundational results of the MMP. It
-describes the cone of effective curves
-\(\overline{NE}(X) \subset N_1(X)\) of a projective variety. The theorem
-states:
-
-\[
-\overline{NE}(X) = \overline{NE}_{K_X \geq 0} + \sum_i \mathbb{R}_{\geq 0}[C_i]
-\]
-
-where the \(C_i\) are rational curves generating extremal rays in the
-\(K_X\)-negative region.
-
-\subsection{19.2 Structure of the Cone}\label{ch1990shigefumimori:structure-of-the-cone}
-
-Mori showed that the cone of curves is a convex cone with a locally
-rational polyhedral structure in the \(K_X\)-negative region. This
-means: - In the region where \(K_X\) is negative, the cone is generated
-by finitely many extremal rays. - Each extremal ray is generated by a
-rational curve \(C\) with \(0 < -K_X \cdot C \leq \dim X + 1\). - The
-extremal rays correspond to contractions that are building blocks of the
-MMP.
-
-\subsection{19.3 Applications}\label{ch1990shigefumimori:applications-1}
-
-The cone theorem is the starting point for the MMP, as it tells us
-exactly which curves need to be contracted to simplify a variety. The
-theorem guarantees that the MMP can always find a curve to contract as
-long as \(K_X\) is not nef, and that the process is locally finite. The
-cone theorem is applied at each step of the MMP: if \(K_X\) is not nef,
-we find an extremal ray, contract it, perform a flip if needed, and
-repeat.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{20. The Work on the Finite Generation of the Canonical
-Ring}\label{ch1990shigefumimori:the-work-on-the-finite-generation-of-the-canonical-ring}
-
-\subsection{20.1 Statement}\label{ch1990shigefumimori:statement-8}
-
-The \textbf{finite generation of the canonical ring} is one of the
-central problems of birational geometry. It states that the ring
-
-\[
-R(X, K_X) = \bigoplus_{m \geq 0} H^0(X, \mathcal{O}_X(mK_X))
-\]
-
-is finitely generated as a \(\mathbb{C}\)-algebra. This was proved by
-Birkar, Cascini, Hacon, and McKernan (2010) using the MMP.
-
-\subsection{20.2 Mori's Role}\label{ch1990shigefumimori:moris-role}
-
-Mori's development of the MMP was essential for the proof: - The cone
-theorem and contraction theorem provide the inductive framework. -
-Mori's theory of flips is used to construct minimal models. - The
-existence of minimal models for varieties of general type is equivalent
-to finite generation.
-
-\subsection{20.3 Significance}\label{ch1990shigefumimori:significance-1}
-
-The finite generation of the canonical ring implies that every smooth
-projective variety has a canonical model, a distinguished birational
-model with ample canonical bundle. This was the culmination of the
-minimal model program that Mori initiated.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{21. The Work on the Abundance
-Conjecture}\label{ch1990shigefumimori:the-work-on-the-abundance-conjecture}
-
-\subsection{21.1 Statement}\label{ch1990shigefumimori:statement-9}
-
-The \textbf{abundance conjecture} states that for a minimal model \(X\)
-(a projective variety with terminal singularities and nef canonical
-divisor), the canonical divisor \(K_X\) is semiample. That is, some
-positive multiple \(mK_X\) is base-point-free, defining a contraction to
-the canonical model.
-
-\subsection{21.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-10}
-
-Mori contributed to: - The proof of abundance for threefolds, showing
-that every threefold minimal model has semiample canonical divisor. -
-The relationship between abundance and the MMP, where abundance is the
-final step after constructing a minimal model. - The structure of
-minimal models, including the study of their canonical rings and the
-contractions they define.
-
-\subsection{21.3 Current Status}\label{ch1990shigefumimori:current-status}
-
-Abundance has been proved for all varieties of dimension \(\leq 3\) and
-for varieties of general type in all dimensions. The general case
-remains one of the main open problems in birational geometry.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{22. The Work on the Reid--Mori
-Program}\label{ch1990shigefumimori:the-work-on-the-reidmori-program}
-
-\subsection{22.1 Definition}\label{ch1990shigefumimori:definition-3}
-
-The \textbf{Reid--Mori program} (also called the Mori program or the
-minimal model program) is a systematic approach to the birational
-classification of algebraic varieties. It was developed by Mori in close
-collaboration with Miles Reid, who helped shape the program's
-foundations.
-
-\subsection{22.2 Mori's Leadership}\label{ch1990shigefumimori:moris-leadership}
-
-Mori, together with Miles Reid, led the development of the program: -
-The definition of terminal and canonical singularities, which replaced
-smoothness as the appropriate condition for the MMP. - The structure of
-extremal rays and the proof of the cone theorem. - The existence of
-flips for threefolds, completing the MMP in dimension 3. - The
-classification of terminal singularities in dimension 3.
-
-\subsection{22.3 Impact}\label{ch1990shigefumimori:impact-1}
-
-The Reid--Mori program became the dominant research direction in
-birational geometry for several decades and led to a complete
-classification of threefolds and major advances in higher dimensions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{23. The Work on K3 Surfaces}\label{ch1990shigefumimori:the-work-on-k3-surfaces}
-
-\subsection{23.1 Definition}\label{ch1990shigefumimori:definition-4}
-
-\textbf{K3 surfaces} are simply connected Calabi--Yau surfaces with
-trivial canonical bundle. They form one of the important classes of
-algebraic surfaces, with deep connections to number theory, physics, and
-geometry.
-
-\subsection{23.2 Mori's Contributions}\label{ch1990shigefumimori:moris-contributions-11}
-
-Mori studied: - The birational geometry of K3 surfaces, showing how the
-MMP applies in this setting. - The classification of rational curves on
-K3 surfaces and their moduli spaces. - The relationship between K3
-surfaces and the MMP, particularly how K3 surfaces arise as the minimal
-models of surfaces with Kodaira dimension 0. - The Torelli theorem for
-K3 surfaces and its relationship to the structure of the cone of curves.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{24. The Work on the Hirzebruch--Riemann--Roch
-Theorem}\label{ch1990shigefumimori:the-work-on-the-hirzebruchriemannroch-theorem}
-
-\subsection{24.1 Statement}\label{ch1990shigefumimori:statement-10}
-
-The \textbf{Hirzebruch--Riemann--Roch theorem} expresses the Euler
-characteristic of a vector bundle \(E\) on a smooth projective variety
-\(X\) as the integral: \[
-\chi(X, E) = \int_X \operatorname{ch}(E) \cdot \operatorname{td}(T_X)
-\] where \(\operatorname{ch}\) is the Chern character and
-\(\operatorname{td}\) is the Todd class.
-
-\subsection{24.2 Mori's Uses}\label{ch1990shigefumimori:moris-uses}
-
-Mori used the Riemann--Roch theorem extensively in his work: - Computing
-the degrees of extremal rays by calculating intersection numbers with
-\(K_X\). - Studying the cohomology of Fano varieties and their
-deformations. - Classifying threefold contractions and computing
-invariants of the contracted locus. - Proving vanishing theorems for the
-cohomology of line bundles on Fano varieties. - Computing the Euler
-characteristic of line bundles on varieties with nef canonical bundle,
-which is essential for abundance-type results.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{25. The Work on the Serre
-Duality}\label{ch1990shigefumimori:the-work-on-the-serre-duality}
-
-\subsection{25.1 Statement}\label{ch1990shigefumimori:statement-11}
-
-\textbf{Serre duality} is a fundamental duality theorem in algebraic
-geometry, stating that for a smooth projective variety \(X\) of
-dimension \(n\) and a vector bundle \(E\): \[
-H^i(X, E) \cong H^{n-i}(X, E^\vee \otimes \omega_X)^\vee
-\] where \(\omega_X = \mathcal{O}_X(K_X)\) is the canonical sheaf.
-
-\subsection{25.2 Mori's Uses}\label{ch1990shigefumimori:moris-uses-1}
-
-Mori used Serre duality extensively: - Studying the cohomology of the
-canonical bundle and its twists, which is essential for vanishing
-theorems. - Proving the Kawamata--Viehweg vanishing theorem, which
-relies on Serre duality in its proof. - Classifying extremal
-contractions by analyzing the cohomology of the relative dualizing
-sheaf. - Computing the cohomology of the structure sheaf of singular
-varieties arising in the MMP. - Understanding the relationship between
-Hodge numbers and the geometry of extremal rays.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{26. Awards and Recognition}\label{ch1990shigefumimori:awards-and-recognition}
-
-\textbf{1990:} - Fields Medal (International Mathematical Union) ---
-awarded at the ICM in Kyoto for his proof of the Hartshorne conjecture
-and his development of the minimal model program. The Fields Medal is
-the most prestigious award in mathematics, awarded to mathematicians
-under 40.
-
-\textbf{1990:} - Cole Prize in Algebra (American Mathematical Society)
---- one of the highest honors in algebra, recognizing his foundational
-contributions to the study of algebraic varieties.
-
-\textbf{1991:} - Person of Cultural Merit (Japan) --- a prestigious
-honor awarded by the Japanese government for his contributions to
-mathematics.
-
-\textbf{1995:} - Member, Japan Academy --- elected to Japan's most
-distinguished academic society.
-
-\textbf{1998:} - Fujihara Award --- recognizing his outstanding research
-achievements.
-
-\textbf{2005:} - Wolf Prize in Mathematics (shared with Simon K.
-Donaldson) --- one of the most prestigious awards in mathematics, cited
-for his ``productive and influential work in algebraic geometry.'' -
-Invited to deliver the prestigious ``Mori Lectures'' at the University
-of Tokyo, named in his honor.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{27. Selected Major
-Publications}\label{ch1990shigefumimori:selected-major-publications}
-
+Mori's work was motivated by the Hartshorne conjecture, which predicted that
+every smooth subvariety of $\mathbb{P}^n$ of codimension $\leq n/2$ is a complete
+intersection. Mori proved the conjecture for codimension $\leq n/2$ in 1975,
+using the theory of varieties of small degree. This result showed that the theory
+of extremal rays---the extreme rays of the cone of curves---could be used to
+study the structure of algebraic varieties.
+
+The theory of varieties of small degree begins with a fundamental question:
+given a smooth projective variety $X$ of dimension $n$ embedded in $\mathbb{P}^N$
+by a very ample line bundle $L$, when does the degree $d = L^n$ impose strong
+restrictions on the structure of $X$? Mori showed that small degree forces $X$
+to be highly special.
+
+For a smooth projective variety $X$ of dimension $n$, the \textbf{degree} of $X$
+with respect to an embedding by a very ample line bundle $L$ is defined as
+$d = L^n = \deg(X)$. The varieties of small degree are those satisfying
+$d \leq 2n - 1$. Mori's classification theorem states:
+
+\begin{theorem}[Mori's Classification of Varieties of Small Degree]
+Let $X$ be a smooth projective variety of dimension $n$ with a very ample
+line bundle $L$ such that $L^n \leq 2n - 1$. Then $(X, L)$ is one of the
+following:
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Projective manifolds with ample tangent bundles.''}
- \emph{Annals of Mathematics} 110, 593--606, 1979. --- \emph{The
- solution of the Hartshorne conjecture, proving that projective space
- is characterized by the ampleness of its tangent bundle. This paper
- introduced the bend-and-break method and the use of characteristic
- \(p\) techniques.}
-\item
- \textbf{``Threefolds whose canonical bundles are not numerically
- effective.''} \emph{Annals of Mathematics} 116, 133--176, 1982. ---
- \emph{The foundation of the minimal model program. This paper
- introduced extremal rays, the cone theorem, and the contraction
- theorem for threefolds.}
-\item
- \textbf{``Flip theorem and the existence of minimal models for
- 3-folds.''} \emph{Journal of the AMS} 1, 117--253, 1988. --- \emph{The
- proof of the existence of flips for threefolds with terminal
- singularities, completing the MMP for dimension 3.}
-\item
- \textbf{``Rational curves on algebraic varieties.''} Springer
- Ergebnisse, 1995. --- \emph{The definitive monograph on the theory of
- rational curves and their applications in birational geometry.}
-\item
- \textbf{``The cone of curves and the minimal model program.''}
- \emph{Proceedings of the ICM}, Kyoto, 1990. --- \emph{The Fields
- Medalist's ICM address, surveying the state of the art of the MMP.}
-\item
- \textbf{``The classification of threefold terminal singularities.''}
- \emph{Mathematische Annalen} 270, 1985. --- \emph{The complete
- classification of threefold terminal singularities, essential for the
- MMP.}
-\item
- \textbf{Kollár, J. and Mori, S.} \emph{Birational Geometry of
- Algebraic Varieties.} Cambridge Tracts in Mathematics 134, 1998. ---
- \emph{The standard textbook on the minimal model program, co-authored
- with János Kollár.}
-\item
- \textbf{Mori, S. and Mukai, S.} ``Classification of Fano 3-folds with
- \(B_2 \geq 2\).'' \emph{Manuscripta Mathematica} 36, 147--162, 1981.
- --- \emph{The classification of Fano threefolds with Picard number at
- least 2.}
-\item
- \textbf{Mori, S.} ``On degrees of extremal rays.'' \emph{Mathematische
- Annalen} 278, 1987. --- \emph{The computation of bounds for the
- degrees of extremal rational curves.}
+    \item $(\mathbb{P}^n, \mathcal{O}(1))$: projective space with hyperplane bundle;
+    \item $(Q^n, \mathcal{O}(1))$: a quadric hypersurface in $\mathbb{P}^{n+1}$;
+    \item A Del Pezzo surface: a blow-up of $\mathbb{P}^2$ at $k \leq 8$ points;
+    \item A scroll over a curve: a projective bundle $\mathbb{P}(E)$ over a curve $C$
+    of genus $g$, with $L$ a relatively ample generator.
+\end{enumerate}
+\end{theorem}
+
+This classification provided the first major application of the theory of
+extremal rays to the structure of projective varieties. The key insight is that
+small degree implies the existence of a covering family of lines (rational curves
+of minimal degree), which can be used to deform and construct new varieties.
+
+The bend-and-break lemma, introduced by Mori, is a deformation-theoretic tool
+that shows: if $X$ is a smooth projective variety and $C$ is a rational curve
+of small degree, then $C$ can be deformed to break into a sum of rational curves.
+This lemma is the key technical tool in Mori's theory and has many applications
+beyond the minimal model program.
+
+The \textbf{bend-and-break lemma} can be stated as follows. Let $X$ be a smooth
+projective variety of dimension $n$, and let $l$ be a line in $\mathbb{P}^N$
+interacting with $X$ in a suitable way. Then there exists a family of rational
+curves in $X$ covering $X$, and as the parameter varies, the curve can bend
+until it breaks into a union of rational curves. This breaking phenomenon is
+crucial for constructing the extremal rays of the cone of curves.
+
+The cone of curves $\overline{NE}(X)$, the closure of the cone generated by
+classes of effective curves in $X$, is a fundamental object in Mori's theory.
+The cone theorem describes the structure of $\overline{NE}(X)$ in terms of the
+canonical divisor $K_X$. The theorem shows that $\overline{NE}(X)$ is generated
+by a finite number of extremal rays, each of which corresponds to a birational
+contraction or fiber space structure.
+
+Mori's work on three-folds in the 1980s led to the classification of smooth
+Fano three-folds---three-folds with ample anticanonical divisor. Fano three-folds
+are the building blocks of the minimal model program: every algebraic variety is
+birationally equivalent to a Mori fiber space, which is a Fano variety fibred
+over a lower-dimensional base. The classification of Fano three-folds proceeds
+by analyzing the index $r$, defined as the largest integer dividing $-K_X$ in
+the Picard group. For index $r \geq 2$, the Fano three-folds are
+well-understood:
+\begin{itemize}
+    \item $r = 4$: $\mathbb{P}^3$;
+    \item $r = 3$: quadric hypersurface $Q \subset \mathbb{P}^4$;
+    \item $r = 2$: Del Pezzo three-fold (complete intersection of two quadrics
+    or a cubic in weighted projective space);
+    \item $r = 1$: 17 deformation families with various properties.
+\end{itemize}
+
+The \textbf{index} of a Fano manifold $X$ is defined as the largest positive
+integer $r$ such that $-K_X = rH$ for some ample divisor $H$ on $X$. The
+integer $r$ is called the \textbf{Fano index} and satisfies $1 \leq r \leq
+n+1$, where $n = \dim X$. For $r = n+1$, $X \cong \mathbb{P}^n$. For $r = n$,
+$X$ is a quadric hypersurface. These results are the starting point for the
+classification of Fano varieties.
+
+The difficulty in extending the MMP to higher dimensions lies in the phenomenon
+of flips. A flip is a birational transformation that replaces one extremal ray
+with another, producing a new variety with the same Picard number but different
+geometry. In dimension 3, Mori proved that flips exist and terminate, but in
+higher dimensions, the existence and termination of flips are major open
+problems.
+
+The theory of \textbf{log terminal singularities} plays a crucial role in the MMP.
+A variety has log terminal singularities if the discrepancies of all exceptional
+divisors are strictly greater than $-1$. The existence of minimal models for
+varieties with log terminal singularities is a key result of the MMP, and the
+classification of log terminal singularities in dimension 3 has been completed
+by several researchers.
+
+The bend-and-break technique has applications beyond the minimal model program.
+It has been used to study the existence of rational curves on Fano manifolds,
+the connectedness of the space of morphisms between algebraic varieties, and the
+structure of the Chow ring of rationally connected varieties. The technique has
+also been generalized to the setting of K\"ahler manifolds, where it provides
+tools for studying the geometry of holomorphic curves.
+
+The MMP for three-folds has been refined to account for singularities. The log
+MMP, developed by Kawamata and others, deals with pairs $(X, \Delta)$ where
+$\Delta$ is a $\mathbb{Q}$-divisor with coefficients in $[0,1]$. The log
+canonical ring of a pair $(X, \Delta)$ is finitely generated when $K_X + \Delta$
+is big, and the log minimal model is constructed using the same techniques as
+in the smooth case. The classification of log canonical singularities in
+dimension 3, completed by Kawamata and others, provides the foundation for the
+log MMP.
+
+\section{How Was It Solved}
+
+The central result of Mori's theory is the \textbf{cone theorem}, which describes
+the structure of the cone of curves $\overline{NE}(X)$ for a smooth projective
+variety $X$ of dimension $n$. The theorem provides a decomposition of
+$\overline{NE}(X)$ into a sum of extremal rays and the nef cone.
+
+\begin{theorem}[Mori's Cone Theorem]
+Let $X$ be a smooth projective variety of dimension $n$ over an algebraically
+closed field of characteristic zero. Then:
+\[
+\overline{NE}(X) = \overline{NE}(X)_{K_X \geq 0} + \sum_{i} R_i
+\]
+where $R_i$ are the extremal rays with $K_X \cdot R_i < 0$, and
+$\overline{NE}(X)_{K_X \geq 0}$ is the cone of curves $C$ satisfying
+$K_X \cdot C \geq 0$. The sum is countable, and each $R_i$ is generated by a
+rational curve $C_i$ with $-n \leq K_X \cdot C_i < 0$.
+\end{theorem}
+
+The cone theorem has several important consequences. First, it implies that the
+nef cone $\text{Nef}(X)$, which is the dual cone to $\overline{NE}(X)$, has a
+describable structure: its boundary is composed of hyperplanes orthogonal to
+the extremal rays. Second, it provides the foundation for the minimal model
+program by identifying the curves that should be contracted.
+
+The proof of the cone theorem uses the bend-and-break lemma. Given a curve
+$C$ with small degree, one can deform $C$ by bending it until it breaks into a
+sum of rational curves. The bend-and-break deformation is achieved by finding a
+family of curves parametrized by a quasi-projective variety, and using the fact
+that rational curves have non-trivial automorphisms to break the curve.
+
+The key technical tool is the \textbf{moving lemma}: one can find a moving
+rational curve---a rational curve in a continuous family---to bend and break.
+The moving lemma is proved using the theory of low-degree curves on varieties,
+based on Mori's classification of varieties of small degree.
+
+The existence of rational curves of low degree follows from Mori's theorem on
+varieties of small degree: if $L$ is an ample line bundle on $X$ with
+$L^n \leq 2\dim X + 1$ (where $n = \dim X$), then $X$ is a linear space, a
+quadric, or a projective bundle. This classification provides the rational
+curves needed for bend-and-break.
+
+The \textbf{contraction theorem} states: every extremal ray $R$ of
+$\overline{NE}(X)$ is contractible. That is, there exists a morphism
+$\text{cont}_R: X \to Y$ to a normal projective variety $Y$ such that
+$\text{cont}_R$ contracts exactly those curves whose classes lie in $R$. The
+proof uses the theory of polarized pairs and the classification of Fano
+varieties.
+
+More precisely, given an extremal ray $R$, the contraction theorem guarantees
+the existence of a projective morphism $\phi: X \to Y$ with connected fibers
+such that a curve $C$ is contracted by $\phi$ if and only if $[C] \in R$. The
+target $Y$ is a normal projective variety, and the relative Picard number
+satisfies $\rho(X/Y) = 1$.
+
+For three-folds, the MMP terminates because the dimension decreases at each
+birational step: a birational contraction of a three-fold produces a two-fold,
+which is already classified. The general MMP for higher-dimensional varieties
+is still open, but the theory of weak log canonical models and K\"ahler--Einstein
+metrics has led to significant progress.
+
+The bend-and-break lemma also implies the existence of rational curves on
+rationally connected varieties: if $X$ is rationally connected, then through
+any two points there exists a rational curve. This provides a geometric
+characterization of varieties that are birationally equivalent to Fano varieties.
+
+The proof of the cone theorem for three-folds uses the following key inequality.
+For an ample divisor $H$ and an extremal ray $R$ with $K_X \cdot R < 0$,
+there exists a positive integer $a$ and a rational number $b$ such that for
+every curve $C \in R$:
+\[
+H \cdot C \leq a(-K_X \cdot C) + b
+\]
+This bound controls the geometry of curves in the extremal ray and is essential
+for the construction of the contraction morphism.
+
+\subsection*{Classification of Fano Three-Folds}
+
+The classification of smooth Fano three-folds is one of Mori's greatest
+achievements. The classification proceeds by analyzing the index $r$ and the
+Picard number $\rho$. The main results are:
+
+\begin{theorem}[Classification of Fano Three-Folds]
+Let $X$ be a smooth Fano three-fold. Then:
+\begin{enumerate}
+    \item If $\rho(X) = 1$, then $X$ belongs to one of 17 deformation families,
+    distinguished by the degree $(-K_X)^3$ and the index $r$.
+    \item If $\rho(X) > 1$, then $X$ can be obtained from a Fano three-fold
+    of Picard number 1 by a sequence of blow-ups of smooth curves.
+\end{enumerate}
+\end{theorem}
+
+The 17 families of Fano three-folds with Picard number 1 are distinguished by
+their index $r$ and the degree $d = (-K_X)^3$. For index $r \geq 2$, the
+classification is complete and explicit. The families with $r = 1$ are more
+complicated and were classified by Mori and Mukai.
+
+The degree $d = (-K_X)^3$ satisfies $1 \leq d \leq 64$, with $d = 64$ giving
+$\mathbb{P}^3$ and $d = 54$ giving the quadric $Q \subset \mathbb{P}^4$. The
+possible values of $d$ depend on the index $r$, and the classification involves
+a careful analysis of the anticanonical linear system $|-K_X|$.
+
+For $r = 1$, the degree $d$ can take values $1 \leq d \leq 64$ with various
+constraints. The case $d = 1$ is particularly interesting: a Fano three-fold
+of index 1 and degree 1 is a double cover of a weighted projective space
+$\mathbb{P}(1,1,1,2,3)$ branched along a surface of degree 6.
+
+\subsection*{Existence of Flips}
+
+A major breakthrough in Mori's work was the proof of the existence of flips.
+A flip is a birational transformation that replaces a curve with negative
+intersection with the canonical divisor by another curve with positive
+intersection. Flips are necessary for the MMP to proceed beyond the first step.
+
+\begin{theorem}[Mori's Flip Theorem]
+Let $X$ be a smooth three-fold and let $R$ be an extremal ray with $K_X \cdot
+R < 0$. Then the flip of $R$ exists: there exists a birational morphism
+$\phi^+: X^+ \to Y$ such that $K_{X^+}$ is ample over $Y$ and $\phi^+$ is an
+isomorphism in codimension 1.
+\end{theorem}
+
+The proof of the flip theorem is highly technical and involves several steps:
+\begin{enumerate}
+    \item Constructing the flip as a limit of a sequence of blow-ups;
+    \item Using the bend-and-break lemma to produce rational curves on the flip;
+    \item Applying the classification of varieties of small degree to control
+    the geometry;
+    \item Proving that the flip is projective and has the required properties.
 \end{enumerate}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The existence of flips in dimension 3 opened the door to the full minimal model
+program. However, the existence of flips in higher dimensions remained open for
+many years. The general case was finally resolved by Birkar, Cascini, Hacon,
+and McKernan in 2010.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection*{Termination of Flips}
 
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
+In dimension 3, Mori also proved that the MMP terminates: a sequence of flips
+must eventually stop. This is a consequence of the fact that the Picard number
+decreases at each step, and there are only finitely many possible Picard numbers.
 
-\begin{exercise} Show that the cone of effective curves on a smooth projective variety is generated by rational curves (Mori's bend-and-break). \end{exercise}
+The termination of flips in higher dimensions is still open in general, but
+significant progress has been made. For varieties of dimension 4, the termination
+of flips has been proved by Birkar and others. The general case remains one of
+the central open problems in birational geometry.
 
-\begin{exercise} Verify that $\\mathbb{CP}^n$ is a Mori fiber space by computing its anticanonical bundle. \end{exercise}
+\section{Impact of This Discovery}
 
-\begin{exercise} Prove that a smooth projective variety with $K_X < 0$ contains a rational curve through every point. \end{exercise}
+Mori's theory provides the foundation for modern birational geometry. The cone
+theorem and bend-and-break technique have been generalized to many settings:
+singular varieties, K\"ahler manifolds, and non-archimedean geometry. The
+minimal model program is the central organizing principle for the classification
+of algebraic varieties.
 
-\begin{exercise} Classify all smooth Fano 3-folds of Picard number 1. \end{exercise}
+The classification of Fano three-folds, completed by Iskovskikh, Mori, and
+Mukai, shows that there are exactly 105 deformation families of smooth Fano
+three-folds. This classification is one of the great achievements of 20th
+century algebraic geometry and provides a complete picture of the building
+blocks of three-fold geometry.
+
+The MMP has been extended to the setting of log geometry. The log MMP deals
+with pairs $(X, \Delta)$, where $\Delta$ is a divisor with coefficients in $[0,1]$.
+The log cone theorem, proved by Kawamata and others, extends Mori's cone theorem
+to the log setting, providing a more flexible framework for birational geometry.
+
+The relationship between the MMP and K\"ahler--Einstein metrics, discovered by
+Tian, Donaldson, and others, connects birational geometry to differential
+geometry. The existence of a K\"ahler--Einstein metric on a Fano manifold is
+equivalent to the existence of a ``K\"ahler--Ricci soliton,'' and the stability
+of the manifold in the sense of GIT is necessary and sufficient for the
+existence of such a metric. This is the Yau--Tian--Donaldson conjecture, proved
+by Chen--Donaldson--Sun and Tian.
+
+Mori's work also influenced the study of rational curves on algebraic varieties.
+The enumerative geometry of rational curves---counting rational curves of given
+degree on a variety---is now a major area of research, connected to
+Gromov--Witten invariants and mirror symmetry. The bend-and-break lemma
+provides the foundation for understanding how rational curves can be deformed
+and degenerated.
+
+The MMP for three-folds has been implemented in computer algebra systems by
+the Birational Geometry Project. The explicit classification of all birational
+types of three-folds, and the construction of explicit minimal models, is now
+feasible for many specific three-folds. This computational aspect has made the
+MMP a practical tool for algebraic geometers.
+
+The notion of a ``minimal model'' has been refined to account for the presence
+of singularities. The canonical model of a variety of general type, which has
+mild singularities (log terminal singularities), provides a unique birational
+representative. The existence of canonical models in all dimensions, proved by
+Birkar, Cascini, Hacon, and McKernan, is a major achievement of the MMP.
+
+\subsection*{Rational Curves and Mori Space}
+
+Mori's bend-and-break lemma led to the introduction of the \textbf{Mori space}
+(or Kontsevich moduli space) $\overline{M}_{0,n}(X, \beta)$, which parametrizes
+stable maps from genus 0 curves to $X$ with degree $\beta$. This space is a
+fundamental tool in enumerative geometry and Gromov--Witten theory.
+
+The Mori space has the following properties:
+\begin{itemize}
+    \item It is a proper algebraic space (and a scheme in many cases);
+    \item It carries evaluation maps $\text{ev}_i: \overline{M}_{0,n}(X, \beta) \to X$
+    sending a stable map to the image of the $i$-th marked point;
+    \item The Gromov--Witten invariants are defined by integrating cohomology
+    classes over the virtual fundamental class of $\overline{M}_{0,n}(X, \beta)$.
+\end{itemize}
+
+These invariants count the number of rational curves of degree $\beta$ passing
+through specified cycles in $X$, and they play a central role in mirror symmetry
+and string theory.
+
+\subsection*{Rationally Connected Varieties}
+
+Mori's work led to the theory of rationally connected varieties. A smooth
+projective variety $X$ is \textbf{rationally connected} if any two general
+points can be joined by a rational curve. This property is birational: if $X$
+and $Y$ are birational, then $X$ is rationally connected if and only if $Y$
+is.
+
+Key results in the theory of rationally connected varieties include:
+\begin{itemize}
+    \item A Fano variety is rationally connected (proven using bend-and-break);
+    \item A rationally connected variety has trivial rational cohomology in
+    positive degrees;
+    \item Rational connectedness is preserved under deformation and fibration.
+\end{itemize}
+
+The study of rationally connected varieties has applications to the
+generalized Hodge conjecture, the Bloch--Kas--Lieberman conjecture, and the
+study of algebraic cycles.
+
+\subsection*{Applications to String Theory}
+
+Mori's work has profound connections to string theory. The minimal model program
+provides the geometric framework for understanding the compactification of
+extra dimensions in string theory. Calabi--Yau three-folds, which are central
+to string compactification, are closely related to Fano three-folds through
+duality.
+
+The mirror symmetry conjecture, which relates the enumerative geometry of
+rational curves on a Calabi--Yau three-fold to the variation of Hodge structure
+on its mirror, has been verified in many cases using techniques from the MMP.
+The prediction of the number of rational curves of a given degree on a quintic
+three-fold in $\mathbb{P}^4$ was one of the most famous successes of mirror
+symmetry.
+
+\section{Modern Views and Improvements}
+
+The MMP for higher-dimensional varieties has been developed by many researchers.
+Kawamata, Shokurov, Birkar, Cascini, Hacon, and McKernan have proved the
+existence of minimal models for varieties of general type in all dimensions.
+The weak log canonical approximation theorem and the termination of flips are
+major open problems.
+
+The connection to K\"ahler geometry has led to new approaches to the MMP. The
+existence of K\"ahler--Einstein metrics on Fano manifolds, proved by
+Chen--Donaldson--Sun and Tian, shows that the MMP is closely related to the
+existence of canonical metrics. The Yau--Tian--Donaldson conjecture, now a
+theorem, provides a differential-geometric characterization of the MMP.
+
+The MMP has been extended to the non-archimedean setting. Berkovich spaces and
+adic spaces provide a framework for studying birational geometry over
+non-archimedean fields. The MMP for these spaces, developed by Musta\c{t}\v{a},
+Nicaise, and others, has applications to arithmetic geometry and number theory.
+
+The relationship between the MMP and tropical geometry is a recent development.
+Tropical varieties, which are piecewise-linear objects associated to algebraic
+varieties, encode the combinatorics of the MMP. The tropical MMP, studied by
+Gross, Siebert, and others, provides a combinatorial framework for birational
+geometry.
+
+Mori himself has continued to make major contributions to algebraic geometry.
+His work on the classification of algebraic varieties, the theory of Fano
+manifolds, and the study of rational curves has influenced generations of
+mathematicians. The minimal model program remains one of the most active areas
+of research in algebraic geometry, with applications ranging from string theory
+to number theory.
+
+The K\"ahler--Einstein metric on Fano manifolds, now known to exist if and only
+if the manifold is K-polystable, connects Mori's program to the theory of moduli
+spaces. The moduli space of K-polystable Fano manifolds is a natural
+compactification of the moduli space of smooth Fano manifolds, and its
+construction is an active area of research.
+
+The recent work of Birkar on the existence of minimal models for varieties of
+general type uses the theory of asymptotic singularities and the LMMP (log
+minimal model program). The key innovation is the use of the ``accidentally''
+good behavior of log canonical singularities under the MMP, which ensures
+termination of flips in many important cases.
+
+The modern approach to the MMP uses the language of \textbf{singularities of pairs}.
+A pair $(X, \Delta)$ consists of a normal variety $X$ and a $\mathbb{Q}$-divisor
+$\Delta$ such that $K_X + \Delta$ is $\mathbb{Q}$-Cartier. The singularities of
+the pair are classified by the discrepancies $a(E, X, \Delta)$, where $E$ is a
+divisor over $X$. The key singularities are:
+\begin{itemize}
+    \item \textbf{Terminal}: $a(E, X, \Delta) > 0$ for all exceptional divisors $E$;
+    \item \textbf{Canonical}: $a(E, X, \Delta) \geq 0$ for all exceptional divisors $E$;
+    \item \textbf{Log terminal}: $a(E, X, \Delta) > -1$ for all exceptional divisors $E$;
+    \item \textbf{Log canonical}: $a(E, X, \Delta) \geq -1$ for all exceptional divisors $E$.
+\end{itemize}
+
+The MMP is carried out in the category of pairs with log terminal singularities.
+The key theorems---existence of flips, termination of flips, and existence of
+minimal models---have all been proved for pairs with log terminal singularities
+in all dimensions, thanks to the work of Birkar, Cascini, Hacon, and McKernan.
+
+The theory of \textbf{asympotic singularities}, developed by Hacon and McKernan,
+provides a powerful tool for proving the existence of flips in all dimensions.
+The key idea is to study the asymptotic behavior of the linear series $|m(K_X +
+\Delta)|$ for large $m$, and to use this to construct the flip as a limit of
+a sequence of blow-ups.
+
+The \textbf{ACC (ascending chain condition) conjecture} for log canonical thresholds
+is a fundamental open problem in the MMP. The conjecture states that the set of
+log canonical thresholds of pairs $(X, \Delta)$ is an ACC set, i.e., it contains
+no infinite strictly increasing sequences. This conjecture, if true, would have
+many important consequences for the structure of singularities.
+
+The relationship between the MMP and the theory of \textbf{moduli spaces} has
+become increasingly important. The moduli space of canonically polarized
+varieties, constructed by Koll\'ar, Mori, and others, provides a geometric
+framework for understanding the MMP. The moduli space of stable varieties
+generalizes the moduli space of curves and provides a compactification of the
+moduli space of smooth varieties of general type.
+
+Mori's work continues to inspire new research in algebraic geometry. The
+development of the MMP for pairs with log terminal singularities, the study of
+rational curves on Fano varieties, and the connections to mirror symmetry and
+string theory are all active areas of research that build on Mori's
+foundational contributions.
+
+The \textbf{effective MMP} has emerged as a major research direction. The goal
+is to make the abstract existence proofs of the MMP into effective algorithms
+that can be used to construct explicit minimal models. Recent work by
+Birkar, Cascini, Hacon, and McKernan has provided effective bounds on the
+discriminant of the minimal model program, but the problem of computing minimal
+models explicitly remains challenging.
+
+The study of \textbf{Fano varieties in positive characteristic} is another active
+area of research. Mori's techniques, developed in characteristic zero, require
+modification in positive characteristic. The existence of flips and minimal
+models in positive characteristic is still largely open, although significant
+progress has been made by Birkar, Waldron, and others.
+
+The connection between the MMP and \textbf{non-Archimedean geometry} has led to
+new insights. The theory of Berkovich spaces and the study of degenerations of
+varieties have provided a geometric framework for understanding the MMP. The
+work of Boucksom, Hsiao, Guedj, and others has shown that the MMP can be
+formulated in terms of the existence of canonical metrics on non-Archimedean
+line bundles.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Mori proved the cone theorem, showing that the cone of curves on a projective variety is controlled by rational curves of small degree. His bend-and-break technique and the Mori fiber space program initiated the birational classification of algebraic varieties, analogous to the Enriques-Kodaira classification in dimension 2.
-
-\section{28. References and Further
-Reading}\label{ch1990shigefumimori:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch1990shigefumimori:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1990 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-1990
-\item
- Wolf Prize Announcement, 2005.
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch1990shigefumimori:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Mori, S. ``Projective manifolds with ample tangent bundles.''
- \emph{Ann. Math.} 110, 593--606, 1979.
-\item
- Mori, S. ``Threefolds whose canonical bundles are not numerically
- effective.'' \emph{Ann. Math.} 116, 133--176, 1982.
-\item
- Mori, S. ``Flip theorem and the existence of minimal models for
- 3-folds.'' \emph{J. AMS} 1, 117--253, 1988.
-\item
- Kollár, J. and Mori, S. \emph{Birational Geometry of Algebraic
- Varieties}. Cambridge Tracts in Mathematics 134, 1998.
-\item
- Kawamata, Y., Matsuda, K., and Matsuki, K. ``Introduction to the
- minimal model problem.'' \emph{Adv. Stud. Pure Math.} 10, 283--360,
- 1987.
-\item
- Birkar, C., Cascini, P., Hacon, C., and McKernan, J. ``Existence of
- minimal models for varieties of log general type.'' \emph{J. AMS} 23,
- 405--468, 2010.
-\end{itemize}
-
-\subsection{Textbooks}\label{ch1990shigefumimori:textbooks}
-
-\begin{itemize}
-\tightlist
-\item
- Kollár, J. \emph{Rational Curves on Algebraic Varieties}. Springer,
- Ergebnisse 32, 1996.
-\item
- Matsuki, K. \emph{Introduction to the Mori Program}. Springer
- Universitext, 2002.
-\item
- Debarre, O. \emph{Higher-Dimensional Algebraic Geometry}. Springer
- Universitext, 2001.
-\item
- Lazarsfeld, R. \emph{Positivity in Algebraic Geometry} I--II.
- Springer, 2004.
-\item
- Corti, A. (ed.) \emph{Flips for 3-folds and 4-folds}. Oxford
- University Press, 2007.
-\item
- Mori, S. ``The minimal model program.'' \emph{ICM 1990 Proceedings},
- Kyoto.
-\end{itemize}
-
-\subsection{Biography}\label{ch1990shigefumimori:biography}
-
-\begin{itemize}
-\tightlist
-\item
- Kollár, J. ``The Work of Shigefumi Mori.'' ICM 1990 Laudatio, Kyoto.
-\item
- Reid, M. ``The Mori Program.'' \emph{Notices of the AMS}, 37, 1990.
-\item
- Hartshorne, R. ``The Work of Shigefumi Mori.'' \emph{The Mathematical
- Intelligencer} 13, 1991.
-\item
- Clemens, H. and Kollár, J. ``Shigefumi Mori.'' \emph{Fields Medalists'
- Laudations}, IMU, 1990.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{29. Conclusion and Lasting
-Impact}\label{ch1990shigefumimori:conclusion-and-lasting-impact}
-
-Shigefumi Mori's contributions to algebraic geometry are among the most
-significant of the late 20th century. His work substantially transformed
-birational geometry, turning it from a collection of ad hoc techniques
-into a systematic, programmatic subject.
-
-\subsection{29.1 The Mori Program}\label{ch1990shigefumimori:the-mori-program}
-
-The minimal model program that Mori initiated has become the dominant
-framework for studying algebraic varieties up to birational equivalence.
-Its influence extends throughout algebraic geometry and into related
-fields: - \textbf{Classification theory:} The MMP provides a systematic
-approach to classifying algebraic varieties, analogous to the
-classification of compact complex surfaces by Kodaira and others. -
-\textbf{Moduli spaces:} MMP techniques are essential for studying the
-birational geometry of moduli spaces of curves, surfaces, and
-higher-dimensional varieties. - \textbf{Arithmetic geometry:} The MMP
-has applications to the study of rational points and the geometry of
-arithmetic varieties. - \textbf{Complex differential geometry:} The
-relationships between the MMP, Kähler--Einstein metrics, and stability
-conditions are active research areas.
-
-\subsection{29.2 Key Achievements}\label{ch1990shigefumimori:key-achievements}
-
-Mori's important achievements include: 1. The proof of the
-Hartshorne conjecture (1979), introducing the bend-and-break method. 2.
-The development of the cone theorem and the contraction theorem (1982).
-3. The classification of threefold terminal singularities. 4. The
-existence of flips for threefolds (1988), completing the threefold MMP.
-5. The classification of Fano threefolds (with Mukai and others). 6. The
-development of the theory of rational curves on algebraic varieties. 7.
-The foundations of the minimal model program for higher dimensions. 8.
-The classification of threefold extremal contractions. 9. The
-characterization of uniruled varieties via the existence of rational
-curves.
-
-\subsection{29.3 Legacy}\label{ch1990shigefumimori:legacy}
-
-Mori's work continues to shape algebraic geometry. The MMP has been
-extended to higher dimensions by Birkar, Cascini, Hacon, McKernan, and
-others, culminating in the proof of finite generation of the canonical
-ring. The techniques Mori pioneered --- extremal rays, the cone theorem,
-the bend-and-break method --- are now standard tools used by algebraic
-geometers worldwide.
-
-\subsection{29.4 Open Problems}\label{ch1990shigefumimori:open-problems}
-
-Despite the tremendous progress inspired by Mori's work, several major
-problems remain open: - \textbf{The abundance conjecture:} Does every
-minimal model have semiample canonical divisor? Proved for dimension up
-to 3 and for varieties of general type, but open in general. -
-\textbf{The existence of minimal models in higher dimensions:} While
-proved for varieties of log general type, the existence of minimal
-models for arbitrary varieties remains an active area of research. -
-\textbf{The classification of higher-dimensional Fano varieties:} The
-boundedness of Fano varieties of fixed dimension has been proved, but a
-complete classification is far from reach. - \textbf{The rationality
-problem:} Determining which algebraic varieties are rational remains one
-of the deepest problems in the subject, and MMP techniques are essential
-for approaching it.
-
-\subsection{29.5 Legacy}\label{ch1990shigefumimori:legacy-1}
-
-More than three decades after his Fields Medal, Mori's ideas remain at
-the forefront of research in birational geometry, and his vision of a
-systematic birational classification of algebraic varieties continues to
-drive the field forward. His work has inspired two generations of
-algebraic geometers and has established the framework within which
-birational geometry is pursued today.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1974davidbryantmumford:david-bryant-mumford-fields-medal-1974-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Mori's work extends Mumford's algebraic geometry.
-  \item \textbf{\hyperref[ch2018caucherbirkar:caucher-birkar-fields-medal-2018-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Birkar extended Mori's minimal model program.
-\end{itemize}
-
-\emph{(End of report)}
+Mori proved the cone theorem and developed the minimal model program for
+three-folds, showing that algebraic varieties can be classified up to birational
+equivalence by constructing canonical representatives. His bend-and-break
+technique and the theory of extremal rays provide the foundation for modern
+birational geometry, connecting to K\"ahler geometry, Fano manifolds, and the
+classification of rational curves. The classification of Fano three-folds
+(105 deformation families) and the proof of flip existence in dimension 3 are
+among the greatest achievements in algebraic geometry. The minimal model program,
+now extended to all dimensions, remains one of the most active areas of
+research in mathematics.

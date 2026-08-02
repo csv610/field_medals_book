@@ -836,6 +836,58 @@ CHAPTER_DATA = {
         ],
         "summary": "Viazovska proved that the E8 lattice gives the densest sphere packing in 8 dimensions, and (with collaborators) that the Leech lattice is optimal in 24 dimensions. Her proof uses modular forms and the theory of lattices to construct explicit linear programming bounds, settling the sphere packing problem in these dimensions after centuries of effort."
     },
+    "2026_yu_deng": {
+        "name": "Yu Deng", "year": "2026",
+        "field": "Partial Differential Equations, Mathematical Physics",
+        "prereqs": "Partial differential equations, statistical mechanics, Newtonian mechanics, functional analysis, probability theory.",
+        "objectives": "Explain Hilbert's sixth problem and its modern formulation; describe the Boltzmann equation and its role in kinetic theory; understand the strategy for deriving the Boltzmann equation from particle dynamics.",
+        "exercises": [
+            r"Explain why the Boltzmann equation requires the molecular chaos assumption and why this assumption is difficult to justify rigorously.",
+            r"Describe the collision ledger approach: how does tracking collision histories enable the derivation of kinetic equations from particle dynamics?",
+            r"Explain the connection between wave turbulence theory and the derivation of wave kinetic equations.",
+            r"Discuss why Lanford's theorem was restricted to short timescales and how Deng's work overcomes this limitation.",
+        ],
+        "summary": "Deng resolved a special case of Hilbert's sixth problem by rigorously deriving the Boltzmann equation from Newtonian dynamics. His collision ledger framework, developed initially for wave turbulence, enabled the control of correlations in repeated particle collisions, establishing the first derivation valid for all positive times."
+    },
+    "2026_john_pardon": {
+        "name": "John Pardon", "year": "2026",
+        "field": "Symplectic Geometry, Topology",
+        "prereqs": "Differential topology (manifolds, vector bundles), symplectic geometry (symplectic manifolds, Lagrangian submanifolds), basic algebraic topology (homology, cohomology), knot theory basics.",
+        "objectives": "Explain the concept of knot distortion and its significance; describe Fukaya categories and their role in symplectic geometry; understand the problem of counting holomorphic curves.",
+        "exercises": [
+            r"Define the distortion of a knot and explain why the distortion of a round circle is 1.",
+            r"State the Hilbert-Smith conjecture and explain why Pardon's result for 3-manifolds is significant.",
+            r"Explain what a virtual fundamental cycle is and why it is needed in the definition of Gromov-Witten invariants.",
+            r"Describe the role of Fukaya categories in homological mirror symmetry.",
+        ],
+        "summary": "Pardon solved a 30-year-old problem of Gromov on knot distortion, proved the Hilbert-Smith conjecture for rough group actions on 3-manifolds, and developed new foundations for virtual fundamental cycles and Fukaya categories in symplectic geometry."
+    },
+    "2026_jacob_tsimerman": {
+        "name": "Jacob Tsimerman", "year": "2026",
+        "field": "Number Theory, Algebraic Geometry",
+        "prereqs": "Algebraic geometry (varieties, moduli spaces), number theory (Galois theory, arithmetic of elliptic curves), basic complex analysis.",
+        "objectives": "State the André-Oort conjecture and explain its significance; describe the strategy of combining model theory with arithmetic geometry; understand the role of o-minimal structures in algebraic geometry.",
+        "exercises": [
+            r"Explain what a Shimura variety is and why special points on Shimura varieties are arithmetically significant.",
+            r"Describe the Pila-Wilkie theorem and explain how it is used in the proof of the André-Oort conjecture.",
+            r"Explain the concept of a Galois orbit of a special point and why lower bounds on its size are important.",
+            r"State Griffiths' conjecture and describe how o-minimal GAGA provides a framework for its proof.",
+        ],
+        "summary": "Tsimerman proved the full André-Oort conjecture, classifying algebraic subvarieties of Shimura varieties that are determined by their arithmetic content. He also developed o-minimal GAGA, a framework relating analytic and algebraic structures, and proved Griffiths' conjecture in Hodge theory."
+    },
+    "2026_hong_wang": {
+        "name": "Hong Wang", "year": "2026",
+        "field": "Harmonic Analysis, Geometric Measure Theory",
+        "prereqs": "Real analysis (Lebesgue measure, Hausdorff dimension), Fourier analysis (Fourier transform, Plancherel theorem), basic measure theory, familiarity with the wave equation.",
+        "objectives": "State the Kakeya conjecture and explain its significance; describe the strategy behind the proof of the 3D Kakeya conjecture; understand the connection between Kakeya-type problems and harmonic analysis.",
+        "exercises": [
+            r"Explain why a Kakeya set in the plane can have zero area while having Hausdorff dimension 2.",
+            r"Describe the sticky vs. non-sticky dichotomy used in the proof of the 3D Kakeya conjecture.",
+            r"Explain the connection between the Kakeya conjecture and the Fourier restriction conjecture.",
+            r"Discuss why the local smoothing conjecture is considered one of the 'holy grails' of harmonic analysis.",
+        ],
+        "summary": "Wang proved the three-dimensional Kakeya conjecture, establishing that every Kakeya set in R^3 has Hausdorff dimension 3. Her proof, with Zahl, introduced a sticky/non-sticky dichotomy and iterative dimension-lifting argument. She also proved the 2D local smoothing conjecture and the 2D Furstenberg set conjecture."
+    },
 }
 
 def find_chapter_file(chapter_key):

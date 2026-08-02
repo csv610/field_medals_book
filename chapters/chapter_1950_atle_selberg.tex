@@ -1,1082 +1,152 @@
-\chapter{Atle Selberg --- Fields Medal 1950}\label{ch1950atleselberg:atle-selberg-fields-medal-1950-a-comprehensive-report}
+\chapter{1950:Atle Selberg}\label{ch1950atleselberg:atle-selberg-fields-medal-1950-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \textbf{Prepared:} July 2026 \textbf{Subject:} Atle Selberg (b. June 14,
-1917, Langesund, Norway) \textbf{Position:} Professor, Institute for
-Advanced Study, Princeton \textbf{Doctoral Advisor:} Axel Thue / Carl
-Ludwig Siegel (University of Oslo / informal) \textbf{Fields Medal
-Citation:} \emph{``For his important contributions to sieve methods, the
-zeros of the Riemann zeta function, and his elementary proof of the
-prime number theorem.''}
+1917, Langesund, Norway; d. August 8, 2007) \textbf{Position:} Professor, Institute for
+Advanced Study, Princeton \textbf{Doctoral Advisor:} Axel Thue (University of Oslo); Carl Ludwig Siegel (informal) \textbf{Fields Medal Citation:} \emph{``For his important contributions to sieve methods, the zeros of the Riemann zeta function, and his elementary proof of the prime number theorem.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Introduction}\label{ch1950atleselberg:introduction}
-
-Atle Selberg was awarded the Fields Medal in 1950 for his significant
-contributions to number theory, particularly the development of the
-\textbf{Selberg sieve}, the \textbf{elementary proof of the prime number
-theorem}, and his groundbreaking work on the \textbf{zeros of the
-Riemann zeta function}. He is a prominent analytic number theorist of the twentieth century.
 
 \begin{prereqs} Elementary number theory (congruences, Euler's totient function), basic complex analysis, Fourier series. \end{prereqs}
 
 \begin{objectives} State the Selberg sieve and explain its principle; describe the trace formula and its significance; understand Selberg's contribution to the prime number theorem for arithmetic progressions. \end{objectives}
 
+\section{Problem History}
 
-Selberg's major contributions include:
+The Riemann zeta function $\zeta(s) = \sum_{n=1}^\infty n^{-s}$, central to analytic number theory, encodes the distribution of primes through its Euler product $\zeta(s) = \prod_p (1-p^{-s})^{-1}$ for $\operatorname{Re}(s) > 1$. The Riemann hypothesis---that all non-trivial zeros lie on the critical line $\operatorname{Re}(s) = 1/2$---remains the most important open problem in mathematics. Before Selberg, Hardy and Littlewood had shown that infinitely many zeros lie on the critical line, but gave no quantitative density estimate. The problem of determining what proportion of zeros lie on the critical line was considered intractable with existing methods, as it required controlling the argument of $\zeta(s)$ in the critical strip with unprecedented precision.
 
-\begin{itemize}
-\tightlist
-\item
- The \textbf{Selberg sieve}, a powerful and flexible method for
- obtaining upper bounds on the number of primes in subsets of the
- integers, which has become a standard tool in analytic number theory.
-\item
- The \textbf{elementary proof of the prime number theorem} (with Paul
- Erdős), showing that the asymptotic distribution of primes can be
- proved without complex analysis.
-\item
- The \textbf{proof that a positive proportion of the zeros of the
- Riemann zeta function lie on the critical line}, the first
- unconditional result of its kind.
-\item
- The \textbf{Selberg trace formula}, a significant identity relating the
- spectrum of the Laplacian on a Riemann surface to the lengths of
- closed geodesics, linking number theory, spectral theory, and
- automorphic forms.
-\item
- The \textbf{Selberg class} of L-functions, an axiomatic framework for
- studying the properties of Dirichlet series with functional equations
- and Euler products.
-\item
- The \textbf{theory of lattices in semisimple Lie groups}, including
- the \textbf{Selberg conjecture} on the arithmeticity of lattices.
-\item
- The \textbf{Rankin--Selberg method} (with Robert Rankin), a
- fundamental technique for studying L-functions attached to automorphic
- forms.
-\end{itemize}
+The prime number theorem $\pi(x) \sim x/\log x$, proved in 1896 by Hadamard and de la Vall\'{e}e Poussin using complex analysis (non-vanishing of $\zeta(1+it)$), was widely believed to require deep analytic methods. For decades, an elementary proof---using only real-variable methods---was considered impossible. The difficulty lay in the fact that all known proofs relied on the analytic continuation of $\zeta(s)$ to the critical strip and the study of its zeros. Chebyshev had established in the 1850s that $\pi(x)$ is sandwiched between constant multiples of $x/\log x$, but the exact asymptotic required understanding the fine structure of the zeros.
 
-This report provides a comprehensive overview of Selberg's life, his
-monumental contributions to number theory, and the lasting impact of his
-work.
+Sieve theory, initiated by Viggo Brun in the 1910s, aimed to estimate the number of primes in various sets. The Brun sieve gave weak upper bounds but was the first systematic approach to such problems. No completely satisfactory elementary sieve was known. The problem of finding primes in arithmetic progressions $\pi(x; q, a) \sim x/(\phi(q) \log x)$ required new techniques beyond the classical sieve. The large sieve, which Selberg developed in the late 1940s, was designed to estimate sums of the form $\sum_q \sum_a \chi(a) f(a/q)$ over arithmetic progressions, providing optimal bounds for problems involving primes in arithmetic progressions, twin primes, and the distribution of rational points on varieties.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+In 1939, Selberg, conducting research in isolation during the German occupation of Norway, proved that a positive proportion of the zeros of $\zeta(s)$ lie on the critical line---the first quantitative result of its kind, establishing that $c_0 T$ zeros up to height $T$ lie on $\operatorname{Re}(s) = 1/2$ for some $c_0 > 0$. This was a stunning achievement: while Hardy and Littlewood had shown the existence of infinitely many zeros on the line, they could not quantify it. Selberg's proof used a remarkable identity now called the ``Selberg symmetry formula'' and estimates for the mean square of $\zeta(s)$ on the critical line.
 
-\section{Biographical Background}\label{ch1950atleselberg:biographical-background}
+Selberg's work was profoundly influenced by Ramanujan's notebooks, which he studied intensively while recovering from tuberculosis during the war. The Ramanujan tau function $\tau(n)$, defined by $\Delta(z) = \sum \tau(n) q^n$, and Ramanujan's identity involving divisor functions, provided templates for Selberg's work on the zeta function and automorphic forms. The connection to Ramanujan's work was not coincidental: both mathematicians shared a talent for discovering unexpected identities involving arithmetic functions. Selberg once remarked that Ramanujan's work showed that deep truths about numbers can sometimes be found by intuition alone, without the machinery of complex analysis.
 
-\subsection{Early Life and
-Education}\label{ch1950atleselberg:early-life-and-education}
+The \textbf{Selberg trace formula} connects the spectrum of the Laplacian on a hyperbolic surface to the lengths of closed geodesics, establishing a deep duality between geometry and analysis. This formula was motivated by the analogy with the Poisson summation formula and the study of the theta function $\theta(t) = \sum e^{-\pi n^2 t}$. Selberg's insight was to view the spectrum of the Laplacian on a compact Riemann surface as a ``dual'' to the geometric data of geodesic lengths, analogous to how the Fourier transform relates position and momentum space. The formula can be seen as a non-abelian generalization of the Poisson summation formula, replacing the additive characters with the spectral data of the Laplacian.
 
-Atle Selberg was born on June 14, 1917, in Langesund, Norway, the
-youngest of nine children. His father was a mathematician and two of his
-brothers, Henrik and Sigmund, also became mathematicians. He showed
-early mathematical talent and entered the University of Oslo in 1935,
-where he began his research on the Riemann zeta function.
+The problem of extending the trace formula to non-compact surfaces and higher-dimensional symmetric spaces remained open for decades. The trace formula has since become a central tool in the theory of automorphic forms, with applications to the Langlands program, the theory of $L$-functions, and quantum chaos. The connection between the trace formula and random matrix theory, discovered by Conrey, Farmer, Keating, Rubinstein, and Snaith, has further enriched this area, revealing deep connections between number theory and statistical physics.
 
-\subsection{Academic Career}\label{ch1950atleselberg:academic-career}
+The \textbf{elementary proof of the prime number theorem} remained the most celebrated open problem in number theory. Many mathematicians had attempted to find an elementary proof, but all had failed. The difficulty was that the known methods---whether from complex analysis or from the theory of Dirichlet series---all seemed to require information about the zeros of $\zeta(s)$. Selberg's identity, discovered in 1949, provided the key that unlocked this problem. Combined with a clever argument by Erd\H{o}s, it showed that the prime number theorem could be proved without any reference to the analytic properties of $\zeta(s)$.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{1935--1942:} Student and researcher, University of Oslo.
-\item
- \textbf{1942:} Doctoral dissertation, University of Oslo.
-\item
- \textbf{1947--1948:} Member, Institute for Advanced Study, Princeton.
-\item
- \textbf{1948--1949:} Associate Professor, Syracuse University.
-\item
- \textbf{1949--1951:} Permanent Member, Institute for Advanced Study.
-\item
- \textbf{1950:} Fields Medal awarded at the ICM in Cambridge,
- Massachusetts.
-\item
- \textbf{1951--1987:} Professor, Institute for Advanced Study,
- Princeton.
-\item
- \textbf{1987:} Professor Emeritus, Institute for Advanced Study.
-\item
- \textbf{2007:} Died in Princeton, New Jersey at age 90.
-\end{itemize}
+The large sieve inequality, which Selberg developed in the late 1940s, states that for any complex numbers $a_n$:
+\[\sum_q \sum_{a \bmod q}^* \left| \sum_n a_n e\left(\frac{an}{q}\right) \right|^2 \leq (Q^2 + N) \sum_n |a_n|^2\]
+where the sum over $a$ is restricted to $(a,q)=1$, and the sum over $q$ runs from $1$ to $Q$. This inequality has applications to the distribution of primes in arithmetic progressions, the twin prime problem, and the study of exponential sums.
 
-\subsection{Doctoral Work}\label{ch1950atleselberg:doctoral-work}
+Selberg's work on the zeros of $\zeta(s)$ also included important estimates for the moments of the zeta function. He proved that $\int_0^T |\zeta(1/2+it)|^{2k} \, dt \sim C_k T (\log T)^{k^2}$ for positive integers $k$, confirming a conjecture of Hardy and Littlewood. This result has deep connections to the theory of random matrices and the statistics of zeta zeros.
 
-Selberg's doctoral work, conducted largely in isolation during the
-German occupation of Norway, focused on the Riemann zeta function. His
-thesis contained the first proof that a positive proportion of the zeros
-lie on the critical line, a result that astonished the mathematical
-world.
+The study of the Riemann zeta function has a rich history dating back to Euler, who discovered the Euler product formula. Riemann's seminal 1859 paper established the connection between the zeros of $\zeta(s)$ and the distribution of primes. The explicit formula, which relates sums over primes to sums over zeros, has been a central tool in analytic number theory. Selberg's contributions refined and extended many of these classical results.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\section{How Was It Solved}
 
-\section{The Riemann Zeta Function}\label{ch1950atleselberg:the-riemann-zeta-function}
+Selberg's contributions were multifaceted. For the zeros of $\zeta(s)$, he used estimates for the mean square $\int_0^T |\zeta(1/2+it)|^2 \, dt \sim T \log T$ and moments of $\zeta(s)$ to prove that a positive proportion of zeros lie on the critical line. He also proved the fundamental estimate $S(T) = O(\log T)$ for the argument of $\zeta(s)$ on the critical line, which is the best possible bound. This estimate is essential for the zero counting function $N(T) = \frac{T}{2\pi} \log \frac{T}{2\pi} - \frac{T}{2\pi} + 1 + S(T) + O(1/T)$, which gives the precise number of zeros of $\zeta(s)$ with imaginary part in $(0, T]$.
 
-\subsection{Definition and Basic
-Properties}\label{ch1950atleselberg:definition-and-basic-properties}
+The \textbf{Selberg theta function} $\theta(t) = \arg \pi^{-it/2} \Gamma(1/4 + it/2)$ is defined in terms of the Gamma function and plays a central role in the theory of the Riemann zeta function. Selberg proved that the argument $S(T)$ of $\zeta(1/2 + iT)$ satisfies $S(T) = O(\log T)$, which follows from the Riemann--von Mangoldt formula and careful analysis of the error term. The proof uses the functional equation $\zeta(s) = \chi(s) \zeta(1-s)$ and the Stirling approximation for $\Gamma(s)$. The key insight is that the argument of $\zeta(s)$ on the critical line can be controlled by the argument of the Gamma factor, which is well understood.
 
-The \textbf{Riemann zeta function} is defined for \(\text{Re}(s) > 1\)
-by:
+The \textbf{Selberg sieve} is the most flexible of all sieve methods. Given a set $\mathcal{A}$ of integers and a set of primes $\mathcal{P}$, the sieve estimates $S(\mathcal{A}, \mathcal{P}, z) = \#\{a \in \mathcal{A} : p \nmid a \text{ for all } p \in \mathcal{P}, p < z\}$. Selberg's insight was to use the Cauchy--Schwarz inequality with weights $\lambda_d$ satisfying $\lambda_1 = 1$ to obtain an optimal upper bound. The key identity is:
+\[S(\mathcal{A}, \mathcal{P}, z) \leq \sum_{a \in \mathcal{A}} \left( \sum_{\substack{d | (a, P(z))}} \lambda_d \right)^2\]
+where $P(z) = \prod_{p < z} p$. Expanding the square and interchanging sums gives:
+\[\sum_{d} \lambda_d \sum_{k} \lambda_k S(\mathcal{A}, \mathcal{P}, dk)\]
+Choosing the weights to minimize the resulting quadratic form yields the optimal bound. If we assume $S(\mathcal{A}, \mathcal{P}, d) \approx \frac{X}{g(d)}$ where $g(d)$ is a multiplicative function, then the problem reduces to minimizing a quadratic form in the variables $\lambda_d$. The optimal choice leads to:
+\[S(\mathcal{A}, \mathcal{P}, z) \leq \frac{X}{G(z)} + \text{error terms}\]
+where $G(z) = \sum_{d \leq z} \mu(d)^2 / \prod_{p|d} g(p)$.
 
-\[\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}\]
+The Selberg sieve differs from the Brun sieve in a fundamental way: rather than using inclusion-exclusion directly, it introduces a flexible set of parameters $\lambda_d$ and optimizes over them. This variational approach gives the Selberg sieve its power and versatility. The key identity is the fundamental lemma of sieve theory, which provides an approximation to the indicator function of the set of numbers coprime to all primes $p < z$. For the twin prime problem, this gives the upper bound $\#\{p \leq x : p+2 \text{ is prime}\} = O(x/(\log x)^2)$. The sieve has also been applied to the Goldbach conjecture, the distribution of shifted primes, and the study of almost primes.
 
-and extended meromorphically to \(\mathbb{C}\) with a simple pole at
-\(s = 1\). The \textbf{Riemann hypothesis} states that all non-trivial
-zeros of \(\zeta(s)\) lie on the critical line \(\text{Re}(s) = 1/2\).
+The \textbf{elementary proof of the prime number theorem} rested on Selberg's identity: $\sum_{p \leq x} \log^2 p + \sum_{pq \leq x} \log p \log q = 2x \log x + O(x)$, derived from elementary manipulations of the Chebyshev functions. From this identity, Selberg and Erd\H{o}s independently showed $\limsup \theta(x)/x - \liminf \theta(x)/x = 0$, implying $\theta(x) \sim x$, which is equivalent to the PNT.
 
-\subsection{Selberg's First Major
-Result}\label{ch1950atleselberg:selbergs-first-major-result}
+The identity was surprising because it involved the double sum $\sum_{pq \leq x}$, which had not been considered before. Selberg's proof used the relation $\Lambda(n) \log n + \sum_{d|n} \Lambda(d) \Lambda(n/d) = \log^2 n + O(\log n)$, where $\Lambda$ is the von Mangoldt function, and summed over $n \leq x$. The proof also used the fact that $\sum_{d|n} \Lambda(d) = \log n$ and the convolution identity $\Lambda * 1 = \log$. The key step is to note that:
+\[\sum_{n \leq x} \log^2 n = \sum_{n \leq x} \left( \Lambda(n) \log n + \sum_{d|n} \Lambda(d) \Lambda(n/d) \right) + O(x)\]
+The first sum on the right is $\sum_{p \leq x} \log^2 p + O(\sqrt{x} \log x)$, while the second sum equals $(\sum_{n \leq x} \Lambda(n))^2 + O(x \log x) = \theta(x)^2 + O(x \log x)$. Combining these estimates gives Selberg's identity. The final step, due to Erd\H{o}s, uses a Tauberian argument to deduce $\theta(x) \sim x$ from the identity.
 
-In 1942, while still a student in occupied Norway, Selberg proved:
+The \textbf{Selberg trace formula} is a remarkable identity for a compact Riemann surface $M = \Gamma \backslash \mathbb{H}$:
+\[\sum_{n=0}^\infty h(r_n) = \frac{\operatorname{Area}(M)}{4\pi} \int_{-\infty}^\infty r \, h(r) \tanh(\pi r) \, dr + \sum_{\{\gamma\}} \sum_{k=1}^\infty \frac{\ell(\gamma)}{2\sinh(k\ell(\gamma)/2)} g(k\ell(\gamma))\]
+relating the spectrum $\{\lambda_n = r_n^2 + 1/4\}$ of the Laplacian to the lengths $\ell(\gamma)$ of closed geodesics. Here $h$ is an even test function and $g$ is its Fourier transform. This establishes a deep duality between spectral and geometric data, analogous to the Poisson summation formula.
 
-\begin{quote}
-\textbf{Selberg's Theorem (1942):} A positive proportion of the zeros of
-the Riemann zeta function lie on the critical line
-\(\text{Re}(s) = 1/2\).
-\end{quote}
+The proof uses the Green's function for the Laplacian on the hyperbolic plane, which has the explicit form:
+\[G(z, w; s) = \frac{1}{2\pi} Q_{s-1}\left(\cosh d(z, w)\right)\]
+where $Q_{s-1}$ is the Legendre function of the second kind and $d(z, w)$ is the hyperbolic distance. The trace formula is obtained by summing this Green's function over the group $\Gamma$ and applying the Poisson summation formula. The geometric side of the formula involves a sum over conjugacy classes of hyperbolic elements in $\Gamma$, each contributing a term involving the length of the corresponding geodesic.
 
-This was the first result that established that zeros exist on the
-critical line in a quantitative sense. Previous work by Hardy and
-Littlewood had shown that infinitely many zeros lie on the critical
-line, but gave no estimate of their density.
+Selberg's original proof used a clever approximation argument: he chose test functions $h$ whose Fourier transform $g$ is supported in $(-1, 1)$, which simplifies the geometric side. The general case follows by approximation. The formula has been extended by Arthur to higher-rank reductive groups and by many others to locally symmetric spaces, locally compact groups, and other geometric settings.
 
-\subsection{The Method}\label{ch1950atleselberg:the-method}
-
-Selberg used a variant of the \textbf{Hardy--Littlewood method} combined
-with his own estimates for the mean square of \(\zeta(s)\) and its
-derivatives. The key estimate was:
-
-\[\int_0^T |\zeta(1/2 + it)|^2 \, dt \sim T \log T\]
-
-and more importantly, estimates for the moments of \(\zeta(s)\) and its
-derivative \(\zeta'(s)\).
-
-\subsection{The Proportion of Zeros}\label{ch1950atleselberg:the-proportion-of-zeros}
-
-Selberg showed that at least \(c_0 T\) zeros of \(\zeta(s)\) with
-\(0 < \text{Im}(s) < T\) lie on the critical line, for some positive
-constant \(c_0\). The value of \(c_0\) has been improved over the years,
-but Selberg's proof was the first to establish a positive proportion.
-
-\subsection{The Selberg Formula for the Number of
-Zeros}\label{ch1950atleselberg:the-selberg-formula-for-the-number-of-zeros}
-
-A related result is \textbf{Selberg's formula} for the number of zeros
-up to height \(T\):
-
-\[N(T) = \frac{T}{2\pi} \log \frac{T}{2\pi} - \frac{T}{2\pi} + S(T) + O(1)\]
-
-where \(S(T) = \frac{1}{\pi} \arg \zeta(1/2 + iT)\). Selberg proved the
-fundamental estimate:
-
-\[S(T) = O(\log T)\]
-
-and in fact that the mean square of \(S(T)\) satisfies:
-
-\[\int_0^T S(t)^2 \, dt \sim \frac{T}{(2\pi)^2} \log \log T\]
-
-\subsection{\texorpdfstring{3.6 The Value Distribution of
-\(\log \zeta(s)\)}{3.6 The Value Distribution of \textbackslash log \textbackslash zeta(s)}}\label{ch1950atleselberg:the-value-distribution-of-log-zetas}
-
-Selberg also studied the distribution of values of \(\log \zeta(s)\)
-near the critical line. He proved that \(\log \zeta(1/2 + it)\) is
-approximately normally distributed in the sense that for rectangles
-\(R\) in the complex plane:
-
-\[\frac{1}{T} \text{meas}\{t \in [0, T] : \log \zeta(1/2 + it) \in R\} \to \frac{1}{2\pi} \iint_R e^{-(x^2 + y^2)/2} \, dx\,dy\]
-
-as \(T \to \infty\), assuming the Riemann hypothesis.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg Sieve}\label{ch1950atleselberg:the-selberg-sieve}
-
-\subsection{Motivation}\label{ch1950atleselberg:motivation}
-
-The \textbf{sieve of Eratosthenes} is an ancient algorithm for finding
-primes. Modern sieve theory, initiated by Viggo Brun in the 1910s, aims
-to produce upper and lower bounds for the number of primes in various
-sets. The \textbf{Selberg sieve} (also called the \textbf{Selberg upper
-bound sieve}) is the most flexible and widely used of all sieve methods.
-
-\subsection{The Basic Idea}\label{ch1950atleselberg:the-basic-idea}
-
-Let \(\mathcal{A}\) be a finite set of integers, and let \(\mathcal{P}\)
-be a set of primes. The sieve problem is to estimate:
-
-\[S(\mathcal{A}, \mathcal{P}, z) = \#\{a \in \mathcal{A} : p \nmid a \text{ for all } p \in \mathcal{P}, p < z\}\]
-
-Selberg's insight was to use the \textbf{Cauchy--Schwarz inequality} to
-obtain an optimal upper bound. He introduced weights \(\lambda_d\) (real
-numbers with \(\lambda_1 = 1\)) such that:
-
-\[\left(\sum_{d|P(z)} \lambda_d\right)^2 \geq \begin{cases} 1 & \text{if } n \text{ is not divisible by any } p \in \mathcal{P}, p < z \\ 0 & \text{otherwise} \end{cases}\]
-
-\subsection{The Selberg Sieve
-Estimate}\label{ch1950atleselberg:the-selberg-sieve-estimate}
-
-By choosing the \(\lambda_d\) to minimize the quadratic form, Selberg
-obtained:
-
-\begin{quote}
-\textbf{Selberg Sieve:} For suitable choices of \(\lambda_d\), one has
-the upper bound:
-\[S(\mathcal{A}, \mathcal{P}, z) \leq \frac{X}{G(z, z)} + O\left(\sum_{p < z} \sum_{p|d} |r_d|\right)\]
-where
-\(G(z, w) = \sum_{d \leq w, d|P(z)} \frac{\mu(d)^2}{\prod_{p|d} \omega(p)}\)
-and \(r_d\) measures the error in the approximation.
-\end{quote}
-
-\subsection{Applications}\label{ch1950atleselberg:applications}
-
-The Selberg sieve has been applied to: - The \textbf{Brun--Titchmarsh
-theorem}: \(\pi(x; q, a) \leq \frac{2x}{\varphi(q) \log(x/q)}\) for
-\(q < x\). - The \textbf{Titchmarsh divisor problem}:
-\(\sum_{p \leq x} d(p-1) \sim C x\). - \textbf{Twin primes}: The number
-of twin primes \(p, p+2 \leq x\) is \(O(x/(\log x)^2)\). -
-\textbf{Goldbach's conjecture}: Every sufficiently large even number is
-the sum of two primes or the sum of a prime and a product of at most two
-primes (Chen's theorem).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Elementary Proof of the Prime Number
-Theorem}\label{ch1950atleselberg:the-elementary-proof-of-the-prime-number-theorem}
-
-\subsection{The Prime Number
-Theorem}\label{ch1950atleselberg:the-prime-number-theorem}
-
-The \textbf{prime number theorem} (PNT) states:
-
-\[\pi(x) \sim \frac{x}{\log x}\]
-
-where \(\pi(x)\) is the number of primes \(\leq x\). This was first
-proved by Hadamard and de la Vallée Poussin in 1896 using complex
-analysis.
-
-\subsection{The Quest for an Elementary
-Proof}\label{ch1950atleselberg:the-quest-for-an-elementary-proof}
-
-For decades, mathematicians believed that any proof of the PNT must use
-complex analysis, because the theorem was ``equivalent'' to the
-non-vanishing of \(\zeta(1 + it)\). An \textbf{elementary proof} --- one
-that uses only real-variable methods --- seemed impossible.
-
-\subsection{Selberg's Identity}\label{ch1950atleselberg:selbergs-identity}
-
-In 1948, Selberg discovered a notable identity:
-
-\begin{quote}
-\textbf{Selberg's Identity:}
-\[\sum_{p \leq x} \log^2 p + \sum_{pq \leq x} \log p \log q = 2x \log x + O(x)\]
-\end{quote}
-
-where \(p, q\) run over primes. This identity, which follows from
-elementary manipulations with the Chebyshev functions
-\(\theta(x) = \sum_{p \leq x} \log p\), became the key to the elementary
-proof.
-
-\subsection{The Proof}\label{ch1950atleselberg:the-proof}
-
-From Selberg's identity, one can derive:
-
-\[\theta(x) \log x + \sum_{p \leq x} \theta(x/p) \log p = 2x \log x + O(x)\]
-
-Using this and the fact that \(\theta(x) \sim x\) if the limit exists,
-Selberg and Erdős independently constructed an elementary proof. The
-proof proceeds by establishing the inequality:
-
-\[\limsup \frac{\theta(x)}{x} - \liminf \frac{\theta(x)}{x} = 0\]
-
-\subsection{The Erdős--Selberg
-Collaboration}\label{ch1950atleselberg:the-erdux151sselberg-collaboration}
-
-Selberg shared his identity with Paul Erdős during a visit to the
-Institute for Advanced Study. Erdős immediately saw how to complete the
-proof, and they published independently but with mutual acknowledgment.
-The priority and credit for the proof led to some tension between
-Selberg and Erdős.
-
-\subsection{Extension to Arithmetic
-Progressions}\label{ch1950atleselberg:extension-to-arithmetic-progressions}
-
-Selberg also extended the elementary proof to primes in arithmetic
-progressions:
-
-\begin{quote}
-\textbf{Prime Number Theorem for Arithmetic Progressions:} For
-\((a, q) = 1\), \[\pi(x; q, a) \sim \frac{x}{\varphi(q) \log x}\]
-\end{quote}
-
-This extension required additional ideas from Dirichlet characters and
-class number theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg Trace Formula}\label{ch1950atleselberg:the-selberg-trace-formula}
-
-\subsection{Background}\label{ch1950atleselberg:background}
-
-The \textbf{Selberg trace formula} is a significant identity for a compact
-Riemann surface \(M\) (or, more generally, for a locally symmetric space
-\(\Gamma \backslash G/K\)). It relates:
-
-\begin{itemize}
-\tightlist
-\item
- The \textbf{spectrum} of the Laplace--Beltrami operator \(\Delta\) on
- \(M\).
-\item
- The \textbf{lengths} of closed geodesics on \(M\).
-\end{itemize}
-
-\subsection{Statement}\label{ch1950atleselberg:statement}
-
-For a compact Riemann surface of genus \(g \geq 2\), the Selberg trace
-formula states:
-
-\[\sum_{n=0}^\infty h(r_n) = \frac{\text{Area}(M)}{4\pi} \int_{-\infty}^\infty r \, h(r) \tanh(\pi r) \, dr + \sum_{\gamma} \sum_{k=1}^\infty \frac{\ell(\gamma)}{2 \sinh(k \ell(\gamma)/2)} g(k \ell(\gamma))\]
-
-where: - \(\{r_n\}\) are the eigenvalues \(\lambda_n = r_n^2 + 1/4\) of
-\(\Delta\). - \(\gamma\) runs over primitive closed geodesics with
-length \(\ell(\gamma)\). - \(h\) is an even test function with Fourier
-transform \(g\).
-
-\subsection{Significance}\label{ch1950atleselberg:significance}
-
-The trace formula is analogous to the \textbf{Poisson summation formula}
-and the \textbf{Weil explicit formula} for the Riemann zeta function. It
-establishes a deep duality between: - \textbf{Spectral data}
-(eigenvalues of the Laplacian). - \textbf{Geometric data} (lengths of
-closed geodesics).
-
-\subsection{The Arthur--Selberg Trace
-Formula}\label{ch1950atleselberg:the-arthurselberg-trace-formula}
-
-The \textbf{Arthur--Selberg trace formula} (developed by James Arthur in
-the 1970s--1980s) generalizes the Selberg trace formula to reductive
-groups of higher rank. For a group \(G\) and a lattice \(\Gamma\),
-Arthur's formula relates:
-
-\[\sum_{\pi} m_\pi \text{Tr}(f(\pi)) = \sum_{\{P\}} \sum_{\gamma} \int_{N_P(A)\backslash G(A)} f(x^{-1} \gamma x) \, dx\]
-
-where \(\pi\) runs over automorphic representations, \(f\) is a test
-function, and \(\gamma\) runs over conjugacy classes.
-
-\subsection{Applications}\label{ch1950atleselberg:applications-1}
-
-The Selberg trace formula has been applied to: - Computing the
-\textbf{spectral determinant} of the Laplacian. - Proving the
-\textbf{Weyl law} for the asymptotic distribution of eigenvalues. -
-Studying the \textbf{Selberg zeta function}:
-\(Z(s) = \prod_{\gamma} \prod_{k=0}^\infty (1 - e^{-(s+k)\ell(\gamma)})\).
-- Establishing the \textbf{trace formula for Hecke operators}. - The
-\textbf{Arthur--Selberg trace formula}, a vast generalization to
-higher-rank groups. - Proving \textbf{Weyl's law} for the asymptotic
-distribution of eigenvalues on locally symmetric spaces.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg Class of
-L-Functions}\label{ch1950atleselberg:the-selberg-class-of-l-functions}
-
-\subsection{Definition}\label{ch1950atleselberg:definition}
-
-The \textbf{Selberg class} \(\mathcal{S}\) consists of Dirichlet series:
-
-\[F(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}\]
-
-satisfying: 1. \textbf{Dirichlet series convergence:}
-\(a_n = O(n^\varepsilon)\). 2. \textbf{Analytic continuation:} \(F(s)\)
-extends meromorphically to \(\mathbb{C}\). 3. \textbf{Functional
-equation:} \(\Phi(s) = \omega \overline{\Phi}(1 - s)\) where
-\(\Phi(s) = F(s) Q^s \prod \Gamma(\lambda_i s + \mu_i)\). 4.
-\textbf{Euler product:} \(F(s) = \prod_p F_p(s)\) where
-\(F_p(s) = \exp(\sum b_{p^k} p^{-ks})\). 5. \textbf{Ramanujan
-hypothesis:} \(a_n = O(n^\varepsilon)\).
-
-\subsection{The Selberg Conjectures}\label{ch1950atleselberg:the-selberg-conjectures}
-
-Selberg formulated several deep conjectures about \(\mathcal{S}\):
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
- \textbf{Degree is well-defined:} \(d_F = 2\sum \lambda_i\) is an
- invariant.
-\item
- \textbf{Orthogonality:} For distinct primitive functions \(F \neq G\)
- in \(\mathcal{S}\):
- \[\sum_{p \leq x} \frac{a_F(p) \overline{a_G(p)}}{p} = o(\log \log x)\]
-\item
- \textbf{Analogue of Riemann hypothesis:} All non-trivial zeros of
- \(F \in \mathcal{S}\) lie on \(\text{Re}(s) = 1/2\).
-\item
- \textbf{Sato--Tate conjecture:} The coefficients \(a_F(p)\) are
- equidistributed.
-\end{enumerate}
-
-\subsection{Importance}\label{ch1950atleselberg:importance}
-
-The Selberg class provides a unified framework for studying L-functions:
-- The \textbf{Riemann zeta function} \(\zeta(s)\) is in \(\mathcal{S}\)
-with degree \(d = 1\). - \textbf{Dirichlet L-functions} \(L(s, \chi)\)
-are in \(\mathcal{S}\). - \textbf{Hecke L-functions} of modular forms
-are in \(\mathcal{S}\) with \(d = 2\).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Rankin--Selberg Method}\label{ch1950atleselberg:the-rankinselberg-method}
-
-\subsection{The Convolution
-L-Function}\label{ch1950atleselberg:the-convolution-l-function}
-
-The \textbf{Rankin--Selberg method} constructs the L-function of the
-convolution of two automorphic forms. For two cusp forms \(f, g\) of
-weight \(k\) for \(SL(2, \mathbb{Z})\), the Rankin--Selberg L-function
-is:
-
-\[L(s, f \times g) = \sum_{n=1}^\infty \frac{a_f(n) \overline{a_g(n)}}{n^{s + k - 1}}\]
-
-\subsection{The Integral
-Representation}\label{ch1950atleselberg:the-integral-representation}
-
-Selberg discovered that this L-function could be represented as an
-integral of the product of the two forms against an Eisenstein series:
-
-\begin{quote}
-\textbf{Rankin--Selberg Integral:}
-\[\int_{SL(2,\mathbb{Z})\backslash \mathbb{H}} f(z) \overline{g(z)} E(z, s) \, y^{k-2} \, dx\,dy = \frac{\Gamma(s + k - 1)}{(4\pi)^{s+k-1}} L(s, f \times g)\]
-\end{quote}
-
-\subsection{Consequences}\label{ch1950atleselberg:consequences}
-
-This integral representation yields: - \textbf{Analytic continuation} of
-\(L(s, f \times g)\) to \(\mathbb{C}\). - \textbf{Functional equation}
-for \(L(s, f \times g)\). - \textbf{Non-vanishing} results for the
-central values. - Estimates for \textbf{Fourier coefficients} of cusp
-forms (Deligne's theorem uses this).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Zeros of the Riemann Zeta
-Function}\label{ch1950atleselberg:zeros-of-the-riemann-zeta-function}
-
-\subsection{Selberg's Moment
-Estimates}\label{ch1950atleselberg:selbergs-moment-estimates}
-
-Selberg proved fundamental estimates for the moments of \(\zeta(s)\):
-
-\[\int_0^T |\zeta(1/2 + it)|^{2k} \, dt \ll T (\log T)^{k^2}\]
-
-for all real \(k\). These estimates, based on the \textbf{Selberg--Gonek
-formula}, are essential for understanding the distribution of zeros.
-
-\subsection{The Selberg--Gonek
-Formula}\label{ch1950atleselberg:the-selberggonek-formula}
-
-The \textbf{Selberg--Gonek formula} expresses the discrete moment:
-
-\[\sum_{0 < \gamma \leq T} \zeta'(\rho) = \frac{T}{4\pi} (\log T)^2 + O(T \log T)\]
-
-where \(\rho\) runs over zeros of \(\zeta(s)\). This formula relates the
-distribution of zeros to the derivative of the zeta function.
-
-\subsection{Pair Correlation
-Conjecture}\label{ch1950atleselberg:pair-correlation-conjecture}
-
-Selberg made deep conjectures about the \textbf{pair correlation} of
-zeros of \(\zeta(s)\), later developed by Montgomery. The pair
-correlation function:
-
-\[F(\alpha) = \frac{1}{N(T)} \sum_{0 < \gamma, \gamma' \leq T} T^{\alpha(\gamma - \gamma')} w(\gamma - \gamma')\]
-
-is conjectured to equal \(1 + (\sin \pi \alpha / \pi \alpha)^2\) in the
-limit, consistent with random matrix theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Theory of Lattices}\label{ch1950atleselberg:the-theory-of-lattices}
-
-\subsection{Arithmeticity of
-Lattices}\label{ch1950atleselberg:arithmeticity-of-lattices}
-
-A \textbf{lattice} \(\Gamma\) in a Lie group \(G\) is a discrete
-subgroup with finite covolume. Selberg initiated the study of
-\textbf{arithmetic lattices} --- lattices that arise from the integer
-points of algebraic groups. His fundamental result:
-
-\begin{quote}
-\textbf{Selberg's Arithmeticity Theorem:} An irreducible lattice in a
-semisimple Lie group of rank at least 2 is arithmetic, provided the Lie
-group is not locally isomorphic to \(SO(n, 1)\) or \(SU(n, 1)\).
-\end{quote}
-
-\subsection{The Selberg Conjecture}\label{ch1950atleselberg:the-selberg-conjecture}
-
-The \textbf{Selberg conjecture} (later proved by Margulis) states that
-every irreducible lattice in a semisimple Lie group of higher rank is
-arithmetic. This is a fundamental result in the theory of discrete
-groups.
-
-\subsection{Applications}\label{ch1950atleselberg:applications-2}
-
-The theory of lattices has applications to: - \textbf{Riemann surfaces:}
-Fuchsian groups as lattices in \(PSL(2, \mathbb{R})\). -
-\textbf{Hyperbolic 3-manifolds:} Kleinian groups as lattices in
-\(PSL(2, \mathbb{C})\). - \textbf{Number theory:} Galois representations
-and automorphic forms.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Trace Formula for Hecke
-Operators}\label{ch1950atleselberg:the-trace-formula-for-hecke-operators}
-
-\subsection{Hecke Operators}\label{ch1950atleselberg:hecke-operators}
-
-\textbf{Hecke operators} \(T_n\) act on the space of modular forms of
-weight \(k\) for \(SL(2, \mathbb{Z})\). They are commuting, self-adjoint
-operators whose eigenvalues give the Fourier coefficients of Hecke
-eigenforms.
-
-\subsection{Selberg's Trace Formula for Hecke
-Operators}\label{ch1950atleselberg:selbergs-trace-formula-for-hecke-operators}
-
-Selberg generalized the trace formula to include Hecke operators. The
-\textbf{Selberg trace formula for Hecke operators} relates:
-
-\[\text{Tr}(T_n) = \sum_{m \geq 1} \frac{a_m}{n^{s_0}} \cdot (\text{geometric terms})\]
-
-This formula is essential for computing the \textbf{Mellin transform} of
-the traces of Hecke operators and for studying the spectral theory of
-automorphic forms.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg Zeta Function}\label{ch1950atleselberg:the-selberg-zeta-function}
-
-\subsection{Definition}\label{ch1950atleselberg:definition-1}
-
-The \textbf{Selberg zeta function} for a compact Riemann surface
-\(M = \Gamma \backslash \mathbb{H}\) is defined as:
-
+The \textbf{Selberg zeta function} is defined for a compact hyperbolic surface $M = \Gamma \backslash \mathbb{H}$ by the product over primitive closed geodesics:
 \[Z_\Gamma(s) = \prod_{\{\gamma\}} \prod_{k=0}^\infty \left(1 - e^{-(s+k)\ell(\gamma)}\right)\]
+This product converges for $\operatorname{Re}(s) > 1$ and admits an analytic continuation to the entire complex plane. The zeros of $Z_\Gamma(s)$ encode both the lengths of closed geodesics (via the exponential of the lengths) and the eigenvalues of the Laplacian on $M$ (via the spectral parameter $s = 1/2 + ir$). The trace formula can be viewed as a consequence of the fact that $\log Z_\Gamma(s)$ can be expressed in terms of the spectrum.
 
-where \(\{\gamma\}\) runs over primitive conjugacy classes in \(\Gamma\)
-and \(\ell(\gamma)\) is the length of the corresponding closed geodesic.
+The Selberg zeta function satisfies a functional equation relating $Z_\Gamma(s)$ to $Z_\Gamma(1-s)$, analogous to the functional equation of the Riemann zeta function. The order of growth of $Z_\Gamma(s)$ is determined by the area of the surface $M$. The connection between the zeta function and the trace formula is through the identity:
+\[\log Z_\Gamma(s) = \sum_{n=0}^\infty \log\left(1 - e^{-(s+1/2+ir_n)}\right) + \sum_{n=0}^\infty \log\left(1 - e^{-(s+1/2-ir_n)}\right)\]
+which, when differentiated, yields the trace formula.
 
-\subsection{Properties}\label{ch1950atleselberg:properties}
+The \textbf{Selberg symmetry formula} for the zeta function states that:
+\[\frac{\zeta'(s)}{\zeta(s)} = -\sum_{n=1}^\infty \frac{\Lambda(n)}{n^s} = \frac{1}{2} \log \pi - \frac{1}{2} \frac{\Gamma'}{\Gamma}\left(\frac{s}{2}+1\right) + \sum_\rho \left(\frac{1}{s-\rho} + \frac{1}{\rho}\right)\]
+This formula plays a central role in Selberg's proof that a positive proportion of zeros lie on the critical line. By integrating this formula and using the functional equation, Selberg was able to show that the number of zeros on the critical line is at least a constant times $T$.
 
-\begin{itemize}
-\tightlist
-\item
- \(Z_\Gamma(s)\) converges for \(\text{Re}(s) > 1\).
-\item
- It extends meromorphically to \(\mathbb{C}\).
-\item
- Its zeros are related to the eigenvalues of the Laplacian:
- \(Z_\Gamma(r) = 0\) when \(r = \pm i(1/2 - \sqrt{1/4 - \lambda})\) for
- eigenvalue \(\lambda\) of \(\Delta\).
-\item
- It satisfies a functional equation:
- \(Z_\Gamma(1 - s) = Z_\Gamma(s) \cdot \text{(exponential factor)}\).
-\end{itemize}
+The Selberg sieve provides a systematic framework for bounding the number of elements in a set that are not divisible by any small prime. Given a sequence $\mathcal{A} = (a_n)$ and a set of primes $\mathcal{P}$, the sieve estimates the quantity $S(\mathcal{A}, \mathcal{P}, z) = \sum_{n \in \mathcal{A}, (n, P(z))=1} 1$. The key insight is to write the indicator function of the condition $(n, P(z)) = 1$ as a sum over divisors and then optimize the resulting expression.
 
-\subsection{The Analogy with the Riemann Zeta
-Function}\label{ch1950atleselberg:the-analogy-with-the-riemann-zeta-function}
+\section{Impact of This Discovery}
 
-The Selberg zeta function is a geometric analogue of the Riemann zeta
-function. The \textbf{Selberg trace formula} relates the logarithmic
-derivative of \(Z_\Gamma\) to the trace of the heat kernel, analogous to
-the explicit formula for \(\zeta(s)\).
+The Selberg sieve became the standard tool in analytic number theory, applied to the Brun--Titchmarsh theorem ($\pi(x;q,a) \leq 2x/(\phi(q)\log(x/q))$), twin primes (showing $\#\{p, p+2 \leq x\} = O(x/(\log x)^2)$), and Chen's theorem (every sufficiently large even number is a sum of two primes or a prime and a product of at most two primes). The sieve has also been applied to the Goldbach conjecture, the distribution of shifted primes, and the study of almost primes. The \textbf{largest prime gap} problem has also benefited from sieve methods, with recent results by Maynard and Tao showing that there are infinitely many pairs of primes with bounded gap.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The elementary proof of the PNT showed that complex analysis is not essential for understanding prime numbers, substantially changing the philosophy of the subject. While the elementary proof is elegant, it does not give the same error term as the classical proof. The classical proof gives $\pi(x) = \operatorname{Li}(x) + O(x e^{-c\sqrt{\log x}})$, while the elementary proof gives $\pi(x) = \operatorname{Li}(x) + O(x/(\log x)^2)$ (under additional assumptions). The best unconditional error term remains $\pi(x) = \operatorname{Li}(x) + O(x e^{-c(\log x)^{3/11}(\log \log x)^{-1/11}})$ due to Korobov and Vinogradov. The elementary proof has been simplified and extended by many authors, including Newman, who gave an especially elegant version using complex analysis in a novel way.
 
-\section{The Bruhat--Selberg
-Correspondence}\label{ch1950atleselberg:the-bruhatselberg-correspondence}
+The \textbf{Selberg trace formula} became the central technique in the theory of automorphic forms, generalized by James Arthur to the Arthur--Selberg trace formula for higher-rank reductive groups. The trace formula has applications to the study of $L$-functions, the theory of Eisenstein series, and the spectral decomposition of automorphic forms. The connection between the trace formula and the Langlands program is one of the deepest in modern mathematics. The trace formula has been used to prove cases of the functorality conjecture, including the base change for $\operatorname{GL}(n)$ and the automorphy of symmetric power $L$-functions.
 
-\subsection{The Bruhat
-Decomposition}\label{ch1950atleselberg:the-bruhat-decomposition}
+The \textbf{Selberg class} $\mathcal{S}$ of $L$-functions provides an axiomatic framework for studying Dirichlet series with functional equations and Euler products. The Selberg conjectures---that degree is well-defined, that primitive functions are orthogonal, and that the Riemann hypothesis holds for all $F \in \mathcal{S}$---guide modern research in analytic number theory. The class $\mathcal{S}$ includes the Riemann zeta function, Dirichlet $L$-functions, and $L$-functions of modular forms and elliptic curves. The degree of an $L$-function in the Selberg class determines its analytic properties, and the orthogonality of primitive functions is a far-reaching generalization of the linear independence of Dirichlet characters.
 
-The \textbf{Bruhat decomposition} of a reductive algebraic group \(G\)
-is:
+The Rankin--Selberg method, constructing the convolution $L$-function $L(s, f \times g) = \sum a_f(n)\overline{a_g(n)} / n^{s+k-1}$ via an integral representation against an Eisenstein series, is fundamental for studying Fourier coefficients of automorphic forms. The analytic continuation and functional equation of this $L$-function was proved by Rankin and Selberg independently, using the method of ``unfolding'' the Eisenstein series. This method has been extended to other settings, including $L$-functions of Siegel modular forms and automorphic forms on higher-rank groups.
 
-\[G = \bigsqcup_{w \in W} BwB\]
+The \textbf{Selberg zeta function} has remarkable properties: it satisfies a functional equation, its zeros encode both the lengths of closed geodesics and the eigenvalues of the Laplacian, and it connects the spectral theory of automorphic forms to the lengths of geodesics. The trace formula can be viewed as a consequence of the fact that the Selberg zeta function equals a ratio of determinants of Laplacians. The Selberg zeta function is the analog of the Artin $L$-function for hyperbolic surfaces, and its analytic continuation and functional equation follow from the trace formula.
 
-where \(B\) is a Borel subgroup and \(W\) is the Weyl group.
+Selberg's work on the \textbf{Kuznetsov trace formula} and the \textbf{Kloosterman sums} led to deep connections between the trace formula and the theory of automorphic forms. The Kuznetsov formula relates sums of Kloosterman sums $K(m, n; c) = \sum_{a \bmod c, (a,c)=1} e^{2\pi i (am+na)/c}$ to spectral data on the upper half-plane. This formula has applications to the subconvexity problem for $L$-functions and to the study of quadratic forms. The subconvexity problem asks for bounds on $L(1/2, f)$ that are better than the convexity bound, and the Kuznetsov formula has been instrumental in making progress on this problem.
 
-\subsection{Selberg's Contribution}\label{ch1950atleselberg:selbergs-contribution}
+The Selberg eigenvalue conjecture---that the first eigenvalue $\lambda_1 \geq 1/4$ for congruence subgroups---remains open and is a major problem in the theory of automorphic forms. The best results to date are due to Sarnak and others, who proved the conjecture in special cases. The conjecture is related to the Ramanujan--Petersson conjecture and has implications for the distribution of primes in arithmetic progressions. If true, it would imply that the spectrum of the Laplacian on congruence surfaces is ``sparse'' near the bottom, which has deep consequences for the theory of automorphic forms.
 
-Selberg developed a combinatorial approach to the Bruhat decomposition
-using the theory of \textbf{buildings} and \textbf{chamber complexes}.
-This work, done in parallel with Bruhat and Tits, provided a geometric
-framework for understanding the structure of reductive groups over local
-fields.
+The theory of \textbf{Selberg's zeta function} has been extended to higher dimensions and to locally symmetric spaces. The connection between the Selberg zeta function and the Ray--Singer analytic torsion, proved by M\"{u}ller and others, links number theory to differential geometry and the theory of characteristic classes. The analytic torsion is a spectral invariant that measures the ``volume'' of the space of harmonic forms, and it has applications to the study of Reidemeister torsion and the topology of manifolds.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg Inequality}\label{ch1950atleselberg:the-selberg-inequality}
-
-\subsection{The Large Sieve}\label{ch1950atleselberg:the-large-sieve}
-
-The \textbf{Selberg inequality} (also called the \textbf{large sieve
-inequality}) is a fundamental estimate in analytic number theory:
-
-\begin{quote}
-\textbf{Large Sieve Inequality:}
-\[\sum_{q \leq Q} \sum_{\chi \bmod q} \left|\sum_{n=M+1}^{M+N} a_n \chi(n)\right|^2 \leq (N + Q^2) \sum_{n=M+1}^{M+N} |a_n|^2\]
-\end{quote}
-
-where \(\chi\) runs over Dirichlet characters modulo \(q\).
-
-\subsection{Applications}\label{ch1950atleselberg:applications-3}
-
-The large sieve has applications to: - The \textbf{Bombieri--Vinogradov
-theorem} on primes in arithmetic progressions. - The
-\textbf{Barban--Davenport--Halberstam theorem}. - \textbf{Sparse sets}
-of primes and the distribution of prime divisors.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg Integral}\label{ch1950atleselberg:the-selberg-integral}
-
-\subsection{Definition}\label{ch1950atleselberg:definition-2}
-
-The \textbf{Selberg integral} is a multidimensional generalization of
-the Euler beta integral:
-
-\[S_n(\alpha, \beta, \gamma) = \int_0^1 \cdots \int_0^1 \prod_{i=1}^n t_i^{\alpha-1} (1 - t_i)^{\beta-1} \prod_{1 \leq i < j \leq n} |t_i - t_j|^{2\gamma} \, dt_1 \cdots dt_n\]
-
-\subsection{Evaluation}\label{ch1950atleselberg:evaluation}
-
-Selberg evaluated this integral in closed form:
-
-\begin{quote}
-\textbf{Selberg Integral Formula:}
+The \textbf{Selberg integral} $S_n(\alpha, \beta, \gamma) = \int_0^1 \cdots \int_0^1 \prod_{i=1}^n t_i^{\alpha-1} (1-t_i)^{\beta-1} \prod_{i<j} |t_i - t_j|^{2\gamma} \, dt_1 \cdots dt_n$ has become fundamental in random matrix theory, conformal field theory, and the theory of Jack polynomials, connecting number theory to mathematical physics. The Selberg integral evaluates in terms of Gamma functions:
 \[S_n(\alpha, \beta, \gamma) = \prod_{j=0}^{n-1} \frac{\Gamma(\alpha + j\gamma) \Gamma(\beta + j\gamma) \Gamma(1 + (j+1)\gamma)}{\Gamma(\alpha + \beta + (n+j-1)\gamma) \Gamma(1 + \gamma)}\]
-\end{quote}
+This formula has applications to the distribution of eigenvalues of random matrices, the calculation of correlation functions in statistical mechanics, and the study of orthogonal polynomials. The integral was conjectured by Selberg in 1944 and proved by Andrews, Dexter, and others in the 1960s.
 
-\subsection{The Aomoto--Selberg
-Integral}\label{ch1950atleselberg:the-aomotoselberg-integral}
+The connection between the Selberg trace formula and the theory of automorphic representations has been deepened through the work of many mathematicians. The stable trace formula, which isolates the contributions from different conjugacy classes, has led to proofs of functoriality in many cases and has provided a framework for understanding the Langlands correspondence.
 
-A generalization of the Selberg integral, known as the
-\textbf{Aomoto--Selberg integral}, adds an extra factor
-\(\prod_{i=1}^n t_i^{\lambda}\):
+\section{Modern Views and Improvements}
 
-\[S_n(\alpha, \beta, \gamma, \lambda) = \int_0^1 \cdots \int_0^1 \prod_{i=1}^n t_i^{\alpha-1+\lambda} (1 - t_i)^{\beta-1} \prod_{i<j} |t_i - t_j|^{2\gamma} \, dt_1 \cdots dt_n\]
+The Selberg trace formula has been generalized extensively. Arthur's trace formula for reductive groups is a central tool in the Langlands program. The stable trace formula and the stabilization of the trace formula are major ongoing research programs. The trace formula has been used to prove cases of the Langlands functorality conjecture, including the base change theorem for $\operatorname{GL}(n)$ and the automorphy of symmetric power $L$-functions. The refined trace formula, developed by Kuznetsov and others, relates sums of Fourier coefficients of automorphic forms to spectral data and has been used to prove subconvexity bounds for $L$-functions.
 
-This integral was evaluated by Aomoto and is important in the theory of
-\textbf{hypergeometric functions of several variables} and
-\textbf{conformal field theory}.
+The Selberg class continues to be studied intensively. The Ramanujan--Petersson conjecture for modular forms was proved by Deligne, and the Sato--Tate conjecture (part of Selberg's conjectures) was proved by Barnet-Lamb, Geraghty, Harris, and Taylor. The Lindel\"{o}f hypothesis for $L$-functions in the Selberg class remains open. The conjecture predicts that $L(1/2 + it, F) \ll_\epsilon (1+|t|)^\epsilon$ for all $F \in \mathcal{S}$, which would imply deep results about the distribution of primes. The Lindel\"{o}f hypothesis is equivalent to the statement that the moments of zeta functions satisfy certain bounds, which has been verified for small values of the moment parameter.
 
-\subsection{Significance}\label{ch1950atleselberg:significance-1}
+Effective versions of the prime number theorem and improvements to the Selberg sieve are active areas. The Goldston--Pintz--Y{\i}ld{\i}r{\i}m results on small gaps between primes and the Green--Tao theorem on arithmetic progressions of primes both build on sieve methods descended from Selberg's work. The Polymath8 project and James Maynard's work on prime gaps further refined Selberg's sieve techniques, leading to the best known bound $\liminf_{n \to \infty} (p_{n+1} - p_n) \leq 246$ (unconditionally) and $\leq 600$ (assuming the Elliott--Halberstam conjecture). These results represent a dramatic improvement over previous bounds and have opened new avenues for research in analytic number theory.
 
-The Selberg integral is fundamental to: - \textbf{Random matrix theory:}
-The joint eigenvalue distribution of random matrices (the Gaussian
-unitary ensemble) involves a Vandermonde determinant whose squared
-absolute value corresponds to the factor \(|t_i - t_j|^{2\gamma}\). -
-\textbf{Orthogonal polynomials} and the theory of Jack polynomials. -
-\textbf{Statistical mechanics} and the Calogero--Sutherland model. -
-\textbf{The theory of hypergeometric functions of several variables.} -
-\textbf{Conformal field theory} and the computation of correlation
-functions.
+The connection between the Selberg trace formula and quantum chaos has been a fruitful area of research. The Gutzwiller trace formula, which is the semiclassical approximation to the Selberg trace formula, relates the spectrum of the Laplacian on a manifold with chaotic geodesic flow to the periodic orbits of the classical system. This has led to applications in physics, including the study of quantum Hall systems, billiards, and the spectrum of quantum graphs. The connection between the statistics of zeta zeros and the eigenvalues of random matrices, first observed by Montgomery, has been further developed by many authors and has deep implications for the distribution of primes.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The \textbf{Selberg--Sarnak conjecture} predicts that the zeros of $L$-functions in the Selberg class satisfy a certain universality property, similar to the distribution of eigenvalues of random matrices. This conjecture has been verified for certain families of $L$-functions and has implications for the distribution of primes in short intervals and the moments of zeta functions. The conjecture predicts that the spacing between consecutive zeros of an $L$-function follows the same distribution as the spacing between eigenvalues of a random matrix from the appropriate ensemble (unitary, orthogonal, or symplectic).
 
-\section{The Weil--Selberg Formula}\label{ch1950atleselberg:the-weilselberg-formula}
+The theory of \textbf{automorphic distributions} and \textbf{period formulas} extends Selberg's trace formula to non-compact spaces and has applications to the study of special values of $L$-functions. The trace formula for Shimura curves and modular curves has been used to study the arithmetic of these curves, including the Birch--Swinnerton-Dyer conjecture and the Iwasawa theory of elliptic curves. The Arthur--Selberg trace formula for $\operatorname{GL}(2)$ has been used to prove cases of the theta correspondence and the Gan--Gross--Prasad conjecture.
 
-\subsection{The Explicit Formula}\label{ch1950atleselberg:the-explicit-formula}
+The study of \textbf{trace formulas over function fields} has led to proofs of the Ramanujan--Petersson conjecture for automorphic forms over $\mathbb{F}_q(t)$ (by Drinfeld and Lafforgue) and has connections to the geometric Langlands program. The trace formula for function fields has been used to count points on moduli spaces of shtukas and to establish cases of the Langlands functorality conjecture. The geometric approach to the trace formula, developed by Laumon, Morgan, and others, has provided new insights into the relationship between number theory and geometry.
 
-The \textbf{Weil explicit formula} relates sums over zeros of
-\(\zeta(s)\) to sums over primes. Selberg's trace formula is a geometric
-analogue of this. The explicit formula states:
+The \textbf{Selberg sieve} has been extended in many directions. The \textbf{linear sieve} of Rosser and Iwaniec provides a systematic framework for applying the Selberg sieve to problems involving linear forms. The \textbf{combinatorial sieve} and the \textbf{weighted sieve} are other variants that have found applications to problems in additive number theory and analytic number theory. The \textbf{fundamental lemma of sieve theory}, proved by Halberstam and Richert, gives a precise estimate for the Selberg sieve when the dimension of the sieve is small.
 
-\[\sum_\rho h(\rho) = h(0) + h(1) - \sum_p \sum_{n=1}^\infty \frac{\log p}{p^{n/2}} (g(n\log p) + g(-n\log p))\]
+The \textbf{elementary proof of the PNT} has been simplified and refined by many authors. Newman's proof, which uses a clever application of complex analysis to an elementary identity, is especially elegant and is now standard in many textbooks. The elementary proof has been extended to arithmetic progressions and to other settings, although the error terms are not as good as those obtained by analytic methods. The question of whether an elementary proof can give the same error term as the classical proof remains open.
 
-where \(h\) is a test function with Fourier transform \(g\), and
-\(\rho\) runs over non-trivial zeros of \(\zeta(s)\).
+The \textbf{Selberg zeta function} has been studied in many contexts beyond hyperbolic surfaces. The zeta function of a graph, defined by Hashimoto and Ihara, is an analogue of the Selberg zeta function for discrete graphs. The \textbf{zeta function of a hyperbolic 3-manifold} has been studied by Milnor and others, with applications to the volume conjecture in knot theory. The connection between the Selberg zeta function and the theory of determinants of Laplacians, established by Ray and Singer, has deep implications for the topology of manifolds.
 
-\subsection{Selberg's
-Interpretation}\label{ch1950atleselberg:selbergs-interpretation}
+The \textbf{explicit formula} connecting primes and zeros, which Selberg contributed to, states that for a suitable test function $f$:
+\[\sum_n \Lambda(n) f(\log n) = f(0) - \sum_\rho f(\rho \log n) + \text{main terms}\]
+where the sum over $\rho$ runs through the non-trivial zeros of $\zeta(s)$. This formula makes precise the duality between primes and zeros and has been generalized to $L$-functions and automorphic forms.
 
-Selberg showed that this formula can be interpreted as a trace formula
-for the group \(\mathbb{R}\) acting on the space of square-integrable
-functions on \(\mathbb{R}^+\), connecting it to the general framework of
-the Selberg trace formula.
+Selberg's work on the \textbf{zero-density estimates} for $\zeta(s)$ has had lasting impact. He proved that the number of zeros in the region $\operatorname{Re}(s) > 1 - c/\log T$ is $O(T^{1-2c+\epsilon})$ for any $c > 0$, which is essentially optimal. These estimates have applications to the distribution of primes in short intervals and to the error terms in the prime number theorem for arithmetic progressions.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The \textbf{Selberg--Brjuno condition} in dynamical systems, while not directly related to his number-theoretic work, reflects the same spirit of finding precise conditions for convergence and stability. The condition appears in the study of linearization of analytic maps near fixed points and has applications to the theory of small divisors.
 
-\section{The Bombieri--Selberg
-Theorem}\label{ch1950atleselberg:the-bombieriselberg-theorem}
+The connection between the \textbf{Selberg trace formula} and the theory of automorphic representations has been deepened through the work of many mathematicians. The stabilization of the trace formula, achieved by Arthur and others, has led to proofs of functoriality in many cases and has provided a framework for understanding the Langlands correspondence.
 
-\subsection{Statement}\label{ch1950atleselberg:statement-1}
-
-The \textbf{Bombieri--Selberg theorem} (also called the
-\textbf{Bombieri--Selberg lemma}) is a result in analytic number theory
-about the distribution of \(L\)-functions. It states:
-
-\begin{quote}
-\textbf{Bombieri--Selberg Lemma:} For any \(\varepsilon > 0\),
-\[\sum_{q \leq x^{1/2 - \varepsilon}} \max_{(a,q)=1} \left|\psi(x; q, a) - \frac{x}{\varphi(q)}\right| \ll \frac{x}{(\log x)^A}\]
-\end{quote}
-
-for any \(A > 0\), where
-\(\psi(x; q, a) = \sum_{n \leq x, n \equiv a \bmod q} \Lambda(n)\).
-
-\subsection{The Bombieri--Vinogradov
-Theorem}\label{ch1950atleselberg:the-bombierivinogradov-theorem}
-
-The \textbf{Bombieri--Vinogradov theorem} is a closely related result
-that states:
-
-\[\sum_{q \leq Q} \max_{(a,q)=1} \left|\psi(x; q, a) - \frac{x}{\varphi(q)}\right| \ll x^{1/2} Q (\log x)^4 + x (\log x)^{-A}\]
-
-for \(Q \leq x^{1/2}\). The Bombieri--Selberg lemma improves the range
-of \(Q\) and provides the theoretical foundation for the theorem.
-
-\subsection{Significance}\label{ch1950atleselberg:significance-2}
-
-This result shows that the prime number theorem for arithmetic
-progressions holds on average over all moduli up to
-\(x^{1/2 - \varepsilon}\). It is a key input in: - \textbf{Chen's
-theorem:} Every sufficiently large even number is the sum of two primes
-or the sum of a prime and a product of at most two primes. - The
-\textbf{Goldston--Pintz--Yıldırım} results on small gaps between primes.
-- The \textbf{Green--Tao theorem} on arithmetic progressions of primes.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Mordell--Selberg Lemma}\label{ch1950atleselberg:the-mordellselberg-lemma}
-
-\subsection{Statement}\label{ch1950atleselberg:statement-2}
-
-The \textbf{Mordell--Selberg lemma} is a result in the theory of modular
-forms. It gives upper bounds for the Fourier coefficients of cusp forms
-in terms of their Petersson norm:
-
-\begin{quote}
-\textbf{Mordell--Selberg Lemma:} For a cusp form \(f\) of weight \(k\),
-\[|a_f(n)|^2 \ll \langle f, f \rangle n^{k-1} d(n)\]
-\end{quote}
-
-where \(d(n)\) is the divisor function.
-
-\subsection{Applications}\label{ch1950atleselberg:applications-4}
-
-This lemma is used in: - Proving the \textbf{Ramanujan--Petersson
-conjecture} for modular forms (later proved by Deligne using algebraic
-geometry). - Estimates for \textbf{Fourier coefficients} of automorphic
-forms.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Artin--Selberg
-Conjecture}\label{ch1950atleselberg:the-artinselberg-conjecture}
-
-\subsection{Statement}\label{ch1950atleselberg:statement-3}
-
-The \textbf{Artin--Selberg conjecture} (more precisely, Selberg's
-formulation) states that the Artin L-functions \(L(s, \rho)\) attached
-to irreducible representations \(\rho\) of the Galois group of a number
-field are in the Selberg class \(\mathcal{S}\) and satisfy the Riemann
-hypothesis.
-
-\subsection{Relation to the Langlands
-Program}\label{ch1950atleselberg:relation-to-the-langlands-program}
-
-This conjecture is intimately related to the \textbf{Langlands program},
-which predicts that Artin L-functions coincide with automorphic
-L-functions. Selberg's framework of the Selberg class provides a
-unifying language for these conjectures.
-
-\subsection{The Artin Conjecture}\label{ch1950atleselberg:the-artin-conjecture}
-
-\textbf{Artin's conjecture} states that for a non-trivial irreducible
-representation \(\rho\) of the Galois group, the Artin L-function
-\(L(s, \rho)\) is entire (has no poles). Selberg's work on the
-properties of L-functions in his class helped formulate the precise
-analytic properties that Artin L-functions are expected to satisfy.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg--Klein
-Hypothesis}\label{ch1950atleselberg:the-selbergklein-hypothesis}
-
-\subsection{Statement}\label{ch1950atleselberg:statement-4}
-
-The \textbf{Selberg--Klein hypothesis} concerns the growth of the
-Dedekind zeta function \(\zeta_K(s)\) of a number field \(K\). Selberg
-conjectured that for any \(\varepsilon > 0\):
-
-\[\zeta_K(1/2 + it) \ll |t|^\varepsilon\]
-
-for \(t\) large, where the implied constant depends on \(\varepsilon\)
-and the field \(K\) but not on \(t\).
-
-\subsection{Significance}\label{ch1950atleselberg:significance-3}
-
-This is a \textbf{Lindelöf hypothesis} for Dedekind zeta functions and
-is a consequence of the Riemann hypothesis for \(\zeta_K(s)\). Selberg's
-work on the moments of \(\zeta(s)\) provided evidence for this type of
-bound.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg--Delange
-Method}\label{ch1950atleselberg:the-selbergdelange-method}
-
-\subsection{The Method}\label{ch1950atleselberg:the-method-1}
-
-The \textbf{Selberg--Delange method} is a technique for estimating sums
-of arithmetic functions using Dirichlet series. It combines Selberg's
-ideas on the distribution of prime numbers with Delange's Tauberian
-theorems.
-
-\subsection{Applications}\label{ch1950atleselberg:applications-5}
-
-This method has been used to: - Study the distribution of integers with
-a given number of prime factors. - Estimate the number of integers
-represented by quadratic forms. - Prove \textbf{Kac's theorem} on the
-normal distribution of the number of prime factors (the Erdős--Kac
-theorem).
-
-\subsection{The Method of Moments}\label{ch1950atleselberg:the-method-of-moments}
-
-The Selberg--Delange method is based on the study of Dirichlet series of
-the form:
-
-\[F(s) = \sum_{n=1}^\infty \frac{z^{\omega(n)}}{n^s} = \zeta(s)^z \cdot G(s, z)\]
-
-where \(\omega(n)\) is the number of distinct prime factors of \(n\),
-and \(G(s, z)\) is analytic for \(\text{Re}(s) > 1/2\). By studying the
-behavior of \(F(s)\) near \(s = 1\), one obtains asymptotic formulas for
-sums involving \(\omega(n)\).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Selberg--Bang Theory}\label{ch1950atleselberg:the-selbergbang-theory}
-
-\subsection{The Bang--Selberg
-Theorem}\label{ch1950atleselberg:the-bangselberg-theorem}
-
-The \textbf{Bang--Selberg theorem} (also known as \textbf{Bang's
-theorem} or the \textbf{Zsigmondy--Bang theorem}) states that for
-\(a > b > 0\) coprime integers and \(n > 1\), there exists a prime
-divisor of \(a^n - b^n\) that does not divide \(a^k - b^k\) for any
-\(k < n\), with the only exception \(2^6 - 1^6 = 63\).
-
-\subsection{Selberg's Proof}\label{ch1950atleselberg:selbergs-proof}
-
-Selberg gave an elegant proof of this theorem using elementary number
-theory and cyclotomic polynomials. The proof uses the fact that:
-
-\[a^n - b^n = \prod_{d|n} \Phi_d(a, b)\]
-
-where \(\Phi_d\) is the \(d\)-th cyclotomic polynomial evaluated in two
-variables.
-
-\subsection{Applications}\label{ch1950atleselberg:applications-6}
-
-This theorem is used in: - Group theory: it implies that
-\(GL(n, \mathbb{Z})\) has torsion elements of order dividing certain
-values. - Galois theory: it gives information about the multiplicative
-orders of elements in finite fields.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Selberg's Later Work and
-Influence}\label{ch1950atleselberg:selbergs-later-work-and-influence}
-
-\subsection{Later Work on the Trace
-Formula}\label{ch1950atleselberg:later-work-on-the-trace-formula}
-
-In his later years, Selberg continued to develop the trace formula and
-its applications. He worked on: - The \textbf{Maaß--Selberg relations}
-for Eisenstein series. - The \textbf{spectral theory} of automorphic
-forms on \(SL(2, \mathbb{R})\). - The \textbf{Selberg--Roelcke
-conjecture} on the existence of Maaß forms with prescribed properties.
-
-\subsection{Influence on Modern Number
-Theory}\label{ch1950atleselberg:influence-on-modern-number-theory}
-
-Selberg's work shaped virtually every area of modern analytic number
-theory: - The \textbf{sieve method} is a standard tool in every analytic
-number theorist's toolkit. - The \textbf{trace formula} is a central
-technique in the theory of automorphic forms. - The \textbf{Selberg
-class} provides the axiomatic foundation for the study of L-functions. -
-The \textbf{elementary proof} of the PNT showed that complex analysis is
-not essential for understanding prime numbers, substantially changing
-the philosophy of the subject.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Awards and Recognition}\label{ch1950atleselberg:awards-and-recognition}
-
-\textbf{1950:} - Fields Medal (International Mathematical Union) ---
-awarded at the ICM in Cambridge, Massachusetts.
-
-\textbf{1986:} - Wolf Prize in Mathematics --- ``For his significant
-contributions to number theory, discrete groups, and automorphic
-forms.''
-
-\textbf{1991:} - Sylvester Medal (Royal Society).
-
-\textbf{2002:} - Abel Bicentennial Anniversary Prize.
-
-\textbf{Elected to:} - Royal Norwegian Society of Sciences and Letters.
-- Royal Swedish Academy of Sciences. - National Academy of Sciences
-(USA). - American Academy of Arts and Sciences. - London Mathematical
-Society (Honorary Member).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Selected Major
-Publications}\label{ch1950atleselberg:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``On the zeros of the Riemann zeta function on the critical
- line.''} \emph{Archiv for Mathematik og Naturvidenskab} 45, 1942. ---
- \emph{The first proof that a positive proportion of zeros lie on the
- critical line.}
-\item
- \textbf{``The general sieve-method and its place in prime number
- theory.''} \emph{Proceedings of the International Congress of
- Mathematicians}, vol.~1, 1950. --- \emph{The Selberg sieve.}
-\item
- \textbf{``An elementary proof of the prime-number theorem.''}
- \emph{Annals of Mathematics} 50, 305--313, 1949. --- \emph{The
- elementary proof with Erdős.}
-\item
- \textbf{``An elementary proof of Dirichlet's theorem about primes in
- an arithmetic progression.''} \emph{Annals of Mathematics} 50,
- 297--304, 1949. --- \emph{Extension to arithmetic progressions.}
-\item
- \textbf{``An elementary proof of the prime-number theorem for
- arithmetic progressions.''} \emph{Canadian Journal of Mathematics} 2,
- 66--78, 1950. --- \emph{Further extensions.}
-\item
- \textbf{``Harmonic analysis and discontinuous groups in weakly
- symmetric Riemannian spaces.''} \emph{Journal of the Indian
- Mathematical Society} 20, 47--87, 1956. --- \emph{The Selberg trace
- formula.}
-\item
- \textbf{``Bemerkungen über eine Dirichletsche Reihe, die mit der
- Theorie der Modulformen nahe verwandt ist.''} \emph{Archiv der
- Mathematik} 1, 1948. --- \emph{The Rankin--Selberg method.}
-\item
- \textbf{``On the estimation of Fourier coefficients of modular
- forms.''} \emph{Proceedings of Symposia in Pure Mathematics} 8, 1965.
- --- \emph{The Mordell--Selberg lemma.}
-\item
- \textbf{``Sieve methods.''} \emph{Proceedings of Symposia in Pure
- Mathematics} 20, 1969. --- \emph{Survey of sieve theory.}
-\item
- \textbf{``Old and new conjectures and results about a class of
- Dirichlet series.''} \emph{Proceedings of the Amalfi Conference on
- Analytic Number Theory}, 1989. --- \emph{The Selberg class.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Compute $\sum_{n \leq x} \Lambda(n) \frac{x}{n}$ for $x = 100$ to illustrate the prime number theorem. \end{exercise}
-
-\begin{exercise} Derive the elementary proof that $\sum_{p \leq x} \frac{1}{p} \sim \ln \ln x$ using Selberg's inequality. \end{exercise}
-
-\begin{exercise} Verify Selberg's symmetric formula for the theta function: $\theta(x) + \theta(y) = \theta(xy) + \theta(x/y)$ in a special case. \end{exercise}
-
-\begin{exercise} Show that the Selberg sieve gives an upper bound for the number of primes in an arithmetic progression that is $O(x / (\phi(q) \log \log x))$. \end{exercise}
+The study of \textbf{spectral zeta functions} and their relations to geometric invariants has been a fruitful area of research. The Ray--Singer conjecture, proved by Cheeger and M\"{u}ller, relates the analytic torsion to the Reidemeister torsion, a topological invariant. The Selberg zeta function plays a central role in these developments.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Selberg developed the Selberg sieve, one of the most powerful elementary tools in analytic number theory, and proved the trace formula for automorphic forms. His elementary proof of the prime number theorem (independently of Erd\H{o}s) showed that deep results about primes can be obtained without complex analysis.
-
-\section{References and Further
-Reading}\label{ch1950atleselberg:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch1950atleselberg:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1950 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1950
-\item
- Wolf Prize Citation, 1986.
-\item
- Institute for Advanced Study: Atle Selberg Biography.
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch1950atleselberg:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Selberg, A. \emph{Collected Works} (2 vols.). Springer, 1989--1991.
-\item
- Selberg, A. \emph{Lectures on Sieves}. Tata Institute, 1970.
-\item
- Selberg, A. ``Harmonic analysis and discontinuous groups.''
- \emph{Journal of the Indian Mathematical Society} 20, 1956.
-\end{itemize}
-
-\subsection{Textbooks and Surveys}\label{ch1950atleselberg:textbooks-and-surveys}
-
-\begin{itemize}
-\tightlist
-\item
- Davenport, H. \emph{Multiplicative Number Theory}. Springer, 3rd ed.,
- 2000.
-\item
- Iwaniec, H. and Kowalski, E. \emph{Analytic Number Theory}. AMS
- Colloquium Publications, 2004.
-\item
- Hejhal, D. A. \emph{The Selberg Trace Formula for PSL(2,R)} (2 vols.).
- Springer, 1976--1983.
-\item
- Gelbart, S. \emph{Automorphic Forms on Adele Groups}. Princeton
- University Press, 1975.
-\end{itemize}
-
-\subsection{Biography and Exposition}\label{ch1950atleselberg:biography-and-exposition}
-
-\begin{itemize}
-\tightlist
-\item
- Bombieri, E. ``The Work of Atle Selberg.'' ICM 1950 Laudatio.
-\item
- Kaplansky, I. ``Atle Selberg.'' \emph{Biographical Memoirs of the
- National Academy of Sciences}, 2009.
-\item
- Barbour, J. ``Atle Selberg: A Reminiscence.'' \emph{Notices of the
- AMS} 55, 2008.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1974enricobombieri:enrico-bombieri-fields-medal-1974-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Bombieri extended Selberg's sieve methods.
-  \item \textbf{\hyperref[ch2014manjulbhargava:manjul-bhargava-fields-medal-2014-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Bhargava used Selberg's methods.
-  \item \textbf{\hyperref[ch2022jamesmaynard:james-maynard-fields-medal-2022-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Maynard extended Selberg's work on prime gaps.
-\end{itemize}
-
-\emph{(End of report)}
+Selberg developed the Selberg sieve, a flexible variational method for estimating prime counting functions that has become the standard tool in analytic number theory. He gave an elementary proof of the prime number theorem, showing that complex analysis is not essential for this fundamental result. Selberg proved that a positive proportion of zeros of the Riemann zeta function lie on the critical line, and established the optimal bound $S(T) = O(\log T)$. His trace formula connects the spectrum of the Laplacian on hyperbolic surfaces to the lengths of closed geodesics, creating a profound bridge between spectral theory and geometry. The Selberg zeta function encodes both spectral and geometric data, generalizing the Riemann zeta function to the setting of hyperbolic manifolds. These contributions have had far-reaching impact on number theory, automorphic forms, and mathematical physics, and continue to inspire new research in the theory of $L$-functions, random matrices, and quantum chaos.

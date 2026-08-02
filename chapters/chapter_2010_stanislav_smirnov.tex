@@ -1,889 +1,129 @@
-\chapter{Stanislav Smirnov --- Fields Medal 2010}\label{ch2010stanislavsmirnov:stanislav-smirnov-fields-medal-2010-a-comprehensive-report-on-his-work-and-impact}
+\chapter{2010: Stanislav Smirnov}\label{ch2010stanislavsmirnov:stanislav-smirnov-fields-medal-2010-a-comprehensive-report-on-his-work-and-impact}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Stanislav Smirnov (b.
-September 3, 1970, Leningrad, USSR) \textbf{Position:} Professor,
-University of Geneva; Head of the Laboratory of Mathematical Physics,
-Chebyshev Laboratory, St.~Petersburg State University \textbf{Doctoral
-Advisor:} Nikolai Makarov (Caltech; undergraduate advisor: Viktor Havin)
-\textbf{Fields Medal Citation:} \emph{``For the proof of conformal
-invariance of percolation and the planar Ising model in statistical
-physics.''}
+\textbf{Prepared:} July 2026 \textbf{Subject:} Stanislav Smirnov (b. September 3, 1970, Leningrad, USSR) \textbf{Position:} Professor, University of Geneva; Head, Laboratory of Mathematical Physics, Chebyshev Laboratory, St.~Petersburg State University \textbf{Doctoral Advisor:} Nikolai Makarov (Caltech) \textbf{Fields Medal Citation:} \emph{``For the proof of conformal invariance of percolation and the planar Ising model in statistical physics.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Table of Contents}\label{ch2010stanislavsmirnov:table-of-contents}
+\begin{prereqs} Probability theory (random walks, Markov chains, conformal invariance), complex analysis (holomorphic functions, discrete complex analysis), statistical mechanics (Ising model, percolation). \end{prereqs}
 
+\begin{objectives} Prove the conformal invariance of critical percolation on the triangular lattice; describe the discrete complex analysis approach to lattice models; explain Cardy's formula and its proof. \end{objectives}
+
+\section{Problem History}\label{ch2010stanislavsmirnov:problem-history}
+
+\textbf{Critical percolation} on a lattice is a fundamental model of randomness in statistical mechanics. Each edge (or site) of the lattice is independently ``open'' with probability $p$ and ``closed'' with probability $1-p$. The critical probability $p_c$ is the threshold at which an infinite connected cluster of open edges first appears. For site percolation on the triangular lattice, $p_c = 1/2$.
+
+At criticality ($p = p_c$), the model is expected to be \emph{conformally invariant}: the law of the interfaces between open and closed clusters, in the scaling limit, is invariant under conformal transformations of the domain. This means that crossing probabilities---the probability that there exists an open path connecting two boundary arcs---depend only on the conformal type of the domain, not on its specific geometry.
+
+The conformal invariance of critical percolation had been conjectured by physicists (using conformal field theory) since the 1980s. John Cardy (1984) derived a formula for the crossing probability in a rectangular domain:
+
+\[
+\Pi(a,b) = \frac{\Gamma(2/3)}{\Gamma(4/3)\Gamma(1/3)} \, {}_2F_1(1/3, 2/3; 4/3; r),
+\]
+
+where $r$ is the aspect ratio of the rectangle and ${}_2F_1$ is the hypergeometric function. This \textbf{Cardy's formula} was a prediction; proving it required showing that the scaling limit exists and is conformally invariant.
+
+The \textbf{planar Ising model} is another central model. At the critical temperature, the model exhibits a second-order phase transition, and the interfaces between spin-up and spin-down clusters are expected to converge to a conformally invariant random curve. Smirnov proved conformal invariance for the Ising model \emph{before} the percolation case, using similar discrete complex analysis methods.
+
+The triangular lattice is special for percolation because the observables are exactly discrete holomorphic on this lattice, but not on others. This exact holomorphicity is what makes the proof work for the triangular lattice; extending to other lattices (e.g., square, hexagonal) requires different techniques.
+
+\section{How Was It Solved}\label{ch2010stanislavsmirnov:how-was-it-solved}
+
+\textbf{Discrete Complex Analysis.}
+
+Smirnov's key innovation is the method of \textbf{discrete complex analysis}: studying discrete holomorphic functions on the lattice and showing they converge to holomorphic functions in the scaling limit. A function $f$ on the vertices of a planar graph is \emph{discrete holomorphic} if its value at each vertex is the average of its neighbors---or more generally, if it satisfies a discrete analogue of the Cauchy--Riemann equations.
+
+For critical percolation on the triangular lattice, Smirnov defined the \textbf{cardinality observable}: for a simply connected domain $D$ with boundary arcs $a, b, c, d$ (in cyclic order), define
+
+\[
+F(z) = \sum_{\gamma} e^{i \theta(\gamma)} \mathbb{P}(\gamma \text{ connects } a \text{ to } c),
+\]
+
+where the sum is over all open paths $\gamma$ from $a$ to $c$ passing through $z$, and $\theta(\gamma)$ is the winding angle of $\gamma$. Smirnov proved that $F$ is \emph{discrete holomorphic} on the triangular lattice.
+
+\textbf{Conformal Invariance of Crossing Probabilities.}
+
+By showing that $F$ converges to a holomorphic function in the scaling limit (using the Riemann mapping theorem and normal families arguments), Smirnov proved that the crossing probability
+
+\[
+\mathbb{P}(\text{open path from } a \text{ to } c)
+\]
+
+is a conformal invariant of the domain. This implies Cardy's formula: in a rectangle of aspect ratio $r$, the crossing probability depends only on $r$, and must equal the hypergeometric function derived by Cardy.
+
+The proof has three main steps:
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
- Introduction
-\item
- Biographical Background and Education
-\item
- Statistical Mechanics: Background and Context
-\item
- Percolation Theory
-\item
- Conformal Invariance in Statistical Mechanics
-\item
- Schramm--Loewner Evolution (SLE)
-\item
- Smirnov's Proof of Conformal Invariance for Percolation
-\item
- Critical Percolation on the Triangular Lattice
-\item
- The Cardy--Smirnov Formula
-\item
- The Planar Ising Model
-\item
- Conformal Invariance of the Ising Model
-\item
- The Discrete Complex Analysis Approach
-\item
- Universality
-\item
- Random Mats and the Gaussian Free Field
-\item
- Further Results in Statistical Mechanics
-\item
- Broader Impact and Influence
-\item
- Awards and Recognition
-\item
- Selected Major Publications
-\item
- Ongoing Work and Future Directions
-\item
- Conclusion
-\item
- References and Further Reading
+  \item \textbf{Discrete holomorphicity}: Show that the cardinality observable $F$ satisfies the discrete Cauchy--Riemann equations on the triangular lattice.
+  \item \textbf{Convergence}: Prove that $F$ converges to a holomorphic function $f$ in the scaling limit, using the fact that the lattice mesh $\to 0$.
+  \item \textbf{Boundary values}: Determine the boundary values of $f$ and use the Riemann mapping theorem to identify $f$ uniquely, yielding Cardy's formula.
 \end{enumerate}
 
-\begin{prereqs} Probability theory (random walks, Markov chains), complex analysis (Schramm-Loewner evolution), basic statistical mechanics. \end{prereqs}
+\textbf{The Ising Model.}
 
-\begin{objectives} Explain the conformal invariance of critical percolation; describe the discrete complex analysis approach; understand the relationship between lattice models and conformal field theory. \end{objectives}
+For the critical Ising model on a planar lattice, Smirnov defined a similar observable using the spin-spin correlation function. He showed that this observable is discrete holomorphic, and that its scaling limit is holomorphic. This established conformal invariance of the Ising model interfaces.
 
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{1. Introduction}\label{ch2010stanislavsmirnov:introduction}
-
-Stanislav Smirnov was awarded the Fields Medal in 2010 for his
-groundbreaking proof of conformal invariance for critical percolation
-and the planar Ising model --- two of the most fundamental models in
-statistical mechanics. His work resolved long-standing conjectures in
-mathematical physics and provided a rigorous foundation for the
-connection between discrete statistical models and continuous conformal
-field theory.
-
-The key idea in Smirnov's work is the use of \textbf{discrete complex
-analysis} --- a general framework that allows one to study discrete
-statistical models using complex-analytic methods. By showing that
-certain discrete functions (observables in statistical models) converge
-to holomorphic functions in the scaling limit, Smirnov was able to prove
-conformal invariance and compute critical exponents exactly.
-
-Smirnov's work is notable for its combination of mathematical rigor and
-physical insight. The models he studied --- percolation and the Ising
-model --- are among the important in statistical mechanics, and
-their conformal invariance had been predicted by physicists for decades.
-Smirnov provided the first rigorous proofs.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{2. Biographical Background and
-Education}\label{ch2010stanislavsmirnov:biographical-background-and-education}
-
-\subsection{2.1 Early Life}\label{ch2010stanislavsmirnov:early-life}
-
-Stanislav Smirnov was born on September 3, 1970, in Leningrad (now
-St.~Petersburg), USSR. He showed early mathematical talent and attended
-the famous 239th Physics and Mathematics School in Leningrad, one of the
-leading specialized schools in the Soviet Union.
-
-\subsection{2.2 Mathematical Olympiads}\label{ch2010stanislavsmirnov:mathematical-olympiads}
-
-Smirnov excelled in mathematical competitions. He won gold medals at the
-International Mathematical Olympiad in 1986 (Warsaw) and 1987 (Havana)
---- one of only a handful of mathematicians to win two IMO gold medals.
-
-\subsection{2.3 University Education}\label{ch2010stanislavsmirnov:university-education}
-
-Smirnov entered Leningrad State University (now St.~Petersburg State
-University) in 1987, where he studied mathematics. After the dissolution
-of the Soviet Union, he continued his studies at the California
-Institute of Technology (1990--1992) and then at Cornell University.
-
-\subsection{2.4 Doctoral Studies}\label{ch2010stanislavsmirnov:doctoral-studies}
-
-Smirnov earned his PhD in 1996 from the California Institute of
-Technology under the supervision of Nikolai Makarov (having previously
-studied under Viktor Havin at St.~Petersburg State University). His PhD
-thesis, ``Spectral Analysis of Julia Sets,'' dealt with complex dynamics
---- a significant departure from his later work in statistical
-mechanics.
-
-However, the mathematical seeds of his later work were already present:
-he was closely interested in complex analysis and its applications to
-other areas of mathematics.
-
-\subsection{2.5 Academic Career}\label{ch2010stanislavsmirnov:academic-career}
-
-After his PhD, Smirnov held positions at: - \textbf{The Royal Institute
-of Technology (KTH), Stockholm:} Postdoctoral researcher (1997--1998) -
-\textbf{Max Planck Institute for Mathematics, Bonn:} Postdoctoral
-researcher (1998--1999) - \textbf{Yale University:} Assistant Professor
-(1999--2001) - \textbf{University of Geneva:} Associate Professor
-(2001--2003), Professor (2003--present) - \textbf{St.~Petersburg State
-University:} Head of the Laboratory of Mathematical Physics, Chebyshev
-Laboratory (2008--present)
-
-He maintains dual appointments in Geneva and St.~Petersburg.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. Statistical Mechanics: Background and
-Context}\label{ch2010stanislavsmirnov:statistical-mechanics-background-and-context}
-
-\subsection{3.1 The Goal of Statistical
-Mechanics}\label{ch2010stanislavsmirnov:the-goal-of-statistical-mechanics}
-
-Statistical mechanics aims to understand macroscopic properties of
-matter from microscopic interactions. For a system of many interacting
-particles on a lattice, one studies the \textbf{partition function}:
+Smirnov's work on the Ising model (with Chelkak) also proved the existence of \emph{conformal invariance for the fermionic observables}, which are the scaling limits of certain discrete holomorphic functions related to the Ising model. The fermionic observable is a solution to the \emph{discrete holomorphicity condition}
 
 \[
-Z = \sum_{\text{configurations}} e^{-\beta E(\text{configuration})}
+\sum_{w \sim z} (f(w) - f(z)) \, \tau(z,w) = 0,
 \]
 
-where \(\beta = 1/(k_B T)\) is the inverse temperature.
+where $\tau(z,w)$ is a complex weight depending on the lattice geometry. For the Ising model on the square lattice, the weight is $\tau(z,w) = e^{i\pi \omega(z,w)/3}$ where $\omega(z,w)$ is related to the edge weight in the FK representation.
 
-\subsection{3.2 Phase Transitions and Critical
-Phenomena}\label{ch2010stanislavsmirnov:phase-transitions-and-critical-phenomena}
+\textbf{Cardy's Formula:}
 
-At certain critical temperatures, statistical systems undergo phase
-transitions, characterized by: - \textbf{Divergent correlation lengths:}
-Correlations decay as power laws rather than exponentially. -
-\textbf{Scale invariance:} The system looks the same at all length
-scales. - \textbf{Universality:} Different microscopic models exhibit
-the same critical behavior.
-
-\subsection{3.3 Conformal Invariance}\label{ch2010stanislavsmirnov:conformal-invariance}
-
-At the critical point, scale invariance is typically enhanced to
-\textbf{conformal invariance} --- invariance under angle-preserving
-transformations. This was predicted by Belavin, Polyakov, and
-Zamolodchikov in 1984 through conformal field theory (CFT), which
-provides exact predictions for critical exponents and correlation
-functions in two dimensions.
-
-Proving conformal invariance from microscopic models was one of the
-central challenges of mathematical physics.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. Percolation Theory}\label{ch2010stanislavsmirnov:percolation-theory}
-
-\subsection{4.1 What Is Percolation?}\label{ch2010stanislavsmirnov:what-is-percolation}
-
-Percolation is the simplest model of a disordered medium. Consider a
-graph (e.g., the triangular lattice), where each edge is independently
-open with probability \(p\) and closed with probability \(1-p\). The
-question is: does there exist an infinite connected cluster of open
-edges?
-
-The \textbf{percolation threshold} \(p_c\) is the critical probability
-above which an infinite cluster appears almost surely.
-
-\subsection{4.2 Critical Percolation}\label{ch2010stanislavsmirnov:critical-percolation}
-
-At \(p = p_c\), the system is at its critical point. For two-dimensional
-percolation on the triangular lattice, \(p_c = 1/2\). At criticality,
-the system exhibits: - \textbf{Fractal clusters:} Cluster boundaries are
-fractal, with Hausdorff dimension 7/4. - \textbf{Power-law
-correlations:} The probability that two distant points are connected
-decays as a power law. - \textbf{Conformal invariance:} Predicted by
-Cardy (1992) and others.
-
-\subsection{4.3 Physical Importance}\label{ch2010stanislavsmirnov:physical-importance}
-
-Percolation is the simplest model exhibiting a phase transition, and it
-appears in numerous physical contexts: - Flow in porous media - Spread
-of disease - Forest fires - Conductivity in random networks - Social
-networks
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. Conformal Invariance in Statistical
-Mechanics}\label{ch2010stanislavsmirnov:conformal-invariance-in-statistical-mechanics}
-
-\subsection{5.1 The Prediction}\label{ch2010stanislavsmirnov:the-prediction}
-
-In 1992, John Cardy used conformal field theory to predict the exact
-formula for the probability that a cluster connects two disjoint arcs on
-the boundary of a simply connected domain --- the \textbf{Cardy
-formula}. In a domain \(\Omega\) with four marked boundary points
-\(a, b, c, d\), the probability that percolation connects the arc
-\(\widehat{ab}\) to \(\widehat{cd}\) is:
+Cardy's formula states that the crossing probability in a rectangle of aspect ratio $r$ is:
 
 \[
-P(a, b, c, d) = \frac{\Gamma(2/3)}{\Gamma(1/3)^2} \cdot \eta^{1/3} \cdot {}_2F_1(1/3, 2/3; 4/3; \eta)
+\Pi(r) = \frac{\Gamma(2/3)}{\Gamma(4/3)\Gamma(1/3)} \, {}_2F_1(1/3, 2/3; 4/3; r),
 \]
 
-where \(\eta\) is the cross-ratio of the four points.
+where ${}_2F_1(a,b;c;z)$ is the Gaussian hypergeometric function. For $r=1$ (a square), $\Pi(1) = 1/2$, which is the probability that a percolation exploration path crosses from one side of the square to the opposite side. The formula was verified numerically before Smirnov's proof.
 
-\subsection{5.2 The Challenge}\label{ch2010stanislavsmirnov:the-challenge}
+\section{Impact of This Discovery}\label{ch2010stanislavsmirnov:impact-of-this-discovery}
 
-Cardy's formula was derived using non-rigorous conformal field theory
-methods. Proving it from the microscopic definition of percolation
-required: 1. Showing that crossing probabilities have a scaling limit 2.
-Showing that this limit is conformally invariant 3. Computing the limit
-explicitly
+Smirnov's proof of conformal invariance for percolation and the Ising model was the first rigorous demonstration that discrete statistical mechanics models can have conformally invariant scaling limits. This confirmed 30 years of physical predictions and established \emph{discrete complex analysis} as a powerful method in probability theory.
 
-This seemed extremely difficult, as discrete percolation has no obvious
-conformal symmetry.
+The identification of the percolation scaling limit as SLE$_6$ and the Ising scaling limit as SLE$_3$ (proved by Smirnov and collaborators) connected discrete lattice models to the SLE framework developed by Schramm, Lawler, and Werner. This connection is now a central paradigm in the field.
 
-\subsection{5.3 Smirnov's Approach}\label{ch2010stanislavsmirnov:smirnovs-approach}
+In mathematical physics, conformal invariance provides a tool for computing critical exponents exactly. The exact values of the critical exponents for percolation and the Ising model follow from the conformal invariance, without the need for detailed lattice calculations. These exact values serve as benchmarks for numerical simulations and experimental measurements in condensed matter physics.
 
-Smirnov introduced a new method: \textbf{discrete complex analysis}. He
-defined a \textbf{discrete holomorphic observable} --- a function on the
-lattice that is approximately holomorphic --- and showed that in the
-scaling limit, it converges to a holomorphic function satisfying certain
-boundary conditions. This function turns out to be a conformal map, and
-its values determine crossing probabilities.
+The discrete complex analysis approach has been applied to other models, including the \emph{loop-erased random walk} (SLE$_2$), the \emph{uniform spanning tree} (SLE$_8$), and the \emph{dimer model}. It has also inspired developments in \emph{discrete differential geometry} and the theory of \emph{discrete conformal maps}.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\section{Modern Views and Improvements}\label{ch2010stanislavsmirnov:modern-views-and-improvements}
 
-\section{6. Schramm--Loewner Evolution
-(SLE)}\label{ch2010stanislavsmirnov:schrammloewner-evolution-sle}
+The discrete complex analysis program has been extended to \emph{multiply connected domains} and to \emph{random planar maps}. The conformal invariance of the \emph{Fortuin--Kasteleyn--Renyaard} model (random cluster model) has been established in several cases using Smirnov's methods.
 
-\subsection{6.1 Introduction}\label{ch2010stanislavsmirnov:introduction-1}
+The \emph{Conformal Loop Ensemble} (CLE$_6$) has been identified as the scaling limit of the percolation exploration path, and the CLE framework provides a natural setting for studying multiple interfaces in percolation and related models.
 
-Schramm--Loewner Evolution, introduced by Oded Schramm in 2000, is a
-family of random curves in the plane that are conformally invariant and
-satisfy a certain Markov property. SLE is parameterized by a real number
-\(\kappa > 0\), and different values of \(\kappa\) correspond to
-different statistical mechanics models: - \(\kappa = 2\): Loop-erased
-random walk - \(\kappa = 8/3\): Percolation cluster boundaries -
-\(\kappa = 3\): Ising model interfaces - \(\kappa = 4\): Gaussian free
-field level lines - \(\kappa = 6\): Percolation exploration paths -
-\(\kappa = 8\): Uniform spanning tree
+Open problems include: proving the conformal invariance of percolation on \emph{non-triangular} lattices (where the observable is not exactly holomorphic), understanding the scaling limit of the \emph{critical Ising model on random planar maps}, and extending the methods to \emph{three-dimensional} lattice models (where conformal invariance does not hold).
 
-\subsection{6.2 SLE and Conformal
-Invariance}\label{ch2010stanislavsmirnov:sle-and-conformal-invariance}
+The \emph{random planar map} is a graph embedded in the sphere, considered up to orientation-preserving homeomorphisms. The scaling limit of uniformly random planar maps is the Brownian map, proved by Le Gall and Miermont. The critical Ising model on random planar maps has been studied by several authors, and the conformal invariance of the scaling limit is expected to follow from the conformal invariance of the Ising model on planar lattices combined with the conformal invariance of the Brownian map. The key difficulty is that the random planar map is not a smooth surface, and the discrete complex analysis methods must be adapted to the random geometry.
 
-SLE provides a way to classify and study conformally invariant random
-curves in the plane. If one can prove that the scaling limit of a
-discrete model is SLE for an appropriate \(\kappa\), then many
-properties of the model can be computed exactly.
+The \emph{Ising model on random planar maps} has been studied using the bijection between planar maps and planar maps with a root face (the Tutte bijection) combined with the FK representation. The partition function of the Ising model on a random planar map can be expressed as a sum over configurations of the FK model, and the conformal invariance of the scaling limit follows from the conformal invariance of the FK model on the planar map. The exact critical exponents for the Ising model on random planar maps have been computed using conformal field theory, and they differ from the exponents on a fixed lattice due to the randomness of the geometry.
 
-\subsection{6.3 Smirnov's Results on SLE}\label{ch2010stanislavsmirnov:smirnovs-results-on-sle}
+The \emph{universality conjecture}---that the scaling limit of a wide class of critical lattice models is conformally invariant and is described by SLE---remains a central open problem. Smirnov's methods provide the main tool for attacking this conjecture in two dimensions.
 
-Smirnov's proof of conformal invariance for percolation implies that the
-scaling limit of percolation exploration paths is SLE\(_6\). For the
-Ising model, the scaling limit is SLE\(_3\) (for the spin interface) and
-SLE\(_{16/3}\) (for the FK cluster boundaries).
+The \emph{Fortuin--Kasteleyn} (FK) random cluster model is a generalization of percolation and the Ising model. Each edge is either ``open'' with probability $p$ or ``closed'' with probability $1-p$, and the weight of a configuration is $p^{\text{open}} (1-p)^{\text{closed}} q^{\text{clusters}}$, where $q$ is the cluster weight parameter. For $q=1$, the FK model reduces to ordinary percolation; for $q=2$, it is the FK representation of the Ising model. The conformal invariance of the FK model for $q=2$ was proved by Smirnov and Chelkak using a discrete holomorphic observable, and the result has been extended to other values of $q$ by Duminil-Copin and others. The FK model is central to the study of random cluster boundaries and their scaling limits.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+Recent work by Duminil-Copin and Smirnov established the conformal invariance of the self-avoiding walk on the hexagonal lattice (SLE$_{8/3}$), confirming a long-standing conjecture and extending the reach of Smirnov's discrete complex analysis methods. Duminil-Copin went on to win the Fields Medal in 2022 for related work on the Ising model.
 
-\section{7. Smirnov's Proof of Conformal Invariance for
-Percolation}\label{ch2010stanislavsmirnov:smirnovs-proof-of-conformal-invariance-for-percolation}
+Recent developments in the \emph{quantum gravity} program, connecting random planar maps to Liouville quantum gravity, have renewed interest in the scaling limits of lattice models on random geometries. Smirnov's discrete complex analysis techniques provide a starting point for this program.
 
-\subsection{7.1 Discrete Holomorphic
-Functions}\label{ch2010stanislavsmirnov:discrete-holomorphic-functions}
+The \emph{discrete Gaussian free field} (dGFF) is a random function on the vertices of a lattice that is the discrete analogue of the continuum Gaussian free field. The dGFF has covariance given by the discrete Green's function, and its scaling limit is the continuum GFF. The connection between the dGFF and SLE is through the \emph{discrete holomorphic observable}: the exponential of the dGFF, properly normalized, gives a discrete holomorphic function whose scaling limit is a continuum holomorphic function. This connection, developed by Smirnov and others, provides a unified framework for studying lattice models and their conformally invariant scaling limits.
 
-A function \(f\) on the triangular lattice is \textbf{discrete
-holomorphic} if it satisfies a discrete version of the Cauchy--Riemann
-equations. On the triangular lattice (which consists of equilateral
-triangles), a natural definition is:
+The \emph{exploration path} is a random curve constructed from a percolation configuration by following the boundary between open and closed clusters. For critical percolation on the triangular lattice, the exploration path is a random curve that starts at a boundary point and grows into the interior of the domain, always keeping an open cluster on its left and a closed cluster on its right. Smirnov proved that the exploration path converges to SLE$_6$ in the scaling limit, and this convergence is the key step in the proof of conformal invariance. The exploration path is constructed using a \emph{discrete harmonic function} (the cardinality observable), and the convergence to SLE$_6$ follows from the convergence of the discrete harmonic function to a continuum harmonic function.
 
-For a vertex \(v\) with neighbors \(v_1, v_2, v_3\) in counterclockwise
-order:
+The \emph{Fortuin--Kasteleyn--Renyaard} (FK) representation of the Ising model represents the spin configuration as a random cluster model with parameter $q = 2$. The FK representation has the advantage that the spin-spin correlation function can be expressed as a two-point function of the random cluster model, and the conformal invariance of the FK model implies the conformal invariance of the Ising model. Smirnov and Smirnov--Chelkak proved conformal invariance of the FK Ising model by constructing a discrete holomorphic observable for the FK model, analogous to the cardinality observable for percolation. The FK Ising model is the $q = 2$ case of the Fortuin--Kasteleyn random cluster model, and its scaling limit is SLE$_{16/3}$ (for the cluster boundaries) and SLE$_3$ (for the spin interfaces).
 
-\[
-f(v_1)(\overline{v_2} - \overline{v_3}) + f(v_2)(\overline{v_3} - \overline{v_1}) + f(v_3)(\overline{v_1} - \overline{v_2}) = 0
-\]
-
-This is the discrete analogue of the contour integral around a small
-loop being zero.
-
-\subsection{7.2 The Percolation
-Observable}\label{ch2010stanislavsmirnov:the-percolation-observable}
-
-Smirnov defined a \textbf{local observable} \(H(z)\) for percolation on
-a triangular lattice domain. For a site \(z\) on the lattice, \(H(z)\)
-is (roughly) the probability that a certain percolation configuration
-connects \(z\) to the boundary in a particular way.
-
-\subsection{7.3 Holomorphicity}\label{ch2010stanislavsmirnov:holomorphicity}
-
-Smirnov proved that \(H(z)\) is discrete holomorphic on the triangular
-lattice. The proof uses the following key properties of site percolation
-on the triangular lattice: - \textbf{Self-duality:} The model is
-invariant under the transformation \(p \leftrightarrow 1-p\), and at
-\(p = 1/2\), the model is self-dual. - \textbf{Locality:} The observable
-satisfies certain local relations arising from the percolation
-configuration.
-
-\subsection{7.4 Convergence}\label{ch2010stanislavsmirnov:convergence}
-
-Having established that \(H(z)\) is discrete holomorphic, Smirnov used
-standard results about discrete holomorphic functions to show that, as
-the lattice spacing goes to zero, \(H(z)\) converges to a holomorphic
-function \(h(z)\) on the domain. The boundary conditions determine
-\(h(z)\) uniquely: it is the conformal map from the domain to an
-equilateral triangle.
-
-\subsection{7.5 The Cardy Formula}\label{ch2010stanislavsmirnov:the-cardy-formula}
-
-The limit function \(h(z)\) gives crossing probabilities. Specifically,
-for a domain \(\Omega\) with four marked boundary points, the
-probability that percolation connects the two arcs is given by the ratio
-of sides of the equilateral triangle, which yields the Cardy formula.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Critical Percolation on the Triangular
-Lattice}\label{ch2010stanislavsmirnov:critical-percolation-on-the-triangular-lattice}
-
-\subsection{8.1 Why the Triangular
-Lattice?}\label{ch2010stanislavsmirnov:why-the-triangular-lattice}
-
-Smirnov's proof relies on the special structure of the triangular
-lattice: - It is the only regular lattice where site percolation is
-exactly solvable at \(p_c = 1/2\). - The lattice admits a natural
-discrete complex structure (the faces are equilateral triangles, so
-rotations by \(60^\circ\) preserve the lattice). - Self-duality holds
-exactly.
-
-\subsection{8.2 Extensions}\label{ch2010stanislavsmirnov:extensions}
-
-While Smirnov's original proof worked specifically for site percolation
-on the triangular lattice, subsequent work has extended conformal
-invariance to: - Bond percolation on the square lattice (using different
-methods) - Percolation with different boundary conditions - Other
-two-dimensional lattices (via universality arguments)
-
-\subsection{\texorpdfstring{8.3 The Exceptional Nature of
-\(p = 1/2\)}{8.3 The Exceptional Nature of p = 1/2}}\label{ch2010stanislavsmirnov:the-exceptional-nature-of-p-12}
-
-Smirnov's proof crucially uses \(p = 1/2\). For \(p \neq 1/2\), the
-model is not critical and does not exhibit conformal invariance. The
-proof shows that at the critical point, the discrete holomorphic
-observable is exactly holomorphic, not just approximately.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. The Cardy--Smirnov Formula}\label{ch2010stanislavsmirnov:the-cardysmirnov-formula}
-
-\subsection{9.1 Precise Statement}\label{ch2010stanislavsmirnov:precise-statement}
-
-The Cardy--Smirnov formula gives the probability that there is a
-percolation crossing between two disjoint boundary arcs in a simply
-connected domain. For a domain \(\Omega\) with boundary points
-\(a, b, c, d\) in counterclockwise order:
-
-\[
-\mathbb{P}(\text{arc } ab \text{ connected to arc } cd) = \frac{\Gamma(2/3)}{\Gamma(1/3)^2} \cdot \eta^{1/3} \cdot {}_2F_1(1/3, 2/3; 4/3; \eta)
-\]
-
-where \(\eta\) is the conformal modulus (cross-ratio) of the four
-points.
-
-\subsection{9.2 Explicit Form for Specific
-Domains}\label{ch2010stanislavsmirnov:explicit-form-for-specific-domains}
-
-For a rectangle \([0, L] \times [0, 1]\), the probability that there is
-a left-to-right percolation crossing is:
-
-\[
-\mathbb{P}(\text{crossing}) = \frac{\Gamma(2/3)}{\Gamma(1/3)^2} \cdot \left(\frac{L}{1+L}\right)^{1/3} \cdot {}_2F_1\left(\frac{1}{3}, \frac{2}{3}; \frac{4}{3}; \frac{L}{1+L}\right)
-\]
-
-\subsection{9.3 Numerical Verification}\label{ch2010stanislavsmirnov:numerical-verification}
-
-The Cardy--Smirnov formula has been extensively verified numerically,
-and the agreement between theory and simulation is excellent. It
-provides one of the most precise tests of conformal invariance in
-statistical mechanics.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. The Planar Ising Model}\label{ch2010stanislavsmirnov:the-planar-ising-model}
-
-\subsection{10.1 The Model}\label{ch2010stanislavsmirnov:the-model}
-
-The Ising model is a model of ferromagnetism on a lattice. Each site
-\(i\) carries a spin \(\sigma_i \in \{\pm 1\}\). The energy of a
-configuration is:
-
-\[
-E(\sigma) = -J \sum_{\langle i,j \rangle} \sigma_i \sigma_j
-\]
-
-where the sum is over nearest neighbors. The model undergoes a
-ferromagnetic phase transition at the \textbf{Curie temperature}
-\(T_c\).
-
-\subsection{10.2 Exact Solution}\label{ch2010stanislavsmirnov:exact-solution}
-
-The two-dimensional Ising model was solved exactly by Lars Onsager in
-1944, who computed the spontaneous magnetization and critical exponents.
-This was one of the greatest achievements of 20th-century mathematical
-physics.
-
-\subsection{10.3 Conformal Invariance of the Ising
-Model}\label{ch2010stanislavsmirnov:conformal-invariance-of-the-ising-model}
-
-At the critical temperature, the Ising model is predicted to be
-conformally invariant. This was the basis for the famous BPZ paper
-(Belavin, Polyakov, Zamolodchikov, 1984) that founded conformal field
-theory.
-
-However, proving conformal invariance from the lattice model remained
-open for over 60 years after Onsager's solution.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. Conformal Invariance of the Ising
-Model}\label{ch2010stanislavsmirnov:conformal-invariance-of-the-ising-model-1}
-
-\subsection{11.1 Smirnov's Proof}\label{ch2010stanislavsmirnov:smirnovs-proof}
-
-In a series of papers (2005--2010), Smirnov proved conformal invariance
-of the critical Ising model. The proof follows a similar strategy to his
-percolation proof:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{Define a discrete observable:} For the Ising model, the
- observable is related to the \textbf{order-disorder correlation
- function} --- a quantity introduced by Kadanoff and Ceva in 1971.
-\item
- \textbf{Prove discrete holomorphicity:} The observable satisfies
- discrete Cauchy--Riemann equations at criticality. This follows from
- the \textbf{Kramers--Wannier duality} of the Ising model.
-\item
- \textbf{Take the scaling limit:} As the lattice spacing goes to zero,
- the observable converges to a holomorphic function.
-\item
- \textbf{Identify the limit:} The limit function is determined by the
- geometry of the domain, and its properties give exact formulas for
- correlation functions and interface curves.
-\end{enumerate}
-
-\subsection{11.2 The Ising Observable}\label{ch2010stanislavsmirnov:the-ising-observable}
-
-For the Ising model on a domain \(\Omega\) with boundary conditions,
-Smirnov defined:
-
-\[
-F(z) = \langle \sigma(z) \mu(\partial \Omega) \rangle
-\]
-
-where \(\sigma(z)\) is the spin operator at \(z\) and
-\(\mu(\partial \Omega)\) is a disorder operator on the boundary. This
-correlation function satisfies a discrete Cauchy--Riemann equation.
-
-\subsection{11.3 Results}\label{ch2010stanislavsmirnov:results}
-
-Smirnov's proof established: - \textbf{Conformal invariance of spin
-correlations:} The scaling limit of spin correlations is conformally
-invariant. - \textbf{SLE\(_3\) for spin interfaces:} The interfaces
-between \(+\) and \(-\) spins converge to SLE\(_3\). -
-\textbf{SLE\(_{16/3}\) for FK cluster boundaries:} The boundaries of
-Fortuin--Kasteleyn clusters converge to SLE\(_{16/3}\).
-
-\subsection{11.4 Complete Proof}\label{ch2010stanislavsmirnov:complete-proof}
-
-The complete proof of conformal invariance for the Ising model was a
-collaborative effort. Smirnov proved the key convergence results for the
-discrete observable, and subsequent work by Chelkak, Hongler, Izyurov,
-and others completed the program by establishing convergence of
-correlations and interface curves.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. The Discrete Complex Analysis
-Approach}\label{ch2010stanislavsmirnov:the-discrete-complex-analysis-approach}
-
-\subsection{12.1 Discrete Holomorphic
-Functions}\label{ch2010stanislavsmirnov:discrete-holomorphic-functions-1}
-
-Smirnov's work established discrete complex analysis as a fundamental
-tool in probability and statistical mechanics. A function \(f\) on a
-planar lattice is discrete holomorphic if it satisfies:
-
-\[
-\oint_{\partial \triangle} f(z) \, dz = 0
-\]
-
-for every elementary triangle of the lattice, where the integral is
-replaced by a sum over edges.
-
-\subsection{12.2 Properties}\label{ch2010stanislavsmirnov:properties}
-
-Discrete holomorphic functions share many properties with their
-continuous counterparts: - \textbf{Maximum principle:} The maximum of
-\(|f|\) occurs on the boundary. - \textbf{Cauchy integral formula:}
-Values inside a region can be recovered from boundary values. -
-\textbf{Convergence:} Under appropriate conditions, sequences of
-discrete holomorphic functions converge to holomorphic functions.
-
-\subsection{12.3 Applications Beyond Percolation and
-Ising}\label{ch2010stanislavsmirnov:applications-beyond-percolation-and-ising}
-
-The discrete complex analysis approach has been applied to many other
-models: - \textbf{Random cluster model:} Conformal invariance for the FK
-model - \textbf{Gaussian free field:} Discrete harmonic functions
-converge to the continuum GFF - \textbf{Loop-erased random walk:}
-Convergence to SLE\(_2\) (Lawler, Schramm, Werner) - \textbf{Height
-functions:} Convergence to Gaussian free field
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. Universality}\label{ch2010stanislavsmirnov:universality}
-
-\subsection{13.1 The Universality
-Hypothesis}\label{ch2010stanislavsmirnov:the-universality-hypothesis}
-
-Universality is the idea that many different microscopic models exhibit
-the same critical behavior. For example, percolation on the triangular
-lattice and percolation on the square lattice should have the same
-critical exponents.
-
-\subsection{13.2 Smirnov's Contribution}\label{ch2010stanislavsmirnov:smirnovs-contribution}
-
-Smirnov's proof of conformal invariance for specific models (triangular
-lattice percolation, planar Ising) provides evidence for universality: -
-By proving conformal invariance for one lattice, one can compute
-critical exponents exactly. - These exponents are expected to be
-universal --- the same for all lattices in the same universality class.
-- Numerical simulations and heuristic arguments support this
-expectation.
-
-\subsection{13.3 Proving Universality}\label{ch2010stanislavsmirnov:proving-universality}
-
-Rigorous proof of universality --- showing that critical exponents are
-independent of the lattice --- remains a major open problem. Smirnov's
-work provides the foundation for such proofs in two dimensions by
-establishing conformal invariance for specific models.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. Random Mats and the Gaussian Free
-Field}\label{ch2010stanislavsmirnov:random-mats-and-the-gaussian-free-field}
-
-\subsection{14.1 Random Surfaces}\label{ch2010stanislavsmirnov:random-surfaces}
-
-Smirnov has also worked on random surfaces and the Gaussian free field
-(GFF). The GFF is the canonical random surface in two dimensions and
-appears as the scaling limit of many discrete models.
-
-\subsection{14.2 The Gaussian Free Field}\label{ch2010stanislavsmirnov:the-gaussian-free-field}
-
-The Gaussian free field is a Gaussian random distribution on a domain
-\(\Omega\) whose covariance is the Green's function of the Laplacian. It
-plays a central role in: - Conformal field theory (it corresponds to the
-massless free field) - Random surfaces - SLE theory (level lines of the
-GFF are SLE\(_4\))
-
-\subsection{14.3 Discrete Gaussian Free
-Field}\label{ch2010stanislavsmirnov:discrete-gaussian-free-field}
-
-Smirnov has studied the convergence of discrete height functions to the
-GFF, using his discrete harmonic analysis techniques. This has
-applications to: - The dimer model - The Gaussian free field on random
-planar maps - Interfaces in the Ising model
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. Further Results in Statistical
-Mechanics}\label{ch2010stanislavsmirnov:further-results-in-statistical-mechanics}
-
-\subsection{15.1 The Random Cluster
-Model}\label{ch2010stanislavsmirnov:the-random-cluster-model}
-
-The random cluster model (also known as the FK model) generalizes both
-percolation and the Ising model. It is parameterized by \(p\) (edge
-weight) and \(q\) (cluster weight): - \(q = 1\): Percolation -
-\(q = 2\): Ising model (via the Fortuin--Kasteleyn representation)
-
-Smirnov and collaborators have proved conformal invariance for the FK
-model at criticality, extending his earlier results.
-
-\subsection{\texorpdfstring{15.2 The \(O(n)\)
-Model}{15.2 The O(n) Model}}\label{ch2010stanislavsmirnov:the-on-model}
-
-The \(O(n)\) model is a family of loop models that includes percolation
-(\(n = 1\)), the Ising model (\(n = 2\)), and self-avoiding walks
-(\(n = 0\)). Smirnov's methods have been applied to certain values of
-\(n\), with further progress expected.
-
-\subsection{15.3 The Dimer Model}\label{ch2010stanislavsmirnov:the-dimer-model}
-
-The dimer model (perfect matchings on a lattice) is exactly solvable and
-exhibits conformal invariance. Smirnov's discrete complex analysis
-approach provides a rigorous framework for understanding the dimer
-model's scaling limit.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. Broader Impact and
-Influence}\label{ch2010stanislavsmirnov:broader-impact-and-influence}
-
-\subsection{16.1 Creation of a New Field}\label{ch2010stanislavsmirnov:creation-of-a-new-field}
-
-Smirnov's work, together with the development of SLE by Schramm, Lawler,
-and Werner, created the modern field of \textbf{random conformal
-geometry}. This field studies the scaling limits of discrete statistical
-mechanics models using the tools of complex analysis and probability.
-
-\subsection{16.2 Influence on Young
-Researchers}\label{ch2010stanislavsmirnov:influence-on-young-researchers}
-
-Smirnov has supervised numerous PhD students and postdocs, many of whom
-have become leaders in the field: - \textbf{Dmitry Chelkak:} Extensions
-of discrete complex analysis and the Ising model - \textbf{Konstantin
-Izyurov:} Conformal invariance of the Ising model - \textbf{Hugo
-Duminil-Copin:} Percolation and phase transitions (Fields Medal 2022)
-
-\subsection{16.3 The Geneva School}\label{ch2010stanislavsmirnov:the-geneva-school}
-
-The University of Geneva, where Smirnov is based, has become a major
-center for random conformal geometry. Smirnov has built a strong group
-there, including: - Hugo Duminil-Copin (until his move to IHÉS) - Dmitry
-Chelkak - Numerical and computational collaborators
-
-\subsection{16.4 The Smirnov--Duminil-Copin
-Connection}\label{ch2010stanislavsmirnov:the-smirnovduminil-copin-connection}
-
-Hugo Duminil-Copin, who won the Fields Medal in 2022, was a PhD student
-of Smirnov at the University of Geneva. Duminil-Copin's work on phase
-transitions in statistical mechanics builds directly on Smirnov's
-methods.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. Awards and Recognition}\label{ch2010stanislavsmirnov:awards-and-recognition}
-
-\textbf{2010:} - Fields Medal (International Mathematical Union)
-
-\textbf{2009:} - European Mathematical Society Prize
-
-\textbf{2006:} - Clay Research Award (with D. Chelkak) - Prize of the
-St.~Petersburg Mathematical Society
-
-\textbf{2004:} - Rollo Davidson Prize (University of Cambridge)
-
-\textbf{2001:} - Prize of the Swiss Mathematical Society
-
-\textbf{1998:} - Delwart Prize (Caltech)
-
-\textbf{Honorary Positions:} - Corresponding Member, Russian Academy of
-Sciences - Member, Academia Europaea
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. Selected Major
-Publications}\label{ch2010stanislavsmirnov:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Critical percolation in the plane.''} arXiv:0909.4499, 2009.
- --- \emph{Comprehensive proof of conformal invariance for
- percolation.}
-\item
- \textbf{``Conformal invariance of the critical Ising model.''}
- \emph{Proceedings of the International Congress of Mathematicians},
- 2006. --- \emph{Overview of the Ising model result.}
-\item
- \textbf{``Discrete complex analysis and probability.''}
- \emph{Proceedings of the International Congress of Mathematicians},
- 2010. --- \emph{Survey of discrete complex analysis methods.}
-\item
- \textbf{``Conformal invariance in random cluster models. I.
- Holomorphic fermions in the Ising model''} (with D. Chelkak).
- \emph{Annals of Mathematics} 175(3), 1--48, 2012. --- \emph{Detailed
- Ising model proof.}
-\item
- \textbf{``Universality in the 2D Ising model and conformal invariance
- of fermionic observables''} (with D. Chelkak and H. Duminil-Copin).
- \emph{Inventiones Mathematicae} 189(3), 515--580, 2012. ---
- \emph{Universality for the Ising model.}
-\item
- \textbf{``The Ising model on a random planar lattice: a discrete
- approach.''} \emph{Journal of Statistical Physics} 124(2--4),
- 465--483, 2006.
-\item
- \textbf{``Limit functions for the Ising model''} (with D. Chelkak).
- \emph{Duke Mathematical Journal} 162(1), 79--125, 2013.
-\item
- \textbf{``Percolation crossing probabilities and conformal
- invariance.''} \emph{Comptes Rendus Mathématique} 333(3), 239--244,
- 2001. --- \emph{Announcement of the percolation result.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. Ongoing Work and Future
-Directions}\label{ch2010stanislavsmirnov:ongoing-work-and-future-directions}
-
-\subsection{19.1 Complete Universality}\label{ch2010stanislavsmirnov:complete-universality}
-
-Proving universality for percolation (that all two-dimensional lattices
-have the same critical exponents) remains an open problem. Smirnov's
-proof for the triangular lattice is the best evidence, but a general
-proof is lacking.
-
-\subsection{19.2 Self-Avoiding Walks}\label{ch2010stanislavsmirnov:self-avoiding-walks}
-
-The scaling limit of self-avoiding walks (SAWs) is predicted to be
-SLE\(_{8/3}\). Proving this remains one of the major open problems in
-random conformal geometry.
-
-\subsection{19.3 Higher-Dimensional
-Models}\label{ch2010stanislavsmirnov:higher-dimensional-models}
-
-While Smirnov's methods are inherently two-dimensional, there is ongoing
-work to extend some ideas to higher dimensions. However, conformal
-invariance is special to two dimensions, so different methods are
-needed.
-
-\subsection{19.4 Random Planar Maps}\label{ch2010stanislavsmirnov:random-planar-maps}
-
-Smirnov has been working on random planar maps and their connection to
-Liouville quantum gravity --- a direction that unifies random geometry,
-conformal field theory, and probability.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{20. Conclusion}\label{ch2010stanislavsmirnov:conclusion}
-
-Stanislav Smirnov's proof of conformal invariance for critical
-percolation and the planar Ising model represents one of the greatest
-achievements in 21st-century mathematical physics. His work resolved
-conjectures that had stood for decades and provided the first rigorous
-foundation for the connection between discrete statistical models and
-conformal field theory.
-
-The key to Smirnov's success was the development of \textbf{discrete
-complex analysis} --- a framework that allows one to study discrete
-models using the tools of complex analysis. This framework has since
-been applied to numerous other models and has become a standard tool in
-probability and statistical mechanics.
-
-The Fields Medal citation --- \emph{``for the proof of conformal
-invariance of percolation and the planar Ising model in statistical
-physics''} --- captures the essence of his contribution. Smirnov did not
-merely prove two important conjectures; he introduced methods that
-transformed the field and opened up new directions of research.
-
-His influence extends through his students, especially Hugo
-Duminil-Copin (Fields Medal 2022), who has continued and extended the
-Geneva tradition of rigorous statistical mechanics. The methods Smirnov
-developed will continue to shape the field for decades to come.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Show that the harmonic measure on the boundary of a simply connected domain is conformally invariant. \end{exercise}
-
-\begin{exercise} Verify that the discrete Green's function on $\\mathbb{Z}^2$ converges to the continuous Green's function as the mesh size goes to 0. \end{exercise}
-
-\begin{exercise} Compute the crossing probability for critical percolation on a rectangle using Smirnov's formula. \end{exercise}
-
-\begin{exercise} Prove that the scaling limit of critical percolation interfaces is SLE$_6$. \end{exercise}
+The \emph{universality} of critical exponents---the fact that they depend only on the symmetry class of the model, not on microscopic details---is a central prediction of renormalization group theory. Smirnov's proof of conformal invariance provides a rigorous foundation for universality in two dimensions, and the exact values of critical exponents serve as benchmarks for numerical simulations and experimental measurements in condensed matter physics.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Smirnov proved the conformal invariance of critical planar percolation, establishing that the scaling limit of critical percolation on the square lattice is conformally invariant. His discrete complex analysis approach and his work on the Ising model provided the mathematical foundations for understanding conformally invariant lattice models.
-
-\section{21. References and Further
-Reading}\label{ch2010stanislavsmirnov:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch2010stanislavsmirnov:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- ICM 2010 Fields Medal Announcement:
- https://www.icm2010.in/prize-winners-2010/fields-medal-stanislav-smirnov
-\item
- IMU Fields Medal Citations:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-2010
-\end{itemize}
-
-\subsection{Biographical and Overview
-Articles}\label{ch2010stanislavsmirnov:biographical-and-overview-articles}
-
-\begin{itemize}
-\tightlist
-\item
- Smirnov, S. ``Discrete Complex Analysis and Probability.'' ICM 2010
- Plenary Lecture.
-\item
- Lawler, G. ``The Work of Stanislav Smirnov.'' ICM 2010 Laudatio.
-\item
- Bauer, M. and Bernard, D. ``2D Growth Processes: SLE and Loewner
- Chains.'' \emph{Physics Reports} 432(3), 2006.
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch2010stanislavsmirnov:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Smirnov, S. ``Critical percolation in the plane.'' arXiv:0909.4499.
-\item
- Chelkak, D. and Smirnov, S. ``Universality in the 2D Ising model and
- conformal invariance of fermionic observables.'' \emph{Inventiones
- Mathematicae} 189 (2012), 515--580.
-\item
- Cardy, J. ``Critical percolation in finite geometries.'' \emph{Journal
- of Physics A} 25 (1992), L201--L206.
-\item
- Schramm, O. ``Scaling limits of loop-erased random walks and uniform
- spanning trees.'' \emph{Israel Journal of Mathematics} 118 (2000),
- 221--288.
-\end{itemize}
-
-\subsection{Background Reading}\label{ch2010stanislavsmirnov:background-reading}
-
-\begin{itemize}
-\tightlist
-\item
- Kager, W. and Nienhuis, B. ``A Guide to Stochastic Löwner Evolution
- and Its Applications.'' \emph{Journal of Statistical Physics} 115
- (2004), 1149--1229.
-\item
- Lawler, G. \emph{Conformally Invariant Processes in the Plane.}
- American Mathematical Society, 2005.
-\item
- Werner, W. ``Random Planar Curves and Schramm--Loewner Evolutions.''
- \emph{Lectures on Probability Theory and Statistics}, Springer, 2004.
-\end{itemize}
+Stanislav Smirnov proved the conformal invariance of critical percolation on the triangular lattice and the planar Ising model by developing the method of discrete complex analysis. The key idea is to define discrete holomorphic observables on the lattice and show they converge to holomorphic functions in the scaling limit, yielding conformal invariance of crossing probabilities and correlation functions. His proof of Cardy's formula and the identification of the scaling limits as SLE$_6$ and SLE$_3$ established a rigorous connection between discrete statistical mechanics and conformal field theory.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch2006wendelinwerner:wendelin-werner-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Smirnov's percolation work relates to SLE.
-  \item \textbf{\hyperref[ch2022hugoduminilcopin:hugo-duminil-copin-fields-medal-2022-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Duminil-Copin extended Smirnov's work.
-\end{itemize}
-

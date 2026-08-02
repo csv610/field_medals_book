@@ -1,0 +1,118 @@
+\chapter{2026:Hong Wang}\label{ch2026hongwang:hong-wang-fields-medal-2026}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared:} July 2026 \textbf{Subject:} Hong Wang (b. 1991, Guilin, Guangxi, China) \textbf{Position:} Silver Professor of Mathematics, New York University Courant Institute; Permanent Professor, IHES \textbf{Doctoral Advisor:} Larry Guth (MIT) \textbf{Fields Medal Citation:} \emph{``For her work in harmonic analysis and geometric measure theory, including applications of multiscale and decoupling techniques to the local smoothing conjecture for the planar wave equation, and major advances in Fourier restriction, Falconer distance sets, Furstenberg sets in the plane, and the Kakeya problem in three dimensions.''}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{prereqs} Real analysis (Lebesgue measure, Hausdorff dimension), Fourier analysis (Fourier transform, Plancherel theorem), basic measure theory, familiarity with the wave equation. \end{prereqs}
+
+\begin{objectives} State the Kakeya conjecture and explain its significance; describe the strategy behind the proof of the 3D Kakeya conjecture; understand the connection between Kakeya-type problems and harmonic analysis. \end{objectives}
+
+\section{Problem History}
+
+The Kakeya conjecture originates from a question posed in 1917 by the Japanese mathematician S\={o}ichi Kakeya: what is the smallest area that can contain a unit-length line segment that can be rotated through all directions in the plane? While rotating a needle around its midpoint sweeps out a disk of area $\pi/4$, Kakeya showed that translating the needle during rotation allows containment in half the disk's area. Besicovitch proved that in the plane, the needle can be rotated within a set of arbitrarily small positive area, even though the set has full Hausdorff dimension 2.
+
+The modern form of the Kakeya conjecture concerns the Hausdorff dimension of Kakeya sets in $\mathbb{R}^n$---sets containing a unit line segment in every direction. The conjecture states that a Kakeya set in $\mathbb{R}^n$ must have Hausdorff dimension $n$. Davies proved the two-dimensional case in 1971, but the three-dimensional case remained open for over 50 years.
+
+The difficulty stems from the fact that Kakeya sets can have zero Lebesgue measure while having full Hausdorff dimension. The $\epsilon$-neighborhood of a Kakeya set in $\mathbb{R}^3$ has measure at least $c|\log(1/\epsilon)|^{-2}$ (Bourgain), but whether it must have measure tending to 1 as $\epsilon\to 0$---the Kakeya set measure conjecture---remains open.
+
+The Kakeya conjecture is closely related to several central problems in harmonic analysis: the \textbf{Fourier restriction conjecture} (bounding the Fourier transform of measures on curved surfaces), the \textbf{Bochner--Riesz conjecture} (boundedness of certain maximal operators), and the \textbf{local smoothing conjecture} (quantitative bounds on how the wave equation smooths solutions). These connections arise because Kakeya sets encode the extreme behavior of oscillatory integrals and maximal functions.
+
+The \textbf{Furstenberg set conjecture} asks for the minimum Hausdorff dimension of a set in the plane containing a line segment of positive length in every direction. The \textbf{Falconer distance set problem} asks whether a subset of the plane with Hausdorff dimension greater than 1 must have pairwise distances forming a set of positive Lebesgue measure. Both had been open for decades.
+
+The Furstenberg set conjecture is named after Hillel Furstenberg, who introduced the concept in the 1960s. A $t$-Furstenberg set is a set $E \subset \mathbb{R}^2$ that contains a line segment of length at least $t$ in every direction. The conjecture predicts that the Hausdorff dimension of a $t$-Furstenberg set is at least $\min(2, t+1)$. The case $t=1$ is particularly important: a 1-Furstenberg set contains a unit line segment in every direction, and the conjecture predicts that its Hausdorff dimension is 2. The Falconer distance set problem is closely related: if $E \subset \mathbb{R}^2$ has Hausdorff dimension greater than 1, then the distance set $\Delta(E) = \{|x-y| : x, y \in E\}$ has positive Lebesgue measure. Both problems encode the concentration of geometric quantities along line segments, and the Kakeya conjecture provides a framework for understanding them.
+
+The local smoothing conjecture asks whether the solution operator for the wave equation $\partial_t^2 u = \Delta u$ satisfies quantitative smoothing estimates: the energy of the solution cannot concentrate too strongly in small space-time regions. The conjecture predicts precise bounds on the maximal function of wave solutions.
+
+\section{How Was It Solved}
+
+Wang and Larry Guth proved the two-dimensional local smoothing conjecture in 2019, introducing new \emph{multiscale techniques} for analyzing the interaction of wave packets at different scales. The proof decomposes the wave solution into wave packets at various scales and frequencies, then controls their interactions using a sophisticated combinatorial analysis. This was a significant breakthrough, as the local smoothing conjecture had been considered one of the ``holy grails'' of harmonic analysis.
+
+The multiscale technique works by decomposing the solution $u$ into wave packets $u_{j,k}$ at scale $2^{-j}$ and frequency $\sim 2^j$. The key insight is that the interactions between wave packets at different scales can be controlled using a combinatorial argument that bounds the number of ``bad'' interactions. The bad interactions are those where two wave packets at different scales overlap in space-time, and the combinatorial argument shows that the number of such overlaps is bounded by a power of the scale parameter. This bound is then used to estimate the $L^p$ norm of the maximal function of the wave solution.
+
+In 2023, Wang and Kevin Ren resolved the 2D Furstenberg set conjecture, establishing a sharp lower bound on the Hausdorff dimension. Their approach combined geometric and analytic methods to show that the dimension must exceed a certain threshold depending on the parameter $t$ of the Furstenberg set.
+
+The proof of the Furstenberg set conjecture uses a combination of geometric and analytic methods. The geometric part involves decomposing the Furstenberg set into pieces with different geometric properties: pieces where the line segments are nearly parallel, pieces where they are nearly perpendicular, and pieces with intermediate geometry. The analytic part involves applying decoupling estimates to each piece and then combining the estimates using a summation argument. The key innovation is a new incidence bound that controls the number of intersections between line segments in different pieces.
+
+The three-dimensional Kakeya conjecture was proved by Wang and Joshua Zahl in February 2025. The 127-page proof introduced a new classification of Kakeya sets into \emph{sticky} and \emph{non-sticky} types. Sticky Kakeya sets are those where line segments with similar orientations cluster together in space. Wang and Zahl first showed that sticky sets must be three-dimensional. For non-sticky sets, they demonstrated that such sets must have higher dimension than initially assumed. By iterating this dichotomy for progressively smaller dimensional defects, they concluded that every Kakeya set in three dimensions must have full Hausdorff dimension 3.
+
+The proof relies on the theory of \emph{decoupling inequalities}, which allow the decomposition of oscillatory integrals into manageable pieces. These techniques, developed in the context of the work of Bourgain, Demeter, and Guth, are adapted to the multiscale setting by analyzing how wave packets at different scales interact. Wang's PhD thesis established new Fourier restriction estimates in $\mathbb{R}^3$, improving the state of the art and demonstrating the power of the multiscale approach.
+
+The restriction problem asks for the best constants in inequalities of the form $\|\hat{f}\|_{L^p(\mathbb{R}^n)} \le C\|f\|_{L^q(\Sigma)}$ for functions $f$ supported on a curved surface $\Sigma$. Wang's bounds were the best available at the time of her thesis and laid the groundwork for her later breakthroughs.
+
+The decoupling inequality, which is central to Wang's work, provides a way to decompose a function supported on a curved surface into pieces that are essentially independent. For the paraboloid $\Sigma = \{(\xi, |\xi|^2) : \xi \in \mathbb{R}^{n-1}\}$, the decoupling inequality states that
+\[
+\|f\|_{L^p(\mathbb{R}^n)} \le C_\epsilon \delta^{-\epsilon} \left(\sum_{\theta} \|f_\theta\|_{L^p(\mathbb{R}^n)}^2\right)^{1/2}
+\]
+where the sum is over $\delta$-caps $\theta$ on $\Sigma$ and $f_\theta$ is the Fourier restriction of $f$ to $\theta$. The constant $C_\epsilon$ is independent of $\delta$, and $\epsilon > 0$ is arbitrary. This inequality, proved by Bourgain, Demeter, and Guth in 2015, was a major breakthrough that had implications for many problems in harmonic analysis.
+
+Wang's contribution was to develop multiscale techniques that allow the decoupling inequality to be applied to problems involving multiple scales simultaneously. The key insight is that wave packets at different scales interact in a controlled way, and the interactions can be decomposed using a combinatorial analysis of the wave packet structure. This multiscale approach was essential for the proof of the local smoothing conjecture and for the 3D Kakeya conjecture.
+
+The multiscale technique works by organizing the analysis into a hierarchy of scales. At each scale, the wave solution is decomposed into wave packets that are localized in both space and frequency. The interactions between wave packets at different scales are then controlled using a combinatorial argument that bounds the number of ``bad'' interactions. The key innovation is a new incidence bound that controls the number of intersections between wave packets at different scales, which allows the decoupling inequality to be applied iteratively across scales.
+
+The 3D Kakeya conjecture proof uses the sticky/non-sticky dichotomy to reduce the problem to two cases. Sticky Kakeya sets are those where line segments with similar orientations cluster together in space, and Wang and Zahl showed that such sets must have large dimension. For non-sticky sets, they used a new incidence bound to show that the line segments must be spread out in a way that forces the set to have large dimension.
+
+\section{Impact of This Discovery}
+
+The proof of the 3D Kakeya conjecture has far-reaching consequences. It implies new bounds for the Fourier restriction conjecture, the local smoothing conjecture in three dimensions, and the Bochner--Riesz conjecture. The techniques developed have opened new directions of research throughout harmonic analysis and geometric measure theory.
+
+The Kakeya conjecture, once seen as an isolated curiosity, is now understood to lie at the heart of a vast web of mathematical relationships connecting the geometry of sets, the behavior of wave equations, and bounds on oscillatory integrals. Wang's work has demonstrated that these seemingly disparate problems are deeply interconnected.
+
+The multiscale and decoupling techniques introduced by Wang have become standard tools in the field. They have been applied to problems in number theory (including estimates for exponential sums and the Vinogradov mean value theorem), PDE theory, and geometric measure theory.
+
+Wang's achievement is also historically significant: as the third woman to receive the Fields Medal in its 90-year history, and the first Chinese woman to do so, her journey from Guilin to the forefront of mathematical research is an inspiration. She and fellow 2026 Fields Medalist Yu Deng were classmates at Peking University, making 2026 the first time two former classmates have simultaneously won the Fields Medal.
+
+The connection between Kakeya-type problems and number theory has deepened. Decoupling inequalities, originally motivated by harmonic analysis, have found applications in the Vinogradov mean value theorem and other problems in analytic number theory, where they provide optimal bounds for exponential sums. The Vinogradov mean value theorem, which provides bounds for exponential sums over polynomials, has applications to the distribution of prime numbers and to the theory of Diophantine approximation.
+
+The \textbf{local smoothing conjecture} asks whether the solution operator for the wave equation satisfies quantitative smoothing estimates. For the wave equation $\partial_t^2 u = \Delta u$ on $\mathbb{R}^n$, the local smoothing conjecture predicts that
+\[
+\left\| \sup_{0 < r < 1} |u_r| \right\|_{L^p(B_R)} \le C R^\epsilon \|u_0\|_{H^{s}}
+\]
+for $p > 2$ and $s > 0$, where $u_r$ is the solution with initial data localized to frequency $\sim 1/r$. The conjecture says that the wave equation smooths solutions in an average sense, even though individual solutions may have singularities. Wang and Guth proved this conjecture in 2D by introducing multiscale techniques that decompose the wave solution into wave packets and control their interactions.
+
+The \textbf{Furstenberg set conjecture} asks for the minimum Hausdorff dimension of a set $E \subset \mathbb{R}^2$ that contains a line segment of length $\ge t$ in every direction. The conjecture predicts that $\dim_H(E) \ge \min(2, t+1)$. Wang and Ren resolved the 2D case by combining geometric and analytic methods. The key insight is to decompose the Furstenberg set into pieces with different geometric properties and to apply different estimates to each piece.
+
+\section{Modern Views and Improvements}
+
+Major open problems remain: the higher-dimensional Kakeya conjecture (dimensions 4 and above), the full three-dimensional restriction and local smoothing conjectures, and the complete Falconer distance set conjecture. Wang and her collaborators continue to develop new methods to attack these problems.
+
+The connection between Kakeya-type problems and number theory has deepened. Decoupling inequalities, originally motivated by harmonic analysis, have found applications in the Vinogradov mean value theorem and other problems in analytic number theory, where they provide optimal bounds for exponential sums.
+
+The development of polynomial partitioning techniques (due to Guth) and their combination with Wang's multiscale methods has created a powerful new toolkit for incidence geometry and combinatorial problems in analysis.
+
+Future directions include the application of these techniques to higher-dimensional Fourier analysis, the study of fractal geometry of Kakeya-type sets, and the development of new analytic methods for PDEs with rough data. The interplay between geometry and analysis that Wang's work exemplifies continues to be a fertile area of research.
+
+The study of Kakeya-type problems has connections to many areas of mathematics, including number theory, combinatorics, and PDE theory. The Kakeya conjecture provides a framework for understanding the extreme behavior of oscillatory integrals and maximal functions, and progress on the Kakeya conjecture has implications for the study of dispersive PDEs, the theory of Fourier restriction, and the distribution of rational points on algebraic varieties.
+
+The \textbf{Falconer distance set problem} asks whether a subset $E \subset \mathbb{R}^n$ with Hausdorff dimension greater than $n/2$ must have a distance set $\Delta(E) = \{|x-y| : x, y \in E\}$ of positive Lebesgue measure. This problem is closely related to the Kakeya conjecture because both involve the concentration of geometric quantities along line segments. Wang's work on Falconer distance sets has provided new bounds on the Hausdorff dimension threshold, improving previous results of Falconer and others.
+
+The \textbf{Furstenberg set conjecture} asks for the minimum Hausdorff dimension of a set in the plane that contains a line segment of positive length in every direction. The parameter $t$ specifies the minimum length of the line segments, and the conjecture predicts that the Hausdorff dimension is at least $\min(2, t+1)$. Wang and Ren's resolution of the 2D case used a combination of geometric and analytic methods that have potential applications to other problems in fractal geometry.
+
+The development of polynomial partitioning techniques (due to Guth) and their combination with Wang's multiscale methods has created a powerful new toolkit for incidence geometry and combinatorial problems in analysis. Polynomial partitioning decomposes space into cells where a polynomial vanishes, and the cell structure provides geometric control that can be used to bound incidence counts and oscillatory integrals. The combination of polynomial partitioning with decoupling techniques has led to new results on the restriction problem and on the Bochner--Riesz conjecture.
+
+The Kakeya conjecture, once seen as an isolated curiosity, is now understood to be connected to a vast network of problems in harmonic analysis and PDE theory. The implications of Wang's work extend to the theory of dispersive PDEs, where the Strichartz estimates and smoothing estimates are closely related to bounds on Kakeya sets. The interplay between the geometry of Kakeya sets and the analysis of wave equations continues to produce new insights and new research directions.
+
+The Falconer distance set problem has been advanced significantly by Wang's work. The problem asks whether a subset of $\mathbb{R}^n$ with Hausdorff dimension greater than $n/2$ must have a distance set of positive Lebesgue measure. Wang's techniques, combining geometric and analytic methods, have improved the known bounds on the Hausdorff dimension threshold. The connection between the Falconer distance set problem and the Kakeya conjecture is through the common theme of controlling the concentration of geometric quantities along line segments.
+
+The Furstenberg set conjecture in higher dimensions remains an open problem. Wang and Ren resolved the 2D case, but the higher-dimensional cases require new techniques. The difficulty is that in higher dimensions, the geometry of line segments is more complex, and the combinatorial arguments used in 2D do not generalize directly. The development of new techniques for the higher-dimensional Furstenberg set conjecture is an active area of research that builds on Wang's foundational work.
+
+The connection between Wang's work and the theory of dispersive PDEs continues to deepen. The Strichartz estimates, which provide $L^p$ bounds for solutions of the wave and Schrodinger equations, are closely related to restriction estimates and Kakeya-type problems. Wang's multiscale techniques have led to new Strichartz estimates for the wave equation in three dimensions, which have implications for the well-posedness theory of nonlinear wave equations. The interplay between harmonic analysis and PDE theory that Wang's work exemplifies continues to produce new results and new research directions.
+
+The connection between the Kakeya conjecture and the theory of random matrices has been explored in recent work. The eigenvalue distribution of random matrices is related to the geometry of Kakeya sets through the common theme of controlling the concentration of oscillatory integrals. The development of new techniques for studying the connection between Kakeya sets and random matrices is an active area that builds on Wang's foundational work.
+
+The study of Kakeya sets in finite fields has provided new insights into the combinatorial aspects of the Kakeya conjecture. The finite field Kakeya problem asks for the minimum size of a set in $\mathbb{F}_q^n$ that contains a line in every direction. The finite field version is closely related to the Euclidean version through the polynomial method, and the techniques developed by Dvir and others for the finite field case have inspired new approaches to the Euclidean problem. Wang's work on the 3D Kakeya conjecture provides a framework for studying the Euclidean problem, and the connection between finite field and Euclidean Kakeya sets continues to be an active area of research.
+
+The development of new techniques for the restriction problem in higher dimensions is closely related to Wang's work. The restriction conjecture asks for the optimal constants in the Fourier restriction inequality for compact hypersurfaces in $\mathbb{R}^n$. The Bourgain-Demeter-Guth theorem (2015) resolved the restriction conjecture for the paraboloid, but the case of the sphere and other hypersurfaces remains open. Wang's multiscale techniques have been applied to the restriction problem for the sphere, leading to new bounds that approach the conjectured sharp estimates.
+
+The Bochner-Riesz conjecture asks for the boundedness of the Bochner-Riesz maximal operator $M_\alpha f(x) = \sup_{r>0} |f * \Phi_r(x)|$, where $\Phi_r$ is the Bochner-Riesz kernel of order $\alpha$. The conjecture predicts the range of $p$ for which $M_\alpha$ is bounded on $L^p(\mathbb{R}^n)$, and the Kakeya conjecture implies the Bochner-Riesz conjecture in the overlapping range. Wang's work on the Kakeya conjecture has implications for the Bochner-Riesz conjecture, and the development of new techniques for proving Bochner-Riesz bounds is an active area that builds on Wang's foundational work.
+
+The study of maximal functions associated to the wave equation is another direction inspired by Wang's work. The wave maximal function measures the supremum of the wave solution over all time-like surfaces, and the boundedness of this operator is related to the local smoothing conjecture and the restriction conjecture. The development of new techniques for studying the wave maximal function, combining Wang's multiscale methods with the theory of decoupling, is an active area of research.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+Wang proved the three-dimensional Kakeya conjecture using a sticky/non-sticky dichotomy and multiscale techniques, resolved the 2D local smoothing and Furstenberg set conjectures, and advanced Fourier restriction theory, transforming harmonic analysis and geometric measure theory.

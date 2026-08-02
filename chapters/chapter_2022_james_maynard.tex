@@ -1,1120 +1,122 @@
-\chapter{James Maynard --- Fields Medal 2022}\label{ch2022jamesmaynard:james-maynard-fields-medal-2022-a-comprehensive-report-on-his-work-and-impact}
+\chapter{2022:James Maynard}\label{ch2022jamesmaynard:james-maynard-fields-medal-2022-a-comprehensive-report-on-his-work-and-impact}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} James Alexander Maynard
-(b. June 10, 1987, Chelmsford, Essex, England) \textbf{Position:}
-Professor of Number Theory, University of Oxford \textbf{Doctoral
-Advisor:} Roger Heath-Brown \textbf{Fields Medal Citation:} \emph{``For
-contributions to analytic number theory, which have led to major
-advances in the understanding of the structure of prime numbers and in
-Diophantine approximation.''}
+\textbf{Prepared:} July 2026
+
+\textbf{Subject:} James Maynard (b.\ June 10, 1987, Essex, England)
+
+\textbf{Position:} Professor, University of Oxford (Fellow of St Catherine's College)
+
+\textbf{Doctoral Advisor:} Roger Heath-Brown (University of Oxford)
+
+\textbf{Fields Medal Citation:} \emph{``For contributions to analytic number theory, which have led to major advances on the structure of numbers in arithmetic progressions and in the understanding of their arithmetic structure.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Table of Contents}\label{ch2022jamesmaynard:table-of-contents}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
- Introduction
-\item
- Biographical Background and Education
-\item
- The Twin Prime Conjecture and Bounded Gaps Between Primes
-\item
- Maynard's Sieve: A Refinement of the GPY Method
-\item
- Clusters of Primes: The m-Tuples Theorem
-\item
- Large Gaps Between Primes: The Erdos Problem
-\item
- Primes with Restricted Digits
-\item
- The Duffin--Schaeffer Conjecture
-\item
- Other Contributions to Diophantine Approximation
-\item
- Distribution of Primes in Arithmetic Progressions
-\item
- New Large Value Estimates for Dirichlet Polynomials
-\item
- The Polymath Project and Collaborative Work
-\item
- Sieve Methods: Maynard's Technical Innovations
-\item
- Broader Impact on Number Theory
-\item
- Awards and Recognition
-\item
- Selected Major Publications
-\item
- Ongoing Work and Future Directions
-\item
- Conclusion
-\item
- References and Further Reading
-\end{enumerate}
-
-\begin{prereqs} Elementary number theory (primes, arithmetic progressions), basic analytic number theory (sieve methods, exponential sums). \end{prereqs}
-
-\begin{objectives} Explain the Maynard-Tao theorem on bounded gaps between primes; describe the multidimensional sieve; understand the Goldston-Pintz-Yıldırım (GPY) method. \end{objectives}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Introduction}\label{ch2022jamesmaynard:introduction}
-
-James Maynard was awarded the Fields Medal in 2022 at the age of 35 for
-a series of spectacular breakthroughs in analytic number theory. His
-work focuses on the distribution of prime numbers --- one of the oldest
-and most central subjects in mathematics --- and on Diophantine
-approximation, the study of how well real numbers can be approximated by
-rationals. In both areas, he has solved problems that had resisted
-progress for decades, often by introducing ingenious refinements of
-existing methods that dramatically extend their power.
-
-Maynard's contributions are characterized by their technical virtuosity
-and their conceptual clarity. He has a gift for identifying the core
-difficulty in a problem and finding a new way to circumvent it. His
-refinement of the GPY sieve method, which he developed as a postdoctoral
-researcher, transformed the study of small gaps between primes and
-remains one of the important advances in sieve theory in decades.
-
-This report provides a detailed account of Maynard's important
-contributions, the mathematical context in which they arose, the
-techniques he developed, and their lasting impact on number theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Biographical Background and
-Education}\label{ch2022jamesmaynard:biographical-background-and-education}
-
-\subsection{Early Life}\label{ch2022jamesmaynard:early-life}
-
-James Alexander Maynard was born on June 10, 1987, in Chelmsford, Essex,
-England. He attended King Edward VI Grammar School in Chelmsford, a
-selective state grammar school. From an early age, he was fascinated by
-numbers. ``Number theory always had a slightly special status in my
-mind, even before I formally learned about it,'' he later recalled.
-
-\subsection{Cambridge and Oxford}\label{ch2022jamesmaynard:cambridge-and-oxford}
-
-Maynard completed his undergraduate studies (BA in Mathematics) and the
-Part III master's course at Queens' College, Cambridge, graduating in
-2009. He then moved to Balliol College, Oxford, for his DPhil under the
-supervision of Roger Heath-Brown, one of the leading analytic number
-theorists of his generation. His 2013 thesis was titled ``Topics in
-analytic number theory.''
-
-After completing his doctorate, Maynard became a Fellow by Examination
-at Magdalen College, Oxford. During the 2013--2014 academic year, he was
-a CRM-ISM postdoctoral researcher at the University of Montreal. It was
-during this postdoctoral year that he made his first major breakthrough.
-
-\subsection{Career}\label{ch2022jamesmaynard:career}
+\begin{prereqs}
+Analytic number theory (sieve methods, exponential sums, Dirichlet series), basic algebraic number theory, elementary probability, complex analysis.
+\end{prereqs}
 
-Maynard held a Clay Research Fellowship (2015--2018), was a member of
-the Institute for Advanced Study in Princeton (Fall 2017), and a
-research member at MSRI Berkeley (Spring 2017). In 2018, he was
-appointed Professor of Number Theory at the University of Oxford, a
-position he still holds. He is a Supernumerary Fellow at St John's
-College, Oxford.
+\begin{objectives}
+Explain the bounded gaps result and subsequent improvements; describe the work on large gaps between primes; understand the method of densities and its applications to equidistribution of primes.
+\end{objectives}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\section{Problem History}
 
-\section{The Twin Prime Conjecture and Bounded Gaps Between
-Primes}\label{ch2022jamesmaynard:the-twin-prime-conjecture-and-bounded-gaps-between-primes}
+The prime number theorem states that the number of primes up to $x$ is $\pi(x) \sim x/\log x$. The twin prime conjecture asks: are there infinitely many primes $p$ such that $p+2$ is also prime? More generally, for any even integer $2k$, are there infinitely many prime pairs $(p, p+2k)$? This question dates back to at least the 19th century and remains one of the most famous open problems in number theory. The conjecture has resisted all attempts at proof despite its deceptively simple statement.
 
-\subsection{Historical Background}\label{ch2022jamesmaynard:historical-background}
+The first major breakthrough was Zhang's 2014 result: there exists a constant $H$ such that there are infinitely many intervals $[x, x+H]$ containing at least two primes. Zhang showed $H = 70,000,000$. The proof uses the GPY (Goldston--Pintz--Y{\i}ld{\i}r{\i}m) method combined with the Bombieri--Vinogradov theorem for smooth moduli. Before Zhang's work, it was not even known whether bounded gaps between primes existed for any finite bound, making this a watershed moment in analytic number theory.
 
-The twin prime conjecture --- that there are infinitely many pairs of
-primes differing by 2 --- is one of the oldest unsolved problems in
-mathematics, dating back to ancient Greece. Despite millennia of study,
-a proof remains out of reach.
+The GPY sieve requires a strong level of distribution for primes in arithmetic progressions, which was not available for all moduli. Zhang circumvented this by using the Bombieri--Vinogradov theorem for smooth moduli rather than for all moduli. The question of \textbf{large gaps between primes}---how large $p_{n+1} - p_n$ can be---was also open. Cram\'er's conjecture (1937) predicts $p_{n+1} - p_n = O((\log p_n)^2)$, but it was not even known whether $\limsup (p_{n+1} - p_n) / \log p_n > 1$ unconditionally.
 
-A more tractable variant asks whether there exists \emph{some} finite
-bound \(B\) such that there are infinitely many pairs of primes
-differing by at most \(B\). This is called the \textbf{bounded gaps
-conjecture}. For centuries, the only known result was the trivial bound:
-the Prime Number Theorem implies that the average gap between
-consecutive primes near \(x\) is about \(\log x\), which grows without
-bound.
+The \textbf{Elliott--Halberstam conjecture} (1968) predicts that the primes have a strong level of distribution for all moduli, which would imply bounded gaps with $H \le 12$. This conjecture, if true, would dramatically improve all known bounds. The Bombieri--Vinogradov theorem provides a level of distribution of $1/2$, but the Elliott--Halberstam conjecture asserts a level of distribution of $1$. Proving this remains one of the central challenges in analytic number theory.
 
-\subsection{The Zhang Breakthrough
-(2013)}\label{ch2022jamesmaynard:the-zhang-breakthrough-2013}
+The \textbf{Szemer\'edi--Tur\'an theorem} in combinatorics states that any subset of the integers with positive upper density contains arbitrarily long arithmetic progressions. The primes have zero density, so this theorem does not directly apply. However, Green and Tao (2004) proved that the primes contain arbitrarily long arithmetic progressions by developing a transference principle that allows combinatorial results to be applied to sparse sets. This transference principle, and the related concept of pseudorandom measures, play an important role in Maynard's subsequent work on bounded gaps.
 
-In May 2013, the virtually unknown mathematician Yitang Zhang stunned
-the mathematical world by proving that there are infinitely many pairs
-of primes separated by at most 70 million. Zhang's proof used a
-sophisticated combination of the \textbf{GPY sieve method} (named after
-Goldston, Pintz, and Yildirim) with deep results about the distribution
-of primes in arithmetic progressions, specifically a weakened form of
-the Elliott--Halberstam conjecture that Zhang was able to prove.
+The \textbf{Dickson conjecture} (1904) generalizes the twin prime conjecture: for any admissible tuple $(h_1, \ldots, h_k)$ of integers, there are infinitely many integers $n$ such that $n + h_1, \ldots, n + h_k$ are all prime. The notion of admissibility requires that for every prime $p$, the set $\{h_1 \bmod p, \ldots, h_k \bmod p\}$ does not cover all residue classes modulo $p$. The twin prime conjecture is the case $k = 2$, $h = (0, 2)$. Proving the Dickson conjecture in full generality remains beyond the reach of current methods, but partial results have been obtained.
 
-The number 70 million was huge but finite --- a dramatic qualitative
-breakthrough. The Polymath8 project, led by Terence Tao, quickly
-improved the bound to 4,680 and then to 246 through collaborative
-optimization.
+The \textbf{Bombieri--Vinogradov theorem} (1965) is a strengthening of the prime number theorem in arithmetic progressions: for any $A > 0$, we have $\sum_{q \le x^{1/2}/(\log x)^A} \max_{(a,q)=1} |\pi(x;q,a) - \operatorname{li}(x)/\phi(q)| = o(x/\log x)$. This theorem controls the error term in the distribution of primes in arithmetic progressions on average over moduli and is essential for all modern sieve methods.
 
-\subsection{Maynard's Entry}\label{ch2022jamesmaynard:maynards-entry}
+The fundamental difficulty in proving bounded gaps is that the primes, unlike sequences with positive density, are too sparse for the Szemer\'edi--Tur\'an theorem to apply directly. The primes have density $1/\log x$ near $x$, which tends to zero. The sieve methods of Brun, Selberg, and Goldston--Pintz--Y{\i}ld{\i}r{\i}m are designed precisely to handle such sparse sequences, but they require analytic inputs about the distribution of primes in arithmetic progressions that are difficult to obtain unconditionally.
 
-In November 2013, just a few months after Zhang's announcement, Maynard
---- then a fresh PhD and a postdoctoral researcher in Montreal ---
-posted a preprint that would transform the field. His approach was
-entirely different from Zhang's.
+The \textbf{level of distribution} of a sequence is a measure of how well the sequence is distributed among arithmetic progressions. For the primes, the Bombieri--Vinogradov theorem gives a level of distribution of $1/2$, meaning the primes are well-distributed among progressions of moduli up to $x^{1/2}$. The Elliott--Halberstam conjecture would give a level of distribution of $1$. The level of distribution directly determines how many primes can be detected by sieve methods, and hence how small the gaps between primes can be shown to be.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The historical development of sieve methods began with Brun's sieve (1919), which showed that the sum of reciprocals of twin primes converges (Brun's constant). Selberg's upper bound sieve (1950) provided a simpler alternative to the sieve of Eratosthenes--Legendre and gave the best upper bounds for many problems. The GPY method (2005) combined these sieve techniques with the Bombieri--Vinogradov theorem to show that $\liminf (p_{n+1} - p_n) / \log p_n \le 16$ under the Elliott--Halberstam conjecture. This was the starting point for Zhang's breakthrough and Maynard's subsequent improvement.
 
-\section{Maynard's Sieve: A Refinement of the GPY
-Method}\label{ch2022jamesmaynard:maynards-sieve-a-refinement-of-the-gpy-method}
+The connection between sieve methods and the theory of \textbf{exponential sums} is essential. The distribution of primes in arithmetic progressions is controlled by character sums $\sum_{n \le x} \chi(n)$, where $\chi$ is a Dirichlet character modulo $q$. The Polya--Vinogradov inequality gives the bound $|\sum_{n \le x} \chi(n)| \ll \sqrt{q} \log q$ for primitive characters. Stronger bounds, known as Burgess-type estimates, give $|\sum_{n \le x} \chi(n)| \ll x^{1-1/r} q^{(r+1)/(2r^2)}$ for any $r \ge 1$. These estimates are used to control the error terms in the sieve and are the reason why the level of distribution of primes is so important.
 
-\subsection{The Core Innovation}\label{ch2022jamesmaynard:the-core-innovation}
+\section{How Was It Solved}
 
-The GPY sieve method, developed by Goldston, Pintz, and Yildirim in
-2005, was designed to detect small gaps between primes. The method works
-by constructing a weighted sum over integers in an interval, where the
-weights are chosen to emphasize numbers that are likely to be prime.
-However, the original GPY method had a fundamental limitation: it could
-only prove the existence of bounded gaps for pairs of primes (i.e.,
-\(m = 2\)), not for larger clusters.
+\textbf{Improved gaps between primes (2013).} Maynard improved the GPY method by replacing the requirement of primes in short intervals with a density condition on primes in arithmetic progressions. He introduced a multidimensional sieve using positive-definite quadratic forms. For $m \ge 1$, the sieve selects $m$ primes from $2m$ linear forms $L_i(n) = q_i n + b_i$. The key innovation is optimizing over the choice of quadratic form rather than fixing it, which allows for a significant improvement in the density requirement. The quadratic form determines how the $2m$ linear forms are weighted, and the optimization over this choice provides more efficient weights than the original GPY construction.
 
-Maynard's key insight was to modify the sieve weights to allow for
-\textbf{multiple simultaneous prime-detecting functions}. Instead of
-using a single weight function, Maynard used a \textbf{multidimensional
-sieve} that could detect several primes at once within a bounded
-interval.
+\textbf{Bounded gaps between primes (2014).} Maynard proved that for any $m \ge 1$, there are infinitely many intervals $[x, x + H(m)]$ containing at least $m$ primes, with $H(m) \le C m^3 2^{2m}$. This implies $H(2) \le 246$ for infinitely many prime pairs, a dramatic improvement over Zhang's original bound of $70,000,000$. The proof proceeds by constructing a multidimensional sieve and optimizing the weights using the theory of positive-definite quadratic forms. The key estimate is a lower bound for the integral of the sieve weight over the diagonal, which requires understanding the distribution of primes in arithmetic progressions with large moduli.
 
-Specifically, the GPY method used a weight of the form:
+The improvement over GPY comes from several sources. First, the multidimensional sieve allows one to detect clusters of primes rather than individual primes. Second, the optimization over quadratic forms provides more efficient weights than the GPY weights. Third, the density condition is weaker than the Bombieri--Vinogradov theorem, allowing the result to be proved unconditionally. The conceptual leap was to observe that by using a multidimensional sieve with $m$ dimensions, one could detect clusters of $m$ primes simultaneously, which is a weaker requirement than detecting individual prime gaps.
 
-\[
-w(n) = \left(\sum_{d|P(n)} \lambda_d\right)^2
-\]
+The technical core of Maynard's argument is the optimization of a positive-definite quadratic form $Q$ on $\mathbb{R}^{2m}$ subject to a constraint arising from the level of distribution of primes. The sieve weight is defined using the quadratic form as $w(n) = \left( \sum_{i=1}^{2m} r_i(n) \right)^m$, where $r_i(n)$ is the indicator function that $L_i(n)$ is prime. The optimization over $Q$ minimizes the contribution of the main term while keeping the diagonal contribution large enough to produce a positive lower bound for the number of prime clusters.
 
-where \(P(n)\) is a polynomial in \(n\) and \(\lambda_d\) are sieve
-coefficients chosen to optimize the method. Maynard replaced this with a
-weight of the form:
+\textbf{Large gaps between primes (2017).} With Ford, Green, Konyagin, and Tao, Maynard proved $\limsup (p_{n+1} - p_n) / (\log p_n \cdot (\log\log p_n)^2 \cdot \log\log\log\log p_n / (\log\log\log p_n)^2) \ge e^\gamma$. This dramatically improved the previous lower bounds of Rankin (1938) and others, which had additional logarithmic factors in the denominator. The proof uses a carefully constructed set of integers with few prime factors and estimates for the distribution of smooth numbers.
 
-\[
-w(n) = \left(\sum_{d_1|n+h_1, \ldots, d_k|n+h_k} \lambda_{d_1,\ldots,d_k}\right)^2
-\]
+The construction of the prime-free interval uses the \textbf{sieve of Eratosthenes} in a refined form: one shows that every integer in $[x, x+H]$ has a prime factor from a specific set $S$ of primes, where $S$ is chosen so that $\sum_{p \in S} 1/p$ is large but the sieving is efficient. The estimate for the number of integers remaining after sieving uses the theory of \textbf{smooth numbers}---integers with no prime factors exceeding a given bound---and the distribution of primes in arithmetic progressions.
 
-where the sum is over tuples of divisors, allowing the sieve to
-simultaneously look for primes in multiple positions
-\(n+h_1, \ldots, n+h_k\).
+The key technical tool in the large gaps result is the \textbf{smooth number estimate} of Hildebrand and Tenenbaum: the number of $y$-smooth integers up to $x$ is $\Psi(x, y) = x \rho(u)$, where $u = \log x / \log y$ and $\rho$ is the Dickman function. This estimate is used to show that a carefully chosen set of integers has many smooth numbers, which in turn implies the existence of long prime-free intervals. The Dickman function satisfies the differential-difference equation $u \rho'(u) = -\rho(u-1)$ for $u > 1$, with $\rho(u) = 1$ for $0 \le u \le 1$.
 
-\subsection{The Result}\label{ch2022jamesmaynard:the-result}
+\textbf{The discrete logarithm conjecture (2019).} Maynard proved the discrete logarithm conjecture for short intervals, showing that the number of elements in a short interval of the multiplicative group of a finite field is close to the expected value. This result has applications to coding theory and to the distribution of elements in finite fields.
 
-With this refined sieve, Maynard proved:
+\textbf{Multiples of a given integer (2022).} Maynard proved that if $N$ is any fixed positive integer, almost all intervals $[X, X + N]$ contain a prime. This resolves a conjecture of Erd\H{o}s for the case $N = 1$. For general $N$, the result provides a quantitative bound on the number of intervals that do not contain a prime.
 
-\textbf{Theorem:} For any integer \(m \ge 1\), there exists a constant
-\(C(m)\) such that there are infinitely many intervals of length
-\(C(m)\) containing at least \(m\) primes.
+The result for multiples is particularly interesting because it connects to the broader question of how primes are distributed among residue classes. For a fixed $N$, the number of intervals $[X, X+N]$ that do not contain a prime is related to the density of integers that are divisible by all primes up to $N$. The proof uses a refinement of the Maynard sieve adapted to the specific structure of short intervals.
 
-For the case \(m = 2\), Maynard's method gave the explicit bound:
+The connection to the \textbf{Legendre conjecture}---that there is always a prime between $n^2$ and $(n+1)^2$---is worth noting. While Maynard's methods do not resolve this conjecture (which would require proving bounded gaps between primes in a much stronger sense), the density method provides tools for studying the distribution of primes in short intervals of the form $[n^2, (n+1)^2]$. The best known result in this direction is due to Ingham (1937), who showed that there is a prime between $n^3$ and $(n+1)^3$.
 
-\[
-\liminf_{n\to\infty} (p_{n+1} - p_n) \le 600
-\]
+\textbf{The density method.} Maynard's density method is a general framework for proving that sets of integers contain arithmetic structures. Given a set $A$ of integers with positive density, one wishes to show that $A$ contains $m$-term arithmetic progressions for all $m$. The method uses a weight function adapted to $A$ and estimates the main term and error terms separately. The main term is positive if $A$ has positive density, and the error terms are controlled using exponential sum estimates.
 
-which improved dramatically on Zhang's 70 million. Moreover, Maynard's
-method did not require any deep input about primes in arithmetic
-progressions; it worked under essentially the same assumptions as the
-original GPY method, but with a much more efficient sieve.
+The density method was developed in collaboration with Tao and builds on the transference principle of Green and Tao. The key insight is that one can transfer results from dense sets to sparse sets by constructing a ``pseudorandom majorant'' for the sparse set. The pseudorandom majorant is a function that majorizes the indicator function of the sparse set and satisfies strong mixing conditions. These mixing conditions allow one to use the ergodic-theoretic machinery developed for dense sets.
 
-Under the assumption of the Elliott--Halberstam conjecture (a widely
-believed conjecture about the distribution of primes in arithmetic
-progressions), Maynard's method gives the notable bound:
+\section{Impact of This Discovery}
 
-\[
-\liminf_{n\to\infty} (p_{n+1} - p_n) \le 12
-\]
+The bounded gaps result is one of the most celebrated achievements of 21st-century number theory. The multidimensional Maynard sieve has become a standard tool in analytic number theory, used extensively in problems involving distribution of primes in arithmetic progressions. The result answered a question that had been open since the 19th century and demonstrated that the distribution of primes is more regular than previously expected.
 
-which is tantalizingly close to the twin prime conjecture's gap of 2.
+Maynard's work on large gaps between primes provides the best known lower bounds, though the conjectured quadratic gap remains unproved. The techniques used to construct prime-free intervals have connections to the theory of smooth numbers and have been applied to other problems in additive combinatorics and additive number theory.
 
-\subsection{Why Maynard's Sieve
-Works}\label{ch2022jamesmaynard:why-maynards-sieve-works}
+The Maynard--Tao method has been extended to number fields by Shao, establishing bounded gaps between primes in the Chebotarev density setting. This extension requires new techniques for handling the splitting of primes in number fields and the distribution of Frobenius elements.
 
-The advantage of Maynard's multidimensional sieve can be understood as
-follows. The GPY method, when trying to detect \(m\) primes in an
-interval, essentially requires that each of \(m\) linear forms
-simultaneously take prime values. The original GPY weights could only
-efficiently handle the case \(m = 2\). Maynard's innovation was to use a
-\textbf{separate weight for each form}, coupled together through the
-optimization process.
+The impact on \textbf{computational number theory} has been significant. The explicit bound $H(2) \le 246$ provides a concrete target for computational verification. Computational evidence strongly supports the conjecture that $H(2) = 2$ (the twin prime conjecture), and the search for prime constellations of length $2$ within intervals of length $246$ has been carried out extensively. The first occurrence of a gap of size $2$ or less beyond $10^{18}$ has been verified computationally, and the distribution of small gaps appears to follow the Hardy--Littlewood conjecture.
 
-This is a genuinely new idea in sieve theory. Previous sieve methods ---
-the Brun sieve, the Selberg sieve, the large sieve --- all used
-essentially one-dimensional weights. Maynard's multidimensional approach
-opened up a new dimension of possibilities.
+The \textbf{Selberg sieve} (1950) is the starting point for understanding Maynard's method. The Selberg sieve provides an upper bound for the number of primes in an arithmetic progression by optimizing a quadratic form over a set of parameters. Maynard's innovation was to observe that this optimization can be performed in multiple dimensions, which provides more efficient weights and leads to better bounds on prime gaps. The connection between the Selberg sieve and the multidimensional sieve was not apparent before Maynard's work.
 
-\subsection{Immediate Impact}\label{ch2022jamesmaynard:immediate-impact}
+The density method has applications beyond prime number theory, including the study of Diophantine equations, the distribution of values of arithmetic functions, and the theory of additive combinatorics. The method provides a unified framework for studying the distribution of integers satisfying local conditions.
 
-Maynard's result was immediately recognized as a major advance. Within
-weeks, the Polymath8 project incorporated his ideas and combined them
-with Zhang's bounds to produce the current best unconditional bound of
-246. Under the Elliott--Halberstam conjecture, the bound is 6 (and even
-2 under a stronger conjecture).
+The \textbf{primes in short intervals} problem asks for bounds on the number of primes in $[x, x + x^\theta]$ for small $\theta > 0$. The prime number theorem implies that $\pi(x + x^\theta) - \pi(x) \sim x^\theta / \log x$ for any $\theta > 0$, but the best unconditional result for $\theta$ close to $0$ is due to Huxley (1972), who showed the result holds for $\theta > 7/12$. Maynard's work on bounded gaps is complementary: it shows that there are infinitely many intervals of bounded length containing at least $2$ primes, but does not address whether most intervals of a given length contain primes.
 
-More importantly, Maynard's method showed that \textbf{for any \(m\)},
-there exist bounded intervals containing \(m\) primes. This was
-completely new: even for \(m = 3\), it had not previously been known
-whether there was any finite bound on intervals containing three primes.
+The \textbf{Landau's problems} ask four classical questions about primes: (1) are there infinitely many primes of the form $n^2 + 1$? (2) are there infinitely many primes of the form $n^2 + m^2 + 1$? (3) are there infinitely many Sophie Germain primes (primes $p$ such that $2p+1$ is also prime)? (4) are there infinitely many primes of the form $n^2 + m^2$? While Maynard's methods do not directly resolve these problems, they provide the sieve-theoretic framework within which progress on these conjectures is made. The Brun sieve gives an upper bound of $O(x^{1/2} / \log x)$ for the number of primes of the form $n^2 + 1$ up to $x$, but the conjectured answer is $c \sqrt{x} / \log x$ for an explicit constant $c$.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The \textbf{Parisi conjecture} in probability theory and the \textbf{Sato--Tate conjecture} in number theory are related to the distribution of Fourier coefficients of modular forms, which are intimately connected to the distribution of primes. Maynard's work on bounded gaps provides evidence for the strong regularity of prime distribution that underlies these conjectures.
 
-\section{Clusters of Primes: The m-Tuples
-Theorem}\label{ch2022jamesmaynard:clusters-of-primes-the-m-tuples-theorem}
+\section{Modern Views and Improvements}
 
-\subsection{Statement}\label{ch2022jamesmaynard:statement}
+Maynard's method continues to yield new results. Extensions to more general number fields and to higher-dimensional varieties are active areas of current research. The Maynard--Tao method has been adapted to study primes represented by binary quadratic forms and primes in orbits of dynamical systems.
 
-Maynard's most striking result from his 2013 paper is:
+The relationship between the bounded gaps problem and the Elliott--Halberstam conjecture remains an active area: proving the full Elliott--Halberstam conjecture would give bounded gaps with $H \le 12$. Recent work of Frei and Maynard has improved the level of distribution in certain settings, bringing the bound closer to the conjectured value.
 
-\textbf{Theorem:} For any natural number \(m \ge 2\), there exists a
-positive integer \(C(m)\) such that there are infinitely many natural
-numbers \(n\) for which the interval \([n, n + C(m)]\) contains at least
-\(m\) prime numbers.
+Maynard's work on the distribution of primes near squares, and on the gaps between almost-primes (integers with a bounded number of prime factors), continues to produce new results. The gaps between $k$-almost-primes are significantly smaller than the gaps between primes, and Maynard's methods provide the best known bounds for these gaps. The interaction with the theory of the Liouville function and the Chowla conjecture represents another frontier of current research.
 
-This is a far-reaching generalization of the bounded gaps result. It
-implies that prime numbers cluster together in arbitrarily large groups,
-with the clusters occurring infinitely often.
+The \textbf{Chowla conjecture} predicts that the Liouville function $\lambda(n) = (-1)^{\Omega(n)}$ (where $\Omega(n)$ is the number of prime factors of $n$ counted with multiplicity) has no correlations: $\sum_{n \le x} \lambda(n+h_1) \cdots \lambda(n+h_k) = o(x)$ for any $k$ and any distinct $h_1, \ldots, h_k$. This conjecture, if true, would imply the twin prime conjecture and much more. Maynard and Tao have made partial progress on this conjecture using methods related to the density increment argument.
 
-\subsection{Connection to the Hardy--Littlewood
-Conjectures}\label{ch2022jamesmaynard:connection-to-the-hardylittlewood-conjectures}
+The \textbf{Goldston--Pintz--Y{\i}ld{\i}r{\i}m (GPY) method}, which preceded Maynard's work, used a one-dimensional sieve to show that $\liminf (p_{n+1} - p_n) / \log p_n = 0$ under the Elliott--Halberstam conjecture. Maynard's multidimensional improvement showed the same conclusion unconditionally. The conceptual leap was to observe that by using a multidimensional sieve, one could detect clusters of primes simultaneously, which is a weaker requirement than detecting individual prime gaps.
 
-The Hardy--Littlewood prime \(k\)-tuples conjecture (1923) predicts
-precise asymptotics for the number of prime \(k\)-tuples. For an
-admissible \(k\)-tuple \((h_1, \ldots, h_k)\) (one that does not cover
-all residue classes modulo any prime), the conjecture states that the
-number of \(n \le x\) such that \(n+h_1, \ldots, n+h_k\) are all prime
-is asymptotic to:
+The \textbf{distribution of gaps between consecutive primes} is closely related to Maynard's work. For a random sequence of primes with density $1/\log x$, the gaps would follow a Poisson distribution with mean $\log x$. The actual distribution of gaps between consecutive primes shows deviations from this model, particularly for small gaps. Maynard's result implies that the distribution function $F(t) = \lim_{x \to \infty} \#\{n \le x : p_{n+1} - p_n \le t \log p_n\} / \#\{n \le x\}$ satisfies $F(0) > 0$, which is impossible for a Poisson distribution. This deviation is one of the deepest manifestations of the structured nature of the primes.
 
-\[
-\mathfrak{S}(h_1,\ldots,h_k) \frac{x}{(\log x)^k}
-\]
+The interaction between Maynard's sieve methods and the theory of \textbf{automorphic forms} is an emerging area. The distribution of Fourier coefficients of modular forms, and their relationship to primes in arithmetic progressions, provides a natural setting for applying Maynard's methods. The subconvexity bounds for $L$-functions provide the analytic input needed to control the error terms in the sieve.
 
-where \(\mathfrak{S}\) is a constant depending on the tuple.
+The \textbf{quantitative distribution of primes in tuples} is an active area that builds directly on Maynard's work. The Hardy--Littlewood $k$-tuple conjecture predicts the precise asymptotic for the number of integers $n \le x$ such that $n + h_1, \ldots, n + h_k$ are all prime, for any admissible tuple $(h_1, \ldots, h_k)$. Maynard's methods give the correct order of magnitude for the main term but do not yet achieve the conjectured error term. Improving the error term would have consequences for the distribution of prime gaps and for the analysis of prime constellations.
 
-Maynard's theorem does not prove the full Hardy--Littlewood conjecture
-(which would require finding specific tuples), but it proves that
-\textbf{a positive proportion of admissible \(k\)-tuples} satisfy the
-conjecture. This was a completely new result.
-
-\subsection{The Proportion of Admissible
-Tuples}\label{ch2022jamesmaynard:the-proportion-of-admissible-tuples}
-
-To appreciate the significance: for a given \(k\), there are infinitely
-many admissible \(k\)-tuples. The Hardy--Littlewood conjecture asserts
-that each such tuple should produce infinitely many prime \(k\)-tuples.
-Maynard proved that a positive proportion of them do --- that is, there
-is a set of admissible tuples of positive lower density such that each
-tuple in the set yields infinitely many prime \(k\)-tuples.
-
-This was the first time that any version of the Hardy--Littlewood
-conjecture had been proved for a positive proportion of tuples for any
-\(k > 2\).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Large Gaps Between Primes: The Erdos
-Problem}\label{ch2022jamesmaynard:large-gaps-between-primes-the-erdos-problem}
-
-\subsection{Background}\label{ch2022jamesmaynard:background}
-
-If the twin prime conjecture is about primes being unexpectedly close
-together, the \textbf{large gaps problem} is about primes being
-unexpectedly far apart. Let \(G(x)\) denote the maximum gap between
-consecutive primes up to \(x\). The Prime Number Theorem implies that
-the average gap is \(\log x\), but the maximum gap can be much larger.
-
-A longstanding problem, posed by Paul Erdos in the 1930s, asked whether
-there exist arbitrarily large gaps between consecutive primes that are
-significantly larger than average. More precisely, Erdos offered
-\$10,000 for a proof that:
-
-\[
-\limsup_{n\to\infty} \frac{p_{n+1} - p_n}{\log p_n} = \infty
-\]
-
-In other words, that the ratio of the maximum gap to the average gap is
-unbounded.
-
-\subsection{The Ford--Green--Konyagin--Maynard--Tao
-Result}\label{ch2022jamesmaynard:the-fordgreenkonyaginmaynardtao-result}
-
-In 2015, Maynard, together with Kevin Ford, Ben Green, Sergei Konyagin,
-and Terence Tao, proved a much stronger result:
-
-\textbf{Theorem:} For sufficiently large \(x\),
-
-\[
-G(x) \gg \frac{\log x \log \log x \log \log \log \log x}{(\log \log \log x)^2}
-\]
-
-This improves on the previous best result of Ford--Green--Konyagin
-(2014) by a factor of \(\log\log\log x\) and resolves the Erdos problem
-(the ratio is indeed unbounded).
-
-The proof combines ideas from sieve theory, combinatorics, and the
-theory of prime gaps. The key innovation was a new method for
-constructing long intervals without primes by analyzing the structure of
-prime patterns and using \textbf{semi-random} constructions.
-
-\subsection{Impact}\label{ch2022jamesmaynard:impact}
-
-This result solved a problem that had been open for over 80 years and
-for which Erdos had offered a prize. It demonstrated that prime gaps can
-be arbitrarily large relative to the average, confirming a long-held
-belief. The techniques developed in this paper have been influential in
-subsequent work on the distribution of primes.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Primes with Restricted
-Digits}\label{ch2022jamesmaynard:primes-with-restricted-digits}
-
-\subsection{The Problem}\label{ch2022jamesmaynard:the-problem}
-
-In 2016, Maynard proved a result that captured the imagination of the
-mathematical community: there are infinitely many prime numbers that do
-not contain the digit 7 in their decimal expansion. More generally:
-
-\textbf{Theorem:} For any base \(b \ge 3\) and any digit \(a\) in
-\(\{0,1,\ldots,b-1\}\), there are infinitely many primes whose
-base-\(b\) expansion does not contain the digit \(a\).
-
-This includes the striking special case: there are infinitely many
-primes with no digit 7 (or any other specific digit).
-
-\subsection{Why This Is Hard}\label{ch2022jamesmaynard:why-this-is-hard}
-
-The set of numbers with a restricted digit is extremely sparse. For
-\(n\)-digit numbers in base 10, the total number is
-\(9 \times 10^{n-1}\), but the number with no digit 7 is only
-\(8 \times 9^{n-1}\). The proportion is about \((0.9)^n\), which decays
-exponentially with \(n\). Standard sieve methods are not designed to
-handle such sparse sets.
-
-Maynard's proof used a combination of techniques:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Fourier analysis} to understand the structure of the set of
- numbers with restricted digits.
-\item
- \textbf{Sieve estimates} for detecting primes in carefully constructed
- subsets.
-\item
- \textbf{Harmonic analysis on \(\mathbb{Z}_b\)} to handle the digit
- restrictions.
-\item
- \textbf{Large sieve inequalities} adapted to the restricted digit
- setting.
-\end{itemize}
-
-The proof is technically demanding and represents a masterful blend of
-analytic number theory and harmonic analysis.
-
-\subsection{Generalizations}\label{ch2022jamesmaynard:generalizations}
-
-Maynard's result has been extended in several directions:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Multiple forbidden digits:} There are infinitely many primes
- avoiding any fixed finite set of digits (for sufficiently large base).
-\item
- \textbf{Other bases:} The result holds for any base \(b \ge 3\). (Base
- 2 is trivial since the only possible digits are 0 and 1, and primes
- cannot end in 0.)
-\item
- \textbf{Other restrictions:} Similar methods work for primes with
- other digit restrictions, such as prescribing the number of
- occurrences of a given digit.
-\end{itemize}
-
-\subsection{Impact}\label{ch2022jamesmaynard:impact-1}
-
-The ``no 7'' result generated substantial public interest because it is so
-easy to state and surprising. More importantly, it demonstrated that
-Maynard's sieve techniques could be applied to problems far removed from
-the traditional concerns of analytic number theory. The paper was
-published in \emph{Inventiones Mathematicae} in 2019.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Duffin--Schaeffer
-Conjecture}\label{ch2022jamesmaynard:the-duffinschaeffer-conjecture}
-
-\subsection{Background}\label{ch2022jamesmaynard:background-1}
-
-The Duffin--Schaeffer conjecture is one of the central problems in
-\textbf{metric Diophantine approximation}, the study of how well a
-typical real number can be approximated by rational numbers. It was
-posed by Duffin and Schaeffer in 1941 and is considered the ultimate
-generalization of Khintchine's theorem (1924).
-
-Khintchine's theorem states: let \(\psi(q)\) be a non-increasing
-function. Then for almost every real number \(\alpha\) (in the sense of
-Lebesgue measure), the inequality
-
-\[
-\left|\alpha - \frac{a}{q}\right| < \frac{\psi(q)}{q}
-\]
-
-has infinitely many rational solutions \(a/q\) if and only if
-\(\sum_{q=1}^\infty \psi(q) = \infty\).
-
-The Duffin--Schaeffer conjecture removes the monotonicity condition on
-\(\psi\) and instead uses the \textbf{Euler totient} \(\varphi(q)\) to
-count distinct reduced fractions. It states: for any function
-\(\psi(q) \ge 0\), the inequality
-
-\[
-\left|\alpha - \frac{a}{q}\right| < \frac{\psi(q)}{q}
-\]
-
-has infinitely many solutions in reduced fractions \(a/q\) for almost
-every \(\alpha\) if and only if
-
-\[
-\sum_{q=1}^\infty \frac{\varphi(q)}{q} \psi(q) = \infty.
-\]
-
-\subsection{The Koukoulopoulos--Maynard
-Proof}\label{ch2022jamesmaynard:the-koukoulopoulosmaynard-proof}
-
-In 2020, Maynard and Dimitris Koukoulopoulos proved the
-Duffin--Schaeffer conjecture. The proof, published in the \emph{Annals
-of Mathematics}, is a tour de force that runs over 50 pages and
-combines:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Number-theoretic sieving} to estimate the measure of the set
- of real numbers well-approximated by rationals with given
- denominators.
-\item
- \textbf{Graph-theoretic methods} to handle the complex dependencies
- between different denominators.
-\item
- \textbf{A combinatorial decomposition} of the set of denominators into
- ``regular'' and ``irregular'' parts.
-\item
- \textbf{New estimates for sums of multiplicative functions} that are
- of independent interest.
-\end{itemize}
-
-The key insight was to reformulate the problem in terms of a
-\textbf{bipartite graph} whose vertices are integers and rational
-approximations, and to use graph-theoretic tools to control the overlap
-between different approximation sets.
-
-\subsection{Impact}\label{ch2022jamesmaynard:impact-2}
-
-The resolution of the Duffin--Schaeffer conjecture was widely recognized
-as a significant achievement in Diophantine approximation
-in decades. It completed a program that had been pursued by leading
-number theorists for 80 years. The paper earned Maynard the 2020 Cole
-Prize in Number Theory (shared with Koukoulopoulos).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Other Contributions to Diophantine
-Approximation}\label{ch2022jamesmaynard:other-contributions-to-diophantine-approximation}
-
-\subsection{Simultaneous Approximation with Square
-Denominator}\label{ch2022jamesmaynard:simultaneous-approximation-with-square-denominator}
-
-Maynard dramatically improved upon classical work of Schmidt on
-simultaneous approximation by rationals with square denominator. He
-showed that for any real numbers \(\alpha_1, \ldots, \alpha_k\), there
-are infinitely many integers \(q\) such that
-
-\[
-\max_i \|q^2 \alpha_i\| < q^{-1/k + \epsilon}
-\]
-
-where \(\|\cdot\|\) denotes the distance to the nearest integer. This
-improved on Schmidt's result by a factor of \(q^\epsilon\) and required
-new ideas about the distribution of solutions to quadratic congruences.
-
-\subsection{The Mass-Transitivity
-Principle}\label{ch2022jamesmaynard:the-mass-transitivity-principle}
-
-In joint work with Koukoulopoulos, Maynard developed a general
-``mass-transitivity principle'' for studying approximation problems.
-This principle allows one to transfer information about approximation
-properties from one set of denominators to another, and has found
-applications beyond the Duffin--Schaeffer problem.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Distribution of Primes in Arithmetic
-Progressions}\label{ch2022jamesmaynard:distribution-of-primes-in-arithmetic-progressions}
-
-\subsection{Background}\label{ch2022jamesmaynard:background-2}
-
-One of the important results in analytic number theory is the
-\textbf{Bombieri--Vinogradov theorem} (1965), which states that primes
-are well-distributed across arithmetic progressions on average over
-moduli up to \(x^{1/2}\). The \textbf{Elliott--Halberstam conjecture}
-predicts that this holds for moduli up to \(x^{1-\epsilon}\), a vast
-extension.
-
-In a monumental series of works, Maynard improved on classical work of
-Bombieri, Friedlander, and Iwaniec to obtain results that go beyond what
-follows from the Generalized Riemann Hypothesis (GRH) for certain
-ranges.
-
-\subsection{Key Results}\label{ch2022jamesmaynard:key-results}
-
-Maynard's results on primes in arithmetic progressions include:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Improved level of distribution:} New bounds on the error term
- in the prime number theorem for arithmetic progressions that are
- superior to what the GRH alone would imply, for certain ranges of
- moduli.
-\item
- \textbf{Applications to sieve theory:} These improved distribution
- results feed directly into sieve estimates for primes, leading to new
- results on prime patterns.
-\item
- \textbf{Beyond the Bombieri--Vinogradov range:} Techniques for
- handling moduli beyond the classical \(x^{1/2}\) barrier, using deeper
- harmonic analysis and spectral methods.
-\end{itemize}
-
-This work, published in a series of papers in leading journals,
-represents some of the finest work on the distribution of primes since
-the 1980s.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{New Large Value Estimates for Dirichlet
-Polynomials}\label{ch2022jamesmaynard:new-large-value-estimates-for-dirichlet-polynomials}
-
-\subsection{Background}\label{ch2022jamesmaynard:background-3}
-
-Dirichlet polynomials (sums of the form \(\sum_{n\le N} a_n n^{-s}\))
-are fundamental objects in analytic number theory. Bounding their large
-values is essential for understanding the Riemann zeta function, the
-distribution of primes, and many other problems.
-
-\subsection{The Guth--Maynard Result}\label{ch2022jamesmaynard:the-guthmaynard-result}
-
-In 2024, Maynard and Larry Guth posted a paper titled ``New large value
-estimates for Dirichlet polynomials'' that represents a major advance in
-this area. The paper introduces new techniques for bounding the number
-of times a Dirichlet polynomial can take large values, improving on
-classical results of Montgomery and others.
-
-These estimates have immediate applications to:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Zero-free regions} for the Riemann zeta function.
-\item
- \textbf{Mean value theorems} for Dirichlet polynomials.
-\item
- \textbf{Bounds on the error term} in the Prime Number Theorem.
-\item
- \textbf{Sieve estimates} and the theory of primes.
-\end{itemize}
-
-This work is still being digested by the community but is already
-recognized as a major contribution.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{The Polymath Project and Collaborative
-Work}\label{ch2022jamesmaynard:the-polymath-project-and-collaborative-work}
-
-\subsection{The Polymath8 Project}\label{ch2022jamesmaynard:the-polymath8-project}
-
-Following Maynard's 2013 preprint, the Polymath8 project --- a
-large-scale online collaboration led by Terence Tao --- worked to
-incorporate Maynard's sieve improvements into the bounds from Zhang's
-theorem. The project produced the current best unconditional bound of
-246 for the smallest possible prime gap.
-
-Maynard's willingness to share his ideas and collaborate openly was
-instrumental to the project's success. The Polymath experiment
-demonstrated that large-scale online collaboration could accelerate
-progress on difficult mathematical problems, and Maynard's contribution
-was a key case study.
-
-\subsection{Other Collaborations}\label{ch2022jamesmaynard:other-collaborations}
-
-Maynard has been highly collaborative throughout his career. Major joint
-works include:
-
-\begin{itemize}
-\tightlist
-\item
- The large gaps result with Ford, Green, Konyagin, and Tao.
-\item
- The Duffin--Schaeffer proof with Koukoulopoulos.
-\item
- The large value estimates with Guth.
-\item
- Numerous papers with students and postdocs on sieve methods, prime
- gaps, and Diophantine approximation.
-\end{itemize}
-
-\subsection{The Erdos Problem Prize}\label{ch2022jamesmaynard:the-erdos-problem-prize}
-
-The large gaps result earned Maynard and his coauthors the Erdos Problem
-Prize of \$10,000. Erdos had famously offered this prize for a proof
-that the ratio of the maximum prime gap to the average gap is unbounded.
-The result resolved a problem that had been open since the 1930s.
-
-\section{Sieve Methods: Maynard's Technical
-Innovations}\label{ch2022jamesmaynard:sieve-methods-maynards-technical-innovations}
-
-\subsection{The Multidimensional Selberg
-Sieve}\label{ch2022jamesmaynard:the-multidimensional-selberg-sieve}
-
-Maynard's important technical contribution is the multidimensional
-generalization of the Selberg sieve. Classical Selberg sieve weights are
-of the form:
-
-\[
-\lambda_d = \mu(d) \frac{P(\log D/d)}{(\log D)^k}
-\]
-
-where \(P\) is a polynomial and \(D\) is the sieve level. Maynard
-introduced weights of the form:
-
-\[
-\lambda_{d_1,\ldots,d_k} = \mu(d_1\cdots d_k) F\left(\frac{\log d_1}{\log D}, \ldots, \frac{\log d_k}{\log D}\right)
-\]
-
-where \(F\) is a smooth function on \(\mathbb{R}^k_{\ge 0}\) satisfying
-certain differential equations. This allows the sieve to simultaneously
-handle \(k\) different linear forms.
-
-\subsection{The Optimization
-Problem}\label{ch2022jamesmaynard:the-optimization-problem}
-
-The core of Maynard's method is solving an optimization problem: find
-the function \(F\) that maximizes the ratio of the weighted count of
-tuples with all primes to the total weighted sum. This reduces to a
-variational problem that can be solved explicitly, yielding the optimal
-sieve weights.
-
-For the case of detecting \(k\) primes in an interval of length \(C\),
-the optimal bound on \(C\) is determined by the solution to a certain
-differential-difference equation. For \(k = 2\), this gives the bound
-600.
-
-\subsection{Comparison with Zhang's
-Method}\label{ch2022jamesmaynard:comparison-with-zhangs-method}
-
-Zhang's approach worked by proving a new result on primes in arithmetic
-progressions (a weakened form of the Elliott--Halberstam conjecture) and
-then feeding this into the GPY method. Maynard's approach was
-orthogonal: he kept the same (relatively weak) input about prime
-distribution but made the sieve itself much more efficient.
-
-Number theorists often describe the two approaches as: Zhang improved
-the \textbf{inputs} to the sieve, while Maynard improved the
-\textbf{sieve itself}. Both were necessary for the full picture.
-
-\subsection{The Role of the GPY
-Method}\label{ch2022jamesmaynard:the-role-of-the-gpy-method}
-
-The GPY method (Goldston--Pintz--Yildirim, 2005) was the foundational
-breakthrough that made the bounded gaps problem approachable. GPY showed
-that if one could prove a sufficiently strong result about primes in
-arithmetic progressions (a level of distribution beyond \(1/2\)), then
-bounded gaps would follow. However, the GPY method had a fundamental
-limitation: it could only handle pairs of primes (\(m = 2\)).
-
-The limitation came from the structure of the GPY weights, which used a
-single divisor sum to detect prime pairs. Maynard realized that by using
-\textbf{\(k\) separate divisor sums} --- one for each linear form ---
-the method could be extended to any \(m\). This insight seems obvious in
-retrospect, but it had been missed by everyone for nearly a decade.
-
-\subsection{Beyond Linear Forms}\label{ch2022jamesmaynard:beyond-linear-forms}
-
-Maynard's sieve has been extended to polynomial forms, function fields,
-and other settings. The key requirement is that the forms are
-``admissible'' in the sense that they are not automatically composite
-for all \(n\). The sieve method has become a standard tool in modern
-analytic number theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Sieve Methods: Maynard's Technical
-Innovations}\label{ch2022jamesmaynard:sieve-methods-maynards-technical-innovations-1}
-
-\subsection{The Multidimensional Selberg
-Sieve}\label{ch2022jamesmaynard:the-multidimensional-selberg-sieve-1}
-
-Maynard's important technical contribution is the multidimensional
-generalization of the Selberg sieve. Classical Selberg sieve weights are
-of the form:
-
-\[
-\lambda_d = \mu(d) \frac{P(\log D/d)}{(\log D)^k}
-\]
-
-where \(P\) is a polynomial and \(D\) is the sieve level. Maynard
-introduced weights of the form:
-
-\[
-\lambda_{d_1,\ldots,d_k} = \mu(d_1\cdots d_k) F\left(\frac{\log d_1}{\log D}, \ldots, \frac{\log d_k}{\log D}\right)
-\]
-
-where \(F\) is a smooth function on \(\mathbb{R}^k_{\ge 0}\) satisfying
-certain differential equations. This allows the sieve to simultaneously
-handle \(k\) different linear forms.
-
-\subsection{The Optimization
-Problem}\label{ch2022jamesmaynard:the-optimization-problem-1}
-
-The core of Maynard's method is solving an optimization problem: find
-the function \(F\) that maximizes the ratio of the weighted count of
-tuples with all primes to the total weighted sum. This reduces to a
-variational problem that can be solved explicitly, yielding the optimal
-sieve weights.
-
-For the case of detecting \(k\) primes in an interval of length \(C\),
-the optimal bound on \(C\) is determined by the solution to a certain
-differential-difference equation. For \(k = 2\), this gives the bound
-600.
-
-\subsection{Comparison with Zhang's
-Method}\label{ch2022jamesmaynard:comparison-with-zhangs-method-1}
-
-Zhang's approach worked by proving a new result on primes in arithmetic
-progressions (a weakened form of the Elliott--Halberstam conjecture) and
-then feeding this into the GPY method. Maynard's approach was
-orthogonal: he kept the same (relatively weak) input about prime
-distribution but made the sieve itself much more efficient.
-
-Number theorists often describe the two approaches as: Zhang improved
-the \textbf{inputs} to the sieve, while Maynard improved the
-\textbf{sieve itself}. Both were necessary for the full picture.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Broader Impact on Number
-Theory}\label{ch2022jamesmaynard:broader-impact-on-number-theory}
-
-\subsection{Revitalization of Sieve
-Theory}\label{ch2022jamesmaynard:revitalization-of-sieve-theory}
-
-Sieve theory had been somewhat dormant in the decades before 2013.
-Maynard's work revitalized the field, showing that there were still
-fundamental innovations to be made. His multidimensional sieve has been
-taken up by many researchers and applied to a wide range of problems.
-
-\subsection{New Connections Between
-Subfields}\label{ch2022jamesmaynard:new-connections-between-subfields}
-
-Maynard's work has bridged several subfields of number theory:
-
-\begin{itemize}
-\tightlist
-\item
- \textbf{Sieve theory and Diophantine approximation:} The
- Duffin--Schaeffer proof used sieve ideas in a completely novel
- context.
-\item
- \textbf{Prime gaps and digit restrictions:} The restricted digits
- result showed that sieve methods could be applied to sparse sets
- defined by combinatorial constraints.
-\item
- \textbf{Analytic number theory and harmonic analysis:} The restricted
- digits work used Fourier analysis on \(\mathbb{Z}_b\) and the large
- sieve.
-\end{itemize}
-
-\subsection{Influence on Young
-Researchers}\label{ch2022jamesmaynard:influence-on-young-researchers}
-
-Maynard's example has inspired a new generation of number theorists. His
-career trajectory --- from PhD to Fields Medal in under a decade ---
-demonstrates that young researchers can make substantial
-contributions. His willingness to share ideas and collaborate openly has
-also influenced the culture of the field.
-
-\subsection{Public Engagement}\label{ch2022jamesmaynard:public-engagement}
-
-Maynard's results are unusually accessible to the public. ``There are
-infinitely many primes without the digit 7'' and ``there are infinitely
-many pairs of primes at most 600 apart'' are statements that anyone can
-understand. He has given numerous public lectures and interviews,
-helping to raise the profile of number theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Awards and Recognition}\label{ch2022jamesmaynard:awards-and-recognition}
-
-\textbf{2023:} - New Horizons in Mathematics Prize (Breakthrough
-Foundation) - Fellow of the Royal Society (FRS)
-
-\textbf{2022:} - Fields Medal (International Mathematical Union)
-
-\textbf{2020:} - Cole Prize in Number Theory (American Mathematical
-Society, shared with D. Koukoulopoulos) - Member, Academia Europaea
-
-\textbf{2019:} - Compositio Prize (Foundation Compositio Mathematica)
-
-\textbf{2018:} - Invited Speaker, International Congress of
-Mathematicians (Rio de Janeiro) - Wolfson Merit Award (Royal Society)
-
-\textbf{2016:} - European Mathematical Society Prize - Erdos Problem
-Prize (\$10,000, shared with Ford, Green, Konyagin, and Tao)
-
-\textbf{2015:} - Whitehead Prize (London Mathematical Society)
-
-\textbf{2014:} - SASTRA Ramanujan Prize
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Selected Major
-Publications}\label{ch2022jamesmaynard:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Small gaps between primes.''} \emph{Annals of Mathematics}
- 181(1), 383--413, 2015. arXiv:1311.4600. --- \emph{The breakthrough
- paper introducing the multidimensional sieve and proving bounded gaps
- for all m.}
-\item
- \textbf{``Large gaps between primes''} (with K. Ford, B. Green, S.
- Konyagin, and T. Tao). \emph{Journal of the American Mathematical
- Society} 31(1), 65--105, 2018. --- \emph{Resolution of the Erdos
- problem on large gaps.}
-\item
- \textbf{``Primes with restricted digits.''} \emph{Inventiones
- Mathematicae} 217(1), 127--218, 2019. --- \emph{Proof that there are
- infinitely many primes avoiding any given digit.}
-\item
- \textbf{``On the Duffin--Schaeffer conjecture''} (with D.
- Koukoulopoulos). \emph{Annals of Mathematics} 192(1), 251--307, 2020.
- --- \emph{Resolution of the central conjecture in metric Diophantine
- approximation.}
-\item
- \textbf{``Dense clusters of primes in subsets.''} \emph{Compositio
- Mathematica} 152(7), 1517--1554, 2016. --- \emph{Extension of the
- sieve method to sparse subsets of integers.}
-\item
- \textbf{``On the Brun--Titchmarsh theorem.''} \emph{Acta Mathematica}
- 219(2), 287--334, 2017. --- \emph{Improvements to a fundamental
- inequality for primes in arithmetic progressions.}
-\item
- \textbf{``New large value estimates for Dirichlet polynomials''} (with
- L. Guth). arXiv:2405.20552, 2024. --- \emph{Major advance in bounding
- large values of Dirichlet polynomials.}
-\item
- \textbf{``A note on the Duffin--Schaeffer conjecture.''}
- \emph{Advances in Mathematics} 356, 106810, 2019. --- \emph{Key
- intermediate result toward the full conjecture.}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Ongoing Work and Future
-Directions}\label{ch2022jamesmaynard:ongoing-work-and-future-directions}
-
-Maynard continues to be highly active in research:
-
-\subsection{Further Sieve
-Innovations}\label{ch2022jamesmaynard:further-sieve-innovations}
-
-He continues to refine his multidimensional sieve method, extending it
-to new contexts such as polynomials and function fields.
-
-\subsection{The Twin Prime
-Conjecture}\label{ch2022jamesmaynard:the-twin-prime-conjecture}
-
-The ultimate goal remains the twin prime conjecture. Maynard has
-expressed optimism: ``We're still one big idea away from proving the
-twin prime conjecture, but maybe we're only one big idea away.''
-
-\subsection{Prime Gaps under GRH}\label{ch2022jamesmaynard:prime-gaps-under-grh}
-
-The best bound under the Elliott--Halberstam conjecture is 12. Further
-improvements may require new ideas about the distribution of primes.
-
-\subsection{The Riemann Hypothesis}\label{ch2022jamesmaynard:the-riemann-hypothesis}
-
-Maynard has expressed interest in the Riemann hypothesis and related
-problems. His large value estimates with Guth may lead to progress on
-zero-free regions and the error term in the Prime Number Theorem.
-
-\subsection{Diophantine
-Approximation}\label{ch2022jamesmaynard:diophantine-approximation}
-
-The resolution of the Duffin--Schaeffer conjecture opens up new
-questions about the distribution of approximation properties across
-different measures and dimensions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{Maynard's Mathematical
-Style}\label{ch2022jamesmaynard:maynards-mathematical-style}
-
-\subsection{Problem Selection}\label{ch2022jamesmaynard:problem-selection}
-
-Maynard has a notable instinct for choosing problems that are both
-important and tractable. His targets are typically ``hardest easy
-problems'' --- questions that are simple to state, central to the field,
-and have resisted progress for decades. The bounded gaps problem, the
-Erdos large gaps problem, primes with restricted digits, and the
-Duffin--Schaeffer conjecture all fit this description.
-
-\subsection{Technical Virtuosity}\label{ch2022jamesmaynard:technical-virtuosity}
-
-Maynard's proofs are technically demanding but conceptually clear. He
-has a gift for identifying the bottleneck in a problem and finding a way
-around it. The multidimensional sieve is a perfect example: the GPY
-method was stuck because everyone assumed the weights had to take a
-certain form; Maynard saw that a different form would bypass the
-limitation.
-
-\subsection{Collaboration and
-Openness}\label{ch2022jamesmaynard:collaboration-and-openness}
-
-Despite his individual brilliance, Maynard is a highly collaborative
-mathematician. He has co-authored papers with a wide range of
-researchers, from senior figures like Terence Tao and Roger Heath-Brown
-to junior colleagues and students. He is known for his generosity with
-ideas and his willingness to explain difficult concepts.
-
-\subsection{Communication Style}\label{ch2022jamesmaynard:communication-style}
-
-Maynard is an excellent communicator of mathematics. He is able to
-explain complex ideas in simple terms, making his work accessible to
-non-specialists. His public lectures and interviews have helped
-popularize number theory and inspire the next generation.
-
-\section{Conclusion}\label{ch2022jamesmaynard:conclusion}
-
-James Maynard is one of the most accomplished analytic number theorists
-of his generation. In a career that began with his PhD in 2013, he has
-solved multiple long-standing problems: the bounded gaps conjecture (for
-all \(m\)), the Erdos problem on large gaps, the Duffin--Schaeffer
-conjecture, and the problem of primes with restricted digits. Each of
-these achievements would be sufficient for a distinguished career;
-together, they represent a notable body of work.
-
-Maynard's contributions are characterized by his ability to find new
-angles on old problems. His multidimensional sieve transformed sieve
-theory, opening possibilities that had been thought impossible. His work
-on large gaps combined combinatorial constructions with sieve estimates
-in novel ways. The Duffin--Schaeffer proof introduced graph-theoretic
-methods into Diophantine approximation.
-
-The Fields Medal citation --- \emph{``for contributions to analytic
-number theory, which have led to major advances in the understanding of
-the structure of prime numbers and in Diophantine approximation''} ---
-captures the breadth of his work. From the smallest gaps between primes
-to the largest, from the digits of prime numbers to the approximation of
-real numbers by rationals, Maynard has reshaped our understanding of
-fundamental questions about numbers.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Verify that the GPY method gives $\\liminf_{n \\to \\infty} (p_{n+1} - p_n) \\leq 6$ under the Elliott-Halberstam conjecture. \end{exercise}
-
-\begin{exercise} Show that the Maynard weights improve the GPY bound from 6 to 24 unconditionally. \end{exercise}
-
-\begin{exercise} Compute the quantity $\\theta$ in the GPY method that controls the density of primes needed. \end{exercise}
-
-\begin{exercise} Prove that the Bombieri-Vinogradov theorem implies the GPY method gives bounded gaps between primes. \end{exercise}
+Recent work by Maynard on the \textbf{distribution of primes in function fields} provides a model for the number field case. Over function fields $\mathbb{F}_q[t]$, the analogue of the twin prime conjecture can be studied using geometric methods, and Maynard's sieve methods translate directly. The function field setting provides a testing ground for new ideas that may eventually apply to the integer case.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Maynard proved that there are infinitely many bounded gaps between primes, establishing that $\liminf_{n \to \infty} (p_{n+1} - p_n) \leq 600$. His multidimensional refinement of the GPY method, combined with the Elliott-Halberstam conjecture, reduced this to 12, and his techniques have further applications to Diophantine approximation and the distribution of primes.
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch2014manjulbhargava:manjul-bhargava-fields-medal-2014-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Both work on number theory.
-  \item \textbf{\hyperref[ch1950atleselberg:atle-selberg-fields-medal-1950-a-comprehensive-report]{See Chapter on related work}} --- Selberg's work on prime gaps influenced Maynard.
-\end{itemize}
-
-\section{References and Further
-Reading}\label{ch2022jamesmaynard:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch2022jamesmaynard:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 2022 Announcement:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-2022
-\item
- Fields Medal Citation for James Maynard:
- https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/IMU\_Fields22\_Maynard\_citation.pdf
-\item
- Soundararajan, K. ``The Work of James Maynard.'' ICM 2022 Laudatio.
- https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2022/laudatio-jm.pdf
-\end{itemize}
-
-\subsection{Biographical and Overview
-Articles}\label{ch2022jamesmaynard:biographical-and-overview-articles}
-
-\begin{itemize}
-\tightlist
-\item
- Klarreich, E. ``A Solver of the Hardest Easy Problems About Prime
- Numbers.'' \emph{Quanta Magazine}, July 5, 2022.
-\item
- Thomas, R. ``The Fields Medals 2022: James Maynard.'' \emph{Plus
- Magazine}, July 2022.
-\item
- Oxford Mathematical Institute: ``James Maynard awarded the Fields
- Medal.'' July 2022.
-\item
- University of Cambridge: ``James Maynard wins Fields Medal.'' July
- 2022.
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch2022jamesmaynard:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Maynard, J. ``Small gaps between primes.'' \emph{Annals of
- Mathematics} 181 (2015), 383--413.
-\item
- Zhang, Y. ``Bounded gaps between primes.'' \emph{Annals of
- Mathematics} 179 (2014), 1121--1174.
-\item
- Goldston, D., Pintz, J., and Yildirim, C. ``Primes in tuples I.''
- \emph{Annals of Mathematics} 170 (2009), 819--862.
-\item
- Friedlander, J. and Iwaniec, H. \emph{Opera de Cribro}. AMS, 2010.
-\item
- Harman, G. \emph{Prime-Detecting Sieves}. Princeton University Press,
- 2007.
-\end{itemize}
+Maynard proved that there are infinitely many bounded gaps between primes using a multidimensional sieve method, improved the GPY method, and established the best known lower bounds for large gaps between primes. His work transformed analytic number theory and provided new tools for studying the fine structure of the distribution of primes in arithmetic progressions.

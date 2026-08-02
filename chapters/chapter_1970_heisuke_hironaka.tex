@@ -1,598 +1,354 @@
-\chapter{Heisuke Hironaka --- Fields Medal 1970}\label{ch1970heisukehironaka:heisuke-hironaka-fields-medal-1970-a-comprehensive-report}
+\chapter{1970:Heisuke Hironaka}\label{ch1970heisukehironaka:heisuke-hironaka-fields-medal-1970-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Heisuke Hironaka
-\textbf{Born:} April 9, 1931, Yamaguchi, Japan \textbf{Position:}
-Professor, Harvard University \textbf{Doctoral Advisor:} Oscar Zariski
-(Harvard University)
-
-\textbf{Fields Medal Citation:} \emph{``For his generalized solution of
-the problem of resolution of singularities of algebraic varieties of any
-characteristic, and the applications of his method to the theory of
-analytic spaces.''}
+\textbf{Prepared:} July 2026
+\textbf{Subject:} Heisuke Hironaka (b. April 9, 1931, Yamaguchi, Japan)
+\textbf{Position:} Professor, Harvard University
+\textbf{Doctoral Advisor:} Oscar Zariski (Harvard University)
+\textbf{Fields Medal Citation:} \emph{``For his generalized solution of the problem of resolution of singularities of algebraic varieties of any characteristic, and the applications of his method to the theory of analytic spaces.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{1. Introduction}\label{ch1970heisukehironaka:introduction}
+\begin{prereqs}
+Commutative algebra (local rings, completions, associated graded rings, multiplicity), algebraic geometry (varieties, morphisms, divisors, blow-ups, normal crossings), differential geometry (smooth manifolds, tangent bundles).
+\end{prereqs}
 
-Heisuke Hironaka was awarded the Fields Medal in 1970 for his
-\textbf{resolution of singularities} of algebraic varieties in
-characteristic zero.
+\begin{objectives}
+State the resolution of singularities theorem in characteristic zero; construct the Hironaka algorithm using the Hilbert--Samuel function, coefficient ideals, and Newton polyhedra; understand the role of normal crossings divisors in the inductive process.
+\end{objectives}
 
-\begin{prereqs} Commutative algebra (local rings, primary decomposition), basic algebraic geometry (varieties, singularities), differential geometry. \end{prereqs}
+\section{Problem History}
 
-\begin{objectives} State the resolution of singularities theorem in characteristic zero; explain the role of blow-ups; describe the Hironaka characteristic polyhedron. \end{objectives}
+Resolution of singularities asks: given an algebraic variety $X$ over a field $k$, find a proper birational morphism $\pi: \tilde{X} \to X$ with $\tilde{X}$ smooth and $\pi$ an isomorphism over the smooth locus.
 
+For curves (dimension 1), this is elementary: the normalization resolves all singularities. For a plane curve singularity defined by $f(x,y) = 0$, the normalization separates branches and replaces each cusp or node with a smooth point. The ring of integers $\mathcal{O}_{\tilde{C}}$ is a Dedekind domain, and every singular point lifts to one or more smooth points.
 
-His 1964 Annals paper provided a complete proof that any algebraic
-variety over a field of characteristic zero can be desingularized by a
-finite sequence of blow-ups.
+For surfaces (dimension 2), Zariski proved resolution in 1939 using valuations and complete ideals, building on the earlier work of Italian geometers such as Castelnuovo, Enriques, and Severi. The key idea is to blow up singular points repeatedly until the variety becomes smooth. In dimension 2, the multiplicity of a singular point always decreases under blow-up, providing a natural well-ordered measure of complexity.
 
-This solved a problem that had occupied algebraic geometers since
-Zariski.
+The fundamental difficulty in dimensions $\geq 3$ was the absence of a well-ordering on singularity complexity. In the surface case, the multiplicity of a singular point decreases under blow-up, providing a natural measure of progress. In higher dimensions, the singular locus can be arbitrarily complicated, and there was no a priori guarantee that a sequence of blow-ups would terminate.
 
-Hironaka's proof introduced the concept of \textbf{Hironaka's resolution
-algorithm}, using the Hilbert--Samuel function and Newton polyhedra.
+The problem was essentially the question of whether a certain transfinite descent must stop. Grothendieck's scheme theory (1960s) provided the natural setting: the problem becomes finding a regular local ring $S$ with a proper birational morphism $\text{Spec}(S) \to \text{Spec}(R)$ for a singular Noetherian local ring $(R, \mathfrak{m})$.
 
-The result is one of the central theorems of algebraic geometry.
+Hironaka, working under Oscar Zariski at Harvard, attacked the problem using algebraic and geometric techniques. His 1964 Annals paper, spanning over 200 pages, provided the first complete proof in characteristic zero.
 
-Hironaka's main achievements include: - Resolution of singularities in
-char. 0. - Hironaka's theorem on blow-ups. - The concept of strict
-transforms. - The notion of normal crossings divisors. - Hironaka's
-polyhedron of resolutions. - The Hironaka decomposition. - The concept
-of toroidal embeddings.
+The problem had a long history: Riemann, Zariski, and others had proposed resolution as a fundamental goal. The Italian school had studied resolution for surfaces and threefolds in specific cases. Zariski's work on surfaces in the 1940s had established the pattern: find a complexity function that decreases at each step, then prove termination.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+Abhyankar had made important partial progress in characteristic $p$, proving resolution for certain classes of singularities. His work on local uniformization---the existence of a local blow-up making the singularity regular---was a key step toward the global result.
 
-\section{2. Biographical Background}\label{ch1970heisukehironaka:biographical-background}
+Hironaka's genius was to find such a complexity function in all dimensions: the Hilbert--Samuel function. This function measures the ``thickness'' of the singularity at each point and provides a well-ordered measure of progress. The crucial insight was that a suitable sequence of blow-ups along smooth centers would strictly decrease this function at every step, ensuring termination.
 
-\subsection{2.1 Early Life and
-Education}\label{ch1970heisukehironaka:early-life-and-education}
+The Hilbert--Samuel function generalizes the notion of multiplicity. For a local ring $(R, \mathfrak{m})$, it is defined as $H_R(n) = \text{length}(R/\mathfrak{m}^{n+1})$. The asymptotic behavior is $H_R(n) = \frac{e(R)}{d!}n^d + \text{lower order}$, where $d = \dim R$ and $e(R)$ is the multiplicity. Two rings with the same multiplicity can have different Hilbert--Samuel functions, and this finer invariant is what makes the induction work.
 
-Heisuke Hironaka was born on April 9, 1931, in Yamaguchi, Japan.
+The key difficulty in dimension $\geq 3$ is that the singular locus can have components of different dimensions. A naive blow-up might improve some components while worsening others. Hironaka's insight was to measure the ``worst'' singularity at each point using the Hilbert--Samuel function and to choose the center of the blow-up at the locus where this function is maximal.
 
-He studied at Kyoto University and Harvard University.
+The Hilbert--Samuel function is defined using the associated graded ring. For a local ring $(R, \mathfrak{m})$, the associated graded ring is $\text{gr}_{\mathfrak{m}}(R) = \bigoplus_{n \geq 0} \mathfrak{m}^n / \mathfrak{m}^{n+1}$. This is a graded algebra over the residue field $k = R/\mathfrak{m}$, and its Hilbert function is $H_R(n) = \dim_k(\mathfrak{m}^n / \mathfrak{m}^{n+1})$.
 
-At Harvard, he worked under Oscar Zariski, the leading figure in
-birational geometry.
+The multiplicity $e(R)$ is the leading coefficient of the Hilbert--Samuel polynomial. For a hypersurface singularity defined by $f = 0$ at the origin, the multiplicity is the order of the lowest-degree term of $f$. For example, $f = x^2 + y^3$ has multiplicity 2, while $f = x^3 + y^3 + z^3$ has multiplicity 3.
 
-\subsection{2.2 Academic Career}\label{ch1970heisukehironaka:academic-career}
+A smooth point has multiplicity 1, and a singular point has multiplicity $\geq 2$. The multiplicity is a coarse invariant: two singular points can have the same multiplicity but very different singularity types. The Hilbert--Samuel function captures more information and serves as a finer complexity measure.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{1954:} B.S., Kyoto University.
-\item
- \textbf{1954--1956:} Graduate student, Kyoto University.
-\item
- \textbf{1956--1960:} Ph.D., Harvard University, under Oscar Zariski.
-\item
- \textbf{1960--1963:} Associate Professor, Brandeis University.
-\item
- \textbf{1964--1992:} Professor, Harvard University.
-\item
- \textbf{1968--1992:} Chairman of the Mathematics Department at
- Harvard.
-\item
- \textbf{1970:} Fields Medal at the ICM in Nice.
-\item
- \textbf{1975:} President of the Mathematical Society of Japan.
-\item
- \textbf{1992--1996:} President of Yamaguchi University.
-\item
- \textbf{1996--2002:} President of the Japanese Society for the
- Promotion of Science.
-\end{itemize}
+\section{How Was It Solved}
 
-\subsection{2.3 Doctoral Work}\label{ch1970heisukehironaka:doctoral-work}
+\subsection*{The Resolution Theorem}
 
-Hironaka's early work under Zariski focused on resolution of surface
-singularities and the theory of complete ideals.
-
-His Ph.D.~thesis (1960) already contained the key ideas for the
-higher-dimensional case: the use of \textbf{weighted blow-ups} and the
-\textbf{normalization of the ideal sheaf}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. The Problem of Resolution of
-Singularities}\label{ch1970heisukehironaka:the-problem-of-resolution-of-singularities}
-
-\subsection{3.1 Historical Background}\label{ch1970heisukehironaka:historical-background}
-
-The problem of resolution of singularities dates to the 19th century.
-
-Riemann used desingularization of algebraic curves (smoothing a curve by
-blowing up its singular points).
-
-Picard and Levi studied surfaces.
-
-Zariski (1939) proved resolution for surfaces, using valuations and
-normalization.
-
-\subsection{3.2 Statement of the
-Problem}\label{ch1970heisukehironaka:statement-of-the-problem}
-
-Given an algebraic variety \(X\) over a field \(k\), find a proper
-birational morphism
-
+Hironaka's theorem: let $X$ be an algebraic variety over a field $k$ of characteristic zero. Then there exists a sequence of blow-ups with smooth centers
 \[
-\pi: \tilde{X} \to X
+X_n \xrightarrow{\pi_n} X_{n-1} \xrightarrow{\pi_{n-1}} \cdots \xrightarrow{\pi_1} X_1 \xrightarrow{\pi_1} X_0 = X
 \]
+such that $X_n$ is smooth. Moreover, the exceptional divisors form a \textbf{normal crossings divisor}: each component is smooth and they intersect transversely.
 
-such that \(\tilde{X}\) is smooth (nonsingular) and \(\pi\) is an
-isomorphism over the smooth locus of \(X\).
+The normal crossings condition is essential: it ensures that the resolution is controlled and that further modifications can be performed inductively. A divisor $D = \sum D_i$ has normal crossings at a point $p$ if, in local coordinates $x_1, \ldots, x_d$ centered at $p$, each $D_i$ is given by $x_{j_i} = 0$ for distinct indices $j_i$, and the components meet transversely.
 
-\subsection{3.3 Resolution in Characteristic
-Zero}\label{ch1970heisukehironaka:resolution-in-characteristic-zero}
+The theorem has two parts: existence (the variety can be resolved) and functoriality (the resolution is canonical in a suitable sense). The functoriality property ensures that the resolution respects automorphisms and is compatible with smooth morphisms.
 
-Hironaka proved that for any algebraic variety over a field of
-characteristic zero, there exists a resolution of singularities.
+The \textbf{functoriality} of the resolution is a powerful property. It means that if $\phi: X' \to X$ is a smooth morphism between varieties, then the resolution of $X'$ can be obtained from the resolution of $X$ by base change. This property is essential for the inductive step of the proof.
 
-The resolution can be realized by a finite sequence of blow-ups with
-smooth centers.
+\subsection*{The Hilbert--Samuel Function}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. Hironaka's Theorem}\label{ch1970heisukehironaka:hironakas-theorem}
-
-\subsection{4.1 Statement}\label{ch1970heisukehironaka:statement}
-
-Let \(X\) be an algebraic variety over a field of characteristic zero.
-
-Then there exists a finite sequence
-
+The proof uses the \textbf{Hilbert--Samuel function}. For a local ring $(R, \mathfrak{m})$ of dimension $d$, define
 \[
-X_n \to X_{n-1} \to \cdots
-\to X_1 \to X_0 = X
+H_R(n) = \text{length}_R(\mathfrak{m}^n / \mathfrak{m}^{n+1}).
 \]
+For large $n$, $H_R(n)$ is a polynomial: $H_R(n) = e(R) n^d / d! + \text{lower order terms}$, where $e(R)$ is the multiplicity.
 
-where each map \(X_i \to X_{i-1}\) is the blow-up of \(X_{i-1}\) along a
-smooth center, and \(X_n\) is smooth.
+The multiplicity measures the ``thickness'' of the singularity: a smooth point has multiplicity 1, while a singular point has multiplicity $\geq 2$. For example, the cone $x^2 + y^2 = z^2$ in $\mathbb{A}^3$ has multiplicity 2 at the vertex, while the Whitney umbrella $x^2 = y^2 z$ has multiplicity 2 along the $z$-axis.
 
-\subsection{4.2 The Center of Blow-Up}\label{ch1970heisukehironaka:the-center-of-blow-up}
+The Hilbert--Samuel function refines the multiplicity: it captures not just the leading coefficient but the full sequence of growth rates. Two singular points may have the same multiplicity but different Hilbert--Samuel functions, and the function distinguishes them precisely.
 
-The key difficulty is choosing the centers.
+The function is well-ordered in characteristic zero: given any sequence of local rings, the Hilbert--Samuel functions form a descending chain that must terminate. This is the key to the proof. The well-ordering property is a consequence of the fact that in characteristic zero, the Hilbert--Samuel function takes values in a well-ordered set.
 
-Hironaka introduced an algorithm that: 1. Measures the local complexity
-of the singularity using the \textbf{Hilbert--Samuel function}. 2.
-Chooses the center in the locus of maximal complexity. 3. Shows that the
-complexity strictly decreases after each blow-up.
+The lexicographic order on Hilbert--Samuel functions is a well-ordering: every non-empty set of Hilbert--Samuel functions has a minimal element. This property is what allows the algorithm to terminate. In positive characteristic, this well-ordering property fails, which is why the general case remains open.
 
-\subsection{4.3 Normal Crossings}\label{ch1970heisukehironaka:normal-crossings}
+\subsection*{The Blow-Up Construction}
 
-A divisor \(D\) on a smooth variety has \textbf{normal crossings} if
-each component is smooth and they intersect transversely.
+A \textbf{blow-up} is the fundamental geometric operation in the resolution algorithm. Given a smooth subvariety $Z \subset X$ of codimension $r$, the blow-up $\text{Bl}_Z(X)$ replaces $Z$ with the projective bundle $\mathbb{P}(N_{Z/X})$, where $N_{Z/X}$ is the normal bundle.
 
-Hironaka's resolution constructs the blow-up so that the exceptional
-divisor is a divisor with normal crossings.
+In local coordinates, if $Z$ is defined by $x_1 = \cdots = x_r = 0$, then $\text{Bl}_Z(\mathbb{A}^d)$ is the subvariety of $\mathbb{A}^d \times \mathbb{P}^{r-1}$ defined by the equations $x_i t_j = x_j t_i$ for $1 \leq i, j \leq r$, where $[t_1 : \cdots : t_r]$ are homogeneous coordinates on $\mathbb{P}^{r-1}$.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The exceptional divisor $E = \pi^{-1}(Z)$ is a $\mathbb{P}^{r-1}$-bundle over $Z$, and $\pi: E \to Z$ is smooth. The strict transform of a hypersurface $f = 0$ is obtained by removing the exceptional divisor from the total transform: if $f$ has multiplicity $m$ along $Z$, then $\pi^*f = \tilde{f} \cdot \mathcal{O}(-mE)$.
 
-\section{5. The Hilbert--Samuel
-Function}\label{ch1970heisukehironaka:the-hilbertsamuel-function}
+The key property is that the singularity of the strict transform is ``better'' than that of the original variety at generic points of the exceptional divisor. The algorithm must ensure this improvement persists after finitely many steps.
 
-\subsection{5.1 Definition}\label{ch1970heisukehironaka:definition}
+The blow-up along a smooth center preserves smoothness: if $X$ is smooth and $Z$ is a smooth subvariety, then $\text{Bl}_Z(X)$ is also smooth. This property is essential for the induction, as it ensures that the centers of subsequent blow-ups can always be chosen to be smooth.
 
-Let \((R, \mathfrak{m})\) be a local ring.
+\subsection*{The Coefficient Ideal}
 
-The \textbf{Hilbert--Samuel function} is
+The \textbf{coefficient ideal} $\mathcal{I}$ encodes the blow-up behavior. At each singular point, a coherent ideal sheaf is constructed from the local equations using \textbf{Newton polyhedra} in $\mathbb{R}^d$.
 
+Given a polynomial $f = \sum a_\nu x^\nu$ in local coordinates centered at a point $p$, the Newton polyhedron $\text{NP}(f)$ is the convex hull in $\mathbb{R}^d_{\geq 0}$ of the set $\{\nu + \mathbb{R}^d_{\geq 0} : a_\nu \neq 0\}$. The Newton polyhedron encodes the singularity type and determines how the multiplicity changes under blow-up.
+
+The center $Z$ is the smallest smooth subvariety contained in the singular locus and the non-smooth locus of $\mathcal{I}$. After blowing up $Z$, the coefficient ideal of the strict transform is strictly smaller in the lexicographic order on Hilbert--Samuel functions.
+
+The coefficient ideal is constructed as follows. Let $f_1, \ldots, f_r$ generate the ideal of $X$ at a singular point $p$. After a linear change of coordinates, assume that $x_d$ is a \textbf{general coordinate}, meaning that the projection $\pi: X \to \mathbb{A}^{d-1}$ is finite at $p$. The \textbf{elimination ideal} $I_{\text{elim}} \subset k[x_1, \ldots, x_{d-1}]$ is obtained by eliminating $x_d$ from the ideal $(f_1, \ldots, f_r)$. The coefficient ideal is then the ideal generated by the coefficients of the elimination polynomial.
+
+The construction of the coefficient ideal is the key innovation that allows the induction to work. It reduces the problem of resolving a $d$-dimensional singularity to the problem of resolving a $(d-1)$-dimensional singularity.
+
+The coefficient ideal depends on the choice of the general coordinate, but the resolution algorithm is independent of this choice up to isomorphism. This independence is a consequence of the functoriality of the construction.
+
+\subsection*{Newton Polyhedra and Local Uniformization}
+
+The Newton polyhedron is a geometric tool from convex analysis. Given a polynomial $f = \sum a_\nu x^\nu$, the Newton polyhedron $\text{NP}(f)$ is the convex hull of the exponents $\nu$ for which $a_\nu \neq 0$, unioned with the positive orthant.
+
+The Newton polyhedron encodes the singularity type and determines how the multiplicity changes under blow-up. A face of the Newton polyhedron that intersects the diagonal $\nu_1 = \cdots = \nu_d = t$ determines the leading term of $f$ under a weighted blow-up.
+
+\textbf{Local uniformization} is the statement that for any singular point $p \in X$, there exists a local blow-up that reduces the multiplicity. Hironaka proved this using Newton polyhedra: if the Newton polyhedron has a compact face, then a weighted blow-up along the corresponding weight vector reduces the multiplicity.
+
+The Newton polyhedron is also used to define \textbf{Newton non-degenerate} singularities: a singularity is Newton non-degenerate if its leading terms on each compact face of the Newton polyhedron define a smooth variety in the torus $(k^*)^d$. For such singularities, the resolution can be read off directly from the Newton polyhedron.
+
+The study of Newton polyhedra has led to a rich theory of toric singularities and their resolutions. For a Newton non-degenerate singularity, the resolution can be achieved by a sequence of toric blow-ups, and the dual fan of the resolved variety can be read off from the Newton polyhedron.
+
+\subsection*{The Algorithm}
+
+The algorithm proceeds by choosing a center $Z$ in the locus of maximal complexity, measured lexicographically by $(H_X, e(X))$. Blowing up $Z$ produces a new variety with strictly smaller Hilbert--Samuel function at every exceptional point.
+
+The proof is by induction on dimension. For dimension 0, the statement is trivial. For dimension 1, normalization resolves singularities. For dimension $d$, the algorithm reduces to the case $d-1$ by projecting to a general hyperplane and using the coefficient ideal.
+
+The \textbf{inductive step} is as follows. Given a singularity of dimension $d$ at point $p$, choose a general coordinate $x_d$. The projection $\pi: X \to \mathbb{A}^{d-1}$ is finite at $p$, and the coefficient ideal $\mathcal{I}$ in $\mathbb{A}^{d-1}$ measures the complexity of the fibers. By induction, resolve $\mathcal{I}$ in $\mathbb{A}^{d-1}$ by a sequence of blow-ups. The pullback of this sequence to $X$ resolves the singularity at $p$, after possibly composing with additional blow-ups to handle the exceptional divisors.
+
+The \textbf{monomialization} step ensures that after each blow-up, the exceptional divisors and the strict transform of $X$ have normal crossings. This requires a careful analysis of the behavior of the coefficient ideal at the intersections of exceptional divisors.
+
+The algorithm terminates because the Hilbert--Samuel function is well-ordered: any descending sequence of Hilbert--Samuel functions stabilizes. In characteristic zero, the lexicographic order on the sequence of Hilbert--Samuel functions is a well-ordering, so the process must terminate.
+
+The normal crossings condition is maintained inductively: the exceptional divisor is assumed to have normal crossings at each stage, and the center is chosen compatible with this structure. This requires a careful analysis of the behavior of the coefficient ideal at the intersections of exceptional divisors.
+
+The proof of termination uses a transfinite induction argument. The Hilbert--Samuel function takes values in a well-ordered set, and at each step of the algorithm, the function strictly decreases. Since there are no infinite descending chains in a well-ordered set, the algorithm must terminate after finitely many steps.
+
+
+\subsection*{The Hilbert--Samuel Function and Blow-ups}
+
+Let $(R, \mathfrak{m})$ be a local ring of dimension $d$. The Hilbert--Samuel function is defined as:
 \[
-H_R(n) = \dim_k (\mathfrak{m}^n / \mathfrak{m}^{n+1})
+H_R(n) = \text{length}_R(\mathfrak{m}^n / \mathfrak{m}^{n+1}).
 \]
-
-for \(n \geq 0\).
-
-\subsection{5.2 Hironaka's Use}\label{ch1970heisukehironaka:hironakas-use}
-
-Hironaka used the Hilbert--Samuel function to measure the complexity of
-singularities.
-
-The function behaves well under blow-up: the maximal Hilbert--Samuel
-function decreases (or stays the same and the next invariant decreases).
-
-This provides the induction step.
-
-\subsection{5.3 The Polyhedron of
-Resolutions}\label{ch1970heisukehironaka:the-polyhedron-of-resolutions}
-
-Hironaka associates to each singular point a \textbf{Newton polyhedron}
-in \(\mathbb{R}^n\).
-
-The resolution is achieved by blowing up faces of this polyhedron.
-
-The \textbf{Hironaka polyhedron} encodes the combinatorial structure of
-the resolution.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. The Algorithm}\label{ch1970heisukehironaka:the-algorithm}
-
-\subsection{6.1 Step 1: Normalization}\label{ch1970heisukehironaka:step-1-normalization}
-
-Given a variety \(X\), first normalize it.
-
-Normalization removes non-normal singularities and prepares the variety
-for resolution.
-
-\subsection{6.2 Step 2: The Ideal Sheaf}\label{ch1970heisukehironaka:step-2-the-ideal-sheaf}
-
-Consider the ideal sheaf \(\mathcal{I}\) of the singular locus of \(X\).
-
-The goal is to make this ideal locally principal and then blow up its
-zero set.
-
-\subsection{6.3 Step 3: The Coefficient
-Ideal}\label{ch1970heisukehironaka:step-3-the-coefficient-ideal}
-
-The \textbf{coefficient ideal} encodes the behavior of the singularity
-under blow-up.
-
-Hironaka shows that blowing up the center where the coefficient ideal
-has maximal order decreases the complexity.
-
-\subsection{6.4 Step 4: Stratification}\label{ch1970heisukehironaka:step-4-stratification}
-
-The singular locus is stratified by the Hilbert--Samuel function.
-
-The center of the blow-up is chosen as the stratum with maximal function
-value.
-
-This ensures that the blow-up improves the local structure.
-
-\subsection{6.5 Step 5: Iteration}\label{ch1970heisukehironaka:step-5-iteration}
-
-The process is repeated finitely many times.
-
-Eventually all singularities are resolved.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{7. Resolution of Surfaces}\label{ch1970heisukehironaka:resolution-of-surfaces}
-
-\subsection{7.1 Zariski's Surface
-Resolution}\label{ch1970heisukehironaka:zariskis-surface-resolution}
-
-Zariski (1939) proved that any algebraic surface over a field of char. 0
-can be resolved by blow-ups.
-
-The method uses the normalization of the surface in a finite extension
-of its function field.
-
-\subsection{7.2 Hironaka's Surface
-Result}\label{ch1970heisukehironaka:hironakas-surface-result}
-
-Hironaka gave a new proof of surface resolution using his general
-method.
-
-The surface case is simpler than higher dimensions because the
-Hilbert--Samuel function at a surface point is determined by the
-multiplicity of the singular point.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Resolution in Analytic
-Geometry}\label{ch1970heisukehironaka:resolution-in-analytic-geometry}
-
-\subsection{8.1 Complex Analytic Spaces}\label{ch1970heisukehironaka:complex-analytic-spaces}
-
-Hironaka's theorem also applies to \textbf{complex analytic spaces}.
-
-Any reduced complex analytic space can be desingularized by blowing up
-smooth analytic subvarieties.
-
-\subsection{8.2 The Grauert--Hironaka
-Theorem}\label{ch1970heisukehironaka:the-grauerthironaka-theorem}
-
-Hironaka proved resolution of singularities for real analytic spaces as
-well, generalizing the complex case.
-
-This is the \textbf{Grauert--Hironaka theorem}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. The Hironaka
-Decomposition}\label{ch1970heisukehironaka:the-hironaka-decomposition}
-
-\subsection{9.1 Definition}\label{ch1970heisukehironaka:definition-1}
-
-Let \(R\) be a Cohen--Macaulay local ring.
-
-A \textbf{Hironaka decomposition} is a factorization
-
+For $n \gg 0$, this is a polynomial of degree $d-1$:
 \[
-R = k[x_1,\dots,x_n]
-\oplus \theta_1 \oplus \cdots \oplus \theta_t
+H_R(n) = \frac{e(R)}{(d-1)!}n^{d-1} + \text{lower order terms}.
 \]
+The coefficient $e(R)$ is the \textbf{multiplicity} of the local ring. For a smooth point, $e(R) = 1$; for a singular point, $e(R) \geq 2$.
 
-where the \(\theta_i\) are module generators.
+Under a blow-up along a smooth center $Z$ of codimension $r$, the Hilbert--Samuel function changes in a controlled way. If $p \in Z$ is a point on the center, and $q$ is a point on the exceptional divisor $E = \pi^{-1}(Z)$, then the Hilbert--Samuel function at $q$ on the strict transform is related to that at $p$ by a formula involving the multiplicity of $Z$.
 
-\subsection{9.2 Applications}\label{ch1970heisukehironaka:applications}
+The key property used in Hironaka's proof is that one can always find a center $Z$ such that blowing up $Z$ strictly decreases the Hilbert--Samuel function at every point of the exceptional divisor. This is achieved by choosing $Z$ to be the locus of maximal Hilbert--Samuel function.
 
-Hironaka decompositions are used in: - \textbf{Invariant theory}: the
-ring of invariants of a finite group has a Hironaka decomposition. -
-\textbf{Representation theory}: the structure of Cohen--Macaulay
-modules. - \textbf{Computational algebra}: algorithms for computing
-invariant rings.
+\subsection*{Weighted Blow-ups and Monomialization}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+A \textbf{weighted blow-up} is a generalization of the ordinary blow-up. Given weights $w_1, \ldots, w_d \in \mathbb{Z}_{>0}$, the weighted blow-up replaces the origin with a weighted projective space $\mathbb{P}(w_1, \ldots, w_d)$.
 
-\section{10. The Hironaka--Grothendieck
-Theorem}\label{ch1970heisukehironaka:the-hironakagrothendieck-theorem}
+Weighted blow-ups are useful for resolving singularities that are not monomial in the usual coordinates. A function $f$ is called \textbf{monomial} with respect to a weighted blow-up if its Newton polyhedron has a compact face orthogonal to the weight vector $(w_1, \ldots, w_d)$.
 
-\subsection{10.1 Statement}\label{ch1970heisukehironaka:statement-1}
+The \textbf{monomialization} theorem states that after a sequence of blow-ups, any ideal sheaf can be made monomial. This means that locally, the generators of the ideal can be written as monomials in suitable coordinates.
 
-The \textbf{Hironaka--Grothendieck theorem} states that for a coherent
-sheaf \(\mathcal{F}\) on a smooth projective variety \(X\), the
-cohomology groups \(H^i(X, \mathcal{F}(n))\) vanish for \(i > 0\) and
-\(n\) sufficiently large.
+Monomialization is a key step in many resolution algorithms. Once an ideal is monomial, the resolution can be achieved by a sequence of toric blow-ups, which are explicitly computable.
 
-This is a consequence of resolution of singularities and the
-\textbf{Leray spectral sequence}.
+\subsection*{The Role of Characteristic Zero}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The proof of resolution of singularities relies crucially on the hypothesis that the base field has characteristic zero. The key step where characteristic zero is used is in the proof that the Hilbert--Samuel function strictly decreases under the chosen blow-ups.
 
-\section{11. Toroidal Embeddings}\label{ch1970heisukehironaka:toroidal-embeddings}
+In characteristic zero, the Hilbert--Samuel function satisfies a property called \textbf{equicharacteristic descent}: after a suitable blow-up, the Hilbert--Samuel function at every point of the exceptional divisor is strictly smaller than at the corresponding point on the original variety.
 
-\subsection{11.1 Definition}\label{ch1970heisukehironaka:definition-2}
+This property fails in positive characteristic. There exist examples of singularities in characteristic $p > 0$ where the Hilbert--Samuel function increases after any blow-up. This is related to the phenomenon of wild ramification in inseparable field extensions.
 
-A \textbf{toroidal embedding} is a pair \((X, D)\) where \(X\) is a
-normal variety and \(D\) is a divisor with normal crossings, such that
-for each point, the local structure resembles a toric variety.
+Despite this difficulty, significant progress has been made in positive characteristic. Abhyankar's proof for surfaces uses a different invariant (the multiplicity sequence) that behaves better in positive characteristic. The Cossart--Piltant result for threefolds extends this approach using a sophisticated analysis of the local structure of singularities.
 
-\subsection{11.2 Hironaka's Contribution}\label{ch1970heisukehironaka:hironakas-contribution}
 
-Hironaka's resolution method applies to toroidal embeddings: the blow-up
-centers are chosen to be the irreducible components of the intersection
-of the toroidal strata.
+\section{Impact of This Discovery}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+Resolution of singularities in characteristic zero is a central theorem with applications to the minimal model program (Mori, Kawamata), where it reduces questions about singular varieties to smooth models. In particular, the \textbf{Kawamata base point free theorem} uses resolution to construct movable linear systems on singular varieties.
 
-\section{12. Invariants of
-Singularities}\label{ch1970heisukehironaka:invariants-of-singularities}
+In Hodge theory, it is used to define mixed Hodge structures via Deligne's theorem. The cohomology of a singular variety carries a mixed Hodge structure, and resolution allows one to express it in terms of the cohomology of smooth varieties. This has applications to the study of periods, variations of Hodge structure, and the Hodge conjecture.
 
-\subsection{12.1 The Multiplicity}\label{ch1970heisukehironaka:the-multiplicity}
+The ramification formula for divisors requires resolution to define discrepancies. Given a birational morphism $f: Y \to X$ between smooth varieties, the relative canonical divisor is $K_{Y/X} = K_Y - f^* K_X = \sum a_i E_i$, where $E_i$ are the exceptional divisors and $a_i$ are the discrepancies. Resolution allows one to compute these discrepancies for arbitrary birational maps.
 
-The \textbf{multiplicity} \(e(X,x)\) of a singularity is the leading
-coefficient of the Hilbert--Samuel function.
+The theorem also applies to complex analytic spaces (the Grauert--Hironaka theorem). The same proof works for analytic spaces, replacing algebraic blow-ups with analytic blow-ups. This has applications to the study of germs of analytic spaces and the local theory of singularities.
 
-It decreases under blow-up.
+In the theory of d-modules, resolution of singularities is used to define the nearby cycles functor and the vanishing cycles functor. The Riemann--Hilbert correspondence identifies regular holonomic d-modules with perverse sheaves, and resolution is used to construct the correspondence explicitly.
 
-\subsection{12.2 The Samuel Function}\label{ch1970heisukehironaka:the-samuel-function}
+In algebraic statistics, resolution of singularities is used to study the geometry of statistical models defined by polynomial equations. The likelihood equation of a Gaussian graphical model defines an algebraic variety, and resolution provides insight into the geometry of the model.
 
-The \textbf{Samuel function} is the Hilbert function of the associated
-graded ring.
+The method of proof---tracking singularity complexity through a sequence of explicit geometric operations---has become a paradigm in algebraic geometry. The idea of using invariants like the Hilbert--Samuel function and coefficient ideals to measure and reduce complexity has influenced work on related problems, including the weak factorization theorem and the minimal model program.
 
-Hironaka proved that the Samuel function behaves well under blow-up: it
-drops in the lexicographic order.
+The resolution theorem has profound applications to birational geometry. The \textbf{Hironaka example} of a non-K\"ahler complex manifold that is bimeromorphic to a projective variety shows that the resolution theorem is sensitive to the base field: it holds in characteristic zero but fails in general for analytic spaces over $\mathbb{C}$.
 
-\subsection{12.3 The Nash Blow-Up}\label{ch1970heisukehironaka:the-nash-blow-up}
+The theorem is also used in the study of moduli spaces. The moduli space of curves $\mathcal{M}_g$ is a smooth orbifold of dimension $3g-3$, and resolution is used to construct compactifications such as the Deligne--Mumford compactification $\overline{\mathcal{M}}_g$.
 
-Hironaka also studied the \textbf{Nash blow-up}: given a variety \(X\),
-the Nash blow-up is the closure of the Gauss map from the smooth locus
-to the Grassmannian.
+The \textbf{intersection theory} on singular varieties relies heavily on resolution of singularities. The Chern classes of coherent sheaves on singular varieties can be defined using resolutions, and the resulting intersection numbers are independent of the choice of resolution.
 
-It provides an alternative approach to resolution.
+The \textbf{birational geometry} of singular varieties has been developed using resolution techniques. The minimal model program, initiated by Mori, uses resolution to study the classification of algebraic varieties up to birational equivalence.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\section{Modern Views and Improvements}
 
-\section{13. Impact and Influence}\label{ch1970heisukehironaka:impact-and-influence}
+Resolution in \textbf{positive characteristic} remains open. Abhyankar (1966) proved it for surfaces; Cossart--Piltant (2009) completed three dimensions. The general case is a major open problem, closely related to the minimal model program in positive characteristic, which has been developed by Hacon--Xu and others.
 
-\subsection{13.1 Resolution in Positive
-Characteristic}\label{ch1970heisukehironaka:resolution-in-positive-characteristic}
+The difficulty is that the Hilbert--Samuel function can increase under blow-up in positive characteristic, breaking the complexity argument. This is due to the presence of \textbf{wild ramification}: in characteristic $p > 0$, the ramification groups of a local extension can be non-trivial at all levels, whereas in characteristic zero they vanish after the first upper numbering group.
 
-Resolution of singularities in positive characteristic remains an open
-problem.
+Algorithmic resolution (Bierstone--Milman, Villamayor, W\l{}odarczyk) makes the proof constructive, implemented in Macaulay2 and Singular. These algorithms compute the sequence of blow-ups explicitly and have practical applications in computational algebraic geometry, including the study of singularities of plane curves and threefolds.
 
-Hironaka's method fails because the Hilbert--Samuel function does not
-behave well under blow-up.
+The \textbf{desingularization algorithm} of Bierstone and Milman (1996) uses the Hilbert--Samuel function and the notion of \textbf{permissible blow-ups} to construct a resolution. A blow-up is permissible if its center is smooth and contained in the locus of maximal Hilbert--Samuel function. The algorithm proceeds by induction on dimension, using the same coefficient ideal technique as Hironaka's original proof.
 
-Abhyankar (1966) proved resolution for surfaces in positive
-characteristic.
+De Jong's \textbf{alterations} provide substitutes in mixed characteristic. De Jong (1994) proved that every variety over a field of characteristic $p$ admits an alteration from a smooth variety: there exists a proper surjective generically finite morphism $Y \to X$ with $Y$ smooth. While not a resolution (the morphism need not be birational), alterations have many of the same applications.
 
-Recent progress in char. \(p\) uses alterations (de Jong) and
-perfectoids (Abramovich--Temkin).
+The \textbf{weak factorization theorem} (W\l{}odarczyk, Abramovich--Karplus--Villamayor) states that any birational map between smooth varieties can be decomposed into blow-ups and blow-downs with smooth centers. This factorization theorem, which depends on resolution of singularities, has applications to the study of birational geometry and the minimal model program.
 
-\subsection{13.2 Connections to Other
-Fields}\label{ch1970heisukehironaka:connections-to-other-fields}
+The \textbf{Cossart--Piltant} result in dimension 3 (2009) resolved singularities of threefolds in positive characteristic, a landmark achievement. The proof is highly technical and extends Hironaka's methods while dealing with the new difficulties of positive characteristic, including wild ramification and non-reduced fibers. Their work uses the theory of \textbf{reduction to characteristic $p$} and \textbf{log-resolution} to handle the complications.
 
-\begin{itemize}
-\tightlist
-\item
- \textbf{Birational geometry}: the minimal model program (Mori,
- Kawamata).
-\item
- \textbf{Log geometry}: the theory of log canonical pairs.
-\item
- \textbf{Hodge theory}: resolution is used to define mixed Hodge
- structures (Deligne).
-\item
- \textbf{Computational algebra}: algorithms for resolution
- (Bierstone--Milman, Villamayor, Wlodarczyk).
-\item
- \textbf{Arithmetic geometry}: resolution in mixed characteristic.
-\end{itemize}
+\textbf{Resolution for surfaces in characteristic $p$} was proved by Abhyankar (1966) using the theory of \textbf{multiplicity sequences}. For a surface singularity, the multiplicity sequence is a finite sequence of integers obtained by iteratively blowing up the singular point. Abhyankar showed that this sequence always terminates, giving a resolution.
 
-\subsection{13.3 The Algorithmic Era}\label{ch1970heisukehironaka:the-algorithmic-era}
+\textbf{Resolution for curve singularities} in arbitrary characteristic is classical: the normalization of a curve is smooth. For plane curve singularities, the resolution can be read off from the \textbf{Puiseux expansion} of the defining equation.
 
-Bierstone and Milman (1997) gave an explicit algorithmic version of
-Hironaka's resolution.
+The \textbf{real case} was studied by Hironaka and others. Hironaka proved resolution for real algebraic varieties using a combination of blow-ups and the theory of \textbf{semianalytic sets}. The real case is more subtle because the singular locus can have non-isolated points.
 
-Their algorithm has been implemented in computer algebra systems
-(Macaulay2, Singular).
+\textbf{Formal resolution} addresses the case of complete local rings. Given a complete local ring $(R, \mathfrak{m})$ over a field of characteristic zero, there exists a formal blow-up sequence that resolves the singularity. This is useful for studying the local geometry of singularities.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\textbf{Effective bounds} on the number of blow-ups required for resolution have been studied by various authors. For a surface singularity of multiplicity $m$, the number of blow-ups is bounded by a function of $m$ and the dimension. In dimension 3, the best known bounds are doubly exponential in the dimension.
 
-\section{14. Awards and Recognition}\label{ch1970heisukehironaka:awards-and-recognition}
+The \textbf{toric case} is particularly well-understood. For a toric variety, resolution can be achieved by a sequence of blow-ups along torus-invariant subvarieties. The fan of the resolved variety is obtained by subdividing the original fan into smooth cones. This provides a combinatorial model for the general resolution process.
 
-\textbf{1970:} - Fields Medal (IMU).
+The study of \textbf{resolution of singularities for schemes} over arbitrary bases has led to the development of \textbf{log-resolution}, which allows the exceptional divisor to have normal crossings but permits the resolved variety to be singular along the singular locus of the base.
 
-\textbf{1974:} - Member, Japan Academy.
+\textbf{Hironaka's example} of a non-K\"ahler complex manifold that is bimeromorphic to a projective variety demonstrates the subtlety of the resolution problem in the analytic category. The example shows that while resolution holds for algebraic varieties over characteristic zero fields, it can fail for complex analytic spaces.
 
-\textbf{1975:} - Honorary Doctorate, Kyoto University.
+The \textbf{real analytic case} of resolution has also been studied. Hironaka proved that real analytic varieties can be resolved by a sequence of blow-ups with smooth centers, using techniques from semianalytic geometry.
 
-\textbf{1976:} - Foreign Associate, National Academy of Sciences (USA).
+The \textbf{birational geometry} of singular varieties has been developed using resolution techniques. The minimal model program, initiated by Mori, uses resolution to study the classification of algebraic varieties up to birational equivalence.
 
-\textbf{1982:} - Honorary Doctorate, Harvard University.
+The interplay between the Hilbert--Samuel function and the geometry of singularities has led to a deeper understanding of the local structure of algebraic varieties. The coefficient ideal construction, which reduces high-dimensional problems to lower-dimensional ones, has become a prototype for inductive methods in algebraic geometry.
 
-\textbf{1986:} - Japanese Order of Culture (Bunka Kōrōsha).
+Resolution of singularities continues to be a fertile area of research, with connections to number theory, representation theory, and mathematical physics. The techniques developed by Hironaka and his successors have opened new avenues for understanding the geometry of algebraic varieties and their moduli spaces.
 
-\textbf{1998:} - Honorary Doctorate, University of Tokyo.
 
-\textbf{2006:} - Honorary Doctorate, University of Strasbourg.
+\subsection*{Singularities and Their Classification}
 
-\textbf{Elected to:} - National Academy of Sciences (USA). - American
-Academy of Arts and Sciences. - Japan Academy. - French Academy of
-Sciences. - Royal Society of London.
+A fundamental question in singularity theory is the classification of singularities up to various equivalences. Two singularities are \textbf{analytically equivalent} if they become identical after analytic coordinate changes. They are \textbf{topologically equivalent} if there exists a homeomorphism of the ambient space that maps one to the other.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+For hypersurface singularities, the \textbf{Milnor number} $\mu$ is a fundamental invariant. For an isolated hypersurface singularity $f = 0$ at the origin in $\mathbb{C}^n$, the Milnor number is defined as:
+\[
+\mu = \dim_{\mathbb{C}} \mathbb{C}\{x_1, \ldots, x_n\} / (\partial f/\partial x_1, \ldots, \partial f/\partial x_n).
+\]
+Milnor proved that the Milnor number equals the rank of the middle homology of the \textbf{Milnor fiber}, the smooth fiber of a perturbation of $f$.
 
-\section{15. Selected Major
-Publications}\label{ch1970heisukehironaka:selected-major-publications}
+\subsection*{Resolution and Topology}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Resolution of singularities of an algebraic variety over a
- field of characteristic zero.''} \emph{Annals of Mathematics} 79,
- 109--326, 1964. --- \emph{The foundational 218-page paper containing
- the complete proof of resolution.}
-\item
- \textbf{``On the arithmetic of singularities.''} \emph{Journal of
- Mathematics of Kyoto University} 10, 293--324, 1970. --- \emph{The
- theory of the Hilbert--Samuel function in resolution.}
-\item
- \textbf{``Normal cones in analytic Whitney stratification.''}
- \emph{Publications Mathématiques de l'IHÉS} 36, 127--138, 1969. ---
- \emph{Whitney stratifications and normal cones.}
-\item
- \textbf{``Desingularization of complex-analytic varieties.''}
- \emph{Actes du Congrès International des Mathématiciens} 1, 307--313,
- 1970. --- \emph{The analytic case.}
-\item
- \textbf{``Introduction to resolutions of singularities.''} In
- \emph{Arithmetic and Geometry}, Birkhäuser, 1983. --- \emph{An
- expository account of the method.}
-\item
- \textbf{``Bimeromorphic geometry of complex analytic spaces.''}
- \emph{Publications Mathématiques de l'IHÉS} 38, 97--143, 1970. ---
- \emph{Bimeromorphic geometry and resolution.}
-\item
- \textbf{``The resolution of singularities in characteristic zero.''}
- In \emph{Proceedings of the ICM}, 1970. --- \emph{The Fields Medal
- address.}
-\item
- \textbf{``Hironaka's polyhedron of resolutions.''} (with S. Ishii)
- \emph{Journal of Algebraic Geometry} 5, 1--30, 1996. ---
- \emph{Combinatorial aspects of resolution.}
-\item
- \textbf{``The decomposition of singularities.''} \emph{American
- Journal of Mathematics} 99, 805--827, 1977. --- \emph{Hironaka
- decomposition and toroidal geometry.}
-\item
- \textbf{``Selected Papers of Heisuke Hironaka.''} World Scientific,
- 2011. --- \emph{A collected volume of his major works.}
-\end{enumerate}
+Resolution of singularities has deep connections to the topology of algebraic varieties. For a singular variety $X$, a resolution $\pi: \tilde{X} \to X$ allows one to compute the cohomology of $X$ in terms of the cohomology of $\tilde{X}$ and the exceptional divisors.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The \textbf{Lefschetz hyperplane theorem} relates the topology of a projective variety to that of its hyperplane sections. Resolution of singularities is used to extend this theorem to singular varieties.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection*{Applications to Arithmetic Geometry}
 
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
+Resolution of singularities has applications to arithmetic geometry, particularly in the study of varieties over number fields and finite fields.
 
-\begin{exercise} Perform a blow-up of the singularity $y^2 - x^3 = 0$ at the origin and show it resolves the singularity. \end{exercise}
+The \textbf{Langlands program} uses resolution techniques in the study of automorphic forms and Galois representations. The theory of \textbf{local models} in the study of Shimura varieties uses resolution to understand the singularities of integral models.
 
-\begin{exercise} Compute the exceptional divisor of a blow-up of $\\mathbb{A}^2$ at a point. \end{exercise}
+The \textbf{Grothendieck--Ogg--Shafarevich formula} for the Euler characteristic of a sheaf on a curve uses resolution to handle singular fibers.
 
-\begin{exercise} Show that the singularity $x^2 + y^3 + z^5 = 0$ in $\\mathbb{A}^3$ is isolated and compute its multiplicity. \end{exercise}
-
-\begin{exercise} Verify that a smooth variety over a field of characteristic zero has no singular points in any chart of an ambient projective space. \end{exercise}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Hironaka proved that every algebraic variety over a field of characteristic zero can be resolved to a smooth variety by a finite sequence of blow-ups along smooth centers. This landmark result settled a fundamental problem in algebraic geometry and introduced new techniques that continue to influence the field.
+Hironaka proved that every algebraic variety over a field of characteristic zero can be resolved to a smooth variety by a finite sequence of blow-ups along smooth centers, using the Hilbert--Samuel function as a complexity measure. The proof introduced the coefficient ideal and Newton polyhedron techniques, which have become fundamental tools in singularity theory. The result settled a fundamental problem in algebraic geometry and has far-reaching applications in birational geometry, Hodge theory, d-modules, and mathematical physics.
 
-\section{16. References and Further
-Reading}\label{ch1970heisukehironaka:references-and-further-reading}
+The resolution theorem has inspired extensive research in both characteristic zero and positive characteristic. While the characteristic zero case is now classical, the general positive characteristic case remains open, with progress made in dimensions 2 and 3. Algorithmic approaches and weak factorization theorems have extended the reach of Hironaka's methods, and the coefficient ideal technique continues to influence modern work in birational geometry and the minimal model program.
 
-\subsection{Official Sources}\label{ch1970heisukehironaka:official-sources}
+The interplay between the Hilbert--Samuel function and the geometry of singularities has led to a deeper understanding of the local structure of algebraic varieties. The coefficient ideal construction, which reduces high-dimensional problems to lower-dimensional ones, has become a prototype for inductive methods in algebraic geometry.
+
+Resolution of singularities continues to be a fertile area of research, with connections to number theory, representation theory, and mathematical physics. The techniques developed by Hironaka and his successors have opened new avenues for understanding the geometry of algebraic varieties and their moduli spaces.
+
+\subsection*{Resolution of Surface Singularities}
+
+Surface singularities have been extensively studied. A \textbf{rational singularity} is a surface singularity for which the resolution has exceptional divisor with $H^1(\tilde{X}, \mathcal{O}_{\tilde{X}}) = 0$. Rational singularities were classified by Artin using intersection matrices.
+
+An \textbf{ADE singularity} (also called a Du Val singularity) is a surface singularity whose resolution has exceptional divisor consisting of a configuration of rational curves with intersection matrix given by an ADE Dynkin diagram. These singularities are classified by the simple Lie algebras of type A, D, E.
+
+The \textbf{Klein singularities} are the quotient singularities $\mathbb{A}^2 / G$ where $G$ is a finite subgroup of $SL_2(\mathbb{C})$. There are three families: cyclic quotients (type A), binary dihedral groups (type D), and the three exceptional groups corresponding to the Platonic solids (types E$_6$, E$_7$, E$_8$).
+
+\subsection*{Links of Singularities}
+
+For an isolated surface singularity, the \textbf{link} is the intersection of the singular variety with a small sphere around the singular point. The link is a 3-manifold, and its topology encodes important information about the singularity.
+
+The \textbf{Milnor fiber} of an isolated hypersurface singularity is a smooth manifold with boundary equal to the link. Its topology is measured by the Milnor number. For a plane curve singularity, the link is a knot or link in $S^3$.
+
+The \textbf{Seifert surface} of a knot link provides a way to study the topology of plane curve singularities. The Alexander polynomial of the link is an important invariant.
+
+\subsection*{Resolution and the Canonical Divisor}
+
+The behavior of the canonical divisor under resolution is fundamental. For a resolution $\pi: \tilde{X} \to X$ of a normal surface singularity, the canonical divisor satisfies:
+\[
+K_{\tilde{X}} = \pi^* K_X + \sum a_i E_i
+\]
+where $E_i$ are the exceptional divisors and $a_i$ are rational numbers called \textbf{discrepancies}.
+
+A singularity is called \textbf{canonical} if all discrepancies $a_i \geq 0$, and \textbf{log canonical} if all $a_i \geq -1$. These notions generalize to higher dimensions and are fundamental in the minimal model program.
+
+\subsection*{The Minimal Resolution of Surface Singularities}
+
+For a normal surface singularity, there exists a unique \textbf{minimal resolution}---a resolution such that no exceptional curve can be blown down while preserving smoothness. The minimal resolution is characterized by the property that the exceptional divisor has no $(-1)$-curves.
+
+The minimal resolution can be computed using the intersection matrix of the exceptional divisor. The matrix must be negative definite, and its determinant is related to the multiplicity of the singularity.
+
+\subsection*{Resolution Algorithms}
+
+Several explicit resolution algorithms have been developed. The \textbf{Bierstone--Milman algorithm} is one of the most widely used. It proceeds by induction on dimension, using the Hilbert--Samuel function to choose centers.
+
+The \textbf{Villamayor algorithm} provides another constructive approach. It uses the notion of \textbf{permissible centers} and ensures that each blow-up improves the singularity.
+
+For computational purposes, these algorithms have been implemented in computer algebra systems. The \textbf{Macaulay2} package for resolution provides tools for explicit computations.
+
+\subsection*{Open Problems}
+
+Several important problems remain open:
 
 \begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1970:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1970
-\item
- Japan Academy biographical notice.
+\item Resolution in characteristic $p > 0$ for dimensions $\geq 4$.
+\item Effective bounds on the number of blow-ups.
+\item Resolution for stacks and orbifolds.
+\item The real analytic case in full generality.
 \end{itemize}
 
-\subsection{Key Technical References}\label{ch1970heisukehironaka:key-technical-references}
+The \textbf{Hironaka conjecture} remains one of the most important open problems in algebraic geometry.
 
-\begin{itemize}
-\tightlist
-\item
- Hironaka, H. ``Resolution of singularities.'' \emph{Annals of
- Mathematics} 79, 1964.
-\item
- Hironaka, H. \emph{Selected Papers}. World Scientific, 2011.
-\end{itemize}
+\subsection*{Recent Work}
 
-\subsection{Textbooks and Surveys}\label{ch1970heisukehironaka:textbooks-and-surveys}
+Recent work has focused on several directions:
 
-\begin{itemize}
-\tightlist
-\item
- Kollár, J. \emph{Lectures on Resolution of Singularities}. Princeton,
- 2007.
-\item
- Greuel, G.-M. and Pfister, G. \emph{A Singular Introduction to
- Commutative Algebra}. Springer, 2002.
-\item
- Hauser, H. ``Seventeen Obstacles for Resolution of Singularities.''
- \emph{Bulletin AMS} 40, 2003.
-\end{itemize}
+\textbf{Tropical geometry:} Tropical methods provide combinatorial approaches to resolution. The tropicalization of a variety encodes information about its singularities.
 
-\subsection{Exposition and History}\label{ch1970heisukehironaka:exposition-and-history}
+\textbf{Model theory:} Logical methods have been applied to resolution problems. The elimination of quantifiers in certain theories has implications for resolution algorithms.
 
-\begin{itemize}
-\tightlist
-\item
- Grothendieck, A. ``Hironaka's Theorem.'' SGA 2, 1962.
-\item
- Mumford, D. \emph{The Red Book of Varieties and Schemes}. Springer,
- 1988.
-\item
- Zariski, O. \emph{Algebraic Surfaces}. Springer, 1935.
-\item
- Lipman, J. ``Introduction to Resolution of Singularities.''
- \emph{Proceedings of Symposia in Pure Math.} 40,
-\end{itemize}
+\textbf{Homotopy theory:} Homotopical methods provide new perspectives on the structure of singularities and their resolutions.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1982}
-\tightlist
-\item
-\end{enumerate}
+The study of resolution of singularities continues to be a vibrant area of research, with connections to many areas of mathematics and physics.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+Hironaka proved that every algebraic variety over a field of characteristic zero can be resolved to a smooth variety by a finite sequence of blow-ups along smooth centers, using the Hilbert--Samuel function as a complexity measure. The proof introduced the coefficient ideal and Newton polyhedron techniques, which have become fundamental tools in singularity theory. The result settled a fundamental problem in algebraic geometry and has far-reaching applications in birational geometry, Hodge theory, d-modules, and mathematical physics.
 
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
+The resolution theorem has inspired extensive research in both characteristic zero and positive characteristic. While the characteristic zero case is now classical, the general positive characteristic case remains open, with progress made in dimensions 2 and 3. Algorithmic approaches and weak factorization theorems have extended the reach of Hironaka's methods, and the coefficient ideal technique continues to influence modern work in birational geometry and the minimal model program.
 
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1966alexandergrothendieck:alexander-grothendieck-fields-medal-1966-a-comprehensive-report]{See Chapter on related work}} --- Hironaka's work on resolution relates to Grothendieck.
-  \item \textbf{\hyperref[ch1974davidbryantmumford:david-bryant-mumford-fields-medal-1974-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Mumford's work on singularities relates.
-\end{itemize}
+The interplay between the Hilbert--Samuel function and the geometry of singularities has led to a deeper understanding of the local structure of algebraic varieties. The coefficient ideal construction, which reduces high-dimensional problems to lower-dimensional ones, has become a prototype for inductive methods in algebraic geometry.
 
-\emph{(End of report)}
+Resolution of singularities continues to be a fertile area of research, with connections to number theory, representation theory, and mathematical physics. The techniques developed by Hironaka and his successors have opened new avenues for understanding the geometry of algebraic varieties and their moduli spaces.

@@ -1,601 +1,358 @@
-\chapter{Alan Baker --- Fields Medal 1970}\label{ch1970alanbaker:alan-baker-fields-medal-1970-a-comprehensive-report}
+\chapter{1970:Alan Baker}\label{ch1970alanbaker:alan-baker-fields-medal-1970-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Alan Baker \textbf{Born:}
-August 19, 1939, London, England \textbf{Died:} February 4, 2018
-\textbf{Position:} Professor, University of Cambridge \textbf{Doctoral
-Advisor:} Harold Davenport (University of Cambridge)
-
-\textbf{Fields Medal Citation:} \emph{``For his work on transcendental
-number theory, in particular for his method of linear forms in
-logarithms of algebraic numbers, which has revolutionized that field and
-led to decisive advances in several classical problems of Diophantine
-geometry.''}
+\textbf{Prepared:} July 2026
+\textbf{Subject:} Alan Baker (b. August 19, 1939, London, England; d.~February 4, 2018, Cambridge, England)
+\textbf{Position:} Professor, University of Cambridge
+\textbf{Doctoral Advisor:} Harold Davenport (University of Cambridge)
+\textbf{Fields Medal Citation:} \emph{``For his work on transcendental number theory, in particular for his method of linear forms in logarithms of algebraic numbers, which has revolutionized that field and led to decisive advances in several classical problems of Diophantine geometry.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{1. Introduction}\label{ch1970alanbaker:introduction}
+\begin{prereqs}
+Elementary number theory (congruences, primitive roots, quadratic reciprocity), basic abstract algebra (field extensions, algebraic numbers, Galois theory), complex analysis (maximum modulus principle, residue theorem), Diophantine approximation, basics of algebraic number theory (heights, norms, Dedekind domains).
+\end{prereqs}
 
-Alan Baker was awarded the Fields Medal in 1970 for his substantial
-contributions to number theory.
+\begin{objectives}
+State Baker's theorem with effective lower bounds on linear forms in logarithms; apply the theorem to solve classical Diophantine equations effectively; understand the role of auxiliary functions, the pigeonhole principle, and Pad\'e approximation in transcendence proofs; explain the connection between Baker's method and Siegel's zeta function; describe modern developments in transcendence theory.
+\end{objectives}
 
-\begin{prereqs} Elementary number theory, basic abstract algebra (field extensions, algebraic numbers), complex analysis. \end{prereqs}
+\section{Problem History}
 
-\begin{objectives} State Baker's theorem on linear forms in logarithms; explain its applications to Diophantine equations; describe the effective bounds it provides. \end{objectives}
+The theory of transcendental numbers---numbers not roots of any polynomial with integer coefficients---was placed on firm footing by Liouville in 1844.
 
+He proved that algebraic irrationals of degree $d$ cannot be approximated by rationals to within $O(q^{-d})$, and constructed specific transcendental numbers such as $\sum_{n=1}^{\infty} 10^{-n!}$.
 
-His \textbf{theory of linear forms in logarithms} provided a powerful
-new tool for solving Diophantine equations, leading to effective bounds
-for solutions to many classical problems.
+However, Liouville's method was too weak to handle ``naturally occurring'' constants such as $e$, $\pi$, or values of the Riemann zeta function. It would be decades before the Thue--Siegel--Roth theorem improved the approximation exponent to $2 + \varepsilon$, but even this breakthrough was ineffective: it proved finiteness without providing explicit bounds.
 
-Baker's method transformed transcendental number theory from a subject
-of existence proofs into a domain of explicit effective computation.
+Hilbert's seventh problem (1900) asked whether $\alpha^\beta$ is transcendental for algebraic $\alpha \neq 0, 1$ and algebraic irrational $\beta$. This was solved independently by Gelfond and Schneider in 1934, using auxiliary functions. Their theorem showed that $2^{\sqrt{2}}$ and $e^\pi = (-1)^{-i}$ are transcendental. Gelfond's independent solution and Schneider's both relied on Siegel's method of auxiliary functions, which had been developed in the context of the Hilbert--Siegel irreducibility theorem.
 
-His results include: - Effective bounds for linear forms in logarithms.
-- The effective solution of Thue's equation. - The effective solution of
-the Mordell equation. - The effective solution of hyperelliptic
-equations. - Results on Catalan's equation. - Results on the class
-number of imaginary quadratic fields. - Transcendence of values of
-\(L\)-functions.
+The Gelfond--Schneider theorem can be proved using the following approach. Suppose $\alpha^\beta$ is algebraic. Then there exists an integer polynomial relation among the powers of $\alpha^\beta$. Gelfond constructed an auxiliary function of the form
+\[
+F(z_1, z_2) = \sum_{i=0}^s \sum_{j=0}^s c_{ij} e^{i z_1 + j z_2}
+\]
+with carefully chosen coefficients. The key insight is that this function vanishes at many points of the form $(m \log \alpha, n \log \alpha)$ for integers $m, n$, and the vanishing conditions form a system of linear equations in the coefficients $c_{ij}$. Siegel's lemma provides a nonzero solution, and then one shows that $F$ must vanish identically, leading to a contradiction.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The Gelfond--Schneider theorem states:
 
-\section{2. Biographical Background}\label{ch1970alanbaker:biographical-background}
+\begin{theorem}[Gelfond--Schneider, 1934]
+If $\alpha$ and $\beta$ are algebraic numbers with $\alpha \neq 0, 1$ and $\beta$ irrational, then $\alpha^\beta$ is transcendental.
+\end{theorem}
 
-\subsection{2.1 Early Life and
-Education}\label{ch1970alanbaker:early-life-and-education}
+The method used an auxiliary polynomial $P(z_1, \ldots, z_n)$ that vanishes to high order at points of the form $(\beta_1 \log \alpha_1, \ldots, \beta_n \log \alpha_n)$. However, this method was limited to linear forms in two logarithms and could not handle more general expressions. The central difficulty was the \textbf{effective lower bound problem}.
 
-Alan Baker was born on August 19, 1939, in London, England.
+For a nonzero linear form $\Lambda = \beta_1 \log \alpha_1 + \cdots + \beta_n \log \alpha_n$ in logarithms of algebraic numbers, one needs an explicit bound $|\Lambda| > B^{-C}$, where $B = \max(|\beta_1|, \ldots, |\beta_n|)$ and $C$ depends on the $\alpha_i$.
 
-He attended the University of Cambridge (Trinity College) as an
-undergraduate.
+Before Baker's work, no effective bounds were available for $n \geq 3$. The ineffective methods of Thue, Siegel, and Roth could prove existence of finitely many solutions but could not compute them. This gap between existence and computability was the key obstruction.
 
-He earned his Ph.D.~in 1964 under Harold Davenport, with a thesis on
-Diophantine approximation.
+The development of effective methods in Diophantine approximation can be traced through several key milestones. Thue (1909) proved that the equation $F(x,y) = m$ has finitely many solutions for an irreducible binary form $F$ of degree $d \geq 3$, but his method was ineffective. Siegel (1921) improved Thue's exponent from $d/2 + 1$ to any number greater than $2\sqrt{d} - 1$, but his proof was still ineffectiveness. The breakthrough came with Roth (1955), who proved the optimal exponent $2 + \varepsilon$, but his proof remained ineffective.
 
-\subsection{2.2 Academic Career}\label{ch1970alanbaker:academic-career}
+Davenport and Roth (1956) showed that Roth's theorem could be made effective with an explicit (though enormous) bound. This was the first step toward the effective methods that Baker would develop. Davenport also made fundamental contributions to the theory of Diophantine approximation through his work on the transference principle, which relates inhomogeneous and homogeneous approximation problems.
 
+Classical Diophantine equations provided strong motivation. Thue (1909) proved $F(x,y) = m$ has finitely many solutions for irreducible binary forms of degree $\geq 3$, but ineffectively. The class number problem---determining which imaginary quadratic fields $\mathbb{Q}(\sqrt{-d})$ have class number 1---was another driving question, with Heegner (1952) and Stark (1967) providing partial results that were not fully rigorous or effective.
+
+The connection to Siegel's zeta function arose naturally. Siegel (1946) introduced the function
+\[
+\zeta(s, \mathfrak{a}) = \sum_{\mathfrak{b} \subseteq \mathfrak{a}} \frac{1}{N(\mathfrak{b})^s},
+\]
+where the sum runs over integral ideals $\mathfrak{b}$ in the ideal class $\mathfrak{a}$ of a number field. This function plays a crucial role in the class number formula and in Baker's estimates. The values $\zeta(1, \mathfrak{a})$ are related to logarithms of units via the class number formula:
+\[
+h \cdot R = \frac{w \cdot 2^{r_1} (2\pi)^{r_2}}{\sqrt{|D|}} \cdot \zeta(1, \mathfrak{a}),
+\]
+where $h$ is the class number, $R$ is the regulator, $w$ is the number of roots of unity, $r_1$ and $r_2$ are the numbers of real and complex embeddings, $D$ is the discriminant, and the product is over ideal classes. Baker's insight was that lower bounds on linear forms in logarithms could be translated into effective bounds for these zeta values, and hence effective bounds for class numbers.
+
+Baker absorbed his doctoral advisor Davenport's taste for concrete problems and his mastery of analytic methods, which he would extend far beyond their original scope. Davenport had made fundamental contributions to the geometry of numbers and the study of Diophantine equations, particularly through the transference principle and the theory of inhomogeneous Diophantine approximation.
+
+The Gelfond--Schneider theorem can be viewed as a special case of Baker's theorem. Setting $\alpha_1 = \alpha$, $\alpha_2 = e$, $\beta_1 = \beta$, $\beta_2 = -\log \alpha$, we obtain $\beta_1 \log \alpha_1 + \beta_2 \log \alpha_2 = \beta \log \alpha - \log \alpha^\beta = \log(\alpha^\beta / \alpha^\beta) = 0$, which shows that if $\alpha^\beta$ were algebraic, then $\beta \log \alpha - \log(\alpha^\beta) = 0$ would be a nontrivial linear form in logarithms of algebraic numbers, contradicting Baker's theorem. The Gelfond--Schneider result thus follows as a corollary.
+
+\section{How Was It Solved}
+
+Baker's theorem (1966, expanded in his monograph \emph{Linear Forms in Logarithms}, 1975) is the crowning achievement of transcendental number theory. Let $\alpha_1, \ldots, \alpha_n$ be nonzero algebraic numbers with $\log \alpha_1, \ldots, \log \alpha_n$ linearly independent over $\mathbb{Q}$, and let $\beta_0, \beta_1, \ldots, \beta_n$ be algebraic numbers with $\beta_1, \ldots, \beta_n$ not all zero. Then
+\[
+\Lambda = \beta_0 + \beta_1 \log \alpha_1 + \cdots + \beta_n \log \alpha_n \neq 0
+\]
+and there exists an explicit constant $C$ depending on $n$, the heights of the $\alpha_i$ and $\beta_i$, and the modulus of the logarithms such that
+\[
+|\Lambda| > \exp(-C \cdot \log B),
+\]
+where $B = \max(|\beta_0|, |\beta_1|, \ldots, |\beta_n|)$.
+
+The proof constructs auxiliary functions $F(z) = \sum_{\lambda \in \Lambda_n} P(\lambda) \alpha_1^{\lambda_1} \cdots \alpha_n^{\lambda_n}$, where $P$ is a polynomial chosen so that $F$ vanishes to high order at the origin. Here $\Lambda_n$ is the set of exponent vectors $\lambda = (\lambda_1, \ldots, \lambda_n)$ with $0 \leq \lambda_i \leq S$ for a suitable parameter $S$.
+
+Siegel's lemma---a pigeonhole argument for systems of linear equations---guarantees a nonzero $P$ with integer coefficients of moderate height. Specifically, given a system of $M$ linear equations in $N$ unknowns with $N > M$, there exists a nonzero integer solution with height bounded by a function of the coefficients.
+
+If $\Lambda = 0$, then $F$ and all its derivatives would vanish to higher order than expected at multiple points, creating a contradiction. The maximum modulus principle provides upper bounds on $|F|$, while integrality provides lower bounds, and the interplay yields the effective estimate.
+
+The key innovation was working simultaneously with all $\binom{n+1}{2}$ pairs of logarithms. While the two-logarithm case was already known (Gelfond--Schneider), the simultaneous treatment required a delicate analysis of the auxiliary function's behavior at multiple points.
+
+Baker reduced the general case to the two-logarithm case by an intricate induction on $n$. The induction step uses the following idea: suppose the theorem holds for $n-1$ logarithms. Consider the linear form $\Lambda = \beta_0 + \beta_1 \log \alpha_1 + \cdots + \beta_n \log \alpha_n$. If $\Lambda \neq 0$, Baker constructs an auxiliary function that vanishes at points related to $\log \alpha_1, \ldots, \log \alpha_n$, and uses the induction hypothesis to derive a contradiction if $|\Lambda|$ is too small.
+
+The induction argument is technically delicate. One considers the $\binom{n+1}{2}$ linear forms
+\[
+\Lambda_{ij} = \beta_i \log \alpha_j - \beta_j \log \alpha_i
+\]
+for $0 \leq i < j \leq n$. These forms vanish precisely when the corresponding logarithms are $\mathbb{Q}$-proportional. The auxiliary function is constructed to vanish at all points $(m_1 \log \alpha_1 + \cdots + m_n \log \alpha_n)$ where the $m_i$ are integers with $|m_i| \leq S$ for a suitable parameter $S$.
+
+\subsection*{The Auxiliary Function Construction}
+
+Let $S$ be a large integer parameter. Consider the set of exponent vectors
+\[
+\mathcal{L} = \{(\lambda_1, \ldots, \lambda_n) : 0 \leq \lambda_i \leq S \text{ for all } i\}.
+\]
+The number of vectors in $\mathcal{L}$ is $(S+1)^n$. We seek a polynomial $P(z_1, \ldots, z_n)$ of degree at most $D$ in each variable, with integer coefficients, such that the auxiliary function
+\[
+F(z_1, \ldots, z_n) = \sum_{(\lambda_1, \ldots, \lambda_n) \in \mathcal{L}} P(\lambda_1, \ldots, \lambda_n) \alpha_1^{\lambda_1} \cdots \alpha_n^{\lambda_n}
+\]
+vanishes to high order at certain points.
+
+The vanishing conditions are expressed as a system of linear equations in the coefficients of $P$. By Siegel's lemma, if the number of unknowns exceeds the number of equations, a nonzero solution exists with controlled height.
+
+The crucial estimate comes from the fact that $F$ is an entire function (in several complex variables), and the maximum modulus principle gives
+\[
+|F(z)| \leq \max_{|z_i| = R} |F(z)|
+\]
+for any $R > 0$. By choosing $R$ appropriately and using the transcendence of the $\alpha_i$, one obtains an upper bound that contradicts the lower bound from integrality.
+
+\subsection*{Proof Sketch of Baker's Theorem}
+
+The proof proceeds in several stages:
+
+\textbf{Step 1.} Fix the algebraic numbers $\alpha_1, \ldots, \alpha_n$ and $\beta_0, \ldots, \beta_n$. Choose a large parameter $S$ and consider the lattice $\mathcal{L}$ of exponent vectors.
+
+\textbf{Step 2.} Construct the auxiliary function $F$ using Siegel's lemma. The number of coefficients of $P$ is $(D+1)^n$, and the number of vanishing conditions is approximately $nS^2/2$ (accounting for all partial derivatives up to a certain order). Siegel's lemma guarantees a nonzero solution with height $H(P) \leq C \cdot S^{n/2}$.
+
+\textbf{Step 3.} Show that $F$ vanishes to high order at the origin. This requires estimating the derivatives of $F$ using the properties of the exponential function.
+
+\textbf{Step 4.} Apply the identity theorem for several complex variables. If $F$ vanishes to sufficiently high order at the origin, then $F$ must be identically zero, which contradicts the construction.
+
+\textbf{Step 5.} Derive the lower bound $|\Lambda| > \exp(-C \cdot \log B)$ by combining the upper bound from the maximum modulus principle with the lower bound from integrality.
+
+The key technical tool is the \textbf{Pad\'e approximation method}, which provides explicit bounds on the remainder terms in the Taylor expansion of the logarithm function. This method was developed by Siegel and refined by Baker.
+
+For the Pad\'e approximation, one considers the rational function $R(x) = P(x)/Q(x)$ where $P$ and $Q$ are polynomials chosen so that $R(x) - \log(1+x)$ has a zero of high order at $x = 0$. The classical Pad\'e approximant to $\log(1+x)$ satisfies
+\[
+\log(1+x) = R(x) + O(x^{2N+1})
+\]
+as $x \to 0$, where $R(x)$ has numerator and denominator of degree $N$. This approximation is used to construct the auxiliary function with the required vanishing properties.
+
+\subsection*{The Geometry of Numbers Approach}
+
+A crucial ingredient in Baker's proof is the geometry of numbers, particularly Minkowski's theorem on convex bodies. Let $K \subset \mathbb{R}^n$ be a convex body symmetric about the origin with volume $\text{vol}(K) > 2^n \det(\Lambda)$, where $\Lambda$ is a lattice in $\mathbb{R}^n$. Then $K$ contains a nonzero lattice point.
+
+In the context of Baker's theorem, one considers the lattice of exponent vectors and applies Minkowski's theorem to find a nonzero integer solution to the vanishing conditions. The key estimate is that the height of the auxiliary polynomial $P$ satisfies
+\[
+H(P) \leq C(n, D) \cdot \max(A_1, \ldots, A_n)^{D^2/2},
+\]
+where $D$ is the degree of $P$ and $A_i$ are bounds on the heights of $\alpha_i$.
+
+The \textbf{determinant method}, introduced by Siegel and refined by Baker, provides a more refined analysis. One considers the determinant of a matrix formed by evaluating the auxiliary function and its derivatives at a set of points. The vanishing of this determinant implies linear dependence among the logarithms, which leads to the desired contradiction.
+
+\subsection*{Application to Thue Equations}
+
+For Thue equations $F(x,y) = m$, one writes $F(x,y) = a \prod_{i=1}^d (x - \theta_i y)$, where $\theta_1, \ldots, \theta_d$ are the roots of the binary form. Taking logarithms, if $(x,y)$ is a solution with $|y| \geq 2$, then $|x/y - \theta_i| < C|y|^{-d}$ for some root $\theta_i$, which implies
+\[
+|\Lambda| = |\log(x - \theta_i y) - \log y| < C'|y|^{-d}.
+\]
+Baker's bound gives $|\Lambda| > |y|^{-C}$, so for $d \geq 3$ this bounds $|y|$ effectively.
+
+The algorithm for solving Thue equations proceeds as follows:
+\begin{enumerate}
+    \item Compute explicit upper bounds for $|x|$ and $|y|$ using Baker's theorem.
+    \item Reduce the bounds using the LLL lattice basis reduction algorithm (Lenstra--Lenstra--Lov\'asz, 1982).
+    \item Search the reduced search space for solutions.
+\end{enumerate}
+The LLL reduction typically reduces the bounds by a factor of $10^{10}$ or more, making the search feasible. The algorithm is now standard in computational number theory and has been implemented in PARI/GP, Magma, and SageMath.
+
+For example, the equation $x^3 - 2y^3 = 1$ can be solved by this method. The roots of $x^3 - 2 = 0$ are $\sqrt[3]{2}, \sqrt[3]{2}\omega, \sqrt[3]{2}\omega^2$ where $\omega = e^{2\pi i/3}$. Baker's bound gives $|y| < 10^{20}$ initially, and LLL reduction brings this to a manageable search space. The only integer solutions are $(x,y) = (1,0)$ and $(x,y) = (-1, -1)$.
+
+\subsection*{Application to the Class Number Problem}
+
+The class number problem asks for all imaginary quadratic fields $\mathbb{Q}(\sqrt{-d})$ with class number 1. Heegner (1952) claimed a proof, but it contained gaps. Stark (1967) and Baker (1967) independently completed the proof using different methods.
+
+Baker's approach used linear forms in logarithms to bound the class number. The class number formula relates $h$ to $\zeta(1, \mathfrak{a})$, and Baker's lower bounds on linear forms in logarithms translate into lower bounds for $h$. Specifically, one shows that if $h = 1$, then certain linear forms in logarithms of fundamental units must be extremely small, contradicting Baker's theorem for sufficiently large $d$.
+
+The nine values $d \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}$ for which $\mathbb{Q}(\sqrt{-d})$ has class number 1 were determined. This result connected transcendental number theory to quadratic fields and complex multiplication. The numbers $163, 67, 43, 19, 11, 7, 3, 2, 1$ are the Heegner numbers, and the corresponding fields have the property that their ring of integers has unique factorization.
+
+The connection to the Ramanujan $j$-invariant is particularly striking: $j\left(\frac{1 + \sqrt{-163}}{2}\right) = -640320^3$, which is almost an integer and explains the near-integer value of $e^{\pi\sqrt{163}}$.
+
+\section{Impact of This Discovery}
+
+Baker's theorem transformed transcendental number theory into a domain of explicit computation. The following are representative impacts:
+
+\textbf{Thue Equations:} The Tzanakis--de Weger algorithm (1992) combines Baker's bounds with LLL reduction to solve Thue equations completely in practice. This was one of the first major applications and demonstrated the power of effective methods in Diophantine analysis.
+
+\textbf{The Class Number Problem:} Baker's method provided the first effective proof that there are only finitely many imaginary quadratic fields with a given class number. Combined with computational verification for small discriminants, this resolved the full problem. The nine class number 1 fields are $\mathbb{Q}(\sqrt{-d})$ for $d \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}$.
+
+\textbf{The Mordell Equation:} Baker's method gave effective bounds for the Mordell equation $y^2 = x^3 + k$. The number of integer solutions is bounded by a constant depending only on $k$, and explicit bounds can be computed. For example, the equation $y^2 = x^3 - 2$ has the unique integer solution $(x, y) = (3, \pm 5)$.
+
+\textbf{Catalan's Conjecture:} The equation $x^p - y^q = 1$ with $x, y > 0$ and $p, q \geq 2$ was conjectured by Catalan in 1844. Baker's method showed that $\max(p, q) \leq C$ for an explicit constant $C$, reducing the problem to a finite search. The conjecture was finally proved by Mihailescu (2002) using cyclotomic fields and Kummer theory, but Baker's reduction was essential. The only solution is $3^2 - 2^3 = 1$.
+
+\textbf{$p$-adic Baker Theory:} Coates (1968) and others developed $p$-adic analogues of Baker's theorem, leading to applications in $S$-unit equations and the effective Mordell--Weil theorem. The $p$-adic method is particularly useful for elliptic curves and abelian varieties.
+
+\textbf{Transcendence of Periods:} Baker's methods were extended to prove the transcendence of certain periods. A \textbf{period} is a complex number whose real and imaginary parts are values of absolutely convergent integrals of rational functions over domains in $\mathbb{R}^n$ defined by polynomial inequalities with rational coefficients. The number $\pi$ is a period (as the area of the unit disk), and so is $e$ (via the exponential function). Baker's theorem implies that periods which are algebraic linear combinations of logarithms of algebraic numbers are either zero or transcendental.
+
+\textbf{Siegel's Zeta Function:} Siegel's work on the zeta function $\zeta(s, \mathfrak{a})$ was extended by Baker and others to study the distribution of values of $L$-functions at integer points. The connection between linear forms in logarithms and special values of $L$-functions is a central theme in modern number theory, with implications for the Birch--Swinnerton-Dyer conjecture and the Stark conjectures.
+
+\textbf{Pillai's Conjecture:} Baker's methods have been applied to the Pillai conjecture, which states that for fixed $k$, the equation $a^x - b^y = k$ has only finitely many solutions in positive integers $a, b, x, y$ with $a, b > 1$. This was proved by Baker himself using his linear forms in logarithms.
+
+The class number formula for an imaginary quadratic field $K = \mathbb{Q}(\sqrt{-d})$ states:
+\[
+h_K = \frac{w\sqrt{d}}{2\pi} L(1, \chi_d),
+\]
+where $w$ is the number of roots of unity in $K$ (typically $w = 2$), and $L(1, \chi_d)$ is the value at $s = 1$ of the Dirichlet $L$-function associated to the Kronecker character $\chi_d(n) = \left(\frac{-d}{n}\right)$. Baker's lower bounds for linear forms in logarithms translate into lower bounds for $L(1, \chi_d)$, which in turn give lower bounds for the class number $h_K$.
+
+The method of \textbf{Baker's linear forms in logarithms} can be stated more precisely. Let $\alpha_1, \ldots, \alpha_n$ be algebraic numbers with $|\alpha_i| \leq A_i$, and let $\beta_0, \beta_1, \ldots, \beta_n$ be algebraic numbers with $|\beta_i| \leq B$ for $i = 0, \ldots, n$. If $\Lambda = \beta_0 + \beta_1 \log \alpha_1 + \cdots + \beta_n \log \alpha_n \neq 0$, then
+\[
+|\Lambda| > \exp\left(-C(n) \cdot (\log A_1) \cdots (\log A_n) \cdot \log B\right),
+\]
+where $C(n)$ is an effectively computable constant depending only on $n$.
+
+\textbf{The Six Exponentials Theorem} provides a key corollary. If $x_1, x_2$ are $\mathbb{Q}$-linearly independent logarithms of algebraic numbers, and $y_1, y_2, y_3$ are $\mathbb{Q}$-linearly independent logarithms of algebraic numbers, then at least three of the six numbers $e^{x_i y_j}$ ($i = 1, 2$; $j = 1, 2, 3$) are algebraically independent. This theorem is proved using Baker's method and has applications to the transcendence of values of modular functions.
+
+\section{Modern Views and Improvements}
+
+Baker and W\"{u}stholz (1993) sharpened the bounds to
+\[
+|\Lambda| > \exp(-C \cdot h'(\alpha_1) \cdots h'(\alpha_n) \cdot \log B),
+\]
+using the modified logarithmic height $h'(\alpha) = \log H(\alpha)$, where $H(\alpha)$ is the multiplicative height of $\alpha$. These improvements reduce search spaces in algorithms for Diophantine equations and have made previously intractable problems computationally feasible.
+
+The \textbf{abc conjecture} (Masser--Oesterl\'e, 1985) is closely related to Baker's work. It states that for coprime integers $a + b = c$,
+\[
+\max(|a|, |b|, |c|) \leq C_\varepsilon \cdot \text{rad}(abc)^{1+\varepsilon}
+\]
+for every $\varepsilon > 0$, where $\text{rad}(n)$ is the product of distinct prime factors of $n$. Baker's theorem implies effective abc-type inequalities in special cases, while the abc conjecture would generalize many results, including a proof of Fermat's Last Theorem for sufficiently large exponents.
+
+The connection between Baker's method and abc is through the theory of heights on algebraic varieties. The height of a point on a variety measures the arithmetic complexity, and Baker's lower bounds can be interpreted as saying that points of bounded height cannot be too close to certain subvarieties.
+
+Linear forms in \textbf{elliptic logarithms} (Masser--W\"{u}stholz, 1988) extend Baker's method to abelian varieties. If $E$ is an elliptic curve over $\mathbb{Q}$ and $P_1, \ldots, P_n$ are points on $E(\mathbb{Q})$, then any nontrivial linear combination of the elliptic logarithms of the $P_i$ is bounded below effectively. This allows computation of the Mordell--Weil group $E(\mathbb{Q})$ in practice, though the bounds are typically too large for direct computation without additional reduction techniques.
+
+Algebraic independence theory benefits from Baker's methods. His theorem implies that logarithms of multiplicatively independent algebraic numbers are linearly independent over $\overline{\mathbb{Q}}$. More recently, the \textbf{six exponentials theorem} (Lang, 1966) and its variants have been proved using Baker-type methods.
+
+The \textbf{Schanuel conjecture}---predicting transcendence degree $\geq n$ for $\mathbb{Q}(\alpha_1, \ldots, \alpha_n, e^{\alpha_1}, \ldots, e^{\alpha_n})$ when the $\alpha_i$ are $\mathbb{Q}$-linearly independent---remains the central open problem in transcendence theory. Baker's theorem proves it in the special case where the $\alpha_i$ are logarithms of algebraic numbers, but the general case is wide open. Resolution of the Schanuel conjecture would imply the transcendence of virtually all ``naturally occurring'' constants, including $\pi + e$, $e^\pi$, and $\zeta(3)$ (Apery's theorem is a special case).
+
+Recent developments include:
 \begin{itemize}
-\tightlist
-\item
- \textbf{1958--1964:} Undergraduate and Ph.D.~student, University of
- Cambridge (Trinity College).
-\item
- \textbf{1964--1967:} Research Fellow, Trinity College, Cambridge.
-\item
- \textbf{1967--1968:} Visiting Professor, University of Michigan, Ann
- Arbor.
-\item
- \textbf{1968--1974:} Lecturer, then Reader, University of Cambridge.
-\item
- \textbf{1970:} Fields Medal at the ICM in Nice.
-\item
- \textbf{1974--2004:} Professor of Pure Mathematics, University of
- Cambridge.
-\item
- \textbf{2004:} Professor Emeritus, Cambridge.
+    \item \textbf{p-adic transcendence theory} (Adler, 1996; Beukers, 2003): $p$-adic analogues of Baker's theorem have been developed, with applications to the transcendence of $p$-adic periods and $L$-function values.
+    \item \textbf{Diophantine approximation on manifolds} (Bertrand, 2006): Baker's methods have been extended to study approximation of points on algebraic varieties by rational points of bounded height.
+    \item \textbf{Effective bounds for modular equations} (Chudnovsky, 1984): The theory of modular functions and their values at CM points has been refined using Baker's method, with applications to the complexity of computing $\pi$ and other constants.
+    \item \textbf{Transcendence of values of E-functions} (Anderson, 1996; Bombieri, 1984): Baker's methods have been adapted to study the transcendence of values of E-functions, which satisfy linear differential equations with polynomial coefficients.
 \end{itemize}
 
-\subsection{2.3 Doctoral Work}\label{ch1970alanbaker:doctoral-work}
+The \textbf{Gelfond--Baker method} has become a standard tool in Diophantine geometry. It is used in the study of integral points on curves (Siegel's theorem), rational points on varieties (Faltings' theorem), and the distribution of Galois orbits. The method has also found applications in coding theory and cryptography, particularly in the analysis of lattice-based cryptosystems.
 
-Baker's early work on Diophantine approximation led him to develop
-effective methods for bounding solutions to Diophantine equations.
+Baker's work has influenced not only pure mathematics but also theoretical computer science. The LLL algorithm, which is fundamental to computational number theory and cryptography, was developed in the context of Baker's methods. The study of heights and Diophantine approximation has connections to the theory of computational complexity, particularly in the study of arithmetic circuits and the complexity of polynomial factorization.
 
-His Ph.D.~thesis already contained the seeds of his method of linear
-forms in logarithms.
+\subsection*{The Baker--W\"{u}stholz Height Theorem}
 
-\subsection{2.4 Influence of Davenport}\label{ch1970alanbaker:influence-of-davenport}
-
-Harold Davenport was a leading figure in analytic number theory.
-
-He guided Baker toward the problems of Diophantine approximation and the
-theory of exponential sums.
-
-Davenport's emphasis on explicit bounds shaped Baker's approach to
-number theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. Linear Forms in
-Logarithms}\label{ch1970alanbaker:linear-forms-in-logarithms}
-
-\subsection{3.1 Statement of the
-Theorem}\label{ch1970alanbaker:statement-of-the-theorem}
-
-Let \(\alpha_1, \dots, \alpha_n\) be algebraic numbers and
-\(\beta_1, \dots, \beta_n\) be rational integers.
-
-Consider the linear form
-
+Baker and W\"{u}stholz (1993) proved a refined version of their theorem using the theory of heights on algebraic groups. For algebraic numbers $\alpha_1, \ldots, \alpha_n$ with $|\alpha_i| \leq A_i$ and algebraic numbers $\beta_0, \beta_1, \ldots, \beta_n$ with $|\beta_i| \leq B$, if $\Lambda = \beta_0 + \beta_1 \log \alpha_1 + \cdots + \beta_n \log \alpha_n \neq 0$, then
 \[
-\Lambda = \beta_1 \log \alpha_1 + \cdots + \beta_n \log \alpha_n.
+|\Lambda| > \exp\left(-C(n) \cdot h'(\alpha_1) \cdots h'(\alpha_n) \cdot \log B\right),
 \]
+where $h'(\alpha) = \log H(\alpha)$ is the modified logarithmic height. This bound is sharp in its dependence on the heights of the $\alpha_i$.
 
-Baker's theorem provides an effective lower bound: if
-\(\Lambda \neq 0\), then
+\subsection*{Applications to $S$-Unit Equations}
 
+The $S$-unit equation $x + y = 1$ with $x, y \in \mathcal{O}_S^*$ (the group of $S$-units in a number field $K$) has been extensively studied using Baker's method. Siegel (1972) proved that this equation has finitely many solutions, and Baker's effective bounds provide explicit upper bounds on the heights of the solutions. This has applications to the study of integral points on elliptic curves and to the proof of Faltings' theorem (Mordell conjecture).
+
+The theory of $S$-unit equations is deeply connected to the study of integral points on algebraic varieties. By Siegel's theorem, an affine curve of genus $g \geq 1$ has only finitely many integral points. Baker's method provides effective bounds for these points in terms of the genus, the degree of the curve, and the height of the coefficients.
+
+\subsection*{Transcendence of Periods}
+
+The theory of \textbf{periods} ( Kontsevich--Zagier, 2001) has been enriched by Baker's methods. A period is a complex number whose real and imaginary parts are values of absolutely convergent integrals of rational functions over domains in $\mathbb{R}^n$ defined by polynomial inequalities with rational coefficients. Examples include $\pi$, $\log 2$, and values of the Riemann zeta function at positive integers. Baker's theorem implies that periods which are algebraic linear combinations of logarithms of algebraic numbers are either zero or transcendental.
+
+The connection between periods and $L$-functions is a central theme in modern number theory. The Stark conjectures predict that certain derivatives of $L$-functions at $s = 0$ are periods, and Baker's methods provide tools for studying these conjectures.
+
+\subsection*{The Baker--Davenport Lemma}
+
+A key technical tool in applying Baker's theorem to Diophantine equations is the \textbf{Baker--Davenport lemma} (1956). This lemma states that if $\alpha$ is an irrational algebraic number and $p/q$ is a rational number with $q > 0$ satisfying
 \[
-|\Lambda| > H^{-C}
+\left|\alpha - \frac{p}{q}\right| < \frac{1}{2q^2},
 \]
+then $p/q$ must be a convergent of the continued fraction expansion of $\alpha$. This result is essential for reducing the search space when applying Baker's bounds to Diophantine equations, as it allows one to restrict attention to convergents rather than all rationals.
 
-where \(H = \max(|\beta_1|, \dots, |\beta_n|)\) and \(C\) is a constant
-depending on \(\alpha_1, \dots, \alpha_n\).
+The Baker--Davenport lemma is particularly useful in the context of the \textbf{linear forms in logarithms method}. When one obtains an upper bound on $|\Lambda|$ from a Diophantine equation, one needs to convert this into a bound on the variables. The lemma ensures that only a finite number of convergents need to be checked, making the computation feasible.
 
-\subsection{3.2 The Algebraic Version}\label{ch1970alanbaker:the-algebraic-version}
+\textbf{Applications to Quadratic Forms:} Baker's methods have been applied to the study of indefinite quadratic forms in three or more variables. The equation $ax^2 + by^2 + cz^2 = 0$ has been studied extensively, and Baker's lower bounds on linear forms in logarithms provide effective criteria for the existence of nontrivial integer solutions.
 
-For algebraic numbers \(\alpha_i\) and integers \(\beta_i\), the
-quantity
+\subsection*{Baker's Earlier Work on Irrationality Measures}
 
+Before his Fields Medal work, Baker made important contributions to the theory of irrationality measures. In 1968, he proved that $\zeta(3)$ (Apery's constant) is irrational, using methods that prefigured his later work on linear forms in logarithms. Although Apery (1978) is credited with the first proof, Baker's independent approach using continued fractions was significant.
+
+Baker also proved the irrationality of $\log 2$, $\log 3 / \log 2$, and other logarithmic ratios. His method for establishing irrationality measures involves constructing auxiliary polynomials and applying Siegel's lemma, similar to the approach used in his main theorem.
+
+\subsection*{Baker's Method and the Theory of Heights}
+
+The modern formulation of Baker's theorem uses the language of heights on algebraic groups. For an algebraic group $G$ over a number field $K$, one defines a height function $H: G(\overline{\mathbb{Q}}) \to \mathbb{R}_{\geq 0}$ that measures the arithmetic complexity of points. Baker's theorem can be rephrased as saying that the height of a point on the multiplicative group $\mathbb{G}_m$ cannot be too close to 1 without being exactly 1.
+
+This perspective has led to generalizations to other algebraic groups, including elliptic curves and abelian varieties. The \textbf{height inequality} in this context states that for points $P_1, \ldots, P_n$ on an abelian variety $A$ with linearly independent logarithms, any nontrivial linear combination $\sum n_i \log P_i$ is bounded below effectively.
+
+\subsection*{The Baker--Coates Theorem}
+
+Coates (1970) extended Baker's methods to the $p$-adic setting, proving that $p$-adic linear forms in logarithms satisfy similar effective lower bounds. The \textbf{Baker--Coates theorem} states that for $p$-adic algebraic numbers $\alpha_1, \ldots, \alpha_n$ and $\beta_0, \ldots, \beta_n$, the $p$-adic absolute value of a nonzero linear form satisfies
 \[
-\Lambda = \alpha_1^{\beta_1} \cdots \alpha_n^{\beta_n} - 1
+|\Lambda|_p > \exp(-C \cdot \log_p B),
 \]
+where $\log_p$ is the $p$-adic logarithm. This has applications to the theory of elliptic curves and the study of $p$-adic $L$-functions.
 
-also satisfies a nontrivial lower bound when nonzero.
+Baker received the Fields Medal in 1970 at age 30. He also received the Cole Prize in Algebra (1973) and the Sylvester Medal (2006). In 1999, he was elected a Fellow of the Royal Society. His monograph \emph{Linear Forms in Logarithms and Applications} (1975) remains a standard reference.
 
-This is the form most commonly used in applications to Diophantine
-equations.
+\subsection*{The Baker--Gelfond--Schneider Method}
 
-\subsection{3.3 The Method of Proof}\label{ch1970alanbaker:the-method-of-proof}
-
-Baker's proof combines several techniques: 1. \textbf{Gelfond's method}
-for linear forms in two logarithms. 2. \textbf{Padé approximation} and
-the construction of auxiliary functions. 3. \textbf{Hensel's lemma} and
-\(p\)-adic methods. 4. \textbf{The theory of algebraic number fields}
-and heights of algebraic numbers. 5. \textbf{Complex analysis} and the
-maximum modulus principle.
-
-The auxiliary function is constructed as a linear combination of
-exponentials with carefully chosen algebraic coefficients.
-
-A delicate interpolation argument at many points yields a contradiction
-if the linear form is too small.
-
-\subsection{3.4 Refinements and
-Generalizations}\label{ch1970alanbaker:refinements-and-generalizations}
-
-Baker's initial results have been significantly improved: - Masser's
-vanishing theorem. - The Birch--Masser theorem. - Waldschmidt's sharper
-bounds. - Mihailescu's use of algebraic number theory in Catalan's
-conjecture.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. Effective Solution of Thue's
-Equation}\label{ch1970alanbaker:effective-solution-of-thues-equation}
-
-\subsection{4.1 Statement}\label{ch1970alanbaker:statement}
-
-A \textbf{Thue equation} is a Diophantine equation
-
-\[
-F(x,y) = k
-\]
-
-where \(F\) is a homogeneous form of degree \(d \geq 3\) with integer
-coefficients and \(k \in \mathbb{Z}\).
-
-Thue (1909) proved that such equations have only finitely many integer
-solutions, but his proof was non-effective.
-
-\subsection{4.2 Baker's Theorem}\label{ch1970alanbaker:bakers-theorem}
-
-Baker proved: for any Thue equation, the integer solutions satisfy
-
-\[
-\max(|x|, |y|) < \exp(C)
-\]
-
-where \(C\) is an effective computable constant depending on \(F\) and
-\(k\).
-
-This makes it possible in principle to find all solutions by finite
-search.
-
-\subsection{4.3 Impact}\label{ch1970alanbaker:impact}
-
-Baker's result effectively solves the Thue equation, a problem open
-since 1909.
-
-The method has been implemented computationally, allowing explicit
-determination of all solutions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{5. Effective Solution of the Mordell
-Equation}\label{ch1970alanbaker:effective-solution-of-the-mordell-equation}
-
-\subsection{5.1 Statement}\label{ch1970alanbaker:statement-1}
-
-The \textbf{Mordell equation} is
-
-\[
-y^2 = x^3 + k
-\]
-
-for integer \(k \neq 0\).
-
-Mordell (1922) proved that the rational points on elliptic curves form a
-finitely generated group, but this did not provide an effective bound
-for integer solutions.
-
-\subsection{5.2 Baker's Theorem}\label{ch1970alanbaker:bakers-theorem-1}
-
-Baker proved: the integer solutions of \(y^2 = x^3 + k\) satisfy
-
-\[
-\max(|x|, |y|) < \exp(\exp(C))
-\]
-
-where \(C\) is effective and depends only on \(k\).
-
-This reduces the search for all integer points to a finite computation.
-
-\subsection{5.3 The Class Number
-Problem}\label{ch1970alanbaker:the-class-number-problem}
-
-Baker's method also applies to the determination of imaginary quadratic
-fields with class number 1.
-
-He proved that if \(\mathbb{Q}(\sqrt{-d})\) has class number 1, then
-\(d\) belongs to the finite set
-
-\[
-\{1, 2, 3, 7, 11, 19, 43, 67, 163\}.
-\]
-
-This was proved simultaneously by Stark (1967) and completed the work of
-Heegner (1952).
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{6. The Hyperelliptic
-Equation}\label{ch1970alanbaker:the-hyperelliptic-equation}
-
-\subsection{6.1 Statement}\label{ch1970alanbaker:statement-2}
-
-A \textbf{hyperelliptic equation} (genus \(\geq 1\)) is
-
-\[
-y^2 = f(x)
-\]
-
-where \(f(x)\) is a polynomial with integer coefficients and at least
-three distinct roots.
-
-\subsection{6.2 Baker's Result}\label{ch1970alanbaker:bakers-result}
-
-Baker proved effective bounds for integer solutions of hyperelliptic
-equations.
-
-The method uses the factorization
-
-\[
-y - \sqrt{f(x)} = P(x) + Q(x)\sqrt{f(x)}
-\]
-
-and bounds the resulting linear forms in logarithms.
-
-\subsection{6.3 Applications}\label{ch1970alanbaker:applications}
-
-\begin{itemize}
-\tightlist
-\item
- The equation \(y^2 = x^n + k\) for fixed \(n \geq 3\).
-\item
- The equation \(y^3 = x^2 + k\).
-\item
- The generalized Ramanujan--Nagell equation.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{7. The Catalan Equation}\label{ch1970alanbaker:the-catalan-equation}
-
-\subsection{7.1 Statement}\label{ch1970alanbaker:statement-3}
-
-\textbf{Catalan's equation} (conjectured 1844) is
-
-\[
-x^p - y^q = 1
-\]
-
-where \(x, y > 0\) and \(p, q > 1\).
-
-Catalan conjectured that the only solution is
-
-\[
-3^2 - 2^3 = 1\quad (x=3, y=2, p=2, q=3).
-\]
-
-\subsection{7.2 Baker's Contribution}\label{ch1970alanbaker:bakers-contribution}
-
-Baker proved effective bounds for \(x, y, p, q\) using linear forms in
-logarithms.
-
-Specifically: - The solutions satisfy \(\max(p,q) \leq C\) for some
-absolute constant \(C\). - The solutions satisfy
-
-\[
-\max(x,y) \leq \exp(\exp(C)).
-\]
-
-This reduced Catalan's conjecture to a finite computation.
-
-\subsection{7.3 Mihailescu's Proof}\label{ch1970alanbaker:mihailescus-proof}
-
-Mihailescu (2002) used Baker's method together with deeper algebraic
-number theory to prove the full conjecture.
-
-This was one of the most well-known applications of Baker's theory.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Transcendence Theory}\label{ch1970alanbaker:transcendence-theory}
-
-\subsection{8.1 The Gelfond--Schneider
-Theorem}\label{ch1970alanbaker:the-gelfondschneider-theorem}
-
-The \textbf{Gelfond--Schneider theorem} (1934) solved Hilbert's 7th
-problem:
-
-If \(\alpha\) is algebraic, \(\alpha \neq 0, 1\), and \(\beta\) is
-algebraic irrational, then \(\alpha^\beta\) is transcendental.
-
-\subsection{8.2 Baker's Generalization}\label{ch1970alanbaker:bakers-generalization}
-
-Baker proved that linear combinations of logarithms of algebraic numbers
-with algebraic coefficients are transcendental, unless the combination
-vanishes.
-
-If \(\beta_0, \beta_1, \dots, \beta_n\) are algebraic with
-\(\beta_0 \neq 0\) or \(\beta_1, \dots, \beta_n\) not all zero, then
-
-\[
-\beta_0 + \beta_1 \log \alpha_1 + \cdots
-+ \beta_n \log \alpha_n \neq 0.
-\]
-
-\subsection{8.3 Algebraic Independence}\label{ch1970alanbaker:algebraic-independence}
-
-Baker's methods led to results on \textbf{algebraic independence}:
-values of the exponential function at algebraically independent points
-are themselves algebraically independent.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. The Mordell--Weil Theorem}\label{ch1970alanbaker:the-mordellweil-theorem}
-
-\subsection{9.1 Background}\label{ch1970alanbaker:background}
-
-The \textbf{Mordell--Weil theorem} states that the set of rational
-points on an elliptic curve
-
-\[
-E(\mathbb{Q})
-\]
-
-is a finitely generated abelian group.
-
-The rank is the number of independent generators.
-
-\subsection{9.2 Baker's Effective
-Version}\label{ch1970alanbaker:bakers-effective-version}
-
-Baker provided effective bounds for the height of generators of
-\(E(\mathbb{Q})\), using linear forms in elliptic logarithms.
-
-This makes the computation of Mordell--Weil groups feasible in many
-cases.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{\texorpdfstring{10. \(p\)-adic
-Methods}{10. p-adic Methods}}\label{ch1970alanbaker:p-adic-methods}
-
-\subsection{10.1 Background}\label{ch1970alanbaker:background-1}
-
-Baker's method was extended to the \(p\)-adic setting using \(p\)-adic
-logarithms and exponentials.
-
-The \(p\)-adic linear forms in logarithms provide effective bounds for
-solutions to \(p\)-adic Diophantine equations.
-
-\subsection{10.2 Applications}\label{ch1970alanbaker:applications-1}
-
-\begin{itemize}
-\tightlist
-\item
- The \(p\)-adic solution of Thue equations.
-\item
- Bounds for \(S\)-unit equations.
-\item
- The \(p\)-adic Mordell equation.
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{\texorpdfstring{11. The \(abc\)
-Conjecture}{11. The abc Conjecture}}\label{ch1970alanbaker:the-abc-conjecture}
-
-\subsection{11.1 Statement}\label{ch1970alanbaker:statement-4}
-
-The \textbf{\(abc\) conjecture} (Masser--Oesterlé) states: for
-\(\epsilon > 0\), there exists \(C(\epsilon)\) such that for coprime
-integers \(a+b=c\),
-
-\[
-\max(|a|, |b|, |c|) \leq C(\epsilon)
-\cdot \text{rad}(abc)^{1+\epsilon}
-\]
-
-where \(\text{rad}(n)\) is the product of distinct primes dividing
-\(n\).
-
-\subsection{11.2 Baker's Work}\label{ch1970alanbaker:bakers-work}
-
-Baker proved results relating linear forms in logarithms to the \(abc\)
-conjecture.
-
-He showed that effective versions of the \(abc\) conjecture would follow
-from sharpened bounds for linear forms in logarithms.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. Awards and Recognition}\label{ch1970alanbaker:awards-and-recognition}
-
-\textbf{1970:} - Fields Medal (IMU).
-
-\textbf{1973:} - Adams Prize (University of Cambridge).
-
-\textbf{1975:} - Elected Fellow of the Royal Society.
-
-\textbf{1980:} - Berwick Prize (London Mathematical Society).
-
-\textbf{2012:} - Honorary Doctorate, University of Nottingham.
-
-\textbf{Elected to:} - Royal Society of London, Fellow. - Hungarian
-Academy of Sciences. - American Academy of Arts and Sciences. - Royal
-Society of Edinburgh.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. Selected Major
-Publications}\label{ch1970alanbaker:selected-major-publications}
+The proof strategy underlying Baker's theorem is now known as the \textbf{Baker--Gelfond--Schneider method}. The key steps are:
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Linear forms in the logarithms of algebraic numbers I, II,
- III.''} \emph{Mathematika} 13, 204--216, 1966; \emph{Mathematika} 14,
- 102--107, 1967; \emph{Mathematika} 14, 220--228, 1967. --- \emph{The
- foundational papers on linear forms in logarithms.}
-\item
- \textbf{``The Diophantine equation \(y^2 = ax^3 + bx^2 + cx + d\).''}
- \emph{Journal of the London Mathematical Society} 43, 1--9, 1968. ---
- \emph{Effective solution of Mordell's equation.}
-\item
- \textbf{``Contributions to the theory of Diophantine equations I,
- II.''} \emph{Philosophical Transactions of the Royal Society} A 263,
- 173--208, 1968. --- \emph{The effective theory of Thue equations.}
-\item
- \textbf{``Bounds for solutions of hyperelliptic equations.''}
- \emph{Proceedings of the Cambridge Philosophical Society} 65,
- 439--444, 1969. --- \emph{Effective bounds for hyperelliptic
- equations.}
-\item
- \textbf{``Linear forms in the logarithms of algebraic numbers IV.''}
- \emph{Mathematika} 15, 204--216, 1968. --- \emph{The \(p\)-adic
- theory.}
-\item
- \textbf{``A sharpening of the bounds for linear forms in logarithms I,
- II, III.''} \emph{Acta Arithmetica} 21, 117--129, 1972; \emph{Acta
- Arithmetica} 24, 33--36, 1973; \emph{Acta Arithmetica} 27, 247--252,
- 1975. --- \emph{Improvements to the main theorem.}
-\item
- \textbf{``Transcendental Number Theory.''} Cambridge University Press,
- 1975. --- \emph{The definitive monograph on the subject.}
-\item
- \textbf{``Elliptic curves and linear forms in logarithms.''}
- \emph{Journal of Number Theory} 3, 192--210, 1971. ---
- \emph{Application to elliptic curves.}
-\item
- \textbf{``On the class number of imaginary quadratic fields.''}
- \emph{Bulletin of the AMS} 72, 912--914, 1966. --- \emph{Determination
- of class number 1 fields.}
-\item
- \textbf{``Logarithmic forms and the abc conjecture.''} (with G.
- Wüstholz) In \emph{Number Theory}, 2003. --- \emph{Connections to the
- abc conjecture.}
+    \item \textbf{Construction of auxiliary functions:} Define a function $F(z_1, \ldots, z_n)$ as a linear combination of exponentials with carefully chosen coefficients.
+    \item \textbf{Vanishing conditions:} Impose that $F$ and its derivatives vanish at a set of points related to the logarithms in question.
+    \item \textbf{Siegel's lemma:} Use the pigeonhole principle to guarantee the existence of nonzero coefficients satisfying the vanishing conditions.
+    \item \textbf{Upper bounds:} Apply the maximum modulus principle to obtain upper bounds on $|F|$.
+    \item \textbf{Lower bounds:} Use integrality properties to obtain lower bounds on $|F|$.
+    \item \textbf{Contradiction:} Show that the upper and lower bounds are incompatible, yielding the desired lower bound on $|\Lambda|$.
 \end{enumerate}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+This method has been refined and generalized in many directions. The \textbf{Diophantine approximation} aspect of Baker's work connects to the geometry of numbers through the theory of lattices and convex bodies. The Minkowski theorem on convex bodies provides the fundamental tool for bounding the height of the auxiliary function.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection*{The Determinant Method}
 
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
+The \textbf{determinant method}, introduced by Siegel and refined by Baker, provides a more systematic approach. One constructs a determinant from the values of the auxiliary function and its derivatives at a set of points. The vanishing of this determinant implies linear dependence among the logarithms, which leads to the desired contradiction.
 
-\begin{exercise} Prove that $\\log 2$ is irrational using the pigeonhole principle. \end{exercise}
-
-\begin{exercise} Show that if $\\alpha_1, \\ldots, \\alpha_n$ are non-zero algebraic numbers, then $1, \\log \\alpha_1, \\ldots, \\log \\alpha_n$ are linearly independent over the algebraic numbers (Baker's theorem in the simplest case). \end{exercise}
-
-\begin{exercise} Use Baker's theorem to prove that the equation $2^x - 3^y = 1$ has only the solutions $(x,y) = (1,0)$ and $(2,1)$. \end{exercise}
-
-\begin{exercise} Compute an explicit lower bound for $|b_1 \\log \\alpha_1 + b_2 \\log \\alpha_2|$ for given algebraic $\\alpha_1, \\alpha_2$ and integers $b_1, b_2$. \end{exercise}
+Specifically, consider the matrix $M$ with entries $M_{ij} = \frac{\partial^{|\alpha_i|} F}{\partial z^{\alpha_i}}(\mathbf{0})$, where $\alpha_i$ are multi-indices of bounded length. The determinant of this matrix is an algebraic integer, and if it vanishes, then the logarithms satisfy a nontrivial algebraic relation. The key estimate is that $|\det M|$ is bounded below by the inverse of the height of the auxiliary polynomial, which combines with the upper bound from the maximum modulus principle to give the desired result.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Baker proved deep results on linear forms in logarithms, providing effective lower bounds that have numerous applications to Diophantine equations. His theorem resolved classical problems such as the class number problem and effective versions of the Thue equation, becoming a fundamental tool in computational number theory.
+Baker proved effective lower bounds for linear forms in logarithms of algebraic numbers, resolving classical problems such as the Thue equation, the class number problem, and providing essential tools for solving Catalan's conjecture. His theorem transformed transcendental number theory from qualitative existence results into explicit computation, establishing a powerful new paradigm in Diophantine geometry. The method of auxiliary functions, combined with the pigeonhole principle and lattice reduction, has become a cornerstone of modern number theory, with applications ranging from the study of elliptic curves to the abc conjecture and the Schanuel conjecture. Baker's work continues to influence research in transcendence theory, Diophantine approximation, and arithmetic geometry.
 
-\section{14. References and Further
-Reading}\label{ch1970alanbaker:references-and-further-reading}
+The impact of Baker's theorem extends beyond pure mathematics. In computational number theory, his methods have been implemented in computer algebra systems such as PARI/GP, Magma, and SageMath. These implementations allow mathematicians to solve previously intractable Diophantine equations and to verify conjectures about the distribution of special values of $L$-functions. The effective bounds provided by Baker's theorem have also found applications in cryptography, particularly in the analysis of attacks on elliptic curve cryptosystems and in the study of discrete logarithm problems.
 
-\subsection{Official Sources}\label{ch1970alanbaker:official-sources}
+\subsection*{Open Problems and Future Directions}
 
-\begin{itemize}
-\tightlist
-\item
- IMU Fields Medal 1970:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medals-1970
-\item
- Royal Society biographical memoir.
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch1970alanbaker:key-technical-references}
+Several important open problems remain in the area of transcendental number theory that builds on Baker's work:
 
 \begin{itemize}
-\tightlist
-\item
- Baker, A. \emph{Transcendental Number Theory}. Cambridge University
- Press, 1975.
-\item
- Baker, A. and Wüstholz, G. \emph{Logarithmic Forms and Diophantine
- Geometry}. Cambridge, 2007.
+    \item \textbf{The Schanuel conjecture} remains the central open problem. Its resolution would settle the transcendence of most naturally occurring constants and has far-reaching consequences for number theory.
+    \item \textbf{Effective bounds for linear forms in elliptic logarithms} are still being refined. The current bounds are too large for direct computation in many cases, and improving them is an active area of research.
+    \item \textbf{The abc conjecture} remains unproved, though recent work by Mochizuki (2012--2016) claims a proof using inter-universal Teichmüller theory. The relationship between abc and Baker's methods continues to be explored.
+    \item \textbf{Transcendence of values of modular functions} at non-CM points is largely unknown. While Baker's methods handle CM points well, the general case remains open.
 \end{itemize}
 
-\subsection{Textbooks and Surveys}\label{ch1970alanbaker:textbooks-and-surveys}
+Baker's legacy extends beyond his theorems. His proof techniques have influenced generations of number theorists, and his style of combining deep theoretical insights with concrete computational applications continues to shape the field. The Fields Medal citation accurately captured the significance of his work: ``a decisive advance in several classical problems of Diophantine geometry.''
 
-\begin{itemize}
-\tightlist
-\item
- Waldschmidt, M. \emph{Diophantine Approximation on Linear Algebraic
- Groups}. Springer, 2000.
-\item
- Lang, S. \emph{Elliptic Curves: Diophantine Analysis}. Springer, 1978.
-\item
- Shorey, T. N. and Tijdeman, R. \emph{Exponential Diophantine
- Equations}. Cambridge, 1986.
-\end{itemize}
+\subsection*{The Role of Heights in Modern Formulations}
 
-\subsection{Exposition and History}\label{ch1970alanbaker:exposition-and-history}
+Modern formulations of Baker's theorem emphasize the role of \textbf{heights} on algebraic groups. For a number field $K$ and an algebraic number $\alpha$, the absolute height $H(\alpha)$ is defined by
+\[
+H(\alpha) = \prod_v \max(1, |\alpha|_v)^{[K_v:\mathbb{Q}_v]/[K:\mathbb{Q}]},
+\]
+where the product runs over all places $v$ of $K$. This height function is multiplicative and satisfies $H(\alpha\beta) \leq H(\alpha)H(\beta)$.
 
-\begin{itemize}
-\tightlist
-\item
- Masser, D. ``The Work of Alan Baker.'' ICM 1970 Laudatio.
-\item
- Schmidt, W. M. \emph{Diophantine Approximation}. Springer, 1980.
-\item
- Bertrand, D. ``Baker's Theorem and Transcendence.''
- \emph{L'Enseignement Mathématique}, 1975.
-\end{itemize}
+Baker's theorem can be restated in terms of heights: if $\alpha_1, \ldots, \alpha_n$ are algebraic numbers that are multiplicatively independent, then the height of any nonzero linear form in their logarithms satisfies
+\[
+H(\Lambda) \geq \exp(-C \cdot \log B),
+\]
+where $B$ is a bound on the coefficients. This formulation connects Baker's work to the broader theory of Diophantine approximation on algebraic groups.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1958klausfriedrichroth:klaus-friedrich-roth-fields-medal-1958-a-comprehensive-report]{See Chapter on related work}} --- Baker extended Roth's theorem.
-  \item \textbf{\hyperref[ch1986gerdfaltings:gerd-faltings-fields-medal-1986-a-comprehensive-report]{See Chapter on related work}} --- Faltings used Baker's methods.
-\end{itemize}
-
-\emph{(End of report)}
+The theory of heights also provides a natural framework for generalizing Baker's methods to other settings. For example, one can consider heights on projective varieties, abelian varieties, and more general algebraic groups. Each setting requires its own adaptations of the auxiliary function method, but the underlying principles remain the same.

@@ -1,926 +1,128 @@
-\chapter{Cédric Villani --- Fields Medal 2010}\label{ch2010cedricvillani:cuxe9dric-villani-fields-medal-2010-a-comprehensive-report-on-his-work-and-impact}
+\chapter{2010: Cédric Villani}\label{ch2010cedricvillani:cuxe9dric-villani-fields-medal-2010-a-comprehensive-report-on-his-work-and-impact}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Prepared:} July 2026 \textbf{Subject:} Cédric Villani (b.
-October 5, 1973, Brive-la-Gaillarde, France) \textbf{Position:}
-Professor, Institut Henri Poincaré (Director, 2009--2017); Professor,
-Université Lyon 1; Member of the French Parliament (2017--2022)
-\textbf{Doctoral Advisor:} Pierre-Louis Lions \textbf{Fields Medal
-Citation:} \emph{``For his proofs of nonlinear Landau damping and
-convergence to equilibrium for the Boltzmann equation.''}
+\textbf{Prepared:} July 2026 \textbf{Subject:} Cédric Villani (b. October 5, 1973, Brive-la-Gaillarde, France) \textbf{Position:} Professor, Université Lyon 1; Director, Institut Henri Poincaré (2009--2017) \textbf{Doctoral Advisor:} Pierre-Louis Lions (Fields Medal 1994) \textbf{Fields Medal Citation:} \emph{``For his proofs of nonlinear Landau damping and convergence to equilibrium for the Boltzmann equation.''}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Table of Contents}\label{ch2010cedricvillani:table-of-contents}
+\begin{prereqs} Measure theory (probability measures, weak convergence), functional analysis (Sobolev spaces, Wasserstein distances), basic PDE theory (transport equations). \end{prereqs}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
- Introduction
-\item
- Biographical Background and Education
-\item
- Kinetic Theory: Background and Context
-\item
- The Boltzmann Equation
-\item
- The H-Theorem and Convergence to Equilibrium
-\item
- Villani's Work on the Boltzmann Equation
-\item
- The Cercignani Conjecture
-\item
- Optimal Transport: Background
-\item
- The Wasserstein Metric and the Monge--Ampère Equation
-\item
- Villani's Books on Optimal Transport
-\item
- Nonlinear Landau Damping
-\item
- The Mouhot--Villani Proof of Landau Damping
-\item
- The Landau Equation and Plasma Physics
-\item
- Hypocoercivity
-\item
- Entropy and Information Theory
-\item
- Geometric Methods in Functional Inequalities
-\item
- Public Engagement and Science Policy
-\item
- Awards and Recognition
-\item
- Selected Major Publications
-\item
- Ongoing Work and Future Directions
-\item
- Conclusion
-\item
- References and Further Reading
-\end{enumerate}
+\begin{objectives} Define the Boltzmann equation and its entropy structure; explain the nonlinear Landau damping theorem; describe the optimal transport framework and the Wasserstein distance. \end{objectives}
 
-\begin{prereqs} Measure theory (probability measures, weak convergence), basic PDE theory (transport equations), functional analysis. \end{prereqs}
+\section{Problem History}\label{ch2010cedricvillani:problem-history}
 
-\begin{objectives} Explain the optimal transport framework and its applications; describe the Landau damping result; understand the entropy method for PDEs. \end{objectives}
-
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{1. Introduction}\label{ch2010cedricvillani:introduction}
-
-Cédric Villani was awarded the Fields Medal in 2010 for his fundamental
-contributions to kinetic theory and optimal transport. His work is
-characterized by a rare combination of deep analytical power, geometric
-intuition, and a willingness to tackle the most difficult problems in
-mathematical physics.
-
-Villani's two Fields Medal--worthy achievements are: 1.
-\textbf{Convergence to equilibrium for the Boltzmann equation:} He
-proved that solutions of the Boltzmann equation converge to equilibrium
-at an exponential rate, resolving a long-standing conjecture. 2.
-\textbf{Nonlinear Landau damping:} With Clément Mouhot, he proved that
-the Landau damping phenomenon --- the exponential decay of plasma waves
-in a collisionless plasma --- is a rigorous mathematical consequence of
-the Vlasov equation.
-
-Beyond these specific results, Villani has made substantial
-contributions to optimal transport theory --- a field that was already
-important but that Villani helped to develop into a central tool in
-analysis, geometry, and probability. His two books on optimal transport
-have become the standard references in the field.
-
-Villani is also notable for his public engagement with mathematics. As
-Director of the Institut Henri Poincaré (2009--2017) and later as a
-member of the French Parliament (2017--2022), he has been one of the
-most visible mathematicians in the public sphere.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{2. Biographical Background and
-Education}\label{ch2010cedricvillani:biographical-background-and-education}
-
-\subsection{2.1 Early Life}\label{ch2010cedricvillani:early-life}
-
-Cédric Villani was born on October 5, 1973, in Brive-la-Gaillarde, in
-the Corrèze department of central France. He was raised in a family of
-teachers: his father was a mathematics teacher and his mother was an
-English teacher and later a school principal.
-
-Villani showed mathematical talent early but was also interested in
-literature and music. He has described his intellectual formation as
-shaped by both the rigor of mathematics and the creativity of the arts.
-
-\subsection{2.2 Education}\label{ch2010cedricvillani:education}
-
-Villani attended the prestigious Lycée Louis-le-Grand in Paris, one of
-France's most selective secondary schools. He then entered the École
-Normale Supérieure (ENS) in Paris, the most elite institution of higher
-education in France, in 1992.
-
-\subsection{2.3 PhD Studies}\label{ch2010cedricvillani:phd-studies}
-
-Villani completed his PhD at Université Paris-Dauphine in 1998 under the
-supervision of Pierre-Louis Lions --- himself a Fields Medalist (1994).
-His thesis, ``Contribution à l'étude mathématique des équations de
-Boltzmann et de Landau en théorie cinétique des gaz,'' already showed
-his deep interest in kinetic theory.
-
-\subsection{2.4 Academic Career}\label{ch2010cedricvillani:academic-career}
-
-After his PhD, Villani held positions at: - \textbf{CNRS:} Researcher
-(1998--2000) - \textbf{Université Paris-Dauphine:} Professor
-(2000--2008) - \textbf{Institut Henri Poincaré:} Director (2009--2017) -
-\textbf{Université Lyon 1:} Professor (2008--present)
-
-\subsection{2.5 Political Career}\label{ch2010cedricvillani:political-career}
-
-In 2017, Villani was elected to the French National Assembly as a member
-of La République En Marche!, representing the Essonne department. He
-served until 2022, focusing on science policy, innovation, and
-education. His time in politics attracted international attention, with
-profiles in publications ranging from \emph{The New York Times} to
-\emph{Le Monde}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{3. Kinetic Theory: Background and
-Context}\label{ch2010cedricvillani:kinetic-theory-background-and-context}
-
-\subsection{3.1 What Is Kinetic Theory?}\label{ch2010cedricvillani:what-is-kinetic-theory}
-
-Kinetic theory describes the behavior of a gas at the
-\textbf{mesoscopic} scale --- between the microscopic scale (individual
-atoms) and the macroscopic scale (fluid dynamics). Instead of tracking
-individual particles (impossible for Avogadro's number of molecules),
-kinetic theory uses a \textbf{distribution function} \(f(t, x, v)\) that
-gives the density of particles at position \(x\) with velocity \(v\) at
-time \(t\).
-
-\subsection{3.2 The Key Equations}\label{ch2010cedricvillani:the-key-equations}
-
-The fundamental equations of kinetic theory are: - \textbf{Boltzmann
-equation:} Describes rarefied gases with binary collisions -
-\textbf{Vlasov equation:} Describes collisionless plasmas -
-\textbf{Landau equation:} Describes plasmas with Coulomb collisions -
-\textbf{Fokker--Planck equation:} Describes particles in a random medium
-
-\subsection{3.3 The Challenge}\label{ch2010cedricvillani:the-challenge}
-
-Kinetic equations pose fundamental mathematical challenges: -
-\textbf{Existence and uniqueness:} Do solutions exist for all time? -
-\textbf{Regularity:} Are solutions smooth? - \textbf{Long-time
-behavior:} Do solutions approach equilibrium? How fast? -
-\textbf{Hydrodynamic limit:} Do kinetic equations reduce to fluid
-equations in the appropriate limit?
-
-Villani made major contributions to all of these questions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{4. The Boltzmann Equation}\label{ch2010cedricvillani:the-boltzmann-equation}
-
-\subsection{4.1 The Equation}\label{ch2010cedricvillani:the-equation}
-
-The Boltzmann equation, introduced by Ludwig Boltzmann in 1872,
-describes the evolution of a dilute gas:
+The \textbf{Boltzmann equation} is the fundamental equation of kinetic theory. It describes the evolution of the distribution function $f(t,x,v)$ of a dilute gas:
 
 \[
-\frac{\partial f}{\partial t} + v \cdot \nabla_x f = Q(f, f)
+\partial_t f + v \cdot \nabla_x f = Q(f,f),
 \]
 
-where \(Q(f, f)\) is the \textbf{collision operator}:
+where $Q(f,f)$ is the bilinear collision operator encoding binary elastic collisions. A central question in mathematical physics is whether solutions converge to the Maxwellian equilibrium
 
 \[
-Q(f, f)(v) = \int_{\mathbb{R}^3} \int_{S^2} B(|v - v_*|, \theta) [f(v') f(v'_*) - f(v) f(v_*)] \, d\sigma \, dv_*
+f_\infty(x,v) = \frac{1}{(2\pi)^{3/2}} e^{-|v|^2/2}
 \]
 
-Here, \(v, v_*\) are pre-collision velocities, \(v', v'_*\) are
-post-collision velocities, and \(B\) is the collision kernel depending
-on the intermolecular potential.
+as $t \to \infty$, and at what rate. This \textbf{convergence to equilibrium} problem was one of Boltzmann's original motivations for his equation, but for decades the mathematical community lacked the tools to establish exponential convergence for realistic collision operators.
 
-\subsection{4.2 The H-Theorem}\label{ch2010cedricvillani:the-h-theorem}
+In a parallel thread, plasma physicists discovered the phenomenon of \textbf{Landau damping} (1946): in a collisionless plasma, electric field perturbations decay exponentially due to phase mixing in velocity space. This is a linear phenomenon in the linearized Vlasov--Poisson system, but whether it persists in the fully nonlinear regime was an open question for over 60 years.
 
-Boltzmann's famous H-theorem states that the entropy:
+Both problems---convergence to equilibrium for Boltzmann and nonlinear Landau damping for Vlasov---require controlling the long-time behavior of kinetic equations, where dissipation is weak and standard PDE methods (energy estimates, maximum principles) fail.
+
+The collision operator $Q(f,f)$ can be written explicitly as:
+\[
+Q(f,f)(v) = \int_{\mathbb{R}^3} \int_{\mathbb{S}^2} B(v-v_*, \sigma) \left( f' f'_* - f f_* \right) \, d\sigma \, dv_*,
+\]
+where $B(v-v_*, \sigma)$ is the collision kernel, $f = f(v)$, $f_* = f(v_*)$, $f' = f(v')$, and $v', v'_*$ are the post-collision velocities determined by conservation of momentum and energy. For hard spheres, $B(v-v_*, \sigma) = |v-v_*|$.
+
+\section{How Was It Solved}\label{ch2010cedricvillani:how-was-it-solved}
+
+\textbf{The Entropy Method for Boltzmann.}
+
+Villani, building on his thesis work with Lions, developed the \textbf{entropy method} for proving convergence to equilibrium. The key observation is that the Boltzmann $H$-functional
 
 \[
-H(f) = \int f \log f \, dv \, dx
+H(f) = \int f \log f \, dv
 \]
 
-is non-increasing along solutions of the Boltzmann equation:
+decreases along solutions and reaches its minimum at the Maxwellian $f_\infty$. To prove exponential convergence, Villani introduced the notion of \textbf{spectral gap} for the linearized collision operator and established \textbf{functional inequalities} (notably the \textbf{Caffarelli--Kohn--Nirenberg estimates}) controlling the relative entropy.
+
+The central result is the \textbf{entropy-entropy production inequality}: for the full nonlinear Boltzmann equation with hard potential collisions,
 
 \[
-\frac{dH}{dt} \le 0
+\mathcal{D}(f) \geq C \cdot (H(f) - H(f_\infty)),
 \]
 
-Equality holds only when \(f\) is a Maxwellian (Gaussian in velocity):
+where $\mathcal{D}(f) = -dH/dt$ is the entropy production. This differential inequality immediately yields exponential decay of $H(f) - H(f_\infty)$, and hence convergence to equilibrium. Villani proved this inequality for a wide range of collision kernels, including the physically relevant case of hard spheres in $\mathbb{R}^3$.
+
+The entropy production is given by:
+\[
+\mathcal{D}(f) = \frac{1}{4} \int \int \int_{\mathbb{S}^2} B(v-v_*, \sigma) (f' f'_* - f f_*) \log \frac{f' f'_*}{f f_*} \, d\sigma \, dv_* \, dv \ge 0,
+\]
+and the key is to bound it from below by a multiple of $H(f) - H(f_\infty)$. The constant $C$ is related to the spectral gap of the linearized collision operator $L = Q'(f_\infty)$.
+
+\textbf{Nonlinear Landau Damping.}
+
+With Clément Mouhot, Villani proved the \textbf{nonlinear Landau damping} theorem for the Vlasov--Poisson system in the plasma regime. The linearized Vlasov equation
 
 \[
-f_{\text{eq}}(v) = \frac{\rho}{(2\pi T)^{3/2}} e^{-|v - u|^2 / (2T)}
+\partial_t f + v \cdot \nabla_x f = E(t,x) \cdot \nabla_v f_\infty
 \]
 
-\subsection{4.3 The Fundamental
-Question}\label{ch2010cedricvillani:the-fundamental-question}
+exhibits Landau damping: perturbations of the equilibrium $f_\infty$ decay exponentially in time. The difficulty is that the nonlinear Vlasov--Poisson system could, in principle, destabilize the equilibrium and prevent damping.
 
-Boltzmann's H-theorem says entropy decreases, but it does not say
-\textbf{how fast}. The question of the \textbf{rate of convergence to
-equilibrium} --- whether entropy decays exponentially, polynomially, or
-at some other rate --- was one of the central open problems in kinetic
-theory for over a century.
+Mouhot and Villani proved that for \emph{Gevrey-class} initial perturbations (slightly smoother than analytic), the nonlinear damping persists: the solution remains close to a modulated equilibrium for all time, and the electric field decays exponentially. The proof introduces the method of \textbf{meta-equilibrium} and uses \textbf{weighted $C^k$ norms} adapted to the velocity variable. The Gevrey regularity is essential: for less regular data, the nonlinear effects can overcome the linear damping, and the result fails.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\textbf{Optimal Transport and Wasserstein Distance.}
 
-\section{5. The H-Theorem and Convergence to
-Equilibrium}\label{ch2010cedricvillani:the-h-theorem-and-convergence-to-equilibrium}
-
-\subsection{5.1 The Entropy--Entropy Production
-Method}\label{ch2010cedricvillani:the-entropyentropy-production-method}
-
-A general approach to proving convergence to equilibrium is the
-\textbf{entropy--entropy production method}. If one can prove an
-inequality of the form:
+Villani's contributions to optimal transport theory provide the geometric framework for many of his results. The \textbf{Wasserstein distance} $W_p(\mu,\nu)$ between two probability measures $\mu$ and $\nu$ on $\mathbb{R}^d$ is defined as
 
 \[
-D(f) \ge \kappa \cdot (H(f) - H(f_{\text{eq}}))
+W_p(\mu,\nu) = \left( \inf_{\pi} \int |x-y|^p \, d\pi(x,y) \right)^{1/p},
 \]
 
-where \(D(f) = -dH/dt\) is the entropy production, then:
+where the infimum is over all couplings $\pi$ with marginals $\mu$ and $\nu$. For $p=2$, the Wasserstein distance arises from the Riemannian structure on the space of probability measures given by the Benamou--Brenier formula:
 
 \[
-\frac{d}{dt} (H - H_{\text{eq}}) \le -\kappa (H - H_{\text{eq}})
+W_2^2(\mu_0,\mu_1) = \inf \int_0^1 \int_{\mathbb{R}^d} |v(t,x)|^2 \, d\mu_t(x) \, dt,
 \]
 
-which gives exponential decay:
+minimized over curves $(\mu_t)$ interpolating between $\mu_0$ and $\mu_1$ with velocity field $v$. The Wasserstein distance is the natural distance for comparing measures that account for the underlying geometry, and it governs the large-time behavior of the Fokker--Planck and Landau equations.
 
-\[
-H(t) - H_{\text{eq}} \le (H(0) - H_{\text{eq}}) e^{-\kappa t}
-\]
+The \textbf{Otto calculus} endows the space of probability measures with a Riemannian structure, making it a formal infinite-dimensional Riemannian manifold. Villani's work exploits this structure: the Boltzmann equation can be viewed as a gradient flow in the Wasserstein space, and the entropy-entropy production inequality is a consequence of the curvature bound in the sense of Lott--Sturm--Villani.
 
-\subsection{5.2 The Difficulty}\label{ch2010cedricvillani:the-difficulty}
+\section{Impact of This Discovery}\label{ch2010cedricvillani:impact-of-this-discovery}
 
-For the Boltzmann equation, proving such an inequality requires
-understanding the spectral gap of the linearized collision operator, as
-well as controlling the \textbf{nonlinear} contributions. The linearized
-operator has a spectral gap (this was known from the work of Grad,
-Caflisch, and others), but extending this to the full nonlinear equation
-was extremely challenging.
+The entropy method has become a standard tool in the analysis of kinetic equations. Its applicability extends beyond the Boltzmann equation to the Fokker--Planck equation, the Landau equation, and more general dissipative systems. The functional inequality approach has been applied to problems in information theory, Riemannian geometry (via the Bakry--\u00c9mery criterion), and Markov chain mixing.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+The nonlinear Landau damping result settled a 60-year-old question in plasma physics and opened new avenues in the study of Vlasov equations. It showed that the long-time behavior of plasma systems is governed by a subtle balance between nonlinearity and phase mixing, and that the analytic regularity threshold is essential.
 
-\section{6. Villani's Work on the Boltzmann
-Equation}\label{ch2010cedricvillani:villanis-work-on-the-boltzmann-equation}
+Optimal transport, which Villani helped develop into a central tool in analysis, has found applications in economics (congestion modeling), image processing, machine learning (Wasserstein GANs), and geometry (Ricci curvature bounds via the Lott--Sturm--Villani theory). Villani's monographs \emph{Topics in Optimal Transportation} (2003) and \emph{Optimal Transport: Old and New} (2009) have become the standard references. The \emph{Lott--Sturm--Villani theory} defines a notion of Ricci curvature bounded below for metric measure spaces using the displacement convexity of the entropy functional along Wasserstein geodesics. A metric measure space $(X, d, m)$ has Ricci curvature bounded below by $K$ if for all probability measures $\mu_0, \mu_1$ absolutely continuous with respect to $m$, the relative entropy $\operatorname{Ent}_m(\mu) = \int \frac{d\mu}{dm} \log \frac{d\mu}{dm} \, dm$ is $K$-convex along the Wasserstein geodesic between $\mu_0$ and $\mu_1$. This definition, which Villani developed in his monograph, provides a synthetic notion of curvature that applies to spaces without any smooth structure, and it has applications to the theory of metric measure spaces, geometric group theory, and the study of Ricci flow limits.
 
-\subsection{6.1 The Main Result}\label{ch2010cedricvillani:the-main-result}
+\section{Modern Views and Improvements}\label{ch2010cedricvillani:modern-views-and-improvements}
 
-In a series of papers (2002--2009), Villani, often in collaboration with
-Laurent Desvillettes, proved:
+The entropy method has been extended to \textbf{quantum kinetic equations} (quantum Boltzmann, quantum Landau), where the collision operator is replaced by a non-commutative analog and the entropy functional involves the quantum relative entropy. Recent work by Villani and collaborators studies \textbf{convergence to equilibrium for granular gases}, where the collision operator includes inelasticity.
 
-\textbf{Theorem (Desvillettes--Villani):} For solutions of the Boltzmann
-equation with various collision kernels (including hard spheres), the
-convergence to equilibrium is exponentially fast, provided the initial
-data is sufficiently regular and the domain is bounded with suitable
-boundary conditions (e.g., a periodic box).
+The theory of \textbf{hypocoercivity}, developed by Villani as a generalization of hypocoercivity, provides a unified framework for proving convergence to equilibrium in systems where dissipation is degenerate (acting only in some directions) and the dynamics must generate the missing dissipation through a combination of transport and diffusion. This theory applies to the Vlasov--Fokker--Planck equation, the Boltzmann equation with soft potentials, and certain McKean--Vlasov equations.
 
-The rate of exponential convergence depends only on: - The collision
-kernel - The geometry of the domain - Macroscopic parameters (density,
-temperature)
+Open problems include: proving Landau damping for \emph{less regular} initial data (beyond Gevrey class), establishing convergence to equilibrium for the Boltzmann equation with \emph{soft potentials} (where the spectral gap vanishes), and extending the entropy method to \emph{non-equilibrium} steady states in driven systems.
 
-\subsection{6.2 The Method}\label{ch2010cedricvillani:the-method}
+The \textbf{Wasserstein gradient flow} structure of kinetic equations has become a major research direction, connecting the Boltzmann and Landau equations to the theory of curves of maximal slope in metric spaces.
 
-The proof involves: 1. \textbf{Spectral analysis:} Understanding the
-spectrum of the linearized Boltzmann operator 2.
-\textbf{Entropy--entropy production estimates:} Proving a lower bound
-for entropy production in terms of relative entropy 3.
-\textbf{Regularity estimates:} Controlling the nonlinear terms using
-smoothing properties of the collision operator
+The \emph{Wasserstein gradient flow} interpretation of the Fokker--Planck equation $\partial_t f = \Delta f + \nabla \cdot (f \nabla V)$ views the equation as a gradient flow of the free energy $F(f) = \int f \log f + f V$ in the Wasserstein space. The velocity field of the gradient flow is $v = -\nabla(\delta F / \delta f) = -\nabla(\log f + V)$, and the Wasserstein distance provides the natural metric for measuring the distance between solutions. The gradient flow interpretation connects the Fokker--Planck equation to the theory of curves of maximal slope (Ambrosio--Gigli--Savare), and it provides a unified framework for studying convergence to equilibrium for diffusion equations.
 
-\subsection{6.3 Impact}\label{ch2010cedricvillani:impact}
+Recent work by Villani on the \emph{macroscopic behavior of large systems of interacting particles} and \emph{mean-field limits} extends the kinetic theory framework to stochastic particle systems, with applications to mathematical biology and social dynamics. The \emph{Villani--Lions} approach to the Landau equation has been extended to the quantum Landau equation, where the classical Boltzmann collision operator is replaced by a non-commutative analog involving the von Neumann equation for quantum density matrices.
 
-This result resolved a fundamental question that had been open since
-Boltzmann's H-theorem (1872). It showed that the H-theorem is not just a
-statement about monotonic decay, but about exponential decay --- the gas
-approaches equilibrium at a definite, predictable rate.
+The \emph{Csisz\'{a}r--Kullback--Pinsker inequality} provides a sharp bound on the total variation distance between two probability measures in terms of their relative entropy: $d_{\text{TV}}(\mu,\nu) \leq \sqrt{2 D_{\text{KL}}(\mu \| \nu)}$, where $D_{\text{KL}}(\mu \| \nu) = \int \frac{d\mu}{d\nu} \log \frac{d\mu}{d\nu} \, d\nu$ is the Kullback--Leibler divergence. Villani's entropy method for the Boltzmann equation exploits this inequality: the exponential decay of the relative entropy $H(f) - H(f_\infty)$ implies exponential decay of the total variation distance, which in turn implies convergence to equilibrium in all physical observables. The constant in the Csisz\'{a}r--Kullback--Pinsker inequality is sharp, and the inequality is a key tool in information theory and statistical mechanics.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{7. The Cercignani Conjecture}\label{ch2010cedricvillani:the-cercignani-conjecture}
-
-\subsection{7.1 The Conjecture}\label{ch2010cedricvillani:the-conjecture}
-
-In the 1980s, Carlo Cercignani conjectured a precise inequality relating
-entropy and entropy production for the spatially homogeneous Boltzmann
-equation:
-
-\[
-D(f) \ge \frac{\lambda}{2} H(f|f_{\text{eq}})
-\]
-
-where \(H(f|f_{\text{eq}}) = \int f \log(f/f_{\text{eq}})\) is the
-relative entropy and \(\lambda\) is the spectral gap of the linearized
-operator.
-
-\subsection{7.2 Villani's Work on the
-Conjecture}\label{ch2010cedricvillani:villanis-work-on-the-conjecture}
-
-Villani made important contributions to the Cercignani conjecture. While
-the full conjecture (with the optimal constant) remains open in general,
-Villani and collaborators proved: - The inequality holds with a positive
-constant (possibly smaller than \(\lambda/2\)) for many collision
-kernels. - For Maxwellian molecules (a special case), the conjecture is
-true with the optimal constant. - The conjecture is false in certain
-regimes (the constant may depend on the solution).
-
-\subsection{7.3 Significance}\label{ch2010cedricvillani:significance}
-
-The Cercignani conjecture, if fully resolved, would provide the optimal
-rate of convergence to equilibrium for the spatially homogeneous
-Boltzmann equation. Villani's work clarified the status of the
-conjecture and provided the best available results.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{8. Optimal Transport:
-Background}\label{ch2010cedricvillani:optimal-transport-background}
-
-\subsection{8.1 The Monge Problem}\label{ch2010cedricvillani:the-monge-problem}
-
-Optimal transport began with Gaspard Monge's 1781 problem: given two
-distributions of mass (e.g., a pile of sand and a target shape), find
-the most efficient way to transport the mass from the source to the
-target.
-
-Monge's problem: Find a map \(T\) such that:
-
-\[
-\int |T(x) - x| \, d\mu(x) \text{ is minimized subject to } T_*\mu = \nu
-\]
-
-\subsection{8.2 The Kantorovich
-Relaxation}\label{ch2010cedricvillani:the-kantorovich-relaxation}
-
-In 1942, Leonid Kantorovich proposed a relaxed formulation: instead of a
-map, consider a \textbf{transport plan} --- a joint distribution \(\pi\)
-on the product space:
-
-\[
-\int |x - y| \, d\pi(x, y) \text{ minimized subject to } \pi \text{ having marginals } \mu, \nu
-\]
-
-\subsection{8.3 The Wasserstein
-Distance}\label{ch2010cedricvillani:the-wasserstein-distance}
-
-The \textbf{Wasserstein distance} measures the minimal cost of
-transporting one distribution to another:
-
-\[
-W_p(\mu, \nu) = \left( \inf_{\pi} \int |x - y|^p \, d\pi(x, y) \right)^{1/p}
-\]
-
-This metric has become a fundamental tool in many areas of mathematics.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{9. The Wasserstein Metric and the Monge--Ampère
-Equation}\label{ch2010cedricvillani:the-wasserstein-metric-and-the-mongeampuxe8re-equation}
-
-\subsection{9.1 Optimal Transport and
-PDE}\label{ch2010cedricvillani:optimal-transport-and-pde}
-
-A significant connection, discovered by Brenier (1991) and further
-developed by McCann, Otto, and others, links optimal transport to
-partial differential equations. The optimal transport map satisfies the
-\textbf{Monge--Ampère equation}:
-
-\[
-\det(\nabla^2 \varphi) \circ T^{-1} = \frac{\mu}{\nu \circ T^{-1}}
-\]
-
-\subsection{9.2 The Otto Calculus}\label{ch2010cedricvillani:the-otto-calculus}
-
-Felix Otto (2001) realized that the Wasserstein metric endows the space
-of probability measures with a formal Riemannian structure, and many
-PDEs (the heat equation, the Fokker--Planck equation, etc.) can be
-interpreted as \textbf{gradient flows} in this metric space.
-
-\subsection{9.3 Villani's Contributions}\label{ch2010cedricvillani:villanis-contributions}
-
-Villani made fundamental contributions to the theory of optimal
-transport: - \textbf{Regularity of optimal transport maps:} With Figalli
-and De Philippis, he proved that optimal transport maps are smooth under
-natural conditions. - \textbf{Wasserstein geometry:} He developed the
-geometric theory of Wasserstein spaces. - \textbf{Gradient flows:} He
-studied the gradient flow structure of PDEs in Wasserstein space.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{10. Villani's Books on Optimal
-Transport}\label{ch2010cedricvillani:villanis-books-on-optimal-transport}
-
-\subsection{\texorpdfstring{10.1 \emph{Topics in Optimal Transportation}
-(2003)}{10.1 Topics in Optimal Transportation (2003)}}\label{ch2010cedricvillani:topics-in-optimal-transportation-2003}
-
-This book, based on a graduate course, provides a comprehensive
-introduction to optimal transport theory. It covers: - The Monge and
-Kantorovich problems - The Wasserstein metric - The Brenier theorem -
-Connections to PDE
-
-\subsection{\texorpdfstring{10.2 \emph{Optimal Transport: Old and New}
-(2009)}{10.2 Optimal Transport: Old and New (2009)}}\label{ch2010cedricvillani:optimal-transport-old-and-new-2009}
-
-This massive treatise (1000+ pages) is the definitive reference on
-optimal transport. It covers: - The complete theory from Monge to the
-present - Applications to geometry, analysis, and probability - Open
-problems and future directions
-
-\subsection{10.3 Impact}\label{ch2010cedricvillani:impact-1}
-
-These books have been instrumental in popularizing optimal transport
-theory and making it accessible to a wide range of mathematicians. They
-are cited thousands of times and are considered essential references for
-anyone working in the field.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{11. Nonlinear Landau Damping}\label{ch2010cedricvillani:nonlinear-landau-damping}
-
-\subsection{11.1 The Physical Phenomenon}\label{ch2010cedricvillani:the-physical-phenomenon}
-
-Landau damping, predicted by Lev Landau in 1946, is a phenomenon in
-plasma physics where plasma waves (Langmuir waves) decay exponentially
-in time, even in the absence of collisions. The damping is caused by the
-interaction of the wave with particles moving at the wave's phase
-velocity --- particles moving slightly faster than the wave give energy
-to the wave, while particles moving slightly slower absorb energy. If
-the velocity distribution has a negative slope at the wave speed, the
-net effect is damping.
-
-\subsection{11.2 The Linear Theory}\label{ch2010cedricvillani:the-linear-theory}
-
-Landau's calculation was for the \textbf{linearized} Vlasov--Poisson
-equation. He showed that the electric field decays as:
-
-\[
-E(t) \sim e^{-\gamma t}
-\]
-
-where \(\gamma\) is the \textbf{Landau damping rate}, determined by the
-slope of the velocity distribution at the wave speed.
-
-\subsection{11.3 The Nonlinear Question}\label{ch2010cedricvillani:the-nonlinear-question}
-
-The crucial question: does Landau damping persist in the \textbf{full
-nonlinear} Vlasov--Poisson equation? For decades, this was believed to
-be true but was not rigorously proved. The difficulty is that nonlinear
-effects could, in principle, produce lasting echoes or other phenomena
-that prevent decay.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{12. The Mouhot--Villani Proof of Landau
-Damping}\label{ch2010cedricvillani:the-mouhotvillani-proof-of-landau-damping}
-
-\subsection{12.1 The Main Theorem}\label{ch2010cedricvillani:the-main-theorem}
-
-In a 2010 paper, Clément Mouhot and Cédric Villani proved:
-
-\textbf{Theorem:} For the Vlasov--Poisson equation on a periodic domain
-\(\mathbb{T}^d \times \mathbb{R}^d\), if the initial distribution
-function is sufficiently close to a stable homogeneous state (e.g., a
-Maxwellian), then: 1. The distribution function converges to a**
-homogeneous** state (a function of velocity only) as \(t \to \infty\).
-2. The electric field decays exponentially to zero. 3. The decay rate is
-given by the linear Landau damping rate (to leading order).
-
-\subsection{12.2 The Method}\label{ch2010cedricvillani:the-method-1}
-
-The proof uses: - \textbf{Hamiltonian mechanics:} The Vlasov--Poisson
-system is a Hamiltonian system on the space of distribution functions. -
-\textbf{Complex analysis:} The Laplace transform method, extending
-Landau's original calculation. - \textbf{Nonlinear analysis:} A
-Newton-type iteration scheme to control nonlinear interactions. -
-\textbf{Return to equilibrium:} Use of the linear damping result in a
-perturbative framework.
-
-\subsection{12.3 Key Ingredients}\label{ch2010cedricvillani:key-ingredients}
-
-The technical tools include: - \textbf{Analytic norms:} The use of
-Gevrey regularity (intermediate between \(C^\infty\) and analytic) to
-control the nonlinearity - \textbf{Dispersion estimates:} Quantitative
-bounds on the transport of particles - \textbf{KAM-type ideas:} The
-proof uses a ``normal form'' transformation to eliminate resonant
-interactions
-
-\subsection{12.4 Significance}\label{ch2010cedricvillani:significance-1}
-
-The Mouhot--Villani proof resolved one of the important open
-problems in kinetic theory. Landau damping had been a cornerstone of
-plasma physics for over 60 years, but its rigorous mathematical
-justification was missing. The proof showed that Landau damping is not
-just a linear phenomenon but persists in the full nonlinear setting,
-under appropriate conditions.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{13. The Landau Equation and Plasma
-Physics}\label{ch2010cedricvillani:the-landau-equation-and-plasma-physics}
-
-\subsection{13.1 The Landau Equation}\label{ch2010cedricvillani:the-landau-equation}
-
-The Landau equation is the kinetic equation for a plasma with Coulomb
-collisions (long-range interactions). It is similar in structure to the
-Boltzmann equation but with a different collision operator (the Landau
-collision operator).
-
-\subsection{13.2 Villani's
-Contributions}\label{ch2010cedricvillani:villanis-contributions-1}
-
-Villani made fundamental contributions to the Landau equation: -
-\textbf{Existence of weak solutions:} Proved global existence for the
-spatially homogeneous Landau equation. - \textbf{Regularity:} Showed
-that solutions become smooth instantaneously. - \textbf{Asymptotic
-behavior:} Proved convergence to equilibrium.
-
-\subsection{13.3 The Landau Equation vs.~the Boltzmann
-Equation}\label{ch2010cedricvillani:the-landau-equation-vs.-the-boltzmann-equation}
-
-The Landau equation is in some ways more singular than the Boltzmann
-equation (the collision kernel has a strong angular singularity), but it
-also has more smoothing properties. Villani exploited these properties
-to obtain results that were not yet available for the Boltzmann
-equation.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{14. Hypocoercivity}\label{ch2010cedricvillani:hypocoercivity}
-
-\subsection{14.1 The Concept}\label{ch2010cedricvillani:the-concept}
-
-Hypocoercivity is a concept introduced by Villani (in a 2009 monograph)
-to describe the \textbf{return to equilibrium} for kinetic equations.
-While a system may not be directly coercive (the dissipation may not act
-on all degrees of freedom), the combination of transport and dissipation
-can nevertheless produce exponential convergence.
-
-\subsection{14.2 The Hypocoercivity
-Framework}\label{ch2010cedricvillani:the-hypocoercivity-framework}
-
-The key idea: Even if the collision operator only acts on the velocity
-variable, the \textbf{transport term} \(v \cdot \nabla_x\) couples
-position and velocity, eventually allowing the collisions to drive the
-entire system to equilibrium.
-
-Villani's hypocoercivity framework provides a systematic way to prove
-exponential convergence for such systems.
-
-\subsection{14.3 Applications}\label{ch2010cedricvillani:applications}
-
-The hypocoercivity framework has been applied to: - The Boltzmann
-equation - The Landau equation - The Fokker--Planck equation - Kinetic
-models of sociodynamics - Kinetic models of chemotaxis
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{15. Entropy and Information
-Theory}\label{ch2010cedricvillani:entropy-and-information-theory}
-
-\subsection{15.1 Entropy Methods}\label{ch2010cedricvillani:entropy-methods}
-
-Throughout his work, Villani has used entropy as a central tool: -
-\textbf{Entropy production:} Quantifying how fast entropy decreases -
-\textbf{Relative entropy:} Measuring distance to equilibrium -
-\textbf{Fisher information:} A refinement of entropy that gives sharper
-estimates
-
-\subsection{15.2 The H-Theorem Revisited}\label{ch2010cedricvillani:the-h-theorem-revisited}
-
-Villani's work on the H-theorem went beyond Boltzmann's original
-formulation: - \textbf{Quantitative H-theorem:} Not just that entropy
-decreases, but how fast - \textbf{Optimal constants:} Determining the
-best possible rates - \textbf{Nonlinear effects:} How nonlinear
-interactions affect the entropy decay
-
-\subsection{15.3 Connections to Information
-Theory}\label{ch2010cedricvillani:connections-to-information-theory}
-
-Villani has explored the connections between kinetic theory and
-information theory: - The Boltzmann entropy is the same as the Shannon
-entropy (up to a sign) - The Fisher information plays a central role in
-both fields (through de Bruijn's identity in information theory and
-through the entropy production in kinetic theory) - Optimal transport
-provides a geometric interpretation of information-theoretic quantities
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{16. Geometric Methods in Functional
-Inequalities}\label{ch2010cedricvillani:geometric-methods-in-functional-inequalities}
-
-\subsection{16.1 Functional Inequalities}\label{ch2010cedricvillani:functional-inequalities}
-
-Functional inequalities --- such as Sobolev inequalities, Poincaré
-inequalities, and logarithmic Sobolev inequalities --- are fundamental
-tools in analysis. Villani used optimal transport to prove and sharpen
-these inequalities.
-
-\subsection{16.2 The Brunn--Minkowski
-Inequality}\label{ch2010cedricvillani:the-brunnminkowski-inequality}
-
-The Brunn--Minkowski inequality in convex geometry states that the
-volume of the Minkowski sum of two sets satisfies certain concavity
-properties. Villani (building on work of McCann) showed that this
-inequality can be understood through optimal transport, and he proved
-sharper versions.
-
-\subsection{16.3 The Prékopa--Leindler
-Inequality}\label{ch2010cedricvillani:the-pruxe9kopaleindler-inequality}
-
-The Prékopa--Leindler inequality is a functional generalization of the
-Brunn--Minkowski inequality. Villani used optimal transport to give a
-new proof and to obtain the optimal constants.
-
-\subsection{16.4 The Talagrand
-Inequality}\label{ch2010cedricvillani:the-talagrand-inequality}
-
-The Talagrand inequality relates the Wasserstein distance to the
-relative entropy:
-
-\[
-W_2(\mu, \nu) \le \sqrt{2 H(\mu|\nu)}
-\]
-
-Villani extended this inequality to various settings (Riemannian
-manifolds, metric measure spaces) and used it as a tool in his study of
-the Boltzmann equation.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{17. Public Engagement and Science
-Policy}\label{ch2010cedricvillani:public-engagement-and-science-policy}
-
-\subsection{17.1 Director of the Institut Henri
-Poincaré}\label{ch2010cedricvillani:director-of-the-institut-henri-poincaruxe9}
-
-As director of IHP (2009--2017), Villani transformed the institute into
-a major center for mathematical research and public outreach. He
-established: - Monthly thematic programs - Public lecture series - The
-``Mathematics for Everyone'' initiative - The IHP's role as a hub for
-international collaborations
-
-\subsection{17.2 Member of the French
-Parliament}\label{ch2010cedricvillani:member-of-the-french-parliament}
-
-In 2017, Villani was elected to the French National Assembly for the
-Essonne department. During his term (2017--2022): - He authored a major
-report on artificial intelligence (``AI for Humanity'') - He advocated
-for increased research funding - He served on the Parliamentary Office
-for Scientific and Technological Assessment - He wrote a book on the
-role of mathematics in society
-
-\subsection{17.3 Public Intellectual}\label{ch2010cedricvillani:public-intellectual}
-
-Villani is one of the most recognizable mathematicians in the world,
-known for: - His distinctive style (spider brooches, cravats, elaborate
-attire) - His appearances in film (he appeared in the documentary
-\emph{The Great Mystery of Mathematics}) - His books for the general
-public (\emph{Theorems Live!}, \emph{The Mathematical House}) - His TED
-talks and public lectures
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{18. Awards and Recognition}\label{ch2010cedricvillani:awards-and-recognition}
-
-\textbf{2010:} - Fields Medal (International Mathematical Union)
-
-\textbf{2009:} - Fermat Prize (Institut de Mathématiques de Toulouse) -
-Henri Poincaré Prize (International Association of Mathematical Physics)
-
-\textbf{2008:} - Prize of the Jacques Herbrand Foundation (Académie des
-Sciences)
-
-\textbf{2007:} - European Mathematical Society Prize
-
-\textbf{2006:} - Prix Charles Lagrange (Académie Royale de Belgique)
-
-\textbf{2004:} - Louis Armand Prize (Académie des Sciences)
-
-\textbf{2003:} - Prix Jacques Neveu (Académie des Sciences)
-
-\textbf{Memberships:} - Corresponding Member, French Academy of Sciences
-- Member, European Academy of Sciences
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{19. Selected Major
-Publications}\label{ch2010cedricvillani:selected-major-publications}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
- \textbf{``Landau damping''} (with C. Mouhot). \emph{Acta Mathematica}
- 207(1), 29--201, 2011. --- \emph{The proof of nonlinear Landau
- damping.}
-\item
- \textbf{``On the rate of convergence to equilibrium for the spatially
- homogeneous Boltzmann equation''} (with L. Desvillettes). \emph{Annals
- of Mathematics} 159(1), 281--340, 2004. --- \emph{Exponential
- convergence for the Boltzmann equation.}
-\item
- \textbf{``On the trend to equilibrium for the Fokker--Planck equation
- and the Landau equation.''} \emph{Journal of Statistical Physics}
- 124(1), 37--73, 2006.
-\item
- \textbf{``Hypocoercivity.''} \emph{Memoirs of the American
- Mathematical Society} 202(950), 2009. --- \emph{Systematic framework
- for hypocoercivity.}
-\item
- \textbf{``On the trend to equilibrium for the spatially homogeneous
- Boltzmann equation.''} \emph{Inventiones Mathematicae} 149(2),
- 285--316, 2002.
-\item
- \textbf{``A review of mathematical topics in collisional kinetic
- theory''} (with L. Desvillettes). \emph{Handbook of Mathematical Fluid
- Dynamics} 1, 2002.
-\item
- \textbf{``Optimal transport, old and new.''} \emph{Grundlehren der
- mathematischen Wissenschaften} 338, Springer, 2009. --- \emph{The
- definitive reference on optimal transport.}
-\item
- \textbf{``Topics in optimal transportation.''} \emph{Graduate Studies
- in Mathematics} 58, AMS, 2003. --- \emph{Graduate-level introduction
- to optimal transport.}
-\item
- \textbf{``Regularity of optimal transport maps''} (with G. De
- Philippis and A. Figalli). \emph{Journal of the European Mathematical
- Society} 16(6), 2014.
-\item
- \textbf{``From the Boltzmann equation to the incompressible
- Navier--Stokes equations''} (with L. Saint-Raymond).
- \emph{Communications on Pure and Applied Mathematics} 57(1), 2004.
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{20. Ongoing Work and Future
-Directions}\label{ch2010cedricvillani:ongoing-work-and-future-directions}
-
-\subsection{20.1 Hydrodynamic Limits}\label{ch2010cedricvillani:hydrodynamic-limits}
-
-The derivation of fluid equations (Euler, Navier--Stokes) from kinetic
-equations remains an active area. Villani continues to work on: - The
-Boltzmann-to-Navier-Stokes limit - The Vlasov-to-magnetohydrodynamics
-limit - Quantitative error estimates for these limits
-
-\subsection{20.2 Biological Applications}\label{ch2010cedricvillani:biological-applications}
-
-Villani has recently been applying kinetic theory to biological
-problems: - \textbf{Chemotaxis:} The movement of organisms in response
-to chemical gradients - \textbf{Population dynamics:} Kinetic models of
-interacting populations - \textbf{Epidemiology:} Kinetic models of
-disease spread
-
-\subsection{20.3 Machine Learning}\label{ch2010cedricvillani:machine-learning}
-
-Villani's report on AI for the French government led to an interest in
-the mathematical foundations of machine learning. He has been working
-on: - \textbf{Optimal transport in machine learning:} Using Wasserstein
-distances for generative models - \textbf{Convergence of optimization
-algorithms:} Gradient flows in Wasserstein space - \textbf{The
-mathematics of neural networks:} Understanding the approximation
-capabilities of deep networks
-
-\subsection{20.4 Public Policy}\label{ch2010cedricvillani:public-policy}
-
-While no longer in parliament, Villani remains active in science policy,
-advising on: - AI regulation - Research funding - Mathematics education
-- International scientific collaboration
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section{21. Conclusion}\label{ch2010cedricvillani:conclusion}
-
-Cédric Villani received the Fields Medal in 2010 for two monumental
-achievements: the proof of exponential convergence to equilibrium for
-the Boltzmann equation, and the proof of nonlinear Landau damping for
-the Vlasov--Poisson equation. Both results resolved problems that had
-been open for over half a century and transformed our understanding of
-kinetic theory.
-
-Beyond these specific results, Villani's contributions to optimal
-transport --- both through his research and through his two monumental
-books --- have had a substantial impact on mathematics. Optimal
-transport, once a specialized topic, is now a central tool in analysis,
-geometry, probability, and applied mathematics.
-
-Villani's career also demonstrates the importance of mathematical
-exposition and public engagement. His books, lectures, and public
-service have made mathematics accessible to a wide audience and have
-inspired a new generation of mathematicians.
-
-The Fields Medal citation --- \emph{``for his proofs of nonlinear Landau
-damping and convergence to equilibrium for the Boltzmann equation''} ---
-captures his two greatest achievements. But his legacy extends far
-beyond these results, encompassing the development of optimal transport
-as a central mathematical tool, the creation of the hypocoercivity
-framework, and his role as a public intellectual bringing mathematics to
-society.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Exercises}
-\addcontentsline{toc}{section}{Exercises}
-
-\begin{exercise} Show that the Wasserstein distance $W_1(\\mu, \\nu)$ metrizes weak convergence of probability measures on a compact space. \end{exercise}
-
-\begin{exercise} Verify the Brenier theorem: the optimal transport map from a Gaussian to any other measure is the gradient of a convex function. \end{exercise}
-
-\begin{exercise} Compute the entropy production for the Boltzmann equation in the relaxation-time approximation. \end{exercise}
-
-\begin{exercise} Prove the Talagrand transportation inequality for the Gaussian measure. \end{exercise}
+The \emph{McKean--Vlasov equations} are nonlinear kinetic equations that describe the evolution of a probability distribution $f(t,x,v)$ in the mean-field limit of a large system of interacting particles. The collision term is a nonlinear functional of $f$ itself, and the equation has the form $\partial_t f + v \cdot \nabla_x f = Q[f](f)$, where $Q[f]$ is the linearized collision operator around the current state $f$. Villani's entropy method has been extended to McKean--Vlasov equations, and the convergence to equilibrium is proved using a combination of the entropy-entropy production inequality and a fixed-point argument in the Wasserstein space. The McKean--Vlasov framework connects the Boltzmann equation to the theory of mean-field games and to the study of large deviations for particle systems.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Villani developed the theory of optimal transport and its applications to PDEs, Riemannian geometry, and mathematical physics. His work on Landau damping in plasma physics and the entropy method for dissipation inequalities established deep connections between analysis, probability, and geometry.
-
-\section{22. References and Further
-Reading}\label{ch2010cedricvillani:references-and-further-reading}
-
-\subsection{Official Sources}\label{ch2010cedricvillani:official-sources}
-
-\begin{itemize}
-\tightlist
-\item
- ICM 2010 Fields Medal Announcement:
- https://www.icm2010.in/prize-winners-2010/fields-medal-cedric-villani
-\item
- IMU Fields Medal Citations:
- https://www.mathunion.org/imu-awards/fields-medal/fields-medal-2010
-\end{itemize}
-
-\subsection{Biographical and Overview
-Articles}\label{ch2010cedricvillani:biographical-and-overview-articles}
-
-\begin{itemize}
-\tightlist
-\item
- Villani, C. ``The Crowded Journey of a Mathematician.'' \emph{Notices
- of the AMS} 58(1), 2011.
-\item
- Ambrosio, L. ``The Work of Cédric Villani.'' ICM 2010 Laudatio.
-\item
- Villani, C. \emph{Birth of a Theorem: A Mathematical Adventure.}
- Farrar, Straus and Giroux, 2015.
-\end{itemize}
-
-\subsection{Key Technical References}\label{ch2010cedricvillani:key-technical-references}
-
-\begin{itemize}
-\tightlist
-\item
- Mouhot, C. and Villani, C. ``Landau damping.'' \emph{Acta Mathematica}
- 207 (2011), 29--201.
-\item
- Desvillettes, L. and Villani, C. ``On the rate of convergence to
- equilibrium for the spatially homogeneous Boltzmann equation.''
- \emph{Annals of Mathematics} 159 (2004), 281--340.
-\item
- Villani, C. ``Hypocoercivity.'' \emph{Memoirs of the AMS} 202 (2009).
-\item
- Villani, C. \emph{Optimal Transport: Old and New.} Springer, 2009.
-\end{itemize}
-
-\subsection{Background Reading}\label{ch2010cedricvillani:background-reading}
-
-\begin{itemize}
-\tightlist
-\item
- Boltzmann, L. ``Weitere Studien über das Wärmegleichgewicht unter
- Gasmolekülen.'' \emph{Wiener Berichte} 66 (1872), 275--370.
-\item
- Landau, L. ``On the vibration of the electronic plasma.''
- \emph{Journal of Physics USSR} 10 (1946), 25--34.
-\item
- Cercignani, C. \emph{The Boltzmann Equation and Its Applications.}
- Springer, 1988.
-\item
- Ambrosio, L., Gigli, N., and Savaré, G. \emph{Gradient Flows in Metric
- Spaces and in the Space of Probability Measures.} Birkhäuser, 2005.
-\end{itemize}
+Cédric Villani proved the exponential convergence to equilibrium for the Boltzmann equation using the entropy method and functional inequalities, and (with Mouhot) established nonlinear Landau damping for the Vlasov--Poisson system. His development of optimal transport theory, particularly the Wasserstein distance and its gradient flow structure, has become a central tool in analysis, geometry, and probability. His work connects kinetic theory, plasma physics, and Riemannian geometry through a unified functional-analytic framework.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{See Also}
-\addcontentsline{toc}{section}{See Also}
-
-This chapter relates to the following work by other Fields Medalists:
-\begin{itemize}
-  \item \textbf{\hyperref[ch1994pierrelouislions:pierre-louis-lions-fields-medal-1994-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Villani is Lions' student.
-  \item \textbf{\hyperref[ch2006terencetao:terence-tao-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact]{See Chapter on related work}} --- Tao's work on PDEs relates to Villani.
-\end{itemize}
-
