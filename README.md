@@ -1,5 +1,3 @@
-# Learning Fields Medal Mathematics: A First Course
-
 <p align="center">
   <img src="frontpage.png" alt="Front Cover" width="600"/>
 </p>
