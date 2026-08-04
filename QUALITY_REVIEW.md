@@ -32,7 +32,7 @@
 
 4. **Fixed Unicode error** (Jones chapter):
    - Replaced Chinese characters `有限` with English `finite`
-   - File: `chapters/chapter_1990_vaughan_jones.tex` line 85
+   - File: `chapters/1990_vaughan_jones.tex` line 85
 
 ### Remaining Issues (Acceptable for A Grade)
 - **Short chapters**: 22 chapters under 120 lines
