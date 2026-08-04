@@ -1,4 +1,4 @@
-\chapter{1950:Atle Selberg}\label{ch1950atleselberg:atle-selberg-fields-medal-1950-a-comprehensive-report}
+\chapter{Atle Selberg}\label{ch1950atleselberg:atle-selberg-fields-medal-1950-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -14,7 +14,7 @@ Advanced Study, Princeton \textbf{Doctoral Advisor:} Axel Thue (University of Os
 
 \section{Problem History}
 
-The Riemann zeta function $\zeta(s) = \sum_{n=1}^\infty n^{-s}$, central to analytic number theory, encodes the distribution of primes through its Euler product $\zeta(s) = \prod_p (1-p^{-s})^{-1}$ for $\operatorname{Re}(s) > 1$. The Riemann hypothesis---that all non-trivial zeros lie on the critical line $\operatorname{Re}(s) = 1/2$---remains the most important open problem in mathematics. Before Selberg, Hardy and Littlewood had shown that infinitely many zeros lie on the critical line, but gave no quantitative density estimate. The problem of determining what proportion of zeros lie on the critical line was considered intractable with existing methods, as it required controlling the argument of $\zeta(s)$ in the critical strip with unprecedented precision.
+The Riemann zeta function $\zeta(s) = \sum_{n=1}^\infty n^{-s}$, central to analytic number theory, encodes the distribution of primes through its Euler product $\zeta(s) = \prod_p (1-p^{-s})^{-1}$ for $\operatorname{Re}(s) > 1$. The Riemann hypothesis---that all non-trivial zeros lie on the critical line $\operatorname{Re}(s) = 1/2$---remains the most important open problem in mathematics. Before Selberg \cite{selberg1947}, Hardy and Littlewood had shown that infinitely many zeros lie on the critical line, but gave no quantitative density estimate. The problem of determining what proportion of zeros lie on the critical line was considered intractable with existing methods, as it required controlling the argument of $\zeta(s)$ in the critical strip with unprecedented precision.
 
 The prime number theorem $\pi(x) \sim x/\log x$, proved in 1896 by Hadamard and de la Vall\'{e}e Poussin using complex analysis (non-vanishing of $\zeta(1+it)$), was widely believed to require deep analytic methods. For decades, an elementary proof---using only real-variable methods---was considered impossible. The difficulty lay in the fact that all known proofs relied on the analytic continuation of $\zeta(s)$ to the critical strip and the study of its zeros. Chebyshev had established in the 1850s that $\pi(x)$ is sandwiched between constant multiples of $x/\log x$, but the exact asymptotic required understanding the fine structure of the zeros.
 
@@ -44,7 +44,7 @@ Selberg's contributions were multifaceted. For the zeros of $\zeta(s)$, he used 
 
 The \textbf{Selberg theta function} $\theta(t) = \arg \pi^{-it/2} \Gamma(1/4 + it/2)$ is defined in terms of the Gamma function and plays a central role in the theory of the Riemann zeta function. Selberg proved that the argument $S(T)$ of $\zeta(1/2 + iT)$ satisfies $S(T) = O(\log T)$, which follows from the Riemann--von Mangoldt formula and careful analysis of the error term. The proof uses the functional equation $\zeta(s) = \chi(s) \zeta(1-s)$ and the Stirling approximation for $\Gamma(s)$. The key insight is that the argument of $\zeta(s)$ on the critical line can be controlled by the argument of the Gamma factor, which is well understood.
 
-The \textbf{Selberg sieve} is the most flexible of all sieve methods. Given a set $\mathcal{A}$ of integers and a set of primes $\mathcal{P}$, the sieve estimates $S(\mathcal{A}, \mathcal{P}, z) = \#\{a \in \mathcal{A} : p \nmid a \text{ for all } p \in \mathcal{P}, p < z\}$. Selberg's insight was to use the Cauchy--Schwarz inequality with weights $\lambda_d$ satisfying $\lambda_1 = 1$ to obtain an optimal upper bound. The key identity is:
+The \textbf{Selberg sieve} \cite{selbergsieve} is the most flexible of all sieve methods. Given a set $\mathcal{A}$ of integers and a set of primes $\mathcal{P}$, the sieve estimates $S(\mathcal{A}, \mathcal{P}, z) = \#\{a \in \mathcal{A} : p \nmid a \text{ for all } p \in \mathcal{P}, p < z\}$. Selberg's insight was to use the Cauchy--Schwarz inequality with weights $\lambda_d$ satisfying $\lambda_1 = 1$ to obtain an optimal upper bound. The key identity is:
 \[S(\mathcal{A}, \mathcal{P}, z) \leq \sum_{a \in \mathcal{A}} \left( \sum_{\substack{d | (a, P(z))}} \lambda_d \right)^2\]
 where $P(z) = \prod_{p < z} p$. Expanding the square and interchanging sums gives:
 \[\sum_{d} \lambda_d \sum_{k} \lambda_k S(\mathcal{A}, \mathcal{P}, dk)\]

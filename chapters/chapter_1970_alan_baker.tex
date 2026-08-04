@@ -1,4 +1,4 @@
-\chapter{1970:Alan Baker}\label{ch1970alanbaker:alan-baker-fields-medal-1970-a-comprehensive-report}
+\chapter{Alan Baker}\label{ch1970alanbaker:alan-baker-fields-medal-1970-a-comprehensive-report}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -15,7 +15,7 @@ Elementary number theory (congruences, primitive roots, quadratic reciprocity), 
 \end{prereqs}
 
 \begin{objectives}
-State Baker's theorem with effective lower bounds on linear forms in logarithms; apply the theorem to solve classical Diophantine equations effectively; understand the role of auxiliary functions, the pigeonhole principle, and Pad\'e approximation in transcendence proofs; explain the connection between Baker's method and Siegel's zeta function; describe modern developments in transcendence theory.
+State Baker's theorem with effective lower bounds on linear forms in logarithms; apply the theorem to solve classical Diophantine equations effectively; understand the role of auxiliary functions, the pigeonhole principle, and Pad\'e approximation in transcendence proofs; explain the connection between Baker's method \cite{baker1966} and Siegel's zeta function; describe modern developments in transcendence theory.
 \end{objectives}
 
 \section{Problem History}
@@ -182,19 +182,19 @@ Baker's theorem transformed transcendental number theory into a domain of explic
 
 \textbf{Thue Equations:} The Tzanakis--de Weger algorithm (1992) combines Baker's bounds with LLL reduction to solve Thue equations completely in practice. This was one of the first major applications and demonstrated the power of effective methods in Diophantine analysis.
 
-\textbf{The Class Number Problem:} Baker's method provided the first effective proof that there are only finitely many imaginary quadratic fields with a given class number. Combined with computational verification for small discriminants, this resolved the full problem. The nine class number 1 fields are $\mathbb{Q}(\sqrt{-d})$ for $d \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}$.
+\textbf{The Class Number Problem:} Baker's method \cite{baker1966} provided the first effective proof that there are only finitely many imaginary quadratic fields with a given class number. Combined with computational verification for small discriminants, this resolved the full problem. The nine class number 1 fields are $\mathbb{Q}(\sqrt{-d})$ for $d \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}$.
 
-\textbf{The Mordell Equation:} Baker's method gave effective bounds for the Mordell equation $y^2 = x^3 + k$. The number of integer solutions is bounded by a constant depending only on $k$, and explicit bounds can be computed. For example, the equation $y^2 = x^3 - 2$ has the unique integer solution $(x, y) = (3, \pm 5)$.
+\textbf{The Mordell Equation:} Baker's method \cite{baker1966} gave effective bounds for the Mordell equation $y^2 = x^3 + k$. The number of integer solutions is bounded by a constant depending only on $k$, and explicit bounds can be computed. For example, the equation $y^2 = x^3 - 2$ has the unique integer solution $(x, y) = (3, \pm 5)$.
 
-\textbf{Catalan's Conjecture:} The equation $x^p - y^q = 1$ with $x, y > 0$ and $p, q \geq 2$ was conjectured by Catalan in 1844. Baker's method showed that $\max(p, q) \leq C$ for an explicit constant $C$, reducing the problem to a finite search. The conjecture was finally proved by Mihailescu (2002) using cyclotomic fields and Kummer theory, but Baker's reduction was essential. The only solution is $3^2 - 2^3 = 1$.
+\textbf{Catalan's Conjecture:} The equation $x^p - y^q = 1$ with $x, y > 0$ and $p, q \geq 2$ was conjectured by Catalan in 1844. Baker's method \cite{baker1966} showed that $\max(p, q) \leq C$ for an explicit constant $C$, reducing the problem to a finite search. The conjecture was finally proved by Mihailescu (2002) using cyclotomic fields and Kummer theory, but Baker's reduction was essential. The only solution is $3^2 - 2^3 = 1$.
 
 \textbf{$p$-adic Baker Theory:} Coates (1968) and others developed $p$-adic analogues of Baker's theorem, leading to applications in $S$-unit equations and the effective Mordell--Weil theorem. The $p$-adic method is particularly useful for elliptic curves and abelian varieties.
 
-\textbf{Transcendence of Periods:} Baker's methods were extended to prove the transcendence of certain periods. A \textbf{period} is a complex number whose real and imaginary parts are values of absolutely convergent integrals of rational functions over domains in $\mathbb{R}^n$ defined by polynomial inequalities with rational coefficients. The number $\pi$ is a period (as the area of the unit disk), and so is $e$ (via the exponential function). Baker's theorem implies that periods which are algebraic linear combinations of logarithms of algebraic numbers are either zero or transcendental.
+\textbf{Transcendence of Periods:} Baker's method \cite{baker1966}s were extended to prove the transcendence of certain periods. A \textbf{period} is a complex number whose real and imaginary parts are values of absolutely convergent integrals of rational functions over domains in $\mathbb{R}^n$ defined by polynomial inequalities with rational coefficients. The number $\pi$ is a period (as the area of the unit disk), and so is $e$ (via the exponential function). Baker's theorem implies that periods which are algebraic linear combinations of logarithms of algebraic numbers are either zero or transcendental.
 
 \textbf{Siegel's Zeta Function:} Siegel's work on the zeta function $\zeta(s, \mathfrak{a})$ was extended by Baker and others to study the distribution of values of $L$-functions at integer points. The connection between linear forms in logarithms and special values of $L$-functions is a central theme in modern number theory, with implications for the Birch--Swinnerton-Dyer conjecture and the Stark conjectures.
 
-\textbf{Pillai's Conjecture:} Baker's methods have been applied to the Pillai conjecture, which states that for fixed $k$, the equation $a^x - b^y = k$ has only finitely many solutions in positive integers $a, b, x, y$ with $a, b > 1$. This was proved by Baker himself using his linear forms in logarithms.
+\textbf{Pillai's Conjecture:} Baker's method \cite{baker1966}s have been applied to the Pillai conjecture, which states that for fixed $k$, the equation $a^x - b^y = k$ has only finitely many solutions in positive integers $a, b, x, y$ with $a, b > 1$. This was proved by Baker himself using his linear forms in logarithms.
 
 The class number formula for an imaginary quadratic field $K = \mathbb{Q}(\sqrt{-d})$ states:
 \[
@@ -208,7 +208,7 @@ The method of \textbf{Baker's linear forms in logarithms} can be stated more pre
 \]
 where $C(n)$ is an effectively computable constant depending only on $n$.
 
-\textbf{The Six Exponentials Theorem} provides a key corollary. If $x_1, x_2$ are $\mathbb{Q}$-linearly independent logarithms of algebraic numbers, and $y_1, y_2, y_3$ are $\mathbb{Q}$-linearly independent logarithms of algebraic numbers, then at least three of the six numbers $e^{x_i y_j}$ ($i = 1, 2$; $j = 1, 2, 3$) are algebraically independent. This theorem is proved using Baker's method and has applications to the transcendence of values of modular functions.
+\textbf{The Six Exponentials Theorem} provides a key corollary. If $x_1, x_2$ are $\mathbb{Q}$-linearly independent logarithms of algebraic numbers, and $y_1, y_2, y_3$ are $\mathbb{Q}$-linearly independent logarithms of algebraic numbers, then at least three of the six numbers $e^{x_i y_j}$ ($i = 1, 2$; $j = 1, 2, 3$) are algebraically independent. This theorem is proved using Baker's method \cite{baker1966} and has applications to the transcendence of values of modular functions.
 
 \section{Modern Views and Improvements}
 
@@ -224,25 +224,25 @@ The \textbf{abc conjecture} (Masser--Oesterl\'e, 1985) is closely related to Bak
 \]
 for every $\varepsilon > 0$, where $\text{rad}(n)$ is the product of distinct prime factors of $n$. Baker's theorem implies effective abc-type inequalities in special cases, while the abc conjecture would generalize many results, including a proof of Fermat's Last Theorem for sufficiently large exponents.
 
-The connection between Baker's method and abc is through the theory of heights on algebraic varieties. The height of a point on a variety measures the arithmetic complexity, and Baker's lower bounds can be interpreted as saying that points of bounded height cannot be too close to certain subvarieties.
+The connection between Baker's method \cite{baker1966} and abc is through the theory of heights on algebraic varieties. The height of a point on a variety measures the arithmetic complexity, and Baker's lower bounds can be interpreted as saying that points of bounded height cannot be too close to certain subvarieties.
 
-Linear forms in \textbf{elliptic logarithms} (Masser--W\"{u}stholz, 1988) extend Baker's method to abelian varieties. If $E$ is an elliptic curve over $\mathbb{Q}$ and $P_1, \ldots, P_n$ are points on $E(\mathbb{Q})$, then any nontrivial linear combination of the elliptic logarithms of the $P_i$ is bounded below effectively. This allows computation of the Mordell--Weil group $E(\mathbb{Q})$ in practice, though the bounds are typically too large for direct computation without additional reduction techniques.
+Linear forms in \textbf{elliptic logarithms} (Masser--W\"{u}stholz, 1988) extend Baker's method \cite{baker1966} to abelian varieties. If $E$ is an elliptic curve over $\mathbb{Q}$ and $P_1, \ldots, P_n$ are points on $E(\mathbb{Q})$, then any nontrivial linear combination of the elliptic logarithms of the $P_i$ is bounded below effectively. This allows computation of the Mordell--Weil group $E(\mathbb{Q})$ in practice, though the bounds are typically too large for direct computation without additional reduction techniques.
 
-Algebraic independence theory benefits from Baker's methods. His theorem implies that logarithms of multiplicatively independent algebraic numbers are linearly independent over $\overline{\mathbb{Q}}$. More recently, the \textbf{six exponentials theorem} (Lang, 1966) and its variants have been proved using Baker-type methods.
+Algebraic independence theory benefits from Baker's method \cite{baker1966}s. His theorem implies that logarithms of multiplicatively independent algebraic numbers are linearly independent over $\overline{\mathbb{Q}}$. More recently, the \textbf{six exponentials theorem} (Lang, 1966) and its variants have been proved using Baker-type methods.
 
 The \textbf{Schanuel conjecture}---predicting transcendence degree $\geq n$ for $\mathbb{Q}(\alpha_1, \ldots, \alpha_n, e^{\alpha_1}, \ldots, e^{\alpha_n})$ when the $\alpha_i$ are $\mathbb{Q}$-linearly independent---remains the central open problem in transcendence theory. Baker's theorem proves it in the special case where the $\alpha_i$ are logarithms of algebraic numbers, but the general case is wide open. Resolution of the Schanuel conjecture would imply the transcendence of virtually all ``naturally occurring'' constants, including $\pi + e$, $e^\pi$, and $\zeta(3)$ (Apery's theorem is a special case).
 
 Recent developments include:
 \begin{itemize}
     \item \textbf{p-adic transcendence theory} (Adler, 1996; Beukers, 2003): $p$-adic analogues of Baker's theorem have been developed, with applications to the transcendence of $p$-adic periods and $L$-function values.
-    \item \textbf{Diophantine approximation on manifolds} (Bertrand, 2006): Baker's methods have been extended to study approximation of points on algebraic varieties by rational points of bounded height.
-    \item \textbf{Effective bounds for modular equations} (Chudnovsky, 1984): The theory of modular functions and their values at CM points has been refined using Baker's method, with applications to the complexity of computing $\pi$ and other constants.
-    \item \textbf{Transcendence of values of E-functions} (Anderson, 1996; Bombieri, 1984): Baker's methods have been adapted to study the transcendence of values of E-functions, which satisfy linear differential equations with polynomial coefficients.
+    \item \textbf{Diophantine approximation on manifolds} (Bertrand, 2006): Baker's method \cite{baker1966}s have been extended to study approximation of points on algebraic varieties by rational points of bounded height.
+    \item \textbf{Effective bounds for modular equations} (Chudnovsky, 1984): The theory of modular functions and their values at CM points has been refined using Baker's method \cite{baker1966}, with applications to the complexity of computing $\pi$ and other constants.
+    \item \textbf{Transcendence of values of E-functions} (Anderson, 1996; Bombieri, 1984): Baker's method \cite{baker1966}s have been adapted to study the transcendence of values of E-functions, which satisfy linear differential equations with polynomial coefficients.
 \end{itemize}
 
 The \textbf{Gelfond--Baker method} has become a standard tool in Diophantine geometry. It is used in the study of integral points on curves (Siegel's theorem), rational points on varieties (Faltings' theorem), and the distribution of Galois orbits. The method has also found applications in coding theory and cryptography, particularly in the analysis of lattice-based cryptosystems.
 
-Baker's work has influenced not only pure mathematics but also theoretical computer science. The LLL algorithm, which is fundamental to computational number theory and cryptography, was developed in the context of Baker's methods. The study of heights and Diophantine approximation has connections to the theory of computational complexity, particularly in the study of arithmetic circuits and the complexity of polynomial factorization.
+Baker's work has influenced not only pure mathematics but also theoretical computer science. The LLL algorithm, which is fundamental to computational number theory and cryptography, was developed in the context of Baker's method \cite{baker1966}s. The study of heights and Diophantine approximation has connections to the theory of computational complexity, particularly in the study of arithmetic circuits and the complexity of polynomial factorization.
 
 \subsection*{The Baker--W\"{u}stholz Height Theorem}
 
@@ -254,15 +254,15 @@ where $h'(\alpha) = \log H(\alpha)$ is the modified logarithmic height. This bou
 
 \subsection*{Applications to $S$-Unit Equations}
 
-The $S$-unit equation $x + y = 1$ with $x, y \in \mathcal{O}_S^*$ (the group of $S$-units in a number field $K$) has been extensively studied using Baker's method. Siegel (1972) proved that this equation has finitely many solutions, and Baker's effective bounds provide explicit upper bounds on the heights of the solutions. This has applications to the study of integral points on elliptic curves and to the proof of Faltings' theorem (Mordell conjecture).
+The $S$-unit equation $x + y = 1$ with $x, y \in \mathcal{O}_S^*$ (the group of $S$-units in a number field $K$) has been extensively studied using Baker's method \cite{baker1966}. Siegel (1972) proved that this equation has finitely many solutions, and Baker's effective bounds provide explicit upper bounds on the heights of the solutions. This has applications to the study of integral points on elliptic curves and to the proof of Faltings' theorem (Mordell conjecture).
 
-The theory of $S$-unit equations is deeply connected to the study of integral points on algebraic varieties. By Siegel's theorem, an affine curve of genus $g \geq 1$ has only finitely many integral points. Baker's method provides effective bounds for these points in terms of the genus, the degree of the curve, and the height of the coefficients.
+The theory of $S$-unit equations is deeply connected to the study of integral points on algebraic varieties. By Siegel's theorem, an affine curve of genus $g \geq 1$ has only finitely many integral points. Baker's method \cite{baker1966} provides effective bounds for these points in terms of the genus, the degree of the curve, and the height of the coefficients.
 
 \subsection*{Transcendence of Periods}
 
-The theory of \textbf{periods} ( Kontsevich--Zagier, 2001) has been enriched by Baker's methods. A period is a complex number whose real and imaginary parts are values of absolutely convergent integrals of rational functions over domains in $\mathbb{R}^n$ defined by polynomial inequalities with rational coefficients. Examples include $\pi$, $\log 2$, and values of the Riemann zeta function at positive integers. Baker's theorem implies that periods which are algebraic linear combinations of logarithms of algebraic numbers are either zero or transcendental.
+The theory of \textbf{periods} ( Kontsevich--Zagier, 2001) has been enriched by Baker's method \cite{baker1966}s. A period is a complex number whose real and imaginary parts are values of absolutely convergent integrals of rational functions over domains in $\mathbb{R}^n$ defined by polynomial inequalities with rational coefficients. Examples include $\pi$, $\log 2$, and values of the Riemann zeta function at positive integers. Baker's theorem implies that periods which are algebraic linear combinations of logarithms of algebraic numbers are either zero or transcendental.
 
-The connection between periods and $L$-functions is a central theme in modern number theory. The Stark conjectures predict that certain derivatives of $L$-functions at $s = 0$ are periods, and Baker's methods provide tools for studying these conjectures.
+The connection between periods and $L$-functions is a central theme in modern number theory. The Stark conjectures predict that certain derivatives of $L$-functions at $s = 0$ are periods, and Baker's method \cite{baker1966}s provide tools for studying these conjectures.
 
 \subsection*{The Baker--Davenport Lemma}
 
@@ -274,7 +274,7 @@ then $p/q$ must be a convergent of the continued fraction expansion of $\alpha$.
 
 The Baker--Davenport lemma is particularly useful in the context of the \textbf{linear forms in logarithms method}. When one obtains an upper bound on $|\Lambda|$ from a Diophantine equation, one needs to convert this into a bound on the variables. The lemma ensures that only a finite number of convergents need to be checked, making the computation feasible.
 
-\textbf{Applications to Quadratic Forms:} Baker's methods have been applied to the study of indefinite quadratic forms in three or more variables. The equation $ax^2 + by^2 + cz^2 = 0$ has been studied extensively, and Baker's lower bounds on linear forms in logarithms provide effective criteria for the existence of nontrivial integer solutions.
+\textbf{Applications to Quadratic Forms:} Baker's method \cite{baker1966}s have been applied to the study of indefinite quadratic forms in three or more variables. The equation $ax^2 + by^2 + cz^2 = 0$ has been studied extensively, and Baker's lower bounds on linear forms in logarithms provide effective criteria for the existence of nontrivial integer solutions.
 
 \subsection*{Baker's Earlier Work on Irrationality Measures}
 
@@ -290,7 +290,7 @@ This perspective has led to generalizations to other algebraic groups, including
 
 \subsection*{The Baker--Coates Theorem}
 
-Coates (1970) extended Baker's methods to the $p$-adic setting, proving that $p$-adic linear forms in logarithms satisfy similar effective lower bounds. The \textbf{Baker--Coates theorem} states that for $p$-adic algebraic numbers $\alpha_1, \ldots, \alpha_n$ and $\beta_0, \ldots, \beta_n$, the $p$-adic absolute value of a nonzero linear form satisfies
+Coates (1970) extended Baker's method \cite{baker1966}s to the $p$-adic setting, proving that $p$-adic linear forms in logarithms satisfy similar effective lower bounds. The \textbf{Baker--Coates theorem} states that for $p$-adic algebraic numbers $\alpha_1, \ldots, \alpha_n$ and $\beta_0, \ldots, \beta_n$, the $p$-adic absolute value of a nonzero linear form satisfies
 \[
 |\Lambda|_p > \exp(-C \cdot \log_p B),
 \]
@@ -335,8 +335,8 @@ Several important open problems remain in the area of transcendental number theo
 \begin{itemize}
     \item \textbf{The Schanuel conjecture} remains the central open problem. Its resolution would settle the transcendence of most naturally occurring constants and has far-reaching consequences for number theory.
     \item \textbf{Effective bounds for linear forms in elliptic logarithms} are still being refined. The current bounds are too large for direct computation in many cases, and improving them is an active area of research.
-    \item \textbf{The abc conjecture} remains unproved, though recent work by Mochizuki (2012--2016) claims a proof using inter-universal Teichmüller theory. The relationship between abc and Baker's methods continues to be explored.
-    \item \textbf{Transcendence of values of modular functions} at non-CM points is largely unknown. While Baker's methods handle CM points well, the general case remains open.
+    \item \textbf{The abc conjecture} remains unproved, though recent work by Mochizuki (2012--2016) claims a proof using inter-universal Teichmüller theory. The relationship between abc and Baker's method \cite{baker1966}s continues to be explored.
+    \item \textbf{Transcendence of values of modular functions} at non-CM points is largely unknown. While Baker's method \cite{baker1966}s handle CM points well, the general case remains open.
 \end{itemize}
 
 Baker's legacy extends beyond his theorems. His proof techniques have influenced generations of number theorists, and his style of combining deep theoretical insights with concrete computational applications continues to shape the field. The Fields Medal citation accurately captured the significance of his work: ``a decisive advance in several classical problems of Diophantine geometry.''
@@ -355,4 +355,4 @@ H(\Lambda) \geq \exp(-C \cdot \log B),
 \]
 where $B$ is a bound on the coefficients. This formulation connects Baker's work to the broader theory of Diophantine approximation on algebraic groups.
 
-The theory of heights also provides a natural framework for generalizing Baker's methods to other settings. For example, one can consider heights on projective varieties, abelian varieties, and more general algebraic groups. Each setting requires its own adaptations of the auxiliary function method, but the underlying principles remain the same.
+The theory of heights also provides a natural framework for generalizing Baker's method \cite{baker1966}s to other settings. For example, one can consider heights on projective varieties, abelian varieties, and more general algebraic groups. Each setting requires its own adaptations of the auxiliary function method, but the underlying principles remain the same.

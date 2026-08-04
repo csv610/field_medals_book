@@ -1,4 +1,4 @@
-\chapter{2006:Terence Tao}\label{ch2006terencetao:terence-tao-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact}
+\chapter{Terence Tao}\label{ch2006terencetao:terence-tao-fields-medal-2006-a-comprehensive-report-on-his-work-and-impact}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -8,7 +8,7 @@
 
 \begin{prereqs} Real analysis ($L^p$ spaces, Fourier analysis, Sobolev spaces), basic PDE theory (well-posedness, energy methods), additive combinatorics (sumset structure, Gowers norms). \end{prereqs}
 
-\begin{objectives} Prove the Green--Tao theorem that primes contain arbitrarily long arithmetic progressions; explain the transference principle; describe the inverse theorem for Gowers norms; understand the Four Moment Theorem for random matrix universality. \end{objectives}
+\begin{objectives} Prove the Green--Tao theorem \cite{greentao2008} that primes contain arbitrarily long arithmetic progressions; explain the transference principle; describe the inverse theorem for Gowers norms; understand the Four Moment Theorem for random matrix universality. \end{objectives}
 
 \section{Problem History}
 
@@ -28,13 +28,13 @@ The \emph{Kakeya conjecture} asserts that sets in $\mathbb{R}^n$ containing a un
 
 The \emph{Szemer\'edi regularity lemma} (1975) and the \emph{graph removal lemma} provide combinatorial tools for detecting structure in dense graphs and hypergraphs. Tao's work connects these combinatorial tools to additive number theory through the transference principle, showing that pseudorandom sets behave like dense sets for the purposes of detecting additive patterns. The key insight is that the ``error terms'' in the regularity lemma can be controlled uniformly for pseudorandom measures, allowing the density-based conclusions to be transferred. The transference principle has been refined by Green and Tao into a general framework: given a sparse set $A$ and a dense ``model'' $B$, the distribution of linear patterns in $A$ is close to that in $B$, provided $A$ satisfies the appropriate pseudorandomness conditions. The pseudorandomness is measured using the Gowers norm, and the model is constructed using the W-trick and the Hardy--Littlewood circle method.
 
-The \emph{Green--Tao theorem} for polynomial sequences (2010) extends the original result to show that the primes contain arbitrarily long polynomial progressions $p, p+q(1), \ldots, p+q(k)$ where $q(1), \ldots, q(k)$ are integer-valued polynomials. The proof uses a generalization of the transference principle to polynomial sequences, combined with the inverse theorem for Gowers norms and the theory of nilsequences. The key new ingredient is the \emph{linear forms condition}, which ensures that the weighted primes are pseudorandom with respect to all linear forms arising from the polynomial progression.
+The \emph{Green--Tao theorem \cite{greentao2008}} for polynomial sequences (2010) extends the original result to show that the primes contain arbitrarily long polynomial progressions $p, p+q(1), \ldots, p+q(k)$ where $q(1), \ldots, q(k)$ are integer-valued polynomials. The proof uses a generalization of the transference principle to polynomial sequences, combined with the inverse theorem for Gowers norms and the theory of nilsequences. The key new ingredient is the \emph{linear forms condition}, which ensures that the weighted primes are pseudorandom with respect to all linear forms arising from the polynomial progression.
 
 The \emph{Gowers norms} are defined recursively: $\|f\|_{U^1} = |\mathbb{E}_x f(x)|$ and $\|f\|_{U^k}^{2^k} = \mathbb{E}_h \|f \cdot T_h f\|_{U^{k-1}}^{2^{k-1}}$, where $T_h f(x) = f(x+h)$ is the translation operator. The Gowers $U^2$ norm controls the distribution of 2-term progressions (i.e., the correlation $f(x) f(x+h)$), and the $U^k$ norm controls the distribution of $k$-term progressions. The inverse theorem states that if $\|f\|_{U^k} \ge \delta$, then $f$ has nontrivial correlation with a $(k-1)$-step nilsequence, which is a function of the form $F(g(n)\Gamma)$ where $G$ is a $(k-1)$-step nilpotent Lie group. This inverse theorem is the key to the Green--Tao proof, as it shows that any set with large Gowers norm must contain additive structure.
 
 \section{How Was It Solved}
 
-\textbf{The Green--Tao theorem (2004).} With Ben Green, Tao proved that the primes contain arbitrarily long arithmetic progressions. The proof proceeds in three steps. First, they developed the \emph{transference principle}: a method for applying density-based results (like Szemer\'edi's theorem) to sparse sets that are ``pseudorandom.'' The idea is to find a dense set $B$ that ``models'' the sparse set $A$ in the sense that linear patterns are distributed similarly, apply the density result to $B$, and transfer the conclusion back to $A$.
+\textbf{The Green--Tao theorem \cite{greentao2008} (2004).} With Ben Green, Tao proved that the primes contain arbitrarily long arithmetic progressions. The proof proceeds in three steps. First, they developed the \emph{transference principle}: a method for applying density-based results (like Szemer\'edi's theorem) to sparse sets that are ``pseudorandom.'' The idea is to find a dense set $B$ that ``models'' the sparse set $A$ in the sense that linear patterns are distributed similarly, apply the density result to $B$, and transfer the conclusion back to $A$.
 
 Second, they proved the pseudorandomness of the primes. Using the W-trick to handle the irregularity of primes (e.g., all large primes are odd), they showed that the weighted primes satisfy the necessary linear forms conditions, verified using classical results on primes in arithmetic progressions. Precisely, the W-trick replaces the primes with the set $\mathcal{P}_w = \{p \in \mathbb{P} : p \equiv w \pmod{W}\}$ where $W = \prod_{p \le N^{1/c}} p$ for some constant $c$, making the set ``uniformly distributed'' in arithmetic progressions.
 
@@ -62,7 +62,7 @@ The \emph{Strichartz estimates} for the Schr\"odinger equation, which Tao used e
 
 \section{Impact of This Discovery}
 
-The Green--Tao theorem transformed additive number theory and demonstrated the power of the transference principle, which has been applied to many other sparse sets including squarefree numbers, Chen primes, and polynomial progressions. The inverse theorem for Gowers norms has become a standard tool with applications to the Hardy--Littlewood circle method, the Chowla conjecture, and the Sarnak conjecture on the M\"obius function.
+The Green--Tao theorem \cite{greentao2008} transformed additive number theory and demonstrated the power of the transference principle, which has been applied to many other sparse sets including squarefree numbers, Chen primes, and polynomial progressions. The inverse theorem for Gowers norms has become a standard tool with applications to the Hardy--Littlewood circle method, the Chowla conjecture, and the Sarnak conjecture on the M\"obius function.
 
 The Four Moment Theorem and the proof of universality have had significant impact in random matrix theory, nuclear physics, quantum chaos, and data science. The polynomial method, developed with Guth and Katz, solved the Erd\H{o}s distance problem and the joints problem in incidence geometry. Tao's proof of the circular law---that the empirical spectral measure of a random matrix with i.i.d. entries converges to the uniform distribution on the unit disk---settled a conjecture open since the 1930s and demonstrated the power of his local Green's function approach combined with a hopping argument across the spectrum.
 
@@ -109,4 +109,4 @@ The \emph{Polymath project} model of collaborative mathematics, initiated by Tao
 \section*{Summary}
 \addcontentsline{toc}{section}{Summary}
 
-Tao proved the Green--Tao theorem that the primes contain arbitrarily long arithmetic progressions, developed the transference principle for sparse sets, proved the inverse theorem for Gowers norms, and established universality for random matrices. His work spans harmonic analysis, PDEs, combinatorics, number theory, and data science.
+Tao proved the Green--Tao theorem \cite{greentao2008} that the primes contain arbitrarily long arithmetic progressions, developed the transference principle for sparse sets, proved the inverse theorem for Gowers norms, and established universality for random matrices. His work spans harmonic analysis, PDEs, combinatorics, number theory, and data science.
