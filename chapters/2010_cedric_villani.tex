@@ -46,15 +46,28 @@ Villani \cite{villani2008}, building on his thesis work with Lions, developed th
 H(f) = \int f \log f \, dv
 \]
 
-decreases along solutions and reaches its minimum at the Maxwellian $f_\infty$. To prove exponential convergence, Villani introduced the notion of \textbf{spectral gap} for the linearized collision operator and established \textbf{functional inequalities} (notably the \textbf{Caffarelli--Kohn--Nirenberg estimates}) controlling the relative entropy.
+decreases along solutions and is minimized, subject to the conserved mass,
+momentum, and energy, by a Maxwellian $f_\infty$. Exponential convergence
+requires quantitative coercivity estimates and suitable assumptions on the
+solution and collision kernel; it is not a consequence of entropy monotonicity
+alone.
 
-The central result is the \textbf{entropy-entropy production inequality}: for the full nonlinear Boltzmann equation with hard potential collisions,
+One important family of estimates compares entropy production with a suitable
+distance to equilibrium. A global inequality of the simple form below does
+not hold for arbitrary solutions: the classical Cercignani inequality is false
+in that generality. Under additional regularity, moment, and lower-bound
+assumptions, quantitative entropy-production estimates yield convergence to
+equilibrium,
 
 \[
-\mathcal{D}(f) \geq C \cdot (H(f) - H(f_\infty)),
+\mathcal{D}(f) \geq C(f) \cdot (H(f) - H(f_\infty)),
 \]
 
-where $\mathcal{D}(f) = -dH/dt$ is the entropy production. This differential inequality immediately yields exponential decay of $H(f) - H(f_\infty)$, and hence convergence to equilibrium. Villani proved this inequality for a wide range of collision kernels, including the physically relevant case of hard spheres in $\mathbb{R}^3$.
+where $\mathcal{D}(f) = -dH/dt$ is the entropy production. When the
+coefficient is uniformly positive along the solution, the differential
+inequality yields exponential decay; otherwise one generally obtains weaker
+rates. Villani's work clarified the coercivity mechanisms and the hypotheses
+needed for such conclusions.
 
 The entropy production is given by:
 \[
@@ -70,9 +83,17 @@ With Clément Mouhot, Villani proved the \textbf{nonlinear Landau damping} theor
 \partial_t f + v \cdot \nabla_x f = E(t,x) \cdot \nabla_v f_\infty
 \]
 
-exhibits Landau damping: perturbations of the equilibrium $f_\infty$ decay exponentially in time. The difficulty is that the nonlinear Vlasov--Poisson system could, in principle, destabilize the equilibrium and prevent damping.
+exhibits Landau damping: under suitable stability and regularity assumptions,
+the electric field decays in time through phase mixing. The difficulty is
+that the nonlinear Vlasov--Poisson system could, in principle, destabilize the
+equilibrium and prevent damping.
 
-Mouhot and Villani proved that for \emph{Gevrey-class} initial perturbations (slightly smoother than analytic), the nonlinear damping persists: the solution remains close to a modulated equilibrium for all time, and the electric field decays exponentially. The proof introduces the method of \textbf{meta-equilibrium} and uses \textbf{weighted $C^k$ norms} adapted to the velocity variable. The Gevrey regularity is essential: for less regular data, the nonlinear effects can overcome the linear damping, and the result fails.
+Mouhot and Villani proved that for sufficiently small \emph{Gevrey-class}
+initial perturbations, the nonlinear damping persists: the solution remains
+close to a modulated equilibrium for all time, with quantitative decay of the
+electric field. The Gevrey regularity controls the nonlinear echo mechanism;
+for substantially less regular data, the nonlinear effects can overcome the
+linear damping.
 
 \textbf{Optimal Transport and Wasserstein Distance.}
 
@@ -90,7 +111,7 @@ W_2^2(\mu_0,\mu_1) = \inf \int_0^1 \int_{\mathbb{R}^d} |v(t,x)|^2 \, d\mu_t(x) \
 
 minimized over curves $(\mu_t)$ interpolating between $\mu_0$ and $\mu_1$ with velocity field $v$. The Wasserstein distance is the natural distance for comparing measures that account for the underlying geometry, and it governs the large-time behavior of the Fokker--Planck and Landau equations.
 
-The \textbf{Otto calculus} endows the space of probability measures with a Riemannian structure, making it a formal infinite-dimensional Riemannian manifold. Villani's work exploits this structure: the Boltzmann equation can be viewed as a gradient flow in the Wasserstein space, and the entropy-entropy production inequality is a consequence of the curvature bound in the sense of Lott--Sturm--Villani.
+The \textbf{Otto calculus} endows the space of probability measures with a formal infinite-dimensional Riemannian structure. This viewpoint is especially effective for diffusion equations such as Fokker--Planck. The Boltzmann collision operator, however, is not in general the standard Wasserstein gradient flow of the entropy, so its entropy production should not be identified with an LSV curvature estimate.
 
 \section{Impact of This Discovery}\label{ch2010cedricvillani:impact-of-this-discovery}
 
@@ -104,11 +125,15 @@ Optimal transport, which Villani helped develop into a central tool in analysis,
 
 The entropy method has been extended to \textbf{quantum kinetic equations} (quantum Boltzmann, quantum Landau), where the collision operator is replaced by a non-commutative analog and the entropy functional involves the quantum relative entropy. Recent work by Villani and collaborators studies \textbf{convergence to equilibrium for granular gases}, where the collision operator includes inelasticity.
 
-The theory of \textbf{hypocoercivity}, developed by Villani as a generalization of hypocoercivity, provides a unified framework for proving convergence to equilibrium in systems where dissipation is degenerate (acting only in some directions) and the dynamics must generate the missing dissipation through a combination of transport and diffusion. This theory applies to the Vlasov--Fokker--Planck equation, the Boltzmann equation with soft potentials, and certain McKean--Vlasov equations.
+The theory of \textbf{hypocoercivity}, developed and systematized by Villani, provides a unified framework for proving convergence to equilibrium in systems where dissipation is degenerate (acting only in some directions) and the dynamics must generate the missing dissipation through a combination of transport and diffusion. This theory applies to the Vlasov--Fokker--Planck equation, the Boltzmann equation with soft potentials, and certain McKean--Vlasov equations.
 
 Open problems include: proving Landau damping for \emph{less regular} initial data (beyond Gevrey class), establishing convergence to equilibrium for the Boltzmann equation with \emph{soft potentials} (where the spectral gap vanishes), and extending the entropy method to \emph{non-equilibrium} steady states in driven systems.
 
-The \textbf{Wasserstein gradient flow} structure of kinetic equations has become a major research direction, connecting the Boltzmann and Landau equations to the theory of curves of maximal slope in metric spaces.
+Wasserstein gradient-flow methods are powerful for diffusion and aggregation
+equations. Connections between kinetic equations, optimal transport, and
+metric gradient flows remain an active research area, but the Boltzmann
+collision operator itself is not generally the standard Wasserstein gradient
+flow of the entropy.
 
 The \emph{Wasserstein gradient flow} interpretation of the Fokker--Planck equation $\partial_t f = \Delta f + \nabla \cdot (f \nabla V)$ views the equation as a gradient flow of the free energy $F(f) = \int f \log f + f V$ in the Wasserstein space. The velocity field of the gradient flow is $v = -\nabla(\delta F / \delta f) = -\nabla(\log f + V)$, and the Wasserstein distance provides the natural metric for measuring the distance between solutions. The gradient flow interpretation connects the Fokker--Planck equation to the theory of curves of maximal slope (Ambrosio--Gigli--Savare), and it provides a unified framework for studying convergence to equilibrium for diffusion equations.
 

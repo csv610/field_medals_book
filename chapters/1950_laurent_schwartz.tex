@@ -57,7 +57,11 @@ Every distribution $T \in \mathcal{D}'(\Omega)$ can be represented locally as a 
 \end{theorem}
 
 \begin{proof}
-This follows from the structure theorem for distributions. One first shows that every distribution is of finite order on compact sets, then uses the fact that any distribution of order $m$ can be written as a derivative of order $m$ of a continuous function. The key step uses the Riesz representation theorem for linear functionals on $C_c(\Omega)$.
+This follows from the local structure theorem for distributions: after
+restricting to a relatively compact open set, a distribution of finite order
+can be represented as a finite sum of derivatives of continuous functions.
+The proof uses convolution with mollifiers and distributional estimates, not a
+direct application of the Riesz representation theorem.
 \end{proof}
 
 A \textbf{distribution} is a continuous linear functional $T: \mathcal{D}(\Omega) \to \mathbb{C}$. The space $\mathcal{D}'(\Omega)$ of all distributions is the dual of $\mathcal{D}(\Omega)$. Every locally integrable function $f \in L^1_{\text{loc}}(\Omega)$ defines a distribution by integration:
@@ -71,7 +75,7 @@ A sequence $T_n$ converges to $T$ in $\mathcal{D}'(\Omega)$ if $\langle T_n, \va
 \begin{example}[Convergence of distributions]
 Important examples of convergence in $\mathcal{D}'$ include:
 \begin{itemize}
-\item $\delta_\epsilon = \epsilon^{-1}\delta(x/\epsilon) \to \delta$ as $\epsilon \to 0$.
+\item If $\rho\in C_c^\infty(\mathbb{R})$ satisfies $\int\rho=1$, then $\rho_\epsilon(x)=\epsilon^{-1}\rho(x/\epsilon)\to\delta$ as $\epsilon\to0$.
 \item $\frac{\sin(nx)}{\pi x} \to \delta$ in the sense of distributions (approximate identity).
 \item $\sum_{n=-N}^N e^{2\pi i n x} \to \operatorname{III}(x)$, the Dirac comb.
 \end{itemize}
@@ -86,7 +90,12 @@ Every distribution $T \in \mathcal{D}'(\Omega)$ is infinitely differentiable. Fo
 For $\alpha = (1,0,\ldots,0)$, define $\partial_1 T$ by $\langle \partial_1 T, \varphi \rangle = -\langle T, \partial_1 \varphi \rangle$. Since $\varphi \mapsto \partial_1 \varphi$ is continuous on $\mathcal{D}(\Omega)$, the functional $\partial_1 T$ is well-defined and continuous. Iterating this construction gives $\partial^\alpha T$ for all $\alpha$.
 \end{proof}
 
-In particular, $\partial_j \delta(x) = -\delta'(x_j)$ satisfies $\langle \delta', \varphi \rangle = -\varphi'(0)$. This resolves the apparent paradox of the delta function: it is not a function but a linear functional, and the ``integral'' $\int f(x)\delta(x) \, dx$ is really the pairing $\langle \delta, f \rangle$.
+In particular, the distributional derivative satisfies
+$\langle \partial_j\delta,\varphi\rangle=-\partial_j\varphi(0)$.
+This resolves the apparent paradox of the delta function: it is not a
+function but a linear functional, and the ``integral'' $\int f(x)\delta(x) \, dx$
+is really the pairing $\langle \delta, f \rangle$ when the test function is
+admissible.
 
 The key property is that every distribution is a \textbf{local} object: if $T$ is a distribution on $\Omega$ and $\varphi$ vanishes on an open set $U$, then $\langle T, \varphi \rangle = 0$. This locality, together with the linearity and continuity axioms, makes distributions the natural generalization of functions for PDE theory.
 

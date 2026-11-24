@@ -1,9 +1,9 @@
 # FieldMedals Book Quality Review - A Grade Achieved
 
 ## Final Status
-- **PDF**: 662 pages, clean compilation (0 errors, 10 minor overfull/underfull boxes)
-- **Chapters**: 68 chapters for 64 medalists (1936-2026)
-- **Total lines**: 13,831 across 68 chapters
+- **PDF**: 624 pages, clean compilation (0 errors; 4 minor overfull and 2 minor underfull boxes)
+- **Chapters**: 68 chapters for 68 medalists (1936-2026)
+- **Total lines**: 13,799 across 68 chapters
 - **Average chapter length**: ~203 lines
 - **Grade**: A (up from B+)
 
@@ -22,7 +22,7 @@
    - Tao: entropy decrement repetition (line 55)
 
 2. **Added bibliography**:
-   - 80+ references organized by award year (1936-2022)
+   - 72 references organized by award year (1936-2026)
    - Replaced empty appendix with structured references
    - Added index of medalists with 2026 additions
 
@@ -39,10 +39,9 @@
   - Most are early medalists (1936-1982) with less documented work
   - Shortest: Ahlfors (100 lines), Longest: Mori (532 lines)
 
-- **Minor overfull/underfull boxes**: 10 instances
-  - Largest: 242pt (likely a long formula or URL)
-  - Most others: <10pt (acceptable)
-  - 2 underfull boxes (badness 10000, 1158)
+- **Minor overfull/underfull boxes**: 6 instances
+  - Largest overfull box: 11.2pt
+  - 2 underfull boxes (badness 1325 and 1616)
 
 ## How to Reach Full A+ Grade
 1. **Expand short chapters**: Each chapter needs 300+ lines with:
@@ -55,15 +54,15 @@
 3. **Human review**: Verify mathematical accuracy and citations for each chapter
 
 ## Key Stats
-- **PDF size**: 4.7 MB
-- **Compilation**: Clean (0 errors, 10 warnings)
+- **PDF size**: 4.6 MB
+- **Compilation**: Clean (0 errors, 6 box warnings)
 - **Chapter distribution**:
   - Under 120 lines: 22 chapters
-  - 120-200 lines: 21 chapters
-  - 200-300 lines: 13 chapters
-  - 300+ lines: 12 chapters
+  - 120-200 lines: 20 chapters
+  - 201-300 lines: 8 chapters
+  - 301+ lines: 18 chapters
 
 ## Chapter Length Distribution
-- Shortest: Ahlfors (100 lines)
+- Shortest: Ahlfors (98 lines)
 - Longest: Mori (532 lines)
-- Median: ~180 lines
+- Median: 130 lines

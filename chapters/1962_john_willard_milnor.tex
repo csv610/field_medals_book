@@ -56,28 +56,25 @@ can the same topological manifold carry multiple smooth structures?
 
 Milnor's construction begins with \textbf{3-sphere bundles over $S^4$}. Identifying
 $\mathbb{R}^4$ with the quaternions $\mathbb{H}$, a map $f: S^3 \to SO(4)$ is
-given by $f(u)v = u^h v u^j$ where $h + j = 1$. The total space $M_k$ is a
-smooth 7-manifold homeomorphic to $S^7$ for all odd $k$.
+given by $f(u)v = u^h v u^j$ where $h + j = 1$. For suitable integer
+parameters, the total space $M_k$ is a smooth homotopy 7-sphere; the
+classification of these bundles determines which parameters give the 28
+classes in $\Theta_7$.
 
-To show $M_k$ is \textbf{not diffeomorphic} to $S^7$, Milnor defined an invariant
-using Thom's cobordism theory. If $M^7 = \partial B^8$:
-
-\[\lambda(M) = 2q(B) - \tau(B) \mod 7\]
-
-where $q(B) = p_2[B]$ is a Pontryagin number and $\tau(B)$ is the signature.
-Computing: $\lambda(M_k) \equiv k^2 - 1 \mod 7$. For $k \not\equiv \pm 1 \mod 7$,
-$\lambda \neq 0$, proving $M_k$ is exotic.
+To distinguish the resulting smooth structures, Milnor computed
+characteristic numbers and used cobordism invariants. The calculation shows
+that some of these homotopy spheres are not diffeomorphic to the standard
+$S^7$; the complete classification, including the precise invariant and its
+normalization, was later obtained with Kervaire.
 
 With Kervaire, Milnor classified all homotopy spheres. The result:
 
 \[\Theta_7 \cong \mathbb{Z}/28\]
 
-so there are exactly 28 distinct smooth structures on $S^7$. The general formula:
-
-\[|\Theta_n| = \frac{2^{2n-2}(2^{n-1}-1)B_n}{n} \cdot \alpha_n\]
-
-involves Bernoulli numbers, revealing a deep connection between differential
-topology and number theory.
+so there are exactly 28 distinct smooth structures on $S^7$. For general
+dimensions, the groups of homotopy spheres are related to stable homotopy
+groups of spheres and the image of the $J$-homomorphism; their orders are not
+given by one uniform elementary Bernoulli-number formula.
 
 The \textbf{h-cobordism theorem} states: if $W$ is a simply connected h-cobordism
 between closed $n$-manifolds with $n \geq 5$, then $W \cong M_0 \times [0,1]$.

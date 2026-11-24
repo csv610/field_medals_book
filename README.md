@@ -2,13 +2,13 @@
   <img src="frontpage.png" alt="Front Cover" width="600"/>
 </p>
 
-A comprehensive, accessible introduction to modern mathematics through the work of every Fields Medalist from 1936 to 2022. Written for undergraduate mathematics students, this book bridges the gap between textbook mathematics and cutting-edge research by presenting the ideas behind the most prestigious award in mathematics.
+A comprehensive, accessible introduction to modern mathematics through the work of every Fields Medalist from 1936 to 2026. Written for undergraduate mathematics students, this book bridges the gap between textbook mathematics and cutting-edge research by presenting the ideas behind the most prestigious award in mathematics.
 
 ## About the Book
 
 The Fields Medal, often called the "Nobel Prize of Mathematics," is awarded every four years by the International Mathematical Union to up to four mathematicians under the age of 40. Each medalist's work represents a profound advance in mathematical thought.
 
-This book profiles **64 Fields Medalists** across **1,721 pages**, covering:
+This book profiles **68 Fields Medalists** across **624 pages**, covering:
 
 - **Biographical context** — the mathematician's background, education, and career
 - **Mathematical contributions** — the theorems, conjectures, and frameworks that led to the award
@@ -40,6 +40,7 @@ This book profiles **64 Fields Medalists** across **1,721 pages**, covering:
 | 2014 | Artur Avila, Manjul Bhargava, Martin Hairer, Maryam Mirzakhani |
 | 2018 | Akshay Venkatesh, Alessio Figalli, Caucher Birkar, Peter Scholze |
 | 2022 | Hugo Duminil-Copin, James Maynard, June Huh, Maryna Viazovska |
+| 2026 | Hong Wang, Jacob Tsimerman, John Pardon, Yu Deng |
 
 ## Building from Source
 
@@ -67,10 +68,10 @@ A pre-built PDF is available in the repository root: [`field_medals.pdf`](field_
 ├── field_medals.pdf          # Compiled book (1,721 pages)
 ├── frontpage.png             # Cover image
 ├── chapters/                 # Individual chapter files
-│   ├── chapter_1936_jesse_douglas.tex
-│   ├── chapter_1936_lars_valerian_ahlfors.tex
+│   ├── 1936_jesse_douglas.tex
+│   ├── 1936_lars_valerian_ahlfors.tex
 │   ├── ...
-│   └── chapter_2022_maryna_viazovska.tex
+│   └── 2026_yu_deng.tex
 └── fields_medalists.txt      # List of all medalists
 ```
 

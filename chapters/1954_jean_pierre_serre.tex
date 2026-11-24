@@ -21,7 +21,7 @@ Note: Serre declined the 1954 Fields Medal but received it in 1958.}
 
 The computation of homotopy groups of spheres had been one of the most persistent challenges in algebraic topology since the 1930s. Hopf had computed $\pi_n(S^n) = \mathbb{Z}$ and $\pi_{2n-1}(S^n) = \mathbb{Z} \oplus \mathbb{Z}/2$ for $n$ even, but higher groups remained largely unknown. The problem had connections to the classification of fiber bundles, which was essential for understanding the topology of Lie groups and homogeneous spaces.
 
-The \textbf{Hopf fibration} $S^1 \to S^3 \to S^2$ was the first nontrivial example of a fiber bundle with nontrivial homotopy groups. Its generalization to $S^n \to S^{2n+1} \to \mathbb{CP}^n$ provided the first examples of spheres with nontrivial higher homotopy groups.
+The \textbf{Hopf fibration} $S^1 \to S^3 \to S^2$ was the first nontrivial example of a fiber bundle with nontrivial homotopy groups. Its higher-dimensional form is the circle bundle $S^1\to S^{2n+1}\to\mathbb{CP}^n$, which provided a fundamental family of examples for studying higher homotopy groups.
 
 Jean Cartan had developed the theory of spectral sequences, building on the work of Leray during World War II. However, the theory remained opaque and difficult to apply. Serre \cite{serre1954}'s breakthrough was to develop a streamlined, systematic approach to spectral sequences, making them a practical computational tool.
 
@@ -37,11 +37,11 @@ The \textbf{Hopf fibration} $S^1 \to S^{2n+1} \to \mathbb{CP}^n$ and its general
 
 \textbf{Eilenberg--MacLane spaces} $K(G, n)$ are spaces characterized by $\pi_n(K(G,n)) = G$ and $\pi_k(K(G,n)) = 0$ for $k \neq n$. Their cohomology can be computed explicitly using the spectral sequence, and they serve as building blocks for the homotopy theory of all spaces.
 
-The \textbf{cohomology of Eilenberg--MacLane spaces} is a classical topic. For example, $H^*(K(\mathbb{Z}, 2); \mathbb{Z}) = \mathbb{Z}[x_2]$ with $\deg(x_2) = 2$, and $H^*(K(\mathbb{Z}, 3); \mathbb{Z}) = \Lambda(x_3, x_7, x_{11}, \ldots)$ is an exterior algebra on odd generators.
+The \textbf{cohomology of Eilenberg--MacLane spaces} is a classical topic. For example, $H^*(K(\mathbb{Z}, 2); \mathbb{Z}) = \mathbb{Z}[x_2]$ with $\deg(x_2) = 2$. In higher cases the integral cohomology is substantially more complicated, involving torsion and nontrivial operations; it should not be summarized by a simple exterior-algebra formula.
 
 \textbf{The Gysin sequence} relates the cohomology of a sphere bundle to that of its base. For an oriented $S^n$-bundle $S^n \to E \to B$, there is an exact sequence:
 \[ \cdots \to H^q(B) \xrightarrow{\cup e} H^{q+n+1}(B) \to H^{q+n+1}(E) \to H^{q+1}(B) \to \cdots \]
-where $e \in H^{n+1}(B)$ is the Euler class of the bundle. This sequence was known before Serre but he showed it arises naturally from the spectral sequence.
+where $e \in H^{n+1}(B)$ is the Euler class of the bundle. Equivalently, in a standard indexing convention, the relevant part is $\cdots\to H^{q-n-1}(B)\xrightarrow{\cup e}H^q(B)\to H^q(E)\to H^{q-n}(B)\xrightarrow{\cup e}H^{q+1}(B)\to\cdots$. This sequence was known before Serre but he showed it arises naturally from the spectral sequence.
 
 The \textbf{theory of sheaves} originated with Leray's work on differential equations, but Serre was the first to use sheaves systematically in algebraic geometry. A \textbf{sheaf} $\mathcal{F}$ on a topological space $X$ assigns to each open set $U$ an abelian group $\mathcal{F}(U)$ together with restriction maps $\rho_{UV}: \mathcal{F}(U) \to \mathcal{F}(V)$ for $V \subset U$, satisfying locality and gluing axioms.
 
@@ -69,7 +69,7 @@ For the universal fibration $K(G, n) \to E \to K(G, n+1)$, the spectral sequence
 
 For the Hopf fibration $S^1 \to S^{2n+1} \to \mathbb{CP}^n$, the spectral sequence yields
 \[E_2^{p,q} = H^p(\mathbb{CP}^n; H^q(S^1)) \implies H^{p+q}(S^{2n+1})\]
-Since $H^*(S^1)$ is concentrated in degrees 0 and 1, only two rows contribute, and the sequence collapses at $E_2$ after computing the differentials $d_2: E_2^{p,0} \to E_2^{p+2,1}$.
+Since $H^*(S^1)$ is concentrated in degrees 0 and 1, only two rows contribute. The nonzero transgression $d_2:E_2^{0,1}\to E_2^{2,0}$ sends the fiber generator to the hyperplane class and eliminates the intermediate terms, leaving the cohomology of $S^{2n+1}$.
 
 The spectral sequence for a fibration $F \to E \to B$ has pages $E_r^{p,q}$ with differentials $d_r: E_r^{p,q} \to E_r^{p+r, q-r+1}$. The $E_2$-page is $H^p(B; H^q(F))$, and $E_\infty^{p,q}$ represents the associated graded object of a filtration on $H^{p+q}(E)$.
 
@@ -105,7 +105,7 @@ The \textbf{Thom isomorphism} states that for an oriented vector bundle $E$ of r
 Serre computed the cohomology of real projective space $\mathbb{RP}^n$ with coefficients in various rings. With $\mathbb{Z}/2$ coefficients:
 \[H^*(\mathbb{RP}^n, \mathbb{Z}/2) = \mathbb{Z}/2[x]/(x^{n+1}), \quad \deg(x) = 1\]
 With $\mathbb{Z}$ coefficients, the cohomology is more complicated, involving torsion:
-\[H^k(\mathbb{RP}^n, \mathbb{Z}) = \begin{cases} \mathbb{Z} & k = 0 \\ \mathbb{Z}/2 & k \text{ odd}, 0 < k < n \\ 0 & k \text{ even}, 0 < k \leq n \\ \mathbb{Z} & k = n \text{ (if } n \text{ odd)} \end{cases}\]
+\[H^k(\mathbb{RP}^n, \mathbb{Z}) = \begin{cases} \mathbb{Z} & k = 0, \\ \mathbb{Z}/2 & k \text{ even},\ 0 < k < n, \\ 0 & k \text{ odd},\ 0 < k < n, \\ \mathbb{Z} & k=n\text{ and }n\text{ odd}, \\ 0 & k=n\text{ and }n\text{ even}. \end{cases}\]
 
 The \textbf{Wang sequence} for a fiber bundle over $S^1$ with fiber $F$ gives an exact sequence:
 \[\cdots \to H^q(F) \xrightarrow{1 - f^*} H^q(F) \to H^q(E) \to H^{q+1}(F) \xrightarrow{1 - f^*} \cdots\]
@@ -117,9 +117,9 @@ The \textbf{FAC theorem} states that for a coherent sheaf $\mathcal{F}$ on a pro
 
 The key \textbf{vanishing theorem} is that for any coherent sheaf $\mathcal{F}$ on $\mathbb{P}^n_k$, we have $H^q(\mathbb{P}^n, \mathcal{F}(m)) = 0$ for $q > 0$ and all sufficiently large $m$. This is proved by induction on $n$ using the long exact sequence associated to the ideal sheaf of a hyperplane.
 
-For the structure sheaf $\mathcal{O}_{\mathbb{P}^n}$, the cohomology groups are
+For the twisting sheaf $\mathcal{O}(m)$ with $m\geq 0$, the cohomology groups are
 \[H^0(\mathbb{P}^n, \mathcal{O}(m)) = S^m(k^{n+1})^*, \quad H^q(\mathbb{P}^n, \mathcal{O}(m)) = 0 \text{ for } q > 0\]
-where $S^m$ denotes the $m$-th symmetric power.
+where $S^m$ denotes the $m$-th symmetric power. For negative twists, additional top-degree cohomology can occur.
 
 For the twisting sheaf $\mathcal{O}(m)$, we have $H^0(\mathbb{P}^n, \mathcal{O}(m)) = S^m(k^{n+1})^*$ for $m \geq 0$, and $H^n(\mathbb{P}^n, \mathcal{O}(m)) = S^{-m-n-1}(k^{n+1})$ for $m \leq -n-1$.
 

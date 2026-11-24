@@ -38,10 +38,6 @@ The construction involves a renormalization procedure: approximate the noise by 
 
 Second, in his 2014 Inventiones Mathematicae paper (269--504), Hairer developed the full theory of \textbf{regularity structures}, which generalizes rough paths from one-dimensional time to multi-dimensional space-time. A regularity structure consists of: (1) an index set $A \subset \mathbb{R}$ of ``regularities,'' (2) a graded vector space $T = \oplus_{\alpha\in A} T_\alpha$ of ``modelled distributions,'' and (3) a structure group $G$ encoding the symmetries of the equation.
 
-The construction involves a renormalization procedure: approximate the noise by smooth functions (regularization), solve the regularized equation, subtract a diverging constant from the nonlinear term, and take the limit as regularization is removed. Hairer proved that this limit exists and is independent of the approximation scheme.
-
-Second, in his 2014 Inventiones Mathematicae paper (269--504), Hairer developed the full theory of \textbf{regularity structures}, which generalizes rough paths from one-dimensional time to multi-dimensional space-time. A regularity structure consists of: (1) an index set $A \subset \mathbb{R}$ of ``regularities,'' (2) a graded vector space $T = \oplus_{\alpha\in A} T_\alpha$ of ``modelled distributions,'' and (3) a structure group $G$ encoding the symmetries of the equation.
-
 The centerpiece is the \textbf{Reconstruction Theorem}: a ``model'' (a consistent family of local approximations $\Pi_x: T\to\mathcal{S}'(\mathbb{R}^d)$ and connection maps $\Gamma_{xy}: T\to T$) can be reconstructed into a global distribution, analogous to how a smooth function is determined by its Taylor expansions. The solution to the SPDE is represented as a modelled distribution---a function taking values in $T$ satisfying a H\"{o}lder-type condition---and the equation is solved by a fixed-point argument.
 
 The modelled distribution $\underline{u}$ assigns to each point $x$ an element of the model space $T$ that encodes the local behavior of the solution. The key condition is that for nearby points $x$ and $y$,
